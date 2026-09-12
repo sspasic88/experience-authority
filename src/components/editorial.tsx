@@ -110,9 +110,9 @@ export function ExperienceCard({
           <Link
             className="image-source-badge"
             href={`/credits#media-${media.guideId}`}
-            aria-label={`Photography credit for ${item.title}`}
+            aria-label={`Photo credit for ${item.title}`}
           >
-            Photo credit ↗
+            Photo credit <span aria-hidden="true">↗</span>
           </Link>
         )}
         {item.demo && <span className="image-demo">Illustrative · demo</span>}

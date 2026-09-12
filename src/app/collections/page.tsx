@@ -18,6 +18,7 @@ export default function Collections() {
         </p>
       </PageIntro>
       <div className="collection-grid">
+        <h2 className="sr-only">Explore the collections</h2>
         {collections.map((c, i) => (
           <Link
             href={`/collections/${c.slug}`}

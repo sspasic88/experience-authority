@@ -40,6 +40,7 @@ export default async function Collection({ params }: Props) {
       </PageIntro>
       {items.length ? (
         <div className="experience-grid">
+          <h2 className="sr-only">Experiences in this collection</h2>
           {items.map((item, index) => (
             <ExperienceCard key={item.id} item={item} index={index} />
           ))}

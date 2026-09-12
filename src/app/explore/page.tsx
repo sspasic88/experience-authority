@@ -175,6 +175,7 @@ export default async function Explore({
         <div
           className={`experience-grid ${query.view === "list" ? "list-view" : ""}`}
         >
+          <h2 className="sr-only">Experiences in this direction</h2>
           {items.map((item, index) => (
             <ExperienceCard key={item.id} item={item} index={index} />
           ))}

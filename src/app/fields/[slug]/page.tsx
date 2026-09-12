@@ -35,6 +35,7 @@ export default async function Field({ params }: Props) {
       </PageIntro>
       {items.length ? (
         <div className="experience-grid">
+          <h2 className="sr-only">Experiences in this field</h2>
           {items.map((item, index) => (
             <ExperienceCard item={item} index={index} key={item.id} />
           ))}

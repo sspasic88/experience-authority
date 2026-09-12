@@ -140,6 +140,7 @@ export function PassportView({
         )
       ) : saved.length ? (
         <div className="passport-grid">
+          <h2 className="sr-only">Your saved experiences</h2>
           {saved.map((item, i) => (
             <div key={item.id}>
               <ExperienceCard item={item} index={i} />
