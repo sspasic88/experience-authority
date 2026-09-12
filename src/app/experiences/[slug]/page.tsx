@@ -194,16 +194,24 @@ export default async function Experience({ params }: Props) {
             visit using this page.
           </div>
         ) : item.guideReview ? (
-          <div className="guide-disclosure">
-            <div>
-              <strong>Public-source guide by Experience Authority.</strong>{" "}
-              Independent desk research, not an on-site review or a locally
-              validated EA selection. No provider partnership is implied.
+          <aside className="guide-disclosure" aria-labelledby="guide-provenance">
+            <div className="guide-disclosure-intro">
+              <span className="guide-disclosure-slash" aria-hidden="true" />
+              <div className="guide-disclosure-copy">
+                <p id="guide-provenance" className="guide-disclosure-label">
+                  Editorial provenance
+                </p>
+                <p>
+                  <strong>Independent public-source guide.</strong> EA has
+                  reviewed public information, not visited, locally validated
+                  or partnered with the provider.
+                </p>
+              </div>
             </div>
             <a href="#sources" className="text-link">
-              Sources & scope <span aria-hidden="true">↘</span>
+              Read sources & scope <span aria-hidden="true">↘</span>
             </a>
-          </div>
+          </aside>
         ) : null}
         <nav className="guide-section-nav" aria-label="In this guide">
           <a href="#the-experience">The experience</a>

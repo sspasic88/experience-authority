@@ -705,21 +705,51 @@ button {
   max-width: 95%;
 }
 .guide-disclosure {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: 24px;
-  padding: 22px 0;
+  gap: 32px;
+  padding: 20px 24px;
   margin-block: 20px 38px;
-  border-block: 1px solid var(--ea-stone);
+  border: 1px solid rgba(8, 27, 42, 0.18);
+  border-left: 3px solid var(--ea-vermilion);
+  background: var(--ea-field-surface);
   font-size: 13px;
   line-height: 1.6;
 }
-.guide-disclosure > div {
-  max-width: 760px;
+.guide-disclosure-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+}
+.guide-disclosure-slash {
+  display: block;
+  width: 7px;
+  height: 38px;
+  flex: none;
+  margin-top: 2px;
+  transform: skew(-20deg);
+  background: var(--ea-vermilion);
+}
+.guide-disclosure-copy {
+  max-width: 700px;
+}
+.guide-disclosure-label {
+  color: var(--ea-accent-text);
+  font-size: var(--ea-type-micro);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.guide-disclosure-copy p + p {
+  margin-top: 5px;
 }
 .guide-disclosure .text-link {
   white-space: nowrap;
+  border-bottom: 1px solid currentColor;
+  padding-block: 4px;
 }
 .source-section {
   scroll-margin-top: 120px;
@@ -760,9 +790,10 @@ button {
     font-size: 48px;
   }
   .guide-disclosure {
+    grid-template-columns: 1fr;
     align-items: flex-start;
-    flex-direction: column;
     gap: 12px;
+    padding: 18px;
   }
   .list-view .guide-art {
     padding: 12px;

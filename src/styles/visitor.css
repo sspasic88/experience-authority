@@ -24,7 +24,7 @@
   font-size: 14px;
 }
 .photo-expand:focus-visible {
-  outline: 3px solid #ff4b20;
+  outline: 3px solid var(--ea-vermilion);
   outline-offset: -5px;
 }
 .prototype-detail-photo figcaption {
@@ -108,7 +108,7 @@
   pointer-events: auto;
 }
 .prototype-hero-image-link:focus-visible {
-  outline: 3px solid #ff4b20;
+  outline: 3px solid var(--ea-vermilion);
   outline-offset: -5px;
 }
 .prototype-hero-mosaic figcaption {
@@ -184,7 +184,7 @@
   padding: 26px 30px;
   margin-bottom: 64px;
   border: 1px solid #d8dddf;
-  border-left: 4px solid #ff4b20;
+  border-left: 4px solid var(--ea-vermilion);
   background: #f5f3ec;
   min-height: 185px;
 }
@@ -241,7 +241,7 @@
 .trip-planner input:focus-visible,
 .trip-planner textarea:focus-visible,
 .trip-planner select:focus-visible {
-  outline: 3px solid #d83a13;
+  outline: 3px solid var(--ea-vermilion-deep);
   outline-offset: 3px;
 }
 .trip-planner textarea {
@@ -297,7 +297,7 @@
 }
 .trip-caution {
   padding: 16px 20px;
-  border-left: 3px solid #d83a13;
+  border-left: 3px solid var(--ea-vermilion-deep);
   background: #fff5ee;
   line-height: 1.5;
 }

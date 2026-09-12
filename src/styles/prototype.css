@@ -110,7 +110,7 @@ h3 {
 }
 .passport-count {
   border: 0;
-  color: #ff754e;
+  color: var(--ea-vermilion);
   font-size: 16px;
   width: auto;
   height: auto;
@@ -128,7 +128,7 @@ h3 {
   padding: 70px clamp(28px, 4vw, 72px);
 }
 .prototype-hero-copy > .eyebrow {
-  color: #ff754e;
+  color: var(--ea-vermilion);
   margin-bottom: 24px;
   font-size: 12px;
   letter-spacing: 0.15em;
@@ -327,7 +327,7 @@ h3 {
   background: linear-gradient(transparent, rgba(4, 19, 28, 0.95));
 }
 .prototype-hero-mosaic figcaption > .eyebrow {
-  color: #ff906f;
+  color: var(--ea-vermilion);
   font-size: 11px;
 }
 .prototype-hero-mosaic figcaption > a:not(.prototype-photo-credit) {
@@ -494,7 +494,7 @@ h3 {
   border: 1px solid #d8dddf;
 }
 .experience-page .guide-disclosure {
-  background: white;
+  background: var(--ea-field-surface);
 }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .prototype-hero-mosaic figure .editorial-photo {

@@ -21,9 +21,9 @@ export const metadata = pageMetadata(
 export default function Home() {
   const experiences = getExperiences();
   const familiarWaysIn = [
-    "mexico-city-grown-on-water",
-    "marble-steam-istanbul",
-    "the-vineyard-at-the-table",
+    "a-morning-at-the-hawker-table",
+    "step-into-the-dance",
+    "a-city-in-the-water",
   ].flatMap((slug) => {
     const item = experiences.find((experience) => experience.slug === slug);
     return item ? [item] : [];
