@@ -20,6 +20,17 @@ export const metadata = pageMetadata(
 
 export default function Home() {
   const experiences = getExperiences();
+  const familiarWaysIn = [
+    "a-bowl-of-attention",
+    "venice-through-an-oar",
+    "a-city-in-the-water",
+  ].flatMap((slug) => {
+    const item = experiences.find((experience) => experience.slug === slug);
+    return item ? [item] : [];
+  });
+  const startingPoints = familiarWaysIn.length
+    ? familiarWaysIn
+    : experiences.slice(0, 3);
   return (
     <>
       <StructuredData data={websiteStructuredData()} />
@@ -27,12 +38,12 @@ export default function Home() {
       <section className="section wrap">
         <PassportReturn />
         <SectionHeading
-          eyebrow="A starting point"
-          title="Less passing through. More being there."
+          eyebrow="Start somewhere you know"
+          title="A familiar place. A different way in."
           href="/explore"
           link="Explore Compass"
         />
-        {experiences.length ? (
+        {startingPoints.length ? (
           <>
             <p className="section-note">
               {demoMode
@@ -40,7 +51,7 @@ export default function Home() {
                 : "Publicly offered experiences, explored through original guides with sources and clear access notes. Not yet locally validated EA selections."}
             </p>
             <div className="experience-grid">
-              {experiences.slice(0, 3).map((item, index) => (
+              {startingPoints.map((item, index) => (
                 <ExperienceCard key={item.id} item={item} index={index} />
               ))}
             </div>

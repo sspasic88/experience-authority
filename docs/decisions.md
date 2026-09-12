@@ -14,5 +14,6 @@ Recorded 12 September 2026. User decisions in this task override the supplied re
 - Passport P0 uses explicitly device-local saving, comparison and one day-by-day journey draft. Visitors may download or share a text copy; private notes are excluded from sharing unless explicitly opted in. Account synchronization and real booking integrations are deferred.
 - No paid listing, paid ranking or implied editorial influence. No booking before verified access.
 - No automatic publication of the 200 research candidates. No production use of AI-generated images as experience evidence.
+- Early catalogue growth prioritises roughly 60–70% recognisable destinations or immediately legible experiences and 30–40% discovery places. Recognition is an entry point, never a substitute for EA fit, evidence, access, responsibility or image rights. The homepage starts with Kyoto, Venice and Reykjavík while the complete Compass remains globally mixed.
 
 Initial Figma scope: brand lockups, palette and type styles, spacing, Button, Status and Experience Card components, Home desktop/mobile and Experience desktop. Web preview additionally covers Explore, Places, Fields, Collections, Passport, Method, About and governance pages.
