@@ -349,7 +349,7 @@ button {
   display: block;
 }
 .hero-invitation-emphasis {
-  color: var(--ea-vermilion-deep);
+  color: var(--ea-accent-text);
 }
 .hero-cta {
   box-shadow: 7px 7px 0 rgba(8, 27, 42, 0.12);
@@ -496,6 +496,8 @@ button {
 }
 .experience-card {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 .card-image {
   height: auto;
@@ -504,7 +506,7 @@ button {
   overflow: hidden;
   background: #ddd8ce;
 }
-.card-image > a {
+.card-photo-link {
   position: absolute;
   inset: 0;
   display: block;
@@ -531,6 +533,7 @@ button {
   bottom: 12px;
   left: 13px;
   z-index: 2;
+  max-width: calc(100% - 26px);
   font-size: 9px;
   letter-spacing: 0.2px;
   color: white;
@@ -546,6 +549,7 @@ button {
   position: absolute;
   right: 12px;
   top: 12px;
+  z-index: 3;
 }
 .save-button {
   background: var(--ea-paper);
@@ -560,6 +564,9 @@ button {
 }
 .card-content {
   padding-top: 19px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .card-meta {
   display: flex;
@@ -598,6 +605,7 @@ button {
   color: var(--ea-stone);
   margin-top: 13px;
   max-width: 370px;
+  margin-bottom: auto;
 }
 .card-bottom {
   border-top: 1px solid rgba(8, 27, 42, 0.16);
@@ -2720,8 +2728,63 @@ button {
   }
 }
 
+.compass-page .page-intro {
+  padding-block: 44px 24px;
+}
+.compass-page .page-intro-copy {
+  margin-top: 18px;
+}
+.interest-shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.interest-shortcuts a {
+  border: 1px solid #bcc2c3;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: var(--ea-type-body-small);
+  line-height: 1.5;
+}
+.interest-shortcuts a:hover {
+  border-color: var(--ea-night);
+}
+.interest-shortcuts a[aria-current] {
+  background: var(--ea-night);
+  color: white;
+  border-color: var(--ea-night);
+}
+.compass-page .search-bar {
+  max-width: none;
+}
+.story-section p,
+.prose p,
+.prose ul,
+.source-list p {
+  font-size: var(--ea-type-body);
+}
+.detail-photo-credit {
+  font-size: var(--ea-type-caption);
+}
+.list-view .card-content p {
+  margin-bottom: 0;
+}
+
 /* Keep the thumbnail within its narrow mobile list track. */
 @media (max-width: 600px) {
+  .search-bar input,
+  .filter-row select,
+  .draft-form input,
+  .draft-form textarea {
+    font-size: 16px;
+  }
+  .compass-page .page-intro {
+    padding-top: 30px;
+  }
+  .interest-shortcuts a {
+    padding: 9px 13px;
+  }
   .list-view .card-image {
     width: 100%;
     aspect-ratio: auto;

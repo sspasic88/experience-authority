@@ -72,11 +72,13 @@ export function ExperienceCard({
   item: PublicExperience;
   index?: number;
 }) {
-  const media = item.status === "public_guide" ? guideMediaFor(item.id) : undefined;
+  const media =
+    item.status === "public_guide" ? guideMediaFor(item.id) : undefined;
   return (
     <article className="experience-card">
       <div className={`card-image ${!item.image ? "card-no-image" : ""}`}>
         <Link
+          className="card-photo-link"
           href={`/experiences/${item.slug}`}
           tabIndex={-1}
           aria-hidden="true"
@@ -110,7 +112,7 @@ export function ExperienceCard({
             href={`/credits#media-${media.guideId}`}
             aria-label={`Photography credit for ${item.title}`}
           >
-            Illustrative photo · credit
+            Photo credit ↗
           </Link>
         )}
         {item.demo && <span className="image-demo">Illustrative · demo</span>}

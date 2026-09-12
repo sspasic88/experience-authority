@@ -44,20 +44,42 @@ export default async function Explore({
     return `/explore?${params.toString()}`;
   }
   return (
-    <div className="wrap page-section">
+    <div className="wrap page-section compass-page">
       <PageIntro eyebrow="Find your way in" title="Compass.">
         <p>
-          Start with a place, a curiosity, or a way you want to feel more
-          connected.
+          What do you feel like doing? Find a way into a place through its food,
+          people, craft or outdoors.
         </p>
         {!demoMode && (
           <p className="compass-context">
-            Our first public-source guides cover ordinary admission and publicly
-            offered programmes. Each explains its evidence boundary.{" "}
-            <Link href="/method">How we work ↗</Link>
+            Independent guides, with sources and practical access notes.{" "}
+            <Link href="/method">About this edition ↗</Link>
           </p>
         )}
       </PageIntro>
+      <nav className="interest-shortcuts" aria-label="Explore by interest">
+        <Link
+          href="/explore"
+          aria-current={!query.interest ? "page" : undefined}
+        >
+          All experiences
+        </Link>
+        {interests
+          .filter((interest) =>
+            allItems.some((item) => interest.fields.includes(item.field)),
+          )
+          .map((interest) => (
+            <Link
+              key={interest.slug}
+              href={`/explore?interest=${interest.slug}`}
+              aria-current={
+                query.interest === interest.slug ? "page" : undefined
+              }
+            >
+              {interest.name}
+            </Link>
+          ))}
+      </nav>
       <form action="/explore" method="get">
         <div className="search-bar">
           <Search size={21} aria-hidden="true" />

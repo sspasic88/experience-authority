@@ -1,6 +1,17 @@
 import assert from "node:assert/strict";
 
 const base = process.env.EA_TEST_URL || "http://127.0.0.1:3100";
+const liveIndexing = process.env.EA_TEST_INDEXING === "true";
+const utilityPaths = new Set(["/passport", "/suggest", "/corrections"]);
+const emptyFields = new Set([
+  "nature",
+  "celebrate",
+  "learn",
+  "stay",
+  "contribute",
+  "play",
+  "work",
+]);
 const paths = [
   "/",
   "/explore",
@@ -96,9 +107,23 @@ for (const path of paths) {
   try {
     assert.equal(response.status, 200);
     assert.ok(html.includes("<main"));
-    assert.ok(html.includes("noindex"));
+    const pathname = path.split("?")[0];
+    const privatePage =
+      !liveIndexing || utilityPaths.has(pathname) || path.includes("?");
+    const emptyField =
+      process.env.EA_TEST_DEMO !== "true" &&
+      pathname.startsWith("/fields/") &&
+      emptyFields.has(pathname.split("/")[2]);
+    const robotsMeta = html.match(/<meta name="robots" content="([^"]+)"/)[1];
+    assert.match(
+      robotsMeta,
+      privatePage || emptyField ? /noindex/ : /^index, follow$/,
+    );
     assert.equal(response.headers.get("x-content-type-options"), "nosniff");
-    assert.equal(response.headers.get("x-robots-tag"), "noindex, nofollow");
+    assert.equal(
+      response.headers.get("x-robots-tag"),
+      privatePage ? "noindex, nofollow" : null,
+    );
     assert.equal(response.headers.get("x-frame-options"), "DENY");
     assert.equal(response.headers.get("x-powered-by"), null);
     assert.match(response.headers.get("cache-control"), /private.*no-store/);
@@ -165,9 +190,16 @@ for (const path of unpublishedPaths) {
 const robots = await (await fetch(`${base}/robots.txt`)).text();
 assert.match(robots, /User-Agent: \*\s+Allow: \//i);
 assert.ok(robots.includes("GPTBot"));
-assert.ok(!robots.includes("Sitemap:"));
+assert.equal(robots.includes("Sitemap:"), liveIndexing);
 const sitemap = await (await fetch(`${base}/sitemap.xml`)).text();
-assert.ok(!sitemap.includes("<loc>"));
+assert.equal(sitemap.includes("<loc>"), liveIndexing);
+if (liveIndexing) {
+  assert.ok(sitemap.includes("https://experienceauthority.com/explore"));
+  assert.ok(!sitemap.includes("/passport"));
+  assert.ok(!/<loc>[^<]*\?/.test(sitemap));
+  for (const field of emptyFields)
+    assert.ok(!sitemap.includes(`/fields/${field}</loc>`));
+}
 const blocked = await fetch(base, { headers: { "user-agent": "GPTBot/1.2" } });
 assert.equal(blocked.status, 403);
 const searchBot = await fetch(base, {
@@ -190,7 +222,9 @@ console.log(
       checkedPages: paths.length,
       unpublishedPaths: unpublishedPaths.length,
       uniqueNonces: nonces.size,
-      indexing: "noindex; empty sitemap",
+      indexing: liveIndexing
+        ? "public pages indexable; utilities, filters and empty fields excluded"
+        : "noindex; empty sitemap",
       crawlerRules: "passed",
       socialImage: "passed",
       failures,

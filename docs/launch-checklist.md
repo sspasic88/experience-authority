@@ -15,7 +15,7 @@ All boxes below are outstanding until explicitly evidenced. This checklist is no
 
 - [ ] Supply the brief's 25 genuine reviewed experiences; no fictional demo may be published as a verified story.
 - [ ] Implement and verify editorial persistence, revisions, permissions, holder consent, source records and independent local review.
-- [x] Confirm public image/typography scope: source-guides use original typographic art; illustrative stock remains credited; Aeonik and Nimbus Sans were removed; Source Sans 3 is self-hosted under OFL 1.1.
+- [x] Confirm public image/typography scope: source-guides use credited real photographs with explicit depiction boundaries and individual licence records; no AI photographs. Aeonik and Nimbus Sans were removed; Source Sans 3 is self-hosted under OFL 1.1.
 - [ ] Confirm operating entity, contact route, privacy notice, retention and processors with appropriate professional review.
 - [ ] Before collecting submissions, implement server-side validation, size limits, CSRF/origin protection, rate limits, bot controls and an accountable correction process.
 - [ ] Before adding accounts, implement server-enforced authorization, secure session cookies, login abuse controls and recovery safeguards. Never rely solely on Proxy for authorization.

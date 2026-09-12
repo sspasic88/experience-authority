@@ -31,7 +31,7 @@ export const publicGuides: PublicExperience[] = [
     slug: "leave-room-for-devotion",
     title: "Leave room for devotion",
     summary:
-      "Walk the publicly described Daimon-zaka section of Kumano Kodo without treating a living pilgrimage route as a set to consume.",
+      "Follow stone steps beneath tall trees on Daimon-zaka, a short walk into Kumano Kodo’s living pilgrimage landscape.",
     field: "witness",
     place: "Kumano Kodo",
     country: "Japan",
@@ -49,8 +49,10 @@ export const publicGuides: PublicExperience[] = [
       "Check current closures, weather and route guidance before departure. Stay on the path, keep noise low, carry out waste and do not enter private property. At shrines and temples, follow posted rules; ask before photographing people and do not fly drones without permission. Choose a route that suits your own preparation and turn back when conditions require it.",
     evidence:
       "The Tanabe City Kumano Tourism Bureau’s public route and etiquette pages support the short-walk framing, current planning route and visitor conduct. They are local tourism sources, not independent heritage, access or safety assessment. EA has not walked this section, assessed individual capability or verified conditions on a particular day.",
-    duration: "A short walk; consult the current route page and allow for conditions",
-    participation: "Independent public walking, with no ritual participation implied",
+    duration:
+      "A short walk; consult the current route page and allow for conditions",
+    participation:
+      "Independent public walking, with no ritual participation implied",
     access:
       "Public path access subject to current route conditions and posted rules. Use the official route page and its planning links before travel. EA does not provide a guide, booking, permit or a claim of special access.",
     guideReview: review(
@@ -63,7 +65,8 @@ export const publicGuides: PublicExperience[] = [
           note: "Public description of the short Daimon-zaka section, its route context and links to current route-planning information.",
         },
         {
-          title: "Tanabe City Kumano Tourism Bureau — manners and trail etiquette",
+          title:
+            "Tanabe City Kumano Tourism Bureau — manners and trail etiquette",
           url: "https://www.tb-kumano.jp/en/2025/07/28/15578/",
           note: "Published guidance on respect for sacred sites, residents, trail conduct, photography and drones; not a guarantee of access or conditions.",
         },
@@ -77,7 +80,7 @@ export const publicGuides: PublicExperience[] = [
     slug: "make-room-in-the-steam",
     title: "Make room in the steam",
     summary:
-      "Use Rajaportti in Tampere as a public sauna: a shared room with its own pace and ordinary rules of consideration.",
+      "Slow down in the wood-heated warmth of Rajaportti, Tampere’s historic public sauna and a shared space with its own rhythm.",
     field: "gather",
     place: "Tampere",
     country: "Finland",
@@ -87,8 +90,7 @@ export const publicGuides: PublicExperience[] = [
       "Visit through ordinary public admission, if the sauna is operating and its current arrangements suit you. Rajaportti is listed by Visit Tampere as Finland’s oldest public sauna still in use. The point here is neither a wellness promise nor a performance of belonging; it is the practical attention required in a shared space.",
     rootedness:
       "The public listing places Rajaportti in Pispala, Tampere, and describes a wood-heated sauna that has remained in use across decades. This guide stays with the advertised public visit. It does not offer a private ritual, claim access to local social life or turn Finnish sauna culture into a lesson a single visit can complete.",
-    shift:
-      "From seeking a private amenity to sharing a room with care.",
+    shift: "From seeking a private amenity to sharing a room with care.",
     humanReturn:
       "You may notice how much a public place depends on small decisions: arrive prepared, leave room, lower the volume and let other people use the space in their own way. That is an observation, not a promised personal result.",
     responsibility:
@@ -215,7 +217,7 @@ export const publicGuides: PublicExperience[] = [
     slug: "a-city-in-the-water",
     title: "A city, in the water",
     summary:
-      "Enter Reykjavík’s pool culture through Sundhöll: a municipal swimming pool, not a private spa encounter.",
+      "Make time for a swim at Sundhöll and discover Reykjavík through the everyday ritual of its public pools.",
     field: "restore",
     place: "Reykjavík",
     country: "Iceland",
@@ -261,7 +263,7 @@ export const publicGuides: PublicExperience[] = [
     slug: "the-vineyard-at-the-table",
     title: "The vineyard at the table",
     summary:
-      "Follow the relationship between Vienna’s wine and food at a publicly open Heuriger, with Mayer am Pfarrplatz as a concrete starting point.",
+      "Find a table at Mayer am Pfarrplatz, where Vienna’s wine-growing landscape meets the food and conviviality of the Heuriger.",
     field: "taste",
     place: "Vienna",
     country: "Austria",

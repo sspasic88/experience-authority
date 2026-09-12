@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, Bookmark, Menu, X } from "lucide-react";
 import { usePassport } from "./passport-provider";
 export function Wordmark({ light = false }: { light?: boolean }) {
@@ -24,6 +24,18 @@ export function Wordmark({ light = false }: { light?: boolean }) {
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    if (!open) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        menuButton.current?.focus();
+      }
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
+  }, [open]);
   const { data } = usePassport();
   const links = [
     ["/explore", "Compass"],
@@ -67,6 +79,7 @@ export function Header() {
           </span>
         </Link>
         <button
+          ref={menuButton}
           className="icon-button menu-button"
           aria-label={open ? "Close navigation" : "Open navigation"}
           aria-expanded={open}
@@ -111,6 +124,9 @@ export function Footer() {
           </Link>
           <Link href="/transparency">
             Transparency <ArrowUpRight size={15} />
+          </Link>
+          <Link href="/credits">
+            Sources & credits <ArrowUpRight size={15} />
           </Link>
         </nav>
       </div>

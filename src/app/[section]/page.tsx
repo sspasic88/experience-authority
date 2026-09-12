@@ -109,16 +109,27 @@ export default async function Page({ params, searchParams }: Props) {
                     <a href={media.licenseUrl} target="_blank" rel="noreferrer">
                       licence
                     </a>
-                    ); source and rights checked {media.rightsCheckedOn}. {media.depiction}
+                    ); source and rights checked {media.rightsCheckedOn}.{" "}
+                    {media.depiction}
                   </li>
                 ))}
               </ul>
               <p>
                 Unsplash photographs are used under the{" "}
-                <a href="https://unsplash.com/license" target="_blank" rel="noreferrer">
+                <a
+                  href="https://unsplash.com/license"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Unsplash License
-                </a>. The Rajaportti image is used under its stated CC BY-SA 4.0
-                licence. No photographer, subject or place endorses Experience Authority.
+                </a>
+                . Creative Commons photographs are used under the individual
+                licences linked above. Images are resized and compressed for the
+                web and may be cropped by the responsive layout; no AI image
+                generation or content alteration is used. Adapted versions of CC
+                BY-SA photographs remain available under the same CC BY-SA
+                licence. No photographer, subject or place endorses Experience
+                Authority.
               </p>
               <h3>Homepage & collections.</h3>
               <ul>

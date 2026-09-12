@@ -11,7 +11,7 @@ Public-source edition live at https://experienceauthority.com, deployed from the
 - Public-data allowlist, protected-narrative boundary and tested publication policy functions.
 - Per-route SEO/social metadata, brand share image, JSON-LD, production sitemap with real guide review dates, indexable production robots and noindex preview rules.
 - Nonce-based production script CSP, response security headers and training crawler preferences.
-- Seven original public-source guides, separate from Selected and demo records; dated source notes, official access links, evidence boundaries, original typographic artwork and expiry checks. Production serves this content, not the eight fictional examples. See content-edition.md.
+- Seven original public-source guides, separate from Selected and demo records; dated source notes, official access links, evidence boundaries, credited real photographs and expiry checks. Production serves this content, not the eight fictional examples. See content-edition.md.
 
 ## Design handoff in progress
 
