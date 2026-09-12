@@ -7,6 +7,7 @@ import {
   serializeJsonLd,
   SITE_ORIGIN,
   guideStructuredData,
+  collectionStructuredData,
 } from "../src/lib/seo";
 import { publicGuides } from "../src/lib/public-guides";
 import { guideMediaFor } from "../src/lib/media";
@@ -75,9 +76,7 @@ test("guide structured data reflects visible sources and photo rights, never off
     const media = guideMediaFor(item.id)!;
     assert.equal(
       image.license,
-      media.rightsBasis === "documented_license"
-        ? media.licenseUrl
-        : undefined,
+      media.rightsBasis === "documented_license" ? media.licenseUrl : undefined,
     );
     assert.equal(image.acquireLicensePage, media.sourceUrl);
     assert.equal(image.caption, media.depiction);
@@ -120,6 +119,36 @@ test("demo, protected and paused records never enter discovery feeds", () => {
   assert.ok(
     !urls.some((url) => /secret|passport|suggest|corrections|\?/.test(url)),
   );
+});
+
+test("destination lists describe only visible guides and journal pages enter the released sitemap", () => {
+  const local = publicGuides.filter(
+    (item) => item.countrySlug === "japan" && item.regionSlug === "kyoto",
+  );
+  const hidden = {
+    ...local[0],
+    slug: "hidden",
+    status: "protected_visibility",
+  } as PublicExperience;
+  const data = collectionStructuredData(
+    "Kyoto experiences",
+    "/places/japan/kyoto",
+    [...local, hidden],
+  )!;
+  assert.equal(data.mainEntity.numberOfItems, 3);
+  assert.deepEqual(
+    data.mainEntity.itemListElement.map((item) => item.position),
+    [1, 2, 3],
+  );
+  assert.ok(!JSON.stringify(data).includes("hidden"));
+  assert.equal(
+    collectionStructuredData("Hidden", "/places/hidden", [hidden]),
+    null,
+  );
+  const urls = sitemapEntries(publicGuides, launch).map((entry) => entry.url);
+  assert.equal(urls.filter((url) => url.includes("/journal/")).length, 6);
+  assert.equal(urls.filter((url) => url.includes("/collections/")).length, 10);
+  assert.ok(urls.includes(`${SITE_ORIGIN}/places/japan/kyoto`));
 });
 
 test("production script policy requires a nonce with no eval or inline exception", () => {

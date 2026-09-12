@@ -5,7 +5,14 @@ import Link from "next/link";
 import { usePassport } from "./passport-provider";
 import { ShareButton } from "./share-button";
 import type { PublicExperience } from "@/lib/catalog";
-import { emptyTrip, sanitizeTrip, tripText, type Trip } from "@/lib/trip";
+import {
+  emptyTrip,
+  sanitizeTrip,
+  tripText,
+  tripStages,
+  type TripStage,
+  type Trip,
+} from "@/lib/trip";
 
 const storageKey = "ea:trip:v1";
 export function TripPlanner({ items }: { items: PublicExperience[] }) {
@@ -14,6 +21,7 @@ export function TripPlanner({ items }: { items: PublicExperience[] }) {
   const [ready, setReady] = useState(false);
   const [message, setMessage] = useState("");
   const [includeNotes, setIncludeNotes] = useState(false);
+  const [confirmReset, setConfirmReset] = useState(false);
   useEffect(() => {
     const ids = items.map((item) => item.id);
     try {
@@ -133,7 +141,7 @@ export function TripPlanner({ items }: { items: PublicExperience[] }) {
       {countries.size > 1 && (
         <p className="trip-caution">
           Your ideas span more than one country or territory. Allow for travel
-          days; this planner does not calculate connections or check whether the
+          days. This planner does not calculate connections or check whether the
           route is feasible.
         </p>
       )}
@@ -176,6 +184,34 @@ export function TripPlanner({ items }: { items: PublicExperience[] }) {
                   </h3>
                   <p>{item.duration}</p>
                   <p>{item.participation}</p>
+                  <div className="trip-planning-state">
+                    <label>
+                      My planning status
+                      <select
+                        aria-label={`Planning status for ${item.title}`}
+                        value={entry.stage || "idea"}
+                        onChange={(event) =>
+                          update({
+                            ...trip,
+                            entries: trip.entries.map((e) =>
+                              e.id === entry.id
+                                ? {
+                                    ...e,
+                                    stage: event.target.value as TripStage,
+                                  }
+                                : e,
+                            ),
+                          })
+                        }
+                      >
+                        {Object.entries(tripStages).map(([value, label]) => (
+                          <option key={value} value={value}>
+                            {label}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                  </div>
                   {item.guideReview && (
                     <a
                       className="text-link"
@@ -238,6 +274,13 @@ export function TripPlanner({ items }: { items: PublicExperience[] }) {
         <button type="button" className="button button-dark" onClick={download}>
           Download my plan ↓
         </button>
+        <button
+          type="button"
+          className="button button-paper"
+          onClick={() => window.print()}
+        >
+          Print or save as PDF ↗
+        </button>
         <ShareButton
           title="A journey through Experience Authority"
           text={tripText(trip, items, includeNotes)}
@@ -249,18 +292,58 @@ export function TripPlanner({ items }: { items: PublicExperience[] }) {
             checked={includeNotes}
             onChange={(event) => setIncludeNotes(event.target.checked)}
           />
-          Include my journey name and private notes when sharing
+          Include my journey name, planning status and private notes when
+          sharing
         </label>
         <p className="small-note">
           Sharing sends a text copy, not a public editable page. Download
-          includes your notes; sharing excludes them unless you choose
+          includes your notes. Sharing excludes them unless you choose
           otherwise.
         </p>
+      </div>
+      <div className="trip-reset">
+        {confirmReset ? (
+          <div>
+            <p>
+              Clear this journey and its notes from this browser? Your saved
+              Passport guides will stay. Download a copy first if you want to
+              keep this draft.
+            </p>
+            <div className="trip-reset-actions">
+              <button
+                type="button"
+                className="button button-dark"
+                onClick={() => {
+                  update({ ...emptyTrip, entries: [] });
+                  setConfirmReset(false);
+                }}
+              >
+                Clear this journey
+              </button>
+              <button
+                type="button"
+                className="text-link"
+                onClick={() => setConfirmReset(false)}
+              >
+                Keep my journey
+              </button>
+            </div>
+          </div>
+        ) : (
+          <button
+            type="button"
+            className="text-link"
+            onClick={() => setConfirmReset(true)}
+          >
+            Start a fresh journey
+          </button>
+        )}
       </div>
       <p className="small-note" role="status">
         {message ||
           "Your plan stays on this device. Download a copy to keep it elsewhere."}
       </p>
+      <pre className="trip-print-copy">{tripText(trip, items, true)}</pre>
     </section>
   );
 }

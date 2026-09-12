@@ -5,6 +5,7 @@ import { statusLabels, type PublicExperience } from "@/lib/catalog";
 import { guideMediaFor } from "@/lib/media";
 import type { EditorialPathway } from "@/lib/editorial-pathways";
 import { ExperienceActions } from "./passport-provider";
+import { imageSource } from "@/lib/image-revisions";
 
 export function StatusBadge({
   status,
@@ -56,7 +57,7 @@ export function Photo({
 }) {
   return (
     <Image
-      src={src}
+      src={imageSource(src)}
       alt={alt}
       fill
       priority={priority}

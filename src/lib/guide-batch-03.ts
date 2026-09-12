@@ -47,7 +47,8 @@ const guideBatch03Candidates: PublicExperience[] = [
           note: "First-party description of the public rituals, duration, daily service and booking route. Prices and availability remain with the operator.",
         },
         {
-          title: "Istanbul Metropolitan Municipality: Haseki Hürrem Sultan Hamamı",
+          title:
+            "Istanbul Metropolitan Municipality: Haseki Hürrem Sultan Hamamı",
           url: "https://kulturelmiras.ibb.istanbul/haseki-hurrem-sultan-hamami/",
           note: "Municipal cultural-heritage record for the building. It does not assess the present-day visitor service.",
         },
@@ -132,7 +133,8 @@ const guideBatch03Candidates: PublicExperience[] = [
     evidence:
       "The pub's current page establishes the recurring public sessions and unamplified format. County Clare and Ireland's National Inventory provide place and practice context. EA has not attended, assessed the musicians or verified a particular night's line-up. The photograph is published on the pub's current music page and shows an actual session. It is not an EA visit.",
     duration: "Self-paced during the evening session and pub service",
-    participation: "Public listening. Any musical participation is at the session's discretion",
+    participation:
+      "Public listening. Any musical participation is at the session's discretion",
     access:
       "Ordinary public hospitality with no EA-arranged access. Check the pub's current music and opening information before making a special journey. Capacity and the character of each session can change.",
     guideReview: {

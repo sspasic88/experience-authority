@@ -1,8 +1,15 @@
 import type { NextConfig } from "next";
 import { indexingEnabled } from "./src/lib/seo";
+import { imageEdition } from "./src/lib/image-revisions";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  images: {
+    localPatterns: [
+      { pathname: "/images/**", search: "" },
+      { pathname: "/images/guides/**", search: `?v=${imageEdition}` },
+    ],
+  },
   async headers() {
     return [
       {

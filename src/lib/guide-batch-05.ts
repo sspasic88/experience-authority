@@ -44,7 +44,8 @@ export const guideBatch05: PublicExperience[] = [
       accessUrl: "https://castellscat.cat/en/schedule?a=2026&m=09&p=189",
       sources: [
         {
-          title: "Coordinadora de Colles Castelleres de Catalunya: public schedule",
+          title:
+            "Coordinadora de Colles Castelleres de Catalunya: public schedule",
           url: "https://castellscat.cat/en/schedule?a=2026&m=09&p=189",
           note: "Current September 2026 calendar listing public Barcelona performances, including times, locations and participating colles. It remains the visitor’s source for changes or cancellation.",
         },
@@ -263,7 +264,8 @@ export const guideBatch05: PublicExperience[] = [
       requiresSpecialPermission: false,
       checkedOn: "2026-09-12",
       reviewBy: "2026-12-11",
-      accessUrl: "https://www.vadehavscentret.dk/en/tours-and-activities/black-sun/",
+      accessUrl:
+        "https://www.vadehavscentret.dk/en/tours-and-activities/black-sun/",
       sources: [
         {
           title: "Wadden Sea Centre: Black Sun tours",

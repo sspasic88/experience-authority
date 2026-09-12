@@ -71,13 +71,30 @@ export type Interest = {
   slug: string;
   name: string;
   fields: readonly Field[];
+  guideSlugs?: readonly string[];
 };
 export const interests: readonly Interest[] = [
-  { slug: "eat-drink", name: "Eat & drink", fields: ["taste"] },
+  {
+    slug: "eat-drink",
+    name: "Eat & drink",
+    fields: ["taste"],
+    guideSlugs: [
+      "cook-beyond-the-postcard",
+      "let-the-coffee-take-its-time",
+      "bread-from-the-tonir",
+      "kimchi-before-the-jar",
+      "mexico-city-grown-on-water",
+    ],
+  },
   {
     slug: "make-learn",
     name: "Make & learn",
     fields: ["make", "learn", "work"],
+    guideSlugs: [
+      "learn-the-fold-in-salta",
+      "kimchi-before-the-jar",
+      "the-pour-before-the-glass",
+    ],
   },
   {
     slug: "move-water",
@@ -91,8 +108,9 @@ export const interests: readonly Interest[] = [
   },
   {
     slug: "swim-reset",
-    name: "Swim & reset",
+    name: "Rest & stay",
     fields: ["restore", "stay"],
+    guideSlugs: ["make-room-in-the-steam"],
   },
   {
     slug: "shared-rituals",
@@ -100,6 +118,15 @@ export const interests: readonly Interest[] = [
     fields: ["gather", "celebrate"],
   },
 ];
+export function matchesInterest(
+  item: { slug: string; field: Field },
+  interest: Interest,
+) {
+  return (
+    interest.fields.includes(item.field) ||
+    Boolean(interest.guideSlugs?.includes(item.slug))
+  );
+}
 export type PublicStatus =
   | "public_guide"
   | "selected_open"
@@ -175,12 +202,84 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
           ),
         ).includes(q)) &&
       (!query.field || item.field === query.field) &&
-      (!interest || interest.fields.includes(item.field)) &&
+      (!interest || matchesInterest(item, interest)) &&
       (!query.place || item.countrySlug === query.place) &&
       (!query.status || item.status === query.status),
   );
 }
 export const territories = [
+  {
+    slug: "south-africa",
+    name: "South Africa",
+    region: "cape-town",
+    regionName: "Cape Town",
+    intro:
+      "Look beyond the familiar facade of Bo-Kaap through the practical work, spice and conversation of a Cape Malay cooking class.",
+    image: null,
+  },
+  {
+    slug: "argentina",
+    name: "Argentina",
+    region: "salta",
+    regionName: "Salta",
+    intro:
+      "Begin in Salta with the filling and the fold, following a familiar dish back to the kitchen.",
+    image: null,
+  },
+  {
+    slug: "bosnia-and-herzegovina",
+    name: "Bosnia and Herzegovina",
+    region: "sarajevo",
+    regionName: "Sarajevo",
+    intro:
+      "Give Sarajevo time, with a city walk that pauses for the objects, gestures and company of Bosnian coffee.",
+    image: null,
+  },
+  {
+    slug: "puerto-rico",
+    name: "Puerto Rico",
+    region: "loiza",
+    regionName: "Loíza",
+    intro:
+      "Follow the rhythm into a public bomba class in Loíza, with room to listen before taking the first step.",
+    image: null,
+  },
+  {
+    slug: "france",
+    name: "France",
+    region: "biarritz",
+    regionName: "Biarritz",
+    intro:
+      "Begin on a Biarritz pelota court, where learning to return a ball offers a physical introduction to a Basque game.",
+    image: null,
+  },
+  {
+    slug: "vietnam",
+    name: "Vietnam",
+    region: "hanoi",
+    regionName: "Hanoi",
+    intro:
+      "Take a seat in Hanoi for a theatre made of water, music, lacquered figures and work hidden behind the screen.",
+    image: null,
+  },
+  {
+    slug: "germany",
+    name: "Germany",
+    region: "allgaeu",
+    regionName: "Allgäu",
+    intro:
+      "Follow the Alpine year to a public cattle return, where the work of summer meets the life of the village.",
+    image: null,
+  },
+  {
+    slug: "united-kingdom",
+    name: "United Kingdom",
+    region: "cambridge",
+    regionName: "Cambridge",
+    intro:
+      "Hear Cambridge differently by learning the shared timing behind English church bells.",
+    image: null,
+  },
   {
     slug: "south-korea",
     name: "South Korea",
@@ -259,7 +358,7 @@ export const territories = [
     region: "singapore",
     regionName: "Singapore",
     intro:
-      "Begin with a shared table and a living food culture that meets the city every day.",
+      "A hawker breakfast, batik at a Kampong Gelam worktable and a coastal walk on Coney Island. Meet the city through food, craft and open air.",
     image: null,
   },
   {
@@ -364,11 +463,11 @@ export const territories = [
   {
     slug: "portugal",
     name: "Portugal",
-    region: "alentejo",
-    regionName: "Alentejo",
+    region: "porto",
+    regionName: "Porto",
     intro:
-      "An exploration of material, patient craft and the everyday rituals of making.",
-    image: "/images/pottery.jpg",
+      "Follow a pattern from Porto's façades to the worktable, with time to make one small piece of your own.",
+    image: null,
   },
   {
     slug: "japan",
@@ -376,7 +475,7 @@ export const territories = [
     region: "kumano-kodo",
     regionName: "Kumano Kodo",
     intro:
-      "Stone paths and a bowl of tea: two distinct ways to give a place your attention, in Kumano Kodo and Kyoto.",
+      "Tea, textile craft and backstreet cycling in Kyoto. A public pilgrimage path in Kumano Kodo. A temple night in Koyasan. Choose a place, then find your way in.",
     image: null,
   },
   {

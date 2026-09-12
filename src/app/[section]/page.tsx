@@ -5,6 +5,7 @@ import { DraftForm } from "@/components/draft-form";
 import { editorialPages } from "@/lib/pages";
 import { publicGuideMedia } from "@/lib/media";
 import { pageMetadata } from "@/lib/seo";
+import { getExperiences } from "@/lib/data";
 const knownSections = new Set([
   ...Object.keys(editorialPages),
   "suggest",
@@ -92,9 +93,9 @@ export default async function Page({ params, searchParams }: Props) {
         <div className="prose-layout">
           <aside className="prose-aside">
             No AI-generated imagery is used. Open licences are preferred. When
-            an exceptional official-source image is the clearest honest view,
-            we identify that status instead of implying a licence we do not
-            hold. Every photograph has a depiction boundary below.
+            an exceptional official-source image is the clearest honest view, we
+            identify that status instead of implying a licence we do not hold.
+            Every photograph has a depiction boundary below.
           </aside>
           <article className="prose">
             <section>
@@ -137,12 +138,17 @@ export default async function Page({ params, searchParams }: Props) {
               <p>
                 Official-source use is limited, credited in good faith and never
                 presented as ownership or endorsement. If a creator or rights
-                holder believes a credit or use should change, prepare a note on
-                the <Link href="/corrections">corrections page</Link>. We will
-                review a supported request promptly and correct or remove the
-                image where appropriate.
+                holder believes a credit or use should change, the{" "}
+                <Link href="/corrections">corrections page</Link> can help
+                prepare a note. That tool currently creates an unsent draft
+                only. It does not deliver a request to EA.
               </p>
-              <h3>Homepage & collections.</h3>
+              <h3>Prototype archive.</h3>
+              <p>
+                These earlier illustrative assets belong to the opt-in design
+                prototype. Public guide, homepage, collection and Journal
+                photography is credited individually above.
+              </p>
               <ul>
                 <li>
                   <a
@@ -152,7 +158,7 @@ export default async function Page({ params, searchParams }: Props) {
                   >
                     Alex Jones: pottery and craft
                   </a>
-                  . Actual place unspecified; not evidence of an Alentejo
+                  . Actual place unspecified. Not evidence of an Alentejo
                   experience.
                 </li>
                 <li>
@@ -221,18 +227,77 @@ export default async function Page({ params, searchParams }: Props) {
     );
   const page = editorialPages[section];
   if (!page) notFound();
+  const items = getExperiences();
+  const proof =
+    section === "method"
+      ? [
+          {
+            number: "01 / The experience",
+            title: "Something worth doing.",
+            text: "A specific way to take part, observe or understand a place. Every guide explains the encounter before introducing the organisation that makes it possible.",
+          },
+          {
+            number: "02 / The context",
+            title: "A reason it belongs here.",
+            text: "The connection to local knowledge, working landscapes or shared life. Source links let you follow the account beyond our words.",
+          },
+          {
+            number: "03 / The practical route",
+            title: "A way to plan it.",
+            text: "What you do, how much time to allow and where to check current access. The source date and the limits of our research stay visible in the guide.",
+          },
+        ]
+      : section === "about"
+        ? [
+            {
+              number: `${items.length} guides`,
+              title: "A growing world.",
+              text: `Specific ways into ${new Set(items.map((item) => item.countrySlug)).size} countries and territories. Each one starts with a real public experience and the curiosity it invites.`,
+            },
+            {
+              number: "Your own direction",
+              title: "Find what moves you.",
+              text: "Food, making, movement, music and quieter moments. Look for the kind of day you want, then explore the place through it.",
+            },
+            {
+              number: "No account needed",
+              title: "Keep the good ideas.",
+              text: "Save a guide in Passport, compare it with another and begin a private journey draft. Share an idea now or return when the dates take shape.",
+            },
+          ]
+        : [];
   return (
     <div className="wrap">
       <PageIntro eyebrow={page.eyebrow} title={page.title}>
         <p>{page.intro}</p>
       </PageIntro>
+      {proof.length > 0 && (
+        <div className="editorial-proof">
+          {proof.map((item) => (
+            <section key={item.title}>
+              <p className="eyebrow">{item.number}</p>
+              <h2>{item.title}</h2>
+              <p>{item.text}</p>
+            </section>
+          ))}
+        </div>
+      )}
+      {page.sections.length > 3 && (
+        <nav className="editorial-jump-links" aria-label="On this page">
+          {page.sections.map((s, index) => (
+            <a key={s.title} href={`#section-${index + 1}`}>
+              {s.title}
+            </a>
+          ))}
+        </nav>
+      )}
       <div className="prose-layout">
         <aside className="prose-aside">
           <p>{page.aside}</p>
         </aside>
         <article className="prose">
-          {page.sections.map((s) => (
-            <section key={s.title}>
+          {page.sections.map((s, index) => (
+            <section key={s.title} id={`section-${index + 1}`}>
               <h2>{s.title}</h2>
               {s.paragraphs.map((p) => (
                 <p key={p}>{p}</p>

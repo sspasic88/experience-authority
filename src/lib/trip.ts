@@ -1,6 +1,17 @@
 import type { PublicExperience } from "./catalog";
 
-export type TripEntry = { id: string; day: number; note: string };
+export const tripStages = {
+  idea: "Still an idea",
+  checking: "Checking the details",
+  arranged: "I have arranged this",
+} as const;
+export type TripStage = keyof typeof tripStages;
+export type TripEntry = {
+  id: string;
+  day: number;
+  note: string;
+  stage?: TripStage;
+};
 export type Trip = { name: string; logistics: string; entries: TripEntry[] };
 export const emptyTrip: Trip = {
   name: "My next journey",
@@ -33,6 +44,9 @@ export function sanitizeTrip(value: unknown, allowedIds: string[]): Trip {
             ? item.day
             : 1,
         note: typeof item.note === "string" ? item.note.slice(0, 600) : "",
+        ...(["idea", "checking", "arranged"].includes(item.stage)
+          ? { stage: item.stage as TripStage }
+          : {}),
       });
     }
   return {
@@ -66,6 +80,10 @@ export function tripText(
       `https://experienceauthority.com/experiences/${item.slug}`,
     );
     if (includeNotes && entry.note) lines.push(`My note: ${entry.note}`);
+    if (includeNotes && entry.stage)
+      lines.push(`My status: ${tripStages[entry.stage]}`);
+    if (item.guideReview)
+      lines.push(`Official information: ${item.guideReview.accessUrl}`);
     lines.push("");
   }
   if (includeNotes && trip.logistics)

@@ -4,6 +4,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import Image from "next/image";
 import { Expand, X } from "lucide-react";
 import type { GuideMedia } from "@/lib/media";
+import { imageSource } from "@/lib/image-revisions";
 
 /** A native modal keeps keyboard focus inside the photograph, not behind it. */
 export function PhotoViewer({ media }: { media: GuideMedia }) {
@@ -70,7 +71,7 @@ export function PhotoViewer({ media }: { media: GuideMedia }) {
           {open && (
             <div className="photo-dialog-image">
               <Image
-                src={media.src}
+                src={imageSource(media.src)}
                 alt={media.alt}
                 fill
                 sizes="(max-width: 700px) 95vw, 85vw"

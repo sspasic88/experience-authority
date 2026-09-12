@@ -25,9 +25,9 @@ export function HomeHero() {
             </span>
           </h1>
           <p className="prototype-hero-lead">
-            Discover the ways places are lived, not simply visited. Find your way
-            in through food, people, craft and the outdoors, with sources and
-            practical context in every guide.
+            Discover the ways places are lived, not simply visited. Find your
+            way in through food, people, craft and the outdoors, with sources
+            and practical context in every guide.
           </p>
           <HomeDiscovery
             items={items.map(

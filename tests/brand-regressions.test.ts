@@ -1,6 +1,9 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
+import { curateHome } from "../src/lib/home-curation";
+import { publicGuides } from "../src/lib/public-guides";
+import { editorialPathways } from "../src/lib/editorial-pathways";
 
 const root = new URL("../", import.meta.url);
 const read = (path: string) => readFileSync(new URL(path, root), "utf8");
@@ -12,16 +15,25 @@ test("the public edition uses EA language, never generic travel editorial", () =
   assert.doesNotMatch(layout, /INDEPENDENT TRAVEL EDITORIAL/);
 });
 
-test("home curation does not repeat the Istanbul hero guide and keeps three distinct entries", () => {
-  const home = read("src/app/page.tsx");
-  const selected = [
-    "a-morning-at-the-hawker-table",
-    "step-into-the-dance",
-    "a-city-in-the-water",
+test("home curation gives every image one position, including hero and pathway reuse", () => {
+  const home = curateHome(publicGuides, editorialPathways);
+  assert.equal(home.startingPoints.length, 3);
+  assert.equal(home.newGuides.length, 6);
+  const visible = [
+    ...home.hero,
+    ...home.startingPoints,
+    ...home.newGuides,
+    ...home.homePathways.map((entry) => entry.item),
   ];
-  assert.ok(selected.every((slug) => home.includes(`\"${slug}\"`)));
-  assert.doesNotMatch(home, /\"marble-steam-istanbul\"/);
-  assert.equal(new Set(selected).size, 3);
+  assert.equal(new Set(visible.map((item) => item.image)).size, visible.length);
+  const remaining = publicGuides.filter(
+    (item) => item.slug !== "a-morning-at-the-hawker-table",
+  );
+  assert.ok(
+    curateHome(remaining, editorialPathways).startingPoints.every((item) =>
+      remaining.includes(item),
+    ),
+  );
 });
 
 test("visible accent details use the EA colour tokens, not one-off coral values", () => {

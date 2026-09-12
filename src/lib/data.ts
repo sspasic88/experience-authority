@@ -120,7 +120,8 @@ const seeds: Seed[] = [
     regionSlug: "emilia-romagna",
     status: "paused",
     image: "/images/market.jpg",
-    imageAlt: "Illustrative market produce from Seattle. It does not show a hosted meal.",
+    imageAlt:
+      "Illustrative market produce from Seattle. It does not show a hosted meal.",
     shift: "From being served to being present with others.",
   },
   {

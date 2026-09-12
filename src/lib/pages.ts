@@ -21,7 +21,7 @@ export const editorialPages: Record<
         paragraphs: [
           "A public-source guide is original editorial writing about a specific, publicly offered programme, ordinary admission or public hospitality. It explains the experience, its relationship to place, a possible change in perspective, responsible participation and the limits of the evidence. It is not an EA Selected endorsement or an on-site review.",
           "We use published official information and link to the source of each account. First-party descriptions are attributed, not treated as independent proof of quality or impact. No special private access, sacred practice, uninvited workplace visit or culturally restricted knowledge is offered through these guides.",
-          "Each guide carries a desk-check date and an official access link. Prices, opening times and availability remain with the operator. We do not arrange a visit or imply a partnership. No provider photographs, copied descriptions or paid placements are used in the first guide set.",
+          "Each guide carries a source-check date and an official access link. Prices, opening times and availability remain with the operator. All photographs have a credit and a rights record. Official-source images without a confirmed reuse licence are identified as such. There are no copied provider descriptions or paid placements.",
           "The sections on a possible shift and human return are editorial interpretations, not measured effects. Local validation remains a separate step before an experience can receive an EA Selected status. The guide register excludes entries after their review-by date, at most 90 days after a source check. This is not live availability monitoring.",
         ],
       },
@@ -73,22 +73,22 @@ export const editorialPages: Record<
       {
         title: "A different starting point.",
         paragraphs: [
-          "We are developing a way to discover experiences through their relationship to place, the knowledge they hold and the perspective they may open.",
-          "Compass is not a booking marketplace, a provider directory or a list of things everyone should do. It is an editorial project built around context, care and curiosity.",
+          "A place becomes more interesting when you know what to pay attention to. The timing of a shared meal. The movement behind a craft. The work that gives a landscape its shape. Experience Authority follows those connections through original guides to locally rooted experiences.",
+          "Use Compass when you know what you feel like doing. Browse Places when you already have a destination. Follow a Collection when you want an unexpected connection, or open the Journal for a more considered way to shape a day.",
         ],
       },
       {
         title: "Independent by design.",
         paragraphs: [
-          "Experience Authority has a separate application and intended deployment at experienceauthority.com. Its relationship to Innovation Authority does not mean shared user accounts or shared personal data.",
+          "Experience Authority is a connected spin-off of Innovation Authority. The shared interest is in understanding what matters and why. EA has its own identity, website and editorial focus on experiences rooted in place.",
           "Editorial selection must remain separate from commercial work. Providers cannot pay for inclusion, ranking or a more favourable judgement.",
         ],
       },
       {
-        title: "In the making.",
+        title: "From curiosity to a journey.",
         paragraphs: [
-          "The first content edition contains original public-source guides to specifically identified, publicly offered experiences. Each states what its sources establish and what remains unverified. No local validation, personal visit or provider partnership is claimed.",
-          "The public edition contains original public-source guides. A separate, explicitly labelled design-demo mode retains fictional interface examples for testing and is not available in production. The 200 preliminary research candidates are not automatically published.",
+          "Passport gives your discoveries somewhere to go. Save ideas, compare their practical details, arrange them by day and keep travel notes beside them. Download or share your draft with a companion. Your saved ideas stay in your browser, with no account required.",
+          "The current edition uses public-source research with linked evidence and clear access notes. We distinguish that work from an on-site review or a locally validated EA selection. The initial research register contains 200 candidates. Every published guide must earn its place individually.",
         ],
       },
     ],
@@ -143,8 +143,8 @@ export const editorialPages: Record<
         title: "Stored on this device.",
         paragraphs: [
           "Your saved stories and comparison list use local browser storage under the key ea:passport:v1. They do not sync across devices and are not sent to an account server.",
-          "The optional journey planner stores a journey name, experience identifiers, day numbers and your notes under ea:trip:v1. These stay in this browser and are not sent to EA. Avoid entering payment details, passport numbers or sensitive booking information. Remove an experience from the plan to delete its note, clear text fields to remove their contents, or clear this site’s browser data to delete the whole plan.",
-          "Sharing happens only when you press Share and use your device’s sharing interface or copy the text. Private names and notes are excluded from shared plans unless you explicitly opt in. A downloaded plan includes your notes and becomes a file you control. Neither action creates a public editable itinerary or synchronizes devices.",
+          "The optional journey planner stores a journey name, experience identifiers, day numbers, your planning status and your notes under ea:trip:v1. These stay in this browser and are not sent to EA. Avoid entering payment details, passport numbers or sensitive booking information. Remove an experience to delete its note, clear text fields to remove their contents, or use Start a fresh journey to clear the plan while keeping your saved guides.",
+          "Sharing happens only when you press Share and use your device’s sharing interface or copy the text. Your journey name, notes and personal planning statuses are excluded unless you explicitly include them. Downloads and printed or saved PDF copies include your notes and become files you control. These actions do not create a public editable itinerary or synchronize devices.",
           "Remove individual bookmarks to delete them from your Passport. Clearing this site’s browser data removes the entire local Passport. Private browsing or browser settings may prevent persistent saving.",
         ],
       },

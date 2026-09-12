@@ -189,12 +189,15 @@ export default async function Experience({ params }: Props) {
         </p>
         {item.demo ? (
           <div className="demo-callout">
-            <strong>Design preview. Fictional experience.</strong> Status
-            labels demonstrate the interface, not real access. Do not plan a
-            visit using this page.
+            <strong>Design preview. Fictional experience.</strong> Status labels
+            demonstrate the interface, not real access. Do not plan a visit
+            using this page.
           </div>
         ) : item.guideReview ? (
-          <aside className="guide-disclosure" aria-labelledby="guide-provenance">
+          <aside
+            className="guide-disclosure"
+            aria-labelledby="guide-provenance"
+          >
             <div className="guide-disclosure-intro">
               <span className="guide-disclosure-slash" aria-hidden="true" />
               <div className="guide-disclosure-copy">
@@ -203,8 +206,8 @@ export default async function Experience({ params }: Props) {
                 </p>
                 <p>
                   <strong>Independent public-source guide.</strong> EA has
-                  reviewed public information, not visited, locally validated
-                  or partnered with the provider.
+                  reviewed public information, not visited, locally validated or
+                  partnered with the provider.
                 </p>
               </div>
             </div>
@@ -325,7 +328,7 @@ export default async function Experience({ params }: Props) {
                   ? {
                       public_programme: "Publicly offered programme",
                       public_admission: "Public admission",
-                      public_hospitality: "Public dining",
+                      public_hospitality: "Public hospitality",
                     }[item.guideReview.scope]
                   : "No access offered"}
               </dd>

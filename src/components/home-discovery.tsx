@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight, MapPin, Search } from "lucide-react";
 import { useMemo, useState } from "react";
+import { discoveryProfiles } from "@/lib/experience-finder";
 
 type DiscoveryItem = {
   slug: string;
@@ -25,7 +26,7 @@ const featuredSlugs = [
   "mexico-city-grown-on-water",
   "a-bowl-of-attention",
   "venice-through-an-oar",
-  "drink-the-hillside",
+  "the-vineyard-at-the-table",
 ];
 
 function searchText(item: DiscoveryItem) {
@@ -36,6 +37,7 @@ function searchText(item: DiscoveryItem) {
       item.country,
       item.field,
       item.summary,
+      ...(discoveryProfiles[item.slug]?.keywords ?? []),
     ].join(" "),
   );
 }
@@ -46,9 +48,7 @@ function relevance(item: DiscoveryItem, needle: string) {
     value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const words = needle.split(/\s+/).filter(Boolean);
   const exactWords = words.every((word) =>
-    new RegExp(`(^|[^a-z0-9])${escape(word)}([^a-z0-9]|$)`, "i").test(
-      text,
-    ),
+    new RegExp(`(^|[^a-z0-9])${escape(word)}([^a-z0-9]|$)`, "i").test(text),
   );
   if (!exactWords && !text.includes(needle)) return 0;
   const identity = normalize(
@@ -136,8 +136,17 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
               event.preventDefault();
               moveActive(-1);
             }
-            if (event.key === "Escape") setOpen(false);
-            if (event.key === "Enter" && active >= 0 && matches[active]) {
+            if (event.key === "Escape") {
+              event.preventDefault();
+              setOpen(false);
+              setActive(-1);
+            }
+            if (
+              event.key === "Enter" &&
+              open &&
+              active >= 0 &&
+              matches[active]
+            ) {
               event.preventDefault();
               window.location.assign(`/experiences/${matches[active].slug}`);
             }
@@ -146,7 +155,7 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
           aria-expanded={open}
           aria-controls="home-search-results"
           aria-activedescendant={
-            active >= 0 ? `home-search-result-${active}` : undefined
+            open && active >= 0 ? `home-search-result-${active}` : undefined
           }
           aria-autocomplete="list"
           autoComplete="off"
@@ -159,46 +168,56 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
       </form>
 
       {open && (
-        <div
-          id="home-search-results"
-          className="home-search-results"
-          role="listbox"
-          aria-label={
-            query.trim() ? "Matching guides" : "Popular starting points"
-          }
-        >
+        <div className="home-search-results">
           <div className="home-search-results-head">
-            <span>{query.trim() ? "Matching guides" : "Popular starting points"}</span>
-            <Link href="/explore">Open Compass</Link>
+            <span>
+              {query.trim() ? "Matching guides" : "Popular starting points"}
+            </span>
+            <Link href={`/explore?q=${encodeURIComponent(query)}`}>
+              Open Compass
+            </Link>
           </div>
-          {matches.length ? (
-            matches.map((item, index) => (
-              <Link
-                id={`home-search-result-${index}`}
-                key={item.slug}
-                href={`/experiences/${item.slug}`}
+          <div
+            id="home-search-results"
+            className="home-search-options"
+            role="listbox"
+            aria-label={
+              query.trim() ? "Matching guides" : "Popular starting points"
+            }
+          >
+            {matches.length ? (
+              matches.map((item, index) => (
+                <Link
+                  id={`home-search-result-${index}`}
+                  key={item.slug}
+                  href={`/experiences/${item.slug}`}
+                  role="option"
+                  aria-selected={active === index}
+                  className={active === index ? "is-active" : undefined}
+                  onMouseEnter={() => setActive(index)}
+                >
+                  <MapPin size={16} aria-hidden="true" />
+                  <span>
+                    <strong>{item.place}</strong>
+                    <small>{item.title}</small>
+                  </span>
+                  <ArrowRight size={16} aria-hidden="true" />
+                </Link>
+              ))
+            ) : (
+              <div
+                className="home-search-empty"
                 role="option"
-                aria-selected={active === index}
-                className={active === index ? "is-active" : undefined}
-                onMouseEnter={() => setActive(index)}
+                aria-disabled="true"
+                aria-selected="false"
               >
-                <MapPin size={16} aria-hidden="true" />
+                <strong>No exact match yet.</strong>
                 <span>
-                  <strong>{item.place}</strong>
-                  <small>{item.title}</small>
+                  Search all guides or begin with a way you want to feel.
                 </span>
-                <ArrowRight size={16} aria-hidden="true" />
-              </Link>
-            ))
-          ) : (
-            <div className="home-search-empty">
-              <strong>No exact match yet.</strong>
-              <span>Search all guides or begin with a way you want to feel.</span>
-              <Link href={`/explore?q=${encodeURIComponent(query)}`}>
-                Search Compass <ArrowRight size={15} />
-              </Link>
-            </div>
-          )}
+              </div>
+            )}
+          </div>
         </div>
       )}
 

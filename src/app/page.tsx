@@ -1,11 +1,15 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Compass, LockKeyhole } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Compass, BookOpenCheck } from "lucide-react";
 import {
   ExperienceCard,
   PathwayCard,
   SectionHeading,
+  Photo,
 } from "@/components/editorial";
-import { fields, interests } from "@/lib/catalog";
+import { fields, interests, matchesInterest } from "@/lib/catalog";
+import { curateHome } from "@/lib/home-curation";
+import { getJournalArticles } from "@/lib/journal";
+import { guideMediaFor } from "@/lib/media";
 import { editorialPathways } from "@/lib/editorial-pathways";
 import { demoMode, getExperiences } from "@/lib/data";
 import { StructuredData } from "@/components/structured-data";
@@ -25,29 +29,21 @@ export const metadata = pageMetadata(
 
 export default function Home() {
   const experiences = getExperiences();
-  const familiarWaysIn = [
-    "a-morning-at-the-hawker-table",
-    "step-into-the-dance",
-    "a-city-in-the-water",
-  ].flatMap((slug) => {
-    const item = experiences.find((experience) => experience.slug === slug);
-    return item ? [item] : [];
-  });
-  const startingPoints = familiarWaysIn.length
-    ? familiarWaysIn
-    : experiences.slice(0, 3);
-  const newGuideSlugs = [
-    "read-the-desert-at-ground-level",
-    "kimchi-before-the-jar",
-    "when-the-sap-starts-to-run",
-    "the-pour-before-the-glass",
-    "when-the-sky-moves-as-one",
-    "the-tide-brings-the-horses",
-  ];
-  const newGuides = newGuideSlugs.flatMap((slug) => {
-    const item = experiences.find((experience) => experience.slug === slug);
-    return item ? [item] : [];
-  });
+  const { startingPoints, newGuides, homePathways, usedImages } = curateHome(
+    experiences,
+    editorialPathways,
+  );
+  const journalCards = getJournalArticles(experiences)
+    .flatMap((article) => {
+      const guide = article.guides.find(
+        (item) => item.image && !usedImages.has(item.image),
+      );
+      const media = guide && guideMediaFor(guide.id);
+      if (!media) return [];
+      usedImages.add(media.src);
+      return [{ article, media }];
+    })
+    .slice(0, 3);
   return (
     <>
       <StructuredData data={websiteStructuredData()} />
@@ -65,7 +61,7 @@ export default function Home() {
             <p className="section-note">
               {demoMode
                 ? "Fictional concepts for interface testing, not selected experiences."
-                : "Publicly offered experiences, explored through original guides with sources and clear access notes. Not yet locally validated EA selections."}
+                : "Start with a public experience you can plan around. Each guide explains what you do, what makes it belong here and where to check the details."}
             </p>
             <div className="experience-grid">
               {startingPoints.map((item, index) => (
@@ -98,7 +94,7 @@ export default function Home() {
           <div className="desire-grid">
             {interests.map((interest, index) => {
               const count = experiences.filter((item) =>
-                interest.fields.includes(item.field),
+                matchesInterest(item, interest),
               ).length;
               if (!count) return null;
               const lines: Record<string, string> = {
@@ -107,7 +103,8 @@ export default function Home() {
                   "Put your hands to work and your assumptions aside.",
                 "move-water": "Change the pace and learn through movement.",
                 "explore-reflect": "Look longer at the place around you.",
-                "swim-reset": "Make room for water, warmth and a slower hour.",
+                "swim-reset":
+                  "Make room for water, warmth or a different kind of night.",
                 "shared-rituals": "Enter public life with attention and care.",
               };
               return (
@@ -140,8 +137,8 @@ export default function Home() {
             link="Browse all guides"
           />
           <p className="section-note">
-            Recently researched public-source guides, each with a current access
-            route, evidence boundary and credited photography.
+            New places to follow your appetite, try a skill or look a little
+            closer. Open a guide for the story and the practical way in.
           </p>
           <div className="experience-grid">
             {newGuides.map((item, index) => (
@@ -171,15 +168,25 @@ export default function Home() {
             </Link>
           </div>
           <div className="field-cloud">
-            {fields.map((field, index) => (
-              <Link href={`/fields/${field.slug}`} key={field.slug}>
-                <span className="field-index">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                {field.name}
-                <ArrowUpRight size={22} aria-hidden="true" />
-              </Link>
-            ))}
+            {fields.map((field, index) =>
+              experiences.some((item) => item.field === field.slug) ? (
+                <Link href={`/fields/${field.slug}`} key={field.slug}>
+                  <span className="field-index">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  {field.name}
+                  <ArrowUpRight size={22} aria-hidden="true" />
+                </Link>
+              ) : (
+                <div className="field-not-open" key={field.slug}>
+                  <span className="field-index">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  {field.name}
+                  <small>On our radar</small>
+                </div>
+              ),
+            )}
           </div>
         </div>
       </section>
@@ -191,45 +198,87 @@ export default function Home() {
           link="All collections"
         />
         <div className="collection-grid">
-          {editorialPathways.slice(0, 3).map((pathway, index) => {
-            const item = experiences.find(
-              (experience) => experience.slug === pathway.guideSlugs[0],
-            );
-            return item ? (
+          {homePathways.map(({ pathway, item }, index) => {
+            return (
               <PathwayCard
                 key={pathway.slug}
                 pathway={pathway}
                 item={item}
                 index={index}
               />
-            ) : null;
+            );
           })}
         </div>
       </section>
+      {journalCards.length > 0 && (
+        <section className="home-journal">
+          <div className="wrap">
+            <SectionHeading
+              eyebrow="EA Journal"
+              title="Take a better question with you."
+              href="/journal"
+              link="Read the Journal"
+            />
+            <div className="home-journal-grid">
+              {journalCards.map(({ article, media }) => (
+                <article className="home-journal-card" key={article.slug}>
+                  <div className="place-card-image">
+                    <Link
+                      href={`/journal/${article.slug}`}
+                      aria-label={`Read ${article.title}`}
+                    >
+                      <Photo
+                        src={media.src}
+                        alt={media.alt}
+                        sizes="(max-width: 700px) 100vw, 33vw"
+                      />
+                    </Link>
+                    <Link
+                      className="image-source-badge"
+                      href={`/credits#media-${media.guideId}`}
+                    >
+                      Photo credit ↗
+                    </Link>
+                  </div>
+                  <p className="eyebrow">
+                    {article.eyebrow} / {article.readingMinutes} min read
+                  </p>
+                  <h3>
+                    <Link href={`/journal/${article.slug}`}>
+                      {article.title}
+                    </Link>
+                  </h3>
+                  <p>{article.summary}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
       <section className="method-band">
         <div className="wrap method-layout">
           <div>
             <p className="eyebrow">Our point of view</p>
             <h2>
-              Worth experiencing.
+              Worth remembering.
               <br />
-              Not always
-              <br />
-              <span>open to everyone.</span>
+              Worth understanding.
             </h2>
           </div>
           <div className="method-copy">
-            <LockKeyhole size={31} strokeWidth={1.2} />
+            <BookOpenCheck size={31} strokeWidth={1.2} />
             <p>
-              Some experiences need context. Some need permission. And some are
-              worth protecting from attention altogether.
+              The detail that makes an experience memorable is often the one a
+              photograph cannot explain. Who holds the knowledge. Why this
+              place. What changes when you take part.
             </p>
             <p>
-              Our role is to help you understand the difference, with clear
-              evidence, local knowledge and respect for the people who hold it.
+              Our guides connect those questions to practical access, original
+              writing and sources you can follow. You can see what each account
+              is based on before deciding whether it belongs in your journey.
             </p>
             <Link className="button button-paper" href="/method">
-              How we make our selections <ArrowUpRight size={19} />
+              How we build a guide <ArrowUpRight size={19} />
             </Link>
           </div>
         </div>
@@ -242,8 +291,8 @@ export default function Home() {
           </div>
           <div className="home-plan-steps">
             <p>
-              Use EA to find a meaningful way in, understand the access
-              boundary, keep your favourites and shape a private journey draft.
+              Find the experience worth planning around. Keep your favourites,
+              compare the practical details and give each day a little room.
             </p>
             <ol>
               <li>

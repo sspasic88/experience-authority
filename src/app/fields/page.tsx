@@ -58,7 +58,12 @@ export default function Fields() {
               </h2>
               <p>{field.line}</p>
               <small>
-                {fieldItems.length} {demoMode ? "demo stories" : "guides"}
+                {fieldItems.length}{" "}
+                {demoMode
+                  ? "demo stories"
+                  : fieldItems.length === 1
+                    ? "guide"
+                    : "guides"}
                 {samplePlaces && ` / ${samplePlaces}`}
               </small>
             </Link>

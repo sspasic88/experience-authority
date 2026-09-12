@@ -29,7 +29,8 @@ export const guideBatch04: PublicExperience[] = [
       "Choose food that works for your own dietary needs and ask the stall directly when ingredients matter. Follow current centre signage, return your tray and leave tables usable for the next people. Do not photograph workers or diners without asking. Stall hours, queues, payment methods, accessibility and cleaning arrangements vary, so confirm what matters before a special journey.",
     evidence:
       "The National Environment Agency’s current centre overview establishes the managed-centre map and closure information. Its hawker-culture page and the National Heritage Board’s heritage record provide wider public context. EA has not dined at a named stall, assessed food quality, hygiene, price, dietary suitability, labour conditions or a centre’s current accessibility. The photograph is an official government image of hawker-centre dining, used as place context only. It is not an EA visit.",
-    duration: "As long as you choose to stay, with current hours set by each centre and stall",
+    duration:
+      "As long as you choose to stay, with current hours set by each centre and stall",
     participation: "Independent public dining",
     access:
       "Ordinary public hospitality. Use the NEA map and current centre information to choose a location, then check a specific stall directly if its opening time matters. EA does not make reservations, sell food or receive commission.",
@@ -42,7 +43,8 @@ export const guideBatch04: PublicExperience[] = [
       accessUrl: "https://www.nea.gov.sg/our-services/hawker-management",
       sources: [
         {
-          title: "National Environment Agency: managing hawker centres and markets",
+          title:
+            "National Environment Agency: managing hawker centres and markets",
           url: "https://www.nea.gov.sg/our-services/hawker-management",
           note: "Current government overview with a map of managed hawker centres and published closure information. Individual stall schedules and menus still require direct confirmation.",
         },
@@ -85,8 +87,10 @@ export const guideBatch04: PublicExperience[] = [
       "Read the particular event’s guidance before travel and follow its ticketing, timing and photography rules. Ask before filming people or musicians. Make space at the edge of the floor for those teaching and dancing, and do not assume a dance invitation or instruction is owed to you. Choose your own level of participation and leave if the environment does not suit your needs.",
     evidence:
       "Fonó’s live programme establishes that it publishes current táncház events and their ticket or free-entry markers. UNESCO provides practice-level context for the Táncház method. EA has not attended, assessed teaching, verified a specific line-up, checked an event’s suitability or evaluated the venue’s accessibility. The photograph is published by Fonó and depicts a dance gathering at the venue. It is not an EA visit or a guarantee of a particular event.",
-    duration: "Event-specific. Confirm the current listing’s start time, ticket terms and finish",
-    participation: "Public listening, learning or dancing at your own discretion",
+    duration:
+      "Event-specific. Confirm the current listing’s start time, ticket terms and finish",
+    participation:
+      "Public listening, learning or dancing at your own discretion",
     access:
       "Public programme, with entry terms set by each current listing. Open Fonó’s programme before travel and use the venue’s own route for tickets or free-entry details. EA does not reserve places or receive commission.",
     guideReview: {

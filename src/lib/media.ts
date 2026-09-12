@@ -24,6 +24,302 @@ export type GuideMedia = {
 
 export const publicGuideMedia: readonly GuideMedia[] = [
   {
+    guideId: "singapore-batik-tulis-workshop",
+    src: "/images/guides/singapore-batik-tulis-workshop.jpg",
+    alt: "A participant applies colour around the wax lines of a purple rose during a batik workshop in Singapore.",
+    title: "Batik Tulis workshop in Singapore",
+    photographer: "OZEL SG. Individual photographer not named",
+    sourceUrl: "https://ozel.com.sg/pages/batik-tulis-workshop",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://ozel.com.sg/pages/batik-tulis-workshop",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The close vertical frame shows hands, colour and a wax-outlined cloth in active use. It communicates the actual making process more clearly than a posed group or a finished-product grid and remains legible in a tight crop.",
+    },
+    depiction:
+      "A participant colouring a floral batik piece during a workshop, published in OZEL's official Batik Tulis Workshop gallery. The person and date are not identified. It is not an EA visit or an independent assessment of the session. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "singapore-coney-island-walk",
+    src: "/images/guides/singapore-coney-island-walk.jpg",
+    alt: "A pale gravel path runs between woodland and calm water on Singapore's Coney Island.",
+    title: "Coney Island, Singapore",
+    photographer: "LN9267",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Coney_Island_07-08-2025(10).jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The crisp 2025 landscape gives the route a clear forward line between shade and water. It is recognisably a walk rather than a generic wildlife close-up, includes no identifiable people and leaves enough quiet space for responsive editorial crops.",
+    },
+    depiction:
+      "A path beside water on Coney Island in Singapore, photographed on 7 August 2025. It does not document the complete NParks route, a wildlife sighting or an EA visit. Cropped responsively for layout by Experience Authority.",
+  },
+  {
+    guideId: "kyoto-marumasu-yuzen",
+    src: "/images/guides/kyoto-yuzen-stencil-workshop.jpg",
+    alt: "A warm-toned stencil is lifted above a blue, green and brown owl pattern during Yuzen dyeing.",
+    title: "Kyoto Yuzen-dyed owl pattern",
+    photographer: "Marumasu Nishimuraya, publishing source",
+    sourceUrl: "https://www.marumasu-nishimuraya.co.jp/en/private",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://www.marumasu-nishimuraya.co.jp/en/private",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The close crop makes the stencil, reserved cloth and layered colour readable in a single tactile frame, with enough material detail to feel like process rather than product display.",
+    },
+    depiction:
+      "A Yuzen-dyed owl pattern and stencil published by Marumasu Nishimuraya in the context of its workshop. It is not an EA visit or proof of a future session. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "kyoto-kctp-backstreet-cycling",
+    src: "/images/guides/kyoto-backstreet-cycling.jpg",
+    alt: "A woman in kimono guides a bicycle past wooden houses and potted plants on a sunlit Gion street.",
+    title: "Gion, Kyoto, Japan",
+    photographer: "dconvertini",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Gion,_Kyoto,_Japan_(48928782333).jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "Warm morning light, a real bicycle and the layered wood, plants and street surface make movement through Gion tangible without resorting to a generic landmark panorama.",
+    },
+    depiction:
+      "A person guiding a bicycle along a street in Gion, Kyoto, on 24 May 2019. It does not depict the KCTP tour, a tour participant or an EA visit. The source image was resized for web delivery and remains available under CC BY-SA 2.0.",
+  },
+  {
+    guideId: "cape-town-bo-kaap-cooking",
+    src: "/images/guides/cape-town-bo-kaap-cooking.jpg",
+    alt: "A cook lifts fresh chilli bites from a pot into a bowl with Cape Malay samoosas.",
+    title: "Cape Malay snacks",
+    photographer: "Go2africa",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Cape_Malay_snacks.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The close cooking action, strong blue and warm food colour remain legible at card and hero scale without turning residents or the neighbourhood into spectacle.",
+    },
+    depiction:
+      "Cape Malay chilli bites and samoosas being prepared in South Africa in 2014. The image is food and process context. It does not depict The Bo-Kaap Cooking Tour, Bo-Kaap, its host or an EA visit. Cropped responsively for layout by Experience Authority.",
+  },
+  {
+    guideId: "salta-empanada-workshop",
+    src: "/images/guides/salta-empanada-workshop.jpg",
+    alt: "Freshly baked empanadas with hand-crimped edges rest on dark slate in front of a glowing brick oven.",
+    title: "Make your own empanada workshop",
+    photographer:
+      "Tourism Office of the City of Salta. Individual photographer not named",
+    sourceUrl:
+      "https://www.saltaciudad.travel/posts/taller-gastronomico-como-hacer-tu-propia-empanada",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl:
+      "https://www.saltaciudad.travel/posts/taller-gastronomico-como-hacer-tu-propia-empanada",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "A restrained low angle, visible hand-crimped edges and the heat of the brick oven make the dish feel made rather than styled as a generic restaurant plate.",
+    },
+    depiction:
+      "Empanadas in front of a brick oven, published as the official image for Salta City Tourism's make-your-own-empanada workshop. The page does not identify the photographer or prove that the food pictured is from a current session. It is not an EA visit. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "sarajevo-bosnian-coffee",
+    src: "/images/guides/sarajevo-bosnian-coffee.png",
+    alt: "Two women share a relaxed table of Bosnian coffee and sweets in a stone courtyard in Sarajevo.",
+    title: "Tour group enjoying Bosnian coffee in Sarajevo",
+    photographer: "Cheyf. Individual photographer not named",
+    sourceUrl: "https://cheyf.ba/products/sarajevo-city-tour-bosnian-coffee",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://cheyf.ba/products/sarajevo-city-tour-bosnian-coffee",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The vertical documentary frame catches an unforced laugh, a close table and the courtyard texture, making the social pause more important than a product close-up.",
+    },
+    depiction:
+      "A Cheyf tour group sharing Bosnian coffee and sweets in Sarajevo, as identified by the operator's page. It is an official operator image, not an EA visit or an independent assessment of the cafe or tour. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "loiza-copi-bomba",
+    src: "/images/guides/loiza-copi-bomba.jpg",
+    alt: "A young bomba dancer raises one hand beside drummers and a gathered crowd in a bright Loíza courtyard.",
+    title: "Bomba in Loíza",
+    photographer: "Discover Puerto Rico. Individual photographer not named",
+    sourceUrl: "https://www.discoverpuertorico.com/regions/east/loiza",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://www.discoverpuertorico.com/regions/east/loiza",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The wider original keeps the dancer, barrel drums and surrounding community in one place-specific frame, with strong colour and no artificial staging by EA.",
+    },
+    depiction:
+      "Bomba at El Batey de los Hermanos Ayala in Loíza, published by Discover Puerto Rico. It does not depict a COPI class, a named instructor or an EA visit. The source page does not identify the photographer. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "biarritz-basque-pelota-initiation",
+    src: "/images/guides/biarritz-basque-pelota.jpg",
+    alt: "A pelota player swings a wooden pala towards the ball against a pale fronton wall, captured with motion blur.",
+    title: "Pelotari",
+    photographer: "arquitextonica",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Pelotari.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The vertical black-and-white action frame makes the swing, ball and hard fronton surface immediately legible while the motion blur keeps the image physical rather than instructional.",
+    },
+    depiction:
+      "A pelota player photographed in a fronton in La Rioja, Spain, in 2007. It does not depict Biarritz, the listed beginner programme or an EA visit. The source image was resized for web delivery and remains available under CC BY-SA 2.0.",
+  },
+  {
+    guideId: "hanoi-thang-long-water-puppetry",
+    src: "/images/guides/hanoi-water-puppetry.jpg",
+    alt: "Bright lacquered figures move across the water stage during a Thang Long water puppet performance in Hanoi.",
+    title: "Water Puppet Show",
+    photographer: "Steven C. Price",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Water-Puppet-Show.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The exact theatre context, reflective water, lacquered figures and flare of stage fire create a vivid editorial image while keeping the performance itself central.",
+    },
+    depiction:
+      "A Thang Long Water Puppet Theatre performance photographed in Hanoi on 18 December 2002. It does not depict the current programme or an EA visit. The source image was resized for web delivery and remains available under CC BY-SA 4.0.",
+  },
+  {
+    guideId: "allgaeu-thalkirchdorf-viehscheid",
+    src: "/images/guides/allgaeu-thalkirchdorf-viehscheid.jpg",
+    alt: "Brown cattle follow herders along a sunlit forest track during the Thalkirchdorf Viehscheid.",
+    title: "Viehscheid Thalkirchdorf, 2019",
+    photographer: "Oberstaufen Tourismus, Moritz Sonntag",
+    sourceUrl:
+      "https://www.allgaeu.de/veranstaltungen/viehscheid-thalkirchdorf",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl:
+      "https://www.allgaeu.de/veranstaltungen/viehscheid-thalkirchdorf",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "Warm backlight, a clear working procession and the enveloping forest give the seasonal movement scale without turning the herders into costume detail.",
+    },
+    depiction:
+      "Cattle and herders moving along a forest track in the 2019 Thalkirchdorf Viehscheid context, photographed by Moritz Sonntag and published by Oberstaufen Tourismus. It is not the 2026 event, an EA visit or proof of current conditions. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "cambridge-st-clements-bells",
+    src: "/images/guides/cambridge-bell-ringing.jpg",
+    alt: "A group of bell ringers work different ropes in a timber-lined church ringing room seen from above.",
+    title: "Bell ringing at Crosthwaite, Keswick",
+    photographer: "Dougsim",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Bell_ringing_at_Crosthwaite,_Keswick.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The overhead view connects ten bodies, separate ropes and shared timing in one architectural frame, making coordination immediately legible.",
+    },
+    depiction:
+      "Carlisle Diocesan Guild bell ringers at St Kentigern's Church, Crosthwaite, during their 2017 annual meeting. It does not depict St Clement's, a visitor session or an EA visit. The source image was resized for web delivery and remains available under CC BY-SA 4.0.",
+  },
+  {
+    guideId: "porto-vidra-tile-painting",
+    src: "/images/guides/porto-tile-painting.jpg",
+    alt: "A participant paints a small blue pattern onto a square ceramic tile at Oficina Vidra in Porto.",
+    title: "Tile painting workshop",
+    photographer: "Oficina Vidra, publishing source",
+    sourceUrl: "https://www.vidra.pt/en/workshops/azulejos",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://www.vidra.pt/en/workshops/azulejos",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The brush, hand, blue pigment and repeated motifs hold the making action in crisp focus while the bright worktable avoids nostalgic craft styling.",
+    },
+    depiction:
+      "A participant painting a ceramic tile in an image published on Oficina Vidra's workshop page. The page does not name an individual photographer. It is official provider imagery, not an EA visit or proof of future availability. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "koyasan-instant-temple-stay",
+    src: "/images/guides/koyasan-temple-stay.jpg",
+    alt: "Parted shoji screens reveal a small green garden beyond a quiet tatami room at a Koyasan temple lodging.",
+    title: "Our room at Shojoshin-in on Koyasan",
+    photographer: "Andrea Schaffer",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Our_room_at_Shojoshin-in_on_Koyasan_(3810919254).jpg",
+    licenseName: "CC BY 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The symmetrical screens, threshold and garden create a restrained sense of arrival with enough lived detail to keep the room from becoming a generic interior.",
+    },
+    depiction:
+      "A guest room at Shojoshin-in on Koyasan, photographed in 2009. It is visual context only and does not depict one of the six current instant-booking plans, current room condition or an EA visit. The source image was resized for web delivery under CC BY 2.0.",
+  },
+  {
     guideId: "seoul-kimchikan-making",
     src: "/images/guides/seoul-kimchi-making.jpg",
     alt: "Visitors in aprons prepare cabbage kimchi together around a long table inside Museum Kimchikan in Seoul.",

@@ -28,6 +28,45 @@ export type EditorialPathway = {
  */
 export const editorialPathways = [
   {
+    slug: "the-pleasure-of-being-a-beginner",
+    kind: "learned-skills",
+    title: "The pleasure of being a beginner",
+    promise: "Six ways to give your hands a new problem.",
+    intro:
+      "A first attempt makes a familiar place less predictable. In Porto, a brush turns the tile you noticed on a facade into a decision of your own. In Cambridge, a single bell makes shared timing physical. Biarritz puts a wall, a ball and a borrowed technique between you and an easy answer. Bo-Kaap, Salta and Loíza offer different kinds of first steps through cooking and bomba. These are public introductions, not shortcuts to mastery. Choose the attempt you would enjoy even if the finished result were imperfect, then read the current programme and preparation before booking.",
+    guideSlugs: [
+      "paint-the-pattern-you-noticed",
+      "set-one-bell-in-motion",
+      "play-the-wall-in-biarritz",
+      "cook-beyond-the-postcard",
+      "learn-the-fold-in-salta",
+      "let-the-drum-lead-the-first-step",
+    ],
+    visitorUse:
+      "Compare what you actually do, how long the session asks for and what the instructor supplies. Keep room to collect a fired tile later or confirm a seasonal class date before fixing your route.",
+    returnAndShare:
+      "Send this collection to the person who would laugh through a first attempt with you, then save the skill you would like to try together.",
+  },
+  {
+    slug: "make-room-for-a-slower-day",
+    kind: "ritual-and-season",
+    title: "Make room for a slower day",
+    promise: "Warm water, a coffee pause and a night with a different rhythm.",
+    intro:
+      "Not every memorable experience needs acceleration. A Koyasan temple stay asks you to fit an overnight visit around one lodging's actual arrangements. An Istanbul hammam, Tampere sauna and Reykjavík pool each belong to a different public bathing culture. Sarajevo brings a seated coffee pause into a longer city walk. These are not interchangeable wellness products and none carries a promise of transformation. What they share is room to notice a threshold, a gesture or a pattern of ordinary life that a hurried itinerary would pass over.",
+    guideSlugs: [
+      "spend-the-night-in-a-temple-town",
+      "marble-steam-istanbul",
+      "make-room-in-the-steam",
+      "a-city-in-the-water",
+      "let-the-coffee-take-its-time",
+    ],
+    visitorUse:
+      "Choose the format that genuinely fits your day or night. Read bathing rules, dietary and lodging details, current opening times and the scope of any tour before making arrangements.",
+    returnAndShare:
+      "Keep one quieter possibility beside your busiest day, or share the collection with someone who would welcome a little more space.",
+  },
+  {
     slug: "what-a-place-tastes-like",
     kind: "food-and-drink",
     title: "What a place tastes like",

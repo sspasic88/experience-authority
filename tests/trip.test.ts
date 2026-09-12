@@ -39,3 +39,17 @@ test("sharing excludes private free text unless explicitly included, and retains
   assert.ok(publicText.includes("not confirmed reservations"));
   assert.ok(tripText(trip, publicGuides, true).includes("PRIVATE HOTEL"));
 });
+test("planning status is visitor controlled, allowlisted and private when sharing", () => {
+  const id = publicGuides[0].id;
+  assert.equal(
+    sanitizeTrip({ entries: [{ id, stage: "provider-confirmed" }] }, [id])
+      .entries[0].stage,
+    undefined,
+  );
+  const trip = sanitizeTrip({ entries: [{ id, stage: "arranged" }] }, [id]);
+  assert.equal(trip.entries[0].stage, "arranged");
+  assert.ok(!tripText(trip, publicGuides).includes("I have arranged this"));
+  assert.ok(
+    tripText(trip, publicGuides, true).includes("I have arranged this"),
+  );
+});

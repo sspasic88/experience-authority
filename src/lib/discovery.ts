@@ -5,6 +5,7 @@ import {
   type PublicExperience,
 } from "./catalog";
 import { editorialPathways } from "./editorial-pathways";
+import { getJournalArticles } from "./journal";
 import { canonicalUrl, indexingEnabled, isDiscoverable } from "./seo";
 
 export type SitemapEntry = { url: string; lastModified?: Date };
@@ -54,5 +55,15 @@ export function sitemapEntries(
       ? { lastModified: new Date(`${item.guideReview.checkedOn}T00:00:00Z`) }
       : {}),
   }));
-  return [...staticEntries, ...guideEntries];
+  const articles = getJournalArticles(publicItems);
+  const journalEntries = articles.length
+    ? [
+        { url: canonicalUrl("/journal") },
+        ...articles.map((article) => ({
+          url: canonicalUrl(`/journal/${article.slug}`),
+          lastModified: new Date(`${article.updatedOn}T00:00:00Z`),
+        })),
+      ]
+    : [];
+  return [...staticEntries, ...guideEntries, ...journalEntries];
 }

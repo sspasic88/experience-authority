@@ -4,7 +4,9 @@ User direction: populate the local website with content aligned with EA that doe
 
 ## Scope and distinction
 
-Twenty original English public-source guides now make up the public edition, covering eighteen countries. These are independently written desk guides to specifically advertised public programmes, admission or hospitality. They are not EA Selected, locally validated, visited or independently quality-assessed. The separate launch requirement for 25 locally validated EA Selected experiences is unchanged and unmet. Production indexing applies only to this clearly labelled public-source edition.
+Thirty-seven original English public-source guides now make up the public edition, covering thirty countries and territories and eleven of the thirteen editorial fields. Ten collections and six original Journal articles connect these guides to visitor decisions. These are independently written desk guides to specifically advertised public programmes, admission or hospitality. They are not EA Selected, locally validated, visited or independently quality-assessed. The separate launch requirement for 25 locally validated EA Selected experiences is unchanged and unmet. Production indexing applies only to this clearly labelled public-source edition.
+
+The table below records the first twenty guide decisions. Subsequent batches are documented after it. Counts describe the reviewed 12 September 2026 edition, not guaranteed future runtime availability.
 
 | Guide                         | Preliminary practice narrowed from                                    | Source basis                                                                                                   |
 | ----------------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -34,7 +36,7 @@ The original workbook and 200-candidate audit are unchanged. No bulk promotion o
 ## Evidence and editorial decisions
 
 - At least two distinct official URLs per guide, checked 2026-09-12. Multiple pages from one organisation are expressly not independent corroboration.
-- Review-by 2026-12-11; at most 90 days. Runtime exclusion after expiry is a freshness backstop, not a monitor of changes on external sites.
+- Review-by 2026-12-11, at most 90 days, except the Thalkirchdorf event guide, whose review-by date is 2026-09-18 and which becomes ineligible on 19 September. Runtime exclusion after expiry is a freshness backstop, not a monitor of changes on external sites.
 - No source text quoted or wholesale copied. Possible shift/human return are EA interpretations, explicitly not promised effects.
 - No live price, attendance, accessibility, safety, ethical impact or therapeutic guarantee. Official information controls visitor planning.
 - Belmont's current tour page uses a booking widget; its indexed Classic Tour description supports fermentation/drying. This limitation is disclosed and exact current inclusions must be confirmed. No harvest participation, factory access or animal encounter is promised.
@@ -46,6 +48,14 @@ The original workbook and 200-candidate audit are unchanged. No bulk promotion o
 
 ## What changed in the website
 
+The latest expansion adds fourteen guides: Bo-Kaap cooking in Cape Town, Salta empanadas, Sarajevo coffee, COPI bomba in Loíza, the Thalkirchdorf cattle descent, Cambridge bell ringing, Porto tile painting, Koyasan temple lodging, Biarritz pelota, Hanoi water puppetry, Singapore batik and Coney Island walking, and Kyoto stencil-dyeing and backstreet cycling. Each has at least two official public sources, a reviewed real photograph and explicit boundaries around public access, interpretation and image depiction. OZEL's public booking state was checked read-only after a hidden sold-out template badge caused ambiguity. No booking, cart change, form submission or contact was made.
+
+Country pages now expose every available local guide through visitor-facing categories. City and area pages keep their exact geographic scope. Wider-country recommendations are separately labelled and never represented as nearby. Kyoto and Singapore each have three distinct guides. Most countries still have only one guide. Destination depth is now the editorial priority, not a claim of comprehensive coverage.
+
+Compass has live country, city/area, interest, participation and time filters, shareable filter URLs, result counts and clear reset states. Places can be searched by city, area or country. Two new collections focus on beginners and slower days. Six Journal articles help readers choose a meaningful anchor, understand authenticity, use a free morning, join a shared table, respect seasonal timing and begin a skill. Homepage photo curation prevents duplicated imagery. Image revisions are content-addressed to stop replaced photographs surviving in responsive image caches.
+
+The journey planner adds personal planning states, an explicit confirmed reset that keeps Passport bookmarks, and print/PDF output. Share text includes official public access links but excludes private notes, the private journey name and personal planning states by default. This remains local planning, not booking, live inventory, route verification or a cloud-synced itinerary.
+
 The later public-guide batches add Doolin traditional music, Istanbul bathing, Xochimilco chinampa context, a Singapore hawker breakfast, a Budapest táncház, a public Barcelona castells performance, a guided Wadden mudflat walk, SKREI in Lofoten, Oostduinkerke's horseback shrimp fishing, Denmark's Black Sun, Trabanco's public Asturias cider visit, Museum Kimchikan in Seoul, a guided Namib dune tour and seasonal sugar-shack hospitality in Québec. Japan and Spain expose multiple real-coverage regions in navigation and the sitemap. New territories appear only when the current public-source gate, source notes and reviewed photographs pass together.
 
 Visitor tools now include a private day-by-day journey draft, travel/stay notes, text download, opt-in sharing of private notes, contextual related guides, full-image homepage links and an enlarged photograph dialog with source/licence links. There is one local plan, no cloud synchronization, shared editable page, verified travel routing or booking service. Native sharing only runs on a visitor click; without it, clipboard/manual text is offered. The home return panel is based only on local Passport state; no retention improvement has been measured.
@@ -56,4 +66,4 @@ No changes to IA, bookings, subscriptions or purchases. Public production uses i
 
 ## Next safe steps
 
-Additional candidates should be narrowed and checked individually against this same public-guide scope; do not fill all 13 fields just to meet a number. Contemporary place-rooted public art/learning/play can qualify for investigation, but spectacle alone is insufficient. Technical and editorial handoff can continue at a lower model setting after the current source/brand judgement is complete. Figma detail composition and source-controlled deployment setup remain separate unfinished tasks.
+Additional candidates should be narrowed and checked individually against this same public-guide scope. Prioritise depth across different visitor interests in recognisable destinations before adding many more one-guide countries. Do not fill all 13 fields just to meet a number. Contemporary place-rooted public art/learning/play can qualify for investigation, but spectacle alone is insufficient. The original 200-candidate audit is not complete or bulk-published. Technical and editorial handoff can continue at a lower model setting after the current integration and verification are complete. This edition is a code/site update, not a new Figma synchronisation.

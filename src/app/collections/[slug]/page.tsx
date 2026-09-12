@@ -3,7 +3,13 @@ import { notFound } from "next/navigation";
 import { EmptyState, ExperienceCard, PageIntro } from "@/components/editorial";
 import { getExperiences } from "@/lib/data";
 import { getEditorialPathway } from "@/lib/editorial-pathways";
-import { pageMetadata, isDiscoverable } from "@/lib/seo";
+import {
+  pageMetadata,
+  isDiscoverable,
+  collectionStructuredData,
+} from "@/lib/seo";
+import { StructuredData } from "@/components/structured-data";
+import { ShareButton } from "@/components/share-button";
 type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
@@ -31,6 +37,13 @@ export default async function Collection({ params }: Props) {
   });
   return (
     <div className="wrap page-section">
+      <StructuredData
+        data={collectionStructuredData(
+          collection.title,
+          `/collections/${collection.slug}`,
+          items,
+        )}
+      />
       <nav className="breadcrumb" aria-label="Breadcrumb">
         <Link href="/collections">Collections</Link>
         <span>/</span>
@@ -40,6 +53,12 @@ export default async function Collection({ params }: Props) {
         <p>{collection.promise}</p>
         <p>{collection.intro}</p>
       </PageIntro>
+      <ShareButton
+        title={collection.title}
+        text={collection.promise}
+        url={`https://experienceauthority.com/collections/${collection.slug}`}
+        label="Share this collection"
+      />
       <aside className="pathway-use" aria-label="How to use this pathway">
         <div>
           <p className="eyebrow">How to use this pathway</p>

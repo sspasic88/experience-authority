@@ -18,8 +18,8 @@ import { guideMediaFor, publicGuideMedia } from "../src/lib/media";
 
 const today = "2026-09-12";
 const sample = publicGuides.find((p) => p.id === "kumano-daimon-zaka")!;
-test("guide set contains twenty-three distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 23);
+test("guide set contains thirty-seven distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 37);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -28,7 +28,11 @@ test("guide set contains twenty-three distinct, sourced public experiences, not 
     new Set(publicGuides.map((p) => p.slug)).size,
     publicGuides.length,
   );
-  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 21);
+  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 30);
+  assert.equal(
+    new Set(territories.map((place) => place.slug)).size,
+    territories.length,
+  );
   for (const p of publicGuides) {
     assert.equal(canPublishGuide(p, today), true, p.slug);
     assert.equal(p.status, "public_guide");
@@ -60,7 +64,7 @@ test("new regions are derived from real coverage and recommendations favour a re
     regionsForCountry("japan", publicGuides)
       .map((r) => r.slug)
       .sort(),
-    ["kumano-kodo", "kyoto"],
+    ["koyasan", "kumano-kodo", "kyoto"],
   );
   assert.deepEqual(
     regionsForCountry("spain", publicGuides)
@@ -69,10 +73,7 @@ test("new regions are derived from real coverage and recommendations favour a re
     ["asturias", "barcelona"],
   );
   const kyoto = publicGuides.find((p) => p.id === "kyoto-camellia-tea")!;
-  assert.equal(
-    relatedExperiences(kyoto, publicGuides)[0].id,
-    "kumano-daimon-zaka",
-  );
+  assert.equal(relatedExperiences(kyoto, publicGuides)[0].countrySlug, "japan");
   assert.ok(
     relatedExperiences(kyoto, publicGuides).every((p) => p.id !== kyoto.id),
   );

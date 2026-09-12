@@ -154,7 +154,6 @@ export function guideStructuredData(item: PublicExperience) {
         name: media.title,
         caption: media.depiction,
         creditText: `Photo: ${media.photographer} · ${media.licenseName}. Resized for the web with responsive cropping.`,
-        creator: { "@type": "Person", name: media.photographer },
         ...(media.rightsBasis === "documented_license"
           ? {
               license: media.licenseUrl,
@@ -163,5 +162,33 @@ export function guideStructuredData(item: PublicExperience) {
           : { acquireLicensePage: media.sourceUrl }),
       },
     ],
+  };
+}
+
+/** Describe only the guide list actually published here, not offers or ratings. */
+export function collectionStructuredData(
+  name: string,
+  path: string,
+  items: PublicExperience[],
+) {
+  const visible = items.filter(isDiscoverable);
+  if (!visible.length) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": canonicalUrl(path),
+    url: canonicalUrl(path),
+    name,
+    inLanguage: "en",
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: visible.length,
+      itemListElement: visible.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.title,
+        url: canonicalUrl(`/experiences/${item.slug}`),
+      })),
+    },
   };
 }
