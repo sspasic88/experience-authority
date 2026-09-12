@@ -220,7 +220,7 @@
   background: var(--ea-night-2);
 }
 
-.journal-article-image > a {
+.journal-article-photo-link {
   position: absolute;
   inset: 0;
 }
@@ -229,27 +229,8 @@
   transition: transform 0.55s var(--ea-ease);
 }
 
-.journal-article-image > a:hover img {
+.journal-article-photo-link:hover img {
   transform: scale(1.025);
-}
-
-.journal-article-image figcaption {
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 18px;
-  z-index: 2;
-  max-width: 650px;
-  padding: 8px 10px;
-  background: rgba(8, 27, 42, 0.82);
-  color: white;
-  font-size: 10px;
-  line-height: 1.5;
-}
-
-.journal-article-image figcaption a {
-  text-decoration: underline;
-  text-underline-offset: 2px;
 }
 
 .journal-article-heading {

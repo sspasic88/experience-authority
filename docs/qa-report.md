@@ -1,5 +1,14 @@
 # QA report — 12 September 2026
 
+## Current release candidate — 13 September 2026
+
+- The current candidate contains 55 public-source guides in 36 countries and territories, 12 editorial collections and eight Journal articles. Seven new guides deepen familiar destinations and open bounded routes in Istria, Vila Nova de Gaia and Mossman Gorge. Preliminary atlas candidates 1 and 91 were individually narrowed into the Istria and Mossman guides. The remaining candidates were not bulk-published.
+- All 50 policy, content, privacy, SEO and security tests pass. TypeScript and the optimized Next.js production build pass.
+- Homepage discovery now varies five recognisable starting places without permanently ranking Istanbul first. Homepage imagery uses nine hand-curated editions, each containing three distinct countries and fields. The initial edition changes every three hours; visitor controls move between editions without autoplay.
+- Every public photograph uses a consistent lower-right `Image: creator / source ↗` link that opens the original source in a new tab. Duplicate photograph-context and rights blocks were removed from guide, Journal and enlarged-photo displays. The detailed rights register remains available on Credits.
+- The correction route validates same-origin page context, prepares an email draft to the published EA contact and provides a copy fallback. It does not transmit a correction, edit the site or create an account.
+- The full responsive browser audit passed 108 views at 390, 768 and 1440 pixels, encountered 234 internal links and reported zero failures. It exercised the curated hero rotation, varied homepage suggestions, direct image credits, save persistence, image opening, comparison, search, city-first filtering and mobile menu dismissal. Automated accessibility checks remain scoped tests, not certification or a substitute for screen-reader and user acceptance.
+
 ## Batch 02 — current verification scope
 
 - Commit `d610826` deployed successfully through the separate Vercel project on 12 September 2026. The canonical production domain serves the nine-guide edition with index/follow, HTTPS and no root `X-Robots-Tag`; its public sitemap includes both new guide URLs plus Kyoto and Gegharkunik.

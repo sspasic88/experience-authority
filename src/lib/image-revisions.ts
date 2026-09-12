@@ -15,9 +15,12 @@ export const imageRevisions: Record<string, string> = {
   "/images/guides/doolin-fiddlers.jpg": "ccd3f4cfedee",
   "/images/guides/edinburgh-public-ceilidh.jpg": "6bda8e6862be",
   "/images/guides/fez-zellige-workshop.jpg": "bd7477de7baa",
+  "/images/guides/gaia-taylors-cellars.jpg": "e8183adacb26",
   "/images/guides/hanoi-water-puppetry.jpg": "887b531dcc26",
+  "/images/guides/istanbul-ebru-workshop.jpg": "a32602090321",
   "/images/guides/istanbul-hurrem-hammam-interior.jpg": "30d2ea25b0bb",
   "/images/guides/istanbul-city-ferry.jpg": "43839902d755",
+  "/images/guides/istria-truffle-handler.jpg": "3b50e788093c",
   "/images/guides/koyasan-temple-stay.jpg": "70f04fd32ede",
   "/images/guides/kyoto-backstreet-cycling.jpg": "18f6fdea6772",
   "/images/guides/kyoto-tea-preparation.jpg": "8bb18a5b9c9b",
@@ -31,6 +34,8 @@ export const imageRevisions: Record<string, string> = {
   "/images/guides/malta-village-festa.jpg": "c6436d1b1346",
   "/images/guides/mayer-pfarrplatz-courtyard.jpg": "195d40cdc5d8",
   "/images/guides/mexico-city-sunday-ride.jpg": "1c21ccc4f8a6",
+  "/images/guides/mexico-city-arena-mexico.jpg": "198c4f7ecc7c",
+  "/images/guides/mossman-guided-rainforest.jpg": "1e533bd42a3b",
   "/images/guides/montevideo-candombe.jpg": "67dbb3435643",
   "/images/guides/namib-living-desert.jpg": "6c8ba6a29cf5",
   "/images/guides/oostduinkerke-horseback-shrimp.jpg": "7b45fadd309d",
@@ -43,9 +48,11 @@ export const imageRevisions: Record<string, string> = {
   "/images/guides/salta-pena-folklorica.jpg": "0eb9d837a94b",
   "/images/guides/sarajevo-bosnian-coffee.png": "1a8edc28a069",
   "/images/guides/seoul-kimchi-making.jpg": "5f7cd32a0a9e",
+  "/images/guides/seoul-makgeolli-class.jpg": "08efee04219f",
   "/images/guides/singapore-batik-tulis-workshop.jpg": "a1070b671804",
   "/images/guides/singapore-coney-island-walk.jpg": "7881a8d6b021",
   "/images/guides/singapore-hawker-culture.jpg": "a80a90499c1f",
+  "/images/guides/singapore-sungei-buloh.jpg": "3f7a346908ce",
   "/images/guides/sundholl-reykjavik-exterior.jpg": "de1994dddab3",
   "/images/guides/tsaghkunk-lavash-baking.jpg": "1346291ff555",
   "/images/guides/venetian-standing-rowing.jpg": "bdb4478211d7",
@@ -55,7 +62,7 @@ export const imageRevisions: Record<string, string> = {
 
 // A single manifest fingerprint fits Next's bounded localPatterns allowlist.
 // Tests require it to change when any original is added or replaced.
-export const imageEdition = "e4dae0d85401";
+export const imageEdition = "616dc3552be9";
 
 export function imageSource(src: string) {
   return imageRevisions[src] ? `${src}?v=${imageEdition}` : src;

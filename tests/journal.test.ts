@@ -7,9 +7,9 @@ import {
   journalArticleStructuredData,
 } from "../src/lib/journal";
 
-test("journal is a six-article edition with useful depth and distinct leads", () => {
+test("journal is an eight-article edition with useful depth and distinct leads", () => {
   const articles = getJournalArticles(publicGuides);
-  assert.equal(articles.length, 6);
+  assert.equal(articles.length, 8);
   assert.equal(
     new Set(articles.map((article) => article.slug)).size,
     articles.length,

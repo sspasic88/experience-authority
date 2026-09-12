@@ -5,6 +5,7 @@ import {
   curateHome,
   heroGuideRotations,
   homeHeroRotationIndex,
+  resolveHomeHeroEditions,
   selectHomeHero,
 } from "../src/lib/home-curation";
 import { publicGuides } from "../src/lib/public-guides";
@@ -42,7 +43,7 @@ test("home curation gives every image one position, including hero and pathway r
   );
 });
 
-test("the homepage hero follows a stable, hand-curated daily rotation", () => {
+test("the homepage hero follows a stable, hand-curated three-hour rotation", () => {
   const date = "2026-09-12";
   const index = homeHeroRotationIndex(date);
   const first = selectHomeHero(publicGuides, date).map((item) => item.slug);
@@ -54,6 +55,36 @@ test("the homepage hero follows a stable, hand-curated daily rotation", () => {
   assert.deepEqual(repeated, first);
   assert.notDeepEqual(next, first);
   assert.equal(new Set(first).size, 3);
+  const editions = resolveHomeHeroEditions(publicGuides);
+  assert.equal(editions.length, heroGuideRotations.length);
+  for (const edition of editions) {
+    assert.equal(new Set(edition.map((item) => item.countrySlug)).size, 3);
+    assert.equal(new Set(edition.map((item) => item.field)).size, 3);
+  }
+  for (let offset = 0; offset < heroGuideRotations.length; offset += 1) {
+    const heroForEdition = selectHomeHero(
+      publicGuides,
+      `2026-09-${String(12 + offset).padStart(2, "0")}`,
+    );
+    assert.equal(
+      curateHome(publicGuides, editorialPathways, heroForEdition).startingPoints
+        .length,
+      3,
+    );
+  }
+});
+
+test("every published collection contains available, distinct guides", () => {
+  const publicSlugs = new Set(publicGuides.map((guide) => guide.slug));
+  assert.equal(editorialPathways.length, 12);
+  for (const pathway of editorialPathways) {
+    assert.ok(pathway.guideSlugs.length >= 5, pathway.slug);
+    assert.equal(new Set(pathway.guideSlugs).size, pathway.guideSlugs.length);
+    assert.ok(
+      pathway.guideSlugs.every((slug) => publicSlugs.has(slug)),
+      pathway.slug,
+    );
+  }
 });
 
 test("visible accent details use the EA colour tokens, not one-off coral values", () => {

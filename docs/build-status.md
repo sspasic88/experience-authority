@@ -1,21 +1,22 @@
-# Build status — 12 September 2026
+# Build status — 13 September 2026
 
 Public-source edition live at https://experienceauthority.com, deployed from the separate EA GitHub repository to its own Vercel project on 12 September 2026.
 
-Current local release candidate: 48 guides across 34 countries and territories, private journey planning, sharing, enlarged credited photographs, real multi-region place coverage and guide-specific search and social metadata. The production revision is updated only after the current batch is pushed and verified live.
+Current local release candidate: 55 guides across 36 countries and territories, 12 editorial collections, eight Journal articles, private journey planning, sharing, enlarged credited photographs, real multi-region place coverage and guide-specific search and social metadata. The production revision is updated only after the current batch is pushed and verified live.
 
 ## Implemented
 
 - Independent source project, self-hosted Source Sans 3 Variable typography under OFL 1.1, reusable visual tokens and responsive editorial layouts.
 - Homepage, Compass search/filter/grid/list interface, experience detail, fields, places, collections, method/about/transparency/privacy/credits and unknown-route handling.
 - Device-local Passport categories, comparison limited to three experiences, one private day-by-day journey draft, optional travel/stay notes and download/share. No cloud synchronization or route feasibility check.
-- Suggestion/correction forms download unsent drafts only. No submission or personal-data processing service is connected.
+- Suggestions remain a local downloaded draft. Corrections prepare an addressed email draft and provide a copy fallback. Nothing is sent until the visitor chooses to send it, and no EA submission service is connected.
 - Public-data allowlist, protected-narrative boundary and tested publication policy functions.
 - Per-route SEO/social metadata, brand share image, JSON-LD, production sitemap with real guide review dates, indexable production robots and noindex preview rules.
 - Nonce-based production script CSP, response security headers and training crawler preferences.
 - Privacy-first GA4 integration with Basic Consent Mode, explicit allow and deny choices, later revocation, query-free page paths and a bounded event set. A separate EA Measurement ID is configured for production.
-- Forty-eight original public-source guides, separate from Selected and demo records; dated source notes, official access links, evidence boundaries, credited real photographs and expiry checks. Normal mode serves this content, not the eight fictional examples. See content-edition.md.
-- Clickable homepage photographs, full-size guide-photo dialogs and user-initiated sharing; the slash aligns optically with the two name rows, with the tagline separately underneath.
+- Fifty-five original public-source guides, separate from Selected and demo records; dated source notes, official access links, evidence boundaries, credited real photographs and expiry checks. Normal mode serves this content, not the eight fictional examples. See content-edition.md.
+- Clickable homepage photographs, full-size guide-photo dialogs and user-initiated sharing; the slash aligns optically with the two name rows, with the tagline separately underneath. Homepage imagery uses nine hand-curated three-guide editions, a stable three-hour starting edition and visitor-controlled previous/next navigation. Each edition contains three different countries and fields.
+- Every visible photograph credit uses the same direct-source treatment: `Image: creator / source ↗` in the lower-right corner, opening the original source in a new tab. Detailed rights records remain on Credits rather than competing with the image.
 
 ## Design handoff in progress
 

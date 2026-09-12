@@ -27,13 +27,6 @@
   outline: 3px solid var(--ea-vermilion);
   outline-offset: -5px;
 }
-.prototype-detail-photo figcaption {
-  z-index: 2;
-  pointer-events: none;
-}
-.prototype-detail-photo figcaption a {
-  pointer-events: auto;
-}
 .photo-dialog {
   inset: 0;
   width: min(1200px, 95vw);
@@ -71,19 +64,6 @@
 }
 .photo-dialog-image img {
   object-fit: contain;
-}
-.photo-dialog-caption {
-  padding: 16px 24px 22px;
-  font-size: 15px;
-  line-height: 1.5;
-}
-.photo-dialog-caption p {
-  margin: 0 0 8px;
-}
-.photo-dialog-caption a {
-  color: white;
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 .detail-start-actions {
   display: flex;
@@ -332,10 +312,6 @@
 @media (max-width: 700px) {
   .photo-expand {
     padding: 16px;
-  }
-  .photo-dialog-caption {
-    padding: 12px 16px;
-    font-size: 14px;
   }
   .photo-dialog-image {
     height: 50dvh;

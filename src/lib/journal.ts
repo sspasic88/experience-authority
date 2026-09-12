@@ -462,6 +462,149 @@ export const journalArticles = [
     closing:
       "Being a beginner is not a lesser version of the experience. Done well, it is the moment when skill stops looking obvious and starts becoming worthy of attention.",
   },
+  {
+    slug: "the-souvenir-you-can-explain",
+    eyebrow: "What remains",
+    title: "The souvenir you can explain",
+    summary:
+      "Choose a made object for the decisions it helps you remember, the person who taught you and the place that gave the material meaning.",
+    leadGuideSlug: "lift-a-pattern-from-the-water",
+    guideSlugs: [
+      "lift-a-pattern-from-the-water",
+      "build-a-pattern-in-colour",
+      "paint-the-pattern-you-noticed",
+      "cut-the-first-piece-of-a-pattern",
+    ],
+    sourceGuideSlugs: [
+      "lift-a-pattern-from-the-water",
+      "build-a-pattern-in-colour",
+      "paint-the-pattern-you-noticed",
+    ],
+    publishedOn: "2026-09-13",
+    updatedOn: "2026-09-13",
+    sections: [
+      {
+        title: "Begin before the object exists",
+        paragraphs: [
+          "The most useful souvenir may begin as a surface you do not yet know how to handle. In an introductory ebru workshop in Istanbul, colour is placed on prepared water before a pattern is lifted onto paper. The finished sheet matters, but the unfamiliar sequence matters more. It turns an object into a record of concentration, timing and instruction.",
+          "A workshop changes the question from what should I buy to what am I willing to notice. The answer may involve how a tool is held, when a material resists or why the teacher repeats one small correction. That knowledge remains attached to the object long after its novelty has faded.",
+        ],
+      },
+      {
+        title: "Know the size of your lesson",
+        paragraphs: [
+          "A public introduction is not an apprenticeship. One session can show the logic of a process and give you responsibility for a bounded first attempt. It cannot transfer a maker's years of judgement. This limit makes the experience more credible. You can describe what you tried without presenting yourself as an authority on the wider practice.",
+          "The same honesty applies in Kyoto, where a visitor may work with a defined textile technique, or in Porto, where painting a tile can sharpen attention to surfaces across the city. The lesson opens a door. It does not hand over ownership of everything behind it.",
+        ],
+      },
+      {
+        title: "Let the material lead the memory",
+        paragraphs: [
+          "A photograph usually records the appearance of a moment. A made object can record its sequence. The paper recalls the movement of pigment. The tile recalls the pressure of a brush. A cut piece of clay in Fez recalls that geometry is made through repeated physical decisions, not simply applied as decoration.",
+          "Look at the object later and name three parts of the process. If you cannot, the workshop may have become another production line for take-home things. If you can, the object has become a compact map back to the work, place and instruction that shaped it.",
+        ],
+      },
+      {
+        title: "Keep the credit with the craft",
+        paragraphs: [
+          "When you show what you made, name the workshop or teacher and call it a first attempt. Do not remove a motif from its context and present it as your own design language. Ask before photographing people, demonstrations or material that is not part of the public exercise.",
+          "Credit does not make a story less personal. It makes the route through the story visible. The person hearing it can understand who held the knowledge, where the introduction happened and why your role was that of a guest learning one small part.",
+        ],
+      },
+      {
+        title: "Return through a better question",
+        paragraphs: [
+          "The best object creates curiosity instead of closure. You may begin to notice marbled endpapers, tiled facades, repeated patterns or the difference between a printed surface and one worked by hand. That changed attention is the real thing you carry home.",
+          "Save the guide with one sentence about what you want to understand next. The return may be another lesson, a museum collection or simply a more careful way of looking. A souvenir earns its space when it keeps the experience open.",
+        ],
+      },
+    ],
+    decision: {
+      title: "The meaningful-object test",
+      intro:
+        "Before choosing a making experience, check what the finished object will help you remember.",
+      questions: [
+        "Will I take part in a real sequence rather than decorate a prepared product?",
+        "Is the teacher or workshop clearly credited for the introduction?",
+        "Can I describe my role honestly as a beginner?",
+        "Will the object help me recall the place, material and decisions behind it?",
+      ],
+    },
+    closing:
+      "Bring home the object if you value it. Bring home the names, sequence and questions too. They are what turn it from evidence of travel into a memory with a responsible way back.",
+  },
+  {
+    slug: "before-the-first-sip",
+    eyebrow: "Taste with context",
+    title: "Before the first sip",
+    summary:
+      "Follow rice, grapes, apples or agave through the work that gives a drink its character before treating the tasting as the whole experience.",
+    leadGuideSlug: "begin-with-rice-not-the-bottle",
+    guideSlugs: [
+      "begin-with-rice-not-the-bottle",
+      "taste-what-time-does-to-port",
+      "the-pour-before-the-glass",
+      "follow-the-agave-into-the-still",
+      "the-vineyard-at-the-table",
+    ],
+    sourceGuideSlugs: [
+      "begin-with-rice-not-the-bottle",
+      "taste-what-time-does-to-port",
+      "follow-the-agave-into-the-still",
+    ],
+    publishedOn: "2026-09-13",
+    updatedOn: "2026-09-13",
+    sections: [
+      {
+        title: "Start with the transformation",
+        paragraphs: [
+          "A tasting can make a drink seem complete from the moment it reaches the glass. The more revealing experience begins earlier. In a Seoul makgeolli class, rice, water, nuruk and fermentation become part of the story before the drink is ready. The class begins a process that continues beyond the session, which is precisely the point.",
+          "Ask what changed the raw ingredient and who controls that change. Heat, yeast, vessel, time, climate and repeated human judgement all shape what you eventually taste. The drink becomes easier to remember when you can follow at least part of that path.",
+        ],
+      },
+      {
+        title: "Read time as an ingredient",
+        paragraphs: [
+          "In Vila Nova de Gaia, a cellar visit can make ageing visible through casks, bottles and the distinctions between styles of Port. The useful question is not simply which sample you prefer. It is what happened during the years before it was poured and why a particular vessel or method produced that result.",
+          "Time works differently across drinks. Fermentation may still be underway after a class. Ageing may take place in wood or bottle. A seasonal cider route in Asturias follows a different calendar again. Avoid flattening these differences into a generic tasting flight.",
+        ],
+      },
+      {
+        title: "Keep landscape connected to labour",
+        paragraphs: [
+          "Agave, grapes, rice and apples can all become attractive shorthand for a region. A responsible visit asks what labour sits between landscape and glass. In Oaxaca, that includes the sequence from mature agave through cooking, crushing, fermentation and distillation. In Vienna, the vineyard and heuriger connect production to a public social setting.",
+          "Do not let a beautiful field or cellar erase the workers, regulation and practical limits that make access possible. A public programme offers a specific window onto the system. It does not automatically explain every producer or give unrestricted access to working areas.",
+        ],
+      },
+      {
+        title: "Taste without turning it into a contest",
+        paragraphs: [
+          "The purpose is not to collect the largest number of samples or prove expert vocabulary. Notice one contrast you can explain in ordinary language. Ask one question about process. Use water, food and the pace offered by the host. If alcohol is involved, check age rules, transport and personal limits before the visit.",
+          "A non-drinking companion should still be able to understand why the place and process matter. When the entire experience depends on consumption, it has less to offer than a well-shaped introduction to material, time and work.",
+        ],
+      },
+      {
+        title: "Leave with a route, not a ranking",
+        paragraphs: [
+          "At the end, write down the ingredient, transformation and decision that surprised you. Keep the official access link because programmes and availability change. Share the guide as a way to understand the drink, not as a declaration that one bottle or producer represents a whole region.",
+          "That route gives you something useful on the next trip. You can enter another cellar, brewery, orchard or distillery with better questions and enough humility to notice how differently the same forces are handled.",
+        ],
+      },
+    ],
+    decision: {
+      title: "The process-first check",
+      intro:
+        "A strong drink experience should remain worthwhile even when tasting is only one part of it.",
+      questions: [
+        "Can I understand the ingredient and at least one major transformation?",
+        "Does the visit name the role of time, place and human judgement?",
+        "Are current access, age and practical conditions clear enough to confirm?",
+        "Will I leave with a better question rather than only a favourite sample?",
+      ],
+    },
+    closing:
+      "The first sip becomes more interesting when it is no longer the beginning of the story. Follow what came before it, then let taste confirm what your attention has already started to understand.",
+  },
 ] as const satisfies readonly JournalArticle[];
 
 const wordCount = (article: JournalArticle) =>

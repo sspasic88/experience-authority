@@ -748,15 +748,27 @@ button {
 .image-source-badge {
   position: absolute;
   bottom: 12px;
-  left: 13px;
+  right: 13px;
   z-index: 2;
-  max-width: calc(100% - 26px);
+  max-width: 78%;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-size: 9px;
   letter-spacing: 0.2px;
   color: white;
   background: rgba(8, 27, 42, 0.78);
   padding: 3px 7px;
   transition: background 0.2s var(--ea-ease);
+}
+.image-source-badge > span:first-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.image-source-badge > svg {
+  flex: 0 0 auto;
 }
 .image-source-badge:hover,
 .image-source-badge:focus-visible {

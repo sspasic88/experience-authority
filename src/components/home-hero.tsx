@@ -1,64 +1,16 @@
-import Link from "next/link";
-import { Photo } from "./editorial";
 import { HomeDiscovery } from "./home-discovery";
+import { HomeHeroMosaic } from "./home-hero-mosaic";
 import type { PublicExperience } from "@/lib/catalog";
-import { guideMediaFor } from "@/lib/media";
-
-function HeroStory({
-  item,
-  primary = false,
-}: {
-  item: PublicExperience;
-  primary?: boolean;
-}) {
-  const media = guideMediaFor(item.id);
-  const href = `/experiences/${item.slug}`;
-  const creditName = media?.photographer.split(". ")[0];
-  return (
-    <figure className={primary ? "prototype-hero-place" : undefined}>
-      <Link
-        className="prototype-hero-image-link"
-        href={href}
-        aria-label={`Explore ${item.title} in ${item.place}`}
-      />
-      {item.image && (
-        <Photo
-          src={item.image}
-          alt={item.imageAlt}
-          priority={primary}
-          sizes={
-            primary
-              ? "(max-width: 700px) 60vw, (max-width: 1100px) 48vw, 29vw"
-              : "(max-width: 700px) 40vw, 20vw"
-          }
-        />
-      )}
-      <figcaption>
-        <span className="eyebrow">
-          {primary ? `Place / ${item.place}` : item.field}
-        </span>
-        <Link href={href}>{item.title}</Link>
-        {media && (
-          <Link
-            className="prototype-photo-credit"
-            href={`/credits#media-${media.guideId}`}
-          >
-            Photo: {creditName} <span aria-hidden="true">↗</span>
-          </Link>
-        )}
-      </figcaption>
-    </figure>
-  );
-}
 
 export function HomeHero({
   items,
-  heroGuides,
+  heroEditions,
+  initialHeroIndex,
 }: {
   items: PublicExperience[];
-  heroGuides: PublicExperience[];
+  heroEditions: PublicExperience[][];
+  initialHeroIndex: number;
 }) {
-  const [main, upper, lower] = heroGuides;
   return (
     <>
       <section className="prototype-hero" aria-labelledby="home-title">
@@ -92,13 +44,10 @@ export function HomeHero({
             )}
           />
         </div>
-        <div className="prototype-hero-mosaic">
-          {main && <HeroStory item={main} primary />}
-          <div className="prototype-hero-sides">
-            {upper && <HeroStory item={upper} />}
-            {lower && <HeroStory item={lower} />}
-          </div>
-        </div>
+        <HomeHeroMosaic
+          editions={heroEditions}
+          initialIndex={initialHeroIndex}
+        />
       </section>
       <dl
         className="prototype-edition-stats"

@@ -3,6 +3,7 @@
  * separate from guide evidence: a photograph can set an editorial tone but
  * never proves that EA attended, assessed or endorses the named experience.
  */
+import { mediaBatch14 } from "./media-batch-14";
 export type GuideMedia = {
   guideId: string;
   src: string;
@@ -23,6 +24,7 @@ export type GuideMedia = {
 };
 
 export const publicGuideMedia: readonly GuideMedia[] = [
+  ...mediaBatch14,
   {
     guideId: "busan-spa-land-jjimjilbang",
     src: "/images/guides/busan-spa-land.jpg",

@@ -25,6 +25,13 @@ const routes = [
   "/experiences/bread-from-the-tonir",
   "/experiences/let-the-ferry-redraw-istanbul",
   "/experiences/cut-the-first-piece-of-a-pattern",
+  "/experiences/lift-a-pattern-from-the-water",
+  "/experiences/hear-the-arena-answer-back",
+  "/experiences/begin-with-rice-not-the-bottle",
+  "/experiences/let-the-dog-read-the-forest",
+  "/experiences/taste-what-time-does-to-port",
+  "/experiences/let-the-rainforest-be-introduced",
+  "/experiences/find-the-citys-wilder-edge",
   "/places",
   "/places/japan/kyoto",
   "/places/armenia/gegharkunik",
@@ -32,7 +39,11 @@ const routes = [
   "/places/turkiye/istanbul",
   "/fields",
   "/collections",
+  "/collections/before-the-first-sip",
+  "/collections/another-way-into-a-familiar-city",
   "/journal",
+  "/journal/the-souvenir-you-can-explain",
+  "/journal/before-the-first-sip",
   "/passport",
   "/passport?view=plan",
   "/plan",
@@ -40,6 +51,7 @@ const routes = [
   "/credits",
   "/suggest",
   "/corrections",
+  "/corrections?experience=begin-with-rice-not-the-bottle",
 ];
 try {
   for (const width of [390, 768, 1440]) {
@@ -135,6 +147,21 @@ try {
       page.off("pageerror", onError);
     }
     await page.goto(base + "/", { waitUntil: "networkidle" });
+    const firstHeroGuide = page
+      .locator(".prototype-hero-place figcaption > a")
+      .first();
+    const firstHeroHref = await firstHeroGuide.getAttribute("href");
+    await page.getByRole("button", { name: "Next ways in" }).click();
+    assert.notEqual(await firstHeroGuide.getAttribute("href"), firstHeroHref);
+    const homeSearch = page.getByRole("combobox", {
+      name: "Search by place or experience",
+    });
+    await homeSearch.focus();
+    await expect(page.locator(".home-search-options a")).toHaveCount(5);
+    const startingPlaces = await page
+      .locator(".home-search-options a strong")
+      .allTextContents();
+    assert.equal(new Set(startingPlaces).size, 5);
     await page
       .getByRole("combobox", { name: "Search by place or experience" })
       .fill("cacao");
@@ -145,6 +172,9 @@ try {
     await expect(page.locator(".experience-card")).toHaveCount(1);
     await page.goto(base + "/explore", { waitUntil: "networkidle" });
     const firstCard = page.locator(".experience-card").first();
+    const firstCredit = firstCard.locator(".image-source-badge");
+    assert.match(await firstCredit.getAttribute("href"), /^https:\/\//);
+    assert.equal(await firstCredit.getAttribute("target"), "_blank");
     await firstCard.locator(".save-button").click();
     assert.equal(
       await firstCard.locator(".save-button").getAttribute("aria-pressed"),
@@ -221,7 +251,7 @@ try {
         views: results.length,
         internalLinks: links.size,
         interactions:
-          "save persistence, image click, compare, search, city-first filtering, mobile menu and Escape passed",
+          "curated hero rotation, varied home suggestions, direct image credits, save persistence, image click, compare, search, city-first filtering, mobile menu and Escape passed",
         failures,
       },
       null,

@@ -449,6 +449,97 @@
     transform: none;
   }
 }
+.correction-form label {
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+.correction-form input,
+.correction-form select,
+.correction-form textarea {
+  font: 400 16px/1.5 var(--ea-font-sans);
+  border: 1px solid #929da2;
+  background: #fff;
+  color: #102733;
+  border-radius: 3px;
+  width: 100%;
+  padding: 13px 14px;
+}
+.correction-form input:focus-visible,
+.correction-form select:focus-visible,
+.correction-form textarea:focus-visible {
+  outline: 2px solid #102733;
+  outline-offset: 3px;
+}
+.correction-form .optional-label {
+  font-size: 14px;
+  color: #526068;
+  font-weight: 400;
+}
+.correction-form .small-note,
+.correction-form .draft-status {
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.correction-context {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+}
+.correction-context span {
+  font-size: 13px;
+  color: #526068;
+}
+.correction-context strong {
+  font-size: clamp(22px, 3vw, 28px);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.correction-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.correction-actions .button {
+  min-height: 48px;
+}
+.correction-process {
+  border-top: 1px solid #bdc3c5;
+  padding-top: 24px;
+  margin-top: 4px;
+}
+.correction-process h2 {
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+.correction-process p {
+  font-size: 16px;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 64ch;
+}
+.correction-inline {
+  border-block: 1px solid #bdc3c5;
+  padding-block: 24px;
+  margin-block: 32px;
+  display: grid;
+  gap: 12px;
+}
+.correction-inline strong {
+  font-size: 18px;
+  line-height: 1.35;
+}
+.correction-inline p {
+  margin: 6px 0 0;
+  font-size: 16px !important;
+  line-height: 1.6;
+}
+.correction-inline .text-link {
+  justify-self: start;
+  padding-block: 8px;
+}
 @media print {
   body:has(.trip-planner) .site-header,
   body:has(.trip-planner) .site-footer,

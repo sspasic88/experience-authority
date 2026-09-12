@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { ArrowRight, MapPin, Search } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { discoveryProfiles } from "@/lib/experience-finder";
+import { selectHomeStartingPoints } from "@/lib/home-starting-points";
 import { trackEaEvent } from "@/lib/analytics";
 
 type DiscoveryItem = {
@@ -21,14 +22,6 @@ function normalize(value: string) {
     .replace(/\p{Diacritic}/gu, "")
     .toLocaleLowerCase();
 }
-
-const featuredSlugs = [
-  "marble-steam-istanbul",
-  "mexico-city-grown-on-water",
-  "a-bowl-of-attention",
-  "venice-through-an-oar",
-  "the-vineyard-at-the-table",
-];
 
 function searchText(item: DiscoveryItem) {
   return normalize(
@@ -70,14 +63,13 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(-1);
+  const [startingPoints, setStartingPoints] = useState<DiscoveryItem[]>([]);
+  useEffect(() => {
+    setStartingPoints(selectHomeStartingPoints(items));
+  }, [items]);
   const matches = useMemo(() => {
     const needle = normalize(query.trim());
-    if (!needle) {
-      return featuredSlugs
-        .map((slug) => items.find((item) => item.slug === slug))
-        .filter((item): item is DiscoveryItem => Boolean(item))
-        .slice(0, 5);
-    }
+    if (!needle) return startingPoints;
     const ranked = items
       .map((item) => ({ item, score: relevance(item, needle) }))
       .filter(({ score }) => score > 0);
@@ -87,7 +79,13 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
       .sort((a, b) => b.score - a.score)
       .map(({ item }) => item)
       .slice(0, 5);
-  }, [items, query]);
+  }, [items, query, startingPoints]);
+
+  function openStartingPoints() {
+    if (!query.trim() && !open)
+      setStartingPoints(selectHomeStartingPoints(items));
+    setOpen(true);
+  }
 
   function moveActive(direction: 1 | -1) {
     if (!matches.length) return;
@@ -128,7 +126,7 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
             setOpen(true);
             setActive(-1);
           }}
-          onFocus={() => setOpen(true)}
+          onFocus={openStartingPoints}
           onKeyDown={(event) => {
             if (event.key === "ArrowDown") {
               event.preventDefault();
@@ -162,7 +160,7 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
           aria-autocomplete="list"
           autoComplete="off"
           maxLength={200}
-          placeholder="Try Istanbul, tea, rowing or a public sauna"
+          placeholder="Try a city, a taste, a skill or a way to move"
         />
         <button type="submit" aria-label="Search all experiences">
           <ArrowRight size={22} aria-hidden="true" />
@@ -173,7 +171,7 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
         <div className="home-search-results">
           <div className="home-search-results-head">
             <span>
-              {query.trim() ? "Matching guides" : "Popular starting points"}
+              {query.trim() ? "Matching guides" : "Fresh starting points"}
             </span>
             <Link href={`/explore?q=${encodeURIComponent(query)}`}>
               Open Compass
@@ -184,7 +182,7 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
             className="home-search-options"
             role="listbox"
             aria-label={
-              query.trim() ? "Matching guides" : "Popular starting points"
+              query.trim() ? "Matching guides" : "Fresh starting points"
             }
           >
             {matches.length ? (

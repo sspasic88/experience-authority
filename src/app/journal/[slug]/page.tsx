@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowUpRight, Clock3 } from "lucide-react";
-import { ExperienceCard, Photo, SectionHeading } from "@/components/editorial";
+import {
+  ExperienceCard,
+  ImageCredit,
+  Photo,
+  SectionHeading,
+} from "@/components/editorial";
 import { ShareButton } from "@/components/share-button";
 import { StructuredData } from "@/components/structured-data";
 import { getExperiences } from "@/lib/data";
@@ -87,6 +92,7 @@ export default async function JournalArticlePage({ params }: Props) {
       <header className="journal-article-hero">
         <figure className="journal-article-image">
           <Link
+            className="journal-article-photo-link"
             href={"/experiences/" + article.leadGuide.slug}
             aria-label={"Open the guide " + article.leadGuide.title}
           >
@@ -97,13 +103,7 @@ export default async function JournalArticlePage({ params }: Props) {
               sizes="(max-width: 860px) 100vw, 50vw"
             />
           </Link>
-          <figcaption>
-            Photo: {article.media.photographer}. This image belongs to the
-            connected guide, not to an EA field visit.{" "}
-            <Link href={"/credits#media-" + article.media.guideId}>
-              Source and licence <span aria-hidden="true">↗</span>
-            </Link>
-          </figcaption>
+          <ImageCredit media={article.media} />
         </figure>
         <div className="journal-article-heading">
           <p className="eyebrow">EA Journal / {article.eyebrow}</p>
@@ -164,6 +164,15 @@ export default async function JournalArticlePage({ params }: Props) {
           </aside>
 
           <p className="journal-closing">{article.closing}</p>
+          <div className="correction-inline">
+            <strong>Something we should revisit?</strong>
+            <Link
+              className="text-link"
+              href={`/corrections?page=${encodeURIComponent(`/journal/${article.slug}`)}`}
+            >
+              Suggest a correction <span aria-hidden="true">↗</span>
+            </Link>
+          </div>
 
           <section className="journal-sources" aria-labelledby="sources-title">
             <p className="eyebrow">Source trail</p>

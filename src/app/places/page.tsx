@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { PageIntro, Photo } from "@/components/editorial";
+import { ImageCredit, PageIntro, Photo } from "@/components/editorial";
 import { guideMediaFor } from "@/lib/media";
 import { demoMode, getTerritories, getExperiences } from "@/lib/data";
 import { pageMetadata } from "@/lib/seo";
@@ -44,12 +44,7 @@ export default function Places() {
                         sizes="(max-width: 500px) 100vw, (max-width: 1000px) 50vw, 33vw"
                       />
                     </Link>
-                    <Link
-                      className="image-source-badge"
-                      href={`/credits#media-${media.guideId}`}
-                    >
-                      Photo credit ↗
-                    </Link>
+                    <ImageCredit media={media} />
                   </div>
                 )}
                 <h2>

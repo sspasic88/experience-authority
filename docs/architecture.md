@@ -4,7 +4,7 @@
 
 Native Next.js App Router with strict TypeScript. Pages and data access are server rendered; Passport/plan controls, sharing, photograph dialogs, mobile navigation and local draft forms use client state. `src/lib/data.ts` is marked `server-only`. The public renderer uses an explicit allowlist and independently supplied safe narrative for protected records.
 
-The standard catalogue contains 48 original public-source guides in 34 countries and territories and 11 active fields, connected through ten editorial collections. A separate opt-in demo mode retains eight fictional concepts. Neither is the 25 locally validated Selected experiences required for launch. Guide cards use real photographs with individual media records, licences and depiction boundaries. Stock and activity-context imagery is explicitly credited, not documentary evidence of an EA visit.
+The standard catalogue contains 55 original public-source guides in 36 countries and territories and 11 active fields, connected through 12 editorial collections. A separate opt-in demo mode retains eight fictional concepts. Neither is the 25 locally validated Selected experiences required for launch. Guide cards use real photographs with individual media records, licences and depiction boundaries. Every public image exposes one direct source credit in the lower-right corner. Stock and activity-context imagery is explicitly credited, not documentary evidence of an EA visit.
 
 Search and filters use URL query parameters with a native GET form. The filters intersect, and grid/list changes preserve them. Unknown routes fail with a not-found page. Passport stores only known public story IDs, stage values and at most three comparison IDs in `localStorage`. Malformed and obsolete data is rejected. There are no auth cookies or cross-project user accounts.
 
@@ -21,7 +21,7 @@ Guide detail pages expose truthful Article and ImageObject JSON-LD with the same
 - Demo data requires an explicit flag and is rejected for Vercel production and the canonical domain configuration.
 - Production pages are indexable only when the explicit production release configuration is present; Preview and local environments fail closed with noindex and an empty sitemap. Guide detail sitemap entries use the real desk-check date as their `lastModified` value, following the freshness discipline used in Innovation Authority. Training crawler preferences are separate from search indexing. These are indexing controls, not authentication.
 - No booking, payments or submission endpoint is active. The optional GA4 tag is a separately configured third-party integration and is never loaded before an explicit visitor grant.
-- Suggestion/correction forms generate unsent local files only.
+- Suggestions generate an unsent local file. Corrections prepare an addressed email draft or copyable message. No EA submission endpoint exists, and nothing is sent without the visitor's action.
 
 ## Pending independent infrastructure
 

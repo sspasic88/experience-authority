@@ -2,12 +2,18 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Compass, BookOpenCheck } from "lucide-react";
 import {
   ExperienceCard,
+  ImageCredit,
   PathwayCard,
   SectionHeading,
   Photo,
 } from "@/components/editorial";
 import { fields, interests, matchesInterest } from "@/lib/catalog";
-import { curateHome, selectHomeHero } from "@/lib/home-curation";
+import {
+  curateHome,
+  homeHeroRotationIndex,
+  resolveHomeHeroEditions,
+  selectHomeHero,
+} from "@/lib/home-curation";
 import { getJournalArticles } from "@/lib/journal";
 import { guideMediaFor } from "@/lib/media";
 import { editorialPathways } from "@/lib/editorial-pathways";
@@ -32,7 +38,14 @@ export default function Home() {
   const activeFields = fields.filter((field) =>
     experiences.some((item) => item.field === field.slug),
   );
-  const heroGuides = selectHomeHero(experiences);
+  const initialHeroIndex = homeHeroRotationIndex();
+  const heroEditions = resolveHomeHeroEditions(experiences);
+  const heroGuides = heroEditions.length
+    ? heroEditions[initialHeroIndex % heroEditions.length]
+    : selectHomeHero(experiences);
+  const availableHeroEditions = heroEditions.length
+    ? heroEditions
+    : [heroGuides];
   const { startingPoints, newGuides, homePathways, usedImages } = curateHome(
     experiences,
     editorialPathways,
@@ -52,7 +65,11 @@ export default function Home() {
   return (
     <>
       <StructuredData data={websiteStructuredData()} />
-      <HomeHero items={experiences} heroGuides={heroGuides} />
+      <HomeHero
+        items={experiences}
+        heroEditions={availableHeroEditions}
+        initialHeroIndex={initialHeroIndex}
+      />
       <section className="section wrap">
         <PassportReturn />
         <SectionHeading
@@ -230,12 +247,7 @@ export default function Home() {
                         sizes="(max-width: 700px) 100vw, 33vw"
                       />
                     </Link>
-                    <Link
-                      className="image-source-badge"
-                      href={`/credits#media-${media.guideId}`}
-                    >
-                      Photo credit ↗
-                    </Link>
+                    <ImageCredit media={media} />
                   </div>
                   <p className="eyebrow">
                     {article.eyebrow} / {article.readingMinutes} min read

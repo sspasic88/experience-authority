@@ -30,7 +30,7 @@ export const heroGuideRotations = [
   ],
   [
     "read-the-language-of-the-coffee-cup",
-    "stay-while-the-zamba-circles-back",
+    "walk-the-island-between-forest-and-shore",
     "paint-the-pattern-you-noticed",
   ],
   [
@@ -38,20 +38,36 @@ export const heroGuideRotations = [
     "the-pour-before-the-glass",
     "walk-where-the-sea-was",
   ],
+  [
+    "taste-what-time-does-to-port",
+    "let-the-rainforest-be-introduced",
+    "lift-a-pattern-from-the-water",
+  ],
+  [
+    "hear-the-arena-answer-back",
+    "let-the-dog-read-the-forest",
+    "begin-with-rice-not-the-bottle",
+  ],
 ] as const;
 
-const dayInMilliseconds = 86_400_000;
+const heroEditionMilliseconds = 3 * 60 * 60 * 1000;
 
 export function homeHeroRotationIndex(date: Date | string = new Date()) {
   const value = typeof date === "string" ? new Date(`${date}T00:00:00Z`) : date;
-  const utcDay = Math.floor(
-    Date.UTC(value.getUTCFullYear(), value.getUTCMonth(), value.getUTCDate()) /
-      dayInMilliseconds,
-  );
-  return utcDay % heroGuideRotations.length;
+  const edition = Math.floor(value.getTime() / heroEditionMilliseconds);
+  return edition % heroGuideRotations.length;
 }
 
-/** A stable daily selection. Missing or expired guides fail over gracefully. */
+/** Resolve only complete hand-composed editions so an expired guide cannot leave a gap. */
+export function resolveHomeHeroEditions(items: PublicExperience[]) {
+  const bySlug = new Map(items.map((item) => [item.slug, item]));
+  return heroGuideRotations.flatMap((edition) => {
+    const guides = edition.flatMap((slug) => bySlug.get(slug) ?? []);
+    return guides.length === 3 ? [guides] : [];
+  });
+}
+
+/** A stable three-hour selection. Missing or expired guides fail over gracefully. */
 export function selectHomeHero(
   items: PublicExperience[],
   date: Date | string = new Date(),
@@ -84,7 +100,10 @@ export function curateHome(
     "step-into-the-dance",
     "a-city-in-the-water",
   ].flatMap((slug) => items.find((item) => item.slug === slug) || []);
-  const startingPoints = (familiar.length ? familiar : items)
+  const startingPoints = [
+    ...familiar,
+    ...items.filter((item) => !familiar.includes(item)),
+  ]
     .filter((item) => !usedImages.has(item.image || item.id))
     .slice(0, 3);
   startingPoints.forEach(claim);

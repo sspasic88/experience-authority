@@ -65,9 +65,9 @@ test("visitor interests can overlap without duplicating the source record", () =
     assert.ok(discoveryProfiles[guide.slug], guide.slug);
 });
 
-test("Singapore offers three distinct interests without inflating its guide count", () => {
+test("Singapore offers four guides across three distinct interests without inflating its guide count", () => {
   const singapore = destinationCoverage(publicGuides, "singapore", "singapore");
-  assert.equal(singapore.local.length, 3);
+  assert.equal(singapore.local.length, 4);
   assert.equal(singapore.categories.length, 3);
   assert.equal(singapore.elsewhere.length, 0);
   for (const guide of publicGuides) {
@@ -79,7 +79,7 @@ test("Singapore offers three distinct interests without inflating its guide coun
 });
 
 test("the new edition deepens familiar routes and opens new countries without geographic leakage", () => {
-  assert.equal(destinationCoverage(publicGuides, "mexico").local.length, 3);
+  assert.equal(destinationCoverage(publicGuides, "mexico").local.length, 4);
   assert.equal(
     destinationCoverage(publicGuides, "united-kingdom").local.length,
     2,
@@ -100,11 +100,11 @@ test("the new edition deepens familiar routes and opens new countries without ge
   );
   assert.equal(
     destinationCoverage(publicGuides, "turkiye", "istanbul").local.length,
-    2,
+    3,
   );
   assert.equal(
     destinationCoverage(publicGuides, "south-korea").local.length,
-    2,
+    3,
   );
   assert.equal(destinationCoverage(publicGuides, "finland").local.length, 2);
   assert.equal(
@@ -113,6 +113,20 @@ test("the new edition deepens familiar routes and opens new countries without ge
   );
   assert.equal(
     destinationCoverage(publicGuides, "uruguay", "montevideo").local.length,
+    1,
+  );
+  assert.equal(
+    destinationCoverage(publicGuides, "croatia", "istria").local.length,
+    1,
+  );
+  assert.equal(
+    destinationCoverage(publicGuides, "australia", "mossman-gorge").local
+      .length,
+    1,
+  );
+  assert.equal(
+    destinationCoverage(publicGuides, "portugal", "vila-nova-de-gaia").local
+      .length,
     1,
   );
 });

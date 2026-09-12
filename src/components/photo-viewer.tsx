@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Expand, X } from "lucide-react";
 import type { GuideMedia } from "@/lib/media";
 import { imageSource } from "@/lib/image-revisions";
+import { ImageCredit } from "./editorial";
 
 /** A native modal keeps keyboard focus inside the photograph, not behind it. */
 export function PhotoViewer({ media }: { media: GuideMedia }) {
@@ -76,35 +77,9 @@ export function PhotoViewer({ media }: { media: GuideMedia }) {
                 fill
                 sizes="(max-width: 700px) 95vw, 85vw"
               />
+              <ImageCredit media={media} />
             </div>
           )}
-          <div className="photo-dialog-caption">
-            <p>{media.depiction}</p>
-            <p>
-              Photo:{" "}
-              <a
-                href={media.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {media.photographer}
-                <span className="sr-only">
-                  {" "}
-                  . Original source (opens a new tab)
-                </span>
-              </a>
-              {" · "}
-              <a
-                href={media.licenseUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {media.licenseName}
-                <span className="sr-only"> (opens a new tab)</span>
-              </a>
-              {" · "}Resized for the web. No AI-generated imagery.
-            </p>
-          </div>
         </div>
       </dialog>
     </>

@@ -255,6 +255,52 @@ export const editorialPathways = [
     returnAndShare:
       "Build a small Passport instead of a long wish list, share one guide that changed your mind, and return when the route begins to take shape.",
   },
+  {
+    slug: "before-the-first-sip",
+    kind: "food-and-drink",
+    title: "Before the first sip",
+    promise:
+      "Six ways to follow rice, grapes, apples, agave and cacao before flavour reaches the glass or table.",
+    intro:
+      "Taste becomes more memorable when you can trace what produced it. Begin makgeolli with rice and fermentation in Seoul. Enter Vila Nova de Gaia through the time and vessels behind Port, Asturias through cider poured at a working sidrería and Oaxaca through the transformation of agave. Vienna connects the vineyard to the heuriger table, while Grenada moves back from chocolate to cacao. These are public introductions to different systems, not a ranking of producers or permission to generalise about a whole region. Follow the ingredient, work and time first. Let the tasting confirm the story rather than replace it.",
+    guideSlugs: [
+      "begin-with-rice-not-the-bottle",
+      "taste-what-time-does-to-port",
+      "the-pour-before-the-glass",
+      "follow-the-agave-into-the-still",
+      "the-vineyard-at-the-table",
+      "before-the-chocolate-bar",
+    ],
+    visitorUse:
+      "Compare the part of the process each guide makes visible, then confirm current access, age rules, transport and tasting arrangements at the official source.",
+    returnAndShare:
+      "Save the process you want to understand, or share two contrasting guides with the person who usually chooses the bottle first.",
+  },
+  {
+    slug: "another-way-into-a-familiar-city",
+    kind: "city",
+    title: "Another way into a familiar city",
+    promise:
+      "Return to places you recognise through public practices you may not have noticed the first time.",
+    intro:
+      "Familiarity can make a city easier to reach and harder to see. Istanbul offers three different corrections to the postcard: ebru turns colour and water into a first attempt, the municipal ferry makes daily geography visible and a historic hammam changes the pace of the day. Mexico City moves from the chinampa landscape to a car-free Sunday avenue and the collective energy of Arena México. Singapore connects a hawker breakfast, batik, a coastal forest and a wetland at the city's wilder edge. Seoul places kimchi beside the beginning of makgeolli. Use one known landmark as orientation, then choose the practice that gives the rest of the day a sharper point of view.",
+    guideSlugs: [
+      "lift-a-pattern-from-the-water",
+      "let-the-ferry-redraw-istanbul",
+      "marble-steam-istanbul",
+      "hear-the-arena-answer-back",
+      "ride-the-avenue-when-the-cars-step-aside",
+      "mexico-city-grown-on-water",
+      "a-morning-at-the-hawker-table",
+      "find-the-citys-wilder-edge",
+      "kimchi-before-the-jar",
+      "begin-with-rice-not-the-bottle",
+    ],
+    visitorUse:
+      "Choose the city already on your route, then select one guide from a different part of the day or a different kind of participation than your usual plan.",
+    returnAndShare:
+      "Keep the second way into a city you thought you knew, then send the collection to someone ready to look again.",
+  },
 ] as const satisfies readonly EditorialPathway[];
 
 export function getEditorialPathway(slug: string) {

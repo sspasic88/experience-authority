@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, LockKeyhole, MoveUpRight } from "lucide-react";
 import { statusLabels, type PublicExperience } from "@/lib/catalog";
-import { guideMediaFor } from "@/lib/media";
+import { guideMediaFor, type GuideMedia } from "@/lib/media";
 import type { EditorialPathway } from "@/lib/editorial-pathways";
 import { ExperienceActions } from "./passport-provider";
 import { imageSource } from "@/lib/image-revisions";
@@ -66,6 +66,37 @@ export function Photo({
     />
   );
 }
+
+export function ImageCredit({
+  media,
+  className = "image-source-badge",
+}: {
+  media: GuideMedia;
+  className?: string;
+}) {
+  const creator = media.photographer
+    .replace(". Individual photographer not named", "")
+    .replace(", publishing source", "");
+  const publication = media.sourceUrl.includes("commons.wikimedia.org")
+    ? "Wikimedia Commons"
+    : media.sourceUrl.includes("unsplash.com")
+      ? "Unsplash"
+      : "";
+  const credit = publication ? `${creator} / ${publication}` : creator;
+  return (
+    <a
+      className={className}
+      href={media.sourceUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span>Image: {credit}</span>
+      <ArrowUpRight size={11} aria-hidden="true" />
+      <span className="sr-only"> (opens source in a new tab)</span>
+    </a>
+  );
+}
+
 export function ExperienceCard({
   item,
   index = 0,
@@ -108,15 +139,7 @@ export function ExperienceCard({
             </span>
           )}
         </Link>
-        {media && (
-          <Link
-            className="image-source-badge"
-            href={`/credits#media-${media.guideId}`}
-            aria-label={`Photo credit for ${item.title}`}
-          >
-            Photo credit <span aria-hidden="true">↗</span>
-          </Link>
-        )}
+        {media && <ImageCredit media={media} />}
         {item.demo && <span className="image-demo">Illustrative · demo</span>}
         <ExperienceActions item={item} compact />
       </div>
@@ -174,15 +197,7 @@ export function PathwayCard({
           )}
         </Link>
         <span>Pathway {String(index + 1).padStart(2, "0")}</span>
-        {media && (
-          <Link
-            className="image-source-badge"
-            href={`/credits#media-${media.guideId}`}
-            aria-label={`Photo credit for ${item.title}`}
-          >
-            Photo credit <span aria-hidden="true">↗</span>
-          </Link>
-        )}
+        {media && <ImageCredit media={media} />}
       </div>
       <h3>
         <Link href={`/collections/${pathway.slug}`}>

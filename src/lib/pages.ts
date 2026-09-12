@@ -114,7 +114,7 @@ export const editorialPages: Record<
         title: "What works here.",
         paragraphs: [
           "The public edition supports search and filters, grid and list views, place and field navigation, photo enlargement, device-local saving, comparison of up to three experiences, and a private day-by-day journey draft. Visitors can download a plan or choose to share a text copy. A draft is not a confirmed booking or a checked travel route.",
-          "Suggestion and correction forms only download an unsent draft. They do not send messages, save information to a database or create a submission queue.",
+          "The correction form can open a prepared message in your email app or copy it for you to send. The suggestion form downloads an unsent local draft. Neither sends information to EA until you choose to send an email yourself.",
         ],
       },
       {
@@ -151,9 +151,9 @@ export const editorialPages: Record<
         ],
       },
       {
-        title: "Drafts are not submissions.",
+        title: "Messages and drafts.",
         paragraphs: [
-          "Suggestion and correction text stays in the page until you download an unsent text file. It is not transmitted by the application. If you leave the page, the unsaved draft can be lost.",
+          "Correction text stays in the page until you copy it or open a prepared message in your email app. The website does not transmit it. It reaches EA only if you send the email yourself. Suggestion text remains an unsent local draft unless you separately choose to email it.",
           "Do not enter sensitive personal information, private contact details or restricted locations in demonstration forms.",
         ],
       },
@@ -208,7 +208,7 @@ editorialPages.legal = {
         "For enquiries, corrections, privacy requests or rights concerns, write to " +
           publisher.email +
           " and include EA in the subject line. Identify the relevant page and avoid sensitive personal information.",
-        "The optional suggestion and correction tools still create an unsent local draft. To deliver it, email the publication yourself. Downloading a draft is not a submission.",
+        "The correction form prepares a message in your email app or copies it for you to send. The suggestion tool downloads an unsent local draft. Neither sends a message until you send it yourself by email.",
       ],
     },
   ],

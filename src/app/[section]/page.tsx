@@ -3,6 +3,8 @@ import { publisher } from "@/lib/publisher";
 import Link from "next/link";
 import { PageIntro } from "@/components/editorial";
 import { DraftForm } from "@/components/draft-form";
+import { CorrectionForm } from "@/components/correction-form";
+import { correctionPage } from "@/lib/corrections";
 import { editorialPages } from "@/lib/pages";
 import { publicGuideMedia } from "@/lib/media";
 import { pageMetadata } from "@/lib/seo";
@@ -15,7 +17,7 @@ const knownSections = new Set([
 ]);
 type Props = {
   params: Promise<{ section: string }>;
-  searchParams: Promise<{ experience?: string }>;
+  searchParams: Promise<{ experience?: string; page?: string }>;
 };
 export async function generateMetadata({ params }: Props) {
   const { section } = await params;
@@ -34,7 +36,7 @@ export async function generateMetadata({ params }: Props) {
   const descriptions: Record<string, string> = {
     suggest: "Prepare an unsent suggestion for a locally rooted experience.",
     corrections:
-      "Prepare an unsent correction or raise a concern about a story.",
+      "Report an inaccurate detail, changed access, a photo concern or a problem with the website to the EA editorial team.",
     credits:
       "Photography, typography and icon credits for Experience Authority.",
   };
@@ -49,15 +51,17 @@ export default async function Page({ params, searchParams }: Props) {
   const { section } = await params;
   if (!knownSections.has(section)) notFound();
   if (section === "suggest" || section === "corrections") {
-    const { experience } = await searchParams;
+    const { experience, page } = await searchParams;
     const correction = section === "corrections";
+    const guide =
+      typeof experience === "string"
+        ? getExperiences().find((item) => item.slug === experience)
+        : undefined;
     return (
       <div className="wrap page-section">
         <PageIntro
           eyebrow={
-            correction
-              ? "Keep our selection accountable"
-              : "Help a story find its place"
+            correction ? "Help keep EA accurate" : "Help a story find its place"
           }
           title={
             correction ? "Help us get it right." : "What should we know about?"
@@ -65,30 +69,45 @@ export default async function Page({ params, searchParams }: Props) {
         >
           <p>
             {correction
-              ? "Knowledge changes. Context matters. Prepare a correction or raise a concern without sharing sensitive details."
+              ? "Spotted something wrong? Tell us about an inaccurate detail, changed access, a photograph or something that does not work. A useful guide should be open to correction."
               : "Tell us about an experience that is rooted in a place. A suggestion is a starting point for research, never a promise of publication."}
           </p>
         </PageIntro>
-        <p className="prose">
-          To send a message, email{" "}
-          <a
-            href={
-              "mailto:" +
-              publisher.email +
-              "?subject=" +
-              encodeURIComponent(correction ? "EA correction" : "EA suggestion")
+        {correction ? (
+          <CorrectionForm
+            initialPage={
+              guide
+                ? correctionPage(`/experiences/${guide.slug}`)
+                : correctionPage(page)
             }
-          >
-            {publisher.email}
-          </a>
-          . The tool below only prepares an unsent draft.
-        </p>
-        <DraftForm
-          correction={correction}
-          initialExperience={
-            typeof experience === "string" ? experience.slice(0, 180) : ""
-          }
-        />
+            initialTitle={guide?.title}
+          />
+        ) : (
+          <>
+            <p className="prose">
+              To send a message, email{" "}
+              <a
+                href={
+                  "mailto:" +
+                  publisher.email +
+                  "?subject=" +
+                  encodeURIComponent(
+                    correction ? "EA correction" : "EA suggestion",
+                  )
+                }
+              >
+                {publisher.email}
+              </a>
+              . The tool below only prepares an unsent draft.
+            </p>
+            <DraftForm
+              correction={correction}
+              initialExperience={
+                typeof experience === "string" ? experience.slice(0, 180) : ""
+              }
+            />
+          </>
+        )}
       </div>
     );
   }
@@ -155,8 +174,8 @@ export default async function Page({ params, searchParams }: Props) {
                 presented as ownership or endorsement. If a creator or rights
                 holder believes a credit or use should change, the{" "}
                 <Link href="/corrections">corrections page</Link> can help
-                prepare a note. That tool currently creates an unsent draft
-                only. It does not deliver a request to EA.
+                prepare a message. It opens your email app or provides a copy,
+                and sends nothing until you choose to send it yourself.
               </p>
               <h3>Prototype archive.</h3>
               <p>

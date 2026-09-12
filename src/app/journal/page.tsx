@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight, BookOpen } from "lucide-react";
-import { PageIntro, Photo } from "@/components/editorial";
+import { ImageCredit, PageIntro, Photo } from "@/components/editorial";
 import { getExperiences } from "@/lib/data";
 import { getJournalArticles } from "@/lib/journal";
 import { pageMetadata } from "@/lib/seo";
@@ -70,13 +70,7 @@ export default function JournalPage() {
                     }
                   />
                 </Link>
-                <Link
-                  className="image-source-badge"
-                  href={"/credits#media-" + article.media.guideId}
-                  aria-label={"Photo credit for " + article.title}
-                >
-                  Photo credit <span aria-hidden="true">↗</span>
-                </Link>
+                <ImageCredit media={article.media} />
                 <span className="journal-card-number">
                   {String(index + 1).padStart(2, "0")}
                 </span>

@@ -5,6 +5,7 @@ import { ExperienceActions } from "@/components/passport-provider";
 import {
   ExperienceCard,
   GuideArt,
+  ImageCredit,
   Photo,
   SectionHeading,
   StatusBadge,
@@ -97,14 +98,7 @@ export default async function Experience({ params }: Props) {
             </div>
           )}
           {media && <PhotoViewer media={media} />}
-          {media && (
-            <figcaption>
-              <Link href={`/credits#media-${media.guideId}`}>
-                Photo: {media.photographer} · Source & licence{" "}
-                <span aria-hidden="true">↗</span>
-              </Link>
-            </figcaption>
-          )}
+          {media && <ImageCredit media={media} />}
         </figure>
         <header className="prototype-detail-copy">
           <div className="prototype-detail-kicker">
@@ -159,34 +153,6 @@ export default async function Experience({ params }: Props) {
         </header>
       </section>
       <div className="wrap">
-        <p className="detail-photo-credit">
-          {media ? (
-            <>
-              {media.depiction}{" "}
-              <Link
-                href={`/credits#media-${media.guideId}`}
-                className="reset-link"
-              >
-                Image source & credit
-              </Link>
-            </>
-          ) : item.image ? (
-            <>
-              Illustrative stock photography, not evidence of this experience.{" "}
-              <Link href="/credits" className="reset-link">
-                Image sources & credits
-              </Link>
-            </>
-          ) : (
-            <>
-              Original EA typographic artwork. No venue or participant
-              photograph is used.{" "}
-              <Link href="/credits" className="reset-link">
-                Image sources & credits
-              </Link>
-            </>
-          )}
-        </p>
         {item.demo ? (
           <div className="demo-callout">
             <strong>Design preview. Fictional experience.</strong> Status labels
@@ -313,6 +279,21 @@ export default async function Experience({ params }: Props) {
                     </li>
                   ))}
                 </ol>
+                <div className="correction-inline">
+                  <div>
+                    <strong>Spotted something we should revisit?</strong>
+                    <p>
+                      A changed programme, a missing detail or a photo concern
+                      helps us keep this guide useful.
+                    </p>
+                  </div>
+                  <Link
+                    className="text-link"
+                    href={`/corrections?experience=${item.slug}`}
+                  >
+                    Suggest a correction <span aria-hidden="true">↗</span>
+                  </Link>
+                </div>
                 <p className="small-note">
                   An official public offer is not guaranteed availability.
                   Please recheck before travelling.{" "}
@@ -372,7 +353,7 @@ export default async function Experience({ params }: Props) {
               className="text-link"
               href={`/corrections?experience=${item.slug}`}
             >
-              Help us get this right <span aria-hidden="true">↗</span>
+              Suggest a correction <span aria-hidden="true">↗</span>
             </Link>
           </aside>
         </div>

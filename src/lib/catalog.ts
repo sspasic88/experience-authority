@@ -79,6 +79,7 @@ export const interests: readonly Interest[] = [
     name: "Eat & drink",
     fields: ["taste"],
     guideSlugs: [
+      "begin-with-rice-not-the-bottle",
       "cook-beyond-the-postcard",
       "let-the-coffee-take-its-time",
       "bread-from-the-tonir",
@@ -210,6 +211,15 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
   );
 }
 export const territories = [
+  {
+    slug: "australia",
+    name: "Australia",
+    region: "mossman-gorge",
+    regionName: "Mossman Gorge",
+    intro:
+      "Begin in Queensland's rainforest with a public Indigenous-guided walk at Mossman Gorge. Let the introduction belong to the people leading it.",
+    image: null,
+  },
   {
     slug: "south-africa",
     name: "South Africa",
@@ -492,11 +502,11 @@ export const territories = [
   {
     slug: "croatia",
     name: "Croatia",
-    region: "dalmatia",
-    regionName: "Dalmatia",
+    region: "istria",
+    regionName: "Istria",
     intro:
-      "Coastal rhythms, working harbours and the knowledge held between land and sea.",
-    image: "/images/harbour.jpg",
+      "Follow a truffle dog through inland Istria, then bring a new understanding of the ingredient to the table. Begin near Buzet with a publicly offered guided hunt.",
+    image: null,
   },
   {
     slug: "portugal",
@@ -504,7 +514,7 @@ export const territories = [
     region: "porto",
     regionName: "Porto",
     intro:
-      "Follow a pattern from Porto's façades to the worktable, with time to make one small piece of your own.",
+      "Paint a tile in Porto, then cross the Douro to Vila Nova de Gaia to explore what time does to Port. Two cities, two ways to look beyond the finished thing.",
     image: null,
   },
   {
