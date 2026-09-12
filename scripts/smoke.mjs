@@ -3,15 +3,7 @@ import assert from "node:assert/strict";
 const base = process.env.EA_TEST_URL || "http://127.0.0.1:3100";
 const liveIndexing = process.env.EA_TEST_INDEXING === "true";
 const utilityPaths = new Set(["/passport", "/suggest", "/corrections"]);
-const emptyFields = new Set([
-  "nature",
-  "celebrate",
-  "learn",
-  "stay",
-  "contribute",
-  "play",
-  "work",
-]);
+const emptyFields = new Set(["contribute", "work"]);
 const paths = [
   "/",
   "/explore",
@@ -29,14 +21,13 @@ const paths = [
     "learn",
     "restore",
     "stay",
-    "contribute",
+    // Empty editorial fields are intentionally not public category routes.
     "play",
-    "work",
   ].map((f) => `/fields/${f}`),
   "/collections",
-  "/collections/knowledge-in-the-hands",
-  "/collections/a-place-at-the-table",
-  "/collections/the-art-of-paying-attention",
+  "/collections/the-pleasure-of-being-a-beginner",
+  "/collections/what-a-place-tastes-like",
+  "/collections/cities-from-the-inside",
   "/passport",
   "/passport?view=compare",
   "/passport?view=plan",
@@ -82,6 +73,11 @@ if (process.env.EA_TEST_DEMO === "true") {
       "iceland/reykjavik",
       "austria/vienna",
       "grenada/saint-patrick",
+      "turkiye/istanbul",
+      "mexico/mexico-city",
+      "south-korea/busan",
+      "morocco/fez",
+      "uruguay/montevideo",
     ].flatMap((place) => [
       `/places/${place.split("/")[0]}`,
       `/places/${place}`,
@@ -98,6 +94,11 @@ if (process.env.EA_TEST_DEMO === "true") {
       "before-the-chocolate-bar",
       "a-bowl-of-attention",
       "bread-from-the-tonir",
+      "let-the-ferry-redraw-istanbul",
+      "ride-the-avenue-when-the-cars-step-aside",
+      "spend-an-hour-between-the-hot-rooms",
+      "cut-the-first-piece-of-a-pattern",
+      "find-the-pulse-before-the-parade",
     ].map((slug) => `/experiences/${slug}`),
   );
   paths.push(
@@ -180,7 +181,7 @@ for (const path of paths) {
           "Missing official access link",
         );
         assert.ok(
-          html.includes("not an on-site review"),
+          html.includes("not visited, locally validated or"),
           "Missing evidence boundary",
         );
       }
@@ -194,6 +195,8 @@ const unpublishedPaths = [
   "/experiences/not-published",
   "/places/croatia/unknown",
   "/fields/unknown",
+  "/fields/contribute",
+  "/fields/work",
   "/collections/unknown",
   "/constructor",
   "/__proto__",

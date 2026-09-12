@@ -288,7 +288,25 @@ export const territories = [
     region: "seoul",
     regionName: "Seoul",
     intro:
-      "Begin in Seoul with kimchi as something made, shared and understood through more than a finished taste.",
+      "Make kimchi in Seoul, then meet Busan through the shared rules and unhurried time of a contemporary jjimjilbang.",
+    image: null,
+  },
+  {
+    slug: "morocco",
+    name: "Morocco",
+    region: "fez",
+    regionName: "Fez",
+    intro:
+      "Begin with clay and geometry in Fez, where a first piece of zellige makes the labour behind a familiar surface visible.",
+    image: null,
+  },
+  {
+    slug: "uruguay",
+    name: "Uruguay",
+    region: "montevideo",
+    regionName: "Montevideo",
+    intro:
+      "Meet Montevideo through a shared candombe pulse, with attention to who the current public workshop is designed for.",
     image: null,
   },
   {
@@ -396,7 +414,7 @@ export const territories = [
     region: "istanbul",
     regionName: "Istanbul",
     intro:
-      "Enter the familiar city through water, marble and the working life of a historic bathhouse.",
+      "Enter Istanbul through two forms of public infrastructure: a working hammam and the municipal ferries that turn water into a city street.",
     image: null,
   },
   {
@@ -405,7 +423,7 @@ export const territories = [
     region: "xochimilco",
     regionName: "Xochimilco, Mexico City",
     intro:
-      "Follow food back to where it is grown and made, from Mexico City's chinampas to agave, steam and copper in Oaxaca.",
+      "Follow food back to the chinampas and agave fields, then meet Mexico City at the speed of its Sunday car-free avenue.",
     image: null,
   },
   {
@@ -432,7 +450,7 @@ export const territories = [
     region: "tampere",
     regionName: "Tampere",
     intro:
-      "A public room for warmth, quiet consideration and the ordinary rules of sharing space.",
+      "Compare two public sauna rhythms, from Tampere's historic neighbourhood room to smoke, snow and Lake Kallavesi in Kuopio.",
     image: null,
   },
   {

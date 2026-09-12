@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { EmptyState, ExperienceCard, PageIntro } from "@/components/editorial";
+import { ExperienceCard, PageIntro } from "@/components/editorial";
 import { fields } from "@/lib/catalog";
 import { getExperiences } from "@/lib/data";
 import { pageMetadata, isDiscoverable } from "@/lib/seo";
@@ -8,7 +8,13 @@ type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const field = fields.find((f) => f.slug === slug);
-  if (!field) notFound();
+  if (
+    !field ||
+    !getExperiences().some(
+      (item) => item.field === field.slug && isDiscoverable(item),
+    )
+  )
+    notFound();
   return pageMetadata(
     field.name,
     field.line,
@@ -23,6 +29,7 @@ export default async function Field({ params }: Props) {
   const selected = fields.find((f) => f.slug === slug);
   if (!selected) notFound();
   const items = getExperiences().filter((item) => item.field === selected.slug);
+  if (!items.length) notFound();
   return (
     <div className="wrap page-section">
       <nav className="breadcrumb" aria-label="Breadcrumb">
@@ -33,24 +40,12 @@ export default async function Field({ params }: Props) {
       <PageIntro eyebrow="A field of experience" title={`${selected.name}.`}>
         <p>{selected.line}</p>
       </PageIntro>
-      {items.length ? (
-        <div className="experience-grid">
-          <h2 className="sr-only">Experiences in this field</h2>
-          {items.map((item, index) => (
-            <ExperienceCard item={item} index={index} key={item.id} />
-          ))}
-        </div>
-      ) : (
-        <EmptyState title="An open space for future stories.">
-          <p>
-            No guide is ready in this field yet. An empty space is better than
-            an unsupported recommendation.
-          </p>
-          <Link href="/explore" className="button">
-            Explore other fields <span aria-hidden="true">↗</span>
-          </Link>
-        </EmptyState>
-      )}
+      <div className="experience-grid">
+        <h2 className="sr-only">Experiences in this field</h2>
+        {items.map((item, index) => (
+          <ExperienceCard item={item} index={index} key={item.id} />
+        ))}
+      </div>
     </div>
   );
 }

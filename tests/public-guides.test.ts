@@ -18,8 +18,8 @@ import { guideMediaFor, publicGuideMedia } from "../src/lib/media";
 
 const today = "2026-09-12";
 const sample = publicGuides.find((p) => p.id === "kumano-daimon-zaka")!;
-test("guide set contains forty-two distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 42);
+test("guide set contains forty-eight distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 48);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -28,7 +28,7 @@ test("guide set contains forty-two distinct, sourced public experiences, not Sel
     new Set(publicGuides.map((p) => p.slug)).size,
     publicGuides.length,
   );
-  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 32);
+  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 34);
   assert.equal(
     new Set(territories.map((place) => place.slug)).size,
     territories.length,

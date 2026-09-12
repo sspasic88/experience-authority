@@ -6,7 +6,7 @@ import { demoMode, getExperiences } from "@/lib/data";
 import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata(
   "Fields of experience",
-  "Thirteen ways to participate in the world, from making and tasting to learning and paying attention.",
+  "Explore the fields of experience that already contain complete, sourced public guides.",
   "/fields",
 );
 export default function Fields() {
@@ -14,19 +14,12 @@ export default function Fields() {
   const activeFields = fields.filter((field) =>
     items.some((item) => item.field === field.slug),
   );
-  const futureFields = fields.filter(
-    (field) => !items.some((item) => item.field === field.slug),
-  );
   return (
-    <div className="wrap page-section">
-      <PageIntro
-        eyebrow="13 ways of being there"
-        title="Follow your curiosity."
-      >
+    <div className="wrap page-section fields-page">
+      <PageIntro eyebrow="Ways of being there" title="Follow your curiosity.">
         <p>
-          {activeFields.length} ways into the current edition. Thirteen fields
-          in the full EA lens. These are not categories of tourism, but ways of
-          participating in the world.
+          {activeFields.length} active fields in the current edition. Every one
+          opens to complete guides, practical access information and sources.
         </p>
       </PageIntro>
       <div className="field-group-heading">
@@ -70,33 +63,6 @@ export default function Fields() {
           );
         })}
       </div>
-      {futureFields.length > 0 && (
-        <section
-          className="future-fields"
-          aria-labelledby="future-fields-title"
-        >
-          <div className="field-group-heading">
-            <p className="eyebrow">What we are still looking for</p>
-            <h2 id="future-fields-title">
-              Open territory, held to the same standard.
-            </h2>
-            <p>
-              These fields remain part of the EA lens. We will open them when a
-              guide has a clear public route, enough evidence and photography we
-              can credit honestly.
-            </p>
-          </div>
-          <div className="future-field-grid">
-            {futureFields.map((field) => (
-              <article key={field.slug}>
-                <span className="eyebrow">Future field</span>
-                <h3>{field.name}</h3>
-                <p>{field.line}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-      )}
     </div>
   );
 }

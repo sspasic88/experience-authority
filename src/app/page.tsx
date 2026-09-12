@@ -29,6 +29,9 @@ export const metadata = pageMetadata(
 
 export default function Home() {
   const experiences = getExperiences();
+  const activeFields = fields.filter((field) =>
+    experiences.some((item) => item.field === field.slug),
+  );
   const heroGuides = selectHomeHero(experiences);
   const { startingPoints, newGuides, homePathways, usedImages } = curateHome(
     experiences,
@@ -152,7 +155,9 @@ export default function Home() {
       <section className="fields-section">
         <div className="wrap fields-layout">
           <div>
-            <p className="eyebrow">13 fields of experience</p>
+            <p className="eyebrow">
+              {activeFields.length} fields in this edition
+            </p>
             <h2>
               What will
               <br />
@@ -170,25 +175,15 @@ export default function Home() {
             </Link>
           </div>
           <div className="field-cloud">
-            {fields.map((field, index) =>
-              experiences.some((item) => item.field === field.slug) ? (
-                <Link href={`/fields/${field.slug}`} key={field.slug}>
-                  <span className="field-index">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  {field.name}
-                  <ArrowUpRight size={22} aria-hidden="true" />
-                </Link>
-              ) : (
-                <div className="field-not-open" key={field.slug}>
-                  <span className="field-index">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  {field.name}
-                  <small>On our radar</small>
-                </div>
-              ),
-            )}
+            {activeFields.map((field, index) => (
+              <Link href={`/fields/${field.slug}`} key={field.slug}>
+                <span className="field-index">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                {field.name}
+                <ArrowUpRight size={22} aria-hidden="true" />
+              </Link>
+            ))}
           </div>
         </div>
       </section>

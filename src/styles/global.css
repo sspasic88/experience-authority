@@ -592,35 +592,36 @@ button {
 }
 .journey-step-grid {
   list-style: none;
-  padding: 0 0 84px;
+  padding: 0;
+  margin: 0 0 84px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid var(--ea-night);
+  gap: 1px;
+  border: 1px solid rgba(8, 27, 42, 0.28);
+  background: rgba(8, 27, 42, 0.22);
 }
 .journey-step-grid li {
-  padding: 24px 24px 28px 0;
-  border-right: 1px solid rgba(8, 27, 42, 0.18);
-}
-.journey-step-grid li + li {
-  padding-left: 24px;
-}
-.journey-step-grid li:last-child {
-  border-right: 0;
+  min-height: 232px;
+  padding: 24px;
+  background: white;
 }
 .journey-step-grid span {
   color: var(--ea-accent-text);
-  font-size: 10px;
-  letter-spacing: 0.1em;
+  font-size: clamp(34px, 3vw, 48px);
+  font-weight: 650;
+  letter-spacing: -0.06em;
+  line-height: 1;
 }
 .journey-step-grid h2 {
-  margin-top: 30px;
-  font-size: 30px;
+  margin-top: 42px;
+  font-size: 28px;
 }
 .journey-step-grid p {
-  margin-top: 12px;
-  font-size: 13px;
-  line-height: 1.55;
-  color: var(--ea-stone);
+  max-width: 30ch;
+  margin-top: 13px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #344550;
 }
 .journey-modes {
   padding-block: 82px;
@@ -1680,6 +1681,90 @@ button {
 .directory-tile small {
   margin-top: 20px;
   color: var(--ea-stone);
+}
+.fields-page .page-intro {
+  margin-bottom: 40px;
+  padding: clamp(36px, 5vw, 72px);
+  background: var(--ea-night);
+  color: var(--ea-paper);
+}
+.fields-page .page-intro .eyebrow {
+  color: var(--ea-vermilion);
+}
+.fields-page .page-intro-copy {
+  color: #d6dde0;
+}
+.fields-page .field-group-heading > p:last-child {
+  color: #344550;
+}
+.fields-page .directory-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid rgba(8, 27, 42, 0.3);
+  background: rgba(8, 27, 42, 0.3);
+}
+.fields-page .directory-tile {
+  grid-column: span 2;
+  min-height: 230px;
+  padding: 27px;
+  border-top: 0;
+  background: white;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+.fields-page .directory-tile:nth-last-child(2):nth-child(3n + 1),
+.fields-page .directory-tile:last-child:nth-child(3n + 2) {
+  grid-column: span 3;
+}
+.fields-page .directory-tile:last-child:nth-child(3n + 1) {
+  grid-column: span 6;
+}
+.fields-page .directory-tile p,
+.fields-page .directory-tile small,
+.fields-page .directory-tile .eyebrow {
+  color: #4b5b64;
+}
+.fields-page .directory-tile:hover,
+.fields-page .directory-tile:focus-visible {
+  background: var(--ea-night);
+  color: white;
+}
+.fields-page .directory-tile:hover h2,
+.fields-page .directory-tile:focus-visible h2,
+.fields-page .directory-tile:hover p,
+.fields-page .directory-tile:focus-visible p,
+.fields-page .directory-tile:hover small,
+.fields-page .directory-tile:focus-visible small {
+  color: white;
+}
+.fields-page .directory-tile:hover .eyebrow,
+.fields-page .directory-tile:focus-visible .eyebrow {
+  color: var(--ea-vermilion);
+}
+
+@media (max-width: 900px) {
+  .fields-page .directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .fields-page .directory-tile,
+  .fields-page .directory-tile:nth-last-child(2):nth-child(3n + 1),
+  .fields-page .directory-tile:last-child:nth-child(3n + 2) {
+    grid-column: span 1;
+  }
+  .fields-page .directory-tile:last-child:nth-child(2n + 1) {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .fields-page .directory-grid {
+    grid-template-columns: 1fr;
+  }
+  .fields-page .directory-tile,
+  .fields-page .directory-tile:last-child:nth-child(2n + 1) {
+    grid-column: span 1;
+  }
 }
 .field-group-heading {
   display: grid;
@@ -2857,11 +2942,9 @@ button {
   @supports (animation-timeline: view()) {
     @keyframes ea-view-reveal {
       from {
-        opacity: 0.72;
         transform: translateY(10px);
       }
       to {
-        opacity: 1;
         transform: translateY(0);
       }
     }
@@ -2932,16 +3015,26 @@ button {
     padding: 21px;
   }
   .journey-step-grid {
-    padding-bottom: 58px;
+    margin-bottom: 58px;
   }
   .journey-step-grid li,
   .journey-step-grid li + li {
-    padding: 22px 0;
-    border-right: 0;
-    border-top: 1px solid rgba(8, 27, 42, 0.18);
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 6px 18px;
+    min-height: 0;
+    padding: 24px;
+    border: 0;
   }
-  .journey-step-grid li:first-child {
-    border-top: 0;
+  .journey-step-grid span {
+    grid-row: 1 / span 2;
+    font-size: 34px;
+  }
+  .journey-step-grid h2 {
+    margin-top: 0;
+  }
+  .journey-step-grid p {
+    margin-top: 2px;
   }
   .journey-mode-grid article {
     min-height: 285px;

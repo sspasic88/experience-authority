@@ -13,6 +13,25 @@ import {
   type FinderQuery,
 } from "@/lib/experience-finder";
 
+const starterDirections: { label: string; next: FinderQuery }[] = [
+  {
+    label: "Make something with my hands",
+    next: { mode: "hands-on" },
+  },
+  {
+    label: "Eat with a story behind it",
+    next: { interest: "eat-drink" },
+  },
+  {
+    label: "Move through a city differently",
+    next: { interest: "move-water" },
+  },
+  {
+    label: "Give the day more room",
+    next: { mode: "slow-down" },
+  },
+];
+
 export function CompassBrowser({
   items,
   initialQuery,
@@ -65,10 +84,22 @@ export function CompassBrowser({
   const areas = [
     ...new Map(
       items
-        .filter((item) => item.countrySlug === query.place && item.regionSlug)
-        .map((item) => [item.regionSlug!, item.place]),
+        .filter(
+          (item) =>
+            item.regionSlug &&
+            (!query.place || item.countrySlug === query.place),
+        )
+        .map((item) => [
+          `${item.countrySlug}|${item.regionSlug}`,
+          {
+            countrySlug: item.countrySlug,
+            country: item.country,
+            regionSlug: item.regionSlug!,
+            place: item.place,
+          },
+        ]),
     ).entries(),
-  ].sort((a, b) => a[1].localeCompare(b[1]));
+  ].sort((a, b) => a[1].place.localeCompare(b[1].place));
   const activeInterests = interests.filter((interest) =>
     items.some((item) => matchesInterest(item, interest)),
   );
@@ -114,6 +145,28 @@ export function CompassBrowser({
           </a>
         ))}
       </nav>
+      {!hasFilters && (
+        <section className="compass-starters" aria-labelledby="starter-title">
+          <div>
+            <p className="eyebrow">Not sure what to type?</p>
+            <h2 id="starter-title">Start with the day you want.</h2>
+          </div>
+          <nav aria-label="Suggested ways to begin">
+            {starterDirections.map((starter) => (
+              <a
+                key={starter.label}
+                href={finderUrl(starter.next)}
+                onClick={(event) => {
+                  event.preventDefault();
+                  change(starter.next);
+                }}
+              >
+                {starter.label} <ArrowRight size={15} aria-hidden="true" />
+              </a>
+            ))}
+          </nav>
+        </section>
+      )}
       <form
         action="/explore"
         method="get"
@@ -168,18 +221,23 @@ export function CompassBrowser({
             City or area
             <select
               name="region"
-              value={query.region || ""}
-              disabled={!query.place}
-              onChange={(event) =>
-                change({ ...query, region: event.target.value })
+              value={
+                query.place && query.region
+                  ? `${query.place}|${query.region}`
+                  : ""
               }
+              onChange={(event) => {
+                const [place = "", region = ""] = event.target.value.split("|");
+                change({ ...query, place, region });
+              }}
             >
               <option value="">
-                {query.place ? "Every area here" : "Choose a country first"}
+                {query.place ? "Every area here" : "Anywhere"}
               </option>
-              {areas.map(([slug, name]) => (
-                <option key={slug} value={slug}>
-                  {name}
+              {areas.map(([value, area]) => (
+                <option key={value} value={value}>
+                  {area.place}
+                  {!query.place && `, ${area.country}`}
                 </option>
               ))}
             </select>

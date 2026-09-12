@@ -78,8 +78,8 @@ test("Singapore offers three distinct interests without inflating its guide coun
   }
 });
 
-test("the new edition deepens familiar routes and opens Malta and Qatar without geographic leakage", () => {
-  assert.equal(destinationCoverage(publicGuides, "mexico").local.length, 2);
+test("the new edition deepens familiar routes and opens new countries without geographic leakage", () => {
+  assert.equal(destinationCoverage(publicGuides, "mexico").local.length, 3);
   assert.equal(
     destinationCoverage(publicGuides, "united-kingdom").local.length,
     2,
@@ -97,5 +97,22 @@ test("the new edition deepens familiar routes and opens Malta and Qatar without 
     destinationCoverage(publicGuides, "qatar").local.every(
       (guide) => guide.countrySlug === "qatar",
     ),
+  );
+  assert.equal(
+    destinationCoverage(publicGuides, "turkiye", "istanbul").local.length,
+    2,
+  );
+  assert.equal(
+    destinationCoverage(publicGuides, "south-korea").local.length,
+    2,
+  );
+  assert.equal(destinationCoverage(publicGuides, "finland").local.length, 2);
+  assert.equal(
+    destinationCoverage(publicGuides, "morocco", "fez").local.length,
+    1,
+  );
+  assert.equal(
+    destinationCoverage(publicGuides, "uruguay", "montevideo").local.length,
+    1,
   );
 });

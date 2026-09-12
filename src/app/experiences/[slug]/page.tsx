@@ -216,6 +216,25 @@ export default async function Experience({ params }: Props) {
             </a>
           </aside>
         ) : null}
+        {item.guideReview && (
+          <section
+            className="detail-decision-band"
+            aria-label="Practical fit at a glance"
+          >
+            <div>
+              <span>How you take part</span>
+              <p>{item.participation}</p>
+            </div>
+            <div>
+              <span>Room in your day</span>
+              <p>{item.duration}</p>
+            </div>
+            <div>
+              <span>Before you commit</span>
+              <p>{item.access}</p>
+            </div>
+          </section>
+        )}
         <nav className="guide-section-nav" aria-label="In this guide">
           <a href="#the-experience">The experience</a>
           <a href="#why-here">Why here</a>

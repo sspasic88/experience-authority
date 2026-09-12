@@ -240,7 +240,7 @@ editorialPages.privacy.sections.push({
       publisher.email +
       ".",
     "Hosting is provided by Vercel. If you email us, we receive your address, message and any attachments. Enquiries are not newsletter subscriptions. Our basis for secure operation, responding to enquiries and maintaining editorial records is legitimate interests, or legal obligation where applicable.",
-    "Information is handled by publication personnel and necessary hosting and email-service providers. Technical logs follow hosting retention controls; correspondence is retained while needed to resolve the request, preserve a relevant correction or rights record, or meet a legal obligation. Hosting and communications can involve international processing, including the United States; ask us about the arrangements relevant to your request.",
+    "Information is handled by publication personnel and necessary hosting and email-service providers. Technical logs follow hosting retention controls. Correspondence is retained while needed to resolve the request, preserve a relevant correction or rights record, or meet a legal obligation. Hosting and communications can involve international processing, including the United States. Ask us about the arrangements relevant to your request.",
     "Subject to applicable law, contact us to request access, correction, deletion, restriction or portability where applicable. You may object to legitimate-interest processing. You can also complain to the UK Information Commissioner’s Office or the relevant local data-protection authority.",
   ],
 });

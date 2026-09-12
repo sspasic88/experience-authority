@@ -23,13 +23,19 @@ const routes = [
   "/experiences/colour-before-cloth",
   "/experiences/a-bowl-of-attention",
   "/experiences/bread-from-the-tonir",
+  "/experiences/let-the-ferry-redraw-istanbul",
+  "/experiences/cut-the-first-piece-of-a-pattern",
   "/places",
   "/places/japan/kyoto",
   "/places/armenia/gegharkunik",
+  "/places/mexico/mexico-city",
+  "/places/turkiye/istanbul",
   "/fields",
   "/collections",
+  "/journal",
   "/passport",
   "/passport?view=plan",
+  "/plan",
   "/method",
   "/credits",
   "/suggest",
@@ -111,11 +117,18 @@ try {
         state.badges.some((b) => b.height > 60 || b.width > b.photoWidth * 0.8)
       )
         failures.push(result);
-      if (
-        ["/", "/explore", "/experiences/venice-through-an-oar"].includes(route)
-      ) {
+      const screenshotNames = {
+        "/": "home",
+        "/explore": "compass",
+        "/experiences/venice-through-an-oar": "detail",
+        "/experiences/let-the-ferry-redraw-istanbul": "istanbul-ferry",
+        "/fields": "fields",
+        "/journal": "journal",
+        "/plan": "plan",
+      };
+      if (screenshotNames[route]) {
         await page.screenshot({
-          path: `${output}/${route === "/" ? "home" : route === "/explore" ? "compass" : "detail"}-${width}.png`,
+          path: `${output}/${screenshotNames[route]}-${width}.png`,
           fullPage: true,
         });
       }
@@ -123,10 +136,10 @@ try {
     }
     await page.goto(base + "/", { waitUntil: "networkidle" });
     await page
-      .getByRole("searchbox", { name: "Search experiences" })
+      .getByRole("combobox", { name: "Search by place or experience" })
       .fill("cacao");
     await page
-      .getByRole("button", { name: "Search experiences", exact: true })
+      .getByRole("button", { name: "Search all experiences", exact: true })
       .click();
     await page.waitForURL(/q=cacao/);
     await expect(page.locator(".experience-card")).toHaveCount(1);
@@ -154,7 +167,9 @@ try {
     ).toBeVisible();
     await page.goto(base + "/explore");
     await page.getByRole("searchbox").fill("cacao");
-    await page.getByRole("button", { name: "Search", exact: true }).click();
+    await page
+      .getByRole("button", { name: "Find my way", exact: true })
+      .click();
     await page.waitForURL(/q=cacao/);
     await expect(page.locator(".experience-card")).toHaveCount(1);
     assert.ok(
@@ -162,6 +177,15 @@ try {
         .getByRole("heading", { name: "Before the chocolate bar" })
         .count(),
     );
+    await page.goto(base + "/explore", { waitUntil: "networkidle" });
+    await page.getByLabel("City or area").selectOption("south-korea|busan");
+    await page.waitForURL(/place=south-korea.*region=busan/);
+    await expect(page.locator(".experience-card")).toHaveCount(1);
+    await expect(
+      page.getByRole("heading", {
+        name: "Spend an hour between the hot rooms",
+      }),
+    ).toBeVisible();
     if (width === 390) {
       await page.getByRole("button", { name: "Open navigation" }).click();
       await page.keyboard.press("Escape");
@@ -197,7 +221,7 @@ try {
         views: results.length,
         internalLinks: links.size,
         interactions:
-          "save persistence, image click, compare, search, mobile menu and Escape passed",
+          "save persistence, image click, compare, search, city-first filtering, mobile menu and Escape passed",
         failures,
       },
       null,

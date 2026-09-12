@@ -62,7 +62,7 @@ export default function JournalPage() {
                   <Photo
                     src={article.media.src}
                     alt={article.media.alt}
-                    priority={index < 2}
+                    priority={index === 0}
                     sizes={
                       index === 0
                         ? "(max-width: 760px) 100vw, 66vw"

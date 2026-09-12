@@ -2,7 +2,7 @@
 
 Public-source edition live at https://experienceauthority.com, deployed from the separate EA GitHub repository to its own Vercel project on 12 September 2026.
 
-Current local release candidate: 42 guides across 32 countries and territories, private journey planning, sharing, enlarged credited photographs, real multi-region place coverage and guide-specific search and social metadata. The production revision is updated only after the current batch is pushed and verified live.
+Current local release candidate: 48 guides across 34 countries and territories, private journey planning, sharing, enlarged credited photographs, real multi-region place coverage and guide-specific search and social metadata. The production revision is updated only after the current batch is pushed and verified live.
 
 ## Implemented
 
@@ -13,7 +13,7 @@ Current local release candidate: 42 guides across 32 countries and territories, 
 - Public-data allowlist, protected-narrative boundary and tested publication policy functions.
 - Per-route SEO/social metadata, brand share image, JSON-LD, production sitemap with real guide review dates, indexable production robots and noindex preview rules.
 - Nonce-based production script CSP, response security headers and training crawler preferences.
-- Forty-two original public-source guides, separate from Selected and demo records; dated source notes, official access links, evidence boundaries, credited real photographs and expiry checks. Normal mode serves this content, not the eight fictional examples. See content-edition.md.
+- Forty-eight original public-source guides, separate from Selected and demo records; dated source notes, official access links, evidence boundaries, credited real photographs and expiry checks. Normal mode serves this content, not the eight fictional examples. See content-edition.md.
 - Clickable homepage photographs, full-size guide-photo dialogs and user-initiated sharing; the slash aligns optically with the two name rows, with the tagline separately underneath.
 
 ## Design handoff in progress

@@ -10,7 +10,7 @@ The current site implements searchable Places, exact geographic Compass filters,
 
 ## Editorial priority
 
-The current edition has 42 guides in 32 countries and territories. Kyoto and Singapore each have three guides across different interests. Japan has five overall. Mexico, Argentina, Spain and the United Kingdom now have two guides each. Malta and Qatar begin with one guide each. These are beginnings, not complete destination guides.
+The current edition has 48 guides in 34 countries and territories. Kyoto and Singapore each have three guides across different interests. Japan has five overall. Istanbul and Mexico City now each have two different ways in, while Busan and Kuopio broaden South Korea and Finland. Fez and Montevideo open Morocco and Uruguay with one bounded public guide each. These are beginnings, not complete destination guides.
 
 For the next research passes, deepen familiar destinations already covered, such as Kyoto, Singapore, Istanbul, Porto, Mexico City and Seoul. These are research priorities, not approved inventory. First aim for several genuinely distinct interests within a destination, then offer meaningful alternatives within them. Eight to twelve strong guides in a priority city is a useful planning target, not a quota or a publication promise.
 

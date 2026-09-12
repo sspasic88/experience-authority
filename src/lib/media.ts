@@ -24,6 +24,134 @@ export type GuideMedia = {
 
 export const publicGuideMedia: readonly GuideMedia[] = [
   {
+    guideId: "busan-spa-land-jjimjilbang",
+    src: "/images/guides/busan-spa-land.jpg",
+    alt: "Warm timber beams and stone walls frame an empty rest room with reclining seats at Spa Land in Busan.",
+    title: "Spa Land Centum City rest room",
+    photographer: "Visit Busan. Individual photographer not named",
+    sourceUrl:
+      "https://www.visitbusan.net/en/index.do?lang_cd=en&menuCd=DOM_000000303011001000&uc_seq=1753",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl:
+      "https://www.visitbusan.net/en/index.do?lang_cd=en&menuCd=DOM_000000303011001000&uc_seq=1753",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The architectural frame is warm, quiet and precise at card scale. It shows a real shared rest space without intruding on bathing, changing or identifiable visitors.",
+    },
+    depiction:
+      "A rest room at Spa Land Centum City, published by Visit Busan. It does not depict bathing areas, current occupancy, hygiene, accessibility or an EA visit. The source does not name an individual photographer. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "kuopio-jatkankamppa-smoke-sauna",
+    src: "/images/guides/kuopio-smoke-sauna.webp",
+    alt: "Two adults wrapped in grey towels sit outside a timber smoke sauna in bright winter snow near Kuopio.",
+    title: "Winter outside Jätkänkämppä smoke sauna",
+    photographer: "Rauhalahti. Individual photographer not named",
+    sourceUrl: "https://www.rauhalahti.fi/en/jatkankamppa/",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://www.rauhalahti.fi/en/jatkankamppa/",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "Snow, bare timber, towels and the relaxed pause outside make the change of temperature tangible. The wide frame remains legible without showing an intimate bathing space.",
+    },
+    depiction:
+      "An official Rauhalahti promotional photograph outside Jätkänkämppä smoke sauna in winter. It does not prove current snow, water conditions, the Tuesday programme or an EA visit. The source does not name the people or photographer. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "fez-clay-to-mosaic",
+    src: "/images/guides/fez-zellige-workshop.jpg",
+    alt: "Four zellige artisans cut coloured tile pieces by hand beside finished geometric mosaic panels in a Fez workshop.",
+    title: "Zellige artisans at work in Fez",
+    photographer: "Dan Lundberg",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Zellige_factory-24116015119.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The strong vertical frame holds tools, hands, fragments and finished pattern together. It makes the labour behind the surface visible without pretending to show the visitor class.",
+    },
+    depiction:
+      "Zellige artisans at the Serghini Maitre Potier et Zellige Fassi factory in Fez, photographed on 18 November 2015. It does not depict the Palais de Fès visitor programme, its instructors or an EA visit. Resized for web delivery and available under CC BY-SA 2.0.",
+  },
+  {
+    guideId: "montevideo-public-candombe-workshop",
+    src: "/images/guides/montevideo-candombe.jpg",
+    alt: "A candombe drum line in black, gold and orange moves through the night streets of Montevideo during Las Llamadas.",
+    title: "Las Llamadas in Montevideo",
+    photographer: "Jimmy Baikovicius",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Las_Llamadas_-_Carnaval_2011_-_110203-0690-jikatu.jpg",
+    licenseName: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The diagonal drum line, close working hands and night street context carry real movement and collective timing. The depiction boundary keeps it separate from the smaller municipal workshop.",
+    },
+    depiction:
+      "A candombe drum line during Las Llamadas in Montevideo in 2011. It does not depict the current municipal percussion workshop, its older-adult participants or an EA visit. Cropped responsively for layout and available under CC BY-SA 2.0.",
+  },
+  {
+    guideId: "istanbul-sehir-hatlari-ferry",
+    src: "/images/guides/istanbul-city-ferry.jpg",
+    alt: "A white Şehir Hatları passenger ferry crosses the Bosphorus beneath a broad peach-coloured sunset sky.",
+    title: "Istanbul ferry at sunset on the Bosphorus",
+    photographer: "Tarik Kaan Muslu",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Istanbul_ferry_at_sunset_on_the_Bosphorus_-_Tarik_Kaan_Muslu.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The generous water and sky give the working ferry uncommon calm while the visible vessel and shoreline keep the image specific to Istanbul rather than generic cruise imagery.",
+    },
+    depiction:
+      "A Şehir Hatları passenger ferry on the Bosphorus at sunset. It does not establish the current route, timetable, vessel, weather or an EA visit. Resized for web delivery and available under CC BY-SA 4.0.",
+  },
+  {
+    guideId: "mexico-city-muevete-en-bici",
+    src: "/images/guides/mexico-city-sunday-ride.jpg",
+    alt: "Cyclists move along car-free Paseo de la Reforma toward the Angel of Independence on a bright Sunday morning.",
+    title: "Paseo Dominical Muévete en Bici on Paseo de la Reforma",
+    photographer: "B.jars",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Paseo_dominical_en_bici_en_Paseo_de_la_Reforma_01.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The rider-level perspective makes the public route immediately usable and keeps the Angel of Independence as a recognisable orientation point without reducing the experience to a landmark.",
+    },
+    depiction:
+      "The Muévete en Bici Sunday ride on Paseo de la Reforma in Mexico City, photographed on 20 March 2022. It does not establish the current route, crowd, weather or an EA visit. Resized for web delivery and available under CC BY-SA 4.0.",
+  },
+  {
     guideId: "edinburgh-public-ceilidh",
     src: "/images/guides/edinburgh-public-ceilidh.jpg",
     alt: "Dancers join hands across the floor of an ornate Edinburgh hall during a crowded public ceilidh.",

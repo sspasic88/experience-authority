@@ -31,9 +31,9 @@ export const editorialPathways = [
     slug: "the-pleasure-of-being-a-beginner",
     kind: "learned-skills",
     title: "The pleasure of being a beginner",
-    promise: "Six ways to give your hands a new problem.",
+    promise: "Seven ways to give your hands a new problem.",
     intro:
-      "A first attempt makes a familiar place less predictable. In Porto, a brush turns the tile you noticed on a facade into a decision of your own. In Cambridge, a single bell makes shared timing physical. Biarritz puts a wall, a ball and a borrowed technique between you and an easy answer. Bo-Kaap, Salta and Loíza offer different kinds of first steps through cooking and bomba. These are public introductions, not shortcuts to mastery. Choose the attempt you would enjoy even if the finished result were imperfect, then read the current programme and preparation before booking.",
+      "A first attempt makes a familiar place less predictable. In Porto, a brush turns the tile you noticed on a facade into a decision of your own. Fez puts a hammer, a small piece of clay and a geometric pattern in the same frame. Cambridge makes shared timing physical through a bell. Biarritz adds a wall and a ball, while Bo-Kaap, Salta and Loíza offer different first steps through food and rhythm. These are public introductions, not shortcuts to mastery. Choose the attempt you would enjoy even if the result were imperfect, then read the current programme before booking.",
     guideSlugs: [
       "paint-the-pattern-you-noticed",
       "set-one-bell-in-motion",
@@ -41,6 +41,7 @@ export const editorialPathways = [
       "cook-beyond-the-postcard",
       "learn-the-fold-in-salta",
       "let-the-drum-lead-the-first-step",
+      "cut-the-first-piece-of-a-pattern",
     ],
     visitorUse:
       "Compare what you actually do, how long the session asks for and what the instructor supplies. Keep room to collect a fired tile later or confirm a seasonal class date before fixing your route.",
@@ -52,9 +53,9 @@ export const editorialPathways = [
     kind: "ritual-and-season",
     title: "Make room for a slower day",
     promise:
-      "Warm water, two ways to share coffee and a night with a different rhythm.",
+      "Warm rooms, cold water, two ways to share coffee and a night with a different rhythm.",
     intro:
-      "Not every memorable experience needs acceleration. A Koyasan temple stay asks you to fit an overnight visit around one lodging's actual arrangements. An Istanbul hammam, Tampere sauna and Reykjavík pool each belong to a different public bathing culture. Sarajevo brings a seated coffee pause into a longer city walk, while Doha makes the preparation and etiquette of qahwa the subject of a hosted session. These are not interchangeable wellness products and none carries a promise of transformation. What they share is room to notice a threshold, a gesture or a pattern of ordinary life that a hurried itinerary would pass over.",
+      "Not every memorable experience needs acceleration. A Koyasan temple stay asks you to fit an overnight visit around one lodging's actual arrangements. Istanbul, Tampere, Busan, Kuopio and Reykjavík each open a different public bathing context. Sarajevo brings a seated coffee pause into a longer city walk, while Doha makes qahwa and majlis etiquette the subject of a hosted session. These are not interchangeable wellness products and none carries a promise of transformation. What they share is room to notice a threshold, a gesture or a pattern of ordinary life that a hurried itinerary would pass over.",
     guideSlugs: [
       "spend-the-night-in-a-temple-town",
       "marble-steam-istanbul",
@@ -62,6 +63,8 @@ export const editorialPathways = [
       "a-city-in-the-water",
       "let-the-coffee-take-its-time",
       "read-the-language-of-the-coffee-cup",
+      "spend-an-hour-between-the-hot-rooms",
+      "step-from-smoke-sauna-into-the-lake",
     ],
     visitorUse:
       "Choose the format that genuinely fits your day or night. Read bathing rules, dietary and lodging details, current opening times and the scope of any tour before making arrangements.",
@@ -97,15 +100,16 @@ export const editorialPathways = [
     kind: "water-and-coast",
     title: "Where land meets water",
     promise:
-      "Follow five coastlines where water shapes movement, work and attention.",
+      "Follow six coastlines where water shapes movement, work and attention.",
     intro:
-      "Water is not scenery in these guides. It sets the route, the working day and the limits of access. Learn Venetian rowing, cross exposed tidal ground with a qualified guide, read Lofoten through its fishery, watch Oostduinkerke's shrimp fishers work with horses, then enter Reykjavík through a public pool. The settings differ, but each asks you to check conditions, understand local rules and notice the systems that make an encounter possible before treating it as a view.",
+      "Water is not scenery in these guides. It sets the route, the working day and the limits of access. Learn Venetian rowing, cross exposed tidal ground with a qualified guide, read Lofoten through its fishery, watch Oostduinkerke's shrimp fishers work with horses and enter Reykjavík through a public pool. In Istanbul, an ordinary municipal ferry makes the Bosphorus legible as transport. Each asks you to notice the system that makes the encounter possible before treating water as a view.",
     guideSlugs: [
       "venice-through-an-oar",
       "walk-where-the-sea-was",
       "the-fish-behind-the-islands",
       "the-tide-brings-the-horses",
       "a-city-in-the-water",
+      "let-the-ferry-redraw-istanbul",
     ],
     visitorUse:
       "Use this pathway to compare weather dependence, physical participation and booking needs before building a coastal day.",
@@ -119,7 +123,7 @@ export const editorialPathways = [
     promise:
       "Move from watching a skill to becoming responsible for your first attempt.",
     intro:
-      "A short introduction does not make anyone a master, but it can make knowledge visible. Shape lavash beside a tonir, prepare plant dyes in Luang Prabang, make kimchi in Seoul, find balance through a Venetian oar, trace stockfish through Lofoten's museum and learn what happens before cider reaches the glass in Asturias. These guides favour bounded public programmes where the teacher, sequence and limits remain clear. Arrive ready to follow instruction, ask precise questions and leave expertise with the people who hold it.",
+      "A short introduction does not make anyone a master, but it can make knowledge visible. Shape lavash beside a tonir, prepare plant dyes in Luang Prabang, make kimchi in Seoul, cut a first zellige piece in Fez, find balance through a Venetian oar and learn what happens before cider reaches the glass in Asturias. These guides favour bounded public programmes where the teacher, sequence and limits remain clear. Arrive ready to follow instruction, ask precise questions and leave expertise with the people who hold it.",
     guideSlugs: [
       "bread-from-the-tonir",
       "colour-before-cloth",
@@ -127,6 +131,7 @@ export const editorialPathways = [
       "the-fish-behind-the-islands",
       "the-pour-before-the-glass",
       "kimchi-before-the-jar",
+      "cut-the-first-piece-of-a-pattern",
     ],
     visitorUse:
       "Compare the teaching format, duration and preparation notes, then choose the skill you are willing to practise with patience.",
@@ -161,7 +166,7 @@ export const editorialPathways = [
     promise:
       "Let tide, migration, harvest and public custom decide when to arrive.",
     intro:
-      "Some experiences cannot be separated from their timing. A tide opens and closes a walking route. Migrating starlings gather in the marshes. Shrimp fishers work when sea and public demonstrations align. Asturian cider carries an orchard and cellar calendar, while castellers meet through announced public events. A Tampere public sauna follows ordinary opening hours and shared customs rather than spectacle. This pathway helps you plan around what the place is doing, rather than forcing every experience into the dates you already chose.",
+      "Some experiences cannot be separated from their timing. A tide opens and closes a walking route. Migrating starlings gather in the marshes. Shrimp fishers work when sea and public demonstrations align. Castellers meet through announced public events. Kuopio's smoke-sauna evening belongs to Tuesday, while Mexico City's car-free avenue belongs to most Sunday mornings. This pathway helps you plan around what the place is doing, rather than forcing every experience into the dates you already chose.",
     guideSlugs: [
       "walk-where-the-sea-was",
       "when-the-sky-moves-as-one",
@@ -170,6 +175,8 @@ export const editorialPathways = [
       "the-weight-of-the-tower",
       "make-room-in-the-steam",
       "follow-the-festa-through-the-streets",
+      "step-from-smoke-sauna-into-the-lake",
+      "ride-the-avenue-when-the-cars-step-aside",
     ],
     visitorUse:
       "Start with the least flexible date or natural condition, confirm it at the official source, then shape the rest of the route around it.",
@@ -181,9 +188,9 @@ export const editorialPathways = [
     kind: "city",
     title: "Cities from the inside",
     promise:
-      "Nine familiar cities, entered through practices that remain alive.",
+      "Familiar cities, entered through practices and systems that remain alive.",
     intro:
-      "A landmark can tell you where you are. A practice can tell you how a city works. Begin Barcelona with a human tower, Singapore at a hawker table, Seoul through kimchi, Venice through an oar, Istanbul in a working hammam, Reykjavík in a municipal pool and Mexico City among the chinampas of Xochimilco. Edinburgh adds a dance floor guided by a caller. Doha adds a conversation held through coffee and majlis etiquette. These are not claims to know a whole city. They are public, practical starting points that move attention from the skyline to the routines, knowledge and shared infrastructure beneath it.",
+      "A landmark can tell you where you are. A practice can tell you how a city works. Begin Barcelona with a human tower, Singapore at a hawker table, Seoul through kimchi and Venice through an oar. Cross Istanbul by municipal ferry, then give Mexico City's Sunday avenue back to feet and bicycles. Busan adds the etiquette of a jjimjilbang, Fez the precision of zellige and Montevideo a candombe workshop with a clearly defined public. These are not claims to know a whole city. They are practical starting points that move attention from the skyline to the routines and shared infrastructure beneath it.",
     guideSlugs: [
       "the-weight-of-the-tower",
       "a-morning-at-the-hawker-table",
@@ -194,6 +201,11 @@ export const editorialPathways = [
       "kimchi-before-the-jar",
       "let-the-caller-start-the-dance",
       "read-the-language-of-the-coffee-cup",
+      "let-the-ferry-redraw-istanbul",
+      "ride-the-avenue-when-the-cars-step-aside",
+      "spend-an-hour-between-the-hot-rooms",
+      "cut-the-first-piece-of-a-pattern",
+      "find-the-pulse-before-the-parade",
     ],
     visitorUse:
       "Pick the city already on your route and use its guide as the anchor for one slower half-day beyond the standard highlights.",
@@ -225,9 +237,9 @@ export const editorialPathways = [
     kind: "first-time-ea",
     title: "Your first way in",
     promise:
-      "A six-stop introduction to how Experience Authority helps you travel.",
+      "A compact introduction to how Experience Authority helps you travel.",
     intro:
-      "New here? Start with a place you recognise, then notice the EA difference. A Singapore breakfast reveals shared food culture. A Venetian rowing lesson turns movement into skill. An Asturian cellar makes the pour part of a wider system. A Barcelona tower reframes a public square. A Reykjavík pool shows the city through ordinary infrastructure. A Kumano path asks what respectful public access requires. Together, the guides show how EA connects inspiration, practical planning, evidence and responsibility without pretending to replace local knowledge.",
+      "New here? Start with a place you recognise, then notice the EA difference. A Singapore breakfast reveals shared food culture. A Venetian rowing lesson turns movement into skill. Barcelona reframes a public square through a human tower. Istanbul becomes legible from an ordinary ferry, while Mexico City's Sunday avenue becomes a space you can move through under your own power. A Kumano path asks what respectful public access requires. Together, the guides connect inspiration, practical planning, evidence and responsibility without pretending to replace local knowledge.",
     guideSlugs: [
       "a-city-in-the-water",
       "a-morning-at-the-hawker-table",
@@ -235,6 +247,8 @@ export const editorialPathways = [
       "the-pour-before-the-glass",
       "the-weight-of-the-tower",
       "leave-room-for-devotion",
+      "let-the-ferry-redraw-istanbul",
+      "ride-the-avenue-when-the-cars-step-aside",
     ],
     visitorUse:
       "Open the guide closest to your plans, check its evidence and official access route, then save it only if the practical fit is real.",

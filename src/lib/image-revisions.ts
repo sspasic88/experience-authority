@@ -6,6 +6,7 @@ export const imageRevisions: Record<string, string> = {
   "/images/guides/barcelona-castells.jpg": "0f8d2400da31",
   "/images/guides/belmont-cocoa-drying.jpg": "df5c1445c281",
   "/images/guides/biarritz-basque-pelota.jpg": "710403b06701",
+  "/images/guides/busan-spa-land.jpg": "26792537e349",
   "/images/guides/budapest-fono-tanchaz.jpg": "ea3a44199006",
   "/images/guides/cambridge-bell-ringing.jpg": "c2ff190aba24",
   "/images/guides/cape-town-bo-kaap-cooking.jpg": "c3d9930de293",
@@ -13,12 +14,15 @@ export const imageRevisions: Record<string, string> = {
   "/images/guides/doha-coffee-ceremony.jpg": "4c05d65a8dba",
   "/images/guides/doolin-fiddlers.jpg": "ccd3f4cfedee",
   "/images/guides/edinburgh-public-ceilidh.jpg": "6bda8e6862be",
+  "/images/guides/fez-zellige-workshop.jpg": "bd7477de7baa",
   "/images/guides/hanoi-water-puppetry.jpg": "887b531dcc26",
   "/images/guides/istanbul-hurrem-hammam-interior.jpg": "30d2ea25b0bb",
+  "/images/guides/istanbul-city-ferry.jpg": "43839902d755",
   "/images/guides/koyasan-temple-stay.jpg": "70f04fd32ede",
   "/images/guides/kyoto-backstreet-cycling.jpg": "18f6fdea6772",
   "/images/guides/kyoto-tea-preparation.jpg": "8bb18a5b9c9b",
   "/images/guides/kyoto-yuzen-stencil-workshop.jpg": "7f76102d68df",
+  "/images/guides/kuopio-smoke-sauna.webp": "423bd8bd7127",
   "/images/guides/laos-natural-dye-materials.jpg": "661fa185d6a8",
   "/images/guides/leave-room-for-devotion.jpg": "226872bfb84f",
   "/images/guides/lofoten-skrei-exhibition.jpg": "e6aedc9fa441",
@@ -26,6 +30,8 @@ export const imageRevisions: Record<string, string> = {
   "/images/guides/make-room-in-the-steam.jpg": "47b0ca04c533",
   "/images/guides/malta-village-festa.jpg": "c6436d1b1346",
   "/images/guides/mayer-pfarrplatz-courtyard.jpg": "195d40cdc5d8",
+  "/images/guides/mexico-city-sunday-ride.jpg": "1c21ccc4f8a6",
+  "/images/guides/montevideo-candombe.jpg": "67dbb3435643",
   "/images/guides/namib-living-desert.jpg": "6c8ba6a29cf5",
   "/images/guides/oostduinkerke-horseback-shrimp.jpg": "7b45fadd309d",
   "/images/guides/oaxaca-mezcal-palenque.jpg": "40ecfa91d986",
@@ -49,7 +55,7 @@ export const imageRevisions: Record<string, string> = {
 
 // A single manifest fingerprint fits Next's bounded localPatterns allowlist.
 // Tests require it to change when any original is added or replaced.
-export const imageEdition = "7295f1be04c3";
+export const imageEdition = "e4dae0d85401";
 
 export function imageSource(src: string) {
   return imageRevisions[src] ? `${src}?v=${imageEdition}` : src;
