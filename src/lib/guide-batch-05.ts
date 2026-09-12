@@ -167,4 +167,115 @@ export const guideBatch05: PublicExperience[] = [
       ],
     },
   },
+  {
+    id: "oostduinkerke-horseback-shrimp",
+    slug: "the-tide-brings-the-horses",
+    title: "The tide brings the horses",
+    summary:
+      "Watch Oostduinkerke’s shrimp fishers work the North Sea shallows on horseback, from the public beach and on the tide’s terms.",
+    field: "witness",
+    place: "Oostduinkerke",
+    country: "Belgium",
+    countrySlug: "belgium",
+    regionSlug: "oostduinkerke",
+    status: "public_guide",
+    demo: false,
+    ...guideImage("oostduinkerke-horseback-shrimp"),
+    kernel:
+      "Use NAVIGO’s current information and linked calendar to choose a public demonstration. Arrive before the listed time, then watch from the beach beyond the fishers’ route and working space. The sequence follows the tide: horses enter the shallows, nets move across the seabed and the catch is sorted after the group returns. Some dates include cooking and others do not, so let the current listing set the expectation.",
+    rootedness:
+      "UNESCO describes Oostduinkerke’s horseback shrimp fishing as a body of knowledge carried by fishing families and supported by the wider community. The horses, nets, tides and reading of the sea form one practice. Public visibility does not make that knowledge visitor property, and watching one outing does not turn the work into a performance staged for an individual camera.",
+    shift:
+      "From seeing an improbable image to noticing the timing, labour and shared knowledge that hold it together.",
+    humanReturn:
+      "You may remember the yellow rainwear against the North Sea, but the more useful memory may be how precisely the work follows water and weather. That is an editorial possibility, not a claim to understand the craft.",
+    responsibility:
+      "Stay outside the fishers’ path and follow every instruction from staff, stewards or the fishing group. Do not approach the horses, nets or catch, and do not use flash or a drone. Keep children and dogs well clear of the working route. Weather, tide and animal welfare can change or cancel an outing. Confirm the current calendar before travel and accept that no catch, tasting or close view is guaranteed.",
+    evidence:
+      "NAVIGO publishes the public viewing format, seasonal pattern and route to the current demonstration calendar. UNESCO provides practice-level context. Visit Flanders publishes the credited photograph used here. EA has not attended, assessed crowd management, evaluated animal welfare or verified conditions on a particular date. The photograph shows the practice in Oostduinkerke, not the line-up for a future demonstration.",
+    duration:
+      "Demonstration-specific and tide-dependent. Use the current calendar for timing",
+    participation:
+      "Public witnessing from the beach, outside the working route",
+    access:
+      "Public programme subject to the current calendar, tide, weather and on-site direction. EA does not arrange private sessions or receive commission.",
+    guideReview: {
+      basis: "public_sources",
+      scope: "public_programme",
+      requiresSpecialPermission: false,
+      checkedOn: "2026-09-12",
+      reviewBy: "2026-12-11",
+      accessUrl: "https://www.navigomuseum.be/en/shrimp-fishers-on-horseback",
+      sources: [
+        {
+          title: "NAVIGO Fisheries Museum: shrimp fishers on horseback",
+          url: "https://www.navigomuseum.be/en/shrimp-fishers-on-horseback",
+          note: "Current heritage-holder page explaining public demonstrations, seasonal limits, tide dependence and the route to the current calendar. Individual outings can change.",
+        },
+        {
+          title: "UNESCO: shrimp fishing on horseback in Oostduinkerke",
+          url: "https://ich.unesco.org/en/RL/shrimp-fishing-on-horseback-in-oostduinkerke-00673",
+          note: "Practice-level context on the knowledge, families and community connected to the craft. It does not provide a current viewing schedule.",
+        },
+        {
+          title: "Visit Flanders: immaterial cultural heritage",
+          url: "https://www.visitflanders.com/en/stories/flanders-immaterial-cultural-heritage-always-impressive",
+          note: "Official regional context and the original source for Dirk van Hove’s photograph. It is not an EA review or the current event calendar.",
+        },
+      ],
+    },
+  },
+  {
+    id: "denmark-black-sun-wadden",
+    slug: "when-the-sky-moves-as-one",
+    title: "When the sky moves as one",
+    summary:
+      "Follow a nature guide into Denmark’s Wadden Sea marshes and wait for a starling flock that may redraw the evening sky.",
+    field: "nature",
+    place: "Danish Wadden Sea",
+    country: "Denmark",
+    countrySlug: "denmark",
+    regionSlug: "ribe-marshes",
+    status: "public_guide",
+    demo: false,
+    ...guideImage("denmark-black-sun-wadden"),
+    kernel:
+      "Choose a dated Black Sun tour from the Wadden Sea Centre’s current programme. The guides track changing roosts before each outing, but the birds determine whether a murmuration appears and what shape it takes. Bring the clothing and transport specified for your chosen format, arrive at the stated meeting point and expect the group to wait at a distance in the marsh landscape.",
+    rootedness:
+      "National Park Vadehavet explains that starlings use the marsh meadows to feed and the reed beds to roost during migration. Their formations are not choreography for visitors. They are a response to predators, safety and the conditions of the flock. The phenomenon belongs to a living wetland system whose needs take priority over a closer photograph.",
+    shift:
+      "From expecting a guaranteed spectacle to letting weather, migration and the flock decide the evening.",
+    humanReturn:
+      "You may leave with the rare feeling of seeing many lives make one form without a director. You may also see only the marsh at dusk. Neither outcome is evidence of a failed or successful relationship with nature.",
+    responsibility:
+      "Follow the guide’s position, route and transport instructions. Keep a low profile, stay off dyke tops, make no unnecessary noise and never use flash. Respect private land and move a vehicle when asked. Do not approach a roost or try to make birds take flight. Take all waste away. Recheck weather, meeting details, accessibility and clothing requirements directly before departure.",
+    evidence:
+      "The Wadden Sea Centre currently lists dated guided Black Sun tours and explicitly states that nature offers no guarantee. National Park Vadehavet explains season, habitat, changing roosts and visitor conduct. EA has not joined a tour, assessed a guide, verified accessibility or predicted bird movement. Sandra Prudencio’s photograph depicts Black Sun in the Tønder marsh, not a promised view on a particular tour.",
+    duration:
+      "Tour-specific. Current listed formats are timed around the evening movement of the birds",
+    participation:
+      "Guide-led observation at a distance, with the flock’s presence never guaranteed",
+    access:
+      "Public programme through the Wadden Sea Centre’s current tour calendar. EA does not sell tickets or receive commission.",
+    guideReview: {
+      basis: "public_sources",
+      scope: "public_programme",
+      requiresSpecialPermission: false,
+      checkedOn: "2026-09-12",
+      reviewBy: "2026-12-11",
+      accessUrl: "https://www.vadehavscentret.dk/en/tours-and-activities/black-sun/",
+      sources: [
+        {
+          title: "Wadden Sea Centre: Black Sun tours",
+          url: "https://www.vadehavscentret.dk/en/tours-and-activities/black-sun/",
+          note: "Current public programme with dated guided tours, booking routes and an explicit no-guarantee boundary for a changing natural phenomenon.",
+        },
+        {
+          title: "National Park Vadehavet: Black Sun",
+          url: "https://eng.nationalparkvadehavet.dk/experience-the-wadden-sea/animal-and-bird-life/black-sun",
+          note: "Official national-park context on the birds, marsh habitat, seasons, changing roosts and conduct that reduces disturbance. It is not a tour review.",
+        },
+      ],
+    },
+  },
 ];

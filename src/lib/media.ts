@@ -24,6 +24,44 @@ export type GuideMedia = {
 
 export const publicGuideMedia: readonly GuideMedia[] = [
   {
+    guideId: "oostduinkerke-horseback-shrimp",
+    src: "/images/guides/oostduinkerke-horseback-shrimp.jpg",
+    alt: "Three Oostduinkerke shrimp fishers in yellow rainwear ride basket-carrying horses through the North Sea shallows.",
+    title: "The shrimp fishers of Oostduinkerke",
+    photographer: "Dirk van Hove, Visit Flanders",
+    sourceUrl: "https://www.visitflanders.com/en/stories/flanders-immaterial-cultural-heritage-always-impressive",
+    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://www.visitflanders.com/en/stories/flanders-immaterial-cultural-heritage-always-impressive",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "The clear lateral composition keeps the working group, horses and water equally legible without isolating one person as spectacle.",
+    },
+    depiction:
+      "Oostduinkerke shrimp fishers at work in the North Sea, photographed by Dirk van Hove and published by Visit Flanders. It is official regional context, not an EA visit or evidence of a particular demonstration date. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "denmark-black-sun-wadden",
+    src: "/images/guides/denmark-black-sun.jpg",
+    alt: "A vast murmuration of starlings bends across a pale evening sky above the wetland horizon of Denmark's Wadden Sea.",
+    title: "Black Sun in the Tønder marsh",
+    photographer: "Sandra Prudencio, National Park Vadehavet",
+    sourceUrl: "https://eng.nationalparkvadehavet.dk/experience-the-wadden-sea/animal-and-bird-life/black-sun",
+    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://eng.nationalparkvadehavet.dk/experience-the-wadden-sea/animal-and-bird-life/black-sun",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "The wide, low horizon leaves the flock as the dominant moving form while retaining the wetland that makes the phenomenon possible.",
+    },
+    depiction:
+      "Black Sun in the Tønder marsh, photographed by Sandra Prudencio and published by National Park Vadehavet. The photograph depicts the natural phenomenon, not a specific Wadden Sea Centre tour or an EA visit. Reuse rights have not been independently cleared.",
+  },
+  {
     guideId: "wadden-guided-mudflat-walk",
     src: "/images/guides/wadden-mudflat-walk.jpg",
     alt: "Small groups cross the reflective seabed of the Dutch Wadden Sea at low tide beneath a wide horizon.",

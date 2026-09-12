@@ -182,6 +182,24 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "belgium",
+    name: "Belgium",
+    region: "oostduinkerke",
+    regionName: "Oostduinkerke",
+    intro:
+      "Meet a North Sea craft that still moves with horses, nets and the tide.",
+    image: null,
+  },
+  {
+    slug: "denmark",
+    name: "Denmark",
+    region: "ribe-marshes",
+    regionName: "Ribe Marshes",
+    intro:
+      "Wait at the edge of the marsh while a migrating flock decides what the sky will become.",
+    image: null,
+  },
+  {
     slug: "netherlands",
     name: "Netherlands",
     region: "wadden-sea",
