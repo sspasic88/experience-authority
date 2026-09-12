@@ -4,7 +4,7 @@ User direction: populate the local website with content aligned with EA that doe
 
 ## Scope and distinction
 
-Fifteen original English public-source guides now make up the public edition, covering fourteen countries. These are independently written desk guides to specifically advertised public programmes, admission or hospitality. They are not EA Selected, locally validated, visited or independently quality-assessed. The separate launch requirement for 25 locally validated EA Selected experiences is unchanged and unmet. Production indexing applies only to this clearly labelled public-source edition.
+Seventeen original English public-source guides now make up the public edition, covering sixteen countries. These are independently written desk guides to specifically advertised public programmes, admission or hospitality. They are not EA Selected, locally validated, visited or independently quality-assessed. The separate launch requirement for 25 locally validated EA Selected experiences is unchanged and unmet. Production indexing applies only to this clearly labelled public-source edition.
 
 | Guide | Preliminary practice narrowed from | Source basis |
 |---|---|---|
@@ -23,6 +23,8 @@ Fifteen original English public-source guides now make up the public edition, co
 | A morning at the hawker table | Candidate 139 | Ordinary public hawker-centre breakfast, not a named-stall ranking or a single food claim |
 | Step into the dance | Candidate 21 | Fonó's published táncház programme, not a claim of cultural ownership or a fixed event |
 | The weight of the tower | Candidate 6 | A listed Barcelona castells performance, not joining a colla or entering its working space |
+| Walk where the sea was | Candidate 11 | A qualified-guide-led public mudflat excursion, not independent access to the tidal flats |
+| The fish behind the islands | Related public alternative to candidate 14 | SKREI public museum admission, not boarding a working fishing boat or meeting a fishing family |
 
 The original workbook and 200-candidate audit are unchanged. No bulk promotion or automatic inference of permission occurred. Current experience-specific facts and public links are in src/lib/public-guides.ts; actual output is allowlisted by src/lib/publication.ts through the server data boundary. A publicly offered class may require the visitor to book under ordinary operator terms; EA has made no such booking and cannot guarantee admission.
 
@@ -41,7 +43,7 @@ The original workbook and 200-candidate audit are unchanged. No bulk promotion o
 
 ## What changed in the website
 
-The later public-guide batches add Doolin traditional music, Istanbul bathing, Xochimilco chinampa context, a Singapore hawker breakfast, a Budapest táncház and a public Barcelona castells performance. Japan exposes Kyoto and Kumano-kodo as separate real-coverage regions in navigation and the sitemap. Spain, Singapore and Hungary are added only because the current public-source gate, source notes and reviewed photographs pass together.
+The later public-guide batches add Doolin traditional music, Istanbul bathing, Xochimilco chinampa context, a Singapore hawker breakfast, a Budapest táncház, a public Barcelona castells performance, a guided Wadden mudflat walk and SKREI in Lofoten. Japan exposes Kyoto and Kumano-kodo as separate real-coverage regions in navigation and the sitemap. New territories appear only when the current public-source gate, source notes and reviewed photographs pass together.
 
 Visitor tools now include a private day-by-day journey draft, travel/stay notes, text download, opt-in sharing of private notes, contextual related guides, full-image homepage links and an enlarged photograph dialog with source/licence links. There is one local plan, no cloud synchronization, shared editable page, verified travel routing or booking service. Native sharing only runs on a visitor click; without it, clipboard/manual text is offered. The home return panel is based only on local Passport state; no retention improvement has been measured.
 

@@ -24,6 +24,44 @@ export type GuideMedia = {
 
 export const publicGuideMedia: readonly GuideMedia[] = [
   {
+    guideId: "wadden-guided-mudflat-walk",
+    src: "/images/guides/wadden-mudflat-walk.jpg",
+    alt: "Small groups cross the reflective seabed of the Dutch Wadden Sea at low tide beneath a wide horizon.",
+    title: "Mudflat walking on the Wadden Sea",
+    photographer: "Visit Wadden, source credit CTOALA_20190827_071",
+    sourceUrl: "https://www.visitwadden.nl/en/visit/wadlopen",
+    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://www.visitwadden.nl/en/visit/wadlopen",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "The high viewpoint, open horizon and human scale make the temporary seabed legible without turning the walkers into spectacle.",
+    },
+    depiction:
+      "Mudflat walkers on the exposed Dutch Wadden seabed, published by Visit Wadden with the source credit CTOALA_20190827_071. The page does not identify a named photographer. It is regional context, not an EA visit or evidence of a specific excursion. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "lofoten-skrei-museum",
+    src: "/images/guides/lofoten-skrei-exhibition.jpg",
+    alt: "Visitors move through the dark, blue-lit Otolith exhibition between three upright wooden boat forms at SKREI in Lofoten.",
+    title: "SKREI main exhibition at The Otolith",
+    photographer: "Kjell Ove Storvik, Museum Nord",
+    sourceUrl: "https://www.museumnord.no/en/our-venues/skrei/",
+    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://www.museumnord.no/en/our-venues/skrei/",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "Dark spatial depth, controlled blue light and the upright boat forms create a precise contemporary frame for the fishing story.",
+    },
+    depiction:
+      "The Otolith main exhibition at SKREI in Kabelvåg, published by Museum Nord and credited to Kjell Ove Storvik. It is an official museum image, not an EA visit or proof of current exhibition condition. Reuse rights have not been independently cleared.",
+  },
+  {
     guideId: "barcelona-castells-merce",
     src: "/images/guides/barcelona-castells.jpg",
     alt: "A Castellers de Barcelona tower rises above a packed arena, held by a broad base of red-shirted members.",

@@ -182,6 +182,24 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "netherlands",
+    name: "Netherlands",
+    region: "wadden-sea",
+    regionName: "Wadden Sea",
+    intro:
+      "Follow the tide into a temporary landscape with someone qualified to read it.",
+    image: null,
+  },
+  {
+    slug: "norway",
+    name: "Norway",
+    region: "lofoten",
+    regionName: "Lofoten",
+    intro:
+      "Look beyond the mountain silhouette to the fishery that shaped life along the islands.",
+    image: null,
+  },
+  {
     slug: "spain",
     name: "Spain",
     region: "barcelona",

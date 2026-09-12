@@ -56,4 +56,115 @@ export const guideBatch05: PublicExperience[] = [
       ],
     },
   },
+  {
+    id: "wadden-guided-mudflat-walk",
+    slug: "walk-where-the-sea-was",
+    title: "Walk where the sea was",
+    summary:
+      "Enter the Dutch Wadden Sea at low tide with a qualified guide and learn to read a landscape that the water will reclaim.",
+    field: "move",
+    place: "Dutch Wadden Sea",
+    country: "Netherlands",
+    countrySlug: "netherlands",
+    regionSlug: "wadden-sea",
+    status: "public_guide",
+    demo: false,
+    ...guideImage("wadden-guided-mudflat-walk"),
+    kernel:
+      "Choose a listed guided excursion from the Waddenvereniging agenda or one of the organisations named by Visit Wadden. Match the route to your own preparation and follow the guide’s clothing, footwear, timing and meeting instructions exactly. This is a tide-led walk on a living seabed. It is not an independent beach stroll and it is not a route to improvise.",
+    rootedness:
+      "The Wadden Sea is shaped by water, wind, sediment and the lives that depend on the intertidal zone. Visit Wadden frames mudflat walking as a way to encounter that system while respecting birds and other wildlife. The useful authority here belongs to the landscape, the tide and the qualified guide who knows how to move through both.",
+    shift:
+      "From treating the coast as an edge to understanding it as a landscape that repeatedly appears and disappears.",
+    humanReturn:
+      "You may remember the scale, the exposed horizon and the discipline of moving when the tide allows it. That is a possible return, not a promise of transformation or safety.",
+    responsibility:
+      "Go only with a qualified guide or a properly permitted organisation. Follow every decision about route, pace, footwear, weather and cancellation. Keep distance from birds and wildlife, take nothing from the flats and leave no waste. Do not rely on EA for tide, safety, fitness or accessibility guidance. Confirm those matters with the organiser before booking and again before departure.",
+    evidence:
+      "Visit Wadden explains the guided format, the need to protect wildlife and the role of experienced mudflat guides. Waddenvereniging publishes a dated activity calendar with routes and booking links. Netherlands Enterprise Agency guidance confirms that mudflat walks operate within a permit framework that also covers guides and individual walkers. EA has not walked the route, assessed any guide, checked a visitor’s fitness or verified conditions on a particular day. The photograph is published by Visit Wadden and shows mudflat walkers on the exposed seabed. It is not an EA visit or evidence of a specific excursion.",
+    duration:
+      "Route-specific and tide-dependent. Use the current excursion listing for timing and preparation",
+    participation:
+      "Qualified-guide-led walking under current tide, weather and route conditions",
+    access:
+      "Public programme through the organiser’s own current agenda and booking route. EA does not book, assess or receive commission.",
+    guideReview: {
+      basis: "public_sources",
+      scope: "public_programme",
+      requiresSpecialPermission: false,
+      checkedOn: "2026-09-12",
+      reviewBy: "2026-12-11",
+      accessUrl: "https://waddenvereniging.nl/ontdekken/agenda/",
+      sources: [
+        {
+          title: "Waddenvereniging: current activities calendar",
+          url: "https://waddenvereniging.nl/ontdekken/agenda/",
+          note: "Dated public excursions with locations, times and links to details and booking. Each listing remains authoritative for current availability and requirements.",
+        },
+        {
+          title: "Visit Wadden: mudflat walking",
+          url: "https://www.visitwadden.nl/en/visit/wadlopen",
+          note: "Regional destination guidance on qualified guides, wildlife respect and organisations offering mudflat walks. It does not assess an individual excursion for EA.",
+        },
+        {
+          title: "Netherlands Enterprise Agency: mudflat walking permit",
+          url: "https://business.gov.nl/regulations/mud-flat-walking-permit/",
+          note: "Official government guidance confirming the Dutch permit framework for organised, guided and solo mudflat walking. It does not replace the organiser’s route and safety instructions.",
+        },
+      ],
+    },
+  },
+  {
+    id: "lofoten-skrei-museum",
+    slug: "the-fish-behind-the-islands",
+    title: "The fish behind the islands",
+    summary:
+      "Read Lofoten through skrei at the new SKREI centre in Kabelvåg, where fishing history, marine life and coastal art share one public visit.",
+    field: "learn",
+    place: "Lofoten",
+    country: "Norway",
+    countrySlug: "norway",
+    regionSlug: "lofoten",
+    status: "public_guide",
+    demo: false,
+    ...guideImage("lofoten-skrei-museum"),
+    kernel:
+      "Begin with The Otolith, SKREI’s main exhibition, then decide whether to continue into the Lofoten Museum, aquarium or Espolin Gallery. The combined site is designed for independent public visiting and offers separate or combined admission. Use the museum’s current page for hours, tickets and transport before making the journey to Kabelvåg.",
+    rootedness:
+      "Visit Lofoten describes skrei as central to the archipelago’s economy and culture, with the winter fishery shaping coastal life over centuries. The museum is a public interpretation of that relationship. It is not a substitute for the people who work at sea, and a visitor does not gain authority over their knowledge by completing an exhibition.",
+    shift:
+      "From seeing Lofoten as mountain scenery to noticing the fishery that helped make life there possible.",
+    humanReturn:
+      "You may carry the landscape differently after understanding why skrei matters to the settlements around it. That is an editorial possibility, not a promised learning outcome.",
+    responsibility:
+      "Check current opening, ticket, accessibility and transport information on the museum’s own page. Follow photography and visitor rules in each arena. Do not transfer museum interpretation into assumptions about today’s fishing crews, working conditions or environmental impact. If you later choose a fishing trip, use a licensed public operator and assess that activity separately.",
+    evidence:
+      "Museum Nord’s current page establishes the new SKREI centre, its public admission, four visitor arenas and practical information. Visit Lofoten provides wider destination context for skrei and identifies museums as a way to learn from land. EA has not visited, reviewed the exhibition, assessed accessibility or independently validated the museum’s claims. The photograph is an official view of The Otolith exhibition by Kjell Ove Storvik.",
+    duration:
+      "Self-paced within current opening hours. The combined visit spans several separate arenas",
+    participation:
+      "Independent public museum visit with optional listed activities",
+    access:
+      "Public admission through Museum Nord’s current ticket route. EA does not sell tickets or receive commission.",
+    guideReview: {
+      basis: "public_sources",
+      scope: "public_admission",
+      requiresSpecialPermission: false,
+      checkedOn: "2026-09-12",
+      reviewBy: "2026-12-11",
+      accessUrl: "https://www.museumnord.no/en/our-venues/skrei/",
+      sources: [
+        {
+          title: "Museum Nord: SKREI museum, aquarium and gallery",
+          url: "https://www.museumnord.no/en/our-venues/skrei/",
+          note: "Current public visitor page for The Otolith, the other SKREI arenas, opening hours, address, ticket route and transport information.",
+        },
+        {
+          title: "Visit Lofoten: Fishing in Lofoten",
+          url: "https://visitlofoten.com/en/topic/fishing-in-lofoten/",
+          note: "Destination context for the winter skrei fishery and for museums as a land-based way to understand its role. It does not review the SKREI exhibition.",
+        },
+      ],
+    },
+  },
 ];
