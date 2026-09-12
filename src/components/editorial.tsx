@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, LockKeyhole, MoveUpRight } from "lucide-react";
 import { statusLabels, type PublicExperience } from "@/lib/catalog";
-import { guideMediaFor, type GuideMedia } from "@/lib/media";
+import { guideMediaFor, imageCreditText, type GuideMedia } from "@/lib/media";
 import type { EditorialPathway } from "@/lib/editorial-pathways";
 import { ExperienceActions } from "./passport-provider";
 import { imageSource } from "@/lib/image-revisions";
@@ -74,15 +74,7 @@ export function ImageCredit({
   media: GuideMedia;
   className?: string;
 }) {
-  const creator = media.photographer
-    .replace(". Individual photographer not named", "")
-    .replace(", publishing source", "");
-  const publication = media.sourceUrl.includes("commons.wikimedia.org")
-    ? "Wikimedia Commons"
-    : media.sourceUrl.includes("unsplash.com")
-      ? "Unsplash"
-      : "";
-  const credit = publication ? `${creator} / ${publication}` : creator;
+  const credit = imageCreditText(media);
   return (
     <a
       className={className}

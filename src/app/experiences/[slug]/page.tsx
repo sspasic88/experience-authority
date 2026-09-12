@@ -15,7 +15,7 @@ import { guideMediaFor } from "@/lib/media";
 import { PhotoViewer } from "@/components/photo-viewer";
 import { ShareButton } from "@/components/share-button";
 import { StructuredData } from "@/components/structured-data";
-import { relatedExperiences } from "@/lib/catalog";
+import { connectedExperiences } from "@/lib/catalog";
 import {
   pageMetadata,
   isDiscoverable,
@@ -54,7 +54,7 @@ export default async function Experience({ params }: Props) {
   const item = getExperience((await params).slug);
   if (!item) notFound();
   const media = guideMediaFor(item.id);
-  const related = relatedExperiences(item, getExperiences());
+  const connections = connectedExperiences(item, getExperiences());
   const structuredData = guideStructuredData(item);
   return (
     <div className="experience-page">
@@ -359,13 +359,23 @@ export default async function Experience({ params }: Props) {
         </div>
         <section className="section">
           <SectionHeading
-            eyebrow="Another way in"
-            title="Keep your curiosity moving."
+            eyebrow="Continue from here"
+            title="Turn one experience into a fuller day."
             href="/explore"
           />{" "}
-          <div className="experience-grid">
-            {related.map((entry, index) => (
-              <ExperienceCard key={entry.id} item={entry} index={index} />
+          <p className="connected-intro">
+            We start with the same city or area, then add a contrasting way to
+            experience it. Wider suggestions are labelled so proximity is never
+            implied.
+          </p>
+          <div className="experience-grid connected-experience-grid">
+            {connections.map(({ item: entry, label, href }, index) => (
+              <div className="connected-experience" key={entry.id}>
+                <Link className="connection-label" href={href}>
+                  {label} <span aria-hidden="true">↗</span>
+                </Link>
+                <ExperienceCard item={entry} index={index} />
+              </div>
             ))}
           </div>
         </section>

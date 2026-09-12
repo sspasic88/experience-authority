@@ -540,6 +540,34 @@
   justify-self: start;
   padding-block: 8px;
 }
+.connected-intro {
+  max-width: 680px;
+  margin: -28px 0 30px;
+  color: var(--ea-stone);
+  font-size: var(--ea-type-body-small);
+  line-height: 1.6;
+}
+.connected-experience {
+  min-width: 0;
+}
+.connection-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 25px;
+  margin: 0 0 10px;
+  color: var(--ea-accent-text);
+  font-size: var(--ea-type-micro);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.connection-label:hover,
+.connection-label:focus-visible {
+  color: var(--ea-night);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 @media print {
   body:has(.trip-planner) .site-header,
   body:has(.trip-planner) .site-footer,

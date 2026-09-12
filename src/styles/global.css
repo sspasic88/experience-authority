@@ -1403,12 +1403,25 @@ button {
 }
 .footer-bottom {
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
   gap: 25px;
   border-top: 1px solid #35434b;
   padding-top: 20px;
   font-size: 10px;
   color: #b6c0c6;
+}
+.footer-legal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 18px;
+}
+.footer-legal-nav a:hover,
+.footer-legal-nav a:focus-visible {
+  color: var(--ea-paper);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 .compare-tray {
   position: fixed;
@@ -2725,8 +2738,11 @@ button {
     gap: 12px;
     flex-wrap: wrap;
   }
-  .footer-bottom > span:nth-child(2) {
-    display: none;
+  .footer-legal-nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 9px 16px;
   }
   .compare-tray {
     bottom: 12px;

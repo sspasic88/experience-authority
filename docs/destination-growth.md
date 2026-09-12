@@ -16,6 +16,8 @@ For the next research passes, deepen familiar destinations already covered, such
 
 Every proposed addition also needs a clear discovery pull. The practical test is whether its most specific fact, action or social rule can make a visitor think, “I did not know this existed, and I want to try it.” The answer must come from the experience itself, not hype in the title. Recognisable destination anchors remain essential because they help people orient and trust the catalogue. EA's differentiation comes from revealing the process, participation or knowledge inside those anchors, then surrounding them with less expected experiences of equal quality.
 
+Treat this as a deliberate editorial rhythm rather than a one-time mixture. A recognisable anchor earns the click, an unexpected local continuation earns attention and a dependable cadence of genuinely new discoveries earns the return visit. Homepage editions, collections and guide continuations should balance those three roles without manufacturing novelty. Repetition, arbitrary randomisation and generic “hidden gem” language weaken authority.
+
 Look for the combination of food, making/learning, movement or water, culture/performance, and rest or a distinctive stay where genuinely place-rooted and publicly available. Do not force every destination into every category. Publish only after the usual evidence, access-scope, photography and freshness checks pass. No new contact, partnership, consent claim, licence purchase or booking is implied by this plan.
 
 ## Visitor usefulness
@@ -23,3 +25,5 @@ Look for the combination of food, making/learning, movement or water, culture/pe
 Each addition should answer what the visitor actually does, why it belongs here, who may enjoy it, how long to allow when officially supported, how public access works, what needs checking, and what the photograph depicts. Surface uncertainty rather than inventing accessibility, age suitability, live prices, current capacity or travel times.
 
 The journey tool remains a private local draft with official links and printable output. Full-trip booking, shared editable itineraries, current availability and routing would require a separately scoped implementation and external integrations. Do not present them as existing capabilities.
+
+Nineteen of the current 55 guides have another guide in the same or an explicitly connected local area. Twenty-six of 36 countries and territories still have only one guide. The next content pass should therefore improve local continuation coverage before adding many more isolated map pins, while preserving globally recognisable anchors and the full publication gate.

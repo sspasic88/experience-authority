@@ -1,3 +1,5 @@
+import { editorialPathways } from "./editorial-pathways";
+
 export const fields = [
   {
     slug: "taste",
@@ -563,14 +565,101 @@ export function relatedExperiences(
   items: PublicExperience[],
   limit = 3,
 ) {
-  const score = (other: PublicExperience) =>
-    (other.countrySlug === item.countrySlug ? 4 : 0) +
-    (other.field === item.field ? 2 : 0) +
-    (collections.some(
-      (c) => c.fields.includes(item.field) && c.fields.includes(other.field),
-    )
-      ? 1
-      : 0);
+  return connectedExperiences(item, items, limit).map(
+    (connection) => connection.item,
+  );
+}
+
+const connectedLocalAreas: readonly {
+  countrySlug: string;
+  regionSlugs: readonly string[];
+  label: string;
+}[] = [
+  {
+    countrySlug: "portugal",
+    regionSlugs: ["porto", "vila-nova-de-gaia"],
+    label: "Porto and Gaia",
+  },
+  {
+    countrySlug: "mexico",
+    regionSlugs: ["mexico-city", "xochimilco"],
+    label: "Mexico City and Xochimilco",
+  },
+];
+
+export type ExperienceConnection = {
+  item: PublicExperience;
+  scope: "same_area" | "connected_area" | "same_country" | "editorial";
+  label: string;
+  href: string;
+};
+
+function sharedInterest(a: PublicExperience, b: PublicExperience) {
+  return interests.find(
+    (interest) => matchesInterest(a, interest) && matchesInterest(b, interest),
+  );
+}
+
+function sharedEditorialPathway(a: PublicExperience, b: PublicExperience) {
+  return editorialPathways.find(
+    (pathway) =>
+      pathway.guideSlugs.some((slug) => slug === a.slug) &&
+      pathway.guideSlugs.some((slug) => slug === b.slug),
+  );
+}
+
+function connectionScope(
+  current: PublicExperience,
+  other: PublicExperience,
+): Omit<ExperienceConnection, "item"> {
+  if (
+    current.countrySlug === other.countrySlug &&
+    current.regionSlug === other.regionSlug
+  ) {
+    const region = territories.find(
+      (territory) =>
+        territory.slug === current.countrySlug &&
+        territory.region === current.regionSlug,
+    );
+    return {
+      scope: "same_area",
+      label: `More in ${region?.regionName || current.place}`,
+      href: `/places/${current.countrySlug}/${current.regionSlug}`,
+    };
+  }
+
+  const connectedArea = connectedLocalAreas.find(
+    (area) =>
+      area.countrySlug === current.countrySlug &&
+      area.countrySlug === other.countrySlug &&
+      area.regionSlugs.some((region) => region === current.regionSlug) &&
+      area.regionSlugs.some((region) => region === other.regionSlug),
+  );
+  if (connectedArea)
+    return {
+      scope: "connected_area",
+      label: connectedArea.label,
+      href: `/places/${current.countrySlug}`,
+    };
+  if (current.countrySlug === other.countrySlug)
+    return {
+      scope: "same_country",
+      label: `Elsewhere in ${current.country}`,
+      href: `/places/${current.countrySlug}`,
+    };
+  return {
+    scope: "editorial",
+    label: "A complementary EA thread",
+    href: "/explore",
+  };
+}
+
+/** Place comes first, then contrast of activity and visitor interest. */
+export function connectedExperiences(
+  item: PublicExperience,
+  items: PublicExperience[],
+  limit = 3,
+): ExperienceConnection[] {
   return items
     .filter(
       (other) =>
@@ -578,8 +667,47 @@ export function relatedExperiences(
         other.status !== "protected_visibility" &&
         other.status !== "paused",
     )
-    .sort((a, b) => score(b) - score(a))
-    .slice(0, limit);
+    .map((other, order) => {
+      const connection = connectionScope(item, other);
+      const sharedPathway = sharedEditorialPathway(item, other);
+      const sharedVisitorInterest = sharedInterest(item, other);
+      const geographicWeight = {
+        same_area: 400,
+        connected_area: 300,
+        same_country: 200,
+        editorial: 0,
+      }[connection.scope];
+      const contrastWeight = other.field === item.field ? 0 : 30;
+      const pathwayWeight = sharedPathway ? 24 : 0;
+      const interestWeight = sharedVisitorInterest ? 12 : 0;
+      return {
+        ...connection,
+        label:
+          connection.scope === "editorial" && sharedPathway
+            ? `From “${sharedPathway.title}”`
+            : connection.scope === "editorial" && sharedVisitorInterest
+              ? `Explore ${sharedVisitorInterest.name}`
+              : connection.label,
+        href:
+          connection.scope === "editorial" && sharedPathway
+            ? `/collections/${sharedPathway.slug}`
+            : connection.scope === "editorial" && sharedVisitorInterest
+              ? `/explore?interest=${sharedVisitorInterest.slug}`
+              : connection.href,
+        item: other,
+        order,
+        score:
+          geographicWeight + contrastWeight + pathwayWeight + interestWeight,
+      };
+    })
+    .sort((a, b) => b.score - a.score || a.order - b.order)
+    .slice(0, limit)
+    .map(({ item: other, scope, label, href }) => ({
+      item: other,
+      scope,
+      label,
+      href,
+    }));
 }
 export const collections = [
   {

@@ -48,6 +48,10 @@ const routes = [
   "/passport?view=plan",
   "/plan",
   "/method",
+  "/contact",
+  "/accessibility",
+  "/terms",
+  "/legal",
   "/credits",
   "/suggest",
   "/corrections",
@@ -175,6 +179,23 @@ try {
     const firstCredit = firstCard.locator(".image-source-badge");
     assert.match(await firstCredit.getAttribute("href"), /^https:\/\//);
     assert.equal(await firstCredit.getAttribute("target"), "_blank");
+    await page.goto(base + "/experiences/taste-what-time-does-to-port", {
+      waitUntil: "networkidle",
+    });
+    const firstConnection = page.locator(".connected-experience").first();
+    await expect(firstConnection.locator(".connection-label")).toContainText(
+      "Porto and Gaia",
+    );
+    await expect(firstConnection.locator(".connection-label")).toHaveAttribute(
+      "href",
+      "/places/portugal",
+    );
+    await expect(
+      firstConnection.locator(
+        'a[href="/experiences/paint-the-pattern-you-noticed"]',
+      ),
+    ).toHaveCount(2);
+    await page.goto(base + "/explore", { waitUntil: "networkidle" });
     await firstCard.locator(".save-button").click();
     assert.equal(
       await firstCard.locator(".save-button").getAttribute("aria-pressed"),
@@ -251,7 +272,7 @@ try {
         views: results.length,
         internalLinks: links.size,
         interactions:
-          "curated hero rotation, varied home suggestions, direct image credits, save persistence, image click, compare, search, city-first filtering, mobile menu and Escape passed",
+          "curated hero rotation, varied home suggestions, direct image credits, local complementary guides, save persistence, image click, compare, search, city-first filtering, mobile menu and Escape passed",
         failures,
       },
       null,

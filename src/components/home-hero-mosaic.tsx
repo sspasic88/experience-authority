@@ -1,20 +1,29 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { useState } from "react";
-import type { PublicExperience } from "@/lib/catalog";
-import { guideMediaFor } from "@/lib/media";
-import { ImageCredit, Photo } from "./editorial";
+import { imageSource } from "@/lib/image-revisions";
+
+export type HomeHeroStory = {
+  slug: string;
+  title: string;
+  place: string;
+  field: string;
+  image: string;
+  imageAlt: string;
+  sourceUrl: string;
+  credit: string;
+};
 
 function HeroStory({
   item,
   primary = false,
 }: {
-  item: PublicExperience;
+  item: HomeHeroStory;
   primary?: boolean;
 }) {
-  const media = guideMediaFor(item.id);
   const href = `/experiences/${item.slug}`;
   return (
     <figure className={primary ? "prototype-hero-place" : undefined}>
@@ -23,25 +32,34 @@ function HeroStory({
         href={href}
         aria-label={`Explore ${item.title} in ${item.place}`}
       />
-      {item.image && (
-        <Photo
-          src={item.image}
-          alt={item.imageAlt}
-          priority={primary}
-          sizes={
-            primary
-              ? "(max-width: 700px) 60vw, (max-width: 1100px) 48vw, 29vw"
-              : "(max-width: 700px) 40vw, 20vw"
-          }
-        />
-      )}
+      <Image
+        src={imageSource(item.image)}
+        alt={item.imageAlt}
+        fill
+        priority={primary}
+        sizes={
+          primary
+            ? "(max-width: 700px) 60vw, (max-width: 1100px) 48vw, 29vw"
+            : "(max-width: 700px) 40vw, 20vw"
+        }
+        className="editorial-photo"
+      />
       <figcaption>
         <span className="eyebrow">
           {primary ? `Place / ${item.place}` : item.field}
         </span>
         <Link href={href}>{item.title}</Link>
       </figcaption>
-      {media && <ImageCredit media={media} />}
+      <a
+        className="image-source-badge"
+        href={item.sourceUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>Image: {item.credit}</span>
+        <ArrowUpRight size={11} aria-hidden="true" />
+        <span className="sr-only"> (opens source in a new tab)</span>
+      </a>
     </figure>
   );
 }
@@ -50,7 +68,7 @@ export function HomeHeroMosaic({
   editions,
   initialIndex,
 }: {
-  editions: PublicExperience[][];
+  editions: HomeHeroStory[][];
   initialIndex: number;
 }) {
   const [index, setIndex] = useState(

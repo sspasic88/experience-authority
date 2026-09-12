@@ -10,6 +10,7 @@ import {
   filterExperiences,
   territories,
   regionsForCountry,
+  connectedExperiences,
   relatedExperiences,
 } from "../src/lib/catalog";
 import { isDiscoverable, SITE_ORIGIN } from "../src/lib/seo";
@@ -76,6 +77,50 @@ test("new regions are derived from real coverage and recommendations favour a re
   assert.equal(relatedExperiences(kyoto, publicGuides)[0].countrySlug, "japan");
   assert.ok(
     relatedExperiences(kyoto, publicGuides).every((p) => p.id !== kyoto.id),
+  );
+});
+test("connected guides prefer local contrast and label wider geography honestly", () => {
+  const gaia = publicGuides.find(
+    (guide) => guide.slug === "taste-what-time-does-to-port",
+  )!;
+  const gaiaConnections = connectedExperiences(gaia, publicGuides);
+  assert.equal(gaiaConnections[0].item.slug, "paint-the-pattern-you-noticed");
+  assert.equal(gaiaConnections[0].scope, "connected_area");
+  assert.equal(gaiaConnections[0].label, "Porto and Gaia");
+  assert.equal(gaiaConnections[0].href, "/places/portugal");
+  assert.notEqual(gaiaConnections[0].item.field, gaia.field);
+  assert.equal(gaiaConnections[1].label, "From “Before the first sip”");
+  assert.equal(gaiaConnections[1].href, "/collections/before-the-first-sip");
+
+  const istanbul = publicGuides.find(
+    (guide) => guide.slug === "marble-steam-istanbul",
+  )!;
+  const istanbulConnections = connectedExperiences(istanbul, publicGuides);
+  assert.ok(
+    istanbulConnections
+      .slice(0, 2)
+      .every((connection) => connection.scope === "same_area"),
+  );
+
+  const xochimilco = publicGuides.find(
+    (guide) => guide.slug === "mexico-city-grown-on-water",
+  )!;
+  assert.ok(
+    connectedExperiences(xochimilco, publicGuides)
+      .slice(0, 2)
+      .every((connection) => connection.scope === "connected_area"),
+  );
+
+  const coneyIsland = publicGuides.find(
+    (guide) => guide.slug === "walk-the-island-between-forest-and-shore",
+  )!;
+  assert.equal(
+    connectedExperiences(coneyIsland, publicGuides)[0].label,
+    "More in Singapore",
+  );
+  assert.equal(
+    connectedExperiences(coneyIsland, publicGuides)[0].href,
+    "/places/singapore/singapore",
   );
 });
 test("desk guides fail closed for missing evidence, special permission, stale or future checks", () => {

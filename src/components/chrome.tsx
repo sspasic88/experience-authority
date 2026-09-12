@@ -146,11 +146,18 @@ export function Footer({
         </nav>
       </div>
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Experience Authority</span>
-        <Link href="/legal">
-          Published by Innovation Authority Ltd · Publisher & contact
-        </Link>
-        <Link href="/privacy">Privacy & local storage</Link>
+        <span>
+          © {new Date().getFullYear()} Innovation Authority Ltd. All rights
+          reserved.
+        </span>
+        <nav className="footer-legal-nav" aria-label="Company and legal">
+          <Link href="/about">About</Link>
+          <Link href="/method">Method</Link>
+          <Link href="/contact">Contact</Link>
+          <Link href="/accessibility">Accessibility</Link>
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/terms">Terms</Link>
+        </nav>
         {analyticsAvailable && <AnalyticsPreferencesButton />}
       </div>
     </footer>

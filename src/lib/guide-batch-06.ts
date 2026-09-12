@@ -160,7 +160,7 @@ export const guideBatch06: PublicExperience[] = [
         },
         {
           title: "Bonjour Québec: sugar-shack introduction",
-          url: "https://www.bonjourquebec.com/en-us/to-see-and-do/delicious-destinations/sugar-shacks",
+          url: "https://www.bonjourquebec.com/en/to-see-and-do/delicious-discoveries/sugar-shacks",
           note: "Official provincial destination context for the seasonal sugar-shack experience. It does not validate an individual Outaouais venue or future opening date.",
         },
       ],

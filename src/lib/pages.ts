@@ -213,6 +213,141 @@ editorialPages.legal = {
     },
   ],
 };
+editorialPages.contact = {
+  eyebrow: "Contact",
+  title: "A direct route to EA.",
+  intro:
+    "Questions, corrections, rights concerns and thoughtful suggestions reach the company responsible for Experience Authority.",
+  aside:
+    "Experience Authority is published and operated by Innovation Authority Ltd.",
+  sections: [
+    {
+      title: "Write to us.",
+      paragraphs: [
+        "Email " +
+          publisher.email +
+          ". Include EA in the subject line and identify the page when your message concerns a guide, source, photograph or correction.",
+        "Do not send payment details, passport numbers, confidential material, sensitive personal information or culturally restricted knowledge in a first message.",
+      ],
+    },
+    {
+      title: "Company details.",
+      paragraphs: [
+        publisher.name +
+          " is registered in " +
+          publisher.jurisdiction +
+          ", company number " +
+          publisher.companyNumber +
+          ".",
+        "Registered office: " + publisher.registeredOffice + ".",
+        publisher.editorialResponsibility +
+          " is responsible for the publication.",
+      ],
+    },
+    {
+      title: "What happens next.",
+      paragraphs: [
+        "An initial email does not create a booking, client, partnership or advisory relationship. EA reviews substantiated factual, source, image and rights concerns and responds when a reply is needed.",
+        "The correction tool prepares a message for you to send. The suggestion tool prepares a local draft. Neither transmits information until you choose to email it.",
+      ],
+    },
+  ],
+};
+editorialPages.accessibility = {
+  eyebrow: "Accessibility",
+  title: "The experience should remain open.",
+  intro:
+    "EA is being built so people can explore, read, save and plan with different devices, inputs and ways of perceiving content.",
+  aside:
+    "Accessibility is an ongoing product responsibility, not a one-time badge or a claim of certification.",
+  sections: [
+    {
+      title: "What the site supports.",
+      paragraphs: [
+        "Pages use semantic headings, labelled controls, keyboard-visible focus, text alternatives, responsive layouts and reduced-motion preferences. Core discovery and planning actions do not depend on hover alone.",
+        "Automated checks cover representative pages and common WCAG A and AA failures. They do not replace screen-reader testing, user testing or a formal accessibility audit.",
+      ],
+    },
+    {
+      title: "Tell us what blocks you.",
+      paragraphs: [
+        "If a page, control, photograph, document or explanation is difficult to use, email " +
+          publisher.email +
+          " with EA accessibility in the subject line. Include the page, device or assistive technology and the task you were trying to complete when practical.",
+        "We will use credible reports to correct the immediate problem and improve the shared pattern behind it.",
+      ],
+    },
+  ],
+};
+editorialPages.terms = {
+  eyebrow: "Website terms",
+  title: "Read, use and share the work fairly.",
+  intro:
+    "These terms define the boundary around EA's editorial work, research, photographs, tools and external links.",
+  aside:
+    "Effective 13 September 2026. Experience Authority is published by Innovation Authority Ltd.",
+  sections: [
+    {
+      title: "Legal information.",
+      paragraphs: [
+        publisher.name +
+          " is registered in " +
+          publisher.jurisdiction +
+          ", company number " +
+          publisher.companyNumber +
+          ". Registered office: " +
+          publisher.registeredOffice +
+          ". Contact: " +
+          publisher.email +
+          ".",
+        "By using this website you agree to use it lawfully and without interfering with the site, its visitors, its sources or the people and places described.",
+      ],
+    },
+    {
+      title: "Editorial content and practical decisions.",
+      paragraphs: [
+        "EA provides independent editorial research and planning tools. It does not provide a booking, guarantee, certification, live availability service, safety assessment or substitute for current advice from an operator, authority or qualified professional.",
+        "Access, prices, schedules, weather, conditions and local requirements can change. Follow the cited official route and make your own current checks before travelling or participating.",
+      ],
+    },
+    {
+      title: "Intellectual property.",
+      paragraphs: [
+        "Unless stated otherwise, Innovation Authority Ltd owns or controls EA's original writing, editorial selection and arrangement, taxonomies, research architecture, product formats, visual identity, software and presentation. Copyright, database rights, trade mark rights and other applicable rights are reserved.",
+        "EA does not claim ownership of underlying facts, third-party names, credited photographs or other third-party material. Those rights remain with their respective holders.",
+      ],
+    },
+    {
+      title: "Permitted use.",
+      paragraphs: [
+        "You may read the public website, link to its pages and quote limited extracts with clear attribution where the law permits. You may use your own downloaded journey draft for personal planning.",
+        "Without prior written permission, you may not reproduce or commercially exploit a substantial part of the catalogue, systematically extract its records, remove credits or rights notices, or recreate a competing database, publication, training set or service from EA material.",
+      ],
+    },
+    {
+      title: "Automated use.",
+      paragraphs: [
+        "EA reserves applicable rights in relation to text and data mining, automated extraction and model training. Conventional search indexing that sends readers to the original page is permitted subject to the site's machine-readable controls.",
+        "Contact " +
+          publisher.email +
+          " before research, syndication, data licensing or other systematic use.",
+      ],
+    },
+    {
+      title: "Sources, images and external services.",
+      paragraphs: [
+        "External links let readers inspect sources and official access information. EA does not control those sites, their availability, accuracy, security, terms or data practices.",
+        "Photographs remain connected to their named creators and sources. Contact EA promptly about a credit, source, factual or rights concern. Publication does not imply a provider partnership or endorsement.",
+      ],
+    },
+    {
+      title: "Governing law.",
+      paragraphs: [
+        "These terms are governed by the laws of England and Wales. Subject to mandatory rights that cannot lawfully be excluded, the courts of England and Wales have exclusive jurisdiction over disputes arising from the website.",
+      ],
+    },
+  ],
+};
 editorialPages.about.sections.push({
   title: "Published by Innovation Authority Ltd.",
   paragraphs: [

@@ -330,7 +330,15 @@ export default async function Page({ params, searchParams }: Props) {
           <p>{page.aside}</p>
         </aside>
         <article className="prose">
-          {["legal", "privacy", "about", "transparency"].includes(section) && (
+          {[
+            "legal",
+            "privacy",
+            "about",
+            "transparency",
+            "contact",
+            "accessibility",
+            "terms",
+          ].includes(section) && (
             <p>
               <a
                 href={
@@ -342,12 +350,8 @@ export default async function Page({ params, searchParams }: Props) {
               >
                 {publisher.email}
               </a>{" "}
-              · <Link href="/legal">Publisher details</Link>
-            </p>
-          )}
-          {section === "legal" && (
-            <p>
-              <a href={publisher.registerUrl}>Company register ↗</a>
+              <span aria-hidden="true">·</span>{" "}
+              <Link href="/contact">Company and contact details</Link>
             </p>
           )}
           {section === "privacy" && (

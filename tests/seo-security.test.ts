@@ -150,6 +150,8 @@ test("destination lists describe only visible guides and journal pages enter the
   assert.equal(urls.filter((url) => url.includes("/journal/")).length, 8);
   assert.equal(urls.filter((url) => url.includes("/collections/")).length, 12);
   assert.ok(urls.includes(`${SITE_ORIGIN}/places/japan/kyoto`));
+  for (const path of ["contact", "accessibility", "terms", "legal"])
+    assert.ok(urls.includes(`${SITE_ORIGIN}/${path}`));
 });
 
 test("production script policy requires a nonce with no eval or inline exception", () => {

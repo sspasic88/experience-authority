@@ -1,6 +1,7 @@
 import { HomeDiscovery } from "./home-discovery";
-import { HomeHeroMosaic } from "./home-hero-mosaic";
+import { HomeHeroMosaic, type HomeHeroStory } from "./home-hero-mosaic";
 import type { PublicExperience } from "@/lib/catalog";
+import { guideMediaFor, imageCreditText } from "@/lib/media";
 
 export function HomeHero({
   items,
@@ -11,6 +12,25 @@ export function HomeHero({
   heroEditions: PublicExperience[][];
   initialHeroIndex: number;
 }) {
+  const mosaicEditions = heroEditions.flatMap((edition) => {
+    const stories = edition.flatMap((item) => {
+      const media = guideMediaFor(item.id);
+      if (!item.image || !media) return [];
+      return [
+        {
+          slug: item.slug,
+          title: item.title,
+          place: item.place,
+          field: item.field,
+          image: item.image,
+          imageAlt: item.imageAlt,
+          sourceUrl: media.sourceUrl,
+          credit: imageCreditText(media),
+        } satisfies HomeHeroStory,
+      ];
+    });
+    return stories.length === 3 ? [stories] : [];
+  });
   return (
     <>
       <section className="prototype-hero" aria-labelledby="home-title">
@@ -45,7 +65,7 @@ export function HomeHero({
           />
         </div>
         <HomeHeroMosaic
-          editions={heroEditions}
+          editions={mosaicEditions}
           initialIndex={initialHeroIndex}
         />
       </section>
