@@ -9,7 +9,7 @@ body {
   background: var(--ea-paper);
   color: var(--ea-night);
   font-family: var(--ea-font-sans);
-  font-size: 16px;
+  font-size: var(--ea-type-body);
   line-height: 1.55;
   font-synthesis: none;
   font-kerning: normal;

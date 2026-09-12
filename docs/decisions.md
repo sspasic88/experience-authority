@@ -6,7 +6,7 @@ Recorded 12 September 2026. User decisions in this task override the supplied re
 - Native Next.js App Router and strict TypeScript, GitHub and a separate Vercel project. Final domain experienceauthority.com.
 - A new Figma design file is the editable visual-system source, in the Innovation Authority team as explicitly selected by the user: https://www.figma.com/design/dKCURpmjIMSDRlMAlYx33P
 - Brand relationship clarified: Experience Authority is a connected spin-off of Innovation Authority. This does not change the approved independent repository, deployment and application infrastructure.
-- Superseded: Aeonik Pro was used only in a local private stage. Before public release, all supplied Aeonik files were removed from EA and replaced with self-hosted Nimbus Sans Regular/Bold from URW Core 35 under OFL 1.1.
+- Superseded: Aeonik Pro was used only in a local private stage. Before public release, all supplied Aeonik files were removed from EA. Nimbus Sans was then replaced after an EA-specific glyph and responsive-scale audit: its lowercase `t` did not meet the display standard. EA now uses self-hosted Source Sans 3 Variable under OFL 1.1.
 - Preserve EA Vermilion, Experience Night, Warm Paper and the slash wordmark direction. Use Night text on Vermilion for readable buttons.
 - English public copy, centralized content structures, ready for later localization.
 - Superseded preview-only decision: normal mode now contains seven original public-source guides, with explicit desk-review limits and official access information. Fictional material remains in opt-in demo mode only. Neither mode claims local validation. See content-edition.md for the user's subsequent no-special-consent content scope.

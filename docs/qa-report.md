@@ -2,7 +2,8 @@
 
 ## Current public-source guide build
 
-- Production deployment verified at https://experienceauthority.com on 12 September 2026: HTTP 200, HTTPS, self-hosted Nimbus Sans, a fresh CSP nonce, no `X-Robots-Tag: noindex` on the root, `index, follow` robots meta and the canonical production URL.
+- Production deployment verified at https://experienceauthority.com on 12 September 2026: HTTP 200, HTTPS, a fresh CSP nonce, no `X-Robots-Tag: noindex` on the root, `index, follow` robots meta and the canonical production URL.
+- Typography audit: Nimbus Sans was rejected for EA display use after glyph review (notably its lowercase `t`). Instrument Sans and DM Sans were also rejected; Source Sans 3 was selected after comparison on EA display, body, label and repeated-character tests. The production build self-hosts one Source Sans 3 variable font for the application (200–900) and uses original static Regular/Semibold files only for the social-image renderer. No visitor request is made to an external font host.
 - Vercel domain verification passed. `www.experienceauthority.com` redirects to the canonical apex domain. Production robots.txt permits ordinary search crawlers, disallows the listed training crawlers and declares the production sitemap. The sitemap lists the public routes and genuine desk-check `lastmod` dates for guide detail pages.
 
 - 20 policy/SEO/security/content tests passed using `node --import tsx --test tests/*.test.ts`. The normal tsx CLI hit a sandbox IPC restriction; the equivalent Node runner passed without that IPC step.

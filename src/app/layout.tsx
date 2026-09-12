@@ -8,20 +8,15 @@ import { Header, Footer } from "@/components/chrome";
 import { PassportProvider } from "@/components/passport-provider";
 import { demoMode, getExperiences } from "@/lib/data";
 
-const nimbusSans = localFont({
+const sourceSans = localFont({
   src: [
     {
-      path: "../assets/fonts/NimbusSans-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/NimbusSans-Bold.ttf",
-      weight: "700",
+      path: "../assets/fonts/SourceSans3-Variable.ttf",
+      weight: "200 900",
       style: "normal",
     },
   ],
-  variable: "--font-nimbus-sans",
+  variable: "--font-source-sans",
   display: "swap",
   fallback: ["Arial"],
 });
@@ -40,7 +35,7 @@ export default async function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const nonce = (await headers()).get("x-nonce") || undefined;
   return (
-    <html lang="en" className={nimbusSans.variable}>
+    <html lang="en" className={sourceSans.variable}>
       <body>
         {process.env.NODE_ENV === "development" && (
           <script

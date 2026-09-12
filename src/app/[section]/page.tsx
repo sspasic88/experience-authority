@@ -181,11 +181,11 @@ export default async function Page({ params, searchParams }: Props) {
             <section>
               <h2>Typography & icons.</h2>
               <p>
-                <a href="https://github.com/twardoch/urw-core35-fonts">
-                  Nimbus Sans
+                <a href="https://github.com/google/fonts/tree/main/ofl/sourcesans3">
+                  Source Sans 3
                 </a>{" "}
-                is the site typeface. It is self-hosted from URW Core 35 under
-                the SIL Open Font License 1.1.
+                is the site typeface. It is self-hosted from the Google Fonts
+                source repository under the SIL Open Font License 1.1.
               </p>
               <p>
                 Interface icons are from{" "}

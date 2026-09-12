@@ -37,6 +37,6 @@ HTTP headers include frame denial, MIME-sniffing prevention, referrer restrictio
 
 ## Hosting
 
-Source is a separate public GitHub repository and Vercel project. It contains only self-hosted, openly licensed Nimbus Sans assets; supplied Aeonik files have been removed. Stakeholder previews should use Vercel deployment protection and remain noindex. No Innovation Authority deployment is changed.
+Source is a separate public GitHub repository and Vercel project. It contains only self-hosted, openly licensed Source Sans 3 assets; supplied Aeonik files and the rejected Nimbus Sans substitute have been removed. Stakeholder previews should use Vercel deployment protection and remain noindex. No Innovation Authority deployment is changed.
 
 Do not upload a locally built `.next` directory as a production artifact: build on the deployment target with its environment. Production uses the canonical URL `https://experienceauthority.com`, disables the demo flag and enables the public-source release gates. Locally validated EA Selected publication remains subject to its separate editorial, legal/privacy and operational review.

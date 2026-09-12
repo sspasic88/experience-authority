@@ -6,10 +6,10 @@ export const alt = "Experience Authority — Experience the world from within.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 const regular = readFile(
-  join(process.cwd(), "src/assets/fonts/NimbusSans-Regular.ttf"),
+  join(process.cwd(), "src/assets/fonts/SourceSans3-Regular.ttf"),
 );
-const bold = readFile(
-  join(process.cwd(), "src/assets/fonts/NimbusSans-Bold.ttf"),
+const semibold = readFile(
+  join(process.cwd(), "src/assets/fonts/SourceSans3-Semibold.ttf"),
 );
 export default async function Image() {
   return new ImageResponse(
@@ -22,7 +22,7 @@ export default async function Image() {
         background: "#081b2a",
         color: "#f4f1ea",
         padding: "54px 66px",
-        fontFamily: "Nimbus Sans",
+        fontFamily: "Source Sans 3",
       }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
@@ -39,7 +39,7 @@ export default async function Image() {
             display: "flex",
             flexDirection: "column",
             fontSize: 28,
-            fontWeight: 700,
+            fontWeight: 600,
             lineHeight: 0.95,
           }}
         >
@@ -80,15 +80,15 @@ export default async function Image() {
       ...size,
       fonts: [
         {
-          name: "Nimbus Sans",
+          name: "Source Sans 3",
           data: await regular,
           weight: 400,
           style: "normal",
         },
         {
-          name: "Nimbus Sans",
-          data: await bold,
-          weight: 700,
+          name: "Source Sans 3",
+          data: await semibold,
+          weight: 600,
           style: "normal",
         },
       ],

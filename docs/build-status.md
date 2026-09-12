@@ -4,7 +4,7 @@ Public-source edition live at https://experienceauthority.com, deployed from the
 
 ## Implemented
 
-- Independent source project, self-hosted Nimbus Sans typography under OFL 1.1, reusable visual tokens and responsive editorial layouts.
+- Independent source project, self-hosted Source Sans 3 Variable typography under OFL 1.1, reusable visual tokens and responsive editorial layouts.
 - Homepage, Compass search/filter/grid/list interface, experience detail, fields, places, collections, method/about/transparency/privacy/credits and unknown-route handling.
 - Device-local Passport categories and comparison limited to three experiences.
 - Suggestion/correction forms download unsent drafts only. No submission or personal-data processing service is connected.
