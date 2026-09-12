@@ -2,10 +2,13 @@
 
 ## Current public-source guide build
 
+- Production deployment verified at https://experienceauthority.com on 12 September 2026: HTTP 200, HTTPS, self-hosted Nimbus Sans, a fresh CSP nonce, no `X-Robots-Tag: noindex` on the root, `index, follow` robots meta and the canonical production URL.
+- Vercel domain verification passed. `www.experienceauthority.com` redirects to the canonical apex domain. Production robots.txt permits ordinary search crawlers, disallows the listed training crawlers and declares the production sitemap. The sitemap lists the public routes and genuine desk-check `lastmod` dates for guide detail pages.
+
 - 20 policy/SEO/security/content tests passed using `node --import tsx --test tests/*.test.ts`. The normal tsx CLI hit a sandbox IPC restriction; the equivalent Node runner passed without that IPC step.
 - TypeScript and optimized Next.js production build passed with EA_DEMO_MODE=false.
 - Local server: 127.0.0.1:3101, normal guide mode. `EA_TEST_URL=http://127.0.0.1:3101 pnpm smoke` passed 48 page URLs and 11 expected 404 paths. No failures. Old demo experience URLs do not render in normal mode.
-- 48 distinct matching CSP nonces; fixed-domain canonicals, social metadata, noindex, private/no-store, frame denial and MIME-sniffing prevention verified. Preview sitemap remains empty. Training/search crawler checks and PNG social image response passed.
+- Local preview verification: 48 distinct matching CSP nonces; fixed-domain canonicals, social metadata, noindex, private/no-store, frame denial and MIME-sniffing prevention verified. Preview sitemap remains empty. Training/search crawler checks and PNG social image response passed.
 - Every guide detail includes source notes, source-check date, official access link and the explicit no-on-site-review disclosure. Tests cover stale/future/invalid dates, duplicate/missing/insecure sources, special-permission scope, unlicensed-image exclusion and recursive source allowlisting.
 - Browser verified the seven-card desktop Compass, the Finland and Japan guide details and their two source links, saving and comparison with real guide status/date, and removal of only the test-created saved/comparison entry. Passport returned to 0 saved.
 - At 390 px: homepage, guide detail/access panel/source notes and filtered list were visually inspected. Checked page widths remained 390 px, without horizontal overflow. Search “rowing” + Move returned one guide; switching to list preserved the query and field. Temporary viewport override was reset.

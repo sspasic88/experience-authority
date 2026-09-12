@@ -1,17 +1,17 @@
 # Build status — 12 September 2026
 
-Working local Next.js preview, not a launched production service.
+Public-source edition live at https://experienceauthority.com, deployed from the separate EA GitHub repository to its own Vercel project on 12 September 2026.
 
 ## Implemented
 
-- Independent source project, Aeonik Pro typography, reusable visual tokens and responsive editorial layouts.
+- Independent source project, self-hosted Nimbus Sans typography under OFL 1.1, reusable visual tokens and responsive editorial layouts.
 - Homepage, Compass search/filter/grid/list interface, experience detail, fields, places, collections, method/about/transparency/privacy/credits and unknown-route handling.
 - Device-local Passport categories and comparison limited to three experiences.
 - Suggestion/correction forms download unsent drafts only. No submission or personal-data processing service is connected.
 - Public-data allowlist, protected-narrative boundary and tested publication policy functions.
-- Per-route SEO/social metadata, brand share image, JSON-LD, launch-gated sitemap and noindex rules.
+- Per-route SEO/social metadata, brand share image, JSON-LD, production sitemap with real guide review dates, indexable production robots and noindex preview rules.
 - Nonce-based production script CSP, response security headers and training crawler preferences.
-- Seven original public-source guides, separate from Selected and demo records; dated source notes, official access links, evidence boundaries, original typographic artwork and expiry checks. Normal preview now serves this content, not the eight fictional examples. See content-edition.md.
+- Seven original public-source guides, separate from Selected and demo records; dated source notes, official access links, evidence boundaries, original typographic artwork and expiry checks. Production serves this content, not the eight fictional examples. See content-edition.md.
 
 ## Design handoff in progress
 
@@ -19,4 +19,4 @@ Working local Next.js preview, not a launched production service.
 
 ## Not provisioned / not claimed
 
-No GitHub repository, Vercel project, public domain deployment, production database, authentication, editorial admin, live submissions, verified editorial catalogue, booking, payments or analytics. No existing Innovation Authority code or deployment has been modified. See launch-checklist.md before any public release.
+No production database, authentication, editorial admin, live submissions, EA Selected catalogue, booking, payments or analytics. The separate public repository is https://github.com/sspasic88/experience-authority and the Vercel project is connected to experienceauthority.com. No existing Innovation Authority code or deployment has been modified. See launch-checklist.md for post-launch work.
