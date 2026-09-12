@@ -11,35 +11,65 @@ import {
 } from "@/components/editorial";
 import { getExperience, getExperiences } from "@/lib/data";
 import { guideMediaFor } from "@/lib/media";
-import { pageMetadata, isDiscoverable } from "@/lib/seo";
+import { PhotoViewer } from "@/components/photo-viewer";
+import { ShareButton } from "@/components/share-button";
+import { StructuredData } from "@/components/structured-data";
+import { relatedExperiences } from "@/lib/catalog";
+import {
+  pageMetadata,
+  isDiscoverable,
+  canonicalUrl,
+  guideStructuredData,
+} from "@/lib/seo";
 type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props) {
   const item = getExperience((await params).slug);
   if (!item) notFound();
   const protectedStory = item.status === "protected_visibility";
-  return pageMetadata(
-    protectedStory ? "A protected story" : item.title,
+  const metadata = pageMetadata(
+    protectedStory ? "A protected story" : `${item.title} — ${item.place}`,
     protectedStory
       ? "Some stories require limited visibility. No location, holder or access details are shared here."
       : item.summary,
     `/experiences/${encodeURIComponent(item.slug)}`,
     !isDiscoverable(item),
   );
+  const media = !protectedStory && guideMediaFor(item.id);
+  if (!media) return metadata;
+  return {
+    ...metadata,
+    openGraph: {
+      ...metadata.openGraph,
+      images: [{ url: canonicalUrl(media.src), alt: media.alt }],
+    },
+    twitter: {
+      ...metadata.twitter,
+      card: "summary_large_image" as const,
+      images: [{ url: canonicalUrl(media.src), alt: media.alt }],
+    },
+  };
 }
 export default async function Experience({ params }: Props) {
   const item = getExperience((await params).slug);
   if (!item) notFound();
   const media = guideMediaFor(item.id);
-  const related = getExperiences()
-    .filter((e) => e.id !== item.id && e.status !== "protected_visibility")
-    .slice(0, 3);
+  const related = relatedExperiences(item, getExperiences());
+  const structuredData = guideStructuredData(item);
   return (
     <div className="experience-page">
+      {structuredData && <StructuredData data={structuredData} />}
       <div className="detail-toolbar wrap">
         <nav aria-label="Breadcrumb">
           <Link href="/explore">← Back to Compass</Link>
         </nav>
-        <ExperienceActions item={item} compact />
+        <div className="detail-toolbar-actions">
+          <ShareButton
+            title={`${item.title} — Experience Authority`}
+            text={item.summary}
+            url={`https://experienceauthority.com/experiences/${item.slug}`}
+          />
+          <ExperienceActions item={item} compact />
+        </div>
       </div>
       <section
         className="prototype-detail-hero"
@@ -51,6 +81,7 @@ export default async function Experience({ params }: Props) {
               src={item.image}
               alt={item.imageAlt}
               priority
+              className={`photo-${item.id}`}
               sizes="(max-width: 800px) 100vw, 48vw"
             />
           ) : item.status === "public_guide" ? (
@@ -65,6 +96,7 @@ export default async function Experience({ params }: Props) {
               </span>
             </div>
           )}
+          {media && <PhotoViewer media={media} />}
           {media && (
             <figcaption>
               <Link href={`/credits#media-${media.guideId}`}>
@@ -101,6 +133,29 @@ export default async function Experience({ params }: Props) {
               <dd>{item.duration}</dd>
             </div>
           </dl>
+          {item.guideReview && (
+            <div className="detail-start-actions">
+              <a
+                className="button button-dark"
+                href={item.guideReview.accessUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Plan your visit <span aria-hidden="true">↗</span>
+                <span className="sr-only">
+                  {" "}
+                  — official website (opens a new tab)
+                </span>
+              </a>
+              <a className="text-link" href="#before-you-go">
+                Good to know ↓
+              </a>
+              <span className="small-note">
+                Check current details with the host. Booking is not handled by
+                EA.
+              </span>
+            </div>
+          )}
         </header>
       </section>
       <div className="wrap">
@@ -141,9 +196,9 @@ export default async function Experience({ params }: Props) {
         ) : item.guideReview ? (
           <div className="guide-disclosure">
             <div>
-              <strong>Public-source guide.</strong> Independent desk research,
-              not an on-site review or a locally validated EA selection. No
-              provider partnership is implied.
+              <strong>Public-source guide by Experience Authority.</strong>{" "}
+              Independent desk research, not an on-site review or a locally
+              validated EA selection. No provider partnership is implied.
             </div>
             <a href="#sources" className="text-link">
               Sources & scope <span aria-hidden="true">↘</span>
@@ -165,7 +220,7 @@ export default async function Experience({ params }: Props) {
             </section>
             <section className="story-section" id="why-here">
               <p className="eyebrow">02 / Rootedness</p>
-              <h2>Why here. Why these people.</h2>
+              <h2>What makes it belong here.</h2>
               <p>{item.rootedness}</p>
             </section>
             <section className="story-section shift-section">
@@ -174,7 +229,7 @@ export default async function Experience({ params }: Props) {
             </section>
             <section className="story-section">
               <p className="eyebrow">04 / What you might take with you</p>
-              <h2>A possible human return.</h2>
+              <h2>What might stay with you.</h2>
               <p>{item.humanReturn}</p>
             </section>
             <section className="story-section">
@@ -268,6 +323,9 @@ export default async function Experience({ params }: Props) {
               </dd>
             </dl>
             <ExperienceActions item={item} />
+            <Link className="text-link" href="/passport?view=plan">
+              Build your journey in Passport ↗
+            </Link>
             <p>{item.access}</p>
             {item.guideReview && (
               <a

@@ -6,18 +6,29 @@ import {
   canPublish,
   toPublicExperience,
 } from "../src/lib/publication";
-import { filterExperiences, territories } from "../src/lib/catalog";
+import {
+  filterExperiences,
+  territories,
+  regionsForCountry,
+  relatedExperiences,
+} from "../src/lib/catalog";
 import { isDiscoverable, SITE_ORIGIN } from "../src/lib/seo";
 import { sitemapEntries } from "../src/lib/discovery";
 import { guideMediaFor, publicGuideMedia } from "../src/lib/media";
 
 const today = "2026-09-12";
-const sample = publicGuides[0];
-test("guide set is seven distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 7);
-  assert.equal(new Set(publicGuides.map((p) => p.id)).size, 7);
-  assert.equal(new Set(publicGuides.map((p) => p.slug)).size, 7);
-  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 7);
+const sample = publicGuides.find((p) => p.id === "kumano-daimon-zaka")!;
+test("guide set is nine distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 9);
+  assert.equal(
+    new Set(publicGuides.map((p) => p.id)).size,
+    publicGuides.length,
+  );
+  assert.equal(
+    new Set(publicGuides.map((p) => p.slug)).size,
+    publicGuides.length,
+  );
+  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 8);
   for (const p of publicGuides) {
     assert.equal(canPublishGuide(p, today), true, p.slug);
     assert.equal(p.status, "public_guide");
@@ -28,13 +39,36 @@ test("guide set is seven distinct, sourced public experiences, not Selected or d
     assert.equal(p.imageAlt, media?.alt);
     assert.ok(
       territories.some(
-        (t) => t.slug === p.countrySlug && t.region === p.regionSlug,
+        (t) =>
+          t.slug === p.countrySlug &&
+          regionsForCountry(t.slug, publicGuides).some(
+            (r) => r.slug === p.regionSlug,
+          ),
       ),
     );
     assert.ok(p.guideReview!.sources.every((s) => s.note.length > 20));
   }
   assert.equal(publicGuideMedia.length, publicGuides.length);
-  assert.equal(new Set(publicGuideMedia.map((media) => media.src)).size, 7);
+  assert.equal(
+    new Set(publicGuideMedia.map((media) => media.src)).size,
+    publicGuides.length,
+  );
+});
+test("new regions are derived from real coverage and recommendations favour a relevant connection", () => {
+  assert.deepEqual(
+    regionsForCountry("japan", publicGuides)
+      .map((r) => r.slug)
+      .sort(),
+    ["kumano-kodo", "kyoto"],
+  );
+  const kyoto = publicGuides.find((p) => p.id === "kyoto-camellia-tea")!;
+  assert.equal(
+    relatedExperiences(kyoto, publicGuides)[0].id,
+    "kumano-daimon-zaka",
+  );
+  assert.ok(
+    relatedExperiences(kyoto, publicGuides).every((p) => p.id !== kyoto.id),
+  );
 });
 test("desk guides fail closed for missing evidence, special permission, stale or future checks", () => {
   const r = sample.guideReview!;
@@ -156,6 +190,9 @@ test("guides support search and places; indexing still requires an explicit laun
   const guideEntry = sitemapEntries(publicGuides, launch).find(
     (entry) => entry.url === `${SITE_ORIGIN}/experiences/${sample.slug}`,
   );
-  assert.equal(guideEntry?.lastModified?.toISOString(), "2026-09-12T00:00:00.000Z");
+  assert.equal(
+    guideEntry?.lastModified?.toISOString(),
+    "2026-09-12T00:00:00.000Z",
+  );
   assert.ok(!urls.some((url) => url.includes("learning-the-language-of-clay")));
 });

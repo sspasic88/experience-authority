@@ -39,6 +39,7 @@ const paths = [
   "/collections/the-art-of-paying-attention",
   "/passport",
   "/passport?view=compare",
+  "/passport?view=plan",
   "/method",
   "/about",
   "/suggest",
@@ -74,6 +75,8 @@ if (process.env.EA_TEST_DEMO === "true") {
     ...[
       "finland/tampere",
       "japan/kumano-kodo",
+      "japan/kyoto",
+      "armenia/gegharkunik",
       "italy/venice",
       "laos/luang-prabang",
       "iceland/reykjavik",
@@ -93,6 +96,8 @@ if (process.env.EA_TEST_DEMO === "true") {
       "a-city-in-the-water",
       "the-vineyard-at-the-table",
       "before-the-chocolate-bar",
+      "a-bowl-of-attention",
+      "bread-from-the-tonir",
     ].map((slug) => `/experiences/${slug}`),
   );
   paths.push(
@@ -150,6 +155,24 @@ for (const path of paths) {
         "Demo experience in guide mode",
       );
       if (path.startsWith("/experiences/")) {
+        const schemas = [
+          ...html.matchAll(
+            /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs,
+          ),
+        ].map((match) => JSON.parse(match[1]));
+        const article = schemas
+          .flatMap((schema) => schema["@graph"] || [schema])
+          .find((node) => node["@type"] === "Article");
+        assert.ok(article, "Missing guide Article metadata");
+        assert.equal(article.url, canonical);
+        assert.ok(
+          article.citation.length >= 2,
+          "Missing structured source citations",
+        );
+        assert.match(
+          html,
+          /property="og:image" content="https:\/\/experienceauthority\.com\/images\/guides\//,
+        );
         assert.ok(html.includes('id="sources"'), "Missing source notes");
         assert.ok(html.includes("2026-09-12"), "Missing source-check date");
         assert.ok(
@@ -196,6 +219,17 @@ assert.equal(sitemap.includes("<loc>"), liveIndexing);
 if (liveIndexing) {
   assert.ok(sitemap.includes("https://experienceauthority.com/explore"));
   assert.ok(!sitemap.includes("/passport"));
+  for (const path of [
+    "/places/japan/kyoto",
+    "/places/japan/kumano-kodo",
+    "/places/armenia/gegharkunik",
+    "/experiences/a-bowl-of-attention",
+    "/experiences/bread-from-the-tonir",
+  ])
+    assert.ok(
+      sitemap.includes(`${path}</loc>`),
+      `Missing sitemap route: ${path}`,
+    );
   assert.ok(!/<loc>[^<]*\?/.test(sitemap));
   for (const field of emptyFields)
     assert.ok(!sitemap.includes(`/fields/${field}</loc>`));

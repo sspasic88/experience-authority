@@ -167,13 +167,22 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
           .join(" ")
           .toLocaleLowerCase()
           .includes(q)) &&
-        (!query.field || item.field === query.field) &&
+      (!query.field || item.field === query.field) &&
       (!interest || interest.fields.includes(item.field)) &&
       (!query.place || item.countrySlug === query.place) &&
       (!query.status || item.status === query.status),
   );
 }
 export const territories = [
+  {
+    slug: "armenia",
+    name: "Armenia",
+    region: "gegharkunik",
+    regionName: "Gegharkunik",
+    intro:
+      "Bread, skilled hands and a village table: begin with lavash in Tsaghkunk.",
+    image: null,
+  },
   {
     slug: "finland",
     name: "Finland",
@@ -243,7 +252,7 @@ export const territories = [
     region: "kumano-kodo",
     regionName: "Kumano Kodo",
     intro:
-      "A short public path where walking needs to remain attentive to a living place of worship.",
+      "Stone paths and a bowl of tea: two distinct ways to give a place your attention, in Kumano Kodo and Kyoto.",
     image: null,
   },
   {
@@ -265,6 +274,42 @@ export const territories = [
     image: null,
   },
 ] as const;
+/** Derive region coverage from actual public records, not one fixed region per country. */
+export function regionsForCountry(country: string, items: PublicExperience[]) {
+  const regions = new Map<string, string>();
+  for (const item of items) {
+    if (item.countrySlug !== country || !item.regionSlug) continue;
+    const known = territories.find(
+      (t) => t.slug === country && t.region === item.regionSlug,
+    );
+    regions.set(item.regionSlug, known?.regionName || item.place);
+  }
+  return [...regions].map(([slug, name]) => ({ slug, name }));
+}
+
+export function relatedExperiences(
+  item: PublicExperience,
+  items: PublicExperience[],
+  limit = 3,
+) {
+  const score = (other: PublicExperience) =>
+    (other.countrySlug === item.countrySlug ? 4 : 0) +
+    (other.field === item.field ? 2 : 0) +
+    (collections.some(
+      (c) => c.fields.includes(item.field) && c.fields.includes(other.field),
+    )
+      ? 1
+      : 0);
+  return items
+    .filter(
+      (other) =>
+        other.id !== item.id &&
+        other.status !== "protected_visibility" &&
+        other.status !== "paused",
+    )
+    .sort((a, b) => score(b) - score(a))
+    .slice(0, limit);
+}
 export const collections = [
   {
     slug: "knowledge-in-the-hands",

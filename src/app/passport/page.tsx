@@ -21,6 +21,7 @@ export default async function Passport({
     "experienced",
     "return-to",
     "compare",
+    "plan",
   ].includes(params.view || "")
     ? params.view!
     : "all";
@@ -28,8 +29,8 @@ export default async function Passport({
     <div className="wrap page-section">
       <PageIntro eyebrow="Your way through the world" title="My Passport.">
         <p>
-          Save a curiosity. Notice a connection. Make room for the things you
-          want to return to.
+          Keep your discoveries. Compare your favourites. Turn a few good ideas
+          into a journey you can return to and share.
         </p>
       </PageIntro>
       <PassportView items={getExperiences()} view={view} />

@@ -68,6 +68,11 @@ export function HomeHero() {
         </div>
         <div className="prototype-hero-mosaic">
           <figure className="prototype-hero-place">
+            <Link
+              className="prototype-hero-image-link"
+              href={guideHref("leave-room-for-devotion")}
+              aria-label="Explore Daimon-zaka in Kumano Kodo"
+            />
             <Photo
               src="/images/guides/leave-room-for-devotion.jpg"
               alt="Stone steps under tall trees on the Daimon-zaka pilgrimage path, photographed by Kieran."
@@ -97,6 +102,11 @@ export function HomeHero() {
               </p>
             </aside>
             <figure>
+              <Link
+                className="prototype-hero-image-link"
+                href={guideHref("the-vineyard-at-the-table")}
+                aria-label="Explore Mayer am Pfarrplatz in Vienna"
+              />
               <Photo
                 src="/images/guides/mayer-pfarrplatz-courtyard.jpg"
                 alt="Tables beneath the vines at Mayer am Pfarrplatz in Vienna, photographed by Geolina163."
@@ -116,6 +126,11 @@ export function HomeHero() {
               </figcaption>
             </figure>
             <figure>
+              <Link
+                className="prototype-hero-image-link"
+                href="/collections/knowledge-in-the-hands"
+                aria-label="Explore Knowledge in the hands"
+              />
               <Photo
                 src="/images/pottery.jpg"
                 alt="Hands shaping a clay vessel; illustrative craft photography by Alex Jones."

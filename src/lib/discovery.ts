@@ -2,6 +2,7 @@ import {
   collections,
   fields,
   territories,
+  regionsForCountry,
   type PublicExperience,
 } from "./catalog";
 import { canonicalUrl, indexingEnabled, isDiscoverable } from "./seo";
@@ -35,13 +36,8 @@ export function sitemapEntries(
   for (const place of territories) {
     if (publicItems.some((item) => item.countrySlug === place.slug))
       paths.push(`/places/${place.slug}`);
-    if (
-      publicItems.some(
-        (item) =>
-          item.countrySlug === place.slug && item.regionSlug === place.region,
-      )
-    )
-      paths.push(`/places/${place.slug}/${place.region}`);
+    for (const region of regionsForCountry(place.slug, publicItems))
+      paths.push(`/places/${place.slug}/${region.slug}`);
   }
   const staticEntries = [...new Set(paths)].map((path) => ({
     url: canonicalUrl(path),

@@ -35,7 +35,7 @@ export default function Places() {
             </h2>
             <p>{t.intro}</p>
             <small>
-              {t.regionName} /{" "}
+              {t.regions.map((region) => region.name).join(" · ")} /{" "}
               {items.filter((item) => item.countrySlug === t.slug).length}{" "}
               {demoMode ? "demo stories" : "guide(s)"}
             </small>

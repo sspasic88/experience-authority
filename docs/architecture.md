@@ -2,11 +2,15 @@
 
 ## Implemented
 
-Native Next.js App Router with strict TypeScript. Pages and data access are server rendered; only Passport controls, mobile navigation and local draft forms require client state. `src/lib/data.ts` is marked `server-only`. The public renderer uses an explicit allowlist and independently supplied safe narrative for protected records.
+Native Next.js App Router with strict TypeScript. Pages and data access are server rendered; Passport/plan controls, sharing, photograph dialogs, mobile navigation and local draft forms use client state. `src/lib/data.ts` is marked `server-only`. The public renderer uses an explicit allowlist and independently supplied safe narrative for protected records.
 
-The standard catalogue contains seven original public-source guides in seven countries and six fields, with three thematic collections. A separate opt-in demo mode retains eight fictional concepts. Neither is the 25 locally validated Selected experiences required for launch. Guide cards use real photographs with individual media records, licences and depiction boundaries. Stock and activity-context imagery is explicitly credited, not documentary evidence of an EA visit.
+The standard catalogue contains nine original public-source guides in eight countries and six fields, with three thematic collections. A separate opt-in demo mode retains eight fictional concepts. Neither is the 25 locally validated Selected experiences required for launch. Guide cards use real photographs with individual media records, licences and depiction boundaries. Stock and activity-context imagery is explicitly credited, not documentary evidence of an EA visit.
 
 Search and filters use URL query parameters with a native GET form. The filters intersect, and grid/list changes preserve them. Unknown routes fail with a not-found page. Passport stores only known public story IDs, stage values and at most three comparison IDs in `localStorage`. Malformed and obsolete data is rejected. There are no auth cookies or cross-project user accounts.
+
+The separate `ea:trip:v1` draft stores known guide IDs, days 1–60 and bounded free-text name/notes in the same browser only. Sharing excludes free text unless explicitly opted in; downloading includes it, as disclosed. No share link database, public editable plan, itinerary optimizer, geolocation, payment or booking integration exists. Both stores synchronize changes between tabs; failed storage shows a session-only warning. Private plans never enter page metadata, server requests or the sitemap.
+
+Guide detail pages expose truthful Article and ImageObject JSON-LD with the same title, source-check revision date, source links, photo creator, licence and depiction boundary as the visible page. Social previews use each guide's existing credited photo. No ratings, price/availability offers, fake author biographies or invented publication dates are added.
 
 ## Security boundaries
 

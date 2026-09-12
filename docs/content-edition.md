@@ -4,23 +4,25 @@ User direction: populate the local website with content aligned with EA that doe
 
 ## Scope and distinction
 
-Seven original English public-source guides now make up the public edition. These are independently written desk guides to specifically advertised public programmes/admission/hospitality. They are not EA Selected, locally validated, visited or independently quality-assessed. The separate launch requirement for 25 locally validated EA Selected experiences is unchanged and unmet. Production indexing applies only to this clearly labelled public-source edition.
+Nine original English public-source guides now make up the public edition, covering eight countries. These are independently written desk guides to specifically advertised public programmes/admission/hospitality. They are not EA Selected, locally validated, visited or independently quality-assessed. The separate launch requirement for 25 locally validated EA Selected experiences is unchanged and unmet. Production indexing applies only to this clearly labelled public-source edition.
 
 | Guide | Preliminary practice narrowed from | Source basis |
 |---|---|---|
 | Leave room for devotion | Candidate 29 | Daimon-zaka public path, not participation in worship or an unbounded pilgrimage claim |
 | Venice, through an oar | Candidate 4 | Row Venice public lesson, not private boatyard access |
-| Make room in the steam | Candidate 16 | Rajaportti ordinary public sauna admission, not a private ritual or wellness promise |
+| Make room in the steam | Related alternative to candidate 16; does not complete that candidate | Rajaportti ordinary public sauna admission, not the original smoke-sauna/winter-swim kernel |
 | Colour, before cloth | Candidate 131 | Ock Pop Tok natural-dye class, not private village/customary knowledge |
 | A city, in the water | Candidate 27 | Sundhöll municipal admission, not a private ritual or therapy claim |
 | The vineyard at the table | Candidate 113 | Mayer am Pfarrplatz normal dining, not a winery ranking or cellar invitation |
 | Before the chocolate bar | Candidate 168 | Belmont advertised visitor tour, not uninvited workplace access; colonial history included |
+| A bowl of attention | Candidate 30 | Camellia Flower shared introductory tea session; not private household access |
+| Bread, from the tonir | Candidate 38 | Tsaghkunk Glkhatun baking with named hosts, within the advertised dining experience; not a drop-in class |
 
 The original workbook and 200-candidate audit are unchanged. No bulk promotion or automatic inference of permission occurred. Current experience-specific facts and public links are in src/lib/public-guides.ts; actual output is allowlisted by src/lib/publication.ts through the server data boundary. A publicly offered class may require the visitor to book under ordinary operator terms; EA has made no such booking and cannot guarantee admission.
 
 ## Evidence and editorial decisions
 
-- Two distinct official URLs per guide, checked 2026-09-12. Two pages from one organisation are expressly not independent corroboration.
+- At least two distinct official URLs per guide, checked 2026-09-12. Multiple pages from one organisation are expressly not independent corroboration.
 - Review-by 2026-12-11; at most 90 days. Runtime exclusion after expiry is a freshness backstop, not a monitor of changes on external sites.
 - No source text quoted or wholesale copied. Possible shift/human return are EA interpretations, explicitly not promised effects.
 - No live price, attendance, accessibility, safety, ethical impact or therapeutic guarantee. Official information controls visitor planning.
@@ -32,6 +34,10 @@ The original workbook and 200-candidate audit are unchanged. No bulk promotion o
 - Public guide status cannot use the Selected publication-approval function. Selected still requires its original consent/reviewer policy. Guide source data has a recursive public allowlist.
 
 ## What changed in the website
+
+Batch 02 adds two guides with licensed CC BY-SA 4.0 photographs: Kyoto tea preparation by Atticus nguyen is explicitly cultural context, not a verified Camellia venue/session; AlexanderChatik's 2022 lavash photograph identifies Tsaghkunk Glkhatun, but is not evidence of current staff or availability. Japan now exposes Kyoto and Kumano-kodo as separate real-coverage regions in navigation and the sitemap.
+
+Visitor tools now include a private day-by-day journey draft, travel/stay notes, text download, opt-in sharing of private notes, contextual related guides, full-image homepage links and an enlarged photograph dialog with source/licence links. There is one local plan, no cloud synchronization, shared editable page, verified travel routing or booking service. Native sharing only runs on a visitor click; without it, clipboard/manual text is offered. The home return panel is based only on local Passport state; no retention improvement has been measured.
 
 Public-source badges, source notes with dates and outbound official links, credited Compass photography, correct normal-mode copy on Home/Compass/detail/Passport/Places/Fields/Collections/About/Method/Transparency/Credits. Compass discovery now starts with traveller intent (for example Eat & drink, Move & water, Make & learn) rather than an internal editorial-status filter; it only exposes lenses with real current coverage. Places now display actual current guide coverage. Old demos remain explicit opt-in only. Compass naming remains approved.
 

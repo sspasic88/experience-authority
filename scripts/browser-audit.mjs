@@ -21,10 +21,15 @@ const routes = [
   "/explore?view=list",
   "/experiences/venice-through-an-oar",
   "/experiences/colour-before-cloth",
+  "/experiences/a-bowl-of-attention",
+  "/experiences/bread-from-the-tonir",
   "/places",
+  "/places/japan/kyoto",
+  "/places/armenia/gegharkunik",
   "/fields",
   "/collections",
   "/passport",
+  "/passport?view=plan",
   "/method",
   "/credits",
   "/suggest",
@@ -137,15 +142,15 @@ try {
       await page.locator(".save-button").first().getAttribute("aria-pressed"),
       "true",
     );
-    await page.locator(".card-photo-link").first().click();
-    await page.waitForURL("**/experiences/leave-room-for-devotion");
+    const firstPhoto = page.locator(".card-photo-link").first();
+    const firstHref = await firstPhoto.getAttribute("href");
+    await firstPhoto.click();
+    await page.waitForURL(`**${firstHref}`);
     await page.getByRole("button", { name: "Compare", exact: true }).click();
     await page.locator(".compare-tray a").click();
     await page.waitForURL("**/passport?view=compare");
     await expect(
-      page
-        .locator(".compare-table")
-        .getByRole("link", { name: /Leave room for devotion/ }),
+      page.locator(".compare-table").locator(`a[href="${firstHref}"]`),
     ).toBeVisible();
     await page.goto(base + "/explore");
     await page.getByRole("searchbox").fill("cacao");

@@ -16,9 +16,9 @@ export function Wordmark({ light = false }: { light?: boolean }) {
         Experience
         <br />
         Authority
-        <small>The world from within</small>
       </span>
       <span className="brand-slash" aria-hidden="true" />
+      <small className="wordmark-tagline">The world from within</small>
     </Link>
   );
 }

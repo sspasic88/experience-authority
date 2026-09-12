@@ -1,8 +1,9 @@
 import type { PublicExperience, GuideReview } from "./catalog";
 import { guideImage } from "./media";
+import { guideBatch02 } from "./guide-batch-02";
 
 // Original EA desk-guide copy. No source photographs, private dossiers or contacts.
-// The seven practice-level candidates are narrowed to publicly advertised access.
+// Practice-level candidates are individually narrowed to publicly advertised access.
 const review = (
   scope: GuideReview["scope"],
   accessUrl: string,
@@ -24,6 +25,7 @@ const common = {
 } as const;
 
 export const publicGuides: PublicExperience[] = [
+  ...guideBatch02,
   {
     ...common,
     id: "kumano-daimon-zaka",

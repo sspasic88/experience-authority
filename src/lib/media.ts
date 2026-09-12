@@ -18,6 +18,33 @@ export type GuideMedia = {
 
 export const publicGuideMedia: readonly GuideMedia[] = [
   {
+    guideId: "kyoto-camellia-tea",
+    src: "/images/guides/kyoto-tea-preparation.jpg",
+    alt: "A host preparing tea beside a kettle and tea utensils in a Kyoto tea room.",
+    title: "A Japanese Tea Ceremony's Host Preparing Tea — Kyoto, 2023",
+    photographer: "Atticus nguyen",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:A_Japanese_Tea_Ceremony%27s_Host_Preparing_Tea_-_Kyoto,_2023.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    rightsCheckedOn: "2026-09-12",
+    depiction:
+      "Tea preparation photographed in Kyoto in 2023. Cultural context only: the source does not identify the host or room as Camellia Flower Teahouse. Not an EA visit.",
+  },
+  {
+    guideId: "tsaghkunk-lavash",
+    src: "/images/guides/tsaghkunk-lavash-baking.jpg",
+    alt: "Lavash dough being rolled beside a floor-set tonir oven inside Tsaghkunk’s Glkhatun, beneath a shaft of daylight.",
+    title: "Lavash baking",
+    photographer: "AlexanderChatik",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Lavash_baking.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    rightsCheckedOn: "2026-09-12",
+    depiction:
+      "Lavash preparation at Tsaghkunk Restaurant & Glkhatun, identified by the photographer and taken in 2022. A historical view of the actual location, not proof of today’s programme or an EA visit.",
+  },
+  {
     guideId: "venice-voga",
     src: "/images/guides/venetian-standing-rowing.jpg",
     alt: "Four standing rowers practising Venetian rowing on the lagoon in evening light.",

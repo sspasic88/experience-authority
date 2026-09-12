@@ -1,5 +1,9 @@
 import "server-only";
-import { territories, type PublicExperience } from "./catalog";
+import {
+  territories,
+  regionsForCountry,
+  type PublicExperience,
+} from "./catalog";
 import { isDemoEnabled, toPublicExperience } from "./publication";
 import { publicGuides } from "./public-guides";
 
@@ -215,6 +219,7 @@ export function getTerritories() {
                 "A starting point for looking more closely at quiet spaces and everyday attention.",
               image: "/images/forest.jpg",
             }
-        : t,
-    );
+          : t,
+    )
+    .map((t) => ({ ...t, regions: regionsForCountry(t.slug, items) }));
 }

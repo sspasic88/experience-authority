@@ -54,7 +54,7 @@ export function PassportProvider({
     }
     setReady(true);
     const onStorage = (event: StorageEvent) => {
-      if (event.key !== key) return;
+      if (event.key !== key && event.key !== null) return;
       try {
         setData(sanitizePassport(JSON.parse(event.newValue || "null"), ids));
       } catch {

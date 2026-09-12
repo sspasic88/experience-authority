@@ -4,6 +4,7 @@ import { usePassport } from "./passport-provider";
 import { EmptyState, ExperienceCard, StatusBadge } from "./editorial";
 import { passportStages, type PassportStage } from "@/lib/passport";
 import type { PublicExperience } from "@/lib/catalog";
+import { TripPlanner } from "./trip-planner";
 const names: Record<PassportStage, string> = {
   saved: "Saved",
   "want-to": "Want to experience",
@@ -28,6 +29,7 @@ export function PassportView({
   });
   const tabs = [
     ["all", "All saved"],
+    ["plan", "My journey"],
     ...Object.entries(names),
     ["compare", `Compare (${data.compare.length}/3)`],
   ];
@@ -46,12 +48,14 @@ export function PassportView({
       </nav>
       {!ready ? (
         <p role="status">Opening your local Passport…</p>
+      ) : view === "plan" ? (
+        <TripPlanner items={items} />
       ) : view === "compare" ? (
         compared.length ? (
           <>
             <p className="section-note">
-              Compare up to three stories by context, possible perspective and
-              access. This is not a quality ranking or a booking tool.
+              Which experience fits your plans? Compare time, participation and
+              access before deciding. This is not a quality ranking.
             </p>
             <div
               className="compare-scroll"
@@ -91,6 +95,18 @@ export function PassportView({
                     <th scope="row">Field</th>
                     {compared.map((e) => (
                       <td key={e.id}>{e.field}</td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <th scope="row">Time needed</th>
+                    {compared.map((e) => (
+                      <td key={e.id}>{e.duration}</td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <th scope="row">What you do</th>
+                    {compared.map((e) => (
+                      <td key={e.id}>{e.participation}</td>
                     ))}
                   </tr>
                   <tr>
@@ -185,7 +201,7 @@ export function PassportView({
       )}
       <p className="passport-message" role="status">
         {message ||
-          "Device-local preview. No account, cloud sync or personal data collection by this application."}
+          "Saved in this browser. No account or cloud sync. Your private plan is not sent to EA."}
       </p>
     </>
   );

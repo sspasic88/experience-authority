@@ -5,6 +5,7 @@ import { indexingEnabled, SITE_DESCRIPTION, SITE_ORIGIN } from "@/lib/seo";
 import "@/styles/tokens.css";
 import "@/styles/global.css";
 import "@/styles/prototype.css";
+import "@/styles/visitor.css";
 import { Header, Footer } from "@/components/chrome";
 import { PassportProvider } from "@/components/passport-provider";
 import { demoMode, getExperiences } from "@/lib/data";

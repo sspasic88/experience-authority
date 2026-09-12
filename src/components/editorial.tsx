@@ -87,6 +87,7 @@ export function ExperienceCard({
             <Photo
               src={item.image}
               alt=""
+              className={`photo-${item.id}`}
               sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
             />
           ) : item.status === "public_guide" ? (

@@ -5,6 +5,7 @@ import { collections, fields } from "@/lib/catalog";
 import { demoMode, getExperiences } from "@/lib/data";
 import { StructuredData } from "@/components/structured-data";
 import { HomeHero } from "@/components/home-hero";
+import { PassportReturn } from "@/components/passport-return";
 import {
   pageMetadata,
   SITE_DESCRIPTION,
@@ -24,6 +25,7 @@ export default function Home() {
       <StructuredData data={websiteStructuredData()} />
       <HomeHero />
       <section className="section wrap">
+        <PassportReturn />
         <SectionHeading
           eyebrow="A starting point"
           title="Less passing through. More being there."

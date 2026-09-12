@@ -1,6 +1,15 @@
 # QA report — 12 September 2026
 
-## Current public-source guide build
+## Batch 02 — current verification scope
+
+- 26 policy/content/SEO/security tests pass, including private-trip sanitization, opt-in sharing and source/photo structured-data boundaries; TypeScript and optimized production build pass.
+- Expanded route/security smoke covers 61 URL checks and 11 expected 404 paths; fresh per-request CSP nonces, script nonce matching, fixed canonicals, public indexing, private/filter exclusions, Article metadata, guide-specific social images and both Japan regions in sitemap.
+- Browser audit covers 54 views at 390/768/1440 px, 65 encountered internal links, image decoding, heading count, horizontal overflow and automated WCAG A/AA checks. Save/reload, photo-link navigation, comparison, search and mobile menu/Escape are exercised.
+- Visitor audit covers 21 scenarios at 320/390/1440 px: populated journey plans, reload and cross-tab persistence, removal, day sorting, private-note opt-in/out, downloaded text, native-share and clipboard/manual fallbacks, cancellation, blocked local storage, photo modal focus and scroll restoration. Sharing is intercepted in isolated test browsers; no external messages or real visitor state are touched.
+- Automated accessibility checks are scoped tests, not certification or a substitute for screen-reader/user acceptance. Source checks are not on-site, safety, availability or service-quality verification.
+- Production confirmation for this exact revision is recorded separately after deployment; earlier production checks below refer to prior releases.
+
+## Earlier public-source guide checks (historical)
 
 - Production deployment verified at https://experienceauthority.com on 12 September 2026: HTTP 200, HTTPS, a fresh CSP nonce, no `X-Robots-Tag: noindex` on the root, `index, follow` robots meta and the canonical production URL.
 - Typography audit: Nimbus Sans was rejected for EA display use after glyph review (notably its lowercase `t`). Instrument Sans and DM Sans were also rejected; Source Sans 3 was selected after comparison on EA display, body, label and repeated-character tests. The production build self-hosts one Source Sans 3 variable font for the application (200–900) and uses original static Regular/Semibold files only for the social-image renderer. No visitor request is made to an external font host.
@@ -37,4 +46,4 @@ Earlier preview checks also covered desktop/mobile home layouts, intersecting se
 
 ## Not yet verified
 
-No full automated accessibility audit, screen-reader acceptance test, public Core Web Vitals field data, independent penetration test, production WAF/DNS/certificate review or authenticated-backend test has been completed. Figma composed screens and final visual handoff remain unfinished. See build-status.md and launch-checklist.md for the remaining release boundaries.
+No full-site accessibility certification, screen-reader acceptance test, public Core Web Vitals field data, independent penetration test, production WAF configuration audit or authenticated-backend test has been completed. Representative automated accessibility checks are documented above. Figma composed screens and final visual handoff remain unfinished. See build-status.md and launch-checklist.md for the remaining release boundaries.

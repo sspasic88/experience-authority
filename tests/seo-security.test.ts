@@ -6,7 +6,10 @@ import {
   isDiscoverable,
   serializeJsonLd,
   SITE_ORIGIN,
+  guideStructuredData,
 } from "../src/lib/seo";
+import { publicGuides } from "../src/lib/public-guides";
+import { guideMediaFor } from "../src/lib/media";
 import { sitemapEntries } from "../src/lib/discovery";
 import { contentSecurityPolicy, isTrainingBot } from "../src/lib/security";
 import type { PublicExperience } from "../src/lib/catalog";
@@ -55,6 +58,32 @@ test("JSON-LD cannot break out of its script element", () => {
   const safe = serializeJsonLd(value);
   assert.ok(!/[<>&\u2028\u2029]/.test(safe));
   assert.deepEqual(JSON.parse(safe), value);
+});
+
+test("guide structured data reflects visible sources and photo rights, never offers or ratings", () => {
+  for (const item of publicGuides) {
+    const data = guideStructuredData(item);
+    assert.ok(data);
+    const [article, image] = data["@graph"];
+    assert.equal(article.headline, item.title);
+    assert.equal(article.dateModified, item.guideReview?.checkedOn);
+    assert.deepEqual(
+      article.citation,
+      item.guideReview?.sources.map((source) => source.url),
+    );
+    assert.equal(image.license, guideMediaFor(item.id)?.licenseUrl);
+    assert.equal(image.caption, guideMediaFor(item.id)?.depiction);
+    assert.ok(
+      !/aggregateRating|priceCurrency|Offer|datePublished/.test(
+        JSON.stringify(data),
+      ),
+    );
+    assert.equal(
+      guideStructuredData({ ...item, status: "protected_visibility" }),
+      null,
+    );
+    assert.equal(guideStructuredData({ ...item, demo: true }), null);
+  }
 });
 
 test("demo, protected and paused records never enter discovery feeds", () => {

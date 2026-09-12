@@ -14,10 +14,10 @@ export async function generateMetadata({ params }: Props) {
   const segments = (await params).segments;
   const [country, region] = segments;
   const place = getTerritories().find((t) => t.slug === country);
-  if (!place || segments.length > 2 || (region && region !== place.region))
-    notFound();
+  const selectedRegion = place?.regions.find((entry) => entry.slug === region);
+  if (!place || segments.length > 2 || (region && !selectedRegion)) notFound();
   return pageMetadata(
-    region ? place.regionName : place.name,
+    selectedRegion ? selectedRegion.name : place.name,
     place.intro,
     `/places/${segments.join("/")}`,
     !getExperiences().some(
@@ -32,8 +32,8 @@ export default async function Place({ params }: Props) {
   const segments = (await params).segments;
   const [country, region] = segments;
   const place = getTerritories().find((t) => t.slug === country);
-  if (!place || segments.length > 2 || (region && region !== place.region))
-    notFound();
+  const selectedRegion = place?.regions.find((entry) => entry.slug === region);
+  if (!place || segments.length > 2 || (region && !selectedRegion)) notFound();
   const items = getExperiences().filter(
     (e) => e.countrySlug === place.slug && (!region || e.regionSlug === region),
   );
@@ -46,7 +46,7 @@ export default async function Place({ params }: Props) {
         {region && (
           <>
             <span>/</span>
-            <span>{place.regionName}</span>
+            <span>{selectedRegion?.name}</span>
           </>
         )}
       </nav>
@@ -54,9 +54,13 @@ export default async function Place({ params }: Props) {
         eyebrow={
           demoMode ? "A research direction" : "A specific way into a place"
         }
-        title={`${region ? place.regionName : place.name}.`}
+        title={`${selectedRegion ? selectedRegion.name : place.name}.`}
       >
-        <p>{place.intro}</p>
+        <p>
+          {selectedRegion
+            ? `Explore ${selectedRegion.name} through ${items.length === 1 ? "a locally rooted experience" : "locally rooted experiences"}, with practical details and sources to help you plan.`
+            : place.intro}
+        </p>
       </PageIntro>
       {place.image && (
         <>
@@ -78,9 +82,11 @@ export default async function Place({ params }: Props) {
       )}
       {!region && (
         <nav className="region-links" aria-label="Regions">
-          <Link href={`/places/${place.slug}/${place.region}`}>
-            {place.regionName} ↗
-          </Link>
+          {place.regions.map((entry) => (
+            <Link key={entry.slug} href={`/places/${place.slug}/${entry.slug}`}>
+              {entry.name} ↗
+            </Link>
+          ))}
         </nav>
       )}
       <SectionHeading

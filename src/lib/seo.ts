@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { PublicExperience } from "./catalog";
 import { canPublishGuide } from "./publication";
+import { guideMediaFor } from "./media";
 
 export const SITE_ORIGIN = "https://experienceauthority.com";
 export const SITE_NAME = "Experience Authority";
@@ -110,6 +111,52 @@ export function websiteStructuredData() {
         description: SITE_DESCRIPTION,
         inLanguage: "en",
         publisher: { "@id": `${SITE_ORIGIN}/#organization` },
+      },
+    ],
+  };
+}
+
+/** Editorial guides, not product offers, ratings or claimed on-site reviews. */
+export function guideStructuredData(item: PublicExperience) {
+  if (item.demo || !canPublishGuide(item) || !item.guideReview) return null;
+  const media = guideMediaFor(item.id);
+  if (!media) return null;
+  const url = canonicalUrl(`/experiences/${encodeURIComponent(item.slug)}`);
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${url}#article`,
+        url,
+        mainEntityOfPage: url,
+        headline: item.title,
+        description: item.summary,
+        inLanguage: "en",
+        author: {
+          "@type": "Organization",
+          name: SITE_NAME,
+          url: canonicalUrl("/about"),
+        },
+        publisher: {
+          "@type": "Organization",
+          name: SITE_NAME,
+          url: SITE_ORIGIN,
+        },
+        dateModified: item.guideReview.checkedOn,
+        image: { "@id": `${url}#photograph` },
+        citation: item.guideReview.sources.map((source) => source.url),
+      },
+      {
+        "@type": "ImageObject",
+        "@id": `${url}#photograph`,
+        contentUrl: canonicalUrl(media.src),
+        name: media.title,
+        caption: media.depiction,
+        creditText: `Photo: ${media.photographer} · ${media.licenseName}. Resized for the web; responsive cropping.`,
+        creator: { "@type": "Person", name: media.photographer },
+        license: media.licenseUrl,
+        acquireLicensePage: media.sourceUrl,
       },
     ],
   };

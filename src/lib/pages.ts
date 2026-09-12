@@ -105,13 +105,13 @@ export const editorialPages: Record<
         title: "What kind of content is this?",
         paragraphs: [
           "The public edition contains public-source guides, not locally validated EA selections. Sources were checked as documented in each guide. AI-assisted desk research and original drafting have not been presented as a human field visit, holder consent, an independent quality audit or a guarantee of availability.",
-          "Real guide cards use original EA typographic artwork, not provider photographs. The homepage and thematic collections retain separately credited illustrative stock photographs; these do not document the named experiences. A design-demo mode, when explicitly enabled, labels every fictional story as a demo.",
+          "Guide cards use real photographs with named creators, source links, licences and explicit depiction boundaries. Some show the actual place; others are clearly identified activity or cultural context. The homepage and thematic collections also use credited illustrative photographs. None is evidence of an EA visit. No AI-generated photographs are used.",
         ],
       },
       {
         title: "What works here.",
         paragraphs: [
-          "The public edition supports search and filters, grid and list views, experience pages, place and field navigation, collections, device-local saving and comparison of up to three stories.",
+          "The public edition supports search and filters, grid and list views, place and field navigation, photo enlargement, device-local saving, comparison of up to three experiences, and a private day-by-day journey draft. Visitors can download a plan or choose to share a text copy. A draft is not a confirmed booking or a checked travel route.",
           "Suggestion and correction forms only download an unsent draft. They do not send messages, save information to a database or create a submission queue.",
         ],
       },
@@ -135,7 +135,7 @@ export const editorialPages: Record<
     eyebrow: "Privacy",
     title: "Your Passport stays with you.",
     intro:
-      "No account is required. The current Passport stores only story identifiers, your chosen categories and comparison selections in this browser.",
+      "No account is required. Your Passport and optional journey plan stay in this browser, including any notes you choose to write.",
     aside:
       "No analytics or advertising scripts are included in the application. This public edition does not provide user accounts or cloud storage.",
     sections: [
@@ -143,6 +143,8 @@ export const editorialPages: Record<
         title: "Stored on this device.",
         paragraphs: [
           "Your saved stories and comparison list use local browser storage under the key ea:passport:v1. They do not sync across devices and are not sent to an account server.",
+          "The optional journey planner stores a journey name, experience identifiers, day numbers and your notes under ea:trip:v1. These stay in this browser and are not sent to EA. Avoid entering payment details, passport numbers or sensitive booking information. Remove an experience from the plan to delete its note, clear text fields to remove their contents, or clear this site’s browser data to delete the whole plan.",
+          "Sharing happens only when you press Share and use your device’s sharing interface or copy the text. Private names and notes are excluded from shared plans unless you explicitly opt in. A downloaded plan includes your notes and becomes a file you control. Neither action creates a public editable itinerary or synchronizes devices.",
           "Remove individual bookmarks to delete them from your Passport. Clearing this site’s browser data removes the entire local Passport. Private browsing or browser settings may prevent persistent saving.",
         ],
       },
