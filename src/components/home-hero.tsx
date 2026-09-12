@@ -1,14 +1,64 @@
 import Link from "next/link";
 import { Photo } from "./editorial";
-import { getExperiences } from "@/lib/data";
 import { HomeDiscovery } from "./home-discovery";
+import type { PublicExperience } from "@/lib/catalog";
+import { guideMediaFor } from "@/lib/media";
 
-export function HomeHero() {
-  const items = getExperiences();
-  const guideHref = (slug: string) =>
-    items.some((item) => item.slug === slug)
-      ? `/experiences/${slug}`
-      : "/explore";
+function HeroStory({
+  item,
+  primary = false,
+}: {
+  item: PublicExperience;
+  primary?: boolean;
+}) {
+  const media = guideMediaFor(item.id);
+  const href = `/experiences/${item.slug}`;
+  const creditName = media?.photographer.split(". ")[0];
+  return (
+    <figure className={primary ? "prototype-hero-place" : undefined}>
+      <Link
+        className="prototype-hero-image-link"
+        href={href}
+        aria-label={`Explore ${item.title} in ${item.place}`}
+      />
+      {item.image && (
+        <Photo
+          src={item.image}
+          alt={item.imageAlt}
+          priority={primary}
+          sizes={
+            primary
+              ? "(max-width: 700px) 60vw, (max-width: 1100px) 48vw, 29vw"
+              : "(max-width: 700px) 40vw, 20vw"
+          }
+        />
+      )}
+      <figcaption>
+        <span className="eyebrow">
+          {primary ? `Place / ${item.place}` : item.field}
+        </span>
+        <Link href={href}>{item.title}</Link>
+        {media && (
+          <Link
+            className="prototype-photo-credit"
+            href={`/credits#media-${media.guideId}`}
+          >
+            Photo: {creditName} <span aria-hidden="true">↗</span>
+          </Link>
+        )}
+      </figcaption>
+    </figure>
+  );
+}
+
+export function HomeHero({
+  items,
+  heroGuides,
+}: {
+  items: PublicExperience[];
+  heroGuides: PublicExperience[];
+}) {
+  const [main, upper, lower] = heroGuides;
   return (
     <>
       <section className="prototype-hero" aria-labelledby="home-title">
@@ -43,80 +93,10 @@ export function HomeHero() {
           />
         </div>
         <div className="prototype-hero-mosaic">
-          <figure className="prototype-hero-place">
-            <Link
-              className="prototype-hero-image-link"
-              href={guideHref("marble-steam-istanbul")}
-              aria-label="Explore Hürrem Sultan Hamam in Istanbul"
-            />
-            <Photo
-              src="/images/guides/istanbul-hurrem-hammam-interior.jpg"
-              alt="White marble interior of Istanbul's Hürrem Sultan Hamam, photographed by Satayman."
-              priority
-              sizes="(max-width: 700px) 60vw, (max-width: 1100px) 48vw, 29vw"
-            />
-            <figcaption>
-              <span className="eyebrow">Place / Istanbul</span>
-              <Link href={guideHref("marble-steam-istanbul")}>
-                Marble, steam, Istanbul.
-              </Link>
-              <Link
-                className="prototype-photo-credit"
-                href="/credits#media-istanbul-hurrem-hammam"
-              >
-                Photo: Satayman <span aria-hidden="true">↗</span>
-              </Link>
-            </figcaption>
-          </figure>
+          {main && <HeroStory item={main} primary />}
           <div className="prototype-hero-sides">
-            <figure>
-              <Link
-                className="prototype-hero-image-link"
-                href={guideHref("venice-through-an-oar")}
-                aria-label="Explore Venetian rowing in Venice"
-              />
-              <Photo
-                src="/images/guides/venetian-standing-rowing.jpg"
-                alt="Standing rowers moving a traditional boat across the Venetian lagoon, photographed by Tony Hisgett."
-                sizes="(max-width: 700px) 40vw, 20vw"
-              />
-              <figcaption>
-                <span className="eyebrow">Move</span>
-                <Link href={guideHref("venice-through-an-oar")}>
-                  Learn the movement behind the view.
-                </Link>
-                <Link
-                  className="prototype-photo-credit"
-                  href="/credits#media-venice-voga"
-                >
-                  Photo: Tony Hisgett <span aria-hidden="true">↗</span>
-                </Link>
-              </figcaption>
-            </figure>
-            <figure>
-              <Link
-                className="prototype-hero-image-link"
-                href={guideHref("a-bowl-of-attention")}
-                aria-label="Explore a tea session in Kyoto"
-              />
-              <Photo
-                src="/images/guides/kyoto-tea-preparation.jpg"
-                alt="A tea host beside a steaming kettle in Japan, photographed by Rod Long."
-                sizes="(max-width: 700px) 40vw, 20vw"
-              />
-              <figcaption>
-                <span className="eyebrow">Taste</span>
-                <Link href={guideHref("a-bowl-of-attention")}>
-                  A bowl of attention.
-                </Link>
-                <Link
-                  className="prototype-photo-credit"
-                  href="/credits#media-kyoto-camellia-tea"
-                >
-                  Photo: Rod Long <span aria-hidden="true">↗</span>
-                </Link>
-              </figcaption>
-            </figure>
+            {upper && <HeroStory item={upper} />}
+            {lower && <HeroStory item={lower} />}
           </div>
         </div>
       </section>

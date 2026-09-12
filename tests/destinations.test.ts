@@ -77,3 +77,25 @@ test("Singapore offers three distinct interests without inflating its guide coun
     );
   }
 });
+
+test("the new edition deepens familiar routes and opens Malta and Qatar without geographic leakage", () => {
+  assert.equal(destinationCoverage(publicGuides, "mexico").local.length, 2);
+  assert.equal(
+    destinationCoverage(publicGuides, "united-kingdom").local.length,
+    2,
+  );
+  assert.equal(
+    destinationCoverage(publicGuides, "argentina", "salta").local.length,
+    2,
+  );
+  assert.equal(destinationCoverage(publicGuides, "malta").local.length, 1);
+  assert.equal(
+    destinationCoverage(publicGuides, "qatar", "doha").local.length,
+    1,
+  );
+  assert.ok(
+    destinationCoverage(publicGuides, "qatar").local.every(
+      (guide) => guide.countrySlug === "qatar",
+    ),
+  );
+});

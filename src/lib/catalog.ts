@@ -84,6 +84,8 @@ export const interests: readonly Interest[] = [
       "bread-from-the-tonir",
       "kimchi-before-the-jar",
       "mexico-city-grown-on-water",
+      "read-the-language-of-the-coffee-cup",
+      "stay-while-the-zamba-circles-back",
     ],
   },
   {
@@ -223,7 +225,7 @@ export const territories = [
     region: "salta",
     regionName: "Salta",
     intro:
-      "Begin in Salta with the filling and the fold, following a familiar dish back to the kitchen.",
+      "Make the fold at a Salta kitchen table, then stay into the evening for live folk music, dance and a shared peña room.",
     image: null,
   },
   {
@@ -277,7 +279,7 @@ export const territories = [
     region: "cambridge",
     regionName: "Cambridge",
     intro:
-      "Hear Cambridge differently by learning the shared timing behind English church bells.",
+      "Learn the shared timing behind Cambridge church bells, then let a caller bring an Edinburgh dance floor into motion.",
     image: null,
   },
   {
@@ -371,6 +373,24 @@ export const territories = [
     image: null,
   },
   {
+    slug: "malta",
+    name: "Malta",
+    region: "malta-and-gozo",
+    regionName: "Malta and Gozo",
+    intro:
+      "Choose one village and one feast day, then follow the work of a festa from decorated street to band, procession and square.",
+    image: null,
+  },
+  {
+    slug: "qatar",
+    name: "Qatar",
+    region: "doha",
+    regionName: "Doha",
+    intro:
+      "Begin in a Souq Al Wakrah cultural house, where preparing and sharing qahwa opens a conversation about the majlis.",
+    image: null,
+  },
+  {
     slug: "turkiye",
     name: "Türkiye",
     region: "istanbul",
@@ -385,7 +405,7 @@ export const territories = [
     region: "xochimilco",
     regionName: "Xochimilco, Mexico City",
     intro:
-      "Look beyond the colourful boats to the agricultural landscape that still grows food within Mexico City.",
+      "Follow food back to where it is grown and made, from Mexico City's chinampas to agave, steam and copper in Oaxaca.",
     image: null,
   },
   {

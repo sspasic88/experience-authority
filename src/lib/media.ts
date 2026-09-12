@@ -24,6 +24,115 @@ export type GuideMedia = {
 
 export const publicGuideMedia: readonly GuideMedia[] = [
   {
+    guideId: "edinburgh-public-ceilidh",
+    src: "/images/guides/edinburgh-public-ceilidh.jpg",
+    alt: "Dancers join hands across the floor of an ornate Edinburgh hall during a crowded public ceilidh.",
+    title: "Public ceilidh in Edinburgh",
+    photographer: "HotScotch Ceilidh Band. Individual photographer not named",
+    sourceUrl: "https://www.myceilidh.co.uk/hotscotchceilidhtickets",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://www.myceilidh.co.uk/hotscotchceilidhtickets",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The tall documentary frame keeps the whole social mechanism visible: linked hands, mixed experience levels, active floor and the civic scale of the hall.",
+    },
+    depiction:
+      "A public ceilidh in Edinburgh, published by HotScotch Ceilidh Band. It is not proof of the line-up, access or conditions at any future date, and it is not an EA visit. The source does not name an individual photographer. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "malta-village-festa",
+    src: "/images/guides/malta-village-festa.jpg",
+    alt: "Ornate red, blue and gold festa banners frame an illuminated church dome above a narrow street in Birgu, Malta.",
+    title: "Through the Window: dressing the streets for the festa",
+    photographer: "Renata Apan",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Through_the_%22Window%22._The_story_behind_the_tradition_-_dressing_the_streets_for_the_festa.jpg",
+    licenseName: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The vertical view uses the decorations as a real street frame, with the illuminated dome beyond. It conveys place, preparation and evening atmosphere without collapsing the festa into fireworks alone.",
+    },
+    depiction:
+      "Festa street decorations in Birgu, Malta, photographed on 28 August 2016. It does not depict a 2026 feast, a complete programme or an EA visit. The licensed source was resized for web delivery and remains available under CC BY-SA 4.0.",
+  },
+  {
+    guideId: "oaxaca-mal-de-amor-mezcal",
+    src: "/images/guides/oaxaca-mezcal-palenque.jpg",
+    alt: "Steam rises from a broad copper vessel inside the working Mal de Amor mezcal palenque in Oaxaca.",
+    title: "Steam and copper at Palenque Mal de Amor",
+    photographer: "Mal de Amor. Individual photographer not named",
+    sourceUrl: "https://www.maldeamor.com/",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://www.maldeamor.com/",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "Copper, vapour and a wet working surface give the process physical weight. The close frame avoids the generic agave-field shorthand and remains strong across wide and narrow crops.",
+    },
+    depiction:
+      "A steaming copper process vessel at Palenque Mal de Amor, published in the operator's official gallery. It does not identify the exact production stage, worker or date, and is not proof of a future visit or an EA assessment. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "doha-embrace-coffee",
+    src: "/images/guides/doha-coffee-ceremony.jpg",
+    alt: "A Qatari woman speaks with a diverse visitor group in the bright courtyard of an old souq in Doha.",
+    title: "Embrace Doha Cultural House",
+    photographer: "Visit Qatar. Individual photographer not named",
+    sourceUrl:
+      "https://visitqatar.com/intl-en/things-to-do/art-culture/embrace-doha",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl:
+      "https://visitqatar.com/intl-en/things-to-do/art-culture/embrace-doha",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The square editorial frame centres exchange rather than an isolated object, with clear host and visitor roles, a real place context and visible wheelchair inclusion.",
+    },
+    depiction:
+      "An Embrace Doha group context published by Visit Qatar. It does not necessarily depict the Traditional Coffee Ceremony, its current host or an EA visit. The source does not name an individual photographer. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "salta-balderrama-pena",
+    src: "/images/guides/salta-pena-folklorica.jpg",
+    alt: "Three folk dancers with large drums perform in front of guitarists beneath a stormy sky in central Salta.",
+    title: "Salta Ciudad de las Peñas",
+    photographer: "Municipality of Salta. Individual photographer not named",
+    sourceUrl:
+      "https://prensa.municipalidadsalta.gob.ar/el-centro-vibro-al-ritmo-del-folclore-con-una-nueva-edicion-de-salta-ciudad-de-las-penas/",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl:
+      "https://prensa.municipalidadsalta.gob.ar/el-centro-vibro-al-ritmo-del-folclore-con-una-nueva-edicion-de-salta-ciudad-de-las-penas/",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The wide documentary frame keeps drums, dancers, musicians and the historic street together. It communicates the public force of Salta folklore without pretending to show a private or intimate venue moment.",
+    },
+    depiction:
+      "A performance during the Municipality of Salta's public Salta Ciudad de las Peñas programme in January 2026. It provides city and performance context but does not depict Peña Boliche Balderrama, a current venue night or an EA visit. Reuse rights have not been independently cleared.",
+  },
+  {
     guideId: "singapore-batik-tulis-workshop",
     src: "/images/guides/singapore-batik-tulis-workshop.jpg",
     alt: "A participant applies colour around the wax lines of a purple rose during a batik workshop in Singapore.",

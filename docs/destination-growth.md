@@ -10,9 +10,11 @@ The current site implements searchable Places, exact geographic Compass filters,
 
 ## Editorial priority
 
-The current edition has 37 guides in 30 countries and territories. Kyoto and Singapore each have three guides across different interests. Japan has five overall, Singapore three and Spain two. The other 27 countries each have one guide. These are beginnings, not complete destination guides.
+The current edition has 42 guides in 32 countries and territories. Kyoto and Singapore each have three guides across different interests. Japan has five overall. Mexico, Argentina, Spain and the United Kingdom now have two guides each. Malta and Qatar begin with one guide each. These are beginnings, not complete destination guides.
 
 For the next research passes, deepen familiar destinations already covered, such as Kyoto, Singapore, Istanbul, Porto, Mexico City and Seoul. These are research priorities, not approved inventory. First aim for several genuinely distinct interests within a destination, then offer meaningful alternatives within them. Eight to twelve strong guides in a priority city is a useful planning target, not a quota or a publication promise.
+
+Every proposed addition also needs a clear discovery pull. The practical test is whether its most specific fact, action or social rule can make a visitor think, “I did not know this existed, and I want to try it.” The answer must come from the experience itself, not hype in the title. Recognisable destination anchors remain essential because they help people orient and trust the catalogue. EA's differentiation comes from revealing the process, participation or knowledge inside those anchors, then surrounding them with less expected experiences of equal quality.
 
 Look for the combination of food, making/learning, movement or water, culture/performance, and rest or a distinctive stay where genuinely place-rooted and publicly available. Do not force every destination into every category. Publish only after the usual evidence, access-scope, photography and freshness checks pass. No new contact, partnership, consent claim, licence purchase or booking is implied by this plan.
 

@@ -30,6 +30,77 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "let-the-caller-start-the-dance": {
+    modes: ["hands-on", "watch-listen"],
+    time: "calendar",
+    keywords: [
+      "Edinburgh",
+      "Scotland",
+      "ceilidh",
+      "dance",
+      "caller",
+      "live music",
+      "Assembly Roxy",
+      "Summerhall",
+    ],
+  },
+  "follow-the-festa-through-the-streets": {
+    modes: ["watch-listen", "outdoors"],
+    time: "calendar",
+    keywords: [
+      "Malta",
+      "Gozo",
+      "festa",
+      "village feast",
+      "band",
+      "procession",
+      "fireworks",
+      "festival",
+    ],
+  },
+  "follow-the-agave-into-the-still": {
+    modes: ["watch-listen", "at-table"],
+    time: "short",
+    keywords: [
+      "Oaxaca",
+      "Santiago Matatlán",
+      "mezcal",
+      "agave",
+      "palenque",
+      "distillery",
+      "copper still",
+      "tasting",
+    ],
+  },
+  "read-the-language-of-the-coffee-cup": {
+    modes: ["hands-on", "at-table", "watch-listen"],
+    time: "short",
+    keywords: [
+      "Doha",
+      "Qatar",
+      "Souq Al Wakrah",
+      "qahwa",
+      "Arabic coffee",
+      "coffee ceremony",
+      "majlis",
+      "Embrace Doha",
+    ],
+  },
+  "stay-while-the-zamba-circles-back": {
+    modes: ["watch-listen", "at-table"],
+    time: "calendar",
+    keywords: [
+      "Salta",
+      "Argentina",
+      "peña",
+      "Balderrama",
+      "zamba",
+      "folk music",
+      "dance",
+      "live music",
+      "dinner",
+    ],
+  },
   "draw-with-wax-in-kampong-gelam": {
     modes: ["hands-on"],
     time: "short",

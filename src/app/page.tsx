@@ -7,7 +7,7 @@ import {
   Photo,
 } from "@/components/editorial";
 import { fields, interests, matchesInterest } from "@/lib/catalog";
-import { curateHome } from "@/lib/home-curation";
+import { curateHome, selectHomeHero } from "@/lib/home-curation";
 import { getJournalArticles } from "@/lib/journal";
 import { guideMediaFor } from "@/lib/media";
 import { editorialPathways } from "@/lib/editorial-pathways";
@@ -29,9 +29,11 @@ export const metadata = pageMetadata(
 
 export default function Home() {
   const experiences = getExperiences();
+  const heroGuides = selectHomeHero(experiences);
   const { startingPoints, newGuides, homePathways, usedImages } = curateHome(
     experiences,
     editorialPathways,
+    heroGuides,
   );
   const journalCards = getJournalArticles(experiences)
     .flatMap((article) => {
@@ -47,7 +49,7 @@ export default function Home() {
   return (
     <>
       <StructuredData data={websiteStructuredData()} />
-      <HomeHero />
+      <HomeHero items={experiences} heroGuides={heroGuides} />
       <section className="section wrap">
         <PassportReturn />
         <SectionHeading

@@ -4,7 +4,7 @@
 
 Native Next.js App Router with strict TypeScript. Pages and data access are server rendered; Passport/plan controls, sharing, photograph dialogs, mobile navigation and local draft forms use client state. `src/lib/data.ts` is marked `server-only`. The public renderer uses an explicit allowlist and independently supplied safe narrative for protected records.
 
-The standard catalogue contains nine original public-source guides in eight countries and six fields, with three thematic collections. A separate opt-in demo mode retains eight fictional concepts. Neither is the 25 locally validated Selected experiences required for launch. Guide cards use real photographs with individual media records, licences and depiction boundaries. Stock and activity-context imagery is explicitly credited, not documentary evidence of an EA visit.
+The standard catalogue contains 42 original public-source guides in 32 countries and territories and 11 fields, connected through ten editorial collections. A separate opt-in demo mode retains eight fictional concepts. Neither is the 25 locally validated Selected experiences required for launch. Guide cards use real photographs with individual media records, licences and depiction boundaries. Stock and activity-context imagery is explicitly credited, not documentary evidence of an EA visit.
 
 Search and filters use URL query parameters with a native GET form. The filters intersect, and grid/list changes preserve them. Unknown routes fail with a not-found page. Passport stores only known public story IDs, stage values and at most three comparison IDs in `localStorage`. Malformed and obsolete data is rejected. There are no auth cookies or cross-project user accounts.
 

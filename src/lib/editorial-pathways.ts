@@ -51,15 +51,17 @@ export const editorialPathways = [
     slug: "make-room-for-a-slower-day",
     kind: "ritual-and-season",
     title: "Make room for a slower day",
-    promise: "Warm water, a coffee pause and a night with a different rhythm.",
+    promise:
+      "Warm water, two ways to share coffee and a night with a different rhythm.",
     intro:
-      "Not every memorable experience needs acceleration. A Koyasan temple stay asks you to fit an overnight visit around one lodging's actual arrangements. An Istanbul hammam, Tampere sauna and Reykjavík pool each belong to a different public bathing culture. Sarajevo brings a seated coffee pause into a longer city walk. These are not interchangeable wellness products and none carries a promise of transformation. What they share is room to notice a threshold, a gesture or a pattern of ordinary life that a hurried itinerary would pass over.",
+      "Not every memorable experience needs acceleration. A Koyasan temple stay asks you to fit an overnight visit around one lodging's actual arrangements. An Istanbul hammam, Tampere sauna and Reykjavík pool each belong to a different public bathing culture. Sarajevo brings a seated coffee pause into a longer city walk, while Doha makes the preparation and etiquette of qahwa the subject of a hosted session. These are not interchangeable wellness products and none carries a promise of transformation. What they share is room to notice a threshold, a gesture or a pattern of ordinary life that a hurried itinerary would pass over.",
     guideSlugs: [
       "spend-the-night-in-a-temple-town",
       "marble-steam-istanbul",
       "make-room-in-the-steam",
       "a-city-in-the-water",
       "let-the-coffee-take-its-time",
+      "read-the-language-of-the-coffee-cup",
     ],
     visitorUse:
       "Choose the format that genuinely fits your day or night. Read bathing rules, dietary and lodging details, current opening times and the scope of any tour before making arrangements.",
@@ -70,9 +72,9 @@ export const editorialPathways = [
     slug: "what-a-place-tastes-like",
     kind: "food-and-drink",
     title: "What a place tastes like",
-    promise: "Eight ways to read landscape, work and memory through the table.",
+    promise: "Ten ways to read landscape, work and memory through the table.",
     intro:
-      "Begin with appetite, then look further. These guides connect a Singapore hawker breakfast, Vienna's heuriger, Asturian cider, Grenadian cacao, Kyoto tea, Seoul kimchi, Québec maple season and food grown on Mexico City's chinampas. Each is a different kind of public encounter. Together they show why eating and drinking can reveal climate, labour, technique and social rhythm. Use the official links to check what is currently offered, and let the guide sharpen the questions you bring to the table.",
+      "Begin with appetite, then look further. These guides connect a Singapore hawker breakfast, Vienna's heuriger, Asturian cider, Grenadian cacao, Kyoto tea, Seoul kimchi, Québec maple season and food grown on Mexico City's chinampas. Oaxaca follows agave through heat and copper, while Doha uses qahwa to read the social language of a majlis. Each is a different kind of public encounter. Together they show why eating and drinking can reveal climate, labour, technique and social rhythm. Use the official links to check what is currently offered, and let the guide sharpen the questions you bring to the table.",
     guideSlugs: [
       "a-morning-at-the-hawker-table",
       "the-vineyard-at-the-table",
@@ -82,6 +84,8 @@ export const editorialPathways = [
       "mexico-city-grown-on-water",
       "kimchi-before-the-jar",
       "when-the-sap-starts-to-run",
+      "follow-the-agave-into-the-still",
+      "read-the-language-of-the-coffee-cup",
     ],
     visitorUse:
       "Choose one guide near a route you already have, then compare access, timing and participation before adding it to your journey.",
@@ -134,14 +138,16 @@ export const editorialPathways = [
     kind: "after-dark",
     title: "Stay out for the real evening",
     promise:
-      "Four public encounters for travellers who want more than another bar list.",
+      "Six public encounters for people who want more than another bar list.",
     intro:
-      "Evening can change the social temperature of a place. Stay for a traditional music session in Doolin, enter a Budapest dance house, watch a vast starling flock gather over the Danish marshes, or slow the day in the warmth of an Istanbul hammam. None should be treated as guaranteed nightly entertainment. Check the current programme, season, admission and house rules first. The reward is not simply staying out later, but paying closer attention to how people share time and space.",
+      "Evening can change the social temperature of a place. Stay for a traditional music session in Doolin, enter a Budapest dance house, let a caller bring an Edinburgh ceilidh into motion or give a Salta peña time to unfold across music, dance and the table. A vast starling flock gathers over the Danish marshes, while an Istanbul hammam offers a different way to slow the day. None should be treated as guaranteed nightly entertainment. Check the current programme, season, admission and house rules first. The reward is not simply staying out later, but paying closer attention to how people share time and space.",
     guideSlugs: [
       "stay-for-the-session",
       "step-into-the-dance",
       "when-the-sky-moves-as-one",
       "marble-steam-istanbul",
+      "let-the-caller-start-the-dance",
+      "stay-while-the-zamba-circles-back",
     ],
     visitorUse:
       "Check dates and last entry before travel, then pair one evening guide with a deliberately unhurried day nearby.",
@@ -163,6 +169,7 @@ export const editorialPathways = [
       "the-pour-before-the-glass",
       "the-weight-of-the-tower",
       "make-room-in-the-steam",
+      "follow-the-festa-through-the-streets",
     ],
     visitorUse:
       "Start with the least flexible date or natural condition, confirm it at the official source, then shape the rest of the route around it.",
@@ -174,9 +181,9 @@ export const editorialPathways = [
     kind: "city",
     title: "Cities from the inside",
     promise:
-      "Seven familiar cities, entered through the practices that keep them alive.",
+      "Nine familiar cities, entered through practices that remain alive.",
     intro:
-      "A landmark can tell you where you are. A practice can tell you how a city works. Begin Barcelona with a human tower, Singapore at a hawker table, Seoul through kimchi, Venice through an oar, Istanbul in a working hammam, Reykjavík in a municipal pool and Mexico City among the chinampas of Xochimilco. These are not claims to know a whole city. They are public, practical starting points that move attention from the skyline to the routines, knowledge and shared infrastructure beneath it.",
+      "A landmark can tell you where you are. A practice can tell you how a city works. Begin Barcelona with a human tower, Singapore at a hawker table, Seoul through kimchi, Venice through an oar, Istanbul in a working hammam, Reykjavík in a municipal pool and Mexico City among the chinampas of Xochimilco. Edinburgh adds a dance floor guided by a caller. Doha adds a conversation held through coffee and majlis etiquette. These are not claims to know a whole city. They are public, practical starting points that move attention from the skyline to the routines, knowledge and shared infrastructure beneath it.",
     guideSlugs: [
       "the-weight-of-the-tower",
       "a-morning-at-the-hawker-table",
@@ -185,6 +192,8 @@ export const editorialPathways = [
       "a-city-in-the-water",
       "mexico-city-grown-on-water",
       "kimchi-before-the-jar",
+      "let-the-caller-start-the-dance",
+      "read-the-language-of-the-coffee-cup",
     ],
     visitorUse:
       "Pick the city already on your route and use its guide as the anchor for one slower half-day beyond the standard highlights.",

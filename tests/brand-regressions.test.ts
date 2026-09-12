@@ -1,7 +1,12 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { curateHome } from "../src/lib/home-curation";
+import {
+  curateHome,
+  heroGuideRotations,
+  homeHeroRotationIndex,
+  selectHomeHero,
+} from "../src/lib/home-curation";
 import { publicGuides } from "../src/lib/public-guides";
 import { editorialPathways } from "../src/lib/editorial-pathways";
 
@@ -16,7 +21,8 @@ test("the public edition uses EA language, never generic travel editorial", () =
 });
 
 test("home curation gives every image one position, including hero and pathway reuse", () => {
-  const home = curateHome(publicGuides, editorialPathways);
+  const hero = selectHomeHero(publicGuides, "2026-09-12");
+  const home = curateHome(publicGuides, editorialPathways, hero);
   assert.equal(home.startingPoints.length, 3);
   assert.equal(home.newGuides.length, 6);
   const visible = [
@@ -34,6 +40,20 @@ test("home curation gives every image one position, including hero and pathway r
       remaining.includes(item),
     ),
   );
+});
+
+test("the homepage hero follows a stable, hand-curated daily rotation", () => {
+  const date = "2026-09-12";
+  const index = homeHeroRotationIndex(date);
+  const first = selectHomeHero(publicGuides, date).map((item) => item.slug);
+  const repeated = selectHomeHero(publicGuides, date).map((item) => item.slug);
+  const next = selectHomeHero(publicGuides, "2026-09-13").map(
+    (item) => item.slug,
+  );
+  assert.deepEqual(first, [...heroGuideRotations[index]]);
+  assert.deepEqual(repeated, first);
+  assert.notDeepEqual(next, first);
+  assert.equal(new Set(first).size, 3);
 });
 
 test("visible accent details use the EA colour tokens, not one-off coral values", () => {
