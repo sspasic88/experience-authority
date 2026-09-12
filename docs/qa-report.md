@@ -2,12 +2,14 @@
 
 ## Batch 02 — current verification scope
 
+- Commit `d610826` deployed successfully through the separate Vercel project on 12 September 2026. The canonical production domain serves the nine-guide edition with index/follow, HTTPS and no root `X-Robots-Tag`; its public sitemap includes both new guide URLs plus Kyoto and Gegharkunik.
+- The same production domain passed the 61-page/11-not-found smoke suite, the 54-view responsive/accessibility browser suite and all 21 isolated visitor scenarios described below. No real Passport data, private notes, bookings or external messages were used.
 - 26 policy/content/SEO/security tests pass, including private-trip sanitization, opt-in sharing and source/photo structured-data boundaries; TypeScript and optimized production build pass.
 - Expanded route/security smoke covers 61 URL checks and 11 expected 404 paths; fresh per-request CSP nonces, script nonce matching, fixed canonicals, public indexing, private/filter exclusions, Article metadata, guide-specific social images and both Japan regions in sitemap.
 - Browser audit covers 54 views at 390/768/1440 px, 65 encountered internal links, image decoding, heading count, horizontal overflow and automated WCAG A/AA checks. Save/reload, photo-link navigation, comparison, search and mobile menu/Escape are exercised.
 - Visitor audit covers 21 scenarios at 320/390/1440 px: populated journey plans, reload and cross-tab persistence, removal, day sorting, private-note opt-in/out, downloaded text, native-share and clipboard/manual fallbacks, cancellation, blocked local storage, photo modal focus and scroll restoration. Sharing is intercepted in isolated test browsers; no external messages or real visitor state are touched.
 - Automated accessibility checks are scoped tests, not certification or a substitute for screen-reader/user acceptance. Source checks are not on-site, safety, availability or service-quality verification.
-- Production confirmation for this exact revision is recorded separately after deployment; earlier production checks below refer to prior releases.
+- The production checks above concern this exact revision; earlier checks below refer to prior releases.
 
 ## Earlier public-source guide checks (historical)
 

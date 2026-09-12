@@ -2,6 +2,8 @@
 
 Public-source edition live at https://experienceauthority.com, deployed from the separate EA GitHub repository to its own Vercel project on 12 September 2026.
 
+Current verified production revision: `d610826` — nine guides, private journey planning, sharing, enlarged credited photographs, real multi-region place coverage and guide-specific search/social metadata.
+
 ## Implemented
 
 - Independent source project, self-hosted Source Sans 3 Variable typography under OFL 1.1, reusable visual tokens and responsive editorial layouts.
