@@ -1,0 +1,19 @@
+# Experience Authority approved decisions
+
+Recorded 12 September 2026. User decisions in this task override the supplied reference pack where they conflict.
+
+- Completely independent project, repository, deployment, database, authentication, admin and analytics. No Innovation Authority access or infrastructure reuse.
+- Native Next.js App Router and strict TypeScript, GitHub and a separate Vercel project. Final domain experienceauthority.com.
+- A new Figma design file is the editable visual-system source, in the Innovation Authority team as explicitly selected by the user: https://www.figma.com/design/dKCURpmjIMSDRlMAlYx33P
+- Brand relationship clarified: Experience Authority is a connected spin-off of Innovation Authority. This does not change the approved independent repository, deployment and application infrastructure.
+- User subsequently directed the use of existing Aeonik Pro assets. The local private preview now self-hosts Light, Regular and Bold from the user's existing project. No new font was purchased, converted or downloaded. Do not publish the source repository publicly.
+- Aeonik Pro is the selected typeface, replacing the provisional Instrument Sans. Typography is centralized for a later change if required. Additional web-domain licensing is an unresolved launch item; no expanded license coverage is claimed.
+- Preserve EA Vermilion, Experience Night, Warm Paper and the slash wordmark direction. Use Night text on Vermilion for readable buttons.
+- English public copy, centralized content structures, ready for later localization.
+- Superseded preview-only decision: normal mode now contains seven original public-source guides, with explicit desk-review limits and official access information. Fictional material remains in opt-in demo mode only. Neither mode claims local validation. See content-edition.md for the user's subsequent no-special-consent content scope.
+- Public launch requires 25 locally validated experiences, 5 territories, 8 fields, 5 place pages, 3–5 collections, licensed media, legal-entity details and production QA.
+- Passport P0 uses explicitly device-local saving and comparison. Account synchronization is deferred until independent authentication is configured.
+- No paid listing, paid ranking or implied editorial influence. No booking before verified access.
+- No automatic publication of the 200 research candidates. No production use of AI-generated images as experience evidence.
+
+Initial Figma scope: brand lockups, palette and type styles, spacing, Button, Status and Experience Card components, Home desktop/mobile and Experience desktop. Web preview additionally covers Explore, Places, Fields, Collections, Passport, Method, About and governance pages.

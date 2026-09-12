@@ -1,0 +1,124 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { ArrowUpRight, Bookmark, Menu, X } from "lucide-react";
+import { usePassport } from "./passport-provider";
+export function Wordmark({ light = false }: { light?: boolean }) {
+  return (
+    <Link
+      href="/"
+      className={`wordmark ${light ? "wordmark-light" : ""}`}
+      aria-label="Experience Authority home"
+    >
+      <span className="brand-slash" aria-hidden="true" />
+      <span>
+        Experience
+        <br />
+        Authority
+      </span>
+    </Link>
+  );
+}
+export function Header() {
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+  const { data } = usePassport();
+  const links = [
+    ["/explore", "Compass"],
+    ["/places", "Places"],
+    ["/fields", "Fields"],
+    ["/collections", "Collections"],
+    ["/method", "Our method"],
+  ];
+  return (
+    <header className="site-header">
+      <div className="header-inner">
+        <Wordmark />
+        <nav
+          aria-label="Main navigation"
+          className={`main-nav ${open ? "is-open" : ""}`}
+          id="main-navigation"
+        >
+          {links.map(([href, label]) => (
+            <Link
+              key={href}
+              href={href}
+              aria-current={pathname.startsWith(href) ? "page" : undefined}
+              onClick={() => setOpen(false)}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+        <Link
+          href="/passport"
+          className="passport-link"
+          onClick={() => setOpen(false)}
+        >
+          <Bookmark size={17} aria-hidden="true" />
+          <span>My Passport</span>
+          <span
+            className="passport-count"
+            aria-label={`${Object.keys(data.saved).length} saved`}
+          >
+            {Object.keys(data.saved).length}
+          </span>
+        </Link>
+        <button
+          className="icon-button menu-button"
+          aria-label={open ? "Close navigation" : "Open navigation"}
+          aria-expanded={open}
+          aria-controls="main-navigation"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <X /> : <Menu />}
+        </button>
+      </div>
+    </header>
+  );
+}
+export function Footer() {
+  return (
+    <footer className="site-footer">
+      <div className="footer-main">
+        <div>
+          <Wordmark light />
+          <p>
+            A global selection of
+            <br />
+            locally rooted experiences.
+          </p>
+        </div>
+        <div className="footer-statement">
+          Leave with more
+          <br />
+          than a photograph<span>.</span>
+        </div>
+        <nav aria-label="Footer navigation">
+          <Link href="/about">
+            About us <ArrowUpRight size={15} />
+          </Link>
+          <Link href="/method">
+            Our method <ArrowUpRight size={15} />
+          </Link>
+          <Link href="/suggest">
+            Suggest an experience <ArrowUpRight size={15} />
+          </Link>
+          <Link href="/corrections">
+            Corrections <ArrowUpRight size={15} />
+          </Link>
+          <Link href="/transparency">
+            Transparency <ArrowUpRight size={15} />
+          </Link>
+        </nav>
+      </div>
+      <div className="footer-bottom">
+        <span>© {new Date().getFullYear()} Experience Authority</span>
+        <span>Experience first. Provider second.</span>
+        <Link href="/privacy">Privacy & local storage</Link>
+      </div>
+    </footer>
+  );
+}
