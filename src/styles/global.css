@@ -11,7 +11,10 @@ body {
   font-family: var(--ea-font-sans);
   font-size: 16px;
   line-height: 1.55;
+  font-synthesis: none;
+  font-kerning: normal;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 a {
   color: inherit;
@@ -53,7 +56,7 @@ p {
 h1,
 h2,
 h3 {
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.05;
   letter-spacing: -0.045em;
 }
@@ -2515,6 +2518,205 @@ button {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+/*
+ * Type system pass
+ *
+ * Supporting text never falls below 11px, body copy sits on a true 16px
+ * baseline, and every page now draws from the same handful of display,
+ * section, card, lead, body and UI sizes. This keeps the editorial character
+ * of the original layouts while making source notes, navigation and controls
+ * dependable on smaller screens.
+ */
+.wordmark,
+.wordmark-light {
+  font-weight: 700;
+}
+
+.main-nav,
+.passport-link,
+.button,
+.text-link,
+.search-bar input,
+.filter-row select,
+.reset-link,
+.view-switch,
+.passport-tabs a,
+.region-links a {
+  font-size: var(--ea-type-ui);
+}
+
+.main-nav,
+.passport-link,
+.button,
+.text-link {
+  font-weight: 700;
+}
+
+.eyebrow,
+.preview-notice,
+.card-meta > span:first-child,
+.hero-caption span:first-child,
+.status-badge,
+.small-slash,
+.passport-motif > span:not(.motif-slash),
+.demo-callout strong {
+  font-weight: 700;
+}
+
+.hero-stamp,
+.guide-art-place,
+.compare-table thead th,
+.compare-table th:first-child {
+  font-weight: 400;
+}
+
+.eyebrow,
+.preview-notice,
+.preview-notice-detail,
+.edition,
+.hero-waypoint,
+.hero-image-label,
+.hero-stamp,
+.hero-caption,
+.image-demo,
+.image-source-badge,
+.card-meta,
+.card-number,
+.status-badge,
+.guide-art-kicker,
+.guide-art-foot,
+.protected-art > span:last-child,
+.field-index,
+.collection-image > span,
+.small-note,
+.footer-bottom,
+.breadcrumb,
+.detail-photo-credit,
+.fact-panel dt,
+.passport-entry-controls label,
+.passport-entry-controls select,
+.compare-toggle,
+.compare-table th:first-child,
+.compare-table .remove-compare,
+.passport-message {
+  font-size: var(--ea-type-micro);
+}
+
+.preview-notice,
+.eyebrow,
+.card-meta > span:first-child,
+.guide-art-kicker,
+.guide-art-foot,
+.fact-panel dt {
+  letter-spacing: 0.09em;
+}
+
+.hero-bottom p,
+.method-copy p,
+.page-intro-copy {
+  font-size: var(--ea-type-lead);
+}
+
+.card-content p,
+.collection-card p,
+.fields-layout p:not(.eyebrow),
+.method-copy p + p,
+.passport-promo p:not(.eyebrow),
+.experience-intro p,
+.story-section p,
+.directory-tile p,
+.fact-panel dd,
+.fact-panel p,
+.source-list p,
+.guide-disclosure,
+.demo-callout,
+.prose-aside,
+.draft-form label,
+.draft-status,
+.not-found p {
+  font-size: var(--ea-type-body-small);
+}
+
+.story-section p,
+.prose p,
+.prose ul {
+  line-height: 1.75;
+}
+
+.hero-copy h1 {
+  font-size: var(--ea-type-display);
+  line-height: 0.94;
+}
+
+.section-heading h2,
+.method-layout h2,
+.passport-promo h2,
+.page-intro h1,
+.experience-intro h1,
+.fields-layout h2 {
+  font-size: var(--ea-type-section);
+  line-height: 1;
+}
+
+.card-content h3,
+.collection-card h3,
+.directory-tile h2,
+.launch-note h3,
+.empty-state h2,
+.story-section h2,
+.fact-panel h2,
+.prose h2 {
+  font-size: var(--ea-type-card);
+  line-height: 1.1;
+}
+
+.footer-main p,
+.footer-main nav,
+.section-note,
+.results-line,
+.detail-photo-credit,
+.prose-aside,
+.passport-message {
+  font-size: var(--ea-type-caption);
+}
+
+@media (max-width: 600px) {
+  .hero-copy h1 {
+    font-size: clamp(3.75rem, 13.8vw, 5.125rem);
+  }
+
+  .section-heading h2,
+  .method-layout h2,
+  .passport-promo h2,
+  .page-intro h1,
+  .experience-intro h1,
+  .fields-layout h2 {
+    font-size: clamp(2.25rem, 10vw, 3.4rem);
+  }
+
+  .card-content h3,
+  .collection-card h3,
+  .directory-tile h2,
+  .launch-note h3,
+  .empty-state h2,
+  .story-section h2,
+  .fact-panel h2,
+  .prose h2 {
+    font-size: clamp(1.625rem, 7.6vw, 2rem);
+  }
+
+  .hero-image-label,
+  .hero-caption,
+  .preview-notice,
+  .preview-notice-detail,
+  .card-meta,
+  .status-badge,
+  .footer-bottom,
+  .detail-photo-credit {
+    font-size: var(--ea-type-micro);
   }
 }
 

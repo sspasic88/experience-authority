@@ -34,6 +34,21 @@
   --ea-status-paused: #566066;
   --ea-status-paused-bg: #e7eaeb;
   --ea-font-sans: var(--font-nimbus-sans), "Nimbus Sans", Arial, sans-serif;
+  /*
+   * EA type scale — deliberately compact, with one readable minimum for
+   * supporting information. Nimbus Sans ships here in Regular and Bold only;
+   * use those real cuts rather than asking the browser to invent in-between
+   * weights.
+   */
+  --ea-type-micro: 0.6875rem; /* 11px */
+  --ea-type-caption: 0.75rem; /* 12px */
+  --ea-type-ui: 0.8125rem; /* 13px */
+  --ea-type-body-small: 0.875rem; /* 14px */
+  --ea-type-body: 1rem; /* 16px */
+  --ea-type-lead: clamp(1.0625rem, 1vw + 0.78rem, 1.1875rem); /* 17–19px */
+  --ea-type-card: clamp(1.5rem, 1.65vw, 1.75rem); /* 24–28px */
+  --ea-type-section: clamp(2.25rem, 3.25vw, 3.125rem); /* 36–50px */
+  --ea-type-display: clamp(3.75rem, 6.25vw, 6.75rem); /* 60–108px */
   --ea-space-1: 4px;
   --ea-space-2: 8px;
   --ea-space-3: 12px;
