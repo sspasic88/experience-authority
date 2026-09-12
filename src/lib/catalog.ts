@@ -182,6 +182,15 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "spain",
+    name: "Spain",
+    region: "barcelona",
+    regionName: "Barcelona",
+    intro:
+      "A public square, a trained collective and the care that makes a tower possible.",
+    image: null,
+  },
+  {
     slug: "singapore",
     name: "Singapore",
     region: "singapore",

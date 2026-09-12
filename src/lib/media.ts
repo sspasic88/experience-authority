@@ -24,6 +24,25 @@ export type GuideMedia = {
 
 export const publicGuideMedia: readonly GuideMedia[] = [
   {
+    guideId: "barcelona-castells-merce",
+    src: "/images/guides/barcelona-castells.jpg",
+    alt: "A Castellers de Barcelona tower rises above a packed arena, held by a broad base of red-shirted members.",
+    title: "Castellers de Barcelona at the 2024 Concurs de Castells",
+    photographer: "Castellers de Barcelona",
+    sourceUrl: "https://castellersdebarcelona.cat/actualitat/actuacions",
+    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://castellersdebarcelona.cat/actualitat/actuacions",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "The vertical composition makes mutual reliance immediately visible, with the team rather than a cityscape carrying the entire frame.",
+    },
+    depiction:
+      "Castellers de Barcelona at the 2024 Concurs de Castells, published by the colla on its performances page. The page does not identify an individual photographer. It is official team imagery, not an EA visit or a record of the current Mercè programme. Reuse rights have not been independently cleared.",
+  },
+  {
     guideId: "singapore-hawker-morning",
     src: "/images/guides/singapore-hawker-culture.jpg",
     alt: "Four diners share food at a bright Singapore hawker centre, with stalls and communal tables behind them.",
