@@ -16,7 +16,7 @@ export async function generateMetadata({
 }) {
   return pageMetadata(
     "Compass",
-    "Explore locally rooted experiences by place, field and access context. Experience first. Provider second.",
+    "Explore locally rooted experiences by place, field and access context. Experience first. Context always.",
     "/explore",
     Object.keys(await searchParams).length > 0,
   );

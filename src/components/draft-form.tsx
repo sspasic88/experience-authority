@@ -11,7 +11,7 @@ export function DraftForm({
   function download(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const text = `${correction ? "CORRECTION" : "EXPERIENCE SUGGESTION"} — UNSENT DRAFT\n\nExperience: ${data.get("experience")}\n\nPublic context:\n${data.get("context")}\n\nPublic source: ${data.get("source")}\n\nThis draft was created locally. It has not been sent to Experience Authority.`;
+    const text = `${correction ? "CORRECTION" : "EXPERIENCE SUGGESTION"} | UNSENT DRAFT\n\nExperience: ${data.get("experience")}\n\nPublic context:\n${data.get("context")}\n\nPublic source: ${data.get("source")}\n\nThis draft was created locally. It has not been sent to Experience Authority.`;
     const url = URL.createObjectURL(
       new Blob([text], { type: "text/plain;charset=utf-8" }),
     );

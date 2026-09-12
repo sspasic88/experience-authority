@@ -25,7 +25,7 @@ export function TripPlanner({ items }: { items: PublicExperience[] }) {
       );
     } catch {
       setMessage(
-        "Storage is unavailable. Your plan can only last for this session; download a copy before leaving.",
+        "Storage is unavailable. Your plan can only last for this session. Download a copy before leaving.",
       );
     }
     setReady(true);
@@ -115,7 +115,7 @@ export function TripPlanner({ items }: { items: PublicExperience[] }) {
             <option value="">Choose from your Passport…</option>
             {available.map((item) => (
               <option key={item.id} value={item.id}>
-                {item.title} — {item.place}
+                {item.title} · {item.place}
               </option>
             ))}
           </select>

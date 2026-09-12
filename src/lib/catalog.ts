@@ -109,7 +109,7 @@ export type PublicStatus =
 export type Status =
   PublicStatus | "research_candidate" | "do_not_publish" | "retired";
 export const statusLabels: Record<PublicStatus, string> = {
-  public_guide: "Public-source guide",
+  public_guide: "Independent guide",
   selected_open: "Open access",
   selected_context_required: "Context required",
   protected_visibility: "Protected",
@@ -157,16 +157,23 @@ export type Query = {
   status?: string;
   view?: string;
 };
+export function normalizeSearch(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLocaleLowerCase();
+}
 export function filterExperiences(items: PublicExperience[], query: Query) {
-  const q = (query.q ?? "").trim().toLocaleLowerCase();
+  const q = normalizeSearch((query.q ?? "").trim());
   const interest = interests.find((entry) => entry.slug === query.interest);
   return items.filter(
     (item) =>
       (!q ||
-        [item.title, item.summary, item.place, item.country, item.field]
-          .join(" ")
-          .toLocaleLowerCase()
-          .includes(q)) &&
+        normalizeSearch(
+          [item.title, item.summary, item.place, item.country, item.field].join(
+            " ",
+          ),
+        ).includes(q)) &&
       (!query.field || item.field === query.field) &&
       (!interest || interest.fields.includes(item.field)) &&
       (!query.place || item.countrySlug === query.place) &&
@@ -174,6 +181,33 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
   );
 }
 export const territories = [
+  {
+    slug: "turkiye",
+    name: "Türkiye",
+    region: "istanbul",
+    regionName: "Istanbul",
+    intro:
+      "Enter the familiar city through water, marble and the working life of a historic bathhouse.",
+    image: null,
+  },
+  {
+    slug: "mexico",
+    name: "Mexico",
+    region: "xochimilco",
+    regionName: "Xochimilco, Mexico City",
+    intro:
+      "Look beyond the colourful boats to the agricultural landscape that still grows food within Mexico City.",
+    image: null,
+  },
+  {
+    slug: "ireland",
+    name: "Ireland",
+    region: "county-clare",
+    regionName: "County Clare",
+    intro:
+      "Begin in Doolin with the shared attention of a traditional music session.",
+    image: null,
+  },
   {
     slug: "armenia",
     name: "Armenia",

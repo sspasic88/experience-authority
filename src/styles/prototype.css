@@ -160,6 +160,34 @@ h3 {
   margin-top: 34px;
   color: var(--ea-night);
 }
+.home-discovery {
+  position: relative;
+  z-index: 7;
+  margin-top: 32px;
+}
+.home-discovery-prompt {
+  margin: 0 0 10px;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.home-discovery .prototype-hero-search {
+  margin-top: 0;
+  border-radius: 3px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 160ms ease, transform 160ms ease;
+}
+.home-discovery .prototype-hero-search:focus-within {
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
+  transform: translateY(-1px);
+}
+.home-discovery .prototype-hero-search > svg {
+  flex: none;
+  margin-left: 14px;
+  color: #58636a;
+}
 .prototype-hero-search input {
   flex: 1;
   min-width: 0;
@@ -177,11 +205,82 @@ h3 {
   width: 54px;
   height: 54px;
   border: 0;
-  border-radius: 50%;
+  border-radius: 2px;
   display: grid;
   place-items: center;
   background: var(--ea-vermilion);
   color: var(--ea-night);
+}
+.home-search-results {
+  position: absolute;
+  z-index: 8;
+  top: 100px;
+  inset-inline: 0;
+  overflow: hidden;
+  background: #fff;
+  color: var(--ea-night);
+  border: 1px solid rgba(8, 27, 42, 0.22);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+.home-search-results-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(8, 27, 42, 0.15);
+  color: #66727a;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.home-search-results-head a {
+  color: var(--ea-vermilion);
+}
+.home-search-results > a {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 13px;
+  min-height: 60px;
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(8, 27, 42, 0.1);
+}
+.home-search-results > a:last-child {
+  border-bottom: 0;
+}
+.home-search-results > a:hover,
+.home-search-results > a.is-active {
+  background: #f0eee7;
+}
+.home-search-results > a > span {
+  display: grid;
+  gap: 2px;
+}
+.home-search-results strong {
+  font-size: 15px;
+}
+.home-search-results small {
+  color: #657078;
+  font-size: 13px;
+}
+.home-search-empty {
+  display: grid;
+  gap: 6px;
+  padding: 18px 16px 20px;
+}
+.home-search-empty span {
+  color: #657078;
+  font-size: 14px;
+}
+.home-search-empty a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  margin-top: 7px;
+  color: var(--ea-vermilion);
+  font-weight: 750;
 }
 .prototype-hero-interests {
   display: flex;
@@ -191,6 +290,11 @@ h3 {
   color: #c5cdd1;
   font-weight: 650;
   font-size: 16px;
+}
+.prototype-hero-interests > span {
+  padding-block: 9px;
+  color: #87939a;
+  font-weight: 500;
 }
 .prototype-hero-interests a {
   padding-block: 9px;
@@ -243,27 +347,6 @@ h3 {
   grid-template-rows: 1fr 1fr;
   position: relative;
 }
-.prototype-principle {
-  position: absolute;
-  top: 28px;
-  right: 28px;
-  left: 28px;
-  z-index: 2;
-  background: var(--ea-paper);
-  color: var(--ea-night);
-  padding: 22px;
-  border-left: 4px solid var(--ea-vermilion);
-}
-.prototype-principle .eyebrow {
-  color: var(--ea-accent-text);
-  font-size: 11px;
-  margin-bottom: 8px;
-}
-.prototype-principle > p:last-child {
-  font-size: 19px;
-  line-height: 1.16;
-  font-weight: 700;
-}
 .prototype-edition-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -281,9 +364,9 @@ h3 {
 }
 .prototype-edition-stats dd {
   margin: 0;
-  font-size: 36px;
-  font-weight: 740;
-  letter-spacing: -0.045em;
+  font-size: clamp(22px, 2.15vw, 31px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
   line-height: 1.1;
 }
 .prototype-edition-stats dt {
@@ -566,9 +649,6 @@ h3 {
   .prototype-hero-sides {
     display: grid;
   }
-  .prototype-principle {
-    display: none;
-  }
   .prototype-hero-mosaic figcaption {
     padding: 55px 15px 18px;
   }
@@ -586,7 +666,7 @@ h3 {
     border-bottom: 1px solid #d8dddf;
   }
   .prototype-edition-stats dd {
-    font-size: 32px;
+    font-size: 23px;
   }
   .prototype-edition-stats dt {
     font-size: 10px;

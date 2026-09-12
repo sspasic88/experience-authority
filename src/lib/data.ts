@@ -39,7 +39,7 @@ const seeds: Seed[] = [
     status: "selected_context_required",
     image: "/images/pottery.jpg",
     imageAlt:
-      "Illustrative photograph of a potter shaping clay; not this demo experience.",
+      "Illustrative photograph of a potter shaping clay. It does not show this demo experience.",
     shift:
       "From seeing a finished object to understanding the decisions held inside it.",
   },
@@ -56,7 +56,7 @@ const seeds: Seed[] = [
     status: "selected_context_required",
     image: "/images/harbour.jpg",
     imageAlt:
-      "Illustrative photograph of a boat in Korčula harbour; no visit is offered.",
+      "Illustrative photograph of a boat in Korčula harbour. No visit is offered.",
     shift: "From a harbour as a view to a harbour as a place of everyday work.",
   },
   {
@@ -72,7 +72,7 @@ const seeds: Seed[] = [
     status: "selected_open",
     image: "/images/market.jpg",
     imageAlt:
-      "Illustrative produce photograph taken at Pike Place Market, Seattle; not the named territory.",
+      "Illustrative produce photograph taken at Pike Place Market, Seattle. It does not show the named territory.",
     shift:
       "From choosing an ingredient to noticing a season, a landscape and someone’s work.",
   },
@@ -89,7 +89,7 @@ const seeds: Seed[] = [
     status: "selected_open",
     image: "/images/forest.jpg",
     imageAlt:
-      "Illustrative photograph of the Meiji Shrine forest; not a verified activity.",
+      "Illustrative photograph of the Meiji Shrine forest. It does not show a verified activity.",
     shift:
       "From passing through a green space to noticing how it changes your pace.",
   },
@@ -120,7 +120,7 @@ const seeds: Seed[] = [
     regionSlug: "emilia-romagna",
     status: "paused",
     image: "/images/market.jpg",
-    imageAlt: "Illustrative market produce from Seattle; not a hosted meal.",
+    imageAlt: "Illustrative market produce from Seattle. It does not show a hosted meal.",
     shift: "From being served to being present with others.",
   },
   {
@@ -175,7 +175,7 @@ function makeDemo(seed: Seed): PublicExperience {
       "A possibility, not a promise: a more attentive relationship with the people, practices and places you encounter.",
     responsibility:
       seed.status === "protected_visibility"
-        ? "No directions, contact details or access requests are provided. Respect the boundary; do not try to identify or locate the people behind a protected story."
+        ? "No directions, contact details or access requests are provided. Respect the boundary. Do not try to identify or locate the people behind a protected story."
         : "Do not use this demo to plan a visit. Real access requires current information, consent and an understanding of local expectations.",
     access:
       seed.status === "paused"

@@ -64,15 +64,23 @@ test("guide structured data reflects visible sources and photo rights, never off
   for (const item of publicGuides) {
     const data = guideStructuredData(item);
     assert.ok(data);
-    const [article, image] = data["@graph"];
+    const [article, rawImage] = data["@graph"];
+    const image = rawImage as Record<string, unknown>;
     assert.equal(article.headline, item.title);
     assert.equal(article.dateModified, item.guideReview?.checkedOn);
     assert.deepEqual(
       article.citation,
       item.guideReview?.sources.map((source) => source.url),
     );
-    assert.equal(image.license, guideMediaFor(item.id)?.licenseUrl);
-    assert.equal(image.caption, guideMediaFor(item.id)?.depiction);
+    const media = guideMediaFor(item.id)!;
+    assert.equal(
+      image.license,
+      media.rightsBasis === "documented_license"
+        ? media.licenseUrl
+        : undefined,
+    );
+    assert.equal(image.acquireLicensePage, media.sourceUrl);
+    assert.equal(image.caption, media.depiction);
     assert.ok(
       !/aggregateRating|priceCurrency|Offer|datePublished/.test(
         JSON.stringify(data),

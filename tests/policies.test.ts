@@ -157,6 +157,12 @@ test("search is case-insensitive, intersects filters and has a real empty state"
   );
   assert.equal(filterExperiences([fixture], { field: "taste" }).length, 0);
   assert.equal(filterExperiences([fixture], { q: "<script>" }).length, 0);
+  assert.equal(
+    filterExperiences([{ ...fixture, place: "Reykjavík" }], {
+      q: "Reykjavik",
+    }).length,
+    1,
+  );
 });
 test("commercial approval never grants editorial publication authority", () => {
   assert.equal(

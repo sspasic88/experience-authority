@@ -89,7 +89,7 @@ export function PhotoViewer({ media }: { media: GuideMedia }) {
                 {media.photographer}
                 <span className="sr-only">
                   {" "}
-                  — original source (opens a new tab)
+                  . Original source (opens a new tab)
                 </span>
               </a>
               {" · "}

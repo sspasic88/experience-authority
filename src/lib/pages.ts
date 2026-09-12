@@ -22,13 +22,13 @@ export const editorialPages: Record<
           "A public-source guide is original editorial writing about a specific, publicly offered programme, ordinary admission or public hospitality. It explains the experience, its relationship to place, a possible change in perspective, responsible participation and the limits of the evidence. It is not an EA Selected endorsement or an on-site review.",
           "We use published official information and link to the source of each account. First-party descriptions are attributed, not treated as independent proof of quality or impact. No special private access, sacred practice, uninvited workplace visit or culturally restricted knowledge is offered through these guides.",
           "Each guide carries a desk-check date and an official access link. Prices, opening times and availability remain with the operator. We do not arrange a visit or imply a partnership. No provider photographs, copied descriptions or paid placements are used in the first guide set.",
-          "The sections on a possible shift and human return are editorial interpretations, not measured effects. Local validation remains a separate step before an experience can receive an EA Selected status. The guide register excludes entries after their review-by date, at most 90 days after a source check; this is not live availability monitoring.",
+          "The sections on a possible shift and human return are editorial interpretations, not measured effects. Local validation remains a separate step before an experience can receive an EA Selected status. The guide register excludes entries after their review-by date, at most 90 days after a source check. This is not live availability monitoring.",
         ],
       },
       {
-        title: "01 / Experience first. Provider second.",
+        title: "01 / Experience before inventory.",
         paragraphs: [
-          "We begin with what a person can meaningfully encounter or participate in — not a supplier catalogue, a popularity score or a commission opportunity.",
+          "We begin with what a person can meaningfully encounter or participate in. We do not begin with a supplier catalogue, a popularity score or a commission opportunity.",
           "A holder or provider may help make access possible. They are not the reason a story is selected, and payment must never buy editorial inclusion or prominence.",
         ],
       },
@@ -105,7 +105,7 @@ export const editorialPages: Record<
         title: "What kind of content is this?",
         paragraphs: [
           "The public edition contains public-source guides, not locally validated EA selections. Sources were checked as documented in each guide. AI-assisted desk research and original drafting have not been presented as a human field visit, holder consent, an independent quality audit or a guarantee of availability.",
-          "Guide cards use real photographs with named creators, source links, licences and explicit depiction boundaries. Some show the actual place; others are clearly identified activity or cultural context. The homepage and thematic collections also use credited illustrative photographs. None is evidence of an EA visit. No AI-generated photographs are used.",
+          "Guide cards use real photographs with named creators, source links, licences and explicit depiction boundaries. Some show the actual place. Others are clearly identified activity or cultural context. The homepage and thematic collections also use credited illustrative photographs. None is evidence of an EA visit. No AI-generated photographs are used.",
         ],
       },
       {

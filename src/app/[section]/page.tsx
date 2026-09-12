@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { PageIntro } from "@/components/editorial";
 import { DraftForm } from "@/components/draft-form";
 import { editorialPages } from "@/lib/pages";
@@ -62,7 +63,7 @@ export default async function Page({ params, searchParams }: Props) {
         >
           <p>
             {correction
-              ? "Knowledge changes. Context matters. Prepare a correction or raise a concern — without sharing sensitive details."
+              ? "Knowledge changes. Context matters. Prepare a correction or raise a concern without sharing sensitive details."
               : "Tell us about an experience that is rooted in a place. A suggestion is a starting point for research, never a promise of publication."}
           </p>
         </PageIntro>
@@ -83,17 +84,17 @@ export default async function Page({ params, searchParams }: Props) {
           title="Sources & credits."
         >
           <p>
-            Every published photograph has a named creator, source page and
-            licence record. Guide imagery is editorial context, never evidence
-            that EA attended, assessed or endorses a named experience.
+            Every published photograph has a named credit, source page and
+            visible rights record. Guide imagery is editorial context, never
+            evidence that EA attended, assessed or endorses an experience.
           </p>
         </PageIntro>
         <div className="prose-layout">
           <aside className="prose-aside">
-            No AI-generated imagery is used. We avoid provider imagery unless
-            its rights record is clear. Every guide photo is labelled as either
-            illustrative context or a real photograph of the place, with its
-            limits stated below.
+            No AI-generated imagery is used. Open licences are preferred. When
+            an exceptional official-source image is the clearest honest view,
+            we identify that status instead of implying a licence we do not
+            hold. Every photograph has a depiction boundary below.
           </aside>
           <article className="prose">
             <section>
@@ -103,13 +104,15 @@ export default async function Page({ params, searchParams }: Props) {
                 {publicGuideMedia.map((media) => (
                   <li id={`media-${media.guideId}`} key={media.guideId}>
                     <a href={media.sourceUrl} target="_blank" rel="noreferrer">
-                      {media.photographer} — {media.title}
+                      {media.photographer}: {media.title}
                     </a>
                     . {media.licenseName} ({" "}
                     <a href={media.licenseUrl} target="_blank" rel="noreferrer">
-                      licence
+                      {media.rightsBasis === "documented_license"
+                        ? "licence"
+                        : "official source"}
                     </a>
-                    ); source and rights checked {media.rightsCheckedOn}.{" "}
+                    ). Source and rights checked {media.rightsCheckedOn}.{" "}
                     {media.depiction}
                   </li>
                 ))}
@@ -125,11 +128,19 @@ export default async function Page({ params, searchParams }: Props) {
                 </a>
                 . Creative Commons photographs are used under the individual
                 licences linked above. Images are resized and compressed for the
-                web and may be cropped by the responsive layout; no AI image
+                web and may be cropped by the responsive layout. No AI image
                 generation or content alteration is used. Adapted versions of CC
                 BY-SA photographs remain available under the same CC BY-SA
                 licence. No photographer, subject or place endorses Experience
                 Authority.
+              </p>
+              <p>
+                Official-source use is limited, credited in good faith and never
+                presented as ownership or endorsement. If a creator or rights
+                holder believes a credit or use should change, prepare a note on
+                the <Link href="/corrections">corrections page</Link>. We will
+                review a supported request promptly and correct or remove the
+                image where appropriate.
               </p>
               <h3>Homepage & collections.</h3>
               <ul>
@@ -139,7 +150,7 @@ export default async function Page({ params, searchParams }: Props) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Alex Jones — pottery and craft
+                    Alex Jones: pottery and craft
                   </a>
                   . Actual place unspecified; not evidence of an Alentejo
                   experience.
@@ -150,7 +161,7 @@ export default async function Page({ params, searchParams }: Props) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Meg von Haartman — Korčula harbour, Croatia
+                    Meg von Haartman: Korčula harbour, Croatia
                   </a>
                   . Not evidence of a hosted harbour experience.
                 </li>
@@ -160,7 +171,7 @@ export default async function Page({ params, searchParams }: Props) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Anne Preble — Pike Place Market, Seattle, USA
+                    Anne Preble: Pike Place Market, Seattle, USA
                   </a>
                   . Used only as a generic produce illustration, not an Italian
                   market.
@@ -171,7 +182,7 @@ export default async function Page({ params, searchParams }: Props) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Yosuke Ota — Meiji Shrine forest, Tokyo, Japan
+                    Yosuke Ota: Meiji Shrine forest, Tokyo, Japan
                   </a>
                   . Not evidence of a verified guided activity.
                 </li>

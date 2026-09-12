@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props) {
   if (!item) notFound();
   const protectedStory = item.status === "protected_visibility";
   const metadata = pageMetadata(
-    protectedStory ? "A protected story" : `${item.title} — ${item.place}`,
+    protectedStory ? "A protected story" : `${item.title} | ${item.place}`,
     protectedStory
       ? "Some stories require limited visibility. No location, holder or access details are shared here."
       : item.summary,
@@ -64,7 +64,7 @@ export default async function Experience({ params }: Props) {
         </nav>
         <div className="detail-toolbar-actions">
           <ShareButton
-            title={`${item.title} — Experience Authority`}
+            title={`${item.title} | Experience Authority`}
             text={item.summary}
             url={`https://experienceauthority.com/experiences/${item.slug}`}
           />
@@ -109,7 +109,7 @@ export default async function Experience({ params }: Props) {
         <header className="prototype-detail-copy">
           <div className="prototype-detail-kicker">
             <Link href={`/fields/${item.field}`}>{item.field}</Link>
-            <span aria-hidden="true">•</span>
+            <span aria-hidden="true">/</span>
             <span>{item.countrySlug ? item.country : "Protected story"}</span>
           </div>
           <h1 id="experience-title">{item.title}</h1>
@@ -144,7 +144,7 @@ export default async function Experience({ params }: Props) {
                 Plan your visit <span aria-hidden="true">↗</span>
                 <span className="sr-only">
                   {" "}
-                  — official website (opens a new tab)
+                  . Official website (opens a new tab)
                 </span>
               </a>
               <a className="text-link" href="#before-you-go">
@@ -189,7 +189,7 @@ export default async function Experience({ params }: Props) {
         </p>
         {item.demo ? (
           <div className="demo-callout">
-            <strong>Design preview — fictional experience.</strong> Status
+            <strong>Design preview. Fictional experience.</strong> Status
             labels demonstrate the interface, not real access. Do not plan a
             visit using this page.
           </div>

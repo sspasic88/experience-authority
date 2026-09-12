@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { Search } from "lucide-react";
 import { Photo } from "./editorial";
-import { collections, fields } from "@/lib/catalog";
 import { getExperiences } from "@/lib/data";
+import { HomeDiscovery } from "./home-discovery";
 
 export function HomeHero() {
   const items = getExperiences();
@@ -10,9 +9,6 @@ export function HomeHero() {
     items.some((item) => item.slug === slug)
       ? `/experiences/${slug}`
       : "/explore";
-  const countries = new Set(
-    items.map((item) => item.countrySlug).filter(Boolean),
-  );
   return (
     <>
       <section className="prototype-hero" aria-labelledby="home-title">
@@ -29,120 +25,95 @@ export function HomeHero() {
             </span>
           </h1>
           <p className="prototype-hero-lead">
-            Discover the ways places are lived—not simply visited. Find your way
+            Discover the ways places are lived, not simply visited. Find your way
             in through food, people, craft and the outdoors, with sources and
             practical context in every guide.
           </p>
-          <form
-            action="/explore"
-            method="get"
-            className="prototype-hero-search"
-            role="search"
-          >
-            <label className="sr-only" htmlFor="home-search">
-              Search experiences
-            </label>
-            <input
-              id="home-search"
-              name="q"
-              type="search"
-              maxLength={200}
-              placeholder="Search a place, experience or way in…"
-            />
-            <button type="submit" aria-label="Search experiences">
-              <Search size={23} aria-hidden="true" />
-            </button>
-          </form>
-          <nav
-            className="prototype-hero-interests"
-            aria-label="Find your way by interest"
-          >
-            <Link href="/explore?interest=eat-drink">Eat & drink</Link>
-            <Link href="/explore?interest=make-learn">Make</Link>
-            <Link href="/explore?interest=move-water">Move</Link>
-            <Link href="/explore?interest=swim-reset">Reset</Link>
-            <Link href="/explore">
-              All experiences <span aria-hidden="true">↗</span>
-            </Link>
-          </nav>
+          <HomeDiscovery
+            items={items.map(
+              ({ slug, title, place, country, field, summary }) => ({
+                slug,
+                title,
+                place,
+                country,
+                field,
+                summary,
+              }),
+            )}
+          />
         </div>
         <div className="prototype-hero-mosaic">
           <figure className="prototype-hero-place">
             <Link
               className="prototype-hero-image-link"
-              href={guideHref("leave-room-for-devotion")}
-              aria-label="Explore Daimon-zaka in Kumano Kodo"
+              href={guideHref("marble-steam-istanbul")}
+              aria-label="Explore Hürrem Sultan Hamam in Istanbul"
             />
             <Photo
-              src="/images/guides/leave-room-for-devotion.jpg"
-              alt="Stone steps under tall trees on the Daimon-zaka pilgrimage path, photographed by Kieran."
+              src="/images/guides/istanbul-hurrem-hammam-interior.jpg"
+              alt="White marble interior of Istanbul's Hürrem Sultan Hamam, photographed by Satayman."
               priority
               sizes="(max-width: 700px) 60vw, (max-width: 1100px) 48vw, 29vw"
             />
             <figcaption>
-              <span className="eyebrow">Place / Kumano Kodo</span>
-              <Link href={guideHref("leave-room-for-devotion")}>
-                Every place has a way in.
+              <span className="eyebrow">Place / Istanbul</span>
+              <Link href={guideHref("marble-steam-istanbul")}>
+                Marble, steam, Istanbul.
               </Link>
               <Link
                 className="prototype-photo-credit"
-                href="/credits#media-kumano-daimon-zaka"
+                href="/credits#media-istanbul-hurrem-hammam"
               >
-                Photo: Kieran <span aria-hidden="true">↗</span>
+                Photo: Satayman <span aria-hidden="true">↗</span>
               </Link>
             </figcaption>
           </figure>
           <div className="prototype-hero-sides">
-            <aside className="prototype-principle">
-              <p className="eyebrow">The EA principle</p>
-              <p>
-                Experience first.
-                <br />
-                Provider second.
-              </p>
-            </aside>
             <figure>
               <Link
                 className="prototype-hero-image-link"
-                href={guideHref("the-vineyard-at-the-table")}
-                aria-label="Explore Mayer am Pfarrplatz in Vienna"
+                href={guideHref("venice-through-an-oar")}
+                aria-label="Explore Venetian rowing in Venice"
               />
               <Photo
-                src="/images/guides/mayer-pfarrplatz-courtyard.jpg"
-                alt="Tables beneath the vines at Mayer am Pfarrplatz in Vienna, photographed by Geolina163."
+                src="/images/guides/venetian-standing-rowing.jpg"
+                alt="Standing rowers moving a traditional boat across the Venetian lagoon, photographed by Tony Hisgett."
                 sizes="(max-width: 700px) 40vw, 20vw"
               />
               <figcaption>
-                <span className="eyebrow">Taste</span>
-                <Link href={guideHref("the-vineyard-at-the-table")}>
-                  A place at the table.
+                <span className="eyebrow">Move</span>
+                <Link href={guideHref("venice-through-an-oar")}>
+                  Learn the movement behind the view.
                 </Link>
                 <Link
                   className="prototype-photo-credit"
-                  href="/credits#media-vienna-heuriger"
+                  href="/credits#media-venice-voga"
                 >
-                  Photo: Geolina163 <span aria-hidden="true">↗</span>
+                  Photo: Tony Hisgett <span aria-hidden="true">↗</span>
                 </Link>
               </figcaption>
             </figure>
             <figure>
               <Link
                 className="prototype-hero-image-link"
-                href="/collections/knowledge-in-the-hands"
-                aria-label="Explore Knowledge in the hands"
+                href={guideHref("a-bowl-of-attention")}
+                aria-label="Explore a tea session in Kyoto"
               />
               <Photo
-                src="/images/pottery.jpg"
-                alt="Hands shaping a clay vessel; illustrative craft photography by Alex Jones."
+                src="/images/guides/kyoto-tea-preparation.jpg"
+                alt="A tea host beside a steaming kettle in Japan, photographed by Rod Long."
                 sizes="(max-width: 700px) 40vw, 20vw"
               />
               <figcaption>
-                <span className="eyebrow">Make</span>
-                <Link href="/collections/knowledge-in-the-hands">
-                  Knowledge held in the hand.
+                <span className="eyebrow">Taste</span>
+                <Link href={guideHref("a-bowl-of-attention")}>
+                  A bowl of attention.
                 </Link>
-                <Link className="prototype-photo-credit" href="/credits">
-                  Illustrative · Alex Jones <span aria-hidden="true">↗</span>
+                <Link
+                  className="prototype-photo-credit"
+                  href="/credits#media-kyoto-camellia-tea"
+                >
+                  Photo: Rod Long <span aria-hidden="true">↗</span>
                 </Link>
               </figcaption>
             </figure>
@@ -151,23 +122,23 @@ export function HomeHero() {
       </section>
       <dl
         className="prototype-edition-stats"
-        aria-label="Current editorial coverage"
+        aria-label="What every Experience Authority guide gives you"
       >
         <div>
-          <dt>Public-source guides</dt>
-          <dd>{items.length}</dd>
+          <dt>Original guides</dt>
+          <dd>Independent</dd>
         </div>
         <div>
-          <dt>Countries represented</dt>
-          <dd>{countries.size}</dd>
+          <dt>Sources you can check</dt>
+          <dd>Traceable</dd>
         </div>
         <div>
-          <dt>Experience fields</dt>
-          <dd>{fields.length}</dd>
+          <dt>Access made clear</dt>
+          <dd>Practical</dd>
         </div>
         <div>
-          <dt>Editorial collections</dt>
-          <dd>{collections.length}</dd>
+          <dt>No paid prominence</dt>
+          <dd>Editorial</dd>
         </div>
       </dl>
     </>

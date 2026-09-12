@@ -134,7 +134,7 @@ export function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Experience Authority</span>
-        <span>Experience first. Provider second.</span>
+        <span>Experience first. Context always.</span>
         <Link href="/privacy">Privacy & local storage</Link>
       </div>
     </footer>

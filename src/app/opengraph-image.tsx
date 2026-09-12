@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const alt = "Experience Authority — Experience the world from within.";
+export const alt = "Experience Authority. Experience the world from within.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 const regular = readFile(
@@ -72,7 +72,7 @@ export default async function Image() {
           fontSize: 18,
         }}
       >
-        <span>Experience first. Provider second.</span>
+        <span>Experience first. Context always.</span>
         <span>experienceauthority.com</span>
       </div>
     </div>,

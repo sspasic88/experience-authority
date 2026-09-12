@@ -16,8 +16,15 @@ test("every published guide has a local, credited photograph with a depiction bo
     assert.equal(guide.imageAlt, media.alt);
     assert.ok(media.alt.length > 30);
     assert.ok(media.photographer && media.title && media.depiction);
+    assert.ok(
+      ["documented_license", "official_source"].includes(media.rightsBasis),
+    );
+    assert.equal(media.visualReview.outcome, "approved");
+    assert.ok(media.visualReview.rationale.length > 40);
     assert.equal(new URL(media.sourceUrl).protocol, "https:");
     assert.equal(new URL(media.licenseUrl).protocol, "https:");
+    if (media.rightsBasis === "official_source")
+      assert.match(media.licenseName, /not independently cleared/i);
     const file = new URL(`../public${media.src}`, import.meta.url);
     assert.ok(existsSync(file));
     assert.ok(

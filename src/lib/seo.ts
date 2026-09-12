@@ -6,7 +6,7 @@ import { guideMediaFor } from "./media";
 export const SITE_ORIGIN = "https://experienceauthority.com";
 export const SITE_NAME = "Experience Authority";
 export const SITE_DESCRIPTION =
-  "A global selection of locally rooted experiences. Experience first. Provider second.";
+  "A global selection of locally rooted experiences. Experience first. Context always.";
 type Environment = Record<string, string | undefined>;
 
 /** Explicit release switches. Preview hosts, demo builds and missing settings fail closed. */
@@ -153,10 +153,14 @@ export function guideStructuredData(item: PublicExperience) {
         contentUrl: canonicalUrl(media.src),
         name: media.title,
         caption: media.depiction,
-        creditText: `Photo: ${media.photographer} · ${media.licenseName}. Resized for the web; responsive cropping.`,
+        creditText: `Photo: ${media.photographer} · ${media.licenseName}. Resized for the web with responsive cropping.`,
         creator: { "@type": "Person", name: media.photographer },
-        license: media.licenseUrl,
-        acquireLicensePage: media.sourceUrl,
+        ...(media.rightsBasis === "documented_license"
+          ? {
+              license: media.licenseUrl,
+              acquireLicensePage: media.sourceUrl,
+            }
+          : { acquireLicensePage: media.sourceUrl }),
       },
     ],
   };

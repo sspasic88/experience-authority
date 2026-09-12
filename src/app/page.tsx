@@ -13,7 +13,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata = pageMetadata(
-  "Experience Authority — Experience the world from within.",
+  "Experience Authority | Experience the world from within.",
   SITE_DESCRIPTION,
   "/",
 );
@@ -21,9 +21,9 @@ export const metadata = pageMetadata(
 export default function Home() {
   const experiences = getExperiences();
   const familiarWaysIn = [
-    "a-bowl-of-attention",
-    "venice-through-an-oar",
-    "a-city-in-the-water",
+    "mexico-city-grown-on-water",
+    "marble-steam-istanbul",
+    "the-vineyard-at-the-table",
   ].flatMap((slug) => {
     const item = experiences.find((experience) => experience.slug === slug);
     return item ? [item] : [];
@@ -153,7 +153,7 @@ export default function Home() {
               worth protecting from attention altogether.
             </p>
             <p>
-              Our role is to help you understand the difference — with clear
+              Our role is to help you understand the difference, with clear
               evidence, local knowledge and respect for the people who hold it.
             </p>
             <Link className="button button-paper" href="/method">

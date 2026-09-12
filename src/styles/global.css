@@ -630,12 +630,6 @@ button {
   border-radius: var(--ea-radius-status);
   white-space: nowrap;
 }
-.status-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: currentColor;
-}
 .status-selected_open {
   color: var(--ea-status-open);
   background: var(--ea-status-open-bg);

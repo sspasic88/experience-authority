@@ -21,14 +21,14 @@ export function PassportReturn() {
         <p>
           {ready && count
             ? "Your saved experiences are waiting in this browser. Compare them, arrange your days, or share a plan with someone."
-            : "Save what catches your eye, arrange it in your Passport, and return when you’re ready to go. No account needed."}
+            : "Save guides, arrange them by day, add travel notes, then download or share your plan. No account needed."}
         </p>
       </div>
       <Link
         className="button button-dark"
         href={ready && count ? "/passport?view=plan" : "/passport"}
       >
-        {ready && count ? "Continue my journey" : "Meet your Passport"} ↗
+        {ready && count ? "Continue my journey" : "Start a journey"} ↗
       </Link>
     </aside>
   );

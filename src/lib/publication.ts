@@ -50,7 +50,14 @@ export function canPublishGuide(
         media.photographer.trim() &&
         media.title.trim() &&
         media.licenseName.trim() &&
-        validDate(media.rightsCheckedOn),
+        ["documented_license", "official_source"].includes(
+          media.rightsBasis,
+        ) &&
+        validDate(media.rightsCheckedOn) &&
+        media.visualReview.outcome === "approved" &&
+        validDate(media.visualReview.checkedOn) &&
+        media.visualReview.checkedOn <= today &&
+        media.visualReview.rationale.trim().length > 40,
     ) &&
     p.kernel.trim() &&
     p.rootedness.trim() &&

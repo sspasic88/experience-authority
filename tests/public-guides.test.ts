@@ -18,8 +18,8 @@ import { guideMediaFor, publicGuideMedia } from "../src/lib/media";
 
 const today = "2026-09-12";
 const sample = publicGuides.find((p) => p.id === "kumano-daimon-zaka")!;
-test("guide set is nine distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 9);
+test("guide set contains twelve distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 12);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -28,13 +28,14 @@ test("guide set is nine distinct, sourced public experiences, not Selected or de
     new Set(publicGuides.map((p) => p.slug)).size,
     publicGuides.length,
   );
-  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 8);
+  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 11);
   for (const p of publicGuides) {
     assert.equal(canPublishGuide(p, today), true, p.slug);
     assert.equal(p.status, "public_guide");
     assert.equal(p.demo, false);
     const media = guideMediaFor(p.id);
     assert.ok(media, `missing media record: ${p.slug}`);
+    assert.equal(media?.visualReview.outcome, "approved");
     assert.equal(p.image, media?.src);
     assert.equal(p.imageAlt, media?.alt);
     assert.ok(

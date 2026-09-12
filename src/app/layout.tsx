@@ -26,7 +26,7 @@ const sourceSans = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_ORIGIN),
   title: {
-    default: "Experience Authority — Experience the world from within.",
+    default: "Experience Authority | Experience the world from within.",
     template: "%s | Experience Authority",
   },
   description: SITE_DESCRIPTION,
@@ -52,7 +52,7 @@ export default async function RootLayout({
         <PassportProvider ids={getExperiences().map((e) => e.id)}>
           <aside className="preview-notice" aria-label="Editorial edition">
             <span className="preview-dot" />
-            {demoMode ? "DESIGN PREVIEW" : "PUBLIC-SOURCE EDITION"}
+            {demoMode ? "DESIGN PREVIEW" : "INDEPENDENT TRAVEL EDITORIAL"}
             <span className="preview-notice-detail">
               {demoMode
                 ? "Demo stories. No verified access or bookings."

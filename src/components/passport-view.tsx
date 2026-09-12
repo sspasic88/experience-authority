@@ -192,7 +192,7 @@ export function PassportView({
         <EmptyState title="A blank page. A world of possibilities.">
           <p>
             Use the bookmark on any story to keep it here. Your Passport is
-            stored only in this browser — clearing its data will remove it.
+            stored only in this browser. Clearing its data will remove it.
           </p>
           <Link href="/explore" className="button">
             Find your first story ↗

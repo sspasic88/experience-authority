@@ -14,7 +14,6 @@ export function StatusBadge({
 }) {
   return (
     <span className={`status-badge status-${status}`}>
-      <span className="status-dot" aria-hidden="true" />
       {statusLabels[status]}
       {demo && <span className="status-demo"> · demo</span>}
     </span>

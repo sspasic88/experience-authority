@@ -61,7 +61,7 @@ export function tripText(
     const item = items.find((item) => item.id === entry.id);
     if (!item) continue;
     lines.push(
-      `Day ${entry.day} — ${item.title}`,
+      `Day ${entry.day} | ${item.title}`,
       `${item.place}, ${item.country} · ${item.duration}`,
       `https://experienceauthority.com/experiences/${item.slug}`,
     );

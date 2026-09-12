@@ -12,24 +12,76 @@ export type GuideMedia = {
   sourceUrl: string;
   licenseName: string;
   licenseUrl: string;
+  rightsBasis: "documented_license" | "official_source";
   rightsCheckedOn: string;
+  visualReview: {
+    outcome: "approved";
+    checkedOn: string;
+    rationale: string;
+  };
   depiction: string;
 };
 
 export const publicGuideMedia: readonly GuideMedia[] = [
   {
+    guideId: "istanbul-hurrem-hammam",
+    src: "/images/guides/istanbul-hurrem-hammam-interior.jpg",
+    alt: "White marble bathing room beneath a high domed ceiling inside Istanbul's Hürrem Sultan Hamam.",
+    title: "Hurrem Sultan Hamam, Roxelana Bath Interior",
+    photographer: "Satayman",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Hurrem_Sultan_Hamam,_Roxelana_Bath_Interior.jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "Architectural precision, restrained palette and strong vertical composition.",
+    },
+    depiction:
+      "The restored interior of the actual Hürrem Sultan Hamam, photographed in 2011. It does not document a current bathing session or an EA visit.",
+  },
+  {
+    guideId: "xochimilco-kalmekak-chinampa",
+    src: "/images/guides/xochimilco-chinampa-trajinera.jpg",
+    alt: "A boatman poles a traditional Xochimilco boat through golden mist at sunrise.",
+    title: "Man on a Boat on a Foggy Morning in Mexico",
+    photographer: "Fausto Hernández",
+    sourceUrl:
+      "https://www.pexels.com/photo/man-on-a-boat-on-a-foggy-morning-in-mexico-11491777/",
+    licenseName: "Pexels License",
+    licenseUrl: "https://www.pexels.com/license/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "Exceptional dawn light, clear local watercraft and a focused human scale.",
+    },
+    depiction:
+      "A traditional passenger boat on the Xochimilco canals at dawn. Place and watercraft context only. It is not a Kalmekak tour, a chinampa activity or an EA visit.",
+  },
+  {
     guideId: "kyoto-camellia-tea",
     src: "/images/guides/kyoto-tea-preparation.jpg",
-    alt: "A host preparing tea beside a kettle and tea utensils in a Kyoto tea room.",
-    title: "A Japanese Tea Ceremony's Host Preparing Tea — Kyoto, 2023",
-    photographer: "Atticus nguyen",
+    alt: "A tea host works beside a steaming iron kettle in a softly lit Japanese room.",
+    title: "Woman prepares traditional tea in a serene setting",
+    photographer: "Rod Long",
     sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:A_Japanese_Tea_Ceremony%27s_Host_Preparing_Tea_-_Kyoto,_2023.jpg",
-    licenseName: "CC BY-SA 4.0",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+      "https://unsplash.com/photos/woman-prepares-traditional-tea-in-a-serene-setting--Sc01q9zBbw",
+    licenseName: "Unsplash License",
+    licenseUrl: "https://unsplash.com/license",
+    rightsBasis: "documented_license",
     rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "Controlled light, visible steam and a close view of skilled preparation.",
+    },
     depiction:
-      "Tea preparation photographed in Kyoto in 2023. Cultural context only: the source does not identify the host or room as Camellia Flower Teahouse. Not an EA visit.",
+      "Traditional tea preparation photographed in Japan. Cultural context only. The source does not identify the host or room as Camellia Flower Teahouse in Kyoto. Not an EA visit.",
   },
   {
     guideId: "tsaghkunk-lavash",
@@ -40,7 +92,13 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Lavash_baking.jpg",
     licenseName: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    rightsBasis: "documented_license",
     rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "A dramatic shaft of daylight turns a real working room into a memorable scene.",
+    },
     depiction:
       "Lavash preparation at Tsaghkunk Restaurant & Glkhatun, identified by the photographer and taken in 2022. A historical view of the actual location, not proof of today’s programme or an EA visit.",
   },
@@ -53,36 +111,35 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     sourceUrl: "https://www.flickr.com/photos/hisgett/7263217180/",
     licenseName: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+    rightsBasis: "documented_license",
     rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "Quiet evening light, a clean horizon and the rowing movement held at human scale.",
+    },
     depiction:
       "Venetian standing rowing, photographed in Venice in 2012. Activity context, not a Row Venice lesson or an EA visit.",
   },
   {
     guideId: "luang-prabang-natural-dye",
     src: "/images/guides/laos-natural-dye-materials.jpg",
-    alt: "Natural dye materials and coloured yarn samples arranged in baskets in Laos.",
-    title: "P1070328 — Laos. Natural dyes for weaving.",
-    photographer: "lin padgham",
-    sourceUrl: "https://www.flickr.com/photos/linpadgham/8209020390/",
-    licenseName: "CC BY 2.0",
-    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
-    rightsCheckedOn: "2026-09-12",
-    depiction:
-      "Natural dye materials photographed in Laos in 2012. Craft context; the source does not identify this as Ock Pop Tok's class or premises.",
-  },
-  {
-    guideId: "reykjavik-sundholl",
-    src: "/images/guides/sundholl-reykjavik-exterior.jpg",
-    alt: "The white facade and entrance of Sundhöll Reykjavíkur swimming pool in Reykjavík.",
-    title: "Sundhöll Reykjavíkur 1.jpg",
-    photographer: "Akigka",
+    alt: "Fine white silk threads fall through a traditional wooden loom in Laos.",
+    title: "A close up of a weaving machine with long white hair",
+    photographer: "Marco J Haenssgen",
     sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:Sundh%C3%B6ll_Reykjav%C3%ADkur_1.jpg",
-    licenseName: "CC BY-SA 4.0",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+      "https://unsplash.com/photos/a-close-up-of-a-weaving-machine-with-long-white-hair-MDXwphHlpww",
+    licenseName: "Unsplash License",
+    licenseUrl: "https://unsplash.com/license",
+    rightsBasis: "documented_license",
     rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "Tactile detail, deliberate depth of field and a restrained material palette.",
+    },
     depiction:
-      "The actual Sundhöll Reykjavíkur building, photographed in 2022. Exterior view, not a photograph of the bathing experience or an EA visit.",
+      "A traditional loom photographed in Laos. Textile context only. It does not depict natural dyeing, Ock Pop Tok's class or its premises.",
   },
   {
     guideId: "vienna-heuriger",
@@ -94,7 +151,13 @@ export const publicGuideMedia: readonly GuideMedia[] = [
       "https://commons.wikimedia.org/wiki/File:Heuriger_Mayer_am_Pfarrplatz_3.jpg",
     licenseName: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    rightsBasis: "documented_license",
     rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "Lush overhead canopy, bold place-specific colour and a strong vertical frame.",
+    },
     depiction:
       "The actual courtyard of Mayer am Pfarrplatz, photographed in 2025. It does not document an EA visit.",
   },
@@ -102,28 +165,20 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     guideId: "grenada-belmont-cacao",
     src: "/images/guides/belmont-cocoa-drying.jpg",
     alt: "Cocoa beans spread across raised drying tables beneath a translucent roof in Grenada.",
-    title: "DSC_0364 — Grenada Chocolate Company",
+    title: "DSC_0364, Grenada Chocolate Company",
     photographer: "Tom Coady",
     sourceUrl: "https://www.flickr.com/photos/tomcoady/17060376307/",
     licenseName: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+    rightsBasis: "documented_license",
     rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "A rigorous central perspective makes the cacao process immediately legible.",
+    },
     depiction:
       "Cocoa drying in Grenada, photographed in 2015 and tagged Belmont Estate by the photographer. The original caption is “Grenada Chocolate Company”. Historical process context, not a record of today's tour or an EA visit.",
-  },
-  {
-    guideId: "tampere-rajaportti",
-    src: "/images/guides/make-room-in-the-steam.jpg",
-    alt: "Rajaportti Sauna in Tampere on a snowy day.",
-    title: "Rajaportin sauna 2017-03-04 15.01.56.jpg",
-    photographer: "Jkangasv",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:Rajaportin_sauna_2017-03-04_15.01.56.jpg",
-    licenseName: "CC BY-SA 4.0",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
-    rightsCheckedOn: "2026-09-12",
-    depiction:
-      "A real exterior photograph of Rajaportti Sauna, taken in 2017. It does not document an EA visit or endorse Experience Authority.",
   },
   {
     guideId: "kumano-daimon-zaka",
@@ -135,9 +190,76 @@ export const publicGuideMedia: readonly GuideMedia[] = [
       "https://unsplash.com/photos/a-set-of-steps-leading-up-to-a-shrine-in-the-woods-8Dp5RmOWkvo",
     licenseName: "Unsplash License",
     licenseUrl: "https://unsplash.com/license",
+    rightsBasis: "documented_license",
     rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "Layered depth, rain-dark stone and subdued forest light create a strong sense of entry.",
+    },
     depiction:
       "A real photograph of the Daimon-zaka pilgrim route. It does not document EA participation, worship or special access.",
+  },
+  {
+    guideId: "tampere-rajaportti",
+    src: "/images/guides/rajaportti-winter.jpg",
+    alt: "Rajaportti Sauna glows beside a snowy Tampere street while bathers cool in the courtyard at night.",
+    title: "Rajaportti sauna, outside overview in winter",
+    photographer: "Alexander Lembke",
+    sourceUrl:
+      "https://visittampere.fi/en/destination/rajaportti-sauna-oldest-public-sauna-in-finland/",
+    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseUrl:
+      "https://visittampere.fi/en/destination/rajaportti-sauna-oldest-public-sauna-in-finland/",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "Snow, warm windows and the visible cooling courtyard make the public ritual legible at a glance.",
+    },
+    depiction:
+      "The actual Rajaportti Sauna and cooling courtyard in winter. Visit Tampere identifies Alexander Lembke as the photographer. It is an official destination image, not an EA visit. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "reykjavik-sundholl",
+    src: "/images/guides/reykjavik-sundholl-pool.jpg",
+    alt: "Outdoor swimming lanes and hot pools at Sundhöll Reykjavík beneath the evening sun.",
+    title: "Overview of the lower outdoor area at Sundhöll",
+    photographer: "City of Reykjavík",
+    sourceUrl: "https://reykjavik.is/en/sundholl-reykjavik-pool",
+    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://reykjavik.is/en/sundholl-reykjavik-pool",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "Clear geometry, bright water and everyday bathers present the civic pool without spectacle.",
+    },
+    depiction:
+      "The actual outdoor area of Sundhöll Reykjavík Pool, published by the City of Reykjavík. The page does not name an individual photographer. It is not an EA visit. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "doolin-gus-oconnors-session",
+    src: "/images/guides/doolin-fiddlers.jpg",
+    alt: "Two fiddle players concentrate beside a candle during a traditional music session at Gus O'Connor's in Doolin.",
+    title: "Fiddle session at Gus O'Connor's Pub",
+    photographer: "Gus O'Connor's Pub",
+    sourceUrl:
+      "https://www.gusoconnorsdoolin.com/traditional-irish-music",
+    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseUrl:
+      "https://www.gusoconnorsdoolin.com/traditional-irish-music",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "Intimate framing, warm natural light and concentrated musicians convey listening rather than performance spectacle.",
+    },
+    depiction:
+      "A fiddle session at the actual pub, published on Gus O'Connor's current music page. The page does not name an individual photographer. It is not an EA visit or a guarantee of a particular line-up. Reuse rights have not been independently cleared.",
   },
 ];
 
