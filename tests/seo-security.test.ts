@@ -14,6 +14,7 @@ import { guideMediaFor } from "../src/lib/media";
 import { sitemapEntries } from "../src/lib/discovery";
 import { contentSecurityPolicy, isTrainingBot } from "../src/lib/security";
 import type { PublicExperience } from "../src/lib/catalog";
+import { analyticsMeasurementId } from "../src/lib/analytics";
 
 const launch = {
   NODE_ENV: "production",
@@ -164,6 +165,8 @@ test("production script policy requires a nonce with no eval or inline exception
   assert.ok(!scripts.includes("unsafe-inline"));
   assert.ok(!policy.includes("unsafe-eval"));
   assert.ok(!policy.includes("mcp.figma.com"));
+  assert.ok(policy.includes("https://www.googletagmanager.com"));
+  assert.ok(policy.includes("https://www.google-analytics.com"));
   assert.ok(policy.includes("frame-ancestors 'none'"));
   assert.ok(
     contentSecurityPolicy("abcdefghijklmnopqrstuvwxyz012345", true).includes(
@@ -171,6 +174,14 @@ test("production script policy requires a nonce with no eval or inline exception
     ),
   );
   assert.throws(() => contentSecurityPolicy("bad'; script-src *", false));
+});
+
+test("analytics configuration fails closed without a separate valid GA4 stream", () => {
+  assert.equal(analyticsMeasurementId(), null);
+  assert.equal(analyticsMeasurementId(""), null);
+  assert.equal(analyticsMeasurementId("UA-123"), null);
+  assert.equal(analyticsMeasurementId("G-ABC<script>"), null);
+  assert.equal(analyticsMeasurementId(" g-ab12cd34 "), "G-AB12CD34");
 });
 
 test("training crawler preference does not block search and user-directed agents", () => {

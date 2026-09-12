@@ -68,7 +68,7 @@ Visitor tools now include a private day-by-day journey draft, travel/stay notes,
 
 Public-source badges, source notes with dates and outbound official links, credited Compass photography, correct normal-mode copy on Home/Compass/detail/Passport/Places/Fields/Collections/About/Method/Transparency/Credits. Compass discovery now starts with traveller intent (for example Eat & drink, Move & water, Make & learn) rather than an internal editorial-status filter; it only exposes lenses with real current coverage. Places now display actual current guide coverage. Old demos remain explicit opt-in only. Compass naming remains approved.
 
-No changes to IA, bookings, subscriptions or purchases. Public production uses its own GitHub/Vercel path; no emails, forms or customer accounts are connected. SEO production gates, nonce CSP and existing browser/data protections remain. Protected Preview deployments stay noindex.
+No changes to IA, bookings, subscriptions or purchases. Public production uses its own GitHub/Vercel path; no emails, forms or customer accounts are connected. A separate EA GA4 integration is configured in production and remains inert for each visitor until that visitor grants analytics consent. SEO production gates, nonce CSP and existing browser/data protections remain. Protected Preview deployments stay noindex.
 
 ## Next safe steps
 

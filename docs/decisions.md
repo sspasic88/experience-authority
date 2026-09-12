@@ -3,6 +3,7 @@
 Recorded 12 September 2026. User decisions in this task override the supplied reference pack where they conflict.
 
 - Completely independent project, repository, deployment, database, authentication, admin and analytics. No Innovation Authority access or infrastructure reuse.
+- Google Analytics uses a separate EA GA4 property and web stream only. Basic consent keeps the Google tag entirely absent until the visitor opts in. Advertising signals remain denied. Search text, URL query parameters, Passport contents and private journey fields are excluded from events.
 - Native Next.js App Router and strict TypeScript, GitHub and a separate Vercel project. Final domain experienceauthority.com.
 - A new Figma design file is the editable visual-system source, in the Innovation Authority team as explicitly selected by the user: https://www.figma.com/design/dKCURpmjIMSDRlMAlYx33P
 - Brand relationship clarified: Experience Authority is a connected spin-off of Innovation Authority. This does not change the approved independent repository, deployment and application infrastructure.

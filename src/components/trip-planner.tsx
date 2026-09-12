@@ -13,6 +13,7 @@ import {
   type TripStage,
   type Trip,
 } from "@/lib/trip";
+import { trackEaEvent } from "@/lib/analytics";
 
 const storageKey = "ea:trip:v1";
 export function TripPlanner({ items }: { items: PublicExperience[] }) {
@@ -69,6 +70,7 @@ export function TripPlanner({ items }: { items: PublicExperience[] }) {
     link.href = href;
     link.download = "my-ea-journey.txt";
     link.click();
+    trackEaEvent("journey_export", { method: "text_download" });
     setTimeout(() => URL.revokeObjectURL(href), 1000);
   }
   const available = items.filter(
@@ -110,7 +112,10 @@ export function TripPlanner({ items }: { items: PublicExperience[] }) {
           <select
             value=""
             onChange={(event) => {
-              if (event.target.value)
+              if (event.target.value) {
+                trackEaEvent("journey_add_guide", {
+                  guide_id: event.target.value,
+                });
                 update({
                   ...trip,
                   entries: [
@@ -118,6 +123,7 @@ export function TripPlanner({ items }: { items: PublicExperience[] }) {
                     { id: event.target.value, day: 1, note: "" },
                   ],
                 });
+              }
             }}
           >
             <option value="">Choose from your Passport…</option>
@@ -277,7 +283,10 @@ export function TripPlanner({ items }: { items: PublicExperience[] }) {
         <button
           type="button"
           className="button button-paper"
-          onClick={() => window.print()}
+          onClick={() => {
+            trackEaEvent("journey_export", { method: "print" });
+            window.print();
+          }}
         >
           Print or save as PDF ↗
         </button>

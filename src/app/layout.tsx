@@ -11,6 +11,8 @@ import "@/styles/journal.css";
 import { Header, Footer } from "@/components/chrome";
 import { PassportProvider } from "@/components/passport-provider";
 import { demoMode, getExperiences } from "@/lib/data";
+import { analyticsMeasurementId } from "@/lib/analytics";
+import { AnalyticsConsent } from "@/components/analytics-consent";
 
 const sourceSans = localFont({
   src: [
@@ -38,6 +40,9 @@ export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const nonce = (await headers()).get("x-nonce") || undefined;
+  const measurementId = analyticsMeasurementId(
+    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
+  );
   return (
     <html lang="en" className={sourceSans.variable}>
       <body>
@@ -63,7 +68,8 @@ export default async function RootLayout({
           </aside>
           <Header />
           <main id="main">{children}</main>
-          <Footer />
+          {measurementId && <AnalyticsConsent measurementId={measurementId} />}
+          <Footer analyticsAvailable={Boolean(measurementId)} />
         </PassportProvider>
       </body>
     </html>

@@ -12,6 +12,7 @@ import {
   type FinderItem,
   type FinderQuery,
 } from "@/lib/experience-finder";
+import { trackEaEvent } from "@/lib/analytics";
 
 const starterDirections: { label: string; next: FinderQuery }[] = [
   {
@@ -174,6 +175,7 @@ export function CompassBrowser({
         role="search"
         onSubmit={(event) => {
           event.preventDefault();
+          trackEaEvent("compass_search");
           document.getElementById("compass-results")?.focus();
         }}
       >

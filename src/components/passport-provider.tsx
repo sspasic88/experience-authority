@@ -16,6 +16,7 @@ import {
   type PassportStage,
 } from "@/lib/passport";
 import type { PublicExperience } from "@/lib/catalog";
+import { trackEaEvent } from "@/lib/analytics";
 
 const key = "ea:passport:v1";
 type Context = {
@@ -84,6 +85,10 @@ export function PassportProvider({
         ? "Saved to your Passport on this device."
         : "Removed from your Passport.",
     );
+    trackEaEvent(stage ? "passport_save" : "passport_remove", {
+      guide_id: id,
+      ...(stage ? { passport_stage: stage } : {}),
+    });
     persist({ ...data, saved });
   }
   function toggleCompare(id: string) {
@@ -97,6 +102,10 @@ export function PassportProvider({
     const compare = data.compare.includes(id)
       ? data.compare.filter((x) => x !== id)
       : [...data.compare, id];
+    trackEaEvent(
+      compare.includes(id) ? "comparison_add" : "comparison_remove",
+      { guide_id: id, comparison_size: compare.length },
+    );
     setMessage(
       `${compare.length} ${compare.length === 1 ? "experience" : "experiences"} in your comparison.`,
     );

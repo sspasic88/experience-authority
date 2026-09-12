@@ -139,7 +139,7 @@ export const editorialPages: Record<
     intro:
       "No account is required. Your Passport and optional journey plan stay in this browser, including any notes you choose to write.",
     aside:
-      "No analytics or advertising scripts are included in the application. This public edition does not provide user accounts or cloud storage.",
+      "Optional audience measurement stays off until you allow it. This public edition does not provide advertising, user accounts or cloud storage.",
     sections: [
       {
         title: "Stored on this device.",
@@ -158,9 +158,17 @@ export const editorialPages: Record<
         ],
       },
       {
+        title: "Optional audience measurement.",
+        paragraphs: [
+          "EA offers a clear analytics choice. Google Analytics does not load and no information is sent to Google before you choose Allow analytics. If you choose Do not use analytics, that choice is stored only in this browser and the Google tag remains absent.",
+          "When allowed, EA measures page paths and a small set of product actions such as saving a guide, comparing guides, using search, sharing and exporting a journey. Search text, Passport contents, journey names, private notes and URL query parameters are not sent. Advertising storage, advertising user data, advertising personalisation and Google signals remain disabled.",
+          "Google Analytics may use first-party identifiers such as _ga after consent. EA keeps event and user data for 14 months so seasonal and year-to-year use can be compared. The separate EA property is not combined with advertising products. Enhanced Measurement, Google Signals, precise location and device collection, and advertising personalisation are disabled. Use Analytics choices in the footer to change your decision. Turning analytics off updates consent, removes accessible EA analytics cookies and reloads the page without the Google tag.",
+        ],
+      },
+      {
         title: "Hosting and future services.",
         paragraphs: [
-          "The application does not add tracking, but the hosting service may process ordinary request logs needed to deliver and secure the site. This website must be updated with the operator and applicable privacy details before any account, analytics, submission or commercial service is introduced.",
+          "The hosting service may process ordinary request logs needed to deliver and secure the site. Any future account, submission, advertising or commercial service requires a separate review and an updated notice before introduction.",
         ],
       },
     ],
@@ -244,5 +252,5 @@ editorialPages.privacy.sections.push({
     "Subject to applicable law, contact us to request access, correction, deletion, restriction or portability where applicable. You may object to legitimate-interest processing. You can also complain to the UK Information Commissioner’s Office or the relevant local data-protection authority.",
   ],
 });
-editorialPages.privacy.sections[2].paragraphs[0] =
-  "The application does not add analytics or advertising tracking. The hosting service may process ordinary request logs needed for delivery and security, including IP address, URL, browser details and time. New account, analytics, submission or commercial services will require an updated notice before introduction.";
+editorialPages.privacy.sections[3].paragraphs[0] =
+  "The hosting service may process ordinary request logs needed for delivery and security, including IP address, URL, browser details and time. New account, submission, advertising or commercial services require an updated notice before introduction.";

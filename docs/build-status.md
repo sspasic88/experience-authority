@@ -13,6 +13,7 @@ Current local release candidate: 48 guides across 34 countries and territories, 
 - Public-data allowlist, protected-narrative boundary and tested publication policy functions.
 - Per-route SEO/social metadata, brand share image, JSON-LD, production sitemap with real guide review dates, indexable production robots and noindex preview rules.
 - Nonce-based production script CSP, response security headers and training crawler preferences.
+- Privacy-first GA4 integration with Basic Consent Mode, explicit allow and deny choices, later revocation, query-free page paths and a bounded event set. A separate EA Measurement ID is configured for production.
 - Forty-eight original public-source guides, separate from Selected and demo records; dated source notes, official access links, evidence boundaries, credited real photographs and expiry checks. Normal mode serves this content, not the eight fictional examples. See content-edition.md.
 - Clickable homepage photographs, full-size guide-photo dialogs and user-initiated sharing; the slash aligns optically with the two name rows, with the tagline separately underneath.
 
@@ -22,4 +23,4 @@ Current local release candidate: 48 guides across 34 countries and territories, 
 
 ## Not provisioned / not claimed
 
-No production database, authentication, editorial admin, live submissions, EA Selected catalogue, booking, payments or analytics. The separate public repository is https://github.com/sspasic88/experience-authority and the Vercel project is connected to experienceauthority.com. No existing Innovation Authority code or deployment has been modified. See launch-checklist.md for post-launch work.
+No production database, authentication, editorial admin, live submissions, EA Selected catalogue, booking or payments. Analytics collection remains off for each visitor until that visitor explicitly allows it. The separate public repository is https://github.com/sspasic88/experience-authority and the Vercel project is connected to experienceauthority.com. No existing Innovation Authority code or deployment has been modified. See launch-checklist.md for post-launch work.

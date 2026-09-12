@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, MapPin, Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { discoveryProfiles } from "@/lib/experience-finder";
+import { trackEaEvent } from "@/lib/analytics";
 
 type DiscoveryItem = {
   slug: string;
@@ -111,6 +112,7 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
         method="get"
         className="prototype-hero-search"
         role="search"
+        onSubmit={() => trackEaEvent("home_search")}
       >
         <label className="sr-only" htmlFor="home-search">
           Search by place or experience

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, Bookmark, Menu, X } from "lucide-react";
 import { usePassport } from "./passport-provider";
+import { AnalyticsPreferencesButton } from "./analytics-consent";
 export function Wordmark({ light = false }: { light?: boolean }) {
   return (
     <Link
@@ -96,7 +97,11 @@ export function Header() {
     </header>
   );
 }
-export function Footer() {
+export function Footer({
+  analyticsAvailable = false,
+}: {
+  analyticsAvailable?: boolean;
+}) {
   return (
     <footer className="site-footer">
       <div className="footer-main">
@@ -146,6 +151,7 @@ export function Footer() {
           Published by Innovation Authority Ltd · Publisher & contact
         </Link>
         <Link href="/privacy">Privacy & local storage</Link>
+        {analyticsAvailable && <AnalyticsPreferencesButton />}
       </div>
     </footer>
   );

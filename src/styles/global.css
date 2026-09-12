@@ -1023,6 +1023,78 @@ button {
     display: none;
   }
 }
+
+.analytics-consent {
+  position: fixed;
+  z-index: 80;
+  right: 24px;
+  bottom: 24px;
+  width: min(460px, calc(100vw - 48px));
+  padding: 28px;
+  border-top: 4px solid var(--ea-vermilion);
+  background: var(--ea-night);
+  color: white;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+}
+.analytics-consent .eyebrow {
+  color: var(--ea-vermilion);
+}
+.analytics-consent h2 {
+  margin-top: 14px;
+  font-size: clamp(30px, 3vw, 42px);
+  line-height: 1;
+}
+.analytics-consent > p:not(.eyebrow) {
+  margin-top: 17px;
+  color: #d6dde0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+.analytics-consent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 23px;
+}
+.analytics-consent-actions .button {
+  min-height: 44px;
+}
+.analytics-consent > a {
+  display: inline-block;
+  margin-top: 19px;
+  color: white;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.analytics-preferences-button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.analytics-preferences-button:hover,
+.analytics-preferences-button:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 600px) {
+  .analytics-consent {
+    right: 12px;
+    bottom: 12px;
+    width: calc(100vw - 24px);
+    padding: 22px;
+  }
+  .analytics-consent-actions {
+    display: grid;
+  }
+  .analytics-consent-actions .button {
+    width: 100%;
+  }
+}
 .status-selected_context_required {
   color: var(--ea-status-context);
   background: var(--ea-status-context-bg);

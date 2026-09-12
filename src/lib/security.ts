@@ -32,13 +32,13 @@ export function contentSecurityPolicy(
     throw new Error("Invalid CSP nonce");
   return [
     "default-src 'self'",
-    `script-src 'self' 'nonce-${nonce}' 'strict-dynamic'${development ? " 'unsafe-eval'" : ""}`,
+    `script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https://www.googletagmanager.com${development ? " 'unsafe-eval'" : ""}`,
     "script-src-attr 'none'",
     // Next Image and React use style attributes. Scripts remain nonce-only.
     "style-src 'self' 'unsafe-inline'",
-    "img-src 'self' data: blob:",
+    "img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com",
     "font-src 'self'",
-    `connect-src 'self'${development ? " ws: wss: https://mcp.figma.com" : ""}`,
+    `connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com${development ? " ws: wss: https://mcp.figma.com" : ""}`,
     "object-src 'none'",
     "base-uri 'none'",
     "frame-ancestors 'none'",

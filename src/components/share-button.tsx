@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Share2 } from "lucide-react";
+import { trackEaEvent } from "@/lib/analytics";
 
 export function ShareButton({
   title,
@@ -23,6 +24,7 @@ export function ShareButton({
     if (navigator.share) {
       try {
         await navigator.share({ title, text, url });
+        trackEaEvent("share_complete", { method: "native" });
         return;
       } catch (error) {
         if (error instanceof Error && error.name === "AbortError") return;
@@ -30,11 +32,13 @@ export function ShareButton({
     }
     try {
       await navigator.clipboard.writeText(payload);
+      trackEaEvent("share_complete", { method: "clipboard" });
       setMessage(
         "Copied. Paste it into a message to someone you’d like to go with.",
       );
     } catch {
       setManual(true);
+      trackEaEvent("share_fallback", { method: "manual" });
       setMessage("Select and copy the text below to share it.");
     }
   }

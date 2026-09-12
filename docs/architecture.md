@@ -20,7 +20,7 @@ Guide detail pages expose truthful Article and ImageObject JSON-LD with the same
 - `canPublishGuide` is a distinct, narrow gate for public-source guides. It requires a documented public scope, no special permission, substantive context and limitations, two distinct HTTPS source links, a cited official access URL and current dates with a maximum 90-day review window. Photographs must match the checked media record, including the image path and alt text. It cannot grant Selected status, attest truth or replace human/local judgement. The gate runs before public DTO serialization; source objects are independently allowlisted.
 - Demo data requires an explicit flag and is rejected for Vercel production and the canonical domain configuration.
 - Production pages are indexable only when the explicit production release configuration is present; Preview and local environments fail closed with noindex and an empty sitemap. Guide detail sitemap entries use the real desk-check date as their `lastModified` value, following the freshness discipline used in Innovation Authority. Training crawler preferences are separate from search indexing. These are indexing controls, not authentication.
-- No booking, payments, analytics, submission endpoint or third-party data processor integration is active.
+- No booking, payments or submission endpoint is active. The optional GA4 tag is a separately configured third-party integration and is never loaded before an explicit visitor grant.
 - Suggestion/correction forms generate unsent local files only.
 
 ## Pending independent infrastructure
@@ -38,6 +38,8 @@ Each page has descriptive metadata and a fixed-domain canonical; query variants 
 This trades full-page static caching for nonce-based script protection. Images, fonts and static framework assets retain their normal asset caching. Revisit performance and deployment cost with real traffic before choosing a different CSP architecture. Do not enable public HTML caching without redesigning and retesting nonce handling.
 
 HTTP headers include frame denial, MIME-sniffing prevention, referrer restrictions, cross-origin isolation-related controls and restricted camera/microphone/location/payment/USB permissions. HSTS is enabled for HTTPS production with no preload or includeSubDomains until the entire domain estate is verified. The deployment still needs HTTPS redirects, account protection, abuse controls and monitoring; no WAF or DDoS guarantee is made by this code. COOP must be reviewed before integrating popup-based OAuth.
+
+GA4 uses Basic Consent Mode. Without a valid `NEXT_PUBLIC_GA_MEASUREMENT_ID`, the consent interface and Google script are absent. With the separate EA stream configured in production, the visitor must choose Allow analytics before `gtag.js` is created. Ad storage, ad user data, ad personalisation and Google signals remain denied. Enhanced Measurement, precise location and device collection, and advertising personalisation are disabled at property level. Page views and referrers exclude query strings and fragments. Bounded product events contain event names, guide identifiers and non-sensitive action metadata, never search text, URL query parameters, Passport contents, journey names or private notes. Event and user data retention is 14 months. Revocation updates consent, removes accessible `_ga` cookies and reloads without the tag. The CSP permits only the Google Tag and Analytics endpoints needed for this optional path.
 
 ## Hosting
 
