@@ -24,6 +24,46 @@ export type GuideMedia = {
 
 export const publicGuideMedia: readonly GuideMedia[] = [
   {
+    guideId: "singapore-hawker-morning",
+    src: "/images/guides/singapore-hawker-culture.jpg",
+    alt: "Four diners share food at a bright Singapore hawker centre, with stalls and communal tables behind them.",
+    title: "Hawker Culture",
+    photographer: "National Environment Agency, Singapore",
+    sourceUrl:
+      "https://www.nea.gov.sg/our-services/hawker-management/programmes-and-grants/hawker-culture",
+    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseUrl:
+      "https://www.nea.gov.sg/our-services/hawker-management/programmes-and-grants/hawker-culture",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "Generous human scale, crisp documentary detail and a full view of shared dining make the setting immediately legible.",
+    },
+    depiction:
+      "Diners at a Singapore hawker centre in an image published by the National Environment Agency. The page does not name an individual photographer or centre. It is place context only, not an EA visit or a recommendation of a named stall. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "budapest-fono-tanchaz",
+    src: "/images/guides/budapest-fono-tanchaz.jpg",
+    alt: "Musicians perform beside a busy dance floor at Fonó Budapest Music Hall, where people dance in warm evening light.",
+    title: "Fonó dance gathering",
+    photographer: "Fonó Budai Zeneház",
+    sourceUrl: "https://www.fono.hu/?lang=hu&page=zenehaz",
+    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://www.fono.hu/?lang=hu&page=zenehaz",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "A dynamic overhead composition links the musicians, the room and the moving floor without reducing anyone to spectacle.",
+    },
+    depiction:
+      "A dance gathering at Fonó Budapest Music Hall, published by the venue. The page does not name an individual photographer. It is an official venue image, not an EA visit or a guarantee of a current programme. Reuse rights have not been independently cleared.",
+  },
+  {
     guideId: "istanbul-hurrem-hammam",
     src: "/images/guides/istanbul-hurrem-hammam-interior.jpg",
     alt: "White marble bathing room beneath a high domed ceiling inside Istanbul's Hürrem Sultan Hamam.",

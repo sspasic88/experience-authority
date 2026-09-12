@@ -4,7 +4,7 @@ User direction: populate the local website with content aligned with EA that doe
 
 ## Scope and distinction
 
-Nine original English public-source guides now make up the public edition, covering eight countries. These are independently written desk guides to specifically advertised public programmes/admission/hospitality. They are not EA Selected, locally validated, visited or independently quality-assessed. The separate launch requirement for 25 locally validated EA Selected experiences is unchanged and unmet. Production indexing applies only to this clearly labelled public-source edition.
+Fourteen original English public-source guides now make up the public edition, covering thirteen countries. These are independently written desk guides to specifically advertised public programmes, admission or hospitality. They are not EA Selected, locally validated, visited or independently quality-assessed. The separate launch requirement for 25 locally validated EA Selected experiences is unchanged and unmet. Production indexing applies only to this clearly labelled public-source edition.
 
 | Guide | Preliminary practice narrowed from | Source basis |
 |---|---|---|
@@ -17,6 +17,11 @@ Nine original English public-source guides now make up the public edition, cover
 | Before the chocolate bar | Candidate 168 | Belmont advertised visitor tour, not uninvited workplace access; colonial history included |
 | A bowl of attention | Candidate 30 | Camellia Flower shared introductory tea session; not private household access |
 | Bread, from the tonir | Candidate 38 | Tsaghkunk Glkhatun baking with named hosts, within the advertised dining experience; not a drop-in class |
+| Stay for the session | Candidate 70 | Gus O'Connor's public Doolin session, not a claim to the whole local tradition or a guaranteed line-up |
+| Marble, steam, Istanbul | Candidate 2 | Hürrem Sultan Hamam public bathing ritual, not general authority on hammam practice |
+| Mexico City, grown on water | Candidate 27 | Kalmekak's advertised Xochimilco programme, not unbounded access to chinampa work |
+| A morning at the hawker table | Candidate 139 | Ordinary public hawker-centre breakfast, not a named-stall ranking or a single food claim |
+| Step into the dance | Candidate 21 | Fonó's published táncház programme, not a claim of cultural ownership or a fixed event |
 
 The original workbook and 200-candidate audit are unchanged. No bulk promotion or automatic inference of permission occurred. Current experience-specific facts and public links are in src/lib/public-guides.ts; actual output is allowlisted by src/lib/publication.ts through the server data boundary. A publicly offered class may require the visitor to book under ordinary operator terms; EA has made no such booking and cannot guarantee admission.
 
@@ -30,12 +35,12 @@ The original workbook and 200-candidate audit are unchanged. No bulk promotion o
 - Rajaportti uses destination-marketing pages as its two official public sources; they establish public visit framing and general etiquette, not independent cultural, health or accessibility findings. Current practical arrangements must be confirmed directly.
 - Daimon-zaka is presented as a bounded public path within a living pilgrimage landscape. It does not invite shrine ritual participation, private-property access, photography of people without permission or claims of safety/suitability. Route conditions must be rechecked directly.
 - Ock Pop Tok social/working-condition claims and Row Venice impact claims are not treated as independently audited facts.
-- Every Compass guide has a real editorial photograph with a first-class media record in `src/lib/media.ts`: local asset path, creator, original source URL, licence URL, rights-check date, descriptive alt text and a clear depiction boundary. Daimon-zaka is Unsplash-licensed; Rajaportti, Sundhöll and Mayer am Pfarrplatz are CC BY-SA 4.0; rowing, Lao natural dyes and Grenadian cocoa drying are CC BY 2.0. No AI-generated image is used. Venice and Laos are explicitly activity/craft context, not evidence of the named provider's lesson. The cocoa photo is tagged Belmont Estate by its photographer, whose original caption says Grenada Chocolate Company. Historical imagery is not evidence of current availability. All cards and detail pages link to credits; web resizing, compression and responsive cropping are disclosed, with ShareAlike terms retained.
+- Every Compass guide has a real editorial photograph with a first-class media record in `src/lib/media.ts`: local asset path, creator or publishing source, original source URL, licence URL, rights-check date, descriptive alt text and a clear depiction boundary. Some assets carry a documented open licence; official source images for Doolin, Rajaportti, Sundhöll, Singapore and Fonó are identified as reuse rights not independently cleared. No AI-generated image is used. Venice and Laos are explicitly activity/craft context, not evidence of the named provider's lesson. The cocoa photo is tagged Belmont Estate by its photographer, whose original caption says Grenada Chocolate Company. Historical imagery is not evidence of current availability. All cards and detail pages link to credits; web resizing, compression and responsive cropping are disclosed, with ShareAlike terms retained.
 - Public guide status cannot use the Selected publication-approval function. Selected still requires its original consent/reviewer policy. Guide source data has a recursive public allowlist.
 
 ## What changed in the website
 
-Batch 02 adds two guides with licensed CC BY-SA 4.0 photographs: Kyoto tea preparation by Atticus nguyen is explicitly cultural context, not a verified Camellia venue/session; AlexanderChatik's 2022 lavash photograph identifies Tsaghkunk Glkhatun, but is not evidence of current staff or availability. Japan now exposes Kyoto and Kumano-kodo as separate real-coverage regions in navigation and the sitemap.
+The later public-guide batches add Doolin traditional music, Istanbul bathing, Xochimilco chinampa context, a Singapore hawker breakfast and a Budapest táncház. Japan exposes Kyoto and Kumano-kodo as separate real-coverage regions in navigation and the sitemap. Singapore and Hungary are added only because the current public-source gate, source notes and reviewed photographs pass together.
 
 Visitor tools now include a private day-by-day journey draft, travel/stay notes, text download, opt-in sharing of private notes, contextual related guides, full-image homepage links and an enlarged photograph dialog with source/licence links. There is one local plan, no cloud synchronization, shared editable page, verified travel routing or booking service. Native sharing only runs on a visitor click; without it, clipboard/manual text is offered. The home return panel is based only on local Passport state; no retention improvement has been measured.
 

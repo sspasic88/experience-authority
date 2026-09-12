@@ -182,6 +182,24 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "singapore",
+    name: "Singapore",
+    region: "singapore",
+    regionName: "Singapore",
+    intro:
+      "Begin with a shared table and a living food culture that meets the city every day.",
+    image: null,
+  },
+  {
+    slug: "hungary",
+    name: "Hungary",
+    region: "budapest",
+    regionName: "Budapest",
+    intro:
+      "Listen, watch and join only when invited at a public dance house shaped by live music.",
+    image: null,
+  },
+  {
     slug: "turkiye",
     name: "Türkiye",
     region: "istanbul",
