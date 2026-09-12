@@ -12,12 +12,13 @@ export function Wordmark({ light = false }: { light?: boolean }) {
       className={`wordmark ${light ? "wordmark-light" : ""}`}
       aria-label="Experience Authority home"
     >
-      <span className="brand-slash" aria-hidden="true" />
-      <span>
+      <span className="wordmark-words">
         Experience
         <br />
         Authority
+        <small>The world from within</small>
       </span>
+      <span className="brand-slash" aria-hidden="true" />
     </Link>
   );
 }
@@ -67,10 +68,11 @@ export function Header() {
         <Link
           href="/passport"
           className="passport-link"
+          aria-label={`EA Passport, ${Object.keys(data.saved).length} saved`}
           onClick={() => setOpen(false)}
         >
           <Bookmark size={17} aria-hidden="true" />
-          <span>My Passport</span>
+          <span>EA Passport</span>
           <span
             className="passport-count"
             aria-label={`${Object.keys(data.saved).length} saved`}

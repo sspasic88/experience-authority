@@ -4,6 +4,7 @@ import { headers } from "next/headers";
 import { indexingEnabled, SITE_DESCRIPTION, SITE_ORIGIN } from "@/lib/seo";
 import "@/styles/tokens.css";
 import "@/styles/global.css";
+import "@/styles/prototype.css";
 import { Header, Footer } from "@/components/chrome";
 import { PassportProvider } from "@/components/passport-provider";
 import { demoMode, getExperiences } from "@/lib/data";
@@ -48,8 +49,7 @@ export default async function RootLayout({
           Skip to content
         </a>
         <PassportProvider ids={getExperiences().map((e) => e.id)}>
-          <Header />
-          <div className="preview-notice">
+          <aside className="preview-notice" aria-label="Editorial edition">
             <span className="preview-dot" />
             {demoMode ? "DESIGN PREVIEW" : "PUBLIC-SOURCE EDITION"}
             <span className="preview-notice-detail">
@@ -57,7 +57,8 @@ export default async function RootLayout({
                 ? "Demo stories. No verified access or bookings."
                 : "Original guides. Sources and access notes in every story."}
             </span>
-          </div>
+          </aside>
+          <Header />
           <main id="main">{children}</main>
           <Footer />
         </PassportProvider>

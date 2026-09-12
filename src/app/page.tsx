@@ -4,6 +4,7 @@ import { ExperienceCard, Photo, SectionHeading } from "@/components/editorial";
 import { collections, fields } from "@/lib/catalog";
 import { demoMode, getExperiences } from "@/lib/data";
 import { StructuredData } from "@/components/structured-data";
+import { HomeHero } from "@/components/home-hero";
 import {
   pageMetadata,
   SITE_DESCRIPTION,
@@ -21,69 +22,7 @@ export default function Home() {
   return (
     <>
       <StructuredData data={websiteStructuredData()} />
-      <section className="home-hero wrap">
-        <div className="hero-copy">
-          <div className="hero-topline">
-            <span className="eyebrow">An independent selection</span>
-            <span className="edition">First edition / Field notes</span>
-          </div>
-          <h1>
-            Experience
-            <br />
-            the world
-            <br />
-            <span className="hero-last-line">
-              from within<span className="orange-period">.</span>
-            </span>
-          </h1>
-          <div className="hero-bottom">
-            <span className="hero-slash" aria-hidden="true" />
-            <div className="hero-invitation">
-              <p>
-                <span>Not just somewhere to go.</span>
-                <span className="hero-invitation-emphasis">
-                  A different way to be there.
-                </span>
-              </p>
-              <Link href="/explore" className="button hero-cta">
-                Find your way <ArrowUpRight size={20} />
-              </Link>
-            </div>
-            <span className="hero-waypoint" aria-hidden="true">
-              <i /> Start closer
-            </span>
-          </div>
-        </div>
-        <div className="hero-visual">
-          <Photo
-            src="/images/pottery.jpg"
-            alt="Illustrative photograph of hands shaping a clay vessel, by Alex Jones."
-            priority
-          />
-          <span className="hero-image-label">The knowledge in our hands</span>
-          <div className="hero-stamp">
-            <Compass size={27} strokeWidth={1.2} />
-            <span>
-              Closer to place.
-              <br />
-              Closer to people.
-            </span>
-          </div>
-          <div className="hero-caption">
-            <span>01 / MAKE</span>
-            <span>Illustrative photograph · Alex Jones</span>
-          </div>
-        </div>
-      </section>
-      <div className="principle-strip wrap">
-        <span>A global selection of locally rooted experiences.</span>
-        <span>
-          Experience first. Provider second.{" "}
-          <span className="small-slash" aria-hidden="true">
-            /
-          </span>
-        </span>
-      </div>
+      <HomeHero />
       <section className="section wrap">
         <SectionHeading
           eyebrow="A starting point"

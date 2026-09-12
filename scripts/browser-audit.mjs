@@ -116,6 +116,15 @@ try {
       }
       page.off("pageerror", onError);
     }
+    await page.goto(base + "/", { waitUntil: "networkidle" });
+    await page
+      .getByRole("searchbox", { name: "Search experiences" })
+      .fill("cacao");
+    await page
+      .getByRole("button", { name: "Search experiences", exact: true })
+      .click();
+    await page.waitForURL(/q=cacao/);
+    await expect(page.locator(".experience-card")).toHaveCount(1);
     await page.goto(base + "/explore", { waitUntil: "networkidle" });
     const firstCard = page.locator(".experience-card").first();
     await firstCard.locator(".save-button").click();
