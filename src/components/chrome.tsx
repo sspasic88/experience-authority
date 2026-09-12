@@ -142,7 +142,9 @@ export function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Experience Authority</span>
-        <span>Experience first. Context always.</span>
+        <Link href="/legal">
+          Published by Innovation Authority Ltd · Publisher & contact
+        </Link>
         <Link href="/privacy">Privacy & local storage</Link>
       </div>
     </footer>

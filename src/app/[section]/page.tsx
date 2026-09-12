@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { publisher } from "@/lib/publisher";
 import Link from "next/link";
 import { PageIntro } from "@/components/editorial";
 import { DraftForm } from "@/components/draft-form";
@@ -68,6 +69,20 @@ export default async function Page({ params, searchParams }: Props) {
               : "Tell us about an experience that is rooted in a place. A suggestion is a starting point for research, never a promise of publication."}
           </p>
         </PageIntro>
+        <p className="prose">
+          To send a message, email{" "}
+          <a
+            href={
+              "mailto:" +
+              publisher.email +
+              "?subject=" +
+              encodeURIComponent(correction ? "EA correction" : "EA suggestion")
+            }
+          >
+            {publisher.email}
+          </a>
+          . The tool below only prepares an unsent draft.
+        </p>
         <DraftForm
           correction={correction}
           initialExperience={
@@ -296,6 +311,37 @@ export default async function Page({ params, searchParams }: Props) {
           <p>{page.aside}</p>
         </aside>
         <article className="prose">
+          {["legal", "privacy", "about", "transparency"].includes(section) && (
+            <p>
+              <a
+                href={
+                  "mailto:" +
+                  publisher.email +
+                  "?subject=" +
+                  encodeURIComponent("EA enquiry")
+                }
+              >
+                {publisher.email}
+              </a>{" "}
+              · <Link href="/legal">Publisher details</Link>
+            </p>
+          )}
+          {section === "legal" && (
+            <p>
+              <a href={publisher.registerUrl}>Company register ↗</a>
+            </p>
+          )}
+          {section === "privacy" && (
+            <p>
+              <a href="https://vercel.com/legal/privacy-notice">
+                Vercel privacy notice ↗
+              </a>{" "}
+              ·{" "}
+              <a href="https://ico.org.uk/make-a-complaint/">
+                Contact the ICO ↗
+              </a>
+            </p>
+          )}
           {page.sections.map((s, index) => (
             <section key={s.title} id={`section-${index + 1}`}>
               <h2>{s.title}</h2>

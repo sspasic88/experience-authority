@@ -1,3 +1,5 @@
+import { publisher } from "./publisher";
+
 export const editorialPages: Record<
   string,
   {
@@ -164,3 +166,83 @@ export const editorialPages: Record<
     ],
   },
 };
+editorialPages.legal = {
+  eyebrow: "Publisher & contact",
+  title: "Who stands behind EA.",
+  intro:
+    "Experience Authority is published and operated by Innovation Authority Ltd.",
+  aside:
+    "A separate editorial identity, with accountable corporate and editorial responsibility.",
+  sections: [
+    {
+      title: "The publisher.",
+      paragraphs: [
+        publisher.name +
+          " is a private limited company registered in " +
+          publisher.jurisdiction +
+          ", company number " +
+          publisher.companyNumber +
+          ".",
+        "Registered office: " + publisher.registeredOffice + ".",
+      ],
+    },
+    {
+      title: "Editorial responsibility.",
+      paragraphs: [
+        publisher.editorialResponsibility +
+          " is responsible for the publication. Experience Authority retains its own identity and editorial focus within the same operating company as Innovation Authority and What Holds Value.",
+        "The public-source edition does not imply a personal field visit, holder consent, local validation or an independent review of every experience. Each guide explains its own evidence and limits.",
+      ],
+    },
+    {
+      title: "A direct route.",
+      paragraphs: [
+        "For enquiries, corrections, privacy requests or rights concerns, write to " +
+          publisher.email +
+          " and include EA in the subject line. Identify the relevant page and avoid sensitive personal information.",
+        "The optional suggestion and correction tools still create an unsent local draft. To deliver it, email the publication yourself. Downloading a draft is not a submission.",
+      ],
+    },
+  ],
+};
+editorialPages.about.sections.push({
+  title: "Published by Innovation Authority Ltd.",
+  paragraphs: [
+    publisher.name +
+      " (company " +
+      publisher.companyNumber +
+      ", " +
+      publisher.jurisdiction +
+      ") operates EA. " +
+      publisher.editorialResponsibility +
+      " is responsible for the publication. Contact: " +
+      publisher.email +
+      ".",
+  ],
+});
+editorialPages.transparency.sections[3].paragraphs[1] =
+  "Experience Authority is operated by " +
+  publisher.name +
+  ". Editorial responsibility: " +
+  publisher.editorialResponsibility +
+  ". Contact: " +
+  publisher.email +
+  ". Actual funding relationships and any future commercial services must be disclosed separately.";
+editorialPages.privacy.sections.push({
+  title: "Operator and contact.",
+  paragraphs: [
+    publisher.name +
+      " (company " +
+      publisher.companyNumber +
+      ") is responsible for information processed to operate EA. Registered office: " +
+      publisher.registeredOffice +
+      ". Contact: " +
+      publisher.email +
+      ".",
+    "Hosting is provided by Vercel. If you email us, we receive your address, message and any attachments. Enquiries are not newsletter subscriptions. Our basis for secure operation, responding to enquiries and maintaining editorial records is legitimate interests, or legal obligation where applicable.",
+    "Information is handled by publication personnel and necessary hosting and email-service providers. Technical logs follow hosting retention controls; correspondence is retained while needed to resolve the request, preserve a relevant correction or rights record, or meet a legal obligation. Hosting and communications can involve international processing, including the United States; ask us about the arrangements relevant to your request.",
+    "Subject to applicable law, contact us to request access, correction, deletion, restriction or portability where applicable. You may object to legitimate-interest processing. You can also complain to the UK Information Commissioner’s Office or the relevant local data-protection authority.",
+  ],
+});
+editorialPages.privacy.sections[2].paragraphs[0] =
+  "The application does not add analytics or advertising tracking. The hosting service may process ordinary request logs needed for delivery and security, including IP address, URL, browser details and time. New account, analytics, submission or commercial services will require an updated notice before introduction.";
