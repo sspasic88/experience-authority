@@ -24,6 +24,25 @@ export type GuideMedia = {
 
 export const publicGuideMedia: readonly GuideMedia[] = [
   {
+    guideId: "asturias-trabanco-cider",
+    src: "/images/guides/asturias-trabanco-cider.jpg",
+    alt: "A cider maker catches a long stream of Asturian cider in a tilted glass while visitors watch among wooden barrels.",
+    title: "Cider pouring during a Trabanco visit",
+    photographer: "JFK Imagen Social, Sidra Trabanco",
+    sourceUrl: "https://www.sidratrabanco.com/sidra-turismo",
+    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://www.sidratrabanco.com/sidra-turismo",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale: "The narrow stream, caught glass and timber barrels make the learned physical action visible while keeping the visit itself in frame.",
+    },
+    depiction:
+      "Cider pouring during a Trabanco visitor programme, published by Sidra Trabanco with an embedded copyright credit to JFK Imagen Social. It is an official operator image, not an EA visit or proof of the current group format. Reuse rights have not been independently cleared.",
+  },
+  {
     guideId: "oostduinkerke-horseback-shrimp",
     src: "/images/guides/oostduinkerke-horseback-shrimp.jpg",
     alt: "Three Oostduinkerke shrimp fishers in yellow rainwear ride basket-carrying horses through the North Sea shallows.",

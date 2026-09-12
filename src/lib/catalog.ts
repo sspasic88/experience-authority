@@ -223,7 +223,7 @@ export const territories = [
     region: "barcelona",
     regionName: "Barcelona",
     intro:
-      "A public square, a trained collective and the care that makes a tower possible.",
+      "A tower held by a public square, then cider understood through orchard, cellar and pour.",
     image: null,
   },
   {

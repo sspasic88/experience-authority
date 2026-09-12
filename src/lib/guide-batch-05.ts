@@ -278,4 +278,62 @@ export const guideBatch05: PublicExperience[] = [
       ],
     },
   },
+  {
+    id: "asturias-trabanco-cider",
+    slug: "the-pour-before-the-glass",
+    title: "The pour before the glass",
+    summary:
+      "Follow Asturian cider from old presses and timber barrels to the small learned gesture that brings it into the glass.",
+    field: "taste",
+    place: "Asturias",
+    country: "Spain",
+    countrySlug: "spain",
+    regionSlug: "asturias",
+    status: "public_guide",
+    demo: false,
+    ...guideImage("asturias-trabanco-cider"),
+    kernel:
+      "Book Trabanco’s public Orígenes visit through its current site. The route enters the family cellar and traditional press area, then finishes with a short introduction to pouring and a taste from the barrel. Treat the mini-course as a first physical lesson, not a test of performance. The operator currently lists regular weekend times, but the current booking page remains the authority for availability and changes.",
+    rootedness:
+      "UNESCO describes Asturian cider culture as a relationship between native apples, rural landscape, making, serving and social life. Pouring is one visible part of that larger system. The cellar offers a public way to see production and practise the gesture, but one visit does not turn a regional culture into a technique detached from the people, orchards and places that sustain it.",
+    shift:
+      "From ordering a drink to noticing the agriculture, fermentation and learned movement that arrive with it.",
+    humanReturn:
+      "You may leave with a steadier hand or simply a better question about why the pour matters. Either is more useful than treating the ritual as a trick for the camera.",
+    responsibility:
+      "Use the current booking route and check the language, age, mobility and dietary details that matter to you. The operator states that scheduled visits are in Spanish and asks visitors to consult about other languages. Drink only if appropriate for you and never drive after drinking. Follow the guide around working equipment, ask before photographing people and do not treat staff or other visitors as a backdrop for repeated pouring attempts.",
+    evidence:
+      "Trabanco’s current visitor page establishes the public Orígenes format, booking requirement, listed schedule, cellar route, short pouring course and tasting. Turismo Asturias lists Trabanco among visitable cider makers. UNESCO supplies practice-level context for Asturian cider culture. EA has not visited, assessed the tour, tasted the cider or verified a particular date. The photograph is published by Trabanco and carries an embedded JFK Imagen Social copyright credit.",
+    duration:
+      "The operator currently describes Orígenes as about 1 hour 15 minutes. Recheck when booking",
+    participation:
+      "Guided cellar visit, introductory pouring practice and tasting under the operator’s current terms",
+    access:
+      "Public visitor programme with advance booking through Sidra Trabanco. EA does not reserve places or receive commission.",
+    guideReview: {
+      basis: "public_sources",
+      scope: "public_programme",
+      requiresSpecialPermission: false,
+      checkedOn: "2026-09-12",
+      reviewBy: "2026-12-11",
+      accessUrl: "https://www.sidratrabanco.com/sidra-turismo",
+      sources: [
+        {
+          title: "Sidra Trabanco: cider tourism visits",
+          url: "https://www.sidratrabanco.com/sidra-turismo",
+          note: "Current operator page for the Orígenes visit, advance booking, listed schedule, language note, route, pouring introduction and tasting. Availability can change.",
+        },
+        {
+          title: "Turismo Asturias: Llagar Sidra Trabanco",
+          url: "https://www.turismoasturias.es/en/descubre/gastronomia/llagares/llagar-sidra-trabanco",
+          note: "Official regional listing that identifies Trabanco as a visitable cider maker and outlines the visitor route. It is not an independent quality review.",
+        },
+        {
+          title: "UNESCO: Asturian cider culture",
+          url: "https://ich.unesco.org/en/RL/asturian-cider-culture-01959",
+          note: "Practice-level context for cider making, pouring, tasting, social spaces and the rural landscape. It does not validate Trabanco or a particular tour.",
+        },
+      ],
+    },
+  },
 ];

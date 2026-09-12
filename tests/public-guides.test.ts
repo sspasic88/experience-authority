@@ -18,8 +18,8 @@ import { guideMediaFor, publicGuideMedia } from "../src/lib/media";
 
 const today = "2026-09-12";
 const sample = publicGuides.find((p) => p.id === "kumano-daimon-zaka")!;
-test("guide set contains nineteen distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 19);
+test("guide set contains twenty distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 20);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -61,6 +61,12 @@ test("new regions are derived from real coverage and recommendations favour a re
       .map((r) => r.slug)
       .sort(),
     ["kumano-kodo", "kyoto"],
+  );
+  assert.deepEqual(
+    regionsForCountry("spain", publicGuides)
+      .map((r) => r.slug)
+      .sort(),
+    ["asturias", "barcelona"],
   );
   const kyoto = publicGuides.find((p) => p.id === "kyoto-camellia-tea")!;
   assert.equal(
