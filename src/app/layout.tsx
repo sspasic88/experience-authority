@@ -52,7 +52,7 @@ export default async function RootLayout({
         <PassportProvider ids={getExperiences().map((e) => e.id)}>
           <aside className="preview-notice" aria-label="Editorial edition">
             <span className="preview-dot" />
-            {demoMode ? "DESIGN PREVIEW" : "INDEPENDENT EXPERIENCE EDITORIAL"}
+            {demoMode ? "DESIGN PREVIEW" : "EA / PUBLIC GUIDE EDITION"}
             <span className="preview-notice-detail">
               {demoMode
                 ? "Demo stories. No verified access or bookings."

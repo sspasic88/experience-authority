@@ -489,6 +489,222 @@ button {
   color: var(--ea-stone);
   margin: -17px 0 28px;
 }
+.desire-section {
+  padding-block: 78px;
+  background: var(--ea-field-surface);
+}
+.desire-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid rgba(8, 27, 42, 0.28);
+  border-left: 1px solid rgba(8, 27, 42, 0.28);
+}
+.desire-card {
+  min-height: 210px;
+  padding: 24px;
+  border-right: 1px solid rgba(8, 27, 42, 0.28);
+  border-bottom: 1px solid rgba(8, 27, 42, 0.28);
+  display: flex;
+  flex-direction: column;
+  transition:
+    background 0.2s var(--ea-ease),
+    color 0.2s var(--ea-ease);
+}
+.desire-card:hover,
+.desire-card:focus-visible {
+  background: var(--ea-night);
+  color: var(--ea-paper);
+}
+.desire-card h3 {
+  margin-top: 24px;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.desire-card p {
+  margin-top: 13px;
+  color: var(--ea-stone);
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 290px;
+}
+.desire-card:hover p,
+.desire-card:focus-visible p {
+  color: #bdc5c8;
+}
+.desire-card small {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 25px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.section .experience-grid + .section-note {
+  margin-top: 28px;
+}
+.home-plan-band {
+  padding-block: 84px;
+  background: var(--ea-paper);
+  border-top: 1px solid rgba(8, 27, 42, 0.18);
+  border-bottom: 1px solid rgba(8, 27, 42, 0.18);
+}
+.home-plan-layout,
+.plan-passport-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(50px, 8vw, 120px);
+  align-items: start;
+}
+.home-plan-layout h2,
+.plan-passport-layout h2 {
+  margin-top: 24px;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  max-width: 650px;
+}
+.home-plan-steps > p,
+.plan-passport-layout > div:last-child > p {
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 520px;
+}
+.home-plan-steps ol {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+  border-top: 1px solid rgba(8, 27, 42, 0.22);
+}
+.home-plan-steps li {
+  display: flex;
+  gap: 18px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(8, 27, 42, 0.22);
+  font-size: 14px;
+}
+.home-plan-steps li span {
+  color: var(--ea-accent-text);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+.journey-step-grid {
+  list-style: none;
+  padding: 0 0 84px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--ea-night);
+}
+.journey-step-grid li {
+  padding: 24px 24px 28px 0;
+  border-right: 1px solid rgba(8, 27, 42, 0.18);
+}
+.journey-step-grid li + li {
+  padding-left: 24px;
+}
+.journey-step-grid li:last-child {
+  border-right: 0;
+}
+.journey-step-grid span {
+  color: var(--ea-accent-text);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+.journey-step-grid h2 {
+  margin-top: 30px;
+  font-size: 30px;
+}
+.journey-step-grid p {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ea-stone);
+}
+.journey-modes {
+  padding-block: 82px;
+  background: var(--ea-night);
+  color: var(--ea-paper);
+}
+.journey-modes .eyebrow {
+  color: #bdc5c8;
+}
+.journey-mode-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+.journey-mode-grid article {
+  min-height: 330px;
+  padding: 30px;
+  background: var(--ea-night);
+  display: flex;
+  flex-direction: column;
+}
+.journey-mode-grid h3 {
+  margin-top: 40px;
+  font-size: clamp(30px, 3vw, 43px);
+  line-height: 1.05;
+}
+.journey-mode-grid p {
+  margin-top: 18px;
+  max-width: 340px;
+  color: #bdc5c8;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.journey-mode-grid .text-link {
+  margin-top: auto;
+  padding-top: 28px;
+}
+.planning-check-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 50px;
+}
+.planning-check-grid article {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  padding: 27px 0;
+  border-top: 1px solid rgba(8, 27, 42, 0.22);
+}
+.planning-check-icon {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--ea-night);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.planning-check-grid h3 {
+  margin-top: 9px;
+  font-size: 24px;
+  line-height: 1.15;
+}
+.planning-check-grid article p:last-child {
+  margin-top: 10px;
+  color: var(--ea-stone);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.plan-passport-band {
+  padding-block: 76px;
+  background: var(--ea-vermilion);
+}
+.plan-passport-layout {
+  grid-template-columns: auto 1fr 1fr;
+}
+.plan-passport-layout .eyebrow,
+.plan-passport-layout .small-note {
+  color: var(--ea-night);
+}
+.plan-passport-layout .button {
+  margin-top: 24px;
+}
 .experience-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -935,6 +1151,40 @@ button {
   color: var(--ea-stone);
   margin-top: 12px;
 }
+.pathway-card h3 a {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+.pathway-card small {
+  display: block;
+  margin-top: 16px;
+  color: var(--ea-stone);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+.pathway-use {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: -22px 0 48px;
+  border-top: 1px solid var(--ea-night);
+  border-bottom: 1px solid rgba(8, 27, 42, 0.22);
+}
+.pathway-use > div {
+  padding: 24px 30px 26px 0;
+}
+.pathway-use > div + div {
+  padding-left: 30px;
+  border-left: 1px solid rgba(8, 27, 42, 0.22);
+}
+.pathway-use p:last-child {
+  margin-top: 12px;
+  max-width: 520px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ea-stone);
+}
 .method-band {
   background: var(--ea-night);
   color: var(--ea-paper);
@@ -1051,9 +1301,6 @@ button {
   font-size: 36px;
   line-height: 1.07;
   letter-spacing: -1.5px;
-}
-.footer-statement > span {
-  color: var(--ea-vermilion);
 }
 .footer-main nav {
   display: flex;
@@ -1433,6 +1680,58 @@ button {
 .directory-tile small {
   margin-top: 20px;
   color: var(--ea-stone);
+}
+.field-group-heading {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 28px;
+  margin-bottom: 28px;
+  align-items: start;
+}
+.field-group-heading > p:last-child {
+  max-width: 620px;
+  color: var(--ea-stone);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.future-fields {
+  margin-top: 80px;
+  padding: 55px;
+  background: var(--ea-field-surface);
+}
+.future-fields .field-group-heading {
+  grid-template-columns: 0.6fr 1.1fr 1fr;
+}
+.future-fields h2 {
+  font-size: clamp(30px, 3.3vw, 47px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+.future-field-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-top: 1px solid rgba(8, 27, 42, 0.25);
+}
+.future-field-grid article {
+  min-height: 190px;
+  padding: 24px 20px 22px 0;
+  border-right: 1px solid rgba(8, 27, 42, 0.2);
+}
+.future-field-grid article + article {
+  padding-left: 20px;
+}
+.future-field-grid article:last-child {
+  border-right: 0;
+}
+.future-field-grid h3 {
+  margin-top: 30px;
+  font-size: 27px;
+}
+.future-field-grid p:last-child {
+  margin-top: 12px;
+  color: var(--ea-stone);
+  font-size: 12px;
+  line-height: 1.55;
 }
 .territory-banner {
   position: relative;
@@ -2551,6 +2850,101 @@ button {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .desire-grid,
+  .journey-mode-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .journey-step-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .journey-step-grid li:nth-child(2) {
+    border-right: 0;
+  }
+  .journey-step-grid li:nth-child(n + 3) {
+    border-top: 1px solid rgba(8, 27, 42, 0.18);
+  }
+  .home-plan-layout,
+  .plan-passport-layout {
+    grid-template-columns: 1fr;
+  }
+  .plan-passport-layout {
+    gap: 28px;
+  }
+  .future-fields .field-group-heading {
+    grid-template-columns: 1fr 1.5fr;
+  }
+  .future-fields .field-group-heading > p:last-child {
+    grid-column: 2;
+  }
+  .future-field-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .future-field-grid article:nth-child(2n) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .desire-section,
+  .journey-modes,
+  .home-plan-band,
+  .plan-passport-band {
+    padding-block: 58px;
+  }
+  .desire-grid,
+  .journey-mode-grid,
+  .planning-check-grid,
+  .journey-step-grid {
+    grid-template-columns: 1fr;
+  }
+  .desire-card {
+    min-height: 190px;
+    padding: 21px;
+  }
+  .journey-step-grid {
+    padding-bottom: 58px;
+  }
+  .journey-step-grid li,
+  .journey-step-grid li + li {
+    padding: 22px 0;
+    border-right: 0;
+    border-top: 1px solid rgba(8, 27, 42, 0.18);
+  }
+  .journey-step-grid li:first-child {
+    border-top: 0;
+  }
+  .journey-mode-grid article {
+    min-height: 285px;
+    padding: 24px;
+  }
+  .home-plan-layout h2,
+  .plan-passport-layout h2 {
+    font-size: 43px;
+  }
+  .field-group-heading,
+  .future-fields .field-group-heading {
+    grid-template-columns: 1fr;
+  }
+  .future-fields .field-group-heading > p:last-child {
+    grid-column: auto;
+  }
+  .future-fields {
+    margin-top: 58px;
+    padding: 30px 22px;
+  }
+  .future-field-grid {
+    grid-template-columns: 1fr;
+  }
+  .future-field-grid article,
+  .future-field-grid article + article {
+    min-height: 0;
+    padding: 23px 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(8, 27, 42, 0.2);
   }
 }
 

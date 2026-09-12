@@ -43,6 +43,7 @@ export function Header() {
     ["/places", "Places"],
     ["/fields", "Fields"],
     ["/collections", "Collections"],
+    ["/plan", "Plan"],
     ["/method", "Our method"],
   ];
   return (
@@ -109,7 +110,7 @@ export function Footer() {
         <div className="footer-statement">
           Leave with more
           <br />
-          than a photograph<span>.</span>
+          than a photograph.
         </div>
         <nav aria-label="Footer navigation">
           <Link href="/about">
@@ -117,6 +118,9 @@ export function Footer() {
           </Link>
           <Link href="/method">
             Our method <ArrowUpRight size={15} />
+          </Link>
+          <Link href="/plan">
+            Plan a journey <ArrowUpRight size={15} />
           </Link>
           <Link href="/suggest">
             Suggest an experience <ArrowUpRight size={15} />

@@ -6,28 +6,28 @@ User direction: populate the local website with content aligned with EA that doe
 
 Twenty original English public-source guides now make up the public edition, covering eighteen countries. These are independently written desk guides to specifically advertised public programmes, admission or hospitality. They are not EA Selected, locally validated, visited or independently quality-assessed. The separate launch requirement for 25 locally validated EA Selected experiences is unchanged and unmet. Production indexing applies only to this clearly labelled public-source edition.
 
-| Guide | Preliminary practice narrowed from | Source basis |
-|---|---|---|
-| Leave room for devotion | Candidate 29 | Daimon-zaka public path, not participation in worship or an unbounded pilgrimage claim |
-| Venice, through an oar | Candidate 4 | Row Venice public lesson, not private boatyard access |
-| Make room in the steam | Related alternative to candidate 16; does not complete that candidate | Rajaportti ordinary public sauna admission, not the original smoke-sauna/winter-swim kernel |
-| Colour, before cloth | Candidate 131 | Ock Pop Tok natural-dye class, not private village/customary knowledge |
-| A city, in the water | Candidate 27 | Sundhöll municipal admission, not a private ritual or therapy claim |
-| The vineyard at the table | Candidate 113 | Mayer am Pfarrplatz normal dining, not a winery ranking or cellar invitation |
-| Before the chocolate bar | Candidate 168 | Belmont advertised visitor tour, not uninvited workplace access; colonial history included |
-| A bowl of attention | Candidate 30 | Camellia Flower shared introductory tea session; not private household access |
-| Bread, from the tonir | Candidate 38 | Tsaghkunk Glkhatun baking with named hosts, within the advertised dining experience; not a drop-in class |
-| Stay for the session | Candidate 70 | Gus O'Connor's public Doolin session, not a claim to the whole local tradition or a guaranteed line-up |
-| Marble, steam, Istanbul | Candidate 2 | Hürrem Sultan Hamam public bathing ritual, not general authority on hammam practice |
-| Mexico City, grown on water | Candidate 27 | Kalmekak's advertised Xochimilco programme, not unbounded access to chinampa work |
-| A morning at the hawker table | Candidate 139 | Ordinary public hawker-centre breakfast, not a named-stall ranking or a single food claim |
-| Step into the dance | Candidate 21 | Fonó's published táncház programme, not a claim of cultural ownership or a fixed event |
-| The weight of the tower | Candidate 6 | A listed Barcelona castells performance, not joining a colla or entering its working space |
-| Walk where the sea was | Candidate 11 | A qualified-guide-led public mudflat excursion, not independent access to the tidal flats |
-| The fish behind the islands | Related public alternative to candidate 14 | SKREI public museum admission, not boarding a working fishing boat or meeting a fishing family |
-| The tide brings the horses | Candidate 10 | A scheduled public demonstration viewed from the beach, not entry into the fishers' working route |
-| When the sky moves as one | Candidate 13 | A dated guide-led Black Sun tour with no wildlife guarantee, not pursuit of a roost for a closer image |
-| The pour before the glass | Related public alternative to candidate 7 | Trabanco's public Orígenes visit, not a promised private espicha or spontaneous inclusion in local social life |
+| Guide                         | Preliminary practice narrowed from                                    | Source basis                                                                                                   |
+| ----------------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Leave room for devotion       | Candidate 29                                                          | Daimon-zaka public path, not participation in worship or an unbounded pilgrimage claim                         |
+| Venice, through an oar        | Candidate 4                                                           | Row Venice public lesson, not private boatyard access                                                          |
+| Make room in the steam        | Related alternative to candidate 16; does not complete that candidate | Rajaportti ordinary public sauna admission, not the original smoke-sauna/winter-swim kernel                    |
+| Colour, before cloth          | Candidate 131                                                         | Ock Pop Tok natural-dye class, not private village/customary knowledge                                         |
+| A city, in the water          | Candidate 27                                                          | Sundhöll municipal admission, not a private ritual or therapy claim                                            |
+| The vineyard at the table     | Candidate 113                                                         | Mayer am Pfarrplatz normal dining, not a winery ranking or cellar invitation                                   |
+| Before the chocolate bar      | Candidate 168                                                         | Belmont advertised visitor tour, not uninvited workplace access; colonial history included                     |
+| A bowl of attention           | Candidate 30                                                          | Camellia Flower shared introductory tea session; not private household access                                  |
+| Bread, from the tonir         | Candidate 38                                                          | Tsaghkunk Glkhatun baking with named hosts, within the advertised dining experience; not a drop-in class       |
+| Stay for the session          | Candidate 70                                                          | Gus O'Connor's public Doolin session, not a claim to the whole local tradition or a guaranteed line-up         |
+| Marble, steam, Istanbul       | Candidate 2                                                           | Hürrem Sultan Hamam public bathing ritual, not general authority on hammam practice                            |
+| Mexico City, grown on water   | Candidate 27                                                          | Kalmekak's advertised Xochimilco programme, not unbounded access to chinampa work                              |
+| A morning at the hawker table | Candidate 139                                                         | Ordinary public hawker-centre breakfast, not a named-stall ranking or a single food claim                      |
+| Step into the dance           | Candidate 21                                                          | Fonó's published táncház programme, not a claim of cultural ownership or a fixed event                         |
+| The weight of the tower       | Candidate 6                                                           | A listed Barcelona castells performance, not joining a colla or entering its working space                     |
+| Walk where the sea was        | Candidate 11                                                          | A qualified-guide-led public mudflat excursion, not independent access to the tidal flats                      |
+| The fish behind the islands   | Related public alternative to candidate 14                            | SKREI public museum admission, not boarding a working fishing boat or meeting a fishing family                 |
+| The tide brings the horses    | Candidate 10                                                          | A scheduled public demonstration viewed from the beach, not entry into the fishers' working route              |
+| When the sky moves as one     | Candidate 13                                                          | A dated guide-led Black Sun tour with no wildlife guarantee, not pursuit of a roost for a closer image         |
+| The pour before the glass     | Related public alternative to candidate 7                             | Trabanco's public Orígenes visit, not a promised private espicha or spontaneous inclusion in local social life |
 
 The original workbook and 200-candidate audit are unchanged. No bulk promotion or automatic inference of permission occurred. Current experience-specific facts and public links are in src/lib/public-guides.ts; actual output is allowlisted by src/lib/publication.ts through the server data boundary. A publicly offered class may require the visitor to book under ordinary operator terms; EA has made no such booking and cannot guarantee admission.
 
@@ -46,7 +46,7 @@ The original workbook and 200-candidate audit are unchanged. No bulk promotion o
 
 ## What changed in the website
 
-The later public-guide batches add Doolin traditional music, Istanbul bathing, Xochimilco chinampa context, a Singapore hawker breakfast, a Budapest táncház, a public Barcelona castells performance, a guided Wadden mudflat walk, SKREI in Lofoten, Oostduinkerke's horseback shrimp fishing, Denmark's Black Sun and Trabanco's public Asturias cider visit. Japan and Spain expose multiple real-coverage regions in navigation and the sitemap. New territories appear only when the current public-source gate, source notes and reviewed photographs pass together.
+The later public-guide batches add Doolin traditional music, Istanbul bathing, Xochimilco chinampa context, a Singapore hawker breakfast, a Budapest táncház, a public Barcelona castells performance, a guided Wadden mudflat walk, SKREI in Lofoten, Oostduinkerke's horseback shrimp fishing, Denmark's Black Sun, Trabanco's public Asturias cider visit, Museum Kimchikan in Seoul, a guided Namib dune tour and seasonal sugar-shack hospitality in Québec. Japan and Spain expose multiple real-coverage regions in navigation and the sitemap. New territories appear only when the current public-source gate, source notes and reviewed photographs pass together.
 
 Visitor tools now include a private day-by-day journey draft, travel/stay notes, text download, opt-in sharing of private notes, contextual related guides, full-image homepage links and an enlarged photograph dialog with source/licence links. There is one local plan, no cloud synchronization, shared editable page, verified travel routing or booking service. Native sharing only runs on a visitor click; without it, clipboard/manual text is offered. The home return panel is based only on local Passport state; no retention improvement has been measured.
 

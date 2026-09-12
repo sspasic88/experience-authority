@@ -105,7 +105,7 @@ export const editorialPages: Record<
         title: "What kind of content is this?",
         paragraphs: [
           "The public edition contains public-source guides, not locally validated EA selections. Sources were checked as documented in each guide. AI-assisted desk research and original drafting have not been presented as a human field visit, holder consent, an independent quality audit or a guarantee of availability.",
-          "Guide cards use real photographs with named creators, source links, licences and explicit depiction boundaries. Some show the actual place. Others are clearly identified activity or cultural context. The homepage and thematic collections also use credited illustrative photographs. None is evidence of an EA visit. No AI-generated photographs are used.",
+          "Guide cards use real photographs with named creators, source links, licences and explicit depiction boundaries. Some show the actual place. Others are clearly identified activity or cultural context. The homepage and thematic pathways reuse credited guide photography. None is evidence of an EA visit. No AI-generated photographs are used.",
         ],
       },
       {

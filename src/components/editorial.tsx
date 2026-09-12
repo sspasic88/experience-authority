@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowUpRight, LockKeyhole, MoveUpRight } from "lucide-react";
 import { statusLabels, type PublicExperience } from "@/lib/catalog";
 import { guideMediaFor } from "@/lib/media";
+import type { EditorialPathway } from "@/lib/editorial-pathways";
 import { ExperienceActions } from "./passport-provider";
 
 export function StatusBadge({
@@ -140,6 +141,56 @@ export function ExperienceCard({
           </span>
         </div>
       </div>
+    </article>
+  );
+}
+export function PathwayCard({
+  pathway,
+  item,
+  index,
+}: {
+  pathway: EditorialPathway;
+  item: PublicExperience;
+  index: number;
+}) {
+  const media = guideMediaFor(item.id);
+  return (
+    <article className="collection-card pathway-card">
+      <div className="collection-image">
+        <Link
+          className="card-photo-link"
+          href={`/collections/${pathway.slug}`}
+          aria-label={`Open ${pathway.title}`}
+        >
+          {item.image ? (
+            <Photo
+              src={item.image}
+              alt={item.imageAlt}
+              sizes="(max-width: 640px) 100vw, 33vw"
+            />
+          ) : (
+            <GuideArt item={item} />
+          )}
+        </Link>
+        <span>Pathway {String(index + 1).padStart(2, "0")}</span>
+        {media && (
+          <Link
+            className="image-source-badge"
+            href={`/credits#media-${media.guideId}`}
+            aria-label={`Photo credit for ${item.title}`}
+          >
+            Photo credit <span aria-hidden="true">↗</span>
+          </Link>
+        )}
+      </div>
+      <h3>
+        <Link href={`/collections/${pathway.slug}`}>
+          {pathway.title}
+          <ArrowUpRight size={22} aria-hidden="true" />
+        </Link>
+      </h3>
+      <p>{pathway.promise}</p>
+      <small>{pathway.guideSlugs.length} connected guides</small>
     </article>
   );
 }

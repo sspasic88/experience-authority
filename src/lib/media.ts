@@ -24,20 +24,87 @@ export type GuideMedia = {
 
 export const publicGuideMedia: readonly GuideMedia[] = [
   {
+    guideId: "seoul-kimchikan-making",
+    src: "/images/guides/seoul-kimchi-making.jpg",
+    alt: "Visitors in aprons prepare cabbage kimchi together around a long table inside Museum Kimchikan in Seoul.",
+    title: "Kimchi cooking class at Museum Kimchikan",
+    photographer: "Museum Kimchikan",
+    sourceUrl:
+      "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=189628",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl:
+      "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=189628",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "A lively, well-lit teaching room keeps the shared making action, ingredients and visitor format clear within one frame.",
+    },
+    depiction:
+      "A visitor kimchi-making class at Museum Kimchikan, published by VisitKorea and credited on the page to Museum Kimchikan. It is not an EA visit or proof that the same class format is currently available. Reuse rights have not been independently cleared.",
+  },
+  {
+    guideId: "namib-living-desert-tour",
+    src: "/images/guides/namib-living-desert.jpg",
+    alt: "A Namaqua chameleon opens its mouth in a defensive display on pale ground beneath the wide Namib sky.",
+    title: "Namaqua chameleon in the Namib",
+    photographer: "Yathin S Krishnappa",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Chamaeleo_namaquensis_(Namib-Naukluft,_2011).jpg",
+    licenseName: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The low viewpoint, vast open background and immediate animal behaviour create a memorable frame without pretending to document the tour.",
+    },
+    depiction:
+      "A wild Namaqua chameleon photographed in the Namib in 2011 after it was approached for removal from road C14. It is not an animal seen on a Living Desert Adventures tour, an EA visit or a guaranteed sighting. Cropped responsively for layout by Experience Authority.",
+  },
+  {
+    guideId: "quebec-outaouais-sugar-shack",
+    src: "/images/guides/quebec-sugar-shack.jpg",
+    alt: "Hot maple syrup runs from three metal spouts onto packed snow during maple season in Québec.",
+    title: "Cabane à sucre",
+    photographer: "Pierre-Arnaud KOPP",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Cabane_%C3%A0_sucre_!_(8260523097).jpg",
+    licenseName: "CC BY 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+    rightsBasis: "documented_license",
+    rightsCheckedOn: "2026-09-12",
+    visualReview: {
+      outcome: "approved",
+      checkedOn: "2026-09-12",
+      rationale:
+        "The tight vertical composition makes the hot syrup, cold snow and hand of the maker instantly legible without relying on rustic decoration.",
+    },
+    depiction:
+      "Maple taffy being poured on snow in Québec in 2011. The photograph is seasonal context and does not depict a named Outaouais venue, the current programme or an EA visit. Cropped responsively for layout by Experience Authority.",
+  },
+  {
     guideId: "asturias-trabanco-cider",
     src: "/images/guides/asturias-trabanco-cider.jpg",
     alt: "A cider maker catches a long stream of Asturian cider in a tilted glass while visitors watch among wooden barrels.",
     title: "Cider pouring during a Trabanco visit",
     photographer: "JFK Imagen Social, Sidra Trabanco",
     sourceUrl: "https://www.sidratrabanco.com/sidra-turismo",
-    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
     licenseUrl: "https://www.sidratrabanco.com/sidra-turismo",
     rightsBasis: "official_source",
     rightsCheckedOn: "2026-09-12",
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "The narrow stream, caught glass and timber barrels make the learned physical action visible while keeping the visit itself in frame.",
+      rationale:
+        "The narrow stream, caught glass and timber barrels make the learned physical action visible while keeping the visit itself in frame.",
     },
     depiction:
       "Cider pouring during a Trabanco visitor programme, published by Sidra Trabanco with an embedded copyright credit to JFK Imagen Social. It is an official operator image, not an EA visit or proof of the current group format. Reuse rights have not been independently cleared.",
@@ -48,15 +115,19 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     alt: "Three Oostduinkerke shrimp fishers in yellow rainwear ride basket-carrying horses through the North Sea shallows.",
     title: "The shrimp fishers of Oostduinkerke",
     photographer: "Dirk van Hove, Visit Flanders",
-    sourceUrl: "https://www.visitflanders.com/en/stories/flanders-immaterial-cultural-heritage-always-impressive",
-    licenseName: "Official source image. Reuse rights not independently cleared",
-    licenseUrl: "https://www.visitflanders.com/en/stories/flanders-immaterial-cultural-heritage-always-impressive",
+    sourceUrl:
+      "https://www.visitflanders.com/en/stories/flanders-immaterial-cultural-heritage-always-impressive",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl:
+      "https://www.visitflanders.com/en/stories/flanders-immaterial-cultural-heritage-always-impressive",
     rightsBasis: "official_source",
     rightsCheckedOn: "2026-09-12",
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "The clear lateral composition keeps the working group, horses and water equally legible without isolating one person as spectacle.",
+      rationale:
+        "The clear lateral composition keeps the working group, horses and water equally legible without isolating one person as spectacle.",
     },
     depiction:
       "Oostduinkerke shrimp fishers at work in the North Sea, photographed by Dirk van Hove and published by Visit Flanders. It is official regional context, not an EA visit or evidence of a particular demonstration date. Reuse rights have not been independently cleared.",
@@ -67,15 +138,19 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     alt: "A vast murmuration of starlings bends across a pale evening sky above the wetland horizon of Denmark's Wadden Sea.",
     title: "Black Sun in the Tønder marsh",
     photographer: "Sandra Prudencio, National Park Vadehavet",
-    sourceUrl: "https://eng.nationalparkvadehavet.dk/experience-the-wadden-sea/animal-and-bird-life/black-sun",
-    licenseName: "Official source image. Reuse rights not independently cleared",
-    licenseUrl: "https://eng.nationalparkvadehavet.dk/experience-the-wadden-sea/animal-and-bird-life/black-sun",
+    sourceUrl:
+      "https://eng.nationalparkvadehavet.dk/experience-the-wadden-sea/animal-and-bird-life/black-sun",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl:
+      "https://eng.nationalparkvadehavet.dk/experience-the-wadden-sea/animal-and-bird-life/black-sun",
     rightsBasis: "official_source",
     rightsCheckedOn: "2026-09-12",
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "The wide, low horizon leaves the flock as the dominant moving form while retaining the wetland that makes the phenomenon possible.",
+      rationale:
+        "The wide, low horizon leaves the flock as the dominant moving form while retaining the wetland that makes the phenomenon possible.",
     },
     depiction:
       "Black Sun in the Tønder marsh, photographed by Sandra Prudencio and published by National Park Vadehavet. The photograph depicts the natural phenomenon, not a specific Wadden Sea Centre tour or an EA visit. Reuse rights have not been independently cleared.",
@@ -87,14 +162,16 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     title: "Mudflat walking on the Wadden Sea",
     photographer: "Visit Wadden, source credit CTOALA_20190827_071",
     sourceUrl: "https://www.visitwadden.nl/en/visit/wadlopen",
-    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
     licenseUrl: "https://www.visitwadden.nl/en/visit/wadlopen",
     rightsBasis: "official_source",
     rightsCheckedOn: "2026-09-12",
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "The high viewpoint, open horizon and human scale make the temporary seabed legible without turning the walkers into spectacle.",
+      rationale:
+        "The high viewpoint, open horizon and human scale make the temporary seabed legible without turning the walkers into spectacle.",
     },
     depiction:
       "Mudflat walkers on the exposed Dutch Wadden seabed, published by Visit Wadden with the source credit CTOALA_20190827_071. The page does not identify a named photographer. It is regional context, not an EA visit or evidence of a specific excursion. Reuse rights have not been independently cleared.",
@@ -106,14 +183,16 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     title: "SKREI main exhibition at The Otolith",
     photographer: "Kjell Ove Storvik, Museum Nord",
     sourceUrl: "https://www.museumnord.no/en/our-venues/skrei/",
-    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
     licenseUrl: "https://www.museumnord.no/en/our-venues/skrei/",
     rightsBasis: "official_source",
     rightsCheckedOn: "2026-09-12",
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "Dark spatial depth, controlled blue light and the upright boat forms create a precise contemporary frame for the fishing story.",
+      rationale:
+        "Dark spatial depth, controlled blue light and the upright boat forms create a precise contemporary frame for the fishing story.",
     },
     depiction:
       "The Otolith main exhibition at SKREI in Kabelvåg, published by Museum Nord and credited to Kjell Ove Storvik. It is an official museum image, not an EA visit or proof of current exhibition condition. Reuse rights have not been independently cleared.",
@@ -125,14 +204,16 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     title: "Castellers de Barcelona at the 2024 Concurs de Castells",
     photographer: "Castellers de Barcelona",
     sourceUrl: "https://castellersdebarcelona.cat/actualitat/actuacions",
-    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
     licenseUrl: "https://castellersdebarcelona.cat/actualitat/actuacions",
     rightsBasis: "official_source",
     rightsCheckedOn: "2026-09-12",
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "The vertical composition makes mutual reliance immediately visible, with the team rather than a cityscape carrying the entire frame.",
+      rationale:
+        "The vertical composition makes mutual reliance immediately visible, with the team rather than a cityscape carrying the entire frame.",
     },
     depiction:
       "Castellers de Barcelona at the 2024 Concurs de Castells, published by the colla on its performances page. The page does not identify an individual photographer. It is official team imagery, not an EA visit or a record of the current Mercè programme. Reuse rights have not been independently cleared.",
@@ -145,7 +226,8 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     photographer: "National Environment Agency, Singapore",
     sourceUrl:
       "https://www.nea.gov.sg/our-services/hawker-management/programmes-and-grants/hawker-culture",
-    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
     licenseUrl:
       "https://www.nea.gov.sg/our-services/hawker-management/programmes-and-grants/hawker-culture",
     rightsBasis: "official_source",
@@ -153,7 +235,8 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "Generous human scale, crisp documentary detail and a full view of shared dining make the setting immediately legible.",
+      rationale:
+        "Generous human scale, crisp documentary detail and a full view of shared dining make the setting immediately legible.",
     },
     depiction:
       "Diners at a Singapore hawker centre in an image published by the National Environment Agency. The page does not name an individual photographer or centre. It is place context only, not an EA visit or a recommendation of a named stall. Reuse rights have not been independently cleared.",
@@ -165,14 +248,16 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     title: "Fonó dance gathering",
     photographer: "Fonó Budai Zeneház",
     sourceUrl: "https://www.fono.hu/?lang=hu&page=zenehaz",
-    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
     licenseUrl: "https://www.fono.hu/?lang=hu&page=zenehaz",
     rightsBasis: "official_source",
     rightsCheckedOn: "2026-09-12",
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "A dynamic overhead composition links the musicians, the room and the moving floor without reducing anyone to spectacle.",
+      rationale:
+        "A dynamic overhead composition links the musicians, the room and the moving floor without reducing anyone to spectacle.",
     },
     depiction:
       "A dance gathering at Fonó Budapest Music Hall, published by the venue. The page does not name an individual photographer. It is an official venue image, not an EA visit or a guarantee of a current programme. Reuse rights have not been independently cleared.",
@@ -192,7 +277,8 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "Architectural precision, restrained palette and strong vertical composition.",
+      rationale:
+        "Architectural precision, restrained palette and strong vertical composition.",
     },
     depiction:
       "The restored interior of the actual Hürrem Sultan Hamam, photographed in 2011. It does not document a current bathing session or an EA visit.",
@@ -212,7 +298,8 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "Exceptional dawn light, clear local watercraft and a focused human scale.",
+      rationale:
+        "Exceptional dawn light, clear local watercraft and a focused human scale.",
     },
     depiction:
       "A traditional passenger boat on the Xochimilco canals at dawn. Place and watercraft context only. It is not a Kalmekak tour, a chinampa activity or an EA visit.",
@@ -232,7 +319,8 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "Controlled light, visible steam and a close view of skilled preparation.",
+      rationale:
+        "Controlled light, visible steam and a close view of skilled preparation.",
     },
     depiction:
       "Traditional tea preparation photographed in Japan. Cultural context only. The source does not identify the host or room as Camellia Flower Teahouse in Kyoto. Not an EA visit.",
@@ -251,7 +339,8 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "A dramatic shaft of daylight turns a real working room into a memorable scene.",
+      rationale:
+        "A dramatic shaft of daylight turns a real working room into a memorable scene.",
     },
     depiction:
       "Lavash preparation at Tsaghkunk Restaurant & Glkhatun, identified by the photographer and taken in 2022. A historical view of the actual location, not proof of today’s programme or an EA visit.",
@@ -270,7 +359,8 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "Quiet evening light, a clean horizon and the rowing movement held at human scale.",
+      rationale:
+        "Quiet evening light, a clean horizon and the rowing movement held at human scale.",
     },
     depiction:
       "Venetian standing rowing, photographed in Venice in 2012. Activity context, not a Row Venice lesson or an EA visit.",
@@ -290,7 +380,8 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "Tactile detail, deliberate depth of field and a restrained material palette.",
+      rationale:
+        "Tactile detail, deliberate depth of field and a restrained material palette.",
     },
     depiction:
       "A traditional loom photographed in Laos. Textile context only. It does not depict natural dyeing, Ock Pop Tok's class or its premises.",
@@ -310,7 +401,8 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "Lush overhead canopy, bold place-specific colour and a strong vertical frame.",
+      rationale:
+        "Lush overhead canopy, bold place-specific colour and a strong vertical frame.",
     },
     depiction:
       "The actual courtyard of Mayer am Pfarrplatz, photographed in 2025. It does not document an EA visit.",
@@ -329,7 +421,8 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "A rigorous central perspective makes the cacao process immediately legible.",
+      rationale:
+        "A rigorous central perspective makes the cacao process immediately legible.",
     },
     depiction:
       "Cocoa drying in Grenada, photographed in 2015 and tagged Belmont Estate by the photographer. The original caption is “Grenada Chocolate Company”. Historical process context, not a record of today's tour or an EA visit.",
@@ -349,7 +442,8 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "Layered depth, rain-dark stone and subdued forest light create a strong sense of entry.",
+      rationale:
+        "Layered depth, rain-dark stone and subdued forest light create a strong sense of entry.",
     },
     depiction:
       "A real photograph of the Daimon-zaka pilgrim route. It does not document EA participation, worship or special access.",
@@ -362,7 +456,8 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     photographer: "Alexander Lembke",
     sourceUrl:
       "https://visittampere.fi/en/destination/rajaportti-sauna-oldest-public-sauna-in-finland/",
-    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
     licenseUrl:
       "https://visittampere.fi/en/destination/rajaportti-sauna-oldest-public-sauna-in-finland/",
     rightsBasis: "official_source",
@@ -370,7 +465,8 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "Snow, warm windows and the visible cooling courtyard make the public ritual legible at a glance.",
+      rationale:
+        "Snow, warm windows and the visible cooling courtyard make the public ritual legible at a glance.",
     },
     depiction:
       "The actual Rajaportti Sauna and cooling courtyard in winter. Visit Tampere identifies Alexander Lembke as the photographer. It is an official destination image, not an EA visit. Reuse rights have not been independently cleared.",
@@ -382,14 +478,16 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     title: "Overview of the lower outdoor area at Sundhöll",
     photographer: "City of Reykjavík",
     sourceUrl: "https://reykjavik.is/en/sundholl-reykjavik-pool",
-    licenseName: "Official source image. Reuse rights not independently cleared",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
     licenseUrl: "https://reykjavik.is/en/sundholl-reykjavik-pool",
     rightsBasis: "official_source",
     rightsCheckedOn: "2026-09-12",
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "Clear geometry, bright water and everyday bathers present the civic pool without spectacle.",
+      rationale:
+        "Clear geometry, bright water and everyday bathers present the civic pool without spectacle.",
     },
     depiction:
       "The actual outdoor area of Sundhöll Reykjavík Pool, published by the City of Reykjavík. The page does not name an individual photographer. It is not an EA visit. Reuse rights have not been independently cleared.",
@@ -400,17 +498,17 @@ export const publicGuideMedia: readonly GuideMedia[] = [
     alt: "Two fiddle players concentrate beside a candle during a traditional music session at Gus O'Connor's in Doolin.",
     title: "Fiddle session at Gus O'Connor's Pub",
     photographer: "Gus O'Connor's Pub",
-    sourceUrl:
-      "https://www.gusoconnorsdoolin.com/traditional-irish-music",
-    licenseName: "Official source image. Reuse rights not independently cleared",
-    licenseUrl:
-      "https://www.gusoconnorsdoolin.com/traditional-irish-music",
+    sourceUrl: "https://www.gusoconnorsdoolin.com/traditional-irish-music",
+    licenseName:
+      "Official source image. Reuse rights not independently cleared",
+    licenseUrl: "https://www.gusoconnorsdoolin.com/traditional-irish-music",
     rightsBasis: "official_source",
     rightsCheckedOn: "2026-09-12",
     visualReview: {
       outcome: "approved",
       checkedOn: "2026-09-12",
-      rationale: "Intimate framing, warm natural light and concentrated musicians convey listening rather than performance spectacle.",
+      rationale:
+        "Intimate framing, warm natural light and concentrated musicians convey listening rather than performance spectacle.",
     },
     depiction:
       "A fiddle session at the actual pub, published on Gus O'Connor's current music page. The page does not name an individual photographer. It is not an EA visit or a guarantee of a particular line-up. Reuse rights have not been independently cleared.",

@@ -1,10 +1,10 @@
 import {
-  collections,
   fields,
   territories,
   regionsForCountry,
   type PublicExperience,
 } from "./catalog";
+import { editorialPathways } from "./editorial-pathways";
 import { canonicalUrl, indexingEnabled, isDiscoverable } from "./seo";
 
 export type SitemapEntry = { url: string; lastModified?: Date };
@@ -22,6 +22,7 @@ export function sitemapEntries(
     "/transparency",
     "/privacy",
     "/credits",
+    "/plan",
   ];
   if (publicItems.length)
     paths.push("/explore", "/fields", "/places", "/collections");
@@ -29,8 +30,12 @@ export function sitemapEntries(
     if (publicItems.some((item) => item.field === field.slug))
       paths.push(`/fields/${field.slug}`);
   }
-  for (const collection of collections) {
-    if (publicItems.some((item) => collection.fields.includes(item.field)))
+  for (const collection of editorialPathways) {
+    if (
+      publicItems.some((item) =>
+        collection.guideSlugs.some((guideSlug) => guideSlug === item.slug),
+      )
+    )
       paths.push(`/collections/${collection.slug}`);
   }
   for (const place of territories) {

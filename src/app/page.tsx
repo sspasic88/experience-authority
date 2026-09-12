@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Compass, LockKeyhole } from "lucide-react";
-import { ExperienceCard, Photo, SectionHeading } from "@/components/editorial";
-import { collections, fields } from "@/lib/catalog";
+import {
+  ExperienceCard,
+  PathwayCard,
+  SectionHeading,
+} from "@/components/editorial";
+import { fields, interests } from "@/lib/catalog";
+import { editorialPathways } from "@/lib/editorial-pathways";
 import { demoMode, getExperiences } from "@/lib/data";
 import { StructuredData } from "@/components/structured-data";
 import { HomeHero } from "@/components/home-hero";
@@ -31,6 +36,18 @@ export default function Home() {
   const startingPoints = familiarWaysIn.length
     ? familiarWaysIn
     : experiences.slice(0, 3);
+  const newGuideSlugs = [
+    "read-the-desert-at-ground-level",
+    "kimchi-before-the-jar",
+    "when-the-sap-starts-to-run",
+    "the-pour-before-the-glass",
+    "when-the-sky-moves-as-one",
+    "the-tide-brings-the-horses",
+  ];
+  const newGuides = newGuideSlugs.flatMap((slug) => {
+    const item = experiences.find((experience) => experience.slug === slug);
+    return item ? [item] : [];
+  });
   return (
     <>
       <StructuredData data={websiteStructuredData()} />
@@ -70,6 +87,69 @@ export default function Home() {
           </div>
         )}
       </section>
+      <section className="desire-section">
+        <div className="wrap">
+          <SectionHeading
+            eyebrow="Choose the kind of day"
+            title="What do you feel like doing?"
+            href="/explore"
+            link="See every experience"
+          />
+          <div className="desire-grid">
+            {interests.map((interest, index) => {
+              const count = experiences.filter((item) =>
+                interest.fields.includes(item.field),
+              ).length;
+              if (!count) return null;
+              const lines: Record<string, string> = {
+                "eat-drink": "Sit down hungry. Leave knowing more.",
+                "make-learn":
+                  "Put your hands to work and your assumptions aside.",
+                "move-water": "Change the pace and learn through movement.",
+                "explore-reflect": "Look longer at the place around you.",
+                "swim-reset": "Make room for water, warmth and a slower hour.",
+                "shared-rituals": "Enter public life with attention and care.",
+              };
+              return (
+                <Link
+                  key={interest.slug}
+                  href={`/explore?interest=${interest.slug}`}
+                  className="desire-card"
+                >
+                  <span className="eyebrow">
+                    Direction {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3>{interest.name}</h3>
+                  <p>{lines[interest.slug]}</p>
+                  <small>
+                    {count} {count === 1 ? "guide" : "guides"}{" "}
+                    <ArrowUpRight size={15} />
+                  </small>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      {newGuides.length > 0 && (
+        <section className="section wrap">
+          <SectionHeading
+            eyebrow="New to the guide"
+            title="Fresh ways into the world."
+            href="/explore"
+            link="Browse all guides"
+          />
+          <p className="section-note">
+            Recently researched public-source guides, each with a current access
+            route, evidence boundary and credited photography.
+          </p>
+          <div className="experience-grid">
+            {newGuides.map((item, index) => (
+              <ExperienceCard key={item.id} item={item} index={index} />
+            ))}
+          </div>
+        </section>
+      )}
       <section className="fields-section">
         <div className="wrap fields-layout">
           <div>
@@ -111,27 +191,19 @@ export default function Home() {
           link="All collections"
         />
         <div className="collection-grid">
-          {collections.map((collection, i) => (
-            <Link
-              className="collection-card"
-              href={`/collections/${collection.slug}`}
-              key={collection.slug}
-            >
-              <div className="collection-image">
-                <Photo
-                  src={collection.image}
-                  alt="Illustrative photograph for an editorial theme, not documentation of the experiences."
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                />
-                <span>Collection {String(i + 1).padStart(2, "0")}</span>
-              </div>
-              <h3>
-                {collection.title}
-                <ArrowUpRight size={22} aria-hidden="true" />
-              </h3>
-              <p>{collection.subtitle}</p>
-            </Link>
-          ))}
+          {editorialPathways.slice(0, 3).map((pathway, index) => {
+            const item = experiences.find(
+              (experience) => experience.slug === pathway.guideSlugs[0],
+            );
+            return item ? (
+              <PathwayCard
+                key={pathway.slug}
+                pathway={pathway}
+                item={item}
+                index={index}
+              />
+            ) : null;
+          })}
         </div>
       </section>
       <section className="method-band">
@@ -158,6 +230,37 @@ export default function Home() {
             </p>
             <Link className="button button-paper" href="/method">
               How we make our selections <ArrowUpRight size={19} />
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="home-plan-band">
+        <div className="wrap home-plan-layout">
+          <div>
+            <p className="eyebrow">From discovery to departure</p>
+            <h2>A good trip needs more than a list.</h2>
+          </div>
+          <div className="home-plan-steps">
+            <p>
+              Use EA to find a meaningful way in, understand the access
+              boundary, keep your favourites and shape a private journey draft.
+            </p>
+            <ol>
+              <li>
+                <span>01</span> Find a guide
+              </li>
+              <li>
+                <span>02</span> Check the sources
+              </li>
+              <li>
+                <span>03</span> Save and compare
+              </li>
+              <li>
+                <span>04</span> Build your journey
+              </li>
+            </ol>
+            <Link className="button button-dark" href="/plan">
+              Plan with EA <ArrowRight size={19} />
             </Link>
           </div>
         </div>

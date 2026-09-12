@@ -182,6 +182,33 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "south-korea",
+    name: "South Korea",
+    region: "seoul",
+    regionName: "Seoul",
+    intro:
+      "Begin in Seoul with kimchi as something made, shared and understood through more than a finished taste.",
+    image: null,
+  },
+  {
+    slug: "namibia",
+    name: "Namibia",
+    region: "swakopmund",
+    regionName: "Swakopmund",
+    intro:
+      "Read the Namib at ground level, where tracks and small lives change the meaning of an apparently empty horizon.",
+    image: null,
+  },
+  {
+    slug: "canada",
+    name: "Canada",
+    region: "outaouais",
+    regionName: "Outaouais, Québec",
+    intro:
+      "Plan for the brief maple season through a public table shaped by sap, snow and the next current calendar.",
+    image: null,
+  },
+  {
     slug: "belgium",
     name: "Belgium",
     region: "oostduinkerke",
