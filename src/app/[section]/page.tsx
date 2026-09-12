@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { PageIntro } from "@/components/editorial";
 import { DraftForm } from "@/components/draft-form";
 import { editorialPages } from "@/lib/pages";
+import { publicGuideMedia } from "@/lib/media";
 import { pageMetadata } from "@/lib/seo";
 const knownSections = new Set([
   ...Object.keys(editorialPages),
@@ -82,21 +83,44 @@ export default async function Page({ params, searchParams }: Props) {
           title="Sources & credits."
         >
           <p>
-            Public-source guide cards use original EA typographic artwork. The
-            photographs used on the homepage and thematic collections are
-            illustrative, not documentation of the named experiences.
+            Every published photograph has a named creator, source page and
+            licence record. Guide imagery is editorial context, never evidence
+            that EA attended, assessed or endorses a named experience.
           </p>
         </PageIntro>
         <div className="prose-layout">
           <aside className="prose-aside">
-            No provider photographs have been copied into the guides.
-            Documentary images require a clear rights record and any relevant
-            subject permissions. The credited illustrative photographs are not
-            AI-generated.
+            No AI-generated imagery is used. We avoid provider imagery unless
+            its rights record is clear. Every guide photo is labelled as either
+            illustrative context or a real photograph of the place, with its
+            limits stated below.
           </aside>
           <article className="prose">
             <section>
               <h2>Photography.</h2>
+              <h3>Compass guides.</h3>
+              <ul>
+                {publicGuideMedia.map((media) => (
+                  <li id={`media-${media.guideId}`} key={media.guideId}>
+                    <a href={media.sourceUrl} target="_blank" rel="noreferrer">
+                      {media.photographer} — {media.title}
+                    </a>
+                    . {media.licenseName} ({" "}
+                    <a href={media.licenseUrl} target="_blank" rel="noreferrer">
+                      licence
+                    </a>
+                    ); source and rights checked {media.rightsCheckedOn}. {media.depiction}
+                  </li>
+                ))}
+              </ul>
+              <p>
+                Unsplash photographs are used under the{" "}
+                <a href="https://unsplash.com/license" target="_blank" rel="noreferrer">
+                  Unsplash License
+                </a>. The Rajaportti image is used under its stated CC BY-SA 4.0
+                licence. No photographer, subject or place endorses Experience Authority.
+              </p>
+              <h3>Homepage & collections.</h3>
               <ul>
                 <li>
                   <a

@@ -342,6 +342,33 @@ button {
   letter-spacing: -0.3px;
   margin-bottom: 22px;
 }
+.hero-invitation p > span {
+  display: block;
+}
+.hero-invitation-emphasis {
+  color: var(--ea-vermilion-deep);
+}
+.hero-cta {
+  box-shadow: 7px 7px 0 rgba(8, 27, 42, 0.12);
+}
+.hero-waypoint {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding-bottom: 5px;
+  color: var(--ea-stone);
+  font-size: 9px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.hero-waypoint i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ea-vermilion);
+}
 .hero-slash {
   width: 19px;
   height: 93px;
@@ -495,6 +522,22 @@ button {
   background: rgba(8, 27, 42, 0.75);
   padding: 3px 7px;
   pointer-events: none;
+}
+.image-source-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 13px;
+  z-index: 2;
+  font-size: 9px;
+  letter-spacing: 0.2px;
+  color: white;
+  background: rgba(8, 27, 42, 0.78);
+  padding: 3px 7px;
+  transition: background 0.2s var(--ea-ease);
+}
+.image-source-badge:hover,
+.image-source-badge:focus-visible {
+  background: var(--ea-vermilion);
 }
 .card-actions {
   position: absolute;
@@ -1934,6 +1977,9 @@ button {
     font-size: 12px;
     padding: 11px 17px;
     gap: 29px;
+  }
+  .hero-waypoint {
+    display: none;
   }
   .hero-slash {
     height: 82px;

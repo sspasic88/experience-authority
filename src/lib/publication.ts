@@ -1,4 +1,5 @@
 import type { PublicExperience, Status } from "./catalog";
+import { guideMediaFor } from "./media";
 
 export type EditorialRecord = {
   id: string;
@@ -32,6 +33,7 @@ export function canPublishGuide(
   today = new Date().toISOString().slice(0, 10),
 ) {
   const r = p.guideReview;
+  const media = guideMediaFor(p.id);
   const validDate = (value: string) =>
     /^\d{4}-\d{2}-\d{2}$/.test(value) &&
     Number.isFinite(Date.parse(value)) &&
@@ -39,7 +41,17 @@ export function canPublishGuide(
   return Boolean(
     p.status === "public_guide" &&
     !p.demo &&
-    p.image === null &&
+    Boolean(
+      media &&
+        p.image === media.src &&
+        p.imageAlt === media.alt &&
+        safeSourceUrl(media.sourceUrl) &&
+        safeSourceUrl(media.licenseUrl) &&
+        media.photographer.trim() &&
+        media.title.trim() &&
+        media.licenseName.trim() &&
+        validDate(media.rightsCheckedOn),
+    ) &&
     p.kernel.trim() &&
     p.rootedness.trim() &&
     p.responsibility.trim() &&

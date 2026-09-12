@@ -2,9 +2,8 @@ import Link from "next/link";
 import { LayoutGrid, List, Search } from "lucide-react";
 import { EmptyState, ExperienceCard, PageIntro } from "@/components/editorial";
 import {
-  fields,
   filterExperiences,
-  statusLabels,
+  interests,
   territories,
   type Query,
 } from "@/lib/catalog";
@@ -29,7 +28,7 @@ export default async function Explore({
 }) {
   const raw = await searchParams;
   const query: Query = Object.fromEntries(
-    ["q", "field", "place", "status", "view"].map((key) => [
+    ["q", "field", "interest", "place", "status", "view"].map((key) => [
       key,
       typeof raw[key] === "string" ? raw[key] : "",
     ]),
@@ -70,7 +69,7 @@ export default async function Explore({
             type="search"
             name="q"
             defaultValue={query.q}
-            placeholder="Try rowing, colour, or Reykjavík…"
+            placeholder="Try sauna, wine, rowing, cacao, or Reykjavík…"
             maxLength={200}
           />
           <button type="submit" className="button">
@@ -80,14 +79,20 @@ export default async function Explore({
         <div className="filter-panel">
           <div className="filter-row">
             <label>
-              Field
-              <select name="field" defaultValue={query.field}>
-                <option value="">All 13 fields</option>
-                {fields.map((f) => (
-                  <option value={f.slug} key={f.slug}>
-                    {f.name}
-                  </option>
-                ))}
+              What do you feel like?
+              <select name="interest" defaultValue={query.interest}>
+                <option value="">Anything worth doing</option>
+                {interests
+                  .filter((interest) =>
+                    allItems.some((item) =>
+                      interest.fields.includes(item.field),
+                    ),
+                  )
+                  .map((interest) => (
+                    <option value={interest.slug} key={interest.slug}>
+                      {interest.name}
+                    </option>
+                  ))}
               </select>
             </label>
             <label>
@@ -101,21 +106,6 @@ export default async function Explore({
                   .map((t) => (
                     <option value={t.slug} key={t.slug}>
                       {t.name}
-                    </option>
-                  ))}
-              </select>
-            </label>
-            <label>
-              Editorial status
-              <select name="status" defaultValue={query.status}>
-                <option value="">All statuses</option>
-                {Object.entries(statusLabels)
-                  .filter(([value]) =>
-                    allItems.some((item) => item.status === value),
-                  )
-                  .map(([value, label]) => (
-                    <option key={value} value={value}>
-                      {label}
                     </option>
                   ))}
               </select>

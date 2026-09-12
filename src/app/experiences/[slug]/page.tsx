@@ -10,6 +10,7 @@ import {
   StatusBadge,
 } from "@/components/editorial";
 import { getExperience, getExperiences } from "@/lib/data";
+import { guideMediaFor } from "@/lib/media";
 import { pageMetadata, isDiscoverable } from "@/lib/seo";
 type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props) {
@@ -28,6 +29,7 @@ export async function generateMetadata({ params }: Props) {
 export default async function Experience({ params }: Props) {
   const item = getExperience((await params).slug);
   if (!item) notFound();
+  const media = guideMediaFor(item.id);
   const related = getExperiences()
     .filter((e) => e.id !== item.id && e.status !== "protected_visibility")
     .slice(0, 3);
@@ -67,12 +69,28 @@ export default async function Experience({ params }: Props) {
         )}
       </div>
       <p className="detail-photo-credit">
-        {item.image
-          ? "Illustrative stock photography, not evidence of this experience. "
-          : "Original EA typographic artwork. No venue or participant photograph is used. "}
-        <Link href="/credits" className="reset-link">
-          Image sources & credits
-        </Link>
+        {media ? (
+          <>
+            {media.depiction}{" "}
+            <Link href={`/credits#media-${media.guideId}`} className="reset-link">
+              Image source & credit
+            </Link>
+          </>
+        ) : item.image ? (
+          <>
+            Illustrative stock photography, not evidence of this experience.{" "}
+            <Link href="/credits" className="reset-link">
+              Image sources & credits
+            </Link>
+          </>
+        ) : (
+          <>
+            Original EA typographic artwork. No venue or participant photograph is used.{" "}
+            <Link href="/credits" className="reset-link">
+              Image sources & credits
+            </Link>
+          </>
+        )}
       </p>
       {item.demo ? (
         <div className="demo-callout">

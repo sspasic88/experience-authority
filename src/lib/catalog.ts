@@ -62,6 +62,44 @@ export const fields = [
   },
 ] as const;
 export type Field = (typeof fields)[number]["slug"];
+/**
+ * Visitor-facing discovery lenses. Fields remain EA's editorial vocabulary;
+ * these translate that vocabulary into the things a traveller actually wants
+ * to do. Do not surface an interest until the collection contains it.
+ */
+export type Interest = {
+  slug: string;
+  name: string;
+  fields: readonly Field[];
+};
+export const interests: readonly Interest[] = [
+  { slug: "eat-drink", name: "Eat & drink", fields: ["taste"] },
+  {
+    slug: "make-learn",
+    name: "Make & learn",
+    fields: ["make", "learn", "work"],
+  },
+  {
+    slug: "move-water",
+    name: "Move & water",
+    fields: ["move", "play"],
+  },
+  {
+    slug: "explore-reflect",
+    name: "Explore & reflect",
+    fields: ["nature", "witness", "contribute"],
+  },
+  {
+    slug: "swim-reset",
+    name: "Swim & reset",
+    fields: ["restore", "stay"],
+  },
+  {
+    slug: "shared-rituals",
+    name: "Shared rituals",
+    fields: ["gather", "celebrate"],
+  },
+];
 export type PublicStatus =
   | "public_guide"
   | "selected_open"
@@ -114,12 +152,14 @@ export type GuideReview = {
 export type Query = {
   q?: string;
   field?: string;
+  interest?: string;
   place?: string;
   status?: string;
   view?: string;
 };
 export function filterExperiences(items: PublicExperience[], query: Query) {
   const q = (query.q ?? "").trim().toLocaleLowerCase();
+  const interest = interests.find((entry) => entry.slug === query.interest);
   return items.filter(
     (item) =>
       (!q ||
@@ -127,7 +167,8 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
           .join(" ")
           .toLocaleLowerCase()
           .includes(q)) &&
-      (!query.field || item.field === query.field) &&
+        (!query.field || item.field === query.field) &&
+      (!interest || interest.fields.includes(item.field)) &&
       (!query.place || item.countrySlug === query.place) &&
       (!query.status || item.status === query.status),
   );

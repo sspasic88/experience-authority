@@ -38,15 +38,20 @@ export default function Home() {
           </h1>
           <div className="hero-bottom">
             <span className="hero-slash" aria-hidden="true" />
-            <div>
+            <div className="hero-invitation">
               <p>
-                Not just somewhere to go.
-                <br />A different way to be there.
+                <span>Not just somewhere to go.</span>
+                <span className="hero-invitation-emphasis">
+                  A different way to be there.
+                </span>
               </p>
-              <Link href="/explore" className="button">
+              <Link href="/explore" className="button hero-cta">
                 Find your way <ArrowUpRight size={20} />
               </Link>
             </div>
+            <span className="hero-waypoint" aria-hidden="true">
+              <i /> Start closer
+            </span>
           </div>
         </div>
         <div className="hero-visual">

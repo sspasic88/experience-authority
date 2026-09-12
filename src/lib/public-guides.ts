@@ -1,4 +1,5 @@
 import type { PublicExperience, GuideReview } from "./catalog";
+import { guideImage } from "./media";
 
 // Original EA desk-guide copy. No source photographs, private dossiers or contacts.
 // The seven practice-level candidates are narrowed to publicly advertised access.
@@ -26,6 +27,7 @@ export const publicGuides: PublicExperience[] = [
   {
     ...common,
     id: "kumano-daimon-zaka",
+    ...guideImage("kumano-daimon-zaka"),
     slug: "leave-room-for-devotion",
     title: "Leave room for devotion",
     summary:
@@ -71,6 +73,7 @@ export const publicGuides: PublicExperience[] = [
   {
     ...common,
     id: "tampere-rajaportti",
+    ...guideImage("tampere-rajaportti"),
     slug: "make-room-in-the-steam",
     title: "Make room in the steam",
     summary:
@@ -116,6 +119,7 @@ export const publicGuides: PublicExperience[] = [
   {
     ...common,
     id: "venice-voga",
+    ...guideImage("venice-voga"),
     slug: "venice-through-an-oar",
     title: "Venice, through an oar",
     summary:
@@ -161,6 +165,7 @@ export const publicGuides: PublicExperience[] = [
   {
     ...common,
     id: "luang-prabang-natural-dye",
+    ...guideImage("luang-prabang-natural-dye"),
     slug: "colour-before-cloth",
     title: "Colour, before cloth",
     summary:
@@ -206,6 +211,7 @@ export const publicGuides: PublicExperience[] = [
   {
     ...common,
     id: "reykjavik-sundholl",
+    ...guideImage("reykjavik-sundholl"),
     slug: "a-city-in-the-water",
     title: "A city, in the water",
     summary:
@@ -251,6 +257,7 @@ export const publicGuides: PublicExperience[] = [
   {
     ...common,
     id: "vienna-heuriger",
+    ...guideImage("vienna-heuriger"),
     slug: "the-vineyard-at-the-table",
     title: "The vineyard at the table",
     summary:
@@ -292,6 +299,7 @@ export const publicGuides: PublicExperience[] = [
   {
     ...common,
     id: "grenada-belmont-cacao",
+    ...guideImage("grenada-belmont-cacao"),
     slug: "before-the-chocolate-bar",
     title: "Before the chocolate bar",
     summary:

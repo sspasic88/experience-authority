@@ -28,12 +28,12 @@ The original workbook and 200-candidate audit are unchanged. No bulk promotion o
 - Rajaportti uses destination-marketing pages as its two official public sources; they establish public visit framing and general etiquette, not independent cultural, health or accessibility findings. Current practical arrangements must be confirmed directly.
 - Daimon-zaka is presented as a bounded public path within a living pilgrimage landscape. It does not invite shrine ritual participation, private-property access, photography of people without permission or claims of safety/suitability. Route conditions must be rechecked directly.
 - Ock Pop Tok social/working-condition claims and Row Venice impact claims are not treated as independently audited facts.
-- No provider photos or logos; original code-native typographic art. Existing licensed stock is confined to clearly illustrative brand/theme contexts and the separate demo mode.
+- Every Compass guide now has a real editorial photograph with a first-class media record in `src/lib/media.ts`: local asset path, creator, original source URL, licence URL, rights-check date, descriptive alt text and a clear depiction boundary. Six are Unsplash-licensed; Rajaportti is CC BY-SA 4.0 from Wikimedia Commons. No AI-generated image is used. Photographs that are not of the named experience are explicitly labelled illustrative, never treated as evidence, and link to their public credit record from the card and detail page.
 - Public guide status cannot use the Selected publication-approval function. Selected still requires its original consent/reviewer policy. Guide source data has a recursive public allowlist.
 
 ## What changed in the website
 
-Public-source badges, source notes with dates and outbound official links, guide-specific artwork, correct normal-mode copy on Home/Compass/detail/Passport/Places/Fields/Collections/About/Method/Transparency/Credits. Places now display actual current guide coverage. Old demos remain explicit opt-in only. Compass naming remains approved.
+Public-source badges, source notes with dates and outbound official links, credited Compass photography, correct normal-mode copy on Home/Compass/detail/Passport/Places/Fields/Collections/About/Method/Transparency/Credits. Compass discovery now starts with traveller intent (for example Eat & drink, Move & water, Make & learn) rather than an internal editorial-status filter; it only exposes lenses with real current coverage. Places now display actual current guide coverage. Old demos remain explicit opt-in only. Compass naming remains approved.
 
 No changes to IA, bookings, subscriptions or purchases. Public production uses its own GitHub/Vercel path; no emails, forms or customer accounts are connected. SEO production gates, nonce CSP and existing browser/data protections remain. Protected Preview deployments stay noindex.
 

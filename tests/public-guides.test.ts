@@ -9,6 +9,7 @@ import {
 import { filterExperiences, territories } from "../src/lib/catalog";
 import { isDiscoverable, SITE_ORIGIN } from "../src/lib/seo";
 import { sitemapEntries } from "../src/lib/discovery";
+import { guideMediaFor, publicGuideMedia } from "../src/lib/media";
 
 const today = "2026-09-12";
 const sample = publicGuides[0];
@@ -21,7 +22,10 @@ test("guide set is seven distinct, sourced public experiences, not Selected or d
     assert.equal(canPublishGuide(p, today), true, p.slug);
     assert.equal(p.status, "public_guide");
     assert.equal(p.demo, false);
-    assert.equal(p.image, null);
+    const media = guideMediaFor(p.id);
+    assert.ok(media, `missing media record: ${p.slug}`);
+    assert.equal(p.image, media?.src);
+    assert.equal(p.imageAlt, media?.alt);
     assert.ok(
       territories.some(
         (t) => t.slug === p.countrySlug && t.region === p.regionSlug,
@@ -29,6 +33,8 @@ test("guide set is seven distinct, sourced public experiences, not Selected or d
     );
     assert.ok(p.guideReview!.sources.every((s) => s.note.length > 20));
   }
+  assert.equal(publicGuideMedia.length, publicGuides.length);
+  assert.equal(new Set(publicGuideMedia.map((media) => media.src)).size, 7);
 });
 test("desk guides fail closed for missing evidence, special permission, stale or future checks", () => {
   const r = sample.guideReview!;

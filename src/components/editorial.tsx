@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, LockKeyhole, MoveUpRight } from "lucide-react";
 import { statusLabels, type PublicExperience } from "@/lib/catalog";
+import { guideMediaFor } from "@/lib/media";
 import { ExperienceActions } from "./passport-provider";
 
 export function StatusBadge({
@@ -71,6 +72,7 @@ export function ExperienceCard({
   item: PublicExperience;
   index?: number;
 }) {
+  const media = item.status === "public_guide" ? guideMediaFor(item.id) : undefined;
   return (
     <article className="experience-card">
       <div className={`card-image ${!item.image ? "card-no-image" : ""}`}>
@@ -102,6 +104,15 @@ export function ExperienceCard({
             </span>
           )}
         </Link>
+        {media && (
+          <Link
+            className="image-source-badge"
+            href={`/credits#media-${media.guideId}`}
+            aria-label={`Photography credit for ${item.title}`}
+          >
+            Illustrative photo · credit
+          </Link>
+        )}
         {item.demo && <span className="image-demo">Illustrative · demo</span>}
         <ExperienceActions item={item} compact />
       </div>
