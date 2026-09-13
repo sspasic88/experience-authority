@@ -19,6 +19,7 @@ import { guideBatch17 } from "./guide-batch-17";
 import { guideBatch18 } from "./guide-batch-18";
 import { guideBatch19 } from "./guide-batch-19";
 import { guideBatch20 } from "./guide-batch-20";
+import { guideBatch21 } from "./guide-batch-21";
 
 // Original EA desk-guide copy. No source photographs, private dossiers or contacts.
 // Practice-level candidates are individually narrowed to publicly advertised access.
@@ -43,6 +44,7 @@ const common = {
 } as const;
 
 const publicGuideDrafts: PublicExperience[] = [
+  ...guideBatch21,
   ...guideBatch20,
   ...guideBatch19,
   ...guideBatch18,

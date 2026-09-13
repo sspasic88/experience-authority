@@ -5,6 +5,9 @@ export const guideReleases = [
   {
     date: "2026-09-13",
     slugs: [
+      "make-pasta-until-the-sauce-makes-sense",
+      "ride-the-road-rome-built-to-leave-it",
+      "put-the-gods-back-among-the-machines",
       "ask-the-market-where-london-came-from",
       "meet-the-work-before-the-curtain-rises",
       "open-a-door-the-underground-left-behind",

@@ -42,8 +42,8 @@ test("Arcachon stays a bay-wide chapter regardless of guide order or a more spec
   }
 });
 
-test("guide set contains seventy-two distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 72);
+test("guide set contains seventy-five distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 75);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -81,6 +81,27 @@ test("guide set contains seventy-two distinct, sourced public experiences, not S
   assert.equal(
     new Set(publicGuideMedia.map((media) => media.src)).size,
     publicGuides.length,
+  );
+});
+test("Rome moves from a familiar food to ancient infrastructure and an unexpected museum", () => {
+  const rome = publicGuides.filter(
+    (guide) => guide.countrySlug === "italy" && guide.regionSlug === "rome",
+  );
+  assert.equal(rome.length, 3);
+  assert.deepEqual([...new Set(rome.map((guide) => guide.field))].sort(), [
+    "move",
+    "taste",
+    "witness",
+  ]);
+  assert.ok(rome.every((guide) => guide.access.includes("No EA booking")));
+  assert.match(
+    rome.find((guide) => guide.slug === "ride-the-road-rome-built-to-leave-it")!
+      .responsibility,
+    /Some sections carry local vehicles/,
+  );
+  assert.equal(
+    connectedExperiences(rome[0], publicGuides)[0].scope,
+    "same_area",
   );
 });
 test("London connects a recognisable market with production work and hidden infrastructure", () => {

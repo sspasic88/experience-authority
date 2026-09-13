@@ -2,7 +2,7 @@
 
 ## Public scope
 
-72 public-source guides across 37 countries and territories, 11 active fields, 12 collections, nine Journal articles and 12 local planning chapters. London now has three deliberately different public routes: a licensed Borough Market food tour, the Royal Opera House Behind the Scenes Tour and one currently available Hidden London tour through closed transport infrastructure.
+This document records the 72-guide London release. The current 75-guide scope is documented in [Rome depth](rome-depth.md). London has three deliberately different public routes: a licensed Borough Market food tour, the Royal Opera House Behind the Scenes Tour and one currently available Hidden London tour through closed transport infrastructure.
 
 This is desk-researched public access. It is not an EA visit, local validation, Selected status, provider partnership, booking service or package. Each guide states the visitor role, evidence boundary, current route to access and what must be checked before payment.
 
@@ -20,6 +20,6 @@ Every visible photo credit remains `Image: creator / source ↗`, lower right, a
 
 ## Daily return and review
 
-27 individually authored daily discoveries are prepared for 13 September through 9 October. The London features are date-gated for 7 to 9 October but the three guides themselves are already part of the 13 September public release. This is a finite editorial queue, not automated publication or proof of retention.
+At this release point, 27 individually authored daily discoveries were prepared for 13 September through 9 October. The London features are date-gated for 7 to 9 October but the three guides themselves are already part of the 13 September public release. This is a finite editorial queue, not automated publication or proof of retention.
 
 Recheck all London access and evidence no later than 12 December 2026. Recheck sooner if an official page changes, a tour disappears, physical requirements change or a correction is received. Extend the daily queue before 10 October.

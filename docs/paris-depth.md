@@ -4,7 +4,7 @@
 
 ## Current edition
 
-This document records the 69-guide Paris release. The current 72-guide scope is documented in [London depth](london-depth.md). Paris has three deliberately different public routes: a substantial croissant and viennoiserie workshop, a guided visit inside the active Gobelins weaving workshops and a self-guided visit through the Paris Sewer Museum.
+This document records the 69-guide Paris release. The current 75-guide scope is documented in [Rome depth](rome-depth.md). Paris has three deliberately different public routes: a substantial croissant and viennoiserie workshop, a guided visit inside the active Gobelins weaving workshops and a self-guided visit through the Paris Sewer Museum.
 
 The chapter begins with a highly recognisable Paris reference and then opens two less expected forms of attention. It does not present the city as a checklist and it does not force all three stops into one day. Each guide remains a separate booking or admission with its own location, timing, language and access conditions.
 

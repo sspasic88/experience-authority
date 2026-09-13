@@ -1,6 +1,6 @@
 # Content suitability audit
 
-13 September 2026. Scope: all 72 public guides, their headlines, summaries, participation framing and responsibility notes.
+13 September 2026. Scope: all 75 public guides, their headlines, summaries, participation framing and responsibility notes.
 
 ## Standard applied
 
@@ -19,4 +19,4 @@ Recognisable reference experiences remain important when EA can reveal the work,
 
 ## Result
 
-No guide was removed in this pass. The 72-guide public catalogue remains suitable under the restrained EA position, with one Kuopio framing correction. The London additions were screened under the same standard and rely on bounded public tours rather than independent access to working or closed areas. This is an editorial risk screen, not field validation, legal advice, a safety audit or proof that every visitor will find every subject uncontroversial. Reapply the screen to each new batch and during source rechecks.
+No guide was removed in this pass. The 75-guide public catalogue remains suitable under the restrained EA position, with one Kuopio framing correction. The Rome additions were screened under the same standard. The pasta class stays within a public commercial programme, the Appian Way guide does not promise a traffic-free or easy ride, and the museum guide remains within ordinary public admission. The London additions retain their bounded public-tour framing. This is an editorial risk screen, not field validation, legal advice, a safety audit or proof that every visitor will find every subject uncontroversial. Reapply the screen to each new batch and during source rechecks.

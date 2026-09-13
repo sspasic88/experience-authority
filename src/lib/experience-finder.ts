@@ -30,6 +30,54 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "make-pasta-until-the-sauce-makes-sense": {
+    modes: ["hands-on", "at-table"],
+    time: "half-day",
+    keywords: [
+      "Rome",
+      "Italy",
+      "pasta",
+      "pastificio",
+      "fettuccine",
+      "ravioli",
+      "tortellini",
+      "cooking",
+      "food",
+      "workshop",
+    ],
+  },
+  "ride-the-road-rome-built-to-leave-it": {
+    modes: ["outdoors"],
+    time: "half-day",
+    keywords: [
+      "Rome",
+      "Italy",
+      "Via Appia",
+      "Appian Way",
+      "bicycle",
+      "cycling",
+      "road",
+      "archaeology",
+      "outdoors",
+      "UNESCO",
+    ],
+  },
+  "put-the-gods-back-among-the-machines": {
+    modes: ["watch-listen", "slow-down"],
+    time: "short",
+    keywords: [
+      "Rome",
+      "Italy",
+      "Centrale Montemartini",
+      "power station",
+      "industrial",
+      "machines",
+      "sculpture",
+      "museum",
+      "archaeology",
+      "Via Ostiense",
+    ],
+  },
   "ask-the-market-where-london-came-from": {
     modes: ["at-table", "watch-listen"],
     time: "half-day",

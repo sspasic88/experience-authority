@@ -16,6 +16,35 @@ export type CityChapter = {
 /** Authored local combinations. These are ideas to adapt, not timed or bookable packages. */
 export const cityChapters: readonly CityChapter[] = [
   {
+    slug: "rome",
+    name: "Rome",
+    country: "italy",
+    regions: ["rome"],
+    title: "Make the shape. Follow the road. Enter the machine room.",
+    intro:
+      "Begin with the Rome almost everyone can picture, then change what makes it memorable. Give pasta enough time to become technique. Ride part of the road that carried the city beyond itself. Finish where ancient sculpture stands inside Rome's first public power station.",
+    pace: "One hands-on session, one outdoor half-day and one flexible museum visit.",
+    planning:
+      "The pasta class is a three-hour paid booking at one of two named locations. Via Appia is outside the central monument circuit and needs a separate weather, surface, traffic, equipment and return check. Centrale Montemartini is on Via Ostiense and works best as its own unhurried visit. Do not force all three into one day. They are separate public offers with no combined ticket, transport, meal beyond the class, bicycle support or package included.",
+    stops: [
+      {
+        slug: "make-pasta-until-the-sauce-makes-sense",
+        moment: "Begin with the thing everyone recognises",
+        why: "Roll, cut and fill before you eat. The familiar plate becomes a relationship between dough, shape, filling and sauce rather than another name on a list.",
+      },
+      {
+        slug: "ride-the-road-rome-built-to-leave-it",
+        moment: "On a suitable day, let the city stretch out",
+        why: "Use one bounded section of Via Appia to understand Rome through movement and infrastructure. Distance must follow conditions and your ability, not ambition.",
+      },
+      {
+        slug: "put-the-gods-back-among-the-machines",
+        moment: "Give the last contrast room to work",
+        why: "Meet ancient objects beside turbines and diesel engines. Rome stops being a single historical layer and becomes a city that repeatedly uncovers, powers and reframes itself.",
+      },
+    ],
+  },
+  {
     slug: "london",
     name: "London",
     country: "united-kingdom",

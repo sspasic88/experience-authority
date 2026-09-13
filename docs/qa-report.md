@@ -1,5 +1,16 @@
 # QA report — 12 September 2026
 
+## Rome depth — 13 September 2026
+
+- The candidate contains 75 public-source guides in 37 countries and territories, 13 local planning chapters and 30 dated daily discoveries through 12 October. Rome adds three independent public routes across Taste, Move and Witness.
+- Pastificio Faini provides a relatable hands-on beginning. Via Appia returns a famous ancient road to movement and infrastructure. Centrale Montemartini places classical sculpture inside the machinery of Rome's first public power station. The planning chapter keeps all three separate and does not imply an easy cycle surface, a continuous route, package or combined ticket.
+- All three photographs are real official-source images with direct lower-right credits, explicit depiction boundaries and uncleared-reuse status. The Appia frame deliberately shows the paving without promising a staged traffic-free ride. No image claims to document an EA visit.
+- All 63 automated policy, content, media, search, privacy, SEO and security tests pass. Type checking and the optimized production build pass.
+- The indexable local production smoke passed 112 pages and 12 expected not-found routes. The sitemap contains Rome and all three guide routes, private and filtered pages remain excluded, and all checked pages received distinct CSP nonces.
+- The full responsive browser audit passed 159 views at 390, 768 and 1440 pixels, encountered 292 internal links and found no broken images, horizontal overflow, browser errors or automated WCAG A/AA violations.
+- A final visual inspection covered the Rome destination first fold and the pasta detail hero. The three images enter the desktop destination view, credits remain secondary but accessible, and the pasta headline holds a controlled three-line wrap beside a participation-led crop. Visitor-facing interest labels are now the simpler `Make`, `Move` and `Reset` language previously set for EA.
+- See [Rome depth](rome-depth.md) for content, access, photography and recheck boundaries.
+
 ## London depth — 13 September 2026
 
 - The candidate contains 72 public-source guides in 37 countries and territories, 12 local planning chapters and 27 dated daily discoveries through 9 October. London adds three independent public routes across Taste, Work and Witness.

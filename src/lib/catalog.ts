@@ -93,7 +93,7 @@ export const interests: readonly Interest[] = [
   },
   {
     slug: "make-learn",
-    name: "Make & learn",
+    name: "Make",
     fields: ["make", "learn", "work"],
     guideSlugs: [
       "learn-the-fold-in-salta",
@@ -103,7 +103,7 @@ export const interests: readonly Interest[] = [
   },
   {
     slug: "move-water",
-    name: "Move & water",
+    name: "Move",
     fields: ["move", "play"],
   },
   {
@@ -113,7 +113,7 @@ export const interests: readonly Interest[] = [
   },
   {
     slug: "swim-reset",
-    name: "Rest & stay",
+    name: "Reset",
     fields: ["restore", "stay"],
     guideSlugs: ["make-room-in-the-steam"],
   },
@@ -540,10 +540,10 @@ export const territories = [
   {
     slug: "italy",
     name: "Italy",
-    region: "venice",
-    regionName: "Venice",
+    region: "rome",
+    regionName: "Rome",
     intro:
-      "Understand Venice through the movement of an oar and the shaping of glass in a Castello atelier. Two hands-on encounters with the skill behind familiar surfaces.",
+      "Make pasta, ride the Appian Way and put ancient gods among modern machines in Rome. Then understand Venice through the movement of an oar and the shaping of glass.",
     image: null,
   },
   {
@@ -561,6 +561,7 @@ const additionalRegionNames: Readonly<Record<string, string>> = {
   "france/paris": "Paris",
   "france/arcachon-bay": "Arcachon Bay",
   "poland/krakow": "Kraków",
+  "italy/rome": "Rome",
 };
 
 function regionDisplayName(country: string, region: string, fallback: string) {

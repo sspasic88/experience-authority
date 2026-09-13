@@ -306,6 +306,39 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "Which familiar system in your own city might contain an earlier version just beyond the route you use?",
   },
+  {
+    date: "2026-10-10",
+    slug: "make-pasta-until-the-sauce-makes-sense",
+    title: "The pasta shape is already part of the answer.",
+    angle:
+      "Rome makes it easy to order a famous plate and harder to see the decisions that hold it together. A long pasta class slows the meal back down to dough, thickness, edge, filling and sauce. Make more than one shape and the difference stops being decorative. Each one changes what it can carry, hold or release at the table.",
+    notice:
+      "The pressure of the rolling pin and the seal around a filling. Follow the kitchen's allergy and safety instructions closely.",
+    question:
+      "Which dish would become more interesting if you understood why its parts were designed to meet?",
+  },
+  {
+    date: "2026-10-11",
+    slug: "ride-the-road-rome-built-to-leave-it",
+    title: "Rome built a road that changed the meaning of distance.",
+    angle:
+      "The Appian Way is ancient, but its first job was movement. On a carefully chosen cycle section, stones, tombs, fields and long sightlines return the road to that purpose. Let the surface set the pace. The useful surprise is not how far you travel. It is how quickly Rome begins to look like a connected system rather than a centre full of separate monuments.",
+    notice:
+      "Where the road surface changes and what that asks of your speed. Dismount whenever the paving, traffic or other visitors require it.",
+    question:
+      "Which place would you understand differently if you followed the route that once connected it to everything beyond?",
+  },
+  {
+    date: "2026-10-12",
+    slug: "put-the-gods-back-among-the-machines",
+    title: "Rome keeps more than one past in the same room.",
+    angle:
+      "At Centrale Montemartini, a white marble figure can stand directly in front of a dark diesel engine. The contrast is immediate, but stay long enough to move beyond it. One object belonged to ancient civic and religious life. The other helped a modern city make light. Their shared room reveals how Rome excavates, powers and rearranges itself across time.",
+    notice:
+      "One pipe, gauge or machine label beside one ancient object label. Ask what larger system each fragment once served.",
+    question:
+      "What changes when a museum lets two histories confront each other instead of keeping them in separate buildings?",
+  },
 ];
 
 export function availableDiscoveries(
