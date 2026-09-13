@@ -5,6 +5,17 @@
   gap: 12px 25px;
   margin: 0 0 30px;
 }
+@media (min-width: 901px) {
+  .destination-page .page-intro {
+    padding-block: 42px 24px;
+  }
+  .destination-page .chapter-jumps {
+    margin-bottom: 22px;
+  }
+  .destination-page > .section-heading {
+    margin-bottom: 25px;
+  }
+}
 .home-discovery {
   padding-top: 24px;
 }

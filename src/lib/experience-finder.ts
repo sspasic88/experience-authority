@@ -30,6 +30,54 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "make-the-morning-before-it-reaches-the-cafe": {
+    modes: ["hands-on", "at-table"],
+    time: "half-day",
+    keywords: [
+      "Paris",
+      "France",
+      "croissant",
+      "pain au chocolat",
+      "brioche",
+      "bakery",
+      "pastry",
+      "breakfast",
+      "Le Cordon Bleu",
+      "workshop",
+    ],
+  },
+  "watch-a-picture-grow-one-thread-at-a-time": {
+    modes: ["watch-listen"],
+    time: "short",
+    keywords: [
+      "Paris",
+      "France",
+      "Gobelins",
+      "tapestry",
+      "weaving",
+      "loom",
+      "textile",
+      "craft",
+      "art",
+      "workshop",
+    ],
+  },
+  "see-what-keeps-paris-moving-underground": {
+    modes: ["watch-listen", "slow-down"],
+    time: "short",
+    keywords: [
+      "Paris",
+      "France",
+      "sewers",
+      "underground",
+      "infrastructure",
+      "engineering",
+      "water",
+      "museum",
+      "work",
+      "Pont de l'Alma",
+    ],
+  },
   "twist-the-city-before-you-taste-it": {
     modes: ["hands-on", "at-table"],
     time: "short",

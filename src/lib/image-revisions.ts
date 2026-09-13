@@ -1,6 +1,9 @@
 /** Content hashes keep replaced photographs consistent across responsive image caches.
  * The media test requires an update when an original file changes. */
 export const imageRevisions: Record<string, string> = {
+  "/images/guides/paris-croissant-workshop.jpg": "07e5cdcbdb55",
+  "/images/guides/paris-gobelins-workshop.jpg": "a84e29f16f86",
+  "/images/guides/paris-sewer-museum.jpg": "1a75fe8f779c",
   "/images/guides/krakow-obwarzanek-workshop.jpg": "52a7ca09a804",
   "/images/guides/krakow-stained-glass-workshop.jpg": "0e26eeae75cd",
   "/images/guides/krakow-szopka-arrival.jpg": "02cb0ac67ef8",
@@ -73,7 +76,7 @@ export const imageRevisions: Record<string, string> = {
 
 // A single manifest fingerprint fits Next's bounded localPatterns allowlist.
 // Tests require it to change when any original is added or replaced.
-export const imageEdition = "1e469901ebae";
+export const imageEdition = "4d3c9be70e69";
 
 export function imageSource(src: string) {
   return imageRevisions[src] ? `${src}?v=${imageEdition}` : src;

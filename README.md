@@ -2,7 +2,7 @@
 
 Independent editorial selection of locally rooted experiences. Native Next.js + TypeScript. No Innovation Authority dependencies.
 
-Current edition: 66 public-source guides, ten local planning chapters, nine Journal articles, dated daily discoveries and an explicit new-publication log. See [Kraków depth](docs/krakow-depth.md) for current scope, evidence boundaries and the next editorial deadline.
+Current edition: 69 public-source guides, 11 local planning chapters, nine Journal articles, dated daily discoveries and an explicit new-publication log. See [Paris depth](docs/paris-depth.md) for current scope, evidence boundaries and the next editorial deadline.
 
 ## Local development
 

@@ -42,8 +42,8 @@ test("Arcachon stays a bay-wide chapter regardless of guide order or a more spec
   }
 });
 
-test("guide set contains sixty-six distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 66);
+test("guide set contains sixty-nine distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 69);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -82,6 +82,44 @@ test("guide set contains sixty-six distinct, sourced public experiences, not Sel
     new Set(publicGuideMedia.map((media) => media.src)).size,
     publicGuides.length,
   );
+});
+test("Paris offers a recognisable entry, a living craft and hidden city work", () => {
+  const paris = publicGuides.filter(
+    (guide) => guide.countrySlug === "france" && guide.regionSlug === "paris",
+  );
+  assert.equal(paris.length, 3);
+  assert.deepEqual([...new Set(paris.map((guide) => guide.field))].sort(), [
+    "taste",
+    "witness",
+    "work",
+  ]);
+  assert.ok(paris.every((guide) => guide.access.includes("No EA booking")));
+  assert.match(
+    paris.find(
+      (guide) => guide.slug === "watch-a-picture-grow-one-thread-at-a-time",
+    )!.access,
+    /French-language route/,
+  );
+  assert.equal(
+    connectedExperiences(paris[0], publicGuides)[0].scope,
+    "same_area",
+  );
+});
+test("public guide headlines avoid sensational, extreme and objectifying travel language", () => {
+  const disallowed =
+    /\b(extreme|dangerous|crazy|adrenaline|bucket list|once in a lifetime|untouched|primitive|exotic)\b/i;
+  for (const guide of publicGuides) {
+    assert.doesNotMatch(
+      `${guide.title} ${guide.summary}`,
+      disallowed,
+      guide.slug,
+    );
+  }
+  const kuopio = publicGuides.find(
+    (guide) => guide.slug === "step-from-smoke-sauna-into-the-lake",
+  )!;
+  assert.equal(kuopio.title, "Make an evening of the smoke sauna");
+  assert.match(kuopio.responsibility, /swimming are optional/);
 });
 test("Kraków offers three distinct, connected reasons to stay with an honest event boundary", () => {
   const krakow = publicGuides.filter(

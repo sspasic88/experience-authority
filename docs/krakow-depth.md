@@ -1,6 +1,6 @@
 # Kraków depth
 
-13 September 2026. Follows the historical [Arcachon Bay release](coastal-depth.md).
+13 September 2026. Follows the historical [Arcachon Bay release](coastal-depth.md). Superseded as the current edition by [Paris depth](paris-depth.md).
 
 ## Current scope
 

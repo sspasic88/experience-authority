@@ -60,9 +60,9 @@ export const guideBatch13: PublicExperience[] = [
   {
     id: "kuopio-jatkankamppa-smoke-sauna",
     slug: "step-from-smoke-sauna-into-the-lake",
-    title: "Step from smoke sauna into the lake",
+    title: "Make an evening of the smoke sauna",
     summary:
-      "Reserve a Tuesday at Jätkänkämppä, where a large smoke sauna, Lake Kallavesi and a public traditional evening share one winter or summer rhythm.",
+      "Reserve a Tuesday at Jätkänkämppä, where a large smoke sauna, a lakeside setting, food and music share one unhurried public evening.",
     field: "restore",
     place: "Kuopio",
     country: "Finland",
@@ -76,7 +76,7 @@ export const guideBatch13: PublicExperience[] = [
     rootedness:
       "The lakeside log building and smoke sauna connect the visit to place through heat, water, season and a social evening rather than a generic spa menu. It is still a visitor-facing programme run by a resort. That boundary matters. The guide offers a public way to encounter one Kuopio sauna setting, not entry into private Finnish life or proof that one organised evening can stand for the wider tradition.",
     shift:
-      "From chasing the shock of cold water to understanding the evening as a sequence of heat, pause, company and choice.",
+      "From treating sauna as one hot room to understanding the evening as a sequence of heat, pause, company and choice.",
     humanReturn:
       "You may remember the threshold between the dark sauna and the lake more clearly than any claim about endurance. That is an editorial possibility, not a health benefit or a test of courage.",
     responsibility:

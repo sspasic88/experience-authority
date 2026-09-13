@@ -16,6 +16,35 @@ export type CityChapter = {
 /** Authored local combinations. These are ideas to adapt, not timed or bookable packages. */
 export const cityChapters: readonly CityChapter[] = [
   {
+    slug: "paris",
+    name: "Paris",
+    country: "france",
+    regions: ["paris"],
+    title: "Fold the morning. Follow a thread. Meet the city below.",
+    intro:
+      "Start with a Paris reference almost everyone knows, then change the scale twice. Give pastry enough time to become technique. Watch a contemporary image take form on a historic loom. Finally, descend into the infrastructure that makes the city above possible.",
+    pace: "One substantial booked anchor per day, with the sewer museum kept flexible.",
+    planning:
+      "The pastry workshop takes about five and a half hours and is not a casual breakfast stop. The Gobelins workshop visit is a separate reservation with a fixed start, French delivery and significant mobility constraints. The Sewer Museum is a self-guided public visit that can close because of flooding or operational conditions. These addresses are in different parts of Paris. Do not attempt all three in one day. No transport, combined ticket, meal, translation or package is included.",
+    stops: [
+      {
+        slug: "make-the-morning-before-it-reaches-the-cafe",
+        moment: "Give the familiar thing real time",
+        why: "Move from recognising a croissant to working through the folds, temperature and patience behind it. Keep the rest of the day light because the published class lasts five and a half hours.",
+      },
+      {
+        slug: "watch-a-picture-grow-one-thread-at-a-time",
+        moment: "On another day, look from the reverse",
+        why: "Watch makers translate contemporary images on historic high-warp looms. This is observation inside a working environment, not a hands-on class or a promise of English delivery.",
+      },
+      {
+        slug: "see-what-keeps-paris-moving-underground",
+        moment: "Use the flexible hour below street level",
+        why: "Follow the city from landmark to system. The public museum route reveals the water, equipment and people behind a Paris most visitors never think to look for.",
+      },
+    ],
+  },
+  {
     slug: "krakow",
     name: "Kraków",
     country: "poland",

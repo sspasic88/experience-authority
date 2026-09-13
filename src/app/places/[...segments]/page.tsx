@@ -56,7 +56,7 @@ export default async function Place({ params }: Props) {
       (!region || chapter.regions.includes(region)),
   );
   return (
-    <div className="wrap page-section">
+    <div className="wrap page-section destination-page">
       <StructuredData
         data={collectionStructuredData(
           `${selectedRegion?.name || place.name} experiences`,

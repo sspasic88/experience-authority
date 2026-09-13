@@ -240,6 +240,39 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "Which familiar landmark would you recognise if a local maker transformed it into something small enough to carry?",
   },
+  {
+    date: "2026-10-04",
+    slug: "make-the-morning-before-it-reaches-the-cafe",
+    title: "A croissant is a morning made in layers.",
+    angle:
+      "Paris makes the finished croissant easy to find and the work behind it easy to overlook. Give that familiar breakfast five and a half hours. Folding, cooling, shaping and waiting turn an icon back into a sequence of choices. The point is not to replace tomorrow's bakery visit. It is to arrive there with better eyes and a much better question.",
+    notice:
+      "The layers inside the cut pastry and the control behind their regularity. Follow the kitchen's safety and allergen guidance.",
+    question:
+      "Which food would you value differently if you gave its making as much time as its eating?",
+  },
+  {
+    date: "2026-10-05",
+    slug: "watch-a-picture-grow-one-thread-at-a-time",
+    title: "At the Gobelins, the picture grows from the reverse.",
+    angle:
+      "A tapestry can look like a single grand surface from across a gallery. Inside the Gobelins workshops, attention moves to warp, bobbins, a mirror and the measured progress of the weaver. Contemporary images still pass through an old technique here. The surprise is not that the process survived. It is how actively it keeps interpreting the present.",
+    notice:
+      "The working edge where the image is not finished yet. Photography of artists is prohibited, so let observation be enough.",
+    question:
+      "What changes when you meet a monumental image at the scale of one thread and one decision?",
+  },
+  {
+    date: "2026-10-06",
+    slug: "see-what-keeps-paris-moving-underground",
+    title: "Paris has another address below the street.",
+    angle:
+      "The city above is rich in objects designed to hold your gaze. Beneath Pont de l'Alma, the Sewer Museum redirects it towards water, maintenance and the people who keep an immense system working. The setting is unusual, but novelty is not the most valuable part. For an hour, infrastructure becomes something you can actually see and think about.",
+    notice:
+      "The equipment and job descriptions, not only the tunnel. This is an active industrial environment inside a bounded museum route.",
+    question:
+      "Which invisible system deserves a place in how you understand the next city you visit?",
+  },
 ];
 
 export function availableDiscoveries(

@@ -270,10 +270,10 @@ export const territories = [
   {
     slug: "france",
     name: "France",
-    region: "biarritz",
-    regionName: "Biarritz",
+    region: "paris",
+    regionName: "Paris",
     intro:
-      "Try a Basque game in Biarritz or follow Arcachon Bay from working oyster beds to a moving dune. Choose a place, then the way you want to experience it.",
+      "Begin in Paris with pastry, tapestry and the city below the street. Biarritz and Arcachon Bay open very different ways into movement, food and the Atlantic landscape.",
     image: null,
   },
   {
@@ -558,6 +558,7 @@ export const territories = [
 ] as const;
 // Area labels can differ from a guide's specific site. Never let the last guide rename the area.
 const additionalRegionNames: Readonly<Record<string, string>> = {
+  "france/paris": "Paris",
   "france/arcachon-bay": "Arcachon Bay",
   "poland/krakow": "Kraków",
 };

@@ -1,5 +1,15 @@
 # QA report — 12 September 2026
 
+## Paris depth and catalogue suitability — 13 September 2026
+
+- The candidate contains 69 public-source guides in 37 countries and territories, 11 local planning chapters and 24 dated daily discoveries through 6 October. Paris adds three independent public routes across Taste, Witness and Work. Work is now a populated, indexable field rather than an empty category.
+- All 61 automated policy, content, media, search, privacy, SEO and security tests pass. Type checking and the optimized production build pass.
+- Local route and security smoke covers 104 pages and 12 expected not-found paths with no failure. Preview indexing remains closed and its sitemap empty by design.
+- The full browser audit passed 135 views at 390, 768 and 1440 pixels, encountered 270 internal links and found no broken images, horizontal overflow, browser errors or automated WCAG A/AA violations. It exercised hero rotation, varied suggestions, direct photo credits, local continuations, saves, image opening, comparison, search, city filtering, mobile navigation and Escape behaviour.
+- A subsequent visual review of the Paris city and pastry detail pages found the city introduction too tall for photography to enter the first desktop view. Destination-page spacing was tightened without changing the calmer general page rhythm. The first row of photographs now enters the initial 1280 by 720 view.
+- A retroactive suitability screen covered all 69 public titles, summaries, participation frames and responsibility notes. No guide was removed. Kuopio's title and summary were revised so optional cold-water swimming no longer defines the experience. The complete smoke-sauna evening is now the primary frame.
+- Automated accessibility, source reachability and editorial risk checks are scoped review, not certification, field validation, legal advice or proof of visitor response. Production deployment is verified separately after release.
+
 ## Destination depth and daily discovery — 13 September 2026
 
 See [depth and return scope](depth-and-return.md) for the 59-guide release, six local chapters, explicit publication dates and the finite fourteen-edition daily queue. The preceding audit below remains a historical snapshot of the 55-guide revision, not a claim that this new release inherited its browser results.

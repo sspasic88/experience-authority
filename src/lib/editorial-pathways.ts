@@ -53,7 +53,7 @@ export const editorialPathways = [
     kind: "ritual-and-season",
     title: "Make room for a slower day",
     promise:
-      "Warm rooms, cold water, two ways to share coffee and a night with a different rhythm.",
+      "Warm rooms, a lakeside evening, two ways to share coffee and a night with a different rhythm.",
     intro:
       "Not every memorable experience needs acceleration. A Koyasan temple stay asks you to fit an overnight visit around one lodging's actual arrangements. Istanbul, Tampere, Busan, Kuopio and Reykjavík each open a different public bathing context. Sarajevo brings a seated coffee pause into a longer city walk, while Doha makes qahwa and majlis etiquette the subject of a hosted session. These are not interchangeable wellness products and none carries a promise of transformation. What they share is room to notice a threshold, a gesture or a pattern of ordinary life that a hurried itinerary would pass over.",
     guideSlugs: [

@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 const base = process.env.EA_TEST_URL || "http://127.0.0.1:3100";
 const liveIndexing = process.env.EA_TEST_INDEXING === "true";
 const utilityPaths = new Set(["/passport", "/suggest", "/corrections"]);
-const emptyFields = new Set(["contribute", "work"]);
+const emptyFields = new Set(["contribute"]);
 const paths = [
   "/",
   "/explore",
@@ -21,6 +21,7 @@ const paths = [
     "learn",
     "restore",
     "stay",
+    "work",
     // Empty editorial fields are intentionally not public category routes.
     "play",
   ].map((f) => `/fields/${f}`),
@@ -126,6 +127,10 @@ if (process.env.EA_TEST_DEMO === "true") {
     "/experiences/twist-the-city-before-you-taste-it",
     "/experiences/take-the-window-back-to-the-workbench",
     "/experiences/watch-a-city-arrive-in-miniature",
+    "/places/france/paris",
+    "/experiences/make-the-morning-before-it-reaches-the-cafe",
+    "/experiences/watch-a-picture-grow-one-thread-at-a-time",
+    "/experiences/see-what-keeps-paris-moving-underground",
     "/journal/let-the-place-set-the-clock",
     "/explore?q=row&field=move&place=italy&status=public_guide&view=list",
     "/explore?q=no-such-experience",
@@ -229,7 +234,6 @@ const unpublishedPaths = [
   "/places/croatia/unknown",
   "/fields/unknown",
   "/fields/contribute",
-  "/fields/work",
   "/collections/unknown",
   "/constructor",
   "/__proto__",
@@ -260,11 +264,15 @@ if (liveIndexing) {
     "/places/japan/kumano-kodo",
     "/places/armenia/gegharkunik",
     "/places/poland/krakow",
+    "/places/france/paris",
     "/experiences/a-bowl-of-attention",
     "/experiences/bread-from-the-tonir",
     "/experiences/twist-the-city-before-you-taste-it",
     "/experiences/take-the-window-back-to-the-workbench",
     "/experiences/watch-a-city-arrive-in-miniature",
+    "/experiences/make-the-morning-before-it-reaches-the-cafe",
+    "/experiences/watch-a-picture-grow-one-thread-at-a-time",
+    "/experiences/see-what-keeps-paris-moving-underground",
   ])
     assert.ok(
       sitemap.includes(`${path}</loc>`),
