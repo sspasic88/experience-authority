@@ -42,8 +42,8 @@ test("Arcachon stays a bay-wide chapter regardless of guide order or a more spec
   }
 });
 
-test("guide set contains seventy-five distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 75);
+test("guide set contains seventy-eight distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 78);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -52,7 +52,7 @@ test("guide set contains seventy-five distinct, sourced public experiences, not 
     new Set(publicGuides.map((p) => p.slug)).size,
     publicGuides.length,
   );
-  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 37);
+  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 38);
   assert.equal(
     new Set(territories.map((place) => place.slug)).size,
     territories.length,
@@ -81,6 +81,30 @@ test("guide set contains seventy-five distinct, sourced public experiences, not 
   assert.equal(
     new Set(publicGuideMedia.map((media) => media.src)).size,
     publicGuides.length,
+  );
+});
+test("New York connects a recognisable food with living production and a difficult second history", () => {
+  const newYork = publicGuides.filter(
+    (guide) =>
+      guide.countrySlug === "united-states" &&
+      guide.regionSlug === "new-york-city",
+  );
+  assert.equal(newYork.length, 3);
+  assert.deepEqual([...new Set(newYork.map((guide) => guide.field))].sort(), [
+    "taste",
+    "witness",
+    "work",
+  ]);
+  assert.ok(newYork.every((guide) => guide.access.includes("No EA booking")));
+  assert.match(
+    newYork.find(
+      (guide) => guide.slug === "open-the-other-side-of-ellis-island",
+    )!.responsibility,
+    /never enter closed spaces independently/,
+  );
+  assert.equal(
+    connectedExperiences(newYork[0], publicGuides)[0].scope,
+    "same_area",
   );
 });
 test("Rome moves from a familiar food to ancient infrastructure and an unexpected museum", () => {

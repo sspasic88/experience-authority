@@ -16,6 +16,35 @@ export type CityChapter = {
 /** Authored local combinations. These are ideas to adapt, not timed or bookable packages. */
 export const cityChapters: readonly CityChapter[] = [
   {
+    slug: "new-york-city",
+    name: "New York City",
+    country: "united-states",
+    regions: ["new-york-city"],
+    title: "Shape the ring. Follow the bottle. Open the other side.",
+    intro:
+      "Begin with a New York icon you can make rather than rank. Then follow a reusable seltzer siphon into one of the city's least expected working interiors. Finish on Ellis Island, where the hospital complex adds care, exclusion and preservation to the familiar arrival story.",
+    pace: "One booked experience per day gives each borough and island crossing enough room.",
+    planning:
+      "BagelUp's public classes use live weekend dates and the exact venue must be confirmed during booking. The Brooklyn Seltzer Museum is in Cypress Hills and is usually open for public tours on selected Fridays. Ellis Island requires a separately purchased ferry, security time, early arrival and strict footwear, age and mobility checks. These are three independent bookings in different parts of the city. Do not attempt them as a continuous route or assume a combined ticket, transfer, meal beyond the class or package.",
+    stops: [
+      {
+        slug: "make-the-bagel-before-new-york-serves-it",
+        moment: "Begin with the New York everyone can taste",
+        why: "Roll, boil and bake before you eat. The familiar ring becomes a sequence of texture, timing and heat rather than another contest for the best counter.",
+      },
+      {
+        slug: "follow-the-fizz-through-a-working-factory",
+        moment: "On a Friday that fits, follow the return",
+        why: "See what a refillable glass siphon asks of machinery, maintenance, washing and delivery. The small museum and active works make one everyday drink into a whole urban system.",
+      },
+      {
+        slug: "open-the-other-side-of-ellis-island",
+        moment: "Give the island its more difficult second chapter",
+        why: "Enter selected hospital buildings with an authorised guide. Care, inspection, exclusion and hope complicate the landmark without turning its unrestored rooms into spectacle.",
+      },
+    ],
+  },
+  {
     slug: "rome",
     name: "Rome",
     country: "italy",

@@ -339,6 +339,39 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "What changes when a museum lets two histories confront each other instead of keeping them in separate buildings?",
   },
+  {
+    date: "2026-10-13",
+    slug: "make-the-bagel-before-new-york-serves-it",
+    title: "New York's familiar ring begins as a set of choices.",
+    angle:
+      "A bagel arrives at the counter looking complete and obvious. In a hands-on class, the ring has to be made before it can become an icon. Dough, fermentation, shaping, boiling and baking each leave a mark on the final texture. Make the sequence yourself and the useful question stops being who is number one. It becomes how different bakers decide what a New York bagel should be.",
+    notice:
+      "The point where a rough piece of dough begins to hold its ring. Follow every allergy and hot-water instruction given by the class.",
+    question:
+      "Which familiar food would become more interesting if you replaced a ranking with one hour of making?",
+  },
+  {
+    date: "2026-10-14",
+    slug: "follow-the-fizz-through-a-working-factory",
+    title: "A bottle can remember an entire delivery route.",
+    angle:
+      "Inside a Brooklyn seltzer works, the glass siphon is not packaging to throw away. It belongs to a cycle of return, inspection, washing, filling, pressure, repair and delivery. Old machinery and an active production floor make that system visible. The surprise is not simply that seltzer has a museum. It is that a drink many people barely notice can reveal a living piece of urban logistics.",
+    notice:
+      "One sign of repeated use on a glass siphon. Stay with the guided route and never touch machinery unless the host invites it.",
+    question:
+      "What everyday object in your city still carries evidence of the system that keeps it moving?",
+  },
+  {
+    date: "2026-10-15",
+    slug: "open-the-other-side-of-ellis-island",
+    title: "Ellis Island has another side to the arrival story.",
+    angle:
+      "The Great Hall is the image most visitors know. Across the island, the hospital complex holds a harder conjunction. People received medical care while inspection and immigration law still shaped whether they could enter the country. An escorted route through selected unrestored buildings adds those rooms to the landmark. JR's archival figures appear on walls and windows, but the people and systems behind them remain the subject.",
+    notice:
+      "A service space that changes how you understand the better-known public rooms. Keep photographs respectful and remain with the guide.",
+    question:
+      "Which national landmark would become more truthful if its less comfortable rooms were part of the main story?",
+  },
 ];
 
 export function availableDiscoveries(

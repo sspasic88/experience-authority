@@ -2,7 +2,7 @@
 
 Public-source edition live at https://experienceauthority.com, deployed from the separate EA GitHub repository to its own Vercel project on 12 September 2026.
 
-Current release scope: 75 guides across 37 countries and territories, 12 editorial collections, nine Journal articles, 13 local planning chapters and 30 dated daily discoveries prepared for 13 September to 12 October. Includes an actual-publication log, private journey planning, batch saving, sharing and credited photographs. See [Rome depth](rome-depth.md). Prepared future editions are not already public. Production status requires a verified deployment, not this document alone.
+Current release scope: 78 guides across 38 countries and territories, 12 editorial collections, nine Journal articles, 14 local planning chapters and 33 dated daily discoveries prepared for 13 September to 15 October. Includes an actual-publication log, private journey planning, batch saving, sharing and credited photographs. See [New York City depth](new-york-city-depth.md). Prepared future editions are not already public. Production status requires a verified deployment, not this document alone.
 
 ## Implemented
 

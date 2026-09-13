@@ -214,6 +214,15 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "united-states",
+    name: "United States",
+    region: "new-york-city",
+    regionName: "New York City",
+    intro:
+      "Make a New York bagel, follow a returnable seltzer siphon through an active Brooklyn works and enter the hospital complex on Ellis Island's other side.",
+    image: null,
+  },
+  {
     slug: "poland",
     name: "Poland",
     region: "krakow",
@@ -562,6 +571,7 @@ const additionalRegionNames: Readonly<Record<string, string>> = {
   "france/arcachon-bay": "Arcachon Bay",
   "poland/krakow": "Kraków",
   "italy/rome": "Rome",
+  "united-states/new-york-city": "New York City",
 };
 
 function regionDisplayName(country: string, region: string, fallback: string) {

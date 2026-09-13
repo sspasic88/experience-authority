@@ -30,6 +30,53 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "make-the-bagel-before-new-york-serves-it": {
+    modes: ["hands-on", "at-table"],
+    time: "short",
+    keywords: [
+      "New York City",
+      "United States",
+      "bagel",
+      "bread",
+      "baking",
+      "boiling",
+      "food",
+      "class",
+      "workshop",
+    ],
+  },
+  "follow-the-fizz-through-a-working-factory": {
+    modes: ["watch-listen", "at-table"],
+    time: "short",
+    keywords: [
+      "New York City",
+      "Brooklyn",
+      "Cypress Hills",
+      "seltzer",
+      "soda",
+      "egg cream",
+      "factory",
+      "machinery",
+      "museum",
+      "industry",
+    ],
+  },
+  "open-the-other-side-of-ellis-island": {
+    modes: ["watch-listen"],
+    time: "half-day",
+    keywords: [
+      "New York City",
+      "Ellis Island",
+      "hospital",
+      "immigration",
+      "JR",
+      "Unframed",
+      "architecture",
+      "history",
+      "preservation",
+      "ferry",
+    ],
+  },
   "make-pasta-until-the-sauce-makes-sense": {
     modes: ["hands-on", "at-table"],
     time: "half-day",

@@ -2,7 +2,7 @@
 
 Independent editorial selection of locally rooted experiences. Native Next.js + TypeScript. No Innovation Authority dependencies.
 
-Current edition: 75 public-source guides, 13 local planning chapters, nine Journal articles, dated daily discoveries and an explicit new-publication log. See [Rome depth](docs/rome-depth.md) for current scope, evidence boundaries and the next editorial deadline.
+Current edition: 78 public-source guides, 14 local planning chapters, nine Journal articles, dated daily discoveries and an explicit new-publication log. See [New York City depth](docs/new-york-city-depth.md) for current scope, evidence boundaries and the next editorial deadline.
 
 ## Local development
 

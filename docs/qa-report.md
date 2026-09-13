@@ -1,5 +1,15 @@
 # QA report — 12 September 2026
 
+## New York City depth — 13 September 2026
+
+- The candidate contains 78 public-source guides in 38 countries and territories, 14 local planning chapters and 33 dated daily discoveries through 15 October. New York City adds three independent public routes across Taste, Work and Witness.
+- BagelUp gives a recognisable hands-on beginning without claiming to resolve the city's bagel culture. Brooklyn Seltzer Museum exposes return, repair and production inside an active works. Save Ellis Island opens a more difficult second chapter to the familiar arrival story. The planning chapter keeps all three bookings separate and does not imply a continuous route, combined ticket, ferry, transfer or package.
+- Every current New York source returned HTTP 200 on 13 September. All three photographs are source-specific, locally served and visibly credited. Two source organisations do not name the individual photographer. The Ellis Island image is visibly credited to Emery Roth II. Official-source reuse remains uncleared and attribution is not treated as a licence.
+- All 64 automated tests pass. Type checking and the production build pass. The indexable local production smoke passed 116 pages and 12 expected not-found routes, with 116 distinct CSP nonces and no failures.
+- The full browser audit passed 171 views at 390, 768 and 1440 pixels, encountered 304 internal links and found no broken images, horizontal overflow, browser errors or automated WCAG A/AA violations. It exercised hero rotation, varied suggestions, direct photo credits, local continuations, saves, image opening, comparison, search, city filtering, mobile navigation and Escape behaviour.
+- A final visual inspection covered the New York destination first fold, all three cards, direct credits, the transition into the planning chapter and the Ellis Island detail hero. The seltzer machinery remains legible at card scale and the Ellis image carries the story without generic skyline imagery or theatrical framing.
+- See [New York City depth](new-york-city-depth.md) for content, access, photography and recheck boundaries.
+
 ## Rome depth — 13 September 2026
 
 - The candidate contains 75 public-source guides in 37 countries and territories, 13 local planning chapters and 30 dated daily discoveries through 12 October. Rome adds three independent public routes across Taste, Move and Witness.
