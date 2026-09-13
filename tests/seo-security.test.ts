@@ -147,7 +147,7 @@ test("destination lists describe only visible guides and journal pages enter the
     null,
   );
   const urls = sitemapEntries(publicGuides, launch).map((entry) => entry.url);
-  assert.equal(urls.filter((url) => url.includes("/journal/")).length, 8);
+  assert.equal(urls.filter((url) => url.includes("/journal/")).length, 9);
   assert.equal(urls.filter((url) => url.includes("/collections/")).length, 12);
   assert.ok(urls.includes(`${SITE_ORIGIN}/places/japan/kyoto`));
   for (const path of ["contact", "accessibility", "terms", "legal"])

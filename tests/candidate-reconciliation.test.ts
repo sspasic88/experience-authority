@@ -7,10 +7,10 @@ test("dated candidate reconciliation counts scoped coverage without turning alte
   assert.equal(ledger.catalogueCount, publicGuides.length);
   assert.equal(ledger.originalCandidateCount, 200);
   assert.equal(ledger.originalProtectedCount, 46);
-  assert.equal(ledger.mappings.length, 37);
+  assert.equal(ledger.mappings.length, 38);
   assert.equal(
     new Set(ledger.mappings.map((item) => item.candidateId)).size,
-    37,
+    38,
   );
   const counts: Record<string, number> = {};
   for (const mapping of ledger.mappings) {
@@ -20,14 +20,21 @@ test("dated candidate reconciliation counts scoped coverage without turning alte
     counts[mapping.relation] = (counts[mapping.relation] ?? 0) + 1;
   }
   assert.deepEqual(counts, {
-    narrowed_public_scope: 33,
+    narrowed_public_scope: 34,
     related_alternative: 3,
     protected_public_programme_only: 1,
   });
   assert.equal(ledger.eaSelectedApprovals, 0);
   assert.equal(ledger.localValidationCompleted, false);
   assert.equal(ledger.outreachPerformed, false);
-  assert.equal(ledger.newSourceReviews[0].candidateId, 108);
-  assert.equal(ledger.newSourceReviews[0].status, "evidence_hold");
+  assert.equal(
+    ledger.newSourceReviews.find((review) => review.candidateId === 108)
+      ?.status,
+    "evidence_hold",
+  );
+  assert.equal(
+    ledger.newSourceReviews.find((review) => review.candidateId === 9)?.status,
+    "narrowed_public_scope",
+  );
   assert.ok(!ledger.mappings.some((mapping) => mapping.candidateId === 108));
 });

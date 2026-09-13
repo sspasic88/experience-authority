@@ -1,6 +1,7 @@
 import type { PublicExperience } from "./catalog";
 import { guideMediaFor, type GuideMedia } from "./media";
 import { canonicalUrl, SITE_NAME, SITE_ORIGIN } from "./seo";
+import { coastalJournal } from "./journal-coastal";
 
 export type JournalSection = {
   title: string;
@@ -44,6 +45,7 @@ export type ResolvedJournalArticle = JournalArticle & {
 };
 
 export const journalArticles = [
+  coastalJournal,
   {
     slug: "build-a-day-around-one-experience",
     eyebrow: "Journey craft",

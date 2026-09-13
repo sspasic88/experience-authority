@@ -1,5 +1,7 @@
 # City-depth follow-up
 
+Historical release snapshot at commit `be39442`. Current totals and the editorial deadline are in [coastal depth](coastal-depth.md).
+
 13 September 2026. Supersedes the catalogue totals and editorial deadline in the first [depth-and-return pass](depth-and-return.md), without rewriting that release's QA history.
 
 ## Visitor-facing changes

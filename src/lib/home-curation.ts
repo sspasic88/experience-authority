@@ -102,12 +102,23 @@ export function curateHome(
     "step-into-the-dance",
     "a-city-in-the-water",
   ].flatMap((slug) => items.find((item) => item.slug === slug) || []);
-  const startingPoints = [
+  const startingPool = [
     ...familiar,
     ...items.filter((item) => !familiar.includes(item)),
-  ]
-    .filter((item) => !usedImages.has(item.image || item.id))
-    .slice(0, 3);
+  ].filter((item) => !usedImages.has(item.image || item.id));
+  const startingPoints: PublicExperience[] = [];
+  const startingCountries = new Set<string>();
+  for (const item of startingPool) {
+    if (startingCountries.has(item.countrySlug)) continue;
+    startingPoints.push(item);
+    startingCountries.add(item.countrySlug);
+    if (startingPoints.length === 3) break;
+  }
+  // Small or filtered editions can still offer up to three distinct guides.
+  for (const item of startingPool) {
+    if (startingPoints.length === 3) break;
+    if (!startingPoints.includes(item)) startingPoints.push(item);
+  }
   startingPoints.forEach(claim);
   const newGuides = recentGuideReleases(items, today)
     .filter((item) => !usedImages.has(item.image || item.id))

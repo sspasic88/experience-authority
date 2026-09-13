@@ -185,6 +185,28 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "When did you last choose to see the practice instead of the finished show?",
   },
+  {
+    date: "2026-09-29",
+    slug: "meet-the-bay-on-its-working-hours",
+    title: "The tide has the first word.",
+    angle:
+      "A plate of oysters is the familiar beginning. In Arcachon Bay, a public outing with an oyster farmer takes the story back to the beds and the water that sets the working hours. Leave the rest of the day loose enough to follow the confirmed departure, rather than asking the tide to fit around lunch.",
+    notice:
+      "The task that becomes possible as the water changes, and who decides when it can happen.",
+    question:
+      "What would you understand differently about a favourite food after seeing one part of the work behind it?",
+  },
+  {
+    date: "2026-09-30",
+    slug: "read-the-landscape-one-grain-at-a-time",
+    title: "The monument is moving.",
+    angle:
+      "Dune du Pilat makes a strong first impression through scale. Look again through a smaller detail: the shape of sand at your feet. The manager's account of wind-driven movement turns a famous viewpoint into something less fixed, a landscape still being rearranged long after you put the camera away.",
+    notice:
+      "A surface pattern you can observe without disturbing it. Do not remove sand or enter closed areas.",
+    question:
+      "Which apparently permanent place might become more interesting if you asked what is changing?",
+  },
 ];
 
 export function availableDiscoveries(

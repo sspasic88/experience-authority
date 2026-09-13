@@ -4,8 +4,14 @@
   "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
   "originalCandidateCount": 200,
   "originalProtectedCount": 46,
-  "catalogueCount": 61,
+  "catalogueCount": 63,
   "mappings": [
+    {
+      "candidateId": 9,
+      "guideId": "arcachon-oyster-tide",
+      "relation": "narrowed_public_scope",
+      "boundary": "The current public oyster-farming outing, with reservation and host-controlled access. Observation and the published tasting are supported. Working the beds yourself, unrestricted shore access or commercial fishing participation are not promised."
+    },
     {
       "candidateId": 1,
       "guideId": "istria-karlic-truffle-hunt",
@@ -230,6 +236,15 @@
     }
   ],
   "newSourceReviews": [
+    {
+      "candidateId": 9,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-13",
+      "finding": "The official June 2026 four-page brochure and current tourism and shellfish-committee pages establish a publicly offered oyster outing, authorised professional roster, central reservation route, three-to-six-hour duration and cancellation terms. The original work-the-beds premise is narrowed to observation and host-controlled participation, with no independent activity at the beds.",
+      "sourceUrl": "https://www.arcachon.com/app/uploads/arcachon/2026/05/Plaquette_4volets_pescatourisme_2026-DG-OK-1.pdf",
+      "nextAction": "Maintain the dated public-guide review and media record. This does not grant local validation or EA Selected status.",
+      "outreachPerformed": false
+    },
     {
       "candidateId": 108,
       "status": "evidence_hold",

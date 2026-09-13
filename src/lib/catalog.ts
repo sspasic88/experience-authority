@@ -264,7 +264,7 @@ export const territories = [
     region: "biarritz",
     regionName: "Biarritz",
     intro:
-      "Begin on a Biarritz pelota court, where learning to return a ball offers a physical introduction to a Basque game.",
+      "Try a Basque game in Biarritz or follow Arcachon Bay from working oyster beds to a moving dune. Choose a place, then the way you want to experience it.",
     image: null,
   },
   {
@@ -547,15 +547,29 @@ export const territories = [
     image: null,
   },
 ] as const;
+// Area labels can differ from a guide's specific site. Never let the last guide rename the area.
+const additionalRegionNames: Readonly<Record<string, string>> = {
+  "france/arcachon-bay": "Arcachon Bay",
+};
+
+function regionDisplayName(country: string, region: string, fallback: string) {
+  return (
+    additionalRegionNames[`${country}/${region}`] ||
+    territories.find((item) => item.slug === country && item.region === region)
+      ?.regionName ||
+    fallback
+  );
+}
+
 /** Derive region coverage from actual public records, not one fixed region per country. */
 export function regionsForCountry(country: string, items: PublicExperience[]) {
   const regions = new Map<string, string>();
   for (const item of items) {
     if (item.countrySlug !== country || !item.regionSlug) continue;
-    const known = territories.find(
-      (t) => t.slug === country && t.region === item.regionSlug,
+    regions.set(
+      item.regionSlug,
+      regionDisplayName(country, item.regionSlug, item.place),
     );
-    regions.set(item.regionSlug, known?.regionName || item.place);
   }
   return [...regions].map(([slug, name]) => ({ slug, name }));
 }
@@ -616,14 +630,9 @@ function connectionScope(
     current.countrySlug === other.countrySlug &&
     current.regionSlug === other.regionSlug
   ) {
-    const region = territories.find(
-      (territory) =>
-        territory.slug === current.countrySlug &&
-        territory.region === current.regionSlug,
-    );
     return {
       scope: "same_area",
-      label: `More in ${region?.regionName || current.place}`,
+      label: `More in ${regionDisplayName(current.countrySlug, current.regionSlug, current.place)}`,
       href: `/places/${current.countrySlug}/${current.regionSlug}`,
     };
   }

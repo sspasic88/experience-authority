@@ -19,8 +19,31 @@ import { guideMediaFor, publicGuideMedia } from "../src/lib/media";
 
 const today = "2026-09-12";
 const sample = publicGuides.find((p) => p.id === "kumano-daimon-zaka")!;
-test("guide set contains sixty-one distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 61);
+test("Arcachon stays a bay-wide chapter regardless of guide order or a more specific site name", () => {
+  for (const guides of [publicGuides, [...publicGuides].reverse()]) {
+    assert.equal(
+      regionsForCountry("france", guides).find(
+        (region) => region.slug === "arcachon-bay",
+      )?.name,
+      "Arcachon Bay",
+    );
+  }
+  const bay = publicGuides.filter(
+    (guide) =>
+      guide.countrySlug === "france" && guide.regionSlug === "arcachon-bay",
+  );
+  assert.equal(bay.length, 2);
+  for (const guide of bay) {
+    const next = connectedExperiences(guide, publicGuides)[0];
+    assert.equal(next.scope, "same_area");
+    assert.equal(next.label, "More in Arcachon Bay");
+    assert.equal(next.href, "/places/france/arcachon-bay");
+    assert.notEqual(next.item.field, guide.field);
+  }
+});
+
+test("guide set contains sixty-three distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 63);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,

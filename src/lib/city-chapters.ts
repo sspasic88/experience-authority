@@ -16,6 +16,30 @@ export type CityChapter = {
 /** Authored local combinations. These are ideas to adapt, not timed or bookable packages. */
 export const cityChapters: readonly CityChapter[] = [
   {
+    slug: "arcachon-bay",
+    name: "Arcachon Bay",
+    country: "france",
+    regions: ["arcachon-bay"],
+    title: "Meet the working bay. Read the moving dune.",
+    intro:
+      "An oyster trip takes you into a landscape's working hours. Dune du Pilat gives you space to notice the much longer movement of sand. Put the two in conversation without forcing them into a single tightly scheduled day.",
+    pace: "Let the oyster departure anchor one day. Keep the dune flexible or give it another.",
+    planning:
+      "The oyster programme leaves from several different ports around the bay. Confirm yours before planning transport to the dune in La Teste-de-Buch. Facing the same water does not mean a quick crossing or a walk between stops. Outings take three to six hours and can be cancelled. The dune needs its own weather, heat and access check. No transfer, combined ticket or reserve entry is included.",
+    stops: [
+      {
+        slug: "meet-the-bay-on-its-working-hours",
+        moment: "Follow the working tide",
+        why: "Begin with someone whose day depends on the water. Observe the farming and ask a useful question, without assuming unrestricted access or a guaranteed hands-on task.",
+      },
+      {
+        slug: "read-the-landscape-one-grain-at-a-time",
+        moment: "Leave room for another scale",
+        why: "Trade the farm's working rhythm for a landscape shaped over much longer periods. Choose a suitable authorised walk or the interpretation spaces below, rather than treating the summit as compulsory.",
+      },
+    ],
+  },
+  {
     slug: "barcelona",
     name: "Barcelona",
     country: "spain",

@@ -25,6 +25,10 @@ test("home curation gives every image one position, including hero and pathway r
   const hero = selectHomeHero(publicGuides, "2026-09-12");
   const home = curateHome(publicGuides, editorialPathways, hero, "2026-09-13");
   assert.equal(home.startingPoints.length, 3);
+  assert.equal(
+    new Set(home.startingPoints.map((item) => item.countrySlug)).size,
+    3,
+  );
   assert.equal(home.newGuides.length, 6);
   const visible = [
     ...home.hero,
@@ -60,6 +64,16 @@ test("the homepage hero follows a stable, hand-curated three-hour rotation", () 
   for (const edition of editions) {
     assert.equal(new Set(edition.map((item) => item.countrySlug)).size, 3);
     assert.equal(new Set(edition.map((item) => item.field)).size, 3);
+    const home = curateHome(
+      publicGuides,
+      editorialPathways,
+      edition,
+      "2026-09-13",
+    );
+    assert.equal(
+      new Set(home.startingPoints.map((item) => item.countrySlug)).size,
+      3,
+    );
   }
   for (let offset = 0; offset < heroGuideRotations.length; offset += 1) {
     const heroForEdition = selectHomeHero(

@@ -118,6 +118,10 @@ if (process.env.EA_TEST_DEMO === "true") {
     "/experiences/watch-the-work-before-the-performance",
     "/places/spain/barcelona",
     "/places/austria/vienna",
+    "/places/france/arcachon-bay",
+    "/experiences/meet-the-bay-on-its-working-hours",
+    "/experiences/read-the-landscape-one-grain-at-a-time",
+    "/journal/let-the-place-set-the-clock",
     "/explore?q=row&field=move&place=italy&status=public_guide&view=list",
     "/explore?q=no-such-experience",
   );

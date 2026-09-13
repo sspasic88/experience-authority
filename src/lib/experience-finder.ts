@@ -30,6 +30,36 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "meet-the-bay-on-its-working-hours": {
+    modes: ["watch-listen", "at-table", "outdoors"],
+    time: "half-day",
+    keywords: [
+      "Arcachon",
+      "Cap Ferret",
+      "Gujan-Mestras",
+      "oysters",
+      "oyster farming",
+      "boat",
+      "tide",
+      "pescatourisme",
+      "seafood",
+    ],
+  },
+  "read-the-landscape-one-grain-at-a-time": {
+    modes: ["outdoors", "slow-down"],
+    time: "own-pace",
+    keywords: [
+      "Arcachon",
+      "Dune du Pilat",
+      "Pyla",
+      "La Teste-de-Buch",
+      "sand",
+      "dune",
+      "Atlantic",
+      "landscape",
+      "walking",
+    ],
+  },
   "make-something-from-the-broken-pieces": {
     modes: ["hands-on"],
     time: "half-day",
