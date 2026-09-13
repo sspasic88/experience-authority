@@ -228,6 +228,33 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "cyprus",
+    name: "Cyprus",
+    region: "troodos-foothills",
+    regionName: "Troodos foothills",
+    intro:
+      "Take one familiar Cypriot cheese back to milk, curd, whey and a village table on a public route into the Troodos foothills.",
+    image: null,
+  },
+  {
+    slug: "estonia",
+    name: "Estonia",
+    region: "vorumaa",
+    regionName: "Võrumaa",
+    intro:
+      "Begin in Võrumaa with the timber, fire, preparation and family knowledge behind the smoke sauna, through a bounded public farm walk.",
+    image: null,
+  },
+  {
+    slug: "el-salvador",
+    name: "El Salvador",
+    region: "suchitoto",
+    regionName: "Suchitoto",
+    intro:
+      "Fold, bind and open an indigo pattern in Suchitoto, with one hour focused on the decisions hidden inside the finished blue.",
+    image: null,
+  },
+  {
     slug: "united-states",
     name: "United States",
     region: "new-york-city",

@@ -1,5 +1,15 @@
 # QA report — 12 September 2026
 
+## Content expansion batch 23 — 13 September 2026
+
+- The current catalogue contains 81 public-source guides in 41 countries and territories, with 36 authored daily discoveries through 18 October. The dated reconciliation now maps 42 of the original 200 candidates without changing the protected register or conferring EA Selected status.
+- Three bounded public guides were added: a full-day halloumi route into the Troodos foothills, a prebooked interpretation walk at Mooska smoke-sauna farm in Võrumaa and a one-hour indigo workshop in Suchitoto. Each has a current official access route, at least two public sources, a precise visitor role and an explicit limit on what the guide does not establish.
+- Each new guide has a locally served, clickable and source-specific photograph with the standard lower-right direct credit. The register now records 55 official-source images with uncleared reuse and 26 images with documented licences. Attribution remains separate from permission.
+- All 67 automated tests, type checking, formatting and the optimized production build pass. The indexable local production smoke passed 126 pages and 12 expected not-found routes with 126 distinct CSP nonces and no failures.
+- The responsive browser audit passed 189 views at 390, 768 and 1440 pixels, encountered 324 internal links and found no broken images, horizontal overflow, browser errors or automated WCAG A/AA violations. It also passed hero rotation, varied suggestions, direct credits, local continuations, save persistence, image opening, comparison, search, city filtering and mobile navigation.
+- The indexable sitemap contains 227 routes. Every indexed route has a title and description, with no duplicate title or description groups in this release.
+- See [content expansion batch 23](content-expansion-batch-23-2026-09-13.md) for the publication and deferral decisions.
+
 ## New York City depth — 13 September 2026
 
 - The candidate contains 78 public-source guides in 38 countries and territories, 14 local planning chapters and 33 dated daily discoveries through 15 October. New York City adds three independent public routes across Taste, Work and Witness.

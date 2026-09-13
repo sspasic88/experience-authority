@@ -5,6 +5,9 @@ export const guideReleases = [
   {
     date: "2026-09-13",
     slugs: [
+      "make-halloumi-before-it-reaches-the-plate",
+      "read-a-smoke-sauna-before-the-heat",
+      "fold-a-pattern-into-the-blue",
       "make-the-bagel-before-new-york-serves-it",
       "follow-the-fizz-through-a-working-factory",
       "open-the-other-side-of-ellis-island",

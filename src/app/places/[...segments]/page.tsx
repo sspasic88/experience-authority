@@ -26,7 +26,9 @@ export async function generateMetadata({ params }: Props) {
   const selectedRegion = place?.regions.find((entry) => entry.slug === region);
   if (!place || segments.length > 2 || (region && !selectedRegion)) notFound();
   return pageMetadata(
-    `${selectedRegion ? selectedRegion.name : place.name} experiences`,
+    selectedRegion
+      ? `${selectedRegion.name}${selectedRegion.name === place.name ? " local guide" : `, ${place.name}`} | Experience Authority`
+      : `${place.name} experiences | Experience Authority`,
     selectedRegion
       ? `Explore locally rooted experiences in ${selectedRegion.name}, with categories, original guides, sources and practical details to shape your visit.`
       : place.intro,

@@ -137,7 +137,8 @@ export function curateHome(
     if (startingPoints.length === 3) break;
     if (!startingPoints.includes(item)) startingPoints.push(item);
   }
-  startingPoints.forEach(claim);
+  // Starting points currently render as text-only destination prompts. Do not
+  // reserve their photographs from sections that actually display an image.
   const recent = recentGuideReleases(items, today).filter(
     (item) => !usedImages.has(item.image || item.id),
   );

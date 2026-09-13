@@ -8,6 +8,7 @@ export const participationModes = [
 export const timeFits = [
   { value: "short", label: "A short visit" },
   { value: "half-day", label: "A morning or afternoon" },
+  { value: "full-day", label: "Most of the day" },
   { value: "own-pace", label: "At my own pace" },
   { value: "calendar", label: "Let the calendar decide" },
   { value: "overnight", label: "Stay the night" },
@@ -23,6 +24,51 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "make-halloumi-before-it-reaches-the-plate": {
+    modes: ["hands-on", "at-table"],
+    time: "full-day",
+    keywords: [
+      "Cyprus",
+      "Troodos",
+      "halloumi",
+      "cheese",
+      "curd",
+      "anari",
+      "food",
+      "village",
+      "workshop",
+    ],
+  },
+  "read-a-smoke-sauna-before-the-heat": {
+    modes: ["watch-listen", "slow-down"],
+    time: "short",
+    keywords: [
+      "Estonia",
+      "Võrumaa",
+      "Voromaa",
+      "Mooska",
+      "smoke sauna",
+      "timber",
+      "fire",
+      "heritage",
+      "farm",
+    ],
+  },
+  "fold-a-pattern-into-the-blue": {
+    modes: ["hands-on"],
+    time: "short",
+    keywords: [
+      "El Salvador",
+      "Suchitoto",
+      "indigo",
+      "añil",
+      "anil",
+      "textile",
+      "dye",
+      "resist",
+      "workshop",
+    ],
+  },
   "make-the-bagel-before-new-york-serves-it": {
     modes: ["hands-on", "at-table"],
     time: "short",

@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!article) notFound();
 
   const metadata = pageMetadata(
-    article.title,
+    `${article.title} | EA Journal`,
     article.summary,
     "/journal/" + encodeURIComponent(article.slug),
   );

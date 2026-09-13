@@ -35,11 +35,11 @@ export async function generateMetadata({ searchParams }: Props) {
   return {
     ...metadata,
     title: `${edition.title} | Daily discovery`,
-    description: edition.item.summary,
+    description: `Today's discovery in ${edition.item.place}: ${edition.item.summary}`,
     openGraph: {
       ...metadata.openGraph,
       title: edition.title,
-      description: edition.item.summary,
+      description: `Today's discovery in ${edition.item.place}: ${edition.item.summary}`,
       images: [
         { url: canonicalUrl(edition.item.image), alt: edition.item.imageAlt },
       ],
@@ -47,7 +47,7 @@ export async function generateMetadata({ searchParams }: Props) {
     twitter: {
       ...metadata.twitter,
       title: edition.title,
-      description: edition.item.summary,
+      description: `Today's discovery in ${edition.item.place}: ${edition.item.summary}`,
       images: [canonicalUrl(edition.item.image)],
     },
   };

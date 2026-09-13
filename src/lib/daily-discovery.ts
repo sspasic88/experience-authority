@@ -372,6 +372,39 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "Which national landmark would become more truthful if its less comfortable rooms were part of the main story?",
   },
+  {
+    date: "2026-10-16",
+    slug: "make-halloumi-before-it-reaches-the-plate",
+    title: "Halloumi begins long before the grill.",
+    angle:
+      "Cyprus gives halloumi an easy place in the travel imagination. The finished slice is familiar. The transformation is not. On a full-day route into the Troodos foothills, milk separates, curd gathers, whey runs and the cheese takes its folded form before the table appears. The day is not about collecting food stops. It is about following one recognisable ingredient far enough backwards that its texture stops feeling inevitable.",
+    notice:
+      "The moment loose curd begins to hold a form. Follow every kitchen and dietary instruction given by the host.",
+    question:
+      "Which familiar food would become new again if you followed it back to the point where it first held together?",
+  },
+  {
+    date: "2026-10-17",
+    slug: "read-a-smoke-sauna-before-the-heat",
+    title: "The sauna begins before anyone enters.",
+    angle:
+      "A smoke sauna is easy to reduce to heat, darkness and a dramatic interior. A farm walk at Mooska begins earlier. Timber, roof, hearth, ventilation, fire and time have to meet before the room can serve anyone. One sauna also smokes meat, placing another form of preparation beside bathing. The public visit does not make a private ritual yours. It gives you a better way to recognise the work that protects it.",
+    notice:
+      "A surface marked by repeated smoke or heat. Stay with the host and do not assume that the walk includes bathing.",
+    question:
+      "What shared place would you understand differently if you first learned how it is prepared for other people?",
+  },
+  {
+    date: "2026-10-18",
+    slug: "fold-a-pattern-into-the-blue",
+    title: "The pattern begins where the blue cannot go.",
+    angle:
+      "A finished indigo textile draws attention to colour. In Suchitoto, a one-hour workshop shifts it to resistance. Fold, bind and protect parts of the cloth before it reaches the dye. Only when the piece opens can you see how those earlier decisions held their ground. The result does not need to be perfect. It needs to let you recognise that every white line is evidence of something the colour was prevented from touching.",
+    notice:
+      "The edge between indigo and undyed cloth. Use only the studio-provided textile and follow the dye-handling instructions.",
+    question:
+      "What if the most interesting part of a colour were the boundary that kept it from spreading?",
+  },
 ];
 
 export function availableDiscoveries(

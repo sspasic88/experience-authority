@@ -22,6 +22,11 @@ test("discovery matches multiword intent and accents while intersecting particip
   )!;
   assert.ok(matchesFinder(pool, { q: "reykjavik swimming", time: "own-pace" }));
   assert.ok(!matchesFinder(pool, { q: "reykjavik surfing" }));
+  const halloumi = publicGuides.find(
+    (item) => item.slug === "make-halloumi-before-it-reaches-the-plate",
+  )!;
+  assert.ok(matchesFinder(halloumi, { q: "halloumi", time: "full-day" }));
+  assert.ok(!matchesFinder(halloumi, { q: "halloumi", time: "half-day" }));
 });
 test("finder links preserve combined choices and escape user queries", () => {
   const href = finderUrl({

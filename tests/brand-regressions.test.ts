@@ -21,7 +21,7 @@ test("the public edition uses EA language, never generic travel editorial", () =
   assert.doesNotMatch(layout, /INDEPENDENT TRAVEL EDITORIAL/);
 });
 
-test("home curation gives every image one position, including hero and pathway reuse", () => {
+test("home curation gives every visible photograph one position", () => {
   const hero = selectHomeHero(publicGuides, "2026-09-12");
   const home = curateHome(publicGuides, editorialPathways, hero, "2026-09-13");
   assert.equal(home.startingPoints.length, 3);
@@ -32,7 +32,6 @@ test("home curation gives every image one position, including hero and pathway r
   assert.equal(home.newGuides.length, 6);
   const visible = [
     ...home.hero,
-    ...home.startingPoints,
     ...home.newGuides,
     ...home.homePathways.map((entry) => entry.item),
   ];

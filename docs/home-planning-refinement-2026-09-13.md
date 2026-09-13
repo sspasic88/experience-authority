@@ -25,6 +25,6 @@
 
 ## Still open
 
-This is a navigation and visual hierarchy release, not completion of every item in the whole-site audit. Stronger photography across the full catalogue, deeper coverage of one-guide destinations, source diversification, duplicate SEO titles and further performance work still need attention. No photograph rights have been newly cleared in this release. Attribution is not permission.
+This is a navigation and visual hierarchy release, not completion of every item in the whole-site audit. Stronger photography across the full catalogue, deeper coverage of one-guide destinations, source diversification and further performance work still need attention. A subsequent same-day content release resolved the duplicate SEO title and description groups found here. No photograph rights have been newly cleared in this release. Attribution is not permission.
 
-Planning remains a private, single-browser draft. It does not synchronise across devices, calculate travel connections, make bookings or provide a shared editable itinerary. The daily-discovery queue remains finite through 15 October 2026. The 200-candidate selection process has not changed in this release.
+Planning remains a private, single-browser draft. It does not synchronise across devices, calculate travel connections, make bookings or provide a shared editable itinerary. A subsequent same-day content release extended the daily-discovery queue through 18 October 2026 and brought the dated 200-candidate reconciliation to 42 mapped candidates.

@@ -31,11 +31,12 @@ export const editorialPathways = [
     slug: "the-pleasure-of-being-a-beginner",
     kind: "learned-skills",
     title: "The pleasure of being a beginner",
-    promise: "Seven ways to give your hands a new problem.",
+    promise: "Eight ways to give your hands a new problem.",
     intro:
-      "A first attempt makes a familiar place less predictable. In Porto, a brush turns the tile you noticed on a facade into a decision of your own. Fez puts a hammer, a small piece of clay and a geometric pattern in the same frame. Cambridge makes shared timing physical through a bell. Biarritz adds a wall and a ball, while Bo-Kaap, Salta and Loíza offer different first steps through food and rhythm. These are public introductions, not shortcuts to mastery. Choose the attempt you would enjoy even if the result were imperfect, then read the current programme before booking.",
+      "A first attempt makes a familiar place less predictable. In Porto, a brush turns the tile you noticed on a facade into a decision of your own. Fez puts a hammer, a small piece of clay and a geometric pattern in the same frame. Suchitoto begins with a fold that tells indigo where not to go. Cambridge makes shared timing physical through a bell. Biarritz adds a wall and a ball, while Bo-Kaap, Salta and Loíza offer different first steps through food and rhythm. These are public introductions, not shortcuts to mastery. Choose the attempt you would enjoy even if the result were imperfect, then read the current programme before booking.",
     guideSlugs: [
       "paint-the-pattern-you-noticed",
+      "fold-a-pattern-into-the-blue",
       "set-one-bell-in-motion",
       "play-the-wall-in-biarritz",
       "cook-beyond-the-postcard",
@@ -55,7 +56,7 @@ export const editorialPathways = [
     promise:
       "Warm rooms, a lakeside evening, two ways to share coffee and a night with a different rhythm.",
     intro:
-      "Not every memorable experience needs acceleration. A Koyasan temple stay asks you to fit an overnight visit around one lodging's actual arrangements. Istanbul, Tampere, Busan, Kuopio and Reykjavík each open a different public bathing context. Sarajevo brings a seated coffee pause into a longer city walk, while Doha makes qahwa and majlis etiquette the subject of a hosted session. These are not interchangeable wellness products and none carries a promise of transformation. What they share is room to notice a threshold, a gesture or a pattern of ordinary life that a hurried itinerary would pass over.",
+      "Not every memorable experience needs acceleration. A Koyasan temple stay asks you to fit an overnight visit around one lodging's actual arrangements. Istanbul, Tampere, Busan, Kuopio and Reykjavík each open a different public bathing context. A Mooska farm walk stays outside the bathing promise and makes the preparation behind a Võrumaa smoke sauna visible. Sarajevo brings a seated coffee pause into a longer city walk, while Doha makes qahwa and majlis etiquette the subject of a hosted session. These are not interchangeable wellness products and none carries a promise of transformation. What they share is room to notice a threshold, a gesture or a pattern of ordinary life that a hurried itinerary would pass over.",
     guideSlugs: [
       "spend-the-night-in-a-temple-town",
       "marble-steam-istanbul",
@@ -65,6 +66,7 @@ export const editorialPathways = [
       "read-the-language-of-the-coffee-cup",
       "spend-an-hour-between-the-hot-rooms",
       "step-from-smoke-sauna-into-the-lake",
+      "read-a-smoke-sauna-before-the-heat",
     ],
     visitorUse:
       "Choose the format that genuinely fits your day or night. Read bathing rules, dietary and lodging details, current opening times and the scope of any tour before making arrangements.",
@@ -75,11 +77,13 @@ export const editorialPathways = [
     slug: "what-a-place-tastes-like",
     kind: "food-and-drink",
     title: "What a place tastes like",
-    promise: "Ten ways to read landscape, work and memory through the table.",
+    promise:
+      "Eleven ways to read landscape, work and memory through the table.",
     intro:
-      "Begin with appetite, then look further. These guides connect a Singapore hawker breakfast, Vienna's heuriger, Asturian cider, Grenadian cacao, Kyoto tea, Seoul kimchi, Québec maple season and food grown on Mexico City's chinampas. Oaxaca follows agave through heat and copper, while Doha uses qahwa to read the social language of a majlis. Each is a different kind of public encounter. Together they show why eating and drinking can reveal climate, labour, technique and social rhythm. Use the official links to check what is currently offered, and let the guide sharpen the questions you bring to the table.",
+      "Begin with appetite, then look further. These guides connect a Singapore hawker breakfast, halloumi made on a route into the Troodos foothills, Vienna's heuriger, Asturian cider, Grenadian cacao, Kyoto tea, Seoul kimchi, Québec maple season and food grown on Mexico City's chinampas. Oaxaca follows agave through heat and copper, while Doha uses qahwa to read the social language of a majlis. Each is a different kind of public encounter. Together they show why eating and drinking can reveal climate, labour, technique and social rhythm. Use the official links to check what is currently offered, and let the guide sharpen the questions you bring to the table.",
     guideSlugs: [
       "a-morning-at-the-hawker-table",
+      "make-halloumi-before-it-reaches-the-plate",
       "the-vineyard-at-the-table",
       "the-pour-before-the-glass",
       "before-the-chocolate-bar",
@@ -123,10 +127,11 @@ export const editorialPathways = [
     promise:
       "Move from watching a skill to becoming responsible for your first attempt.",
     intro:
-      "A short introduction does not make anyone a master, but it can make knowledge visible. Shape lavash beside a tonir, prepare plant dyes in Luang Prabang, make kimchi in Seoul, cut a first zellige piece in Fez, find balance through a Venetian oar and learn what happens before cider reaches the glass in Asturias. These guides favour bounded public programmes where the teacher, sequence and limits remain clear. Arrive ready to follow instruction, ask precise questions and leave expertise with the people who hold it.",
+      "A short introduction does not make anyone a master, but it can make knowledge visible. Shape lavash beside a tonir, prepare plant dyes in Luang Prabang, fold an indigo resist in Suchitoto, make kimchi in Seoul, cut a first zellige piece in Fez, find balance through a Venetian oar and learn what happens before cider reaches the glass in Asturias. These guides favour bounded public programmes where the teacher, sequence and limits remain clear. Arrive ready to follow instruction, ask precise questions and leave expertise with the people who hold it.",
     guideSlugs: [
       "bread-from-the-tonir",
       "colour-before-cloth",
+      "fold-a-pattern-into-the-blue",
       "venice-through-an-oar",
       "the-fish-behind-the-islands",
       "the-pour-before-the-glass",

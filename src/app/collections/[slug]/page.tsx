@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props) {
   const collection = getEditorialPathway(slug);
   if (!collection) notFound();
   return pageMetadata(
-    collection.title,
+    `${collection.title} | EA collection`,
     collection.promise,
     `/collections/${collection.slug}`,
     !getExperiences().some(
