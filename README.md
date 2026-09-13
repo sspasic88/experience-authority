@@ -2,6 +2,8 @@
 
 Independent editorial selection of locally rooted experiences. Native Next.js + TypeScript. No Innovation Authority dependencies.
 
+Current edition: 59 public-source guides, six local planning chapters, dated daily discoveries and an explicit new-publication log. See [depth and return](docs/depth-and-return.md) for scope, evidence boundaries and the next editorial deadline.
+
 ## Local development
 
 Use Node 22+ and pnpm. Run `pnpm install`, copy `.env.example` to `.env.local`, then `pnpm dev` and open http://localhost:3100.

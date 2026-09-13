@@ -23,7 +23,7 @@ test("the public edition uses EA language, never generic travel editorial", () =
 
 test("home curation gives every image one position, including hero and pathway reuse", () => {
   const hero = selectHomeHero(publicGuides, "2026-09-12");
-  const home = curateHome(publicGuides, editorialPathways, hero);
+  const home = curateHome(publicGuides, editorialPathways, hero, "2026-09-13");
   assert.equal(home.startingPoints.length, 3);
   assert.equal(home.newGuides.length, 6);
   const visible = [

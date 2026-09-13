@@ -46,7 +46,7 @@ export function Header() {
     ["/collections", "Collections"],
     ["/journal", "Journal"],
     ["/plan", "Plan"],
-    ["/method", "Our method"],
+    ["/today", "Today"],
   ];
   return (
     <header className="site-header">

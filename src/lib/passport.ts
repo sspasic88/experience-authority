@@ -10,6 +10,17 @@ export type PassportData = {
   compare: string[];
 };
 export const emptyPassport: PassportData = { saved: {}, compare: [] };
+/** Add a group atomically without downgrading an existing stage or touching a plan. */
+export function addPassportGuides(
+  data: PassportData,
+  ids: string[],
+  allowedIds: string[],
+): PassportData {
+  const allowed = new Set(allowedIds);
+  const saved = { ...data.saved };
+  for (const id of ids) if (allowed.has(id) && !saved[id]) saved[id] = "saved";
+  return { ...data, saved };
+}
 export function sanitizePassport(
   value: unknown,
   allowedIds: string[],

@@ -516,7 +516,7 @@ export const territories = [
     region: "porto",
     regionName: "Porto",
     intro:
-      "Paint a tile in Porto, then cross the Douro to Vila Nova de Gaia to explore what time does to Port. Two cities, two ways to look beyond the finished thing.",
+      "Follow an ingredient through Bolhão, listen inside Clérigos and paint a tile in Porto. Cross the Douro to Gaia for the cellars. Four ways to look beyond the finished thing, with room to connect them.",
     image: null,
   },
   {
@@ -525,7 +525,7 @@ export const territories = [
     region: "kumano-kodo",
     regionName: "Kumano Kodo",
     intro:
-      "Tea, textile craft and backstreet cycling in Kyoto. A public pilgrimage path in Kumano Kodo. A temple night in Koyasan. Choose a place, then find your way in.",
+      "Tea, scent, textile craft and backstreet cycling in Kyoto. A public pilgrimage path in Kumano Kodo. A temple night in Koyasan. Choose a place, then find your way in.",
     image: null,
   },
   {
@@ -534,7 +534,7 @@ export const territories = [
     region: "venice",
     regionName: "Venice",
     intro:
-      "Understand Venice through the movement, balance and learned skill of an oar.",
+      "Understand Venice through the movement of an oar and the shaping of glass in a Castello atelier. Two hands-on encounters with the skill behind familiar surfaces.",
     image: null,
   },
   {

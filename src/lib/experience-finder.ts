@@ -30,6 +30,63 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "hear-the-church-before-you-climb": {
+    modes: ["watch-listen", "slow-down"],
+    time: "short",
+    keywords: [
+      "Porto",
+      "Clérigos",
+      "church",
+      "organ",
+      "music",
+      "concert",
+      "noon",
+      "listening",
+    ],
+  },
+  "let-the-market-write-your-menu": {
+    modes: ["at-table"],
+    time: "own-pace",
+    keywords: [
+      "Porto",
+      "Bolhão",
+      "market",
+      "food",
+      "cheese",
+      "conservas",
+      "shopping",
+      "ingredients",
+    ],
+  },
+  "find-a-place-through-its-scent": {
+    modes: ["watch-listen", "slow-down"],
+    time: "short",
+    keywords: [
+      "Kyoto",
+      "Kunjyukan",
+      "Shoyeido",
+      "incense",
+      "scent",
+      "fragrance",
+      "Koh-labo",
+      "gallery",
+      "free",
+    ],
+  },
+  "draw-a-small-shape-in-flame": {
+    modes: ["hands-on"],
+    time: "short",
+    keywords: [
+      "Venice",
+      "Castello",
+      "Huang Xiaozhe",
+      "glass",
+      "lampworking",
+      "flame",
+      "workshop",
+      "atelier",
+    ],
+  },
   "lift-a-pattern-from-the-water": {
     modes: ["hands-on"],
     time: "short",

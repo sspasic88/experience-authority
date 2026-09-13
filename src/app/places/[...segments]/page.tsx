@@ -16,6 +16,8 @@ import {
 import { StructuredData } from "@/components/structured-data";
 import { destinationCoverage } from "@/lib/destinations";
 import { DestinationBrowser } from "@/components/destination-browser";
+import { resolveCityChapters } from "@/lib/city-chapters";
+import { CityChapterSection } from "@/components/city-chapter";
 type Props = { params: Promise<{ segments: string[] }> };
 export async function generateMetadata({ params }: Props) {
   const segments = (await params).segments;
@@ -48,6 +50,11 @@ export default async function Place({ params }: Props) {
     categories,
     elsewhere,
   } = destinationCoverage(getExperiences(), country, region);
+  const chapters = resolveCityChapters(getExperiences()).filter(
+    (chapter) =>
+      chapter.country === country &&
+      (!region || chapter.regions.includes(region)),
+  );
   return (
     <div className="wrap page-section">
       <StructuredData
@@ -107,6 +114,19 @@ export default async function Place({ params }: Props) {
           ))}
         </nav>
       )}
+      {chapters.length > 0 && (
+        <nav className="chapter-jumps" aria-label="Local planning ideas">
+          {chapters.map((chapter) => (
+            <Link
+              className="text-link"
+              key={chapter.slug}
+              href={`#${chapter.slug}`}
+            >
+              How to combine {chapter.name} experiences ↓
+            </Link>
+          ))}
+        </nav>
+      )}
       <SectionHeading
         eyebrow="Closer to place"
         title={demoMode ? "Stories taking shape." : "Find your kind of day."}
@@ -135,6 +155,9 @@ export default async function Place({ params }: Props) {
           everything the destination offers.
         </p>
       )}
+      {chapters.map((chapter) => (
+        <CityChapterSection key={chapter.slug} chapter={chapter} />
+      ))}
       {elsewhere.length > 0 && (
         <section className="destination-elsewhere">
           <SectionHeading
@@ -154,7 +177,7 @@ export default async function Place({ params }: Props) {
           </div>
         </section>
       )}
-      {items.length > 0 && (
+      {items.length > 0 && chapters.length === 0 && (
         <section className="place-essay" aria-labelledby="place-plan-title">
           <div>
             <p className="eyebrow">Build around one good reason</p>

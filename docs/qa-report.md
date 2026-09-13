@@ -1,6 +1,12 @@
 # QA report — 12 September 2026
 
-## Current release candidate — 13 September 2026
+## Destination depth and daily discovery — 13 September 2026
+
+See [depth and return scope](depth-and-return.md) for the 59-guide release, six local chapters, explicit publication dates and the finite fourteen-edition daily queue. The preceding audit below remains a historical snapshot of the 55-guide revision, not a claim that this new release inherited its browser results.
+
+This release passes 55 automated tests, type checking, the production build and a targeted 42-view responsive audit at 390/768/1440 pixels. The browser audit includes batch-saving, persistence, preservation of prior plans/stages/comparison, planner navigation, dated discovery sharing targets, canonical/noindex behaviour and invalid/future date rejection. No detected browser errors, broken images, horizontal overflow or automated WCAG A/AA violations on those views.
+
+## Preceding release — 13 September 2026
 
 - The current candidate contains 55 public-source guides in 36 countries and territories, 12 editorial collections and eight Journal articles. Seven new guides deepen familiar destinations and open bounded routes in Istria, Vila Nova de Gaia and Mossman Gorge. Preliminary atlas candidates 1 and 91 were individually narrowed into the Istria and Mossman guides. The remaining candidates were not bulk-published.
 - All 51 policy, content, privacy, SEO and security tests pass. TypeScript and the optimized Next.js production build pass.

@@ -11,6 +11,7 @@ import Link from "next/link";
 import { Bookmark, Check, Columns3, X } from "lucide-react";
 import {
   emptyPassport,
+  addPassportGuides,
   sanitizePassport,
   type PassportData,
   type PassportStage,
@@ -24,6 +25,7 @@ type Context = {
   ready: boolean;
   message: string;
   setStage: (id: string, stage?: PassportStage) => void;
+  saveMany: (ids: string[]) => void;
   toggleCompare: (id: string) => void;
   clearCompare: () => void;
 };
@@ -118,6 +120,17 @@ export function PassportProvider({
         ready,
         message,
         setStage,
+        saveMany: (guideIds) => {
+          if (!ready) return;
+          const next = addPassportGuides(data, guideIds, ids);
+          const added =
+            Object.keys(next.saved).length - Object.keys(data.saved).length;
+          setMessage(
+            `${added} experiences added to your Passport on this device. Existing saves are unchanged.`,
+          );
+          persist(next);
+          trackEaEvent("journey_save", { guide_count: added });
+        },
         toggleCompare,
         clearCompare: () => persist({ ...data, compare: [] }),
       }}

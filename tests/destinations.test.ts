@@ -7,10 +7,10 @@ import { publicGuides } from "../src/lib/public-guides";
 
 test("destination browsing keeps country and city scopes exact, with honest wider-country options", () => {
   const japan = destinationCoverage(publicGuides, "japan");
-  assert.equal(japan.local.length, 5);
+  assert.equal(japan.local.length, 6);
   assert.equal(japan.categories.length, 5);
   const kyoto = destinationCoverage(publicGuides, "japan", "kyoto");
-  assert.equal(kyoto.local.length, 3);
+  assert.equal(kyoto.local.length, 4);
   assert.equal(kyoto.elsewhere.length, 2);
   assert.ok(
     kyoto.elsewhere.every(

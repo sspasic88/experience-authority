@@ -4,6 +4,7 @@
  * never proves that EA attended, assessed or endorses the named experience.
  */
 import { mediaBatch14 } from "./media-batch-14";
+import { mediaBatch15 } from "./media-batch-15";
 export type GuideMedia = {
   guideId: string;
   src: string;
@@ -24,6 +25,7 @@ export type GuideMedia = {
 };
 
 export const publicGuideMedia: readonly GuideMedia[] = [
+  ...mediaBatch15,
   ...mediaBatch14,
   {
     guideId: "busan-spa-land-jjimjilbang",

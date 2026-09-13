@@ -106,6 +106,14 @@ if (process.env.EA_TEST_DEMO === "true") {
     ].map((slug) => `/experiences/${slug}`),
   );
   paths.push(
+    "/today",
+    "/new",
+    "/places/portugal",
+    "/places/portugal/porto",
+    "/experiences/hear-the-church-before-you-climb",
+    "/experiences/let-the-market-write-your-menu",
+    "/experiences/find-a-place-through-its-scent",
+    "/experiences/draw-a-small-shape-in-flame",
     "/explore?q=row&field=move&place=italy&status=public_guide&view=list",
     "/explore?q=no-such-experience",
   );

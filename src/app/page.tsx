@@ -21,6 +21,8 @@ import { demoMode, getExperiences } from "@/lib/data";
 import { StructuredData } from "@/components/structured-data";
 import { HomeHero } from "@/components/home-hero";
 import { PassportReturn } from "@/components/passport-return";
+import { currentDiscovery, editionDate } from "@/lib/daily-discovery";
+import { chapterHref, resolveCityChapters } from "@/lib/city-chapters";
 import {
   pageMetadata,
   SITE_DESCRIPTION,
@@ -35,6 +37,8 @@ export const metadata = pageMetadata(
 
 export default function Home() {
   const experiences = getExperiences();
+  const discovery = currentDiscovery(experiences);
+  const chapters = resolveCityChapters(experiences);
   const activeFields = fields.filter((field) =>
     experiences.some((item) => item.field === field.slug),
   );
@@ -70,6 +74,23 @@ export default function Home() {
         heroEditions={availableHeroEditions}
         initialHeroIndex={initialHeroIndex}
       />
+      {discovery && (
+        <div className="wrap home-discovery">
+          <Link className="daily-invitation" href="/today">
+            <span>
+              <span className="eyebrow">Daily discovery</span>
+              <time dateTime={discovery.date}>
+                {editionDate(discovery.date)}
+              </time>
+            </span>
+            <strong>{discovery.title}</strong>
+            <span className="daily-invitation-place">
+              {discovery.item.place}{" "}
+              <ArrowUpRight size={22} aria-hidden="true" />
+            </span>
+          </Link>
+        </div>
+      )}
       <section className="section wrap">
         <PassportReturn />
         <SectionHeading
@@ -155,17 +176,49 @@ export default function Home() {
           <SectionHeading
             eyebrow="New to the guide"
             title="Fresh ways into the world."
-            href="/explore"
-            link="Browse all guides"
+            href="/new"
+            link="All new publications"
           />
           <p className="section-note">
-            New places to follow your appetite, try a skill or look a little
-            closer. Open a guide for the story and the practical way in.
+            Recently published guides, not a reshuffle of older stories. More
+            ways to follow your appetite, try a skill or look a little closer.
           </p>
           <div className="experience-grid">
             {newGuides.map((item, index) => (
               <ExperienceCard key={item.id} item={item} index={index} />
             ))}
+          </div>
+        </section>
+      )}
+      {chapters.length > 0 && (
+        <section className="home-city-section">
+          <div className="wrap">
+            <SectionHeading
+              eyebrow="Make more of one place"
+              title="Not just one good afternoon."
+              href="/places"
+              link="Find your destination"
+            />
+            <p className="section-note">
+              A familiar starting point, a less expected next step and room
+              between them. These local combinations help you shape a stay, not
+              fill every hour.
+            </p>
+            <div className="city-chapter-links">
+              {chapters.map((chapter) => (
+                <Link href={chapterHref(chapter)} key={chapter.slug}>
+                  <span className="eyebrow">
+                    {chapter.stops.length} connected experiences
+                  </span>
+                  <h3>{chapter.name}</h3>
+                  <p>{chapter.title}</p>
+                  <span className="text-link">
+                    Put the place together{" "}
+                    <ArrowUpRight size={18} aria-hidden="true" />
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
       )}

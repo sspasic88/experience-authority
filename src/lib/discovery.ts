@@ -6,6 +6,8 @@ import {
 } from "./catalog";
 import { editorialPathways } from "./editorial-pathways";
 import { getJournalArticles } from "./journal";
+import { currentDiscovery } from "./daily-discovery";
+import { publishedReleases } from "./releases";
 import { canonicalUrl, indexingEnabled, isDiscoverable } from "./seo";
 
 export type SitemapEntry = { url: string; lastModified?: Date };
@@ -29,6 +31,8 @@ export function sitemapEntries(
     "/credits",
     "/plan",
   ];
+  if (currentDiscovery(publicItems)) paths.push("/today");
+  if (publishedReleases(publicItems).length) paths.push("/new");
   if (publicItems.length)
     paths.push("/explore", "/fields", "/places", "/collections");
   for (const field of fields) {

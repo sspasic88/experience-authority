@@ -16,6 +16,7 @@ import { PhotoViewer } from "@/components/photo-viewer";
 import { ShareButton } from "@/components/share-button";
 import { StructuredData } from "@/components/structured-data";
 import { connectedExperiences } from "@/lib/catalog";
+import { resolveCityChapters, chapterHref } from "@/lib/city-chapters";
 import {
   pageMetadata,
   isDiscoverable,
@@ -55,6 +56,9 @@ export default async function Experience({ params }: Props) {
   if (!item) notFound();
   const media = guideMediaFor(item.id);
   const connections = connectedExperiences(item, getExperiences());
+  const chapter = resolveCityChapters(getExperiences()).find((chapter) =>
+    chapter.stops.some((stop) => stop.slug === item.slug),
+  );
   const structuredData = guideStructuredData(item);
   return (
     <div className="experience-page">
@@ -378,6 +382,13 @@ export default async function Experience({ params }: Props) {
               </div>
             ))}
           </div>
+          {chapter && (
+            <p className="chapter-jumps">
+              <Link className="text-link" href={chapterHref(chapter)}>
+                See how to combine {chapter.name} experiences ↗
+              </Link>
+            </p>
+          )}
         </section>
       </div>
     </div>

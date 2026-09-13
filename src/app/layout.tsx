@@ -8,6 +8,7 @@ import "@/styles/prototype.css";
 import "@/styles/visitor.css";
 import "@/styles/expansion.css";
 import "@/styles/journal.css";
+import "@/styles/discovery.css";
 import { Header, Footer } from "@/components/chrome";
 import { PassportProvider } from "@/components/passport-provider";
 import { demoMode, getExperiences } from "@/lib/data";

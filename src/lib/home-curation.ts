@@ -1,5 +1,6 @@
 import type { PublicExperience } from "./catalog";
 import type { EditorialPathway } from "./editorial-pathways";
+import { recentGuideReleases } from "./releases";
 
 /**
  * Hand-composed hero editions. Each row balances a recognisable point of entry
@@ -86,6 +87,7 @@ export function curateHome(
   items: PublicExperience[],
   pathways: readonly EditorialPathway[],
   hero: PublicExperience[] = selectHomeHero(items),
+  today = new Date().toISOString().slice(0, 10),
 ) {
   const usedImages = new Set<string>();
   const claim = (item: PublicExperience) => {
@@ -107,7 +109,7 @@ export function curateHome(
     .filter((item) => !usedImages.has(item.image || item.id))
     .slice(0, 3);
   startingPoints.forEach(claim);
-  const newGuides = items
+  const newGuides = recentGuideReleases(items, today)
     .filter((item) => !usedImages.has(item.image || item.id))
     .slice(0, 6);
   newGuides.forEach(claim);
