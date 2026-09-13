@@ -360,13 +360,13 @@ export default async function Experience({ params }: Props) {
         <section className="section">
           <SectionHeading
             eyebrow="Continue from here"
-            title="Turn one experience into a fuller day."
+            title="Let one experience lead to the next."
             href="/explore"
           />{" "}
           <p className="connected-intro">
-            We start with the same city or area, then add a contrasting way to
-            experience it. Wider suggestions are labelled so proximity is never
-            implied.
+            We start with the same city or area and a contrasting way to
+            experience it. Wider suggestions follow an editorial thread and are
+            labelled so proximity is never implied.
           </p>
           <div className="experience-grid connected-experience-grid">
             {connections.map(({ item: entry, label, href }, index) => (
