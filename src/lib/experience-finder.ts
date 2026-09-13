@@ -30,6 +30,53 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "ask-the-market-where-london-came-from": {
+    modes: ["at-table", "watch-listen"],
+    time: "half-day",
+    keywords: [
+      "London",
+      "United Kingdom",
+      "Borough Market",
+      "market",
+      "food",
+      "tasting",
+      "traders",
+      "ingredients",
+      "tour",
+    ],
+  },
+  "meet-the-work-before-the-curtain-rises": {
+    modes: ["watch-listen"],
+    time: "short",
+    keywords: [
+      "London",
+      "United Kingdom",
+      "Covent Garden",
+      "Royal Opera House",
+      "ballet",
+      "opera",
+      "costume",
+      "rehearsal",
+      "production",
+      "backstage",
+    ],
+  },
+  "open-a-door-the-underground-left-behind": {
+    modes: ["watch-listen"],
+    time: "short",
+    keywords: [
+      "London",
+      "United Kingdom",
+      "Underground",
+      "Tube",
+      "Piccadilly Circus",
+      "Hidden London",
+      "transport",
+      "engineering",
+      "architecture",
+      "history",
+    ],
+  },
   "make-the-morning-before-it-reaches-the-cafe": {
     modes: ["hands-on", "at-table"],
     time: "half-day",

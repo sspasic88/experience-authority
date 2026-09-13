@@ -273,6 +273,39 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "Which invisible system deserves a place in how you understand the next city you visit?",
   },
+  {
+    date: "2026-10-07",
+    slug: "ask-the-market-where-london-came-from",
+    title: "London begins with a better market question.",
+    angle:
+      "Borough Market is easy to recognise and easy to reduce to a queue for lunch. A guided morning changes the unit of attention. Follow one ingredient backwards through the trader, producer and place it came from. The market does not become a complete portrait of London, but it becomes more than a backdrop for eating.",
+    notice:
+      "The explanation behind one product. Ask before photographing, keep the working route clear and buy only what you can use.",
+    question:
+      "What would you learn from the next market if you followed one ingredient instead of trying to taste everything?",
+  },
+  {
+    date: "2026-10-08",
+    slug: "meet-the-work-before-the-curtain-rises",
+    title: "The performance begins before anyone takes the stage.",
+    angle:
+      "At the Royal Opera House, the public image naturally settles on the performer and auditorium. A backstage route widens the frame. Rehearsal, costume, scenery, machinery and timing must meet before the curtain can rise. The exact spaces change with the working day, which makes the visit less predictable and more truthful.",
+    notice:
+      "One task that would disappear inside the finished performance. Respect every working boundary and photography instruction.",
+    question:
+      "Whose work would you notice if you watched the next performance as a system rather than a single event?",
+  },
+  {
+    date: "2026-10-09",
+    slug: "open-a-door-the-underground-left-behind",
+    title: "The Tube map leaves out the rooms beside the line.",
+    angle:
+      "Piccadilly Circus is designed to move people onward. Behind its working passages, earlier routes, lift shafts and closed spaces preserve decisions made for another London. A Hidden London tour lets an expert open one bounded part of that history. The surprise is not simply that the rooms exist. It is how closely an abandoned station can sit beside an ordinary journey.",
+    notice:
+      "A tiled edge, blocked doorway or change in scale that reveals where one version of the station meets another.",
+    question:
+      "Which familiar system in your own city might contain an earlier version just beyond the route you use?",
+  },
 ];
 
 export function availableDiscoveries(

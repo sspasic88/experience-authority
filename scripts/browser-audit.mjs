@@ -35,6 +35,10 @@ const routes = [
   "/experiences/make-the-morning-before-it-reaches-the-cafe",
   "/experiences/watch-a-picture-grow-one-thread-at-a-time",
   "/experiences/see-what-keeps-paris-moving-underground",
+  "/places/united-kingdom/london",
+  "/experiences/ask-the-market-where-london-came-from",
+  "/experiences/meet-the-work-before-the-curtain-rises",
+  "/experiences/open-a-door-the-underground-left-behind",
   "/places",
   "/places/japan/kyoto",
   "/places/armenia/gegharkunik",
@@ -156,6 +160,10 @@ try {
       page.off("pageerror", onError);
     }
     await page.goto(base + "/", { waitUntil: "networkidle" });
+    const analyticsChoice = page.getByRole("button", {
+      name: "Do not use analytics",
+    });
+    if (await analyticsChoice.isVisible()) await analyticsChoice.click();
     const firstHeroGuide = page
       .locator(".prototype-hero-place figcaption > a")
       .first();

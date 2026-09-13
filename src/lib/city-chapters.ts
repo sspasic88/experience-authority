@@ -16,6 +16,35 @@ export type CityChapter = {
 /** Authored local combinations. These are ideas to adapt, not timed or bookable packages. */
 export const cityChapters: readonly CityChapter[] = [
   {
+    slug: "london",
+    name: "London",
+    country: "united-kingdom",
+    regions: ["london"],
+    title: "Taste the city. Meet the work. Open the door behind it.",
+    intro:
+      "Use a market everyone recognises as the way in, then let London reveal two working interiors. One tour follows ingredients and traders. Another makes the labour behind performance visible. A third opens the layers hidden beside an ordinary Underground journey.",
+    pace: "Give the market its own morning. Put the two fixed tours on separate days.",
+    planning:
+      "The Borough Market public tour is currently listed for selected Friday mornings and lasts about three hours. The Royal Opera House and Hidden London visits are separate timed bookings with routes that can change. Hidden London has the strictest footwear, mobility and confined-space requirements. The three meeting points are not a continuous walking itinerary, and ordinary admission to each public venue does not include its guided access. Confirm every date, language, age rule and access need before paying. No transport, meal beyond stated tastings, combined ticket or package is included.",
+    stops: [
+      {
+        slug: "ask-the-market-where-london-came-from",
+        moment: "Begin with a familiar appetite",
+        why: "Let the guide and traders turn a well-known food stop into questions about ingredients, production and the knowledge held behind the counter.",
+      },
+      {
+        slug: "meet-the-work-before-the-curtain-rises",
+        moment: "On another day, go behind the finished performance",
+        why: "Follow the working theatre's available route and notice rehearsal, costume and production as interconnected practices. The route varies because the building is in use.",
+      },
+      {
+        slug: "open-a-door-the-underground-left-behind",
+        moment: "Choose the closed door that fits your route",
+        why: "See how a system Londoners use every day still contains earlier stations and decisions. Select one current tour and read its physical demands carefully.",
+      },
+    ],
+  },
+  {
     slug: "paris",
     name: "Paris",
     country: "france",

@@ -42,8 +42,8 @@ test("Arcachon stays a bay-wide chapter regardless of guide order or a more spec
   }
 });
 
-test("guide set contains sixty-nine distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 69);
+test("guide set contains seventy-two distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 72);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -81,6 +81,29 @@ test("guide set contains sixty-nine distinct, sourced public experiences, not Se
   assert.equal(
     new Set(publicGuideMedia.map((media) => media.src)).size,
     publicGuides.length,
+  );
+});
+test("London connects a recognisable market with production work and hidden infrastructure", () => {
+  const london = publicGuides.filter(
+    (guide) =>
+      guide.countrySlug === "united-kingdom" && guide.regionSlug === "london",
+  );
+  assert.equal(london.length, 3);
+  assert.deepEqual([...new Set(london.map((guide) => guide.field))].sort(), [
+    "taste",
+    "witness",
+    "work",
+  ]);
+  assert.ok(london.every((guide) => guide.access.includes("No EA booking")));
+  assert.match(
+    london.find(
+      (guide) => guide.slug === "open-a-door-the-underground-left-behind",
+    )!.responsibility,
+    /never attempt to enter closed infrastructure independently/,
+  );
+  assert.equal(
+    connectedExperiences(london[0], publicGuides)[0].scope,
+    "same_area",
   );
 });
 test("Paris offers a recognisable entry, a living craft and hidden city work", () => {

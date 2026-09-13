@@ -4,13 +4,13 @@
 
 ## Current edition
 
-69 public-source guides across 37 countries and territories, 11 active fields, 12 collections, nine Journal articles and 11 local planning chapters. Paris now has three deliberately different public routes: a substantial croissant and viennoiserie workshop, a guided visit inside the active Gobelins weaving workshops and a self-guided visit through the Paris Sewer Museum.
+This document records the 69-guide Paris release. The current 72-guide scope is documented in [London depth](london-depth.md). Paris has three deliberately different public routes: a substantial croissant and viennoiserie workshop, a guided visit inside the active Gobelins weaving workshops and a self-guided visit through the Paris Sewer Museum.
 
 The chapter begins with a highly recognisable Paris reference and then opens two less expected forms of attention. It does not present the city as a checklist and it does not force all three stops into one day. Each guide remains a separate booking or admission with its own location, timing, language and access conditions.
 
 ## Return queue
 
-24 individually authored daily discoveries are prepared for 13 September through 6 October. Future features remain date-gated. All three Paris guides are published on 13 September, distinct from their later daily-feature dates. Extend the queue before 7 October. This release does not create an automatic publishing service or prove retention.
+At this release point, 24 individually authored daily discoveries were prepared for 13 September through 6 October. Future features remain date-gated. All three Paris guides were published on 13 September, distinct from their later daily-feature dates. This release did not create an automatic publishing service or prove retention.
 
 ## Evidence and access boundaries
 
@@ -27,4 +27,4 @@ All three photographs are real and attached to direct source credits. The pastry
 
 Before release, run content tests, type checking, the production build, route and security smoke checks, and responsive browser checks for the Paris country, city and guide surfaces. Recheck all three guides by 12 December 2026 or sooner if a source changes.
 
-The same release includes a retroactive [content suitability audit](content-suitability-audit-2026-09-13.md) across all 69 public guides.
+The same release included a retroactive [content suitability audit](content-suitability-audit-2026-09-13.md), since extended to the current catalogue.

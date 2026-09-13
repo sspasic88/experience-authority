@@ -297,10 +297,10 @@ export const territories = [
   {
     slug: "united-kingdom",
     name: "United Kingdom",
-    region: "cambridge",
-    regionName: "Cambridge",
+    region: "london",
+    regionName: "London",
     intro:
-      "Learn the shared timing behind Cambridge church bells, then let a caller bring an Edinburgh dance floor into motion.",
+      "Begin in London with a market, a working theatre and the Underground behind closed doors. Cambridge and Edinburgh offer two more forms of shared timing.",
     image: null,
   },
   {

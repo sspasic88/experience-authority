@@ -131,6 +131,10 @@ if (process.env.EA_TEST_DEMO === "true") {
     "/experiences/make-the-morning-before-it-reaches-the-cafe",
     "/experiences/watch-a-picture-grow-one-thread-at-a-time",
     "/experiences/see-what-keeps-paris-moving-underground",
+    "/places/united-kingdom/london",
+    "/experiences/ask-the-market-where-london-came-from",
+    "/experiences/meet-the-work-before-the-curtain-rises",
+    "/experiences/open-a-door-the-underground-left-behind",
     "/journal/let-the-place-set-the-clock",
     "/explore?q=row&field=move&place=italy&status=public_guide&view=list",
     "/explore?q=no-such-experience",
@@ -273,6 +277,10 @@ if (liveIndexing) {
     "/experiences/make-the-morning-before-it-reaches-the-cafe",
     "/experiences/watch-a-picture-grow-one-thread-at-a-time",
     "/experiences/see-what-keeps-paris-moving-underground",
+    "/places/united-kingdom/london",
+    "/experiences/ask-the-market-where-london-came-from",
+    "/experiences/meet-the-work-before-the-curtain-rises",
+    "/experiences/open-a-door-the-underground-left-behind",
   ])
     assert.ok(
       sitemap.includes(`${path}</loc>`),

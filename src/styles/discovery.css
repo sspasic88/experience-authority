@@ -7,13 +7,16 @@
 }
 @media (min-width: 901px) {
   .destination-page .page-intro {
-    padding-block: 42px 24px;
+    padding-block: 34px 18px;
   }
   .destination-page .chapter-jumps {
-    margin-bottom: 22px;
+    margin-bottom: 16px;
   }
   .destination-page > .section-heading {
-    margin-bottom: 25px;
+    margin-bottom: 18px;
+  }
+  .destination-page .destination-result {
+    margin-bottom: 22px;
   }
 }
 .home-discovery {

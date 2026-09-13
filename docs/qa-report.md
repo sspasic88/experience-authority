@@ -1,5 +1,15 @@
 # QA report — 12 September 2026
 
+## London depth — 13 September 2026
+
+- The candidate contains 72 public-source guides in 37 countries and territories, 12 local planning chapters and 27 dated daily discoveries through 9 October. London adds three independent public routes across Taste, Work and Witness.
+- Borough Market provides the recognisable entry point. The Royal Opera House and Hidden London reveal production and infrastructure behind familiar public images. The chapter keeps all three bookings separate and does not imply a continuous route, package or ordinary-admission access.
+- All three photographs are real official-source images with direct lower-right credits, explicit depiction boundaries and uncleared-reuse status. No image claims to document an EA visit.
+- All 62 automated policy, content, media, search, privacy, SEO and security tests pass. Type checking and the optimized production build pass.
+- The indexable local production smoke passed 108 pages and 12 expected not-found routes. The sitemap contains London and all three guide routes, private and filtered pages remain excluded, and all checked pages received distinct CSP nonces.
+- The full responsive browser audit passed 147 views at 390, 768 and 1440 pixels, encountered 281 internal links and found no broken images, horizontal overflow, browser errors or automated WCAG A/AA violations. The interaction pass now records an explicit analytics choice before testing lower-page controls, matching the production consent interface instead of letting the dialog mask them.
+- A final visual inspection tightened destination-page spacing so the new photographs enter the initial 1280 by 720 view. The three London crops, direct credits, headline wraps and the transition into the planning chapter were inspected together. See [London depth](london-depth.md) for the content and review boundary.
+
 ## Paris depth and catalogue suitability — 13 September 2026
 
 - The candidate contains 69 public-source guides in 37 countries and territories, 11 local planning chapters and 24 dated daily discoveries through 6 October. Paris adds three independent public routes across Taste, Witness and Work. Work is now a populated, indexable field rather than an empty category.
