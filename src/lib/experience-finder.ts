@@ -30,6 +30,54 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "twist-the-city-before-you-taste-it": {
+    modes: ["hands-on", "at-table"],
+    time: "short",
+    keywords: [
+      "Kraków",
+      "Krakow",
+      "Poland",
+      "obwarzanek",
+      "bread",
+      "baking",
+      "dough",
+      "food",
+      "museum",
+      "workshop",
+    ],
+  },
+  "take-the-window-back-to-the-workbench": {
+    modes: ["hands-on", "watch-listen"],
+    time: "half-day",
+    keywords: [
+      "Kraków",
+      "Krakow",
+      "Poland",
+      "stained glass",
+      "glass",
+      "copper",
+      "soldering",
+      "Wyspiański",
+      "craft",
+      "workshop",
+    ],
+  },
+  "watch-a-city-arrive-in-miniature": {
+    modes: ["watch-listen", "outdoors"],
+    time: "calendar",
+    keywords: [
+      "Kraków",
+      "Krakow",
+      "Poland",
+      "szopka",
+      "nativity",
+      "miniature",
+      "architecture",
+      "competition",
+      "December",
+      "UNESCO",
+    ],
+  },
   "meet-the-bay-on-its-working-hours": {
     modes: ["watch-listen", "at-table", "outdoors"],
     time: "half-day",

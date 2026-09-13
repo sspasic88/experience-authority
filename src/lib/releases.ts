@@ -5,6 +5,9 @@ export const guideReleases = [
   {
     date: "2026-09-13",
     slugs: [
+      "twist-the-city-before-you-taste-it",
+      "take-the-window-back-to-the-workbench",
+      "watch-a-city-arrive-in-miniature",
       "meet-the-bay-on-its-working-hours",
       "read-the-landscape-one-grain-at-a-time",
       "make-something-from-the-broken-pieces",

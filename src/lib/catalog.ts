@@ -214,6 +214,15 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "poland",
+    name: "Poland",
+    region: "krakow",
+    regionName: "Kraków",
+    intro:
+      "Taste Kraków through its everyday ring-shaped bread, take stained glass back to the workbench and, in December, watch the city reappear in miniature.",
+    image: null,
+  },
+  {
     slug: "australia",
     name: "Australia",
     region: "mossman-gorge",
@@ -550,6 +559,7 @@ export const territories = [
 // Area labels can differ from a guide's specific site. Never let the last guide rename the area.
 const additionalRegionNames: Readonly<Record<string, string>> = {
   "france/arcachon-bay": "Arcachon Bay",
+  "poland/krakow": "Kraków",
 };
 
 function regionDisplayName(country: string, region: string, fallback: string) {

@@ -121,6 +121,11 @@ if (process.env.EA_TEST_DEMO === "true") {
     "/places/france/arcachon-bay",
     "/experiences/meet-the-bay-on-its-working-hours",
     "/experiences/read-the-landscape-one-grain-at-a-time",
+    "/places/poland",
+    "/places/poland/krakow",
+    "/experiences/twist-the-city-before-you-taste-it",
+    "/experiences/take-the-window-back-to-the-workbench",
+    "/experiences/watch-a-city-arrive-in-miniature",
     "/journal/let-the-place-set-the-clock",
     "/explore?q=row&field=move&place=italy&status=public_guide&view=list",
     "/explore?q=no-such-experience",
@@ -195,7 +200,15 @@ for (const path of paths) {
           /property="og:image" content="https:\/\/experienceauthority\.com\/images\/guides\//,
         );
         assert.ok(html.includes('id="sources"'), "Missing source notes");
-        assert.ok(html.includes("2026-09-12"), "Missing source-check date");
+        assert.match(
+          article.dateModified,
+          /^\d{4}-\d{2}-\d{2}$/,
+          "Invalid source-check date",
+        );
+        assert.ok(
+          html.includes(article.dateModified),
+          "Missing source-check date",
+        );
         assert.ok(
           html.includes("Official access information"),
           "Missing official access link",
@@ -246,8 +259,12 @@ if (liveIndexing) {
     "/places/japan/kyoto",
     "/places/japan/kumano-kodo",
     "/places/armenia/gegharkunik",
+    "/places/poland/krakow",
     "/experiences/a-bowl-of-attention",
     "/experiences/bread-from-the-tonir",
+    "/experiences/twist-the-city-before-you-taste-it",
+    "/experiences/take-the-window-back-to-the-workbench",
+    "/experiences/watch-a-city-arrive-in-miniature",
   ])
     assert.ok(
       sitemap.includes(`${path}</loc>`),

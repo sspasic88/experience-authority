@@ -16,6 +16,35 @@ export type CityChapter = {
 /** Authored local combinations. These are ideas to adapt, not timed or bookable packages. */
 export const cityChapters: readonly CityChapter[] = [
   {
+    slug: "krakow",
+    name: "Kraków",
+    country: "poland",
+    regions: ["krakow"],
+    title: "Taste a shape. Make with light. Watch the city become small.",
+    intro:
+      "Three familiar Kraków materials open in different directions. Twist the bread seen on street carts. Build a small object from glass and copper. In December, watch makers carry an intricate version of the city into its own main square.",
+    pace: "Pair the bread and glass workshops on separate halves of a day. Let the szopka calendar decide whether the third encounter belongs to this trip.",
+    planning:
+      "The obwarzanek session lasts about one hour, while the stained-glass format takes two or three hours and uses tools that require close instruction. They are separate bookings at different addresses. Confirm language, age and access before fixing the day. The szopka arrival happens only on 3 December 2026, with a later museum exhibition from 6 December. It is public spectatorship, not a making workshop. No route, transport, combined ticket or package is included.",
+    stops: [
+      {
+        slug: "twist-the-city-before-you-taste-it",
+        moment: "Begin with the everyday shape",
+        why: "Learn the twisting movement behind Kraków's most visible bread. Plan the tasting separately because the museum's own visitor information conflicts on whether the workshop piece should be eaten.",
+      },
+      {
+        slug: "take-the-window-back-to-the-workbench",
+        moment: "Give the afternoon to light and joins",
+        why: "Move from dough to a more exacting material. A small visitor project reveals why every line in stained glass has structural work to do.",
+      },
+      {
+        slug: "watch-a-city-arrive-in-miniature",
+        moment: "When the December calendar allows",
+        why: "Watch makers bring Kraków's architecture back to the Main Market Square in another scale. Keep the distinction between public witness and unavailable hands-on access clear.",
+      },
+    ],
+  },
+  {
     slug: "arcachon-bay",
     name: "Arcachon Bay",
     country: "france",

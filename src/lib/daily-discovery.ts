@@ -207,6 +207,39 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "Which apparently permanent place might become more interesting if you asked what is changing?",
   },
+  {
+    date: "2026-10-01",
+    slug: "twist-the-city-before-you-taste-it",
+    title: "Kraków has a shape you can learn with your hands.",
+    angle:
+      "Obwarzanek krakowski is easy to recognise and easy to eat without a second thought. Slow the ring down. In a one-hour public workshop, the revealing moment is the twist that turns separate strands of dough into the city's everyday form. Taste a normally produced one later, when your hands know what your eyes are seeing.",
+    notice:
+      "The sequence before the finished crust. The museum gives conflicting advice about eating the workshop piece, so keep making and tasting separate.",
+    question:
+      "Which food have you known for years without ever noticing the movement that gives it shape?",
+  },
+  {
+    date: "2026-10-02",
+    slug: "take-the-window-back-to-the-workbench",
+    title: "The line between colours is doing the work.",
+    angle:
+      "Kraków's stained glass rewards distance, but its making begins much closer. A tour-and-workshop inside a studio still in use moves from monumental windows to a small object you cut, wrap and solder under direction. The scale is modest. The shift in looking can be much larger.",
+    notice:
+      "The join, not only the colour. Follow every safety instruction around glass and tools.",
+    question:
+      "What finished surface would become more interesting if you could see what holds its separate parts together?",
+  },
+  {
+    date: "2026-10-03",
+    slug: "watch-a-city-arrive-in-miniature",
+    title: "Once a year, Kraków carries in another Kraków.",
+    angle:
+      "On the first Thursday of December, szopka makers bring elaborate constructions shaped by the city's own architecture to the Main Market Square. The encounter is public and visually immediate, but the right role is simple: make room, look carefully and let the makers carry the work.",
+    notice:
+      "A tower, dome or colour translated from the full-sized city. This is spectatorship, not a visitor workshop.",
+    question:
+      "Which familiar landmark would you recognise if a local maker transformed it into something small enough to carry?",
+  },
 ];
 
 export function availableDiscoveries(

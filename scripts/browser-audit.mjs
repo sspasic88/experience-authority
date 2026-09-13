@@ -191,9 +191,9 @@ try {
       "/places/portugal",
     );
     await expect(
-      firstConnection.locator(
-        'a[href="/experiences/paint-the-pattern-you-noticed"]',
-      ),
+      page
+        .locator(".connected-experience")
+        .locator('a[href="/experiences/paint-the-pattern-you-noticed"]'),
     ).toHaveCount(2);
     await page.goto(base + "/explore", { waitUntil: "networkidle" });
     await firstCard.locator(".save-button").click();

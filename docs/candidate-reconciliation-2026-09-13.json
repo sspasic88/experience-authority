@@ -4,7 +4,7 @@
   "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
   "originalCandidateCount": 200,
   "originalProtectedCount": 46,
-  "catalogueCount": 63,
+  "catalogueCount": 66,
   "mappings": [
     {
       "candidateId": 9,
@@ -71,6 +71,12 @@
       "guideId": "kuopio-jatkankamppa-smoke-sauna",
       "relation": "narrowed_public_scope",
       "boundary": "Public smoke-sauna session. Winter swimming is conditional, not guaranteed. Rajaportti remains a different sauna alternative."
+    },
+    {
+      "candidateId": 20,
+      "guideId": "krakow-szopka-arrival",
+      "relation": "related_alternative",
+      "boundary": "The public annual arrival and exhibition give visitors evidence-based access to the szopka tradition, but do not fulfil the original hands-on premise. The current adult master series is full and intended for current or prospective competition entrants."
     },
     {
       "candidateId": 21,
@@ -236,6 +242,15 @@
     }
   ],
   "newSourceReviews": [
+    {
+      "candidateId": 20,
+      "status": "evidence_hold",
+      "checkedOn": "2026-09-13",
+      "finding": "The Museum of Kraków announces a public 2026 competition arrival, procession and exhibition. Its current adult beginner series has only nine places, is marked full and is designed for people who have entered or intend to enter the competition. Family sessions require a multi-date commitment and children. Neither establishes the original casual visitor workshop with a local craftsperson.",
+      "sourceUrl": "https://muzeumkrakowa.pl/kalendarium/szopkarskie-warsztaty-mistrzowskie-dla-doroslych-poziom-podstawowy-2",
+      "nextAction": "Keep the public arrival as a related alternative. Recheck for a future openly bookable beginner workshop that suits an ordinary visitor before narrowing the original candidate.",
+      "outreachPerformed": false
+    },
     {
       "candidateId": 9,
       "status": "narrowed_public_scope",

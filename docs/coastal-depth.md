@@ -1,6 +1,6 @@
 # Coastal depth
 
-13 September 2026. Follows the historical [Barcelona/Vienna release](city-depth-follow-up.md).
+13 September 2026. Follows the historical [Barcelona/Vienna release](city-depth-follow-up.md). Superseded as the current edition by [Kraków depth](krakow-depth.md).
 
 ## Current scope
 

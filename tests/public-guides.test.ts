@@ -42,8 +42,8 @@ test("Arcachon stays a bay-wide chapter regardless of guide order or a more spec
   }
 });
 
-test("guide set contains sixty-three distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 63);
+test("guide set contains sixty-six distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 66);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -52,7 +52,7 @@ test("guide set contains sixty-three distinct, sourced public experiences, not S
     new Set(publicGuides.map((p) => p.slug)).size,
     publicGuides.length,
   );
-  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 36);
+  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 37);
   assert.equal(
     new Set(territories.map((place) => place.slug)).size,
     territories.length,
@@ -82,6 +82,23 @@ test("guide set contains sixty-three distinct, sourced public experiences, not S
     new Set(publicGuideMedia.map((media) => media.src)).size,
     publicGuides.length,
   );
+});
+test("Kraków offers three distinct, connected reasons to stay with an honest event boundary", () => {
+  const krakow = publicGuides.filter(
+    (guide) => guide.countrySlug === "poland" && guide.regionSlug === "krakow",
+  );
+  assert.equal(krakow.length, 3);
+  assert.deepEqual([...new Set(krakow.map((guide) => guide.field))].sort(), [
+    "make",
+    "taste",
+    "witness",
+  ]);
+  const event = krakow.find(
+    (guide) => guide.slug === "watch-a-city-arrive-in-miniature",
+  )!;
+  assert.match(event.access, /3 December 2026/);
+  assert.match(event.access, /not offered here as visitor access/);
+  assert.equal(connectedExperiences(event, publicGuides)[0].scope, "same_area");
 });
 test("new regions are derived from real coverage and recommendations favour a relevant connection", () => {
   assert.deepEqual(
