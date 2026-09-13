@@ -47,19 +47,29 @@ export function HomeHero({
             </span>
           </h1>
           <p className="prototype-hero-lead">
-            Discover the ways places are lived, not simply visited. Find your
-            way in through food, people, craft and the outdoors, with sources
-            and practical context in every guide.
+            Cook, make, move and discover what belongs here. Find an experience
+            worth building a day around.
           </p>
           <HomeDiscovery
             items={items.map(
-              ({ slug, title, place, country, field, summary }) => ({
+              ({
                 slug,
                 title,
                 place,
                 country,
                 field,
                 summary,
+                countrySlug,
+                regionSlug,
+              }) => ({
+                slug,
+                title,
+                place,
+                country,
+                field,
+                summary,
+                countrySlug,
+                regionSlug,
               }),
             )}
           />

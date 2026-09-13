@@ -39,8 +39,8 @@ function HeroStory({
         priority={primary}
         sizes={
           primary
-            ? "(max-width: 700px) 60vw, (max-width: 1100px) 48vw, 29vw"
-            : "(max-width: 700px) 40vw, 20vw"
+            ? "(max-width: 700px) 110vw, (max-width: 1100px) 90vw, 65vw"
+            : "(max-width: 700px) 65vw, 36vw"
         }
         className="editorial-photo"
       />

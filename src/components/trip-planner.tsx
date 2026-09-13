@@ -88,10 +88,10 @@ export function TripPlanner({ items }: { items: PublicExperience[] }) {
     <section className="trip-planner" aria-labelledby="trip-title">
       <div className="trip-intro">
         <p className="eyebrow">From curiosity to a plan</p>
-        <h2 id="trip-title">Make a little room for the extraordinary.</h2>
+        <h2 id="trip-title">Your days, your pace.</h2>
         <p>
-          Arrange experiences by day. Keep travel and stay notes beside them.
-          Come back when your plans take shape.
+          Add your saved experiences, choose a day for each and keep the details
+          together.
         </p>
         <p className="small-note">
           One private draft in this browser. No account or cloud sync. Nothing
@@ -139,8 +139,8 @@ export function TripPlanner({ items }: { items: PublicExperience[] }) {
           {trip.entries.length
             ? "All your saved experiences are in this plan."
             : "Start by saving an experience to your Passport."}{" "}
-          <Link className="reset-link" href="/explore">
-            Find another way in ↗
+          <Link className="reset-link" href="/places">
+            Choose a destination ↗
           </Link>
         </p>
       )}

@@ -38,7 +38,7 @@ export function PassportView({
       <nav className="passport-tabs" aria-label="Passport sections">
         {tabs.map(([value, name]) => (
           <Link
-            href={`/passport?view=${value}`}
+            href={value === "plan" ? "/plan" : `/passport?view=${value}`}
             key={value}
             aria-current={view === value ? "page" : undefined}
           >

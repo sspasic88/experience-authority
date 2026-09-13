@@ -573,6 +573,8 @@
   body:has(.trip-planner) .site-footer,
   body:has(.trip-planner) .preview-notice,
   body:has(.trip-planner) .page-intro,
+  body:has(.trip-planner) .plan-workspace-heading,
+  body:has(.trip-planner) .plan-local-ideas,
   body:has(.trip-planner) .passport-tabs,
   body:has(.trip-planner) .passport-message {
     display: none !important;

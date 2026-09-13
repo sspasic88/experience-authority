@@ -9,6 +9,7 @@ import "@/styles/visitor.css";
 import "@/styles/expansion.css";
 import "@/styles/journal.css";
 import "@/styles/discovery.css";
+import "@/styles/refinement.css";
 import { Header, Footer } from "@/components/chrome";
 import { PassportProvider } from "@/components/passport-provider";
 import { demoMode, getExperiences } from "@/lib/data";
@@ -45,7 +46,11 @@ export default async function RootLayout({
     process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
   );
   return (
-    <html lang="en" className={sourceSans.variable}>
+    <html
+      lang="en"
+      className={sourceSans.variable}
+      data-scroll-behavior="smooth"
+    >
       <body>
         {process.env.NODE_ENV === "development" && (
           <script

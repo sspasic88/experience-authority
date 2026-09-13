@@ -1,4 +1,5 @@
 import { editorialPathways } from "./editorial-pathways";
+import { discoveryProfiles } from "./discovery-profiles";
 
 export const fields = [
   {
@@ -94,7 +95,7 @@ export const interests: readonly Interest[] = [
   {
     slug: "make-learn",
     name: "Make",
-    fields: ["make", "learn", "work"],
+    fields: ["make"],
     guideSlugs: [
       "learn-the-fold-in-salta",
       "kimchi-before-the-jar",
@@ -109,7 +110,7 @@ export const interests: readonly Interest[] = [
   {
     slug: "explore-reflect",
     name: "Explore & reflect",
-    fields: ["nature", "witness", "contribute"],
+    fields: ["nature", "witness", "contribute", "work", "learn"],
   },
   {
     slug: "swim-reset",
@@ -127,6 +128,13 @@ export function matchesInterest(
   item: { slug: string; field: Field },
   interest: Interest,
 ) {
+  if (interest.slug === "make-learn") {
+    return (
+      item.field === "make" ||
+      (["taste", "learn", "work"].includes(item.field) &&
+        Boolean(discoveryProfiles[item.slug]?.modes.includes("hands-on")))
+    );
+  }
   return (
     interest.fields.includes(item.field) ||
     Boolean(interest.guideSlugs?.includes(item.slug))
@@ -190,10 +198,16 @@ export type Query = {
   view?: string;
 };
 export function normalizeSearch(value: string) {
-  return value
+  const normalized = value
     .normalize("NFD")
     .replace(/\p{Diacritic}/gu, "")
     .toLocaleLowerCase();
+  const aliases: Record<string, string> = {
+    nyc: "new york",
+    usa: "united states",
+    uk: "united kingdom",
+  };
+  return aliases[normalized.trim()] ?? normalized;
 }
 export function filterExperiences(items: PublicExperience[], query: Query) {
   const q = normalizeSearch((query.q ?? "").trim());

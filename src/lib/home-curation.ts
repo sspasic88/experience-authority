@@ -8,6 +8,21 @@ import { recentGuideReleases } from "./releases";
  * story and lower story. It is editorial rotation, never a random shuffle.
  */
 export const heroGuideRotations = [
+  [
+    "ask-the-market-where-london-came-from",
+    "lift-a-pattern-from-the-water",
+    "a-city-in-the-water",
+  ],
+  [
+    "put-the-gods-back-among-the-machines",
+    "begin-with-rice-not-the-bottle",
+    "stay-for-the-session",
+  ],
+  [
+    "make-the-morning-before-it-reaches-the-cafe",
+    "the-weight-of-the-tower",
+    "walk-where-the-sea-was",
+  ],
   ["marble-steam-istanbul", "venice-through-an-oar", "a-bowl-of-attention"],
   [
     "a-morning-at-the-hawker-table",
@@ -96,6 +111,9 @@ export function curateHome(
     usedImages.add(key);
     return true;
   };
+  // The client can show any edition without replacing the server-rendered sections.
+  // Reserve every available hero photograph, not only the initial three.
+  resolveHomeHeroEditions(items).flat().forEach(claim);
   hero.forEach(claim);
   const familiar = [
     "a-morning-at-the-hawker-table",
@@ -120,19 +138,43 @@ export function curateHome(
     if (!startingPoints.includes(item)) startingPoints.push(item);
   }
   startingPoints.forEach(claim);
-  const newGuides = recentGuideReleases(items, today)
-    .filter((item) => !usedImages.has(item.image || item.id))
-    .slice(0, 6);
+  const recent = recentGuideReleases(items, today).filter(
+    (item) => !usedImages.has(item.image || item.id),
+  );
+  const newGuides: PublicExperience[] = [];
+  const countries = new Set<string>();
+  for (const item of recent) {
+    if (countries.has(item.countrySlug)) continue;
+    newGuides.push(item);
+    countries.add(item.countrySlug);
+    if (newGuides.length === 6) break;
+  }
+  for (const item of recent) {
+    if (newGuides.length === 6) break;
+    if (!newGuides.includes(item)) newGuides.push(item);
+  }
   newGuides.forEach(claim);
-  const homePathways = pathways.slice(0, 3).flatMap((pathway) => {
-    const item = items.find(
-      (entry) =>
-        pathway.guideSlugs.includes(entry.slug) &&
-        !usedImages.has(entry.image || entry.id),
-    );
-    if (!item) return [];
-    claim(item);
-    return [{ pathway, item }];
-  });
+  const offset =
+    Math.floor(Date.parse(`${today}T00:00:00Z`) / 86400000) %
+    Math.max(pathways.length, 1);
+  const orderedPathways = [
+    ...pathways.slice(offset),
+    ...pathways.slice(0, offset),
+  ];
+  let pathwayCount = 0;
+  const homePathways = orderedPathways
+    .flatMap((pathway) => {
+      if (pathwayCount === 3) return [];
+      const item = items.find(
+        (entry) =>
+          pathway.guideSlugs.includes(entry.slug) &&
+          !usedImages.has(entry.image || entry.id),
+      );
+      if (!item) return [];
+      pathwayCount += 1;
+      claim(item);
+      return [{ pathway, item }];
+    })
+    .slice(0, 3);
   return { hero, startingPoints, newGuides, homePathways, usedImages };
 }

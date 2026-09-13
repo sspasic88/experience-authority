@@ -6,6 +6,7 @@ import { useEffect, useMemo, useState } from "react";
 import { discoveryProfiles } from "@/lib/experience-finder";
 import { selectHomeStartingPoints } from "@/lib/home-starting-points";
 import { trackEaEvent } from "@/lib/analytics";
+import { normalizeSearch } from "@/lib/catalog";
 
 type DiscoveryItem = {
   slug: string;
@@ -14,13 +15,13 @@ type DiscoveryItem = {
   country: string;
   field: string;
   summary: string;
+  countrySlug?: string;
+  regionSlug?: string;
+  href?: string;
 };
 
 function normalize(value: string) {
-  return value
-    .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "")
-    .toLocaleLowerCase();
+  return normalizeSearch(value);
 }
 
 function searchText(item: DiscoveryItem) {
@@ -74,11 +75,34 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
       .map((item) => ({ item, score: relevance(item, needle) }))
       .filter(({ score }) => score > 0);
     const threshold = ranked.some(({ score }) => score >= 20) ? 20 : 1;
-    return ranked
+    const guides = ranked
       .filter(({ score }) => score >= threshold)
       .sort((a, b) => b.score - a.score)
       .map(({ item }) => item)
       .slice(0, 5);
+    const places = new Map<string, DiscoveryItem>();
+    for (const item of items) {
+      if (
+        !item.countrySlug ||
+        !item.regionSlug ||
+        !normalize(`${item.place} ${item.country}`).includes(needle)
+      )
+        continue;
+      const href = `/places/${item.countrySlug}/${item.regionSlug}`;
+      if (places.has(href)) continue;
+      const count = items.filter(
+        (other) =>
+          other.countrySlug === item.countrySlug &&
+          other.regionSlug === item.regionSlug,
+      ).length;
+      places.set(href, {
+        ...item,
+        slug: href,
+        href,
+        title: `${count} ${count === 1 ? "experience" : "experiences"} in ${item.country}`,
+      });
+    }
+    return [...[...places.values()].slice(0, 2), ...guides].slice(0, 5);
   }, [items, query, startingPoints]);
 
   function openStartingPoints() {
@@ -148,7 +172,9 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
               matches[active]
             ) {
               event.preventDefault();
-              window.location.assign(`/experiences/${matches[active].slug}`);
+              window.location.assign(
+                matches[active].href || `/experiences/${matches[active].slug}`,
+              );
             }
           }}
           role="combobox"
@@ -160,7 +186,7 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
           aria-autocomplete="list"
           autoComplete="off"
           maxLength={200}
-          placeholder="Try a city, a taste, a skill or a way to move"
+          placeholder="City or experience"
         />
         <button type="submit" aria-label="Search all experiences">
           <ArrowRight size={22} aria-hidden="true" />
@@ -171,7 +197,7 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
         <div className="home-search-results">
           <div className="home-search-results-head">
             <span>
-              {query.trim() ? "Matching guides" : "Fresh starting points"}
+              {query.trim() ? "Places & experiences" : "Fresh starting points"}
             </span>
             <Link href={`/explore?q=${encodeURIComponent(query)}`}>
               Open Compass
@@ -182,7 +208,7 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
             className="home-search-options"
             role="listbox"
             aria-label={
-              query.trim() ? "Matching guides" : "Fresh starting points"
+              query.trim() ? "Places & experiences" : "Fresh starting points"
             }
           >
             {matches.length ? (
@@ -190,7 +216,7 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
                 <Link
                   id={`home-search-result-${index}`}
                   key={item.slug}
-                  href={`/experiences/${item.slug}`}
+                  href={item.href || `/experiences/${item.slug}`}
                   role="option"
                   aria-selected={active === index}
                   className={active === index ? "is-active" : undefined}

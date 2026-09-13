@@ -101,7 +101,7 @@ export const editorialPages: Record<
     intro:
       "The boundaries of this public-source edition, the editorial model and the decisions that remain before EA Selected can launch.",
     aside:
-      "Public-source edition disclosure / 12 September 2026. No paid listings, bookings or tracking integrations are active in this application.",
+      "Public-source edition disclosure / 13 September 2026. No paid listings or EA bookings. Optional Google Analytics runs only after your consent, without advertising features.",
     sections: [
       {
         title: "What kind of content is this?",

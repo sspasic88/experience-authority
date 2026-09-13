@@ -25,7 +25,7 @@ export function SaveJourney({ ids }: { ids: string[] }) {
           : `Save these ${ids.length} experiences`}
       </button>
       {complete && (
-        <Link className="text-link" href="/passport?view=plan">
+        <Link className="text-link" href="/plan">
           Arrange your days ↗
         </Link>
       )}

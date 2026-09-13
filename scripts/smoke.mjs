@@ -34,6 +34,7 @@ const paths = [
   "/experiences/follow-the-fizz-through-a-working-factory",
   "/experiences/open-the-other-side-of-ellis-island",
   "/passport",
+  "/plan",
   "/passport?view=compare",
   "/passport?view=plan",
   "/method",
