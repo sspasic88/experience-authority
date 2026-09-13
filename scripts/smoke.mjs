@@ -114,6 +114,10 @@ if (process.env.EA_TEST_DEMO === "true") {
     "/experiences/let-the-market-write-your-menu",
     "/experiences/find-a-place-through-its-scent",
     "/experiences/draw-a-small-shape-in-flame",
+    "/experiences/make-something-from-the-broken-pieces",
+    "/experiences/watch-the-work-before-the-performance",
+    "/places/spain/barcelona",
+    "/places/austria/vienna",
     "/explore?q=row&field=move&place=italy&status=public_guide&view=list",
     "/explore?q=no-such-experience",
   );

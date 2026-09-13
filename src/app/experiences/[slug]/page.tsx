@@ -189,6 +189,7 @@ export default async function Experience({ params }: Props) {
         {item.guideReview && (
           <section
             className="detail-decision-band"
+            id="practical-fit"
             aria-label="Practical fit at a glance"
           >
             <div>
@@ -341,7 +342,13 @@ export default async function Experience({ params }: Props) {
             <Link className="text-link" href="/passport?view=plan">
               Build your journey in Passport ↗
             </Link>
-            <p>{item.access}</p>
+            {item.guideReview ? (
+              <a className="text-link" href="#practical-fit">
+                Check the practical details <span aria-hidden="true">↑</span>
+              </a>
+            ) : (
+              <p>{item.access}</p>
+            )}
             {item.guideReview && (
               <a
                 className="button official-access"

@@ -1,0 +1,246 @@
+{
+  "date": "2026-09-13",
+  "basis": "Catalogue reconciliation against the original 200-candidate register. This is not a fresh source audit of all 200, local validation or EA Selected approval. Original protection decisions remain unchanged.",
+  "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
+  "originalCandidateCount": 200,
+  "originalProtectedCount": 46,
+  "catalogueCount": 61,
+  "mappings": [
+    {
+      "candidateId": 1,
+      "guideId": "istria-karlic-truffle-hunt",
+      "relation": "narrowed_public_scope",
+      "boundary": "Operator-led visitor hunt, not unrestricted forest access or guaranteed finds."
+    },
+    {
+      "candidateId": 4,
+      "guideId": "venice-voga",
+      "relation": "narrowed_public_scope",
+      "boundary": "Public rowing lesson under the provider's current conditions."
+    },
+    {
+      "candidateId": 6,
+      "guideId": "barcelona-castells-merce",
+      "relation": "narrowed_public_scope",
+      "boundary": "La Mercè public audience, not rehearsal access or tower participation."
+    },
+    {
+      "candidateId": 7,
+      "guideId": "asturias-trabanco-cider",
+      "relation": "related_alternative",
+      "boundary": "Cider visit and pouring context do not establish the original communal espicha gathering."
+    },
+    {
+      "candidateId": 10,
+      "guideId": "oostduinkerke-horseback-shrimp",
+      "relation": "narrowed_public_scope",
+      "boundary": "Scheduled public observation, not fishing work or guaranteed conditions."
+    },
+    {
+      "candidateId": 11,
+      "guideId": "wadden-guided-mudflat-walk",
+      "relation": "narrowed_public_scope",
+      "boundary": "A booked, guided route under current tidal and weather conditions."
+    },
+    {
+      "candidateId": 12,
+      "guideId": "allgaeu-thalkirchdorf-viehscheid",
+      "relation": "narrowed_public_scope",
+      "boundary": "Public audience at the named homecoming, not joining herders at work."
+    },
+    {
+      "candidateId": 13,
+      "guideId": "denmark-black-sun-wadden",
+      "relation": "narrowed_public_scope",
+      "boundary": "Seasonal guided observation, with no wildlife spectacle guaranteed."
+    },
+    {
+      "candidateId": 14,
+      "guideId": "lofoten-skrei-museum",
+      "relation": "related_alternative",
+      "boundary": "Museum context does not fulfil the original fishing-family encounter."
+    },
+    {
+      "candidateId": 16,
+      "guideId": "kuopio-jatkankamppa-smoke-sauna",
+      "relation": "narrowed_public_scope",
+      "boundary": "Public smoke-sauna session. Winter swimming is conditional, not guaranteed. Rajaportti remains a different sauna alternative."
+    },
+    {
+      "candidateId": 21,
+      "guideId": "budapest-fono-tanchaz",
+      "relation": "narrowed_public_scope",
+      "boundary": "Named public dance-house programme, not every community gathering."
+    },
+    {
+      "candidateId": 26,
+      "guideId": "doolin-gus-oconnors-session",
+      "relation": "narrowed_public_scope",
+      "boundary": "Listening at public pub sessions, not a promise of joining musicians."
+    },
+    {
+      "candidateId": 27,
+      "guideId": "reykjavik-sundholl",
+      "relation": "narrowed_public_scope",
+      "boundary": "Municipal pool access with visitor etiquette, not a claim to local identity."
+    },
+    {
+      "candidateId": 29,
+      "guideId": "kumano-daimon-zaka",
+      "relation": "narrowed_public_scope",
+      "boundary": "A bounded public walk, not the original overnight pilgrimage itinerary."
+    },
+    {
+      "candidateId": 30,
+      "guideId": "kyoto-camellia-tea",
+      "relation": "narrowed_public_scope",
+      "boundary": "Public introductory tea offer, not a private tea gathering or interchangeable venue."
+    },
+    {
+      "candidateId": 31,
+      "guideId": "seoul-kimchikan-making",
+      "relation": "narrowed_public_scope",
+      "boundary": "Museum visitor class, not admission to communal household kimjang."
+    },
+    {
+      "candidateId": 32,
+      "guideId": "busan-spa-land-jjimjilbang",
+      "relation": "narrowed_public_scope",
+      "boundary": "Named commercial bathhouse under its entry rules."
+    },
+    {
+      "candidateId": 38,
+      "guideId": "tsaghkunk-lavash",
+      "relation": "narrowed_public_scope",
+      "boundary": "Advertised hosted lavash introduction, not access to any Armenian household."
+    },
+    {
+      "candidateId": 39,
+      "guideId": "istanbul-hurrem-hammam",
+      "relation": "narrowed_public_scope",
+      "boundary": "Named public paid hammam service and its etiquette."
+    },
+    {
+      "candidateId": 54,
+      "guideId": "fez-clay-to-mosaic",
+      "relation": "narrowed_public_scope",
+      "boundary": "Public craft introduction, not mastery or unrestricted artisan access."
+    },
+    {
+      "candidateId": 68,
+      "guideId": "namib-living-desert-tour",
+      "relation": "narrowed_public_scope",
+      "boundary": "Named naturalist-led visitor tour, no wildlife encounters guaranteed."
+    },
+    {
+      "candidateId": 69,
+      "guideId": "cape-town-bo-kaap-cooking",
+      "relation": "narrowed_public_scope",
+      "boundary": "Publicly offered hosted cooking, not general access to community homes."
+    },
+    {
+      "candidateId": 72,
+      "guideId": "quebec-outaouais-sugar-shack",
+      "relation": "narrowed_public_scope",
+      "boundary": "Named public seasonal hospitality, no unconfirmed harvest participation."
+    },
+    {
+      "candidateId": 76,
+      "guideId": "xochimilco-kalmekak-chinampa",
+      "relation": "narrowed_public_scope",
+      "boundary": "Specific advertised agricultural encounter, not any boat trip or unsupervised farm work."
+    },
+    {
+      "candidateId": 77,
+      "guideId": "oaxaca-mal-de-amor-mezcal",
+      "relation": "narrowed_public_scope",
+      "boundary": "Public palenque visit, without guaranteed production steps or field work."
+    },
+    {
+      "candidateId": 84,
+      "guideId": "loiza-copi-bomba",
+      "relation": "narrowed_public_scope",
+      "boundary": "Publicly advertised introduction, not permission to enter every local bomba occasion."
+    },
+    {
+      "candidateId": 88,
+      "guideId": "montevideo-public-candombe-workshop",
+      "relation": "narrowed_public_scope",
+      "boundary": "Visitor workshop, not participation in a neighbourhood comparsa or parade."
+    },
+    {
+      "candidateId": 91,
+      "guideId": "mossman-ngadiku-walk",
+      "relation": "protected_public_programme_only",
+      "boundary": "Publicly offered Indigenous-guided programme only. Original protected-candidate status remains. No broader cultural access or local EA validation is inferred."
+    },
+    {
+      "candidateId": 101,
+      "guideId": "edinburgh-public-ceilidh",
+      "relation": "related_alternative",
+      "boundary": "An Edinburgh public event is not the original village-hall setting. The original candidate remains unresolved."
+    },
+    {
+      "candidateId": 103,
+      "guideId": "cambridge-st-clements-bells",
+      "relation": "narrowed_public_scope",
+      "boundary": "Named visitor introduction, not access to other towers or unsupervised bell handling."
+    },
+    {
+      "candidateId": 104,
+      "guideId": "malta-village-festa",
+      "relation": "narrowed_public_scope",
+      "boundary": "Public calendar and audience areas, not club interiors or working fireworks sites."
+    },
+    {
+      "candidateId": 113,
+      "guideId": "vienna-heuriger",
+      "relation": "narrowed_public_scope",
+      "boundary": "Public dining at the named Heuriger, not vineyard or cellar entry."
+    },
+    {
+      "candidateId": 127,
+      "guideId": "doha-embrace-coffee",
+      "relation": "narrowed_public_scope",
+      "boundary": "Public coffee and hospitality introduction, not entry to a private majlis."
+    },
+    {
+      "candidateId": 131,
+      "guideId": "luang-prabang-natural-dye",
+      "relation": "narrowed_public_scope",
+      "boundary": "Natural-dye visitor class, not the full dye-and-weave candidate."
+    },
+    {
+      "candidateId": 139,
+      "guideId": "singapore-hawker-morning",
+      "relation": "narrowed_public_scope",
+      "boundary": "Independent public meal, not following a stall behind the counter."
+    },
+    {
+      "candidateId": 168,
+      "guideId": "grenada-belmont-cacao",
+      "relation": "narrowed_public_scope",
+      "boundary": "Named public processing tour, not guaranteed cacao harvesting."
+    },
+    {
+      "candidateId": 177,
+      "guideId": "salta-balderrama-pena",
+      "relation": "narrowed_public_scope",
+      "boundary": "Public peña hospitality, subject to the venue's programme and booking terms."
+    }
+  ],
+  "newSourceReviews": [
+    {
+      "candidateId": 108,
+      "status": "evidence_hold",
+      "checkedOn": "2026-09-13",
+      "finding": "The Museum of Sarajevo's official 26 August 2026 notice closes Damir Imamovic's eighteen-Wednesday season. It supports the past programme, not an upcoming bookable sevdalinka performance. The Sarajevo coffee guide is not a substitute for this music candidate.",
+      "sourceUrl": "https://www.muzejsarajeva.ba/en/2026/08/26/zavrsnica-projekta-sevdah-damira-imamovica-2026/",
+      "nextAction": "Find a current, publicly announced sevdalinka performance and verify date, venue, visitor access and a suitable photograph. Do not publish the ended weekly season as current.",
+      "outreachPerformed": false
+    }
+  ],
+  "eaSelectedApprovals": 0,
+  "localValidationCompleted": false,
+  "outreachPerformed": false
+}

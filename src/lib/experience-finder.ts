@@ -30,6 +30,33 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "make-something-from-the-broken-pieces": {
+    modes: ["hands-on"],
+    time: "half-day",
+    keywords: [
+      "Barcelona",
+      "mosaic",
+      "trencadís",
+      "Gaudí",
+      "ceramic",
+      "Mosaiccos",
+      "workshop",
+      "design",
+    ],
+  },
+  "watch-the-work-before-the-performance": {
+    modes: ["watch-listen"],
+    time: "short",
+    keywords: [
+      "Vienna",
+      "Spanish Riding School",
+      "Hofburg",
+      "Lipizzaner",
+      "horses",
+      "training",
+      "Morning Exercise",
+    ],
+  },
   "hear-the-church-before-you-climb": {
     modes: ["watch-listen", "slow-down"],
     time: "short",

@@ -16,6 +16,54 @@ export type CityChapter = {
 /** Authored local combinations. These are ideas to adapt, not timed or bookable packages. */
 export const cityChapters: readonly CityChapter[] = [
   {
+    slug: "barcelona",
+    name: "Barcelona",
+    country: "spain",
+    regions: ["barcelona"],
+    title: "See how separate parts hold together.",
+    intro:
+      "A human tower and a mosaic ask very different things of their parts. Witness castells from the public audience, then try arranging a small ceramic surface yourself. Barcelona becomes both something people build together and something you can learn to look at more closely.",
+    pace: "A workshop on a booked day. Castells only when the public calendar allows.",
+    planning:
+      "The castells guide follows the publicly announced La Mercè programme, not a daily attraction or an invitation to join a tower. Confirm the event's date, square and crowd arrangements first. Mosaiccos is a separate studio booking and may require later collection. Neither activity includes Park Güell admission.",
+    stops: [
+      {
+        slug: "the-weight-of-the-tower",
+        moment: "When the square has a programme",
+        why: "Watch the coordination behind an instantly recognisable Catalan tradition. Your role is an attentive spectator, outside the working formation.",
+      },
+      {
+        slug: "make-something-from-the-broken-pieces",
+        moment: "Change from watching to making",
+        why: "Try a smaller exercise in how parts meet. Leave time for grouting and collection, then look differently at the mosaic details around the city.",
+      },
+    ],
+  },
+  {
+    slug: "vienna",
+    name: "Vienna",
+    country: "austria",
+    regions: ["vienna"],
+    title: "From the riding hall to the vineyard table.",
+    intro:
+      "Begin with the Vienna of a grand hall, but watch the work rather than expect a gala. Later, a Heuriger moves the visit towards the city's wine-growing edge. One place asks for quiet observation, the other leaves room for a conversation over food.",
+    pace: "One dated morning session and a separately planned meal.",
+    planning:
+      "Book the specific Morning Exercise session at the Hofburg, not a performance ticket. Mayer am Pfarrplatz is in Heiligenstadt, away from the central riding hall, so allow transport time and confirm table availability. This is not a walking itinerary or a combined ticket. Read the training guide's animal-welfare and accessibility boundaries before choosing it.",
+    stops: [
+      {
+        slug: "watch-the-work-before-the-performance",
+        moment: "Begin with patient observation",
+        why: "Notice repetition in a room usually associated with spectacle. The day's training is variable and does not promise famous jumps or visitor contact with horses.",
+      },
+      {
+        slug: "the-vineyard-at-the-table",
+        moment: "Let the city open towards its wine country",
+        why: "Make room for a meal rather than a rushed tasting checklist. The named Heuriger is a public hospitality venue, not permission to enter working vineyards.",
+      },
+    ],
+  },
+  {
     slug: "porto-and-gaia",
     name: "Porto and Gaia",
     country: "portugal",
@@ -151,7 +199,7 @@ export const cityChapters: readonly CityChapter[] = [
       "Begin with the Singapore people recognise, then follow food into making and the city into its greener margins. The small island is not a reason to compress every experience into one day.",
     pace: "Food and making for one day. Choose a separate nature outing.",
     planning:
-      "Confirm hawker stall hours and the batik session first. Coney Island and Mandai are different outings with their own transport, weather and access considerations. Neither is a casual extension of the other. Carry water and let heat or rain change the plan.",
+      "Confirm hawker stall hours and the batik session first. Coney Island and Sungei Buloh Wetland Reserve are different outings with their own transport, weather and access considerations. Neither is a casual extension of the other. Check NParks' current entrance and closure notices, carry water and let heat or rain change the plan.",
     stops: [
       {
         slug: "a-morning-at-the-hawker-table",
@@ -170,8 +218,8 @@ export const cityChapters: readonly CityChapter[] = [
       },
       {
         slug: "find-the-citys-wilder-edge",
-        moment: "Or choose a guided nature setting",
-        why: "Mandai offers another nature-focused direction. Compare its access and format with the independent park walk instead of automatically doing both.",
+        moment: "Or follow the tidal habitat",
+        why: "Sungei Buloh offers an independent wetland walk, with mangroves, hides and changing water levels. Choose it for patient observation rather than adding it automatically to Coney Island. No guided tour or wildlife sighting is included.",
       },
     ],
   },

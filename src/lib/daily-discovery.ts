@@ -163,6 +163,28 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "Would you rather bring back a perfect object or remember the moment you made one?",
   },
+  {
+    date: "2026-09-27",
+    slug: "make-something-from-the-broken-pieces",
+    title: "Look at the joins.",
+    angle:
+      "Barcelona's mosaic surfaces are easy to recognise and easy to photograph. A small trencadís workshop changes the question. Instead of admiring only the finished colour, you begin to see how one irregular fragment meets another. Take that attention back to the city without expecting a two-hour introduction to make you a master craftsperson.",
+    notice:
+      "The gap between two pieces, and the decision that makes it part of the pattern.",
+    question:
+      "Which familiar detail might become more interesting after you have tried making it?",
+  },
+  {
+    date: "2026-09-28",
+    slug: "watch-the-work-before-the-performance",
+    title: "Let the unfinished part hold your attention.",
+    angle:
+      "A finished performance encourages us to wait for its most impressive moment. Vienna's publicly ticketed riding-school training asks for a different kind of looking. The repeated movement and the small adjustment are the reason to be there. Read the guide's welfare boundary before deciding whether this animal-based experience is for you.",
+    notice:
+      "What changes between attempts, without assuming you can assess a training method from the audience.",
+    question:
+      "When did you last choose to see the practice instead of the finished show?",
+  },
 ];
 
 export function availableDiscoveries(

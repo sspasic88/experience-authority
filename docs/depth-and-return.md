@@ -1,6 +1,6 @@
 # Destination depth and daily discovery
 
-Release scope: 13 September 2026.
+Historical first-pass release scope: 13 September 2026, commit eab95a3. The subsequent [city-depth follow-up](city-depth-follow-up.md) updates the totals, editorial deadline and Barcelona decision below.
 
 ## What changed
 

@@ -5,6 +5,8 @@ export const guideReleases = [
   {
     date: "2026-09-13",
     slugs: [
+      "make-something-from-the-broken-pieces",
+      "watch-the-work-before-the-performance",
       "hear-the-church-before-you-climb",
       "let-the-market-write-your-menu",
       "find-a-place-through-its-scent",

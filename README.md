@@ -2,7 +2,7 @@
 
 Independent editorial selection of locally rooted experiences. Native Next.js + TypeScript. No Innovation Authority dependencies.
 
-Current edition: 59 public-source guides, six local planning chapters, dated daily discoveries and an explicit new-publication log. See [depth and return](docs/depth-and-return.md) for scope, evidence boundaries and the next editorial deadline.
+Current edition: 61 public-source guides, eight local planning chapters, dated daily discoveries and an explicit new-publication log. See [depth and return](docs/depth-and-return.md) and the [Barcelona/Vienna follow-up](docs/city-depth-follow-up.md) for scope, evidence boundaries and the next editorial deadline.
 
 ## Local development
 
@@ -14,7 +14,7 @@ Production analytics uses a separate EA GA4 web stream through `NEXT_PUBLIC_GA_M
 
 With the standard guide preview running, `pnpm smoke` checks the public-source guides, directories, metadata, nonces, unknown paths and response protection. Use `EA_TEST_INDEXING=true` when checking the indexable public-production configuration, and `EA_TEST_DEMO=true` only when testing the separate fictional design mode. Set EA_TEST_URL if the server uses a port other than 3100. `node scripts/browser-audit.mjs` checks responsive views, accessibility, internal links and interactions in an isolated browser; set EA_CHROME_PATH to an installed Chrome executable if needed.
 
-EA_DEMO_MODE explicitly enables demo content in local and preview environments only. VERCEL_ENV=production overrides the flag and refuses to serve demo records. The standard production configuration serves forty-eight original public-source guides through a separate evidence gate. They are not locally validated EA Selected records. Each has cited official sources, a check date, a review-by date (maximum 90 days), a public-access scope and an official link. Expired/incomplete guides are excluded, not promoted to Selected. Every guide photograph has a checked media record, source, licence and depiction boundary; no AI-generated photographs are used. The public launch configuration enables crawlable canonicals, robots and sitemap entries for experienceauthority.com. See docs/content-edition.md. Operational launch services remain unprovisioned.
+EA_DEMO_MODE explicitly enables demo content in local and preview environments only. VERCEL_ENV=production overrides the flag and refuses to serve demo records. The standard production configuration serves sixty-one original public-source guides through a separate evidence gate. They are not locally validated EA Selected records. Each has cited official sources, a check date, a review-by date (maximum 90 days), a public-access scope and an official link. Expired/incomplete guides are excluded, not promoted to Selected. Every guide photograph has a checked media record, source, licence or explicit uncleared-reuse status, and depiction boundary. No AI-generated photographs are used. The public launch configuration enables crawlable canonicals, robots and sitemap entries for experienceauthority.com. See docs/content-edition.md and docs/build-status.md for operational boundaries.
 
 ## Hosting
 
