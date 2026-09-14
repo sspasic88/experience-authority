@@ -64,9 +64,12 @@ export function canPublishGuide(
     r &&
     r.basis === "public_sources" &&
     r.requiresSpecialPermission === false &&
-    ["public_programme", "public_admission", "public_hospitality"].includes(
-      r.scope,
-    ) &&
+    [
+      "public_programme",
+      "public_admission",
+      "public_hospitality",
+      "public_observation",
+    ].includes(r.scope) &&
     validDate(r.checkedOn) &&
     validDate(r.reviewBy) &&
     r.checkedOn <= today &&

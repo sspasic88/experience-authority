@@ -438,6 +438,28 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "Which ingredient would change completely if you first met it at the tree, field or water it came from?",
   },
+  {
+    date: "2026-10-22",
+    slug: "follow-appenzeller-from-vat-to-cellar",
+    title: "The secret begins after the process becomes visible.",
+    angle:
+      "Appenzeller is easy to meet as a name, a wedge or a promise of flavour. In Stein, the more interesting beginning is an open vat below a visitor gallery. Milk moves, curd forms and a working floor turns the finished wheel back into a sequence of decisions. The recipe for the herbal brine stays guarded, but much of the labour around it can still be read. Taste last, after the familiar object has become a system.",
+    notice:
+      "One change in texture or movement on the production floor. Remain behind the glass and let the real working rhythm set the pace.",
+    question:
+      "Which protected recipe would become more interesting if you first understood everything around the part that stays secret?",
+  },
+  {
+    date: "2026-10-23",
+    slug: "watch-a-dhow-take-shape-beside-the-creek",
+    title: "A boat can be read before it touches water.",
+    angle:
+      "Ajman's dhow yard offers a different counterpoint to the polished Gulf skyline. Timber ribs rise before the hull becomes smooth. Tools, sanding, fitting and unfinished surfaces make a familiar maritime silhouette legible as work. The yard is not staged around a visitor and may not be active when you arrive. That uncertainty is part of the boundary. Watch only from a clearly public edge and let the structure, not access to the workers, carry the discovery.",
+    notice:
+      "The line where separate ribs begin to suggest the finished hull. Stay clear of every work zone and ask before photographing a person.",
+    question:
+      "Which symbol of a place would become less generic if you saw it before it was finished?",
+  },
 ];
 
 export function availableDiscoveries(

@@ -334,6 +334,7 @@ export default async function Experience({ params }: Props) {
                       public_programme: "Publicly offered programme",
                       public_admission: "Public admission",
                       public_hospitality: "Public hospitality",
+                      public_observation: "Public observation",
                     }[item.guideReview.scope]
                   : "No access offered"}
               </dd>

@@ -1,5 +1,17 @@
 # QA report — 14 September 2026
 
+## Content expansion batch 25 — 14 September 2026
+
+- The current catalogue contains 86 public-source guides in 46 countries and territories, with 41 authored daily discoveries through 23 October. The dated reconciliation now maps 47 of the original 200 candidates without changing the protected register or conferring EA Selected status.
+- Two bounded public guides were added: ordinary admission to the Appenzeller demonstration dairy's visitor gallery in Stein and careful public observation of Ajman's working Dhow Yard. Appenzell is a related alternative to the original pasture premise. Ajman is explicitly not a tour or workshop.
+- The exact photographs are credited to Roger Oberholzer through Appenzeller Schaukäserei and Sarah Dea through The National. Both are locally served, clickable and carry detailed depiction boundaries. Reuse rights remain uncleared and attribution is not treated as permission.
+- Candidate 22 at Vama Egg Museum remains on visual-evidence hold. Candidates 2, Sinjska Alka, and 89, Rio samba-school rehearsal, remain on calendar hold because the reviewed 2026 programmes have passed.
+- A new `Public observation` scope prevents unguided observation from being described as admission, hospitality or a publicly offered programme.
+- All 67 automated tests, type checking, formatting and the optimized production build pass. The indexable local production smoke passed 141 pages and 12 expected not-found routes with 141 distinct CSP nonces and no failures.
+- The responsive browser audit passed 219 views at 390, 768 and 1440 pixels, encountered 354 internal links and found no broken images, horizontal overflow, browser errors or automated WCAG A/AA violations. Manual inspection covered both new desktop hero crops, title wraps, credits and evidence boundaries.
+- The indexable sitemap contains 242 routes. Every indexed route has a title, description and canonical URL, with no missing or duplicate title and description groups. All six current source pages used by the new guides returned HTTP 200 on 14 September.
+- See [content expansion batch 25](content-expansion-batch-25-2026-09-14.md) for the publication and deferral decisions.
+
 ## Content expansion batch 24 — 14 September 2026
 
 - The current catalogue contains 84 public-source guides in 44 countries and territories, with 39 authored daily discoveries through 21 October. The dated reconciliation now maps 45 of the original 200 candidates without changing the protected register or conferring EA Selected status.

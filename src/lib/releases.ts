@@ -5,6 +5,8 @@ export const guideReleases = [
   {
     date: "2026-09-14",
     slugs: [
+      "follow-appenzeller-from-vat-to-cellar",
+      "watch-a-dhow-take-shape-beside-the-creek",
       "follow-medellins-flowers-back-to-the-farm",
       "read-a-hive-from-the-inside",
       "follow-mastiha-back-to-the-tree",

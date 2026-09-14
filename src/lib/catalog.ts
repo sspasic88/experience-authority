@@ -182,7 +182,11 @@ export type PublicExperience = {
 };
 export type GuideReview = {
   basis: "public_sources";
-  scope: "public_programme" | "public_admission" | "public_hospitality";
+  scope:
+    | "public_programme"
+    | "public_admission"
+    | "public_hospitality"
+    | "public_observation";
   requiresSpecialPermission: false;
   checkedOn: string;
   reviewBy: string;
@@ -227,6 +231,24 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
   );
 }
 export const territories = [
+  {
+    slug: "switzerland",
+    name: "Switzerland",
+    region: "appenzellerland",
+    regionName: "Appenzellerland",
+    intro:
+      "Look down into daily cheese production in Stein, then follow Appenzeller from milk and curd to cellar and tasting.",
+    image: null,
+  },
+  {
+    slug: "united-arab-emirates",
+    name: "United Arab Emirates",
+    region: "ajman",
+    regionName: "Ajman",
+    intro:
+      "Meet the Gulf through a working edge of Ajman Creek, where timber frames and unfinished dhows shift attention from skyline to shipyard.",
+    image: null,
+  },
   {
     slug: "colombia",
     name: "Colombia",

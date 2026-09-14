@@ -78,9 +78,9 @@ export const editorialPathways = [
     kind: "food-and-drink",
     title: "What a place tastes like",
     promise:
-      "Twelve ways to read landscape, work and memory through flavour and the table.",
+      "Thirteen ways to read landscape, work and memory through flavour and the table.",
     intro:
-      "Begin with appetite, then look further. These guides connect a Singapore hawker breakfast, halloumi made on a route into the Troodos foothills, Vienna's heuriger, Asturian cider, Grenadian cacao, Kyoto tea, Seoul kimchi, Québec maple season and food grown on Mexico City's chinampas. Oaxaca follows agave through heat and copper, while Doha uses qahwa to read the social language of a majlis. Chios begins even earlier, with clear mastiha resin on the tree and a museum route through cultivation and processing. Each is a different kind of public encounter. Together they show why flavour can reveal climate, labour, technique and social rhythm. Use the official links to check what is currently offered, and let the guide sharpen the questions you bring to the table.",
+      "Begin with appetite, then look further. These guides connect a Singapore hawker breakfast, halloumi made on a route into the Troodos foothills, Vienna's heuriger, Asturian cider, Grenadian cacao, Kyoto tea, Seoul kimchi, Québec maple season and food grown on Mexico City's chinampas. Oaxaca follows agave through heat and copper, while Doha uses qahwa to read the social language of a majlis. Chios begins with clear mastiha resin on a tree. In Appenzellerland, a gallery above a working dairy connects the tasting to milk, curd and cellar. Each is a different kind of public encounter. Together they show why flavour can reveal climate, labour, technique and social rhythm. Use the official links to check what is currently offered, and let the guide sharpen the questions you bring to the table.",
     guideSlugs: [
       "a-morning-at-the-hawker-table",
       "make-halloumi-before-it-reaches-the-plate",
@@ -94,6 +94,7 @@ export const editorialPathways = [
       "follow-the-agave-into-the-still",
       "read-the-language-of-the-coffee-cup",
       "follow-mastiha-back-to-the-tree",
+      "follow-appenzeller-from-vat-to-cellar",
     ],
     visitorUse:
       "Choose one guide near a route you already have, then compare access, timing and participation before adding it to your journey.",
@@ -105,9 +106,9 @@ export const editorialPathways = [
     kind: "water-and-coast",
     title: "Where land meets water",
     promise:
-      "Follow six coastlines where water shapes movement, work and attention.",
+      "Follow seven coastlines where water shapes movement, work and attention.",
     intro:
-      "Water is not scenery in these guides. It sets the route, the working day and the limits of access. Learn Venetian rowing, cross exposed tidal ground with a qualified guide, read Lofoten through its fishery, watch Oostduinkerke's shrimp fishers work with horses and enter Reykjavík through a public pool. In Istanbul, an ordinary municipal ferry makes the Bosphorus legible as transport. Each asks you to notice the system that makes the encounter possible before treating water as a view.",
+      "Water is not scenery in these guides. It sets the route, the working day and the limits of access. Learn Venetian rowing, cross exposed tidal ground with a qualified guide, read Lofoten through its fishery, watch Oostduinkerke's shrimp fishers work with horses and enter Reykjavík through a public pool. In Istanbul, an ordinary municipal ferry makes the Bosphorus legible as transport. Beside Ajman Creek, a working boatyard reveals what has to happen before a dhow meets the water. Each asks you to notice the system that makes the encounter possible before treating water as a view.",
     guideSlugs: [
       "venice-through-an-oar",
       "walk-where-the-sea-was",
@@ -115,6 +116,7 @@ export const editorialPathways = [
       "the-tide-brings-the-horses",
       "a-city-in-the-water",
       "let-the-ferry-redraw-istanbul",
+      "watch-a-dhow-take-shape-beside-the-creek",
     ],
     visitorUse:
       "Use this pathway to compare weather dependence, physical participation and booking needs before building a coastal day.",

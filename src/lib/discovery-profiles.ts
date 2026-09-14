@@ -1045,4 +1045,28 @@ export const discoveryProfiles: Record<string, DiscoveryProfile> = {
     modes: ["watch-listen", "at-table"],
     keywords: ["cacao", "cocoa", "chocolate", "estate", "Grenada"],
   },
+  "follow-appenzeller-from-vat-to-cellar": {
+    modes: ["watch-listen", "at-table"],
+    time: "own-pace",
+    keywords: [
+      "cheese",
+      "cheese making",
+      "dairy",
+      "production",
+      "Appenzell",
+      "Switzerland",
+    ],
+  },
+  "watch-a-dhow-take-shape-beside-the-creek": {
+    modes: ["watch-listen", "outdoors"],
+    time: "own-pace",
+    keywords: [
+      "dhow",
+      "boat building",
+      "shipyard",
+      "craft",
+      "Ajman",
+      "United Arab Emirates",
+    ],
+  },
 };
