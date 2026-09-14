@@ -232,6 +232,24 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "sao-tome-and-principe",
+    name: "São Tomé and Príncipe",
+    region: "sao-tome",
+    regionName: "São Tomé",
+    intro:
+      "Begin with cacao as fruit, then follow it into a contemporary factory tasting without leaving the islands' plantation history outside the room.",
+    image: null,
+  },
+  {
+    slug: "madagascar",
+    name: "Madagascar",
+    region: "ambalavao",
+    regionName: "Ambalavao",
+    intro:
+      "Watch bark, water, fibre and fresh flowers become Antemoro paper in Ambalavao, with the boundary between observing work and learning a craft kept clear.",
+    image: null,
+  },
+  {
     slug: "cambodia",
     name: "Cambodia",
     region: "siem-reap",
@@ -435,7 +453,7 @@ export const territories = [
     region: "hanoi",
     regionName: "Hanoi",
     intro:
-      "Take a seat in Hanoi for a theatre made of water, music, lacquered figures and work hidden behind the screen.",
+      "Take a seat in Hanoi for theatre made of water, then slow the city through the leaves, heat and long preparation behind a Red Dao herbal bath.",
     image: null,
   },
   {
@@ -702,6 +720,9 @@ export const territories = [
 ] as const;
 // Area labels can differ from a guide's specific site. Never let the last guide rename the area.
 const additionalRegionNames: Readonly<Record<string, string>> = {
+  "sao-tome-and-principe/sao-tome": "São Tomé",
+  "madagascar/ambalavao": "Ambalavao",
+  "vietnam/hanoi": "Hanoi",
   "france/paris": "Paris",
   "france/arcachon-bay": "Arcachon Bay",
   "poland/krakow": "Kraków",

@@ -67,9 +67,15 @@ const routes = [
   "/experiences/learn-hong-kong-one-hand-at-a-time",
   "/experiences/draw-with-silver-in-skopjes-old-bazaar",
   "/experiences/read-a-ship-before-the-sails-arrive",
+  "/experiences/let-the-leaves-reach-the-water-first",
+  "/experiences/watch-flowers-enter-the-paper",
+  "/experiences/taste-the-distance-from-pod-to-bar",
   "/places/hong-kong/central",
   "/places/north-macedonia/skopje",
   "/places/indonesia/bulukumba",
+  "/places/vietnam/hanoi",
+  "/places/madagascar/ambalavao",
+  "/places/sao-tome-and-principe/sao-tome",
   "/places/cyprus/troodos-foothills",
   "/places/estonia/vorumaa",
   "/places/el-salvador/suchitoto",
@@ -225,7 +231,7 @@ try {
       .getByRole("button", { name: "Search all experiences", exact: true })
       .click();
     await page.waitForURL(/q=cacao/);
-    await expect(page.locator(".experience-card")).toHaveCount(1);
+    await expect(page.locator(".experience-card")).toHaveCount(2);
     await page.goto(base + "/explore", { waitUntil: "networkidle" });
     const firstCard = page.locator(".experience-card").first();
     const firstCredit = firstCard.locator(".image-source-badge");
@@ -274,7 +280,7 @@ try {
       .getByRole("button", { name: "Find my way", exact: true })
       .click();
     await page.waitForURL(/q=cacao/);
-    await expect(page.locator(".experience-card")).toHaveCount(1);
+    await expect(page.locator(".experience-card")).toHaveCount(2);
     assert.ok(
       await page
         .getByRole("heading", { name: "Before the chocolate bar" })

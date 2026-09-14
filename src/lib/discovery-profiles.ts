@@ -24,6 +24,56 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "let-the-leaves-reach-the-water-first": {
+    modes: ["slow-down"],
+    time: "short",
+    keywords: [
+      "Hanoi",
+      "Vietnam",
+      "Red Dao",
+      "Dao Do",
+      "herbal bath",
+      "leaves",
+      "wellness",
+      "spa",
+      "Tả Phìn",
+      "Ta Phin",
+    ],
+  },
+  "watch-flowers-enter-the-paper": {
+    modes: ["watch-listen"],
+    time: "short",
+    keywords: [
+      "Ambalavao",
+      "Madagascar",
+      "Antemoro",
+      "Antaimoro",
+      "paper",
+      "flowers",
+      "fibre",
+      "craft",
+      "workshop",
+      "RN7",
+    ],
+  },
+  "taste-the-distance-from-pod-to-bar": {
+    modes: ["at-table", "watch-listen"],
+    time: "short",
+    keywords: [
+      "São Tomé",
+      "Sao Tome",
+      "Príncipe",
+      "Principe",
+      "cacao",
+      "cocoa",
+      "chocolate",
+      "bean to bar",
+      "factory",
+      "tasting",
+      "roça",
+      "plantation",
+    ],
+  },
   "meet-the-rose-before-the-perfume": {
     modes: ["hands-on", "watch-listen", "outdoors"],
     time: "calendar",

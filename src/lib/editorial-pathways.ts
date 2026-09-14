@@ -56,9 +56,9 @@ export const editorialPathways = [
     kind: "ritual-and-season",
     title: "Make room for a slower day",
     promise:
-      "Warm rooms, a lakeside evening, two ways to share coffee and a night with a different rhythm.",
+      "Warm rooms, a lakeside evening, two ways to share coffee and leaves brewed for a slower hour.",
     intro:
-      "Not every memorable experience needs acceleration. A Koyasan temple stay asks you to fit an overnight visit around one lodging's actual arrangements. Istanbul, Tampere, Busan, Kuopio and Reykjavík each open a different public bathing context. A Mooska farm walk stays outside the bathing promise and makes the preparation behind a Võrumaa smoke sauna visible. Sarajevo brings a seated coffee pause into a longer city walk, while Doha makes qahwa and majlis etiquette the subject of a hosted session. These are not interchangeable wellness products and none carries a promise of transformation. What they share is room to notice a threshold, a gesture or a pattern of ordinary life that a hurried itinerary would pass over.",
+      "Not every memorable experience needs acceleration. A Koyasan temple stay asks you to fit an overnight visit around one lodging's actual arrangements. Istanbul, Tampere, Busan, Kuopio and Reykjavík each open a different public bathing context. A Mooska farm walk stays outside the bathing promise and makes the preparation behind a Võrumaa smoke sauna visible. In Hanoi, a current urban Red Dao herbal-bath service brings attention to the leaves and long brewing behind a short treatment without pretending to be a village encounter. Sarajevo brings a seated coffee pause into a longer city walk, while Doha makes qahwa and majlis etiquette the subject of a hosted session. These are not interchangeable wellness products and none carries a promise of transformation. What they share is room to notice a threshold, a gesture or a pattern of ordinary life that a hurried itinerary would pass over.",
     guideSlugs: [
       "spend-the-night-in-a-temple-town",
       "marble-steam-istanbul",
@@ -69,6 +69,7 @@ export const editorialPathways = [
       "spend-an-hour-between-the-hot-rooms",
       "step-from-smoke-sauna-into-the-lake",
       "read-a-smoke-sauna-before-the-heat",
+      "let-the-leaves-reach-the-water-first",
     ],
     visitorUse:
       "Choose the format that genuinely fits your day or night. Read bathing rules, dietary and lodging details, current opening times and the scope of any tour before making arrangements.",
@@ -80,7 +81,7 @@ export const editorialPathways = [
     kind: "food-and-drink",
     title: "What a place tastes like",
     promise:
-      "Fourteen ways to read landscape, work and memory through flavour and the table.",
+      "Fifteen ways to read landscape, work and memory through flavour and the table.",
     intro:
       "Begin with appetite, then look further. These guides connect a Singapore hawker breakfast, halloumi made on a route into the Troodos foothills, Vienna's heuriger, Asturian cider, Grenadian cacao, Kyoto tea, Seoul kimchi, Québec maple season and food grown on Mexico City's chinampas. Oaxaca follows agave through heat and copper, while Doha uses qahwa to read the social language of a majlis. Chios begins with clear mastiha resin on a tree. In Appenzellerland, a gallery above a working dairy connects the tasting to milk, curd and cellar. Pinglin lets a seasonal farm visit begin with the leaf before the cup. Each is a different kind of public encounter. Together they show why flavour can reveal climate, labour, technique and social rhythm. Use the official links to check what is currently offered, and let the guide sharpen the questions you bring to the table.",
     guideSlugs: [
@@ -98,6 +99,7 @@ export const editorialPathways = [
       "follow-mastiha-back-to-the-tree",
       "follow-appenzeller-from-vat-to-cellar",
       "make-tea-before-taipei-drinks-it",
+      "taste-the-distance-from-pod-to-bar",
     ],
     visitorUse:
       "Choose one guide near a route you already have, then compare access, timing and participation before adding it to your journey.",
@@ -168,6 +170,7 @@ export const editorialPathways = [
       "let-the-caller-start-the-dance",
       "stay-while-the-zamba-circles-back",
       "let-the-shadows-move-after-angkor",
+      "let-the-leaves-reach-the-water-first",
     ],
     visitorUse:
       "Check dates and last entry before travel, then pair one evening guide with a deliberately unhurried day nearby.",
@@ -283,9 +286,9 @@ export const editorialPathways = [
     kind: "food-and-drink",
     title: "Before the first sip",
     promise:
-      "Seven ways to follow rice, tea, grapes, apples, agave and cacao before flavour reaches the glass or table.",
+      "Eight ways to follow rice, tea, grapes, apples, agave and cacao before flavour reaches the glass or table.",
     intro:
-      "Taste becomes more memorable when you can trace what produced it. Begin makgeolli with rice and fermentation in Seoul, then meet Pinglin tea as a leaf before it becomes a cup. Enter Vila Nova de Gaia through the time and vessels behind Port, Asturias through cider poured at a working sidrería and Oaxaca through the transformation of agave. Vienna connects the vineyard to the heuriger table, while Grenada moves back from chocolate to cacao. These are public introductions to different systems, not a ranking of producers or permission to generalise about a whole region. Follow the ingredient, work and time first. Let the tasting confirm the story rather than replace it.",
+      "Taste becomes more memorable when you can trace what produced it. Begin makgeolli with rice and fermentation in Seoul, then meet Pinglin tea as a leaf before it becomes a cup. Enter Vila Nova de Gaia through the time and vessels behind Port, Asturias through cider poured at a working sidrería and Oaxaca through the transformation of agave. Vienna connects the vineyard to the heuriger table, while Grenada moves back from chocolate to cacao. In São Tomé, a small city factory visit places the fresh pod, finished bar and plantation history in the same line of inquiry. These are public introductions to different systems, not a ranking of producers or permission to generalise about a whole region. Follow the ingredient, work and time first. Let the tasting confirm the story rather than replace it.",
     guideSlugs: [
       "begin-with-rice-not-the-bottle",
       "taste-what-time-does-to-port",
@@ -294,6 +297,7 @@ export const editorialPathways = [
       "the-vineyard-at-the-table",
       "before-the-chocolate-bar",
       "make-tea-before-taipei-drinks-it",
+      "taste-the-distance-from-pod-to-bar",
     ],
     visitorUse:
       "Compare the part of the process each guide makes visible, then confirm current access, age rules, transport and tasting arrangements at the official source.",

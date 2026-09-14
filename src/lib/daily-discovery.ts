@@ -559,6 +559,39 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "Which landscape have you been taught to see when its most revealing form might be something you hear?",
   },
+  {
+    date: "2026-11-02",
+    slug: "let-the-leaves-reach-the-water-first",
+    title: "The bath begins hours before you enter it.",
+    angle:
+      "Hanoi makes it easy to move quickly from one thing to the next. A Red Dao herbal bath asks for another measure of time. Leaves are selected, combined and brewed long before warm water reaches the wooden tub. Use the public city service as a reason to notice that preparation, not as a shortcut into village life or a promise of healing. The most useful question may be what had to happen before your quiet half-hour could begin.",
+    notice:
+      "The plants before the perfume. Ask only what staff can responsibly share and treat every health benefit as a provider claim, not a guarantee.",
+    question:
+      "Which experience on your next trip would change if you counted the unseen preparation as part of its value?",
+  },
+  {
+    date: "2026-11-03",
+    slug: "watch-flowers-enter-the-paper",
+    title: "A flower can become part of the page.",
+    angle:
+      "In Ambalavao, handmade paper does not begin as a clean white surface. Fibre is beaten, pulp meets water and a wet sheet has to hold together before small flowers can enter it. Watch the order closely. The flower is not an ornament added after the work. It is placed while the page is still becoming a page. The public workshop visit does not guarantee that you will make one yourself, but careful observation can still change what you see in the finished stack.",
+    notice:
+      "The wet edge of one sheet and the distance between the flowers. Touch nothing unless the worker invites you.",
+    question:
+      "Which everyday material would become extraordinary if you watched it cross the moment when it first takes form?",
+  },
+  {
+    date: "2026-11-04",
+    slug: "taste-the-distance-from-pod-to-bar",
+    title: "Chocolate begins as a fruit with a difficult history.",
+    angle:
+      "A cacao percentage can sound like the complete story of a bar. São Tomé offers a longer one. Begin with the ridged pod and follow what the factory can show through bean, nib and finished chocolate. Then keep the islands' roça system in the frame. Flavour, craft, land and labour belong to the same origin story. A tasting becomes more useful when pleasure and history are allowed to sit at the same table.",
+    notice:
+      "One change in texture between samples. Ask where the cacao grew and which production steps happened on the islands.",
+    question:
+      "What would you ask about your next chocolate bar if origin meant people and history, not only a place name?",
+  },
 ];
 
 export function availableDiscoveries(

@@ -5,6 +5,9 @@ export const guideReleases = [
   {
     date: "2026-09-14",
     slugs: [
+      "let-the-leaves-reach-the-water-first",
+      "watch-flowers-enter-the-paper",
+      "taste-the-distance-from-pod-to-bar",
       "meet-the-rose-before-the-perfume",
       "let-the-shadows-move-after-angkor",
       "hear-a-landscape-without-instruments",

@@ -1,5 +1,14 @@
 # QA report — 14 September 2026
 
+## Content expansion batch 29 — 14 September 2026
+
+- Added three bounded public-source guides from candidates 51, 154 and 157: a Hanoi Red Dao herbal bath as a related alternative to the original Tả Phìn premise, an observation-first Antemoro paper workshop in Ambalavao and a São Tomé chocolate-factory visit framed by the islands' cacao history.
+- The catalogue now contains 98 guides across 54 countries and territories. The reconciliation maps 59 of the original 200 candidates without changing the protected register or conferring EA Selected status.
+- The daily edition contains 53 authored discoveries through 4 November 2026. The sitemap contains 273 indexable routes.
+- All 67 tests, TypeScript and the production build passed. Local smoke checked 162 pages and 162 distinct content-security nonces with no failures.
+- The complete browser audit checked 282 desktop, tablet and mobile views plus 417 internal links with no failure. The complete local SEO pass found no invalid route, missing metadata, invalid canonical or duplicate title or description across all 273 sitemap routes.
+- Full decision, photography and source details are recorded in [content expansion batch 29](content-expansion-batch-29-2026-09-14.md).
+
 ## Content expansion batch 28 — 14 September 2026
 
 - Added three public-source guides from original candidates 23, 52 and 8: Kazanlak's announced Rose Festival picking ritual, public Sbek Thom spectatorship in Siem Reap and a museum-first Cante Alentejano route in Serpa.

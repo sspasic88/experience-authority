@@ -4,7 +4,7 @@
   "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
   "originalCandidateCount": 200,
   "originalProtectedCount": 46,
-  "catalogueCount": 95,
+  "catalogueCount": 98,
   "mappings": [
     {
       "candidateId": 9,
@@ -341,9 +341,54 @@
       "guideId": "serpa-museu-do-cante",
       "relation": "narrowed_public_scope",
       "boundary": "Ordinary access to Museu do Cante followed by a separately announced public performance when available. Spontaneous tavern singing, a private rehearsal and a guaranteed live chorus on an ordinary museum visit are outside the promise."
+    },
+    {
+      "candidateId": 51,
+      "guideId": "hanoi-daos-care-herbal-bath",
+      "relation": "related_alternative",
+      "boundary": "A current public Red Dao herbal-bath service at Dao's Care in Hanoi. This is not a Tả Phìn village or household visit, herb foraging, access to a family recipe, or evidence of community-led delivery in the original location."
+    },
+    {
+      "candidateId": 154,
+      "guideId": "ambalavao-antemoro-paper-workshop",
+      "relation": "related_alternative",
+      "boundary": "A public visit to the named Antemoro paper workshop in Ambalavao to observe the process and finished work. Hands-on paper making, flower placement and a take-home sheet are not promised unless the workshop confirms them for that visit."
+    },
+    {
+      "candidateId": 157,
+      "guideId": "sao-tome-clocon-tela-chocolate",
+      "relation": "narrowed_public_scope",
+      "boundary": "A current ninety-minute visit and tasting at Cloçon Téla's urban chocolate factory in São Tomé. This is not a roça stay, pod harvest, access to every production step or a complete account of the islands' cacao and forced-labour history."
     }
   ],
   "newSourceReviews": [
+    {
+      "candidateId": 51,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-14",
+      "finding": "Dao's Care currently publishes Red Dao herbal baths at its Hanoi social-enterprise treatment centre. Vietnam's national tourism site explains the broader Tả Phìn bath tradition, but the previously named lodge route is closed and current public evidence does not establish the original village household encounter.",
+      "sourceUrl": "https://www.daoscare.com/menu",
+      "nextAction": "Keep Hanoi and Tả Phìn visibly distinct. Recheck the treatment menu, reservation route, current location and social-enterprise claims by 13 December 2026. Do not imply access to a family recipe or village life.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 154,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-14",
+      "finding": "The named Ambalavao workshop currently publishes visitor hours, a location and direct contact for observing Antemoro paper production. The available public page does not clearly promise that ordinary visitors can make a sheet themselves.",
+      "sourceUrl": "https://www.hotel-ambalavao.com/en/the-antemoro-paper-workshop",
+      "nextAction": "Publish observation only. Recheck opening hours and contact route by 13 December 2026, and require direct confirmation before describing any hands-on step or take-home result.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 157,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-14",
+      "finding": "Cloçon Téla currently publishes a ninety-minute São Tomé factory visit with chocolate tasting, appointment request and a listed price of 125 STN. The public route supports an urban bean-to-bar introduction, not the original broader farm and harvest premise.",
+      "sourceUrl": "https://www.clocontela.com/book-online",
+      "nextAction": "Keep the urban-factory, appointment and historical-context boundaries explicit. Recheck price, duration and booking availability by 13 December 2026 before presenting live access.",
+      "outreachPerformed": false
+    },
     {
       "candidateId": 23,
       "status": "narrowed_public_scope",
