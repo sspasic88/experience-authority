@@ -40,3 +40,5 @@ No outreach, booking, partnership, field visit or local validation was performed
 - Interaction checks passed for curated hero rotation, varied home suggestions, direct image credits, local continuations, save persistence, image opening, comparison, search, city filtering and mobile navigation.
 - The audit exposed and fixed a hydration race that could overwrite search text entered immediately after Compass loaded. The complete interaction pass then succeeded.
 - Manual inspection of the desktop and mobile homepage confirmed controlled title wrapping, restrained credit labels and a distinct recent-publication sequence across Tirana, Echternach and Hanoi.
+- Commit `d6193d7` deployed successfully to `experienceauthority.com`. The live production smoke repeated across 168 public pages and 12 expected unpublished paths with 168 distinct content-security nonces and no failures.
+- The complete live SEO audit checked all 279 sitemap routes. Every route returned HTTP 200 with a title, description and production canonical, with no duplicate title or description groups.

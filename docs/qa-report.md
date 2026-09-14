@@ -10,6 +10,7 @@
 - The complete local SEO pass found no invalid route, missing metadata, invalid canonical or duplicate title or description across all 279 sitemap routes.
 - The complete browser audit checked 294 desktop, tablet and mobile views plus 429 internal links with no failure. The audit also found and verified the fix for a rare initial-load search-state race.
 - Manual desktop and mobile review confirmed a clear, non-repeating recent-publication sequence across Tirana, Echternach and Hanoi, legible credits and controlled typography.
+- Commit `d6193d7` deployed successfully to `experienceauthority.com`. The live 168-page smoke and complete 279-route SEO audit repeated with no failure, missing metadata or duplicate title and description.
 - Full decision, photography and source details are recorded in [content expansion batch 30](content-expansion-batch-30-2026-09-14.md).
 
 ## Content expansion batch 29 — 14 September 2026
