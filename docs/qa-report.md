@@ -1,14 +1,15 @@
 # QA report — 14 September 2026
 
-## Content expansion batch 26 — 14 September 2026
+## Content expansion batch 27 — 14 September 2026
 
 - The current catalogue contains 92 public-source guides in 50 countries and territories, with 47 authored daily discoveries through 29 October. The dated reconciliation now maps 53 of the original 200 candidates without changing the protected register or conferring EA Selected status.
-- Monument Valley is published only as a protected public programme through a currently listed Navajo Nation Parks operator. Jatiluwih is narrowed to a farmer-led public village trek. Pinglin is narrowed to one named appointment-only tea farm and the seasonal steps it confirms.
-- All three photographs passed manual hero and card review. Each has a direct source credit, rights record and exact depiction boundary. The current Pinglin photograph is explicitly separated from the named farm's access evidence.
-- All 67 automated tests, type checking, formatting and the optimized production build pass. The indexable local production smoke passed 147 pages and 12 expected not-found routes with 147 distinct CSP nonces and no failures.
-- The responsive browser audit passed 228 views at 390, 768 and 1440 pixels, encountered 365 internal links and found no broken images, horizontal overflow, browser errors or automated WCAG A/AA violations. Manual inspection confirmed the new hero crops, headline wraps, credits and practical boundaries.
-- The indexable sitemap contains 258 routes. The batch 27 local production check covered all routes, with the complete live SEO repeat recorded after deployment.
-- Commit `4ed937b` was deployed to `experienceauthority.com`. The live 147-page smoke and complete 250-route SEO audit repeated successfully after deployment.
+- Hong Kong is narrowed to a named Cantonese Mahjong basics class at PMQ. Skopje is narrowed to MATA's two-day Silver Weekend subject to group and teacher confirmation. Bulukumba is narrowed to safe observation from a public approach along the officially listed working boatbuilding coast.
+- All three real photographs passed manual desktop and mobile hero review. Each has a direct source credit, rights record and exact depiction boundary. Two are Creative Commons licensed, while the named Hong Kong class photograph has explicit uncleared-reuse status.
+- All 67 automated tests, type checking, formatting and the optimized production build pass. The indexable local production smoke passed 153 pages and 12 expected not-found routes with 153 distinct CSP nonces and no failures.
+- The responsive browser audit passed 246 views at 390, 768 and 1440 pixels, encountered 382 internal links and found no broken images, horizontal overflow, browser errors or automated WCAG A/AA violations. Manual inspection confirmed the new hero crops, headline wraps, credits and practical boundaries.
+- The indexable sitemap contains 258 routes. Local and live complete-route SEO checks found no invalid response, missing metadata, invalid canonical, duplicate title or duplicate description.
+- Commit `cbff20e` was deployed to `experienceauthority.com`. The live 153-page smoke and complete 258-route SEO audit repeated successfully after deployment.
+- See [content expansion batch 27](content-expansion-batch-27-2026-09-14.md) for sources, visual decisions and publication boundaries.
 
 ## Content expansion batch 25 — 14 September 2026
 
