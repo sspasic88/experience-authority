@@ -157,9 +157,9 @@ export const editorialPathways = [
     kind: "after-dark",
     title: "Stay out for the real evening",
     promise:
-      "Six public encounters for people who want more than another bar list.",
+      "Seven public encounters for people who want more than another bar list.",
     intro:
-      "Evening can change the social temperature of a place. Stay for a traditional music session in Doolin, enter a Budapest dance house, let a caller bring an Edinburgh ceilidh into motion or give a Salta peña time to unfold across music, dance and the table. A vast starling flock gathers over the Danish marshes, while an Istanbul hammam offers a different way to slow the day. None should be treated as guaranteed nightly entertainment. Check the current programme, season, admission and house rules first. The reward is not simply staying out later, but paying closer attention to how people share time and space.",
+      "Evening can change the social temperature of a place. Stay for a traditional music session in Doolin, enter a Budapest dance house, let a caller bring an Edinburgh ceilidh into motion or give a Salta peña time to unfold across music, dance and the table. In Siem Reap, carved leather, dancers and a pin peat orchestra move the Reamker across a field of light after Angkor closes. A vast starling flock gathers over the Danish marshes, while an Istanbul hammam offers a different way to slow the day. None should be treated as guaranteed nightly entertainment. Check the current programme, season, admission and house rules first. The reward is not simply staying out later, but paying closer attention to how people share time and space.",
     guideSlugs: [
       "stay-for-the-session",
       "step-into-the-dance",
@@ -167,6 +167,7 @@ export const editorialPathways = [
       "marble-steam-istanbul",
       "let-the-caller-start-the-dance",
       "stay-while-the-zamba-circles-back",
+      "let-the-shadows-move-after-angkor",
     ],
     visitorUse:
       "Check dates and last entry before travel, then pair one evening guide with a deliberately unhurried day nearby.",
@@ -180,7 +181,7 @@ export const editorialPathways = [
     promise:
       "Let tide, migration, harvest and public custom decide when to arrive.",
     intro:
-      "Some experiences cannot be separated from their timing. A tide opens and closes a walking route. Migrating starlings gather in the marshes. Shrimp fishers work when sea and public demonstrations align. Castellers meet through announced public events. Kuopio's smoke-sauna evening belongs to Tuesday, while Mexico City's car-free avenue belongs to most Sunday mornings. This pathway helps you plan around what the place is doing, rather than forcing every experience into the dates you already chose.",
+      "Some experiences cannot be separated from their timing. A tide opens and closes a walking route. Migrating starlings gather in the marshes. Shrimp fishers work when sea and public demonstrations align. Castellers meet through announced public events. Kuopio's smoke-sauna evening belongs to Tuesday, while Mexico City's car-free avenue belongs to most Sunday mornings. Near Kazanlak, roses bring the public into the fields only through a short announced harvest calendar. In Serpa, the museum is a dependable beginning while live cante belongs to a separately confirmed performance. This pathway helps you plan around what the place is doing, rather than forcing every experience into the dates you already chose.",
     guideSlugs: [
       "walk-where-the-sea-was",
       "when-the-sky-moves-as-one",
@@ -191,6 +192,8 @@ export const editorialPathways = [
       "follow-the-festa-through-the-streets",
       "step-from-smoke-sauna-into-the-lake",
       "ride-the-avenue-when-the-cars-step-aside",
+      "meet-the-rose-before-the-perfume",
+      "hear-a-landscape-without-instruments",
     ],
     visitorUse:
       "Start with the least flexible date or natural condition, confirm it at the official source, then shape the rest of the route around it.",
@@ -204,7 +207,7 @@ export const editorialPathways = [
     promise:
       "Familiar cities, entered through practices and systems that remain alive.",
     intro:
-      "A landmark can tell you where you are. A practice can tell you how a city works. Begin Barcelona with a human tower, Singapore at a hawker table, Seoul through kimchi and Venice through an oar. Cross Istanbul by municipal ferry, then give Mexico City's Sunday avenue back to feet and bicycles. Sit at a Cantonese mahjong table in Hong Kong and follow Medellín's famous flowers into the rural work of Santa Elena. Busan adds the etiquette of a jjimjilbang, Fez the precision of zellige and Montevideo a candombe workshop with a clearly defined public. These are not claims to know a whole city. They are practical starting points that move attention from the skyline to the routines and shared infrastructure beneath it.",
+      "A landmark can tell you where you are. A practice can tell you how a city works. Begin Barcelona with a human tower, Singapore at a hawker table, Seoul through kimchi and Venice through an oar. Cross Istanbul by municipal ferry, then give Mexico City's Sunday avenue back to feet and bicycles. Sit at a Cantonese mahjong table in Hong Kong, stay in Siem Reap for large shadow theatre after Angkor and follow Medellín's famous flowers into the rural work of Santa Elena. Busan adds the etiquette of a jjimjilbang, Fez the precision of zellige and Montevideo a candombe workshop with a clearly defined public. These are not claims to know a whole city. They are practical starting points that move attention from the skyline to the routines and shared infrastructure beneath it.",
     guideSlugs: [
       "the-weight-of-the-tower",
       "a-morning-at-the-hawker-table",
@@ -222,6 +225,7 @@ export const editorialPathways = [
       "find-the-pulse-before-the-parade",
       "follow-medellins-flowers-back-to-the-farm",
       "learn-hong-kong-one-hand-at-a-time",
+      "let-the-shadows-move-after-angkor",
     ],
     visitorUse:
       "Pick the city already on your route and use its guide as the anchor for one slower half-day beyond the standard highlights.",

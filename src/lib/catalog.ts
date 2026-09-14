@@ -232,6 +232,24 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "cambodia",
+    name: "Cambodia",
+    region: "siem-reap",
+    regionName: "Siem Reap",
+    intro:
+      "Stay in Siem Reap after Angkor closes and watch carved leather, dancers, narration and music bring another Khmer story-world into motion.",
+    image: null,
+  },
+  {
+    slug: "bulgaria",
+    name: "Bulgaria",
+    region: "kazanlak",
+    regionName: "Kazanlak and Rose Valley",
+    intro:
+      "Meet Bulgaria's rose before it becomes fragrance, through an announced public morning that connects flowers, timing, field work and distillation.",
+    image: null,
+  },
+  {
     slug: "hong-kong",
     name: "Hong Kong",
     region: "central",
@@ -660,7 +678,7 @@ export const territories = [
     region: "porto",
     regionName: "Porto",
     intro:
-      "Follow an ingredient through Bolhão, listen inside Clérigos and paint a tile in Porto. Cross the Douro to Gaia for the cellars. Four ways to look beyond the finished thing, with room to connect them.",
+      "Follow ingredients, sound and making through Porto and Gaia, then travel into Alentejo through the unaccompanied voices documented and heard in Serpa.",
     image: null,
   },
   {
@@ -688,6 +706,7 @@ const additionalRegionNames: Readonly<Record<string, string>> = {
   "france/arcachon-bay": "Arcachon Bay",
   "poland/krakow": "Kraków",
   "italy/rome": "Rome",
+  "portugal/serpa": "Serpa",
   "united-states/new-york-city": "New York City",
 };
 

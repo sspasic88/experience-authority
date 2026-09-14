@@ -24,6 +24,51 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "meet-the-rose-before-the-perfume": {
+    modes: ["hands-on", "watch-listen", "outdoors"],
+    time: "calendar",
+    keywords: [
+      "Kazanlak",
+      "Bulgaria",
+      "Rose Valley",
+      "rose picking",
+      "rose harvest",
+      "rose oil",
+      "distillation",
+      "festival",
+      "flowers",
+    ],
+  },
+  "let-the-shadows-move-after-angkor": {
+    modes: ["watch-listen", "at-table"],
+    time: "calendar",
+    keywords: [
+      "Siem Reap",
+      "Cambodia",
+      "Sbek Thom",
+      "shadow puppets",
+      "Reamker",
+      "pin peat",
+      "theatre",
+      "performance",
+      "after dark",
+    ],
+  },
+  "hear-a-landscape-without-instruments": {
+    modes: ["watch-listen", "slow-down"],
+    time: "own-pace",
+    keywords: [
+      "Serpa",
+      "Alentejo",
+      "Portugal",
+      "Cante Alentejano",
+      "choir",
+      "singing",
+      "music",
+      "museum",
+      "performance",
+    ],
+  },
   "learn-hong-kong-one-hand-at-a-time": {
     modes: ["hands-on", "watch-listen"],
     time: "short",

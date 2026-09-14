@@ -4,7 +4,7 @@
   "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
   "originalCandidateCount": 200,
   "originalProtectedCount": 46,
-  "catalogueCount": 92,
+  "catalogueCount": 95,
   "mappings": [
     {
       "candidateId": 9,
@@ -323,9 +323,54 @@
       "guideId": "hong-kong-glocal-mahjong",
       "relation": "narrowed_public_scope",
       "boundary": "A named public Cantonese Mahjong basics class at PMQ, not entry to a neighbourhood association, family table, commercial mahjong school or gambling setting. Rules and scoring apply to the taught format."
+    },
+    {
+      "candidateId": 23,
+      "guideId": "kazanlak-public-rose-picking",
+      "relation": "narrowed_public_scope",
+      "boundary": "An announced paid public rose-picking ritual within the official Kazanlak Rose Festival programme. It is not entry to an ordinary commercial harvest, permission to use another field or evidence that a brief visitor activity constitutes agricultural work."
+    },
+    {
+      "candidateId": 52,
+      "guideId": "siem-reap-sompoli-sbek-thom",
+      "relation": "narrowed_public_scope",
+      "boundary": "Public seated spectatorship at a named Siem Reap hospitality venue that currently advertises Sbek Thom. The original maker meeting, a ceremonial performance, backstage access, puppet handling and a guaranteed timetable are not promised."
+    },
+    {
+      "candidateId": 8,
+      "guideId": "serpa-museu-do-cante",
+      "relation": "narrowed_public_scope",
+      "boundary": "Ordinary access to Museu do Cante followed by a separately announced public performance when available. Spontaneous tavern singing, a private rehearsal and a guaranteed live chorus on an ordinary museum visit are outside the promise."
     }
   ],
   "newSourceReviews": [
+    {
+      "candidateId": 23,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-14",
+      "finding": "Kazanlak Municipality's completed 2026 festival programme listed paid public rose-picking rituals near Yasenovo and Kazanlak plus separate distilling demonstrations. This proves a recurring visitor-facing format but not the next edition, access to an ordinary commercial harvest or a future crop condition.",
+      "sourceUrl": "https://www.kazanlak.bg/programa-praznik-na-rozata-2026",
+      "nextAction": "Keep the guide date-explicit and unavailable for booking until the next official programme is published. Recheck the village, meeting point, ticket route, transport and programme-change notice before promoting a live date.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 52,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-14",
+      "finding": "Sompoli Dthan currently states that its Siem Reap cultural restaurant offers Khmer Sbek Thom and small shadow-puppet performance with the Reamker story. The website provides a public contact but no detailed timetable, duration, price or maker encounter.",
+      "sourceUrl": "https://sompolidthan.com/",
+      "nextAction": "Retain public spectatorship only. Recheck the current performance night, format, price, language support and reservation route by 13 December 2026. Do not reinstate the original maker meeting without explicit public evidence.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 8,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-14",
+      "finding": "Portugal's national tourism site directs visitors to Museu do Cante in Serpa and recommends checking local tourist offices for planned performances while describing informal singing as spontaneous. This supports a museum-first route and separately announced public listening, not a guaranteed live encounter.",
+      "sourceUrl": "https://www.visitportugal.com/en/content/o-cante-alentejano-the-alentejo-singing",
+      "nextAction": "Keep spontaneous singing outside the visitor promise. Recheck museum hours and a named public performance before suggesting a live date, and preserve the distinction between interpretation, formal performance and informal social singing.",
+      "outreachPerformed": false
+    },
     {
       "candidateId": 48,
       "status": "narrowed_public_scope",

@@ -526,6 +526,39 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "Which intricate object have you called delicate without noticing the discipline required to make it hold?",
   },
+  {
+    date: "2026-10-30",
+    slug: "meet-the-rose-before-the-perfume",
+    title: "The perfume begins before the day becomes warm.",
+    angle:
+      "A rose on a bottle looks complete. In the fields near Kazanlak, the more revealing beginning is a cool morning and a short harvest window. The public festival ritual lets visitors meet the flower before distillation compresses a field of petals into a small amount of oil. Pick only when the host directs you. Then look past the colour and ask what timing, volume and labour the finished scent has made easy to forget.",
+    notice:
+      "The weight and scent of one small handful. Stay inside the announced field and follow every picking instruction.",
+    question:
+      "Which familiar scent would change if you first met the crop, hour and work required to produce it?",
+  },
+  {
+    date: "2026-10-31",
+    slug: "let-the-shadows-move-after-angkor",
+    title: "The carving becomes a performance only after dark.",
+    angle:
+      "Siem Reap is often asked to stand still in stone. Sbek Thom offers another relationship with carved form. Large leather panels meet light, dancers carry them with their whole bodies and narrators and a pin peat orchestra move the Reamker across the screen. Follow one figure rather than trying to decode the whole story. Its cutwork stays fixed while every step changes the shadow reaching the audience.",
+    notice:
+      "The instant a still leather panel begins to feel like a character. Keep flash, recording and backstage curiosity within the organiser's rules.",
+    question:
+      "What would you understand differently about a carved story if you watched people make it move?",
+  },
+  {
+    date: "2026-11-01",
+    slug: "hear-a-landscape-without-instruments",
+    title: "One voice begins. A whole room decides how to answer.",
+    angle:
+      "Alentejo is often introduced through open land and visual quiet. Cante changes the emphasis. At Serpa's museum, recordings and documentation let you hear the structure before a public calendar may offer it live. One voice begins as the ponto, an alto enters above it and the larger group carries the line without instruments or conductor. Do not hunt for a spontaneous tavern performance. Learn what to listen for and let any unplanned singing remain the singers' own moment.",
+    notice:
+      "The distance between the opening voice and the full group response. Record only when the setting and people clearly allow it.",
+    question:
+      "Which landscape have you been taught to see when its most revealing form might be something you hear?",
+  },
 ];
 
 export function availableDiscoveries(

@@ -7,10 +7,10 @@ test("dated candidate reconciliation counts scoped coverage without turning alte
   assert.equal(ledger.catalogueCount, publicGuides.length);
   assert.equal(ledger.originalCandidateCount, 200);
   assert.equal(ledger.originalProtectedCount, 46);
-  assert.equal(ledger.mappings.length, 53);
+  assert.equal(ledger.mappings.length, 56);
   assert.equal(
     new Set(ledger.mappings.map((item) => item.candidateId)).size,
-    53,
+    56,
   );
   const counts: Record<string, number> = {};
   for (const mapping of ledger.mappings) {
@@ -20,7 +20,7 @@ test("dated candidate reconciliation counts scoped coverage without turning alte
     counts[mapping.relation] = (counts[mapping.relation] ?? 0) + 1;
   }
   assert.deepEqual(counts, {
-    narrowed_public_scope: 45,
+    narrowed_public_scope: 48,
     related_alternative: 6,
     protected_public_programme_only: 2,
   });

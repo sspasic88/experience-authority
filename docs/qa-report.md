@@ -1,5 +1,14 @@
 # QA report — 14 September 2026
 
+## Content expansion batch 28 — 14 September 2026
+
+- Added three public-source guides from original candidates 23, 52 and 8: Kazanlak's announced Rose Festival picking ritual, public Sbek Thom spectatorship in Siem Reap and a museum-first Cante Alentejano route in Serpa.
+- The catalogue now contains 95 guides across 52 countries and territories, with 56 of the original 200 candidates represented by explicitly bounded public-guide mappings.
+- The daily edition now contains 50 authored discoveries through 1 November 2026. The sitemap contains 266 indexable routes.
+- All 67 tests, TypeScript and the production build passed. Local smoke checked 153 pages and 153 distinct content-security nonces with no failures.
+- The complete browser audit checked 264 desktop, tablet and mobile views and 400 internal links with no failures. The complete local SEO pass found no invalid route, missing metadata, invalid canonical or duplicate title or description across all 266 sitemap routes.
+- Full decision, photography and source details are recorded in [content expansion batch 28](content-expansion-batch-28-2026-09-14.md).
+
 ## Content expansion batch 27 — 14 September 2026
 
 - The current catalogue contains 92 public-source guides in 50 countries and territories, with 47 authored daily discoveries through 29 October. The dated reconciliation now maps 53 of the original 200 candidates without changing the protected register or conferring EA Selected status.

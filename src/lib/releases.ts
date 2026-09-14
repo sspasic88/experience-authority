@@ -5,6 +5,9 @@ export const guideReleases = [
   {
     date: "2026-09-14",
     slugs: [
+      "meet-the-rose-before-the-perfume",
+      "let-the-shadows-move-after-angkor",
+      "hear-a-landscape-without-instruments",
       "learn-hong-kong-one-hand-at-a-time",
       "draw-with-silver-in-skopjes-old-bazaar",
       "read-a-ship-before-the-sails-arrive",
