@@ -1,6 +1,13 @@
 "use client";
 
-import { Children, useEffect, useMemo, useState, type ReactNode } from "react";
+import {
+  Children,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 import Link from "next/link";
 import { Search, LayoutGrid, List, ArrowRight, X } from "lucide-react";
 import { interests, matchesInterest } from "@/lib/catalog";
@@ -44,10 +51,17 @@ export function CompassBrowser({
 }) {
   const [query, setQuery] = useState(initialQuery);
   const [hydrated, setHydrated] = useState(false);
+  const hasMounted = useRef(false);
   useEffect(() => {
     setHydrated(true);
   }, []);
   useEffect(() => {
+    // State already begins with this value. Skipping the first effect prevents a
+    // late hydration pass from overwriting text entered immediately after load.
+    if (!hasMounted.current) {
+      hasMounted.current = true;
+      return;
+    }
     setQuery(initialQuery);
   }, [initialQuery]);
   useEffect(() => {

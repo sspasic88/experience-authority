@@ -4,7 +4,7 @@
   "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
   "originalCandidateCount": 200,
   "originalProtectedCount": 46,
-  "catalogueCount": 98,
+  "catalogueCount": 100,
   "mappings": [
     {
       "candidateId": 9,
@@ -359,9 +359,66 @@
       "guideId": "sao-tome-clocon-tela-chocolate",
       "relation": "narrowed_public_scope",
       "boundary": "A current ninety-minute visit and tasting at Cloçon Téla's urban chocolate factory in São Tomé. This is not a roça stay, pod harvest, access to every production step or a complete account of the islands' cacao and forced-labour history."
+    },
+    {
+      "candidateId": 110,
+      "guideId": "tirana-evening-xhiro",
+      "relation": "narrowed_public_scope",
+      "boundary": "A self-guided evening walk on ordinary public routes documented by Tirana Municipality. This is not a staged ceremony, resident-led tour, guaranteed crowd or permission to photograph people using their own city."
+    },
+    {
+      "candidateId": 114,
+      "guideId": "echternach-hopping-procession",
+      "relation": "related_alternative",
+      "boundary": "A current visit to the public documentation centre, followed by respectful spectatorship only if a future Whit Tuesday date and visitor arrangements are officially announced. Open tourist participation in the procession is not promised."
     }
   ],
   "newSourceReviews": [
+    {
+      "candidateId": 110,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-14",
+      "finding": "Tirana Municipality's sustainable mobility guide explicitly documents pedestrian Embassy Row becoming an evening xhiro promenade. Current national tourism and locally reported sources support the wider public-space context, but no fixed route, start time or crowd is guaranteed.",
+      "sourceUrl": "https://tirana.al/uploads/files/Strolling-Tirana-A-sustainable-Mobility-Guide-for-Tirana-2021-08.pdf",
+      "nextAction": "Keep this self-guided and non-performative. Recheck the municipal route, lighting and public access by 13 December 2026, and do not present residents as subjects supplied for visitor photography.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 114,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-14",
+      "finding": "Mullerthal currently publishes ordinary access, exhibits, contact details and changing hours for the Hopping Procession Documentation Centre. Its live-event page confirms the annual Whit Tuesday pattern and public spectatorship but marks the next date as coming soon.",
+      "sourceUrl": "https://www.mullerthal.lu/place/documentation-centre-about-the-dancing-procession-echternach",
+      "nextAction": "Keep the documentation centre as the current route. Do not promote a live visit until the official date, route and spectator guidance are published, and never infer open tourist participation.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 166,
+      "status": "evidence_hold",
+      "checkedOn": "2026-09-14",
+      "finding": "Visit Barbados provides strong current context, suggests places where road tennis may be seen and encourages visitors to learn. The reviewed sources do not identify a current public beginner session, named road-tennis coach, reliable timetable or direct booking route.",
+      "sourceUrl": "https://www.visitbarbados.org/the-bajan-game-of-road-tennis",
+      "nextAction": "Keep the candidate off the catalogue until a named public road-tennis lesson or announced tournament with dependable access is published. Do not substitute lawn-tennis coaching or arrive at a community court expecting players to host visitors.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 153,
+      "status": "access_hold",
+      "checkedOn": "2026-09-14",
+      "finding": "Several resellers still advertise Ibo dhow safaris, but the current regional listing for Ibo Island Lodge states that the lodge is closed and its reopening date is unknown. Older itineraries therefore do not prove dependable present access.",
+      "sourceUrl": "https://www.mozambiqueislands.com/resort/ibo-island-lodge/",
+      "nextAction": "Keep the candidate off the catalogue. Require a current operating provider, direct booking route, vessel and weather-safety information and a clear crew-benefit boundary before reconsideration.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 196,
+      "status": "consent_required_hold",
+      "checkedOn": "2026-09-14",
+      "finding": "The original loko iʻa proposal depends on each Native Hawaiian organisation choosing whether it wants visitor visibility and has capacity for a workday. A public volunteer page alone does not grant EA authority to scale or editorially package that invitation.",
+      "sourceUrl": "https://maunaluafishpond.org/volunteer/",
+      "nextAction": "Do not publish or contact organisations in the current no-consent work phase. Reconsider only within a future holder-led process that confirms capacity, visibility, safety, data and photography boundaries.",
+      "outreachPerformed": false
+    },
     {
       "candidateId": 51,
       "status": "related_alternative",

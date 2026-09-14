@@ -5,6 +5,8 @@ export const guideReleases = [
   {
     date: "2026-09-14",
     slugs: [
+      "let-the-city-take-its-evening-walk",
+      "watch-a-town-move-in-prayer",
       "let-the-leaves-reach-the-water-first",
       "watch-flowers-enter-the-paper",
       "taste-the-distance-from-pod-to-bar",

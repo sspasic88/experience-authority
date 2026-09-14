@@ -145,6 +145,12 @@ if (process.env.EA_TEST_DEMO === "true") {
     "/experiences/let-the-leaves-reach-the-water-first",
     "/experiences/watch-flowers-enter-the-paper",
     "/experiences/taste-the-distance-from-pod-to-bar",
+    "/places/albania",
+    "/places/albania/tirana",
+    "/places/luxembourg",
+    "/places/luxembourg/echternach",
+    "/experiences/let-the-city-take-its-evening-walk",
+    "/experiences/watch-a-town-move-in-prayer",
     "/experiences/learn-hong-kong-one-hand-at-a-time",
     "/experiences/draw-with-silver-in-skopjes-old-bazaar",
     "/experiences/read-a-ship-before-the-sails-arrive",
@@ -357,6 +363,10 @@ if (liveIndexing) {
     "/experiences/let-the-leaves-reach-the-water-first",
     "/experiences/watch-flowers-enter-the-paper",
     "/experiences/taste-the-distance-from-pod-to-bar",
+    "/places/albania/tirana",
+    "/places/luxembourg/echternach",
+    "/experiences/let-the-city-take-its-evening-walk",
+    "/experiences/watch-a-town-move-in-prayer",
   ])
     assert.ok(
       sitemap.includes(`${path}</loc>`),

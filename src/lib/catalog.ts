@@ -232,6 +232,24 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "albania",
+    name: "Albania",
+    region: "tirana",
+    regionName: "Tirana",
+    intro:
+      "Meet Tirana in the shared pace of its evening xhiro, when a public walk becomes part of how the city sees itself.",
+    image: null,
+  },
+  {
+    slug: "luxembourg",
+    name: "Luxembourg",
+    region: "echternach",
+    regionName: "Echternach",
+    intro:
+      "Begin with the context behind Echternach's hopping procession, then witness the live pilgrimage only when its public date and viewing guidance are confirmed.",
+    image: null,
+  },
+  {
     slug: "sao-tome-and-principe",
     name: "São Tomé and Príncipe",
     region: "sao-tome",
@@ -720,6 +738,8 @@ export const territories = [
 ] as const;
 // Area labels can differ from a guide's specific site. Never let the last guide rename the area.
 const additionalRegionNames: Readonly<Record<string, string>> = {
+  "albania/tirana": "Tirana",
+  "luxembourg/echternach": "Echternach",
   "sao-tome-and-principe/sao-tome": "São Tomé",
   "madagascar/ambalavao": "Ambalavao",
   "vietnam/hanoi": "Hanoi",

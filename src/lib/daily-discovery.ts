@@ -592,6 +592,28 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "What would you ask about your next chocolate bar if origin meant people and history, not only a place name?",
   },
+  {
+    date: "2026-11-05",
+    slug: "let-the-city-take-its-evening-walk",
+    title: "The city has an hour for walking without arriving.",
+    angle:
+      "Tirana gives the evening walk a name: xhiro. Follow a public promenade after the heat softens and resist the urge to turn it into a route of things to complete. The revealing details are smaller. Friends slow down when they meet. Benches hold different generations. People turn back without having failed to reach a destination. A shared hour can make public space feel less like the distance between buildings and more like part of the city's social life.",
+    notice:
+      "The pace of the people already using the path. Join it without photographing strangers or blocking an ordinary evening for content.",
+    question:
+      "What would change at home if an evening walk were treated as a social habit rather than spare exercise?",
+  },
+  {
+    date: "2026-11-06",
+    slug: "watch-a-town-move-in-prayer",
+    title: "The step is unusual. Its purpose is not entertainment.",
+    angle:
+      "Echternach's hopping procession can catch the eye before its meaning reaches you. Begin at the documentation centre instead. Maps, film, devotional objects and the route place the repeated sideways movement inside pilgrimage to Saint Willibrord. If you later return for an officially announced Whit Tuesday, remain at the public edge and watch how music and rows hold thousands of individual bodies in one moving prayer. Context is what keeps curiosity from becoming spectacle.",
+    notice:
+      "The white handkerchiefs connecting one row. Do not enter the route or imitate the movement among participants.",
+    question:
+      "Which public tradition would you understand differently if you learned the participant's purpose before watching its form?",
+  },
 ];
 
 export function availableDiscoveries(

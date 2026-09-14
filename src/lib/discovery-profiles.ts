@@ -24,6 +24,36 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "let-the-city-take-its-evening-walk": {
+    modes: ["outdoors", "slow-down"],
+    time: "own-pace",
+    keywords: [
+      "Tirana",
+      "Albania",
+      "xhiro",
+      "evening walk",
+      "promenade",
+      "Grand Park",
+      "lake",
+      "Embassy Row",
+      "public space",
+    ],
+  },
+  "watch-a-town-move-in-prayer": {
+    modes: ["watch-listen"],
+    time: "calendar",
+    keywords: [
+      "Echternach",
+      "Luxembourg",
+      "hopping procession",
+      "dancing procession",
+      "Whit Tuesday",
+      "Saint Willibrord",
+      "pilgrimage",
+      "UNESCO",
+      "religious procession",
+    ],
+  },
   "let-the-leaves-reach-the-water-first": {
     modes: ["slow-down"],
     time: "short",

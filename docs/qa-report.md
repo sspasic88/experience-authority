@@ -1,5 +1,17 @@
 # QA report — 14 September 2026
 
+## Content expansion batch 30 — 14 September 2026
+
+- Added two bounded public-source guides from candidates 110 and 114: a self-guided evening xhiro in Tirana and a documentation-first route into Echternach's hopping procession.
+- Barbados road tennis remains on evidence hold, the Ibo Island dhow premise remains on access hold and a Hawaiʻi loko iʻa workday remains on consent hold. None was weakened into a generic substitute merely to increase the count.
+- The catalogue now contains 100 guides across 56 countries and territories. The reconciliation maps 61 of the original 200 candidates without changing the protected register or conferring EA Selected status.
+- The daily edition contains 55 authored discoveries through 6 November 2026. The sitemap contains 279 indexable routes.
+- All 67 tests, TypeScript and the production build passed. Local smoke checked 168 pages and 168 distinct content-security nonces with no failures.
+- The complete local SEO pass found no invalid route, missing metadata, invalid canonical or duplicate title or description across all 279 sitemap routes.
+- The complete browser audit checked 294 desktop, tablet and mobile views plus 429 internal links with no failure. The audit also found and verified the fix for a rare initial-load search-state race.
+- Manual desktop and mobile review confirmed a clear, non-repeating recent-publication sequence across Tirana, Echternach and Hanoi, legible credits and controlled typography.
+- Full decision, photography and source details are recorded in [content expansion batch 30](content-expansion-batch-30-2026-09-14.md).
+
 ## Content expansion batch 29 — 14 September 2026
 
 - Added three bounded public-source guides from candidates 51, 154 and 157: a Hanoi Red Dao herbal bath as a related alternative to the original Tả Phìn premise, an observation-first Antemoro paper workshop in Ambalavao and a São Tomé chocolate-factory visit framed by the islands' cacao history.
