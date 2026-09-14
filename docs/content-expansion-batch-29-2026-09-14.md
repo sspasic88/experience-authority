@@ -38,3 +38,5 @@ No outreach, booking, partnership, field visit or local validation was performed
 - The full browser audit completed 282 desktop, tablet and mobile views and checked 417 internal links with no broken image, overflow, browser error or automated WCAG A/AA failure.
 - Interaction checks passed for hero rotation, varied home suggestions, direct image credits, local continuations, save persistence, image opening, comparison, both search paths, city filtering and mobile navigation.
 - Manual inspection of the desktop and mobile homepage confirmed clear title wrapping, restrained credit labels and a strong three-image sequence across leaves, paper and cacao without repeated place or field imagery.
+- Commit `58d9acd` deployed successfully to `experienceauthority.com`. The live production smoke repeated across 162 public pages and 12 expected unpublished paths with 162 distinct content-security nonces and no failures.
+- The complete live SEO audit checked all 273 sitemap routes. Every route returned HTTP 200 with a title, description and production canonical, with no duplicate title or description groups.

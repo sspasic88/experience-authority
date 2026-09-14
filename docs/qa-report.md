@@ -7,6 +7,7 @@
 - The daily edition contains 53 authored discoveries through 4 November 2026. The sitemap contains 273 indexable routes.
 - All 67 tests, TypeScript and the production build passed. Local smoke checked 162 pages and 162 distinct content-security nonces with no failures.
 - The complete browser audit checked 282 desktop, tablet and mobile views plus 417 internal links with no failure. The complete local SEO pass found no invalid route, missing metadata, invalid canonical or duplicate title or description across all 273 sitemap routes.
+- Commit `58d9acd` deployed successfully to `experienceauthority.com`. The live 162-page smoke and complete 273-route SEO audit repeated with no failure, missing metadata or duplicate title and description.
 - Full decision, photography and source details are recorded in [content expansion batch 29](content-expansion-batch-29-2026-09-14.md).
 
 ## Content expansion batch 28 — 14 September 2026
