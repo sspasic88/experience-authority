@@ -78,9 +78,9 @@ export const editorialPathways = [
     kind: "food-and-drink",
     title: "What a place tastes like",
     promise:
-      "Thirteen ways to read landscape, work and memory through flavour and the table.",
+      "Fourteen ways to read landscape, work and memory through flavour and the table.",
     intro:
-      "Begin with appetite, then look further. These guides connect a Singapore hawker breakfast, halloumi made on a route into the Troodos foothills, Vienna's heuriger, Asturian cider, Grenadian cacao, Kyoto tea, Seoul kimchi, Québec maple season and food grown on Mexico City's chinampas. Oaxaca follows agave through heat and copper, while Doha uses qahwa to read the social language of a majlis. Chios begins with clear mastiha resin on a tree. In Appenzellerland, a gallery above a working dairy connects the tasting to milk, curd and cellar. Each is a different kind of public encounter. Together they show why flavour can reveal climate, labour, technique and social rhythm. Use the official links to check what is currently offered, and let the guide sharpen the questions you bring to the table.",
+      "Begin with appetite, then look further. These guides connect a Singapore hawker breakfast, halloumi made on a route into the Troodos foothills, Vienna's heuriger, Asturian cider, Grenadian cacao, Kyoto tea, Seoul kimchi, Québec maple season and food grown on Mexico City's chinampas. Oaxaca follows agave through heat and copper, while Doha uses qahwa to read the social language of a majlis. Chios begins with clear mastiha resin on a tree. In Appenzellerland, a gallery above a working dairy connects the tasting to milk, curd and cellar. Pinglin lets a seasonal farm visit begin with the leaf before the cup. Each is a different kind of public encounter. Together they show why flavour can reveal climate, labour, technique and social rhythm. Use the official links to check what is currently offered, and let the guide sharpen the questions you bring to the table.",
     guideSlugs: [
       "a-morning-at-the-hawker-table",
       "make-halloumi-before-it-reaches-the-plate",
@@ -95,6 +95,7 @@ export const editorialPathways = [
       "read-the-language-of-the-coffee-cup",
       "follow-mastiha-back-to-the-tree",
       "follow-appenzeller-from-vat-to-cellar",
+      "make-tea-before-taipei-drinks-it",
     ],
     visitorUse:
       "Choose one guide near a route you already have, then compare access, timing and participation before adding it to your journey.",
@@ -225,9 +226,9 @@ export const editorialPathways = [
     slug: "move-at-the-landscapes-pace",
     kind: "slow-nature",
     title: "Move at the landscape's pace",
-    promise: "Six encounters that reward less distance and more attention.",
+    promise: "Eight encounters that reward less distance and more attention.",
     intro:
-      "Slow travel is useful only when it changes what you notice. Walk the public approach at Kumano Kodo without reducing pilgrimage to a personal challenge. Cross Wadden mudflats at the tide's pace. Wait for starlings above the Danish marshes. Read Lofoten through the fishery behind its mountain views, then read the Namib through the smallest tracks in its dunes. Meet Xochimilco as a living agricultural landscape within Mexico City. Each guide keeps the encounter bounded and asks you to prepare for conditions, local rules and the limits of a short visit.",
+      "Slow travel is useful only when it changes what you notice. Walk the public approach at Kumano Kodo without reducing pilgrimage to a personal challenge. Cross Wadden mudflats at the tide's pace. Wait for starlings above the Danish marshes. Read Lofoten through the fishery behind its mountain views, then read the Namib through the smallest tracks in its dunes. Meet Xochimilco as a living agricultural landscape within Mexico City. In Jatiluwih, follow the water that holds terraces together. In Monument Valley, let a Navajo-managed route replace the assumption that every visible place is open. Each guide keeps the encounter bounded and asks you to prepare for conditions, local rules and the limits of a short visit.",
     guideSlugs: [
       "leave-room-for-devotion",
       "walk-where-the-sea-was",
@@ -235,6 +236,8 @@ export const editorialPathways = [
       "the-fish-behind-the-islands",
       "mexico-city-grown-on-water",
       "read-the-desert-at-ground-level",
+      "follow-balis-water-before-the-rice",
+      "read-monument-valley-beyond-the-scenic-drive",
     ],
     visitorUse:
       "Choose one landscape, read its responsibility and access sections first, then give it more time than the headline duration suggests.",
@@ -248,7 +251,7 @@ export const editorialPathways = [
     promise:
       "A compact introduction to how Experience Authority helps you travel.",
     intro:
-      "New here? Start with a place you recognise, then notice the EA difference. A Singapore breakfast reveals shared food culture. A Venetian rowing lesson turns movement into skill. Barcelona reframes a public square through a human tower. Istanbul becomes legible from an ordinary ferry, while Mexico City's Sunday avenue becomes a space you can move through under your own power. A Kumano path asks what respectful public access requires. Together, the guides connect inspiration, practical planning, evidence and responsibility without pretending to replace local knowledge.",
+      "New here? Start with a place you recognise, then notice the EA difference. A Singapore breakfast reveals shared food culture. A Venetian rowing lesson turns movement into skill. Barcelona reframes a public square through a human tower. Istanbul becomes legible from an ordinary ferry, while Mexico City's Sunday avenue becomes a space you can move through under your own power. A Kumano path asks what respectful public access requires. Monument Valley makes the same question impossible to ignore at a globally familiar horizon. Together, the guides connect inspiration, practical planning, evidence and responsibility without pretending to replace local knowledge.",
     guideSlugs: [
       "a-city-in-the-water",
       "a-morning-at-the-hawker-table",
@@ -258,6 +261,7 @@ export const editorialPathways = [
       "leave-room-for-devotion",
       "let-the-ferry-redraw-istanbul",
       "ride-the-avenue-when-the-cars-step-aside",
+      "read-monument-valley-beyond-the-scenic-drive",
     ],
     visitorUse:
       "Open the guide closest to your plans, check its evidence and official access route, then save it only if the practical fit is real.",
@@ -269,9 +273,9 @@ export const editorialPathways = [
     kind: "food-and-drink",
     title: "Before the first sip",
     promise:
-      "Six ways to follow rice, grapes, apples, agave and cacao before flavour reaches the glass or table.",
+      "Seven ways to follow rice, tea, grapes, apples, agave and cacao before flavour reaches the glass or table.",
     intro:
-      "Taste becomes more memorable when you can trace what produced it. Begin makgeolli with rice and fermentation in Seoul. Enter Vila Nova de Gaia through the time and vessels behind Port, Asturias through cider poured at a working sidrería and Oaxaca through the transformation of agave. Vienna connects the vineyard to the heuriger table, while Grenada moves back from chocolate to cacao. These are public introductions to different systems, not a ranking of producers or permission to generalise about a whole region. Follow the ingredient, work and time first. Let the tasting confirm the story rather than replace it.",
+      "Taste becomes more memorable when you can trace what produced it. Begin makgeolli with rice and fermentation in Seoul, then meet Pinglin tea as a leaf before it becomes a cup. Enter Vila Nova de Gaia through the time and vessels behind Port, Asturias through cider poured at a working sidrería and Oaxaca through the transformation of agave. Vienna connects the vineyard to the heuriger table, while Grenada moves back from chocolate to cacao. These are public introductions to different systems, not a ranking of producers or permission to generalise about a whole region. Follow the ingredient, work and time first. Let the tasting confirm the story rather than replace it.",
     guideSlugs: [
       "begin-with-rice-not-the-bottle",
       "taste-what-time-does-to-port",
@@ -279,6 +283,7 @@ export const editorialPathways = [
       "follow-the-agave-into-the-still",
       "the-vineyard-at-the-table",
       "before-the-chocolate-bar",
+      "make-tea-before-taipei-drinks-it",
     ],
     visitorUse:
       "Compare the part of the process each guide makes visible, then confirm current access, age rules, transport and tasting arrangements at the official source.",

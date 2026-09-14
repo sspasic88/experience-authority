@@ -5,6 +5,9 @@ export const guideReleases = [
   {
     date: "2026-09-14",
     slugs: [
+      "read-monument-valley-beyond-the-scenic-drive",
+      "follow-balis-water-before-the-rice",
+      "make-tea-before-taipei-drinks-it",
       "follow-appenzeller-from-vat-to-cellar",
       "watch-a-dhow-take-shape-beside-the-creek",
       "follow-medellins-flowers-back-to-the-farm",

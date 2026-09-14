@@ -460,6 +460,39 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "Which symbol of a place would become less generic if you saw it before it was finished?",
   },
+  {
+    date: "2026-10-24",
+    slug: "read-monument-valley-beyond-the-scenic-drive",
+    title: "The famous road is only one line through this landscape.",
+    angle:
+      "Monument Valley may feel familiar before you arrive. Two buttes, a straight road and a thousand repeated frames can create that illusion. Begin instead with the current Navajo Nation Parks operator list. A guided backcountry route moves through land whose access is managed, where names, stories and formations do not become public property simply because the horizon is famous. The deeper discovery is not a hidden photograph. It is the authority to decide where a visitor goes, what a guide shares and when the road should stop.",
+    notice:
+      "The moment the guide's route makes the postcard feel incomplete. Follow every instruction on places, names, photography and recording.",
+    question:
+      "Which landscape have you mistaken for familiar because you recognised its most repeated view?",
+  },
+  {
+    date: "2026-10-25",
+    slug: "follow-balis-water-before-the-rice",
+    title: "Before the terrace becomes green, the water has to agree.",
+    angle:
+      "Jatiluwih is easy to photograph as a sequence of green curves. A local farming guide can turn those curves back into decisions. Water arrives, changes height, divides and reaches fields through a subak system that connects canals, farmers and water temples. The landscape is still cultivated, so the most useful route is not the one that finds the widest view. It is the one that helps you notice shared infrastructure without stepping outside the path or turning work and ceremony into scenery.",
+    notice:
+      "One place where the level or direction of water changes. Never touch a gate, block a channel or step into a planted terrace.",
+    question:
+      "What beautiful landscape would become more remarkable if you could read the system that keeps it working?",
+  },
+  {
+    date: "2026-10-26",
+    slug: "make-tea-before-taipei-drinks-it",
+    title: "The cup begins with a leaf you can misread.",
+    angle:
+      "In Pinglin, a seasonal farm reservation can begin before tea has colour, aroma or a name on a package. The host shows you which leaf to pick and which to leave, then opens only the processing steps available that day. A complete commercial cycle will not fit neatly into one visit, and that is precisely why the sequence matters. Compare the fresh leaf, the material changed by your hands and the tea poured at the end. Flavour becomes less mysterious without becoming simple.",
+    notice:
+      "The exact leaf the host chooses and the reason the neighbouring leaf stays on the plant. Pick nothing until invited.",
+    question:
+      "Which finished flavour would you understand differently if you first met its raw material in the hands of the person growing it?",
+  },
 ];
 
 export function availableDiscoveries(

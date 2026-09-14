@@ -4,7 +4,7 @@
   "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
   "originalCandidateCount": 200,
   "originalProtectedCount": 46,
-  "catalogueCount": 86,
+  "catalogueCount": 89,
   "mappings": [
     {
       "candidateId": 9,
@@ -287,9 +287,54 @@
       "guideId": "ajman-dhow-yard",
       "relation": "narrowed_public_scope",
       "boundary": "Observation from clearly public or visitor-permitted areas at Ajman Creek. Yard entry, builder interaction, tool handling, a managed tour and active construction at a particular time are not promised."
+    },
+    {
+      "candidateId": 47,
+      "guideId": "jatiluwih-subak-trek",
+      "relation": "narrowed_public_scope",
+      "boundary": "A prearranged public trek with a farmer acting as local guide on the route offered by Jatiluwih tourism village. It does not open every field, irrigation structure, temple, ritual or community decision to visitors."
+    },
+    {
+      "candidateId": 53,
+      "guideId": "pinglin-green-light-tea",
+      "relation": "narrowed_public_scope",
+      "boundary": "An advance reservation at one named Pinglin farm for the seasonal picking and production steps confirmed by the host. A complete processing cycle, every tea variety and a fixed take-home result are not promised."
+    },
+    {
+      "candidateId": 75,
+      "guideId": "monument-valley-guided-backcountry",
+      "relation": "protected_public_programme_only",
+      "boundary": "A route booked with an operator currently listed by Navajo Nation Parks and Recreation. Original protected-candidate status remains. No access beyond the guide-led route and no right to record or repeat every place, name or story is inferred."
     }
   ],
   "newSourceReviews": [
+    {
+      "candidateId": 47,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-14",
+      "finding": "Indonesia's Ministry of Tourism village platform currently lists a public Jatiluwih trek with a farmer acting as local guide and a direct village contact route. UNESCO establishes the living subak context and its tourism pressures. This supports a bounded guided trail, not unrestricted field, irrigation, temple or ritual access.",
+      "sourceUrl": "https://jadesta.kemenparekraf.go.id/atraksi/trekking_12",
+      "nextAction": "Keep the farmer-led public route and living-landscape limits explicit. Recheck the listing, guide arrangement and current visitor conditions by 13 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 53,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-14",
+      "finding": "New Taipei City Travel currently identifies Green Light Tea Plantation and its owner, marks the farm open by appointment and advertises tea picking and tea production by advance reservation. This supports one named farm route, subject to seasonal steps and direct confirmation.",
+      "sourceUrl": "https://newtaipei.travel/en/attractions/detail/400319",
+      "nextAction": "Keep the named-farm, advance-reservation and seasonal-processing boundaries explicit. Recheck public access and the listing's differing telephone fields by 13 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 75,
+      "status": "protected_public_programme_only",
+      "checkedOn": "2026-09-14",
+      "finding": "Navajo Nation Parks and Recreation currently publishes an authorised Monument Valley operator list, seasonal hours, 2026 fees and independent-drive restrictions. One listed operator publicly offers a guided backcountry route. This supports only the selected guide-led programme and does not relax the original protection review.",
+      "sourceUrl": "https://navajonationparks.org/guided-tour-operators/monument-valley-tour-operators/",
+      "nextAction": "Preserve the operator-list, guide authority, route and recording boundaries at every surface. Recheck the current list, fees and park conditions by 13 December 2026.",
+      "outreachPerformed": false
+    },
     {
       "candidateId": 28,
       "status": "related_alternative",

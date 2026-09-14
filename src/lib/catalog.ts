@@ -232,6 +232,24 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "taiwan",
+    name: "Taiwan",
+    region: "pinglin",
+    regionName: "Pinglin",
+    intro:
+      "Follow tea from a Pinglin hillside into the hands, timing and judgment that begin shaping the cup before Taipei drinks it.",
+    image: null,
+  },
+  {
+    slug: "indonesia",
+    name: "Indonesia",
+    region: "jatiluwih",
+    regionName: "Jatiluwih",
+    intro:
+      "Read Jatiluwih through the water, terraces and shared work of subak, with a local farming guide setting the route and its limits.",
+    image: null,
+  },
+  {
     slug: "switzerland",
     name: "Switzerland",
     region: "appenzellerland",
@@ -309,7 +327,7 @@ export const territories = [
     region: "new-york-city",
     regionName: "New York City",
     intro:
-      "Make a New York bagel, follow a returnable seltzer siphon through an active Brooklyn works and enter the hospital complex on Ellis Island's other side.",
+      "Move from New York's food, working systems and difficult harbour history to a Navajo-managed route beyond Monument Valley's familiar scenic drive.",
     image: null,
   },
   {
