@@ -8,6 +8,7 @@
 - All 67 automated tests, type checking, formatting and the optimized production build pass. The indexable local production smoke passed 147 pages and 12 expected not-found routes with 147 distinct CSP nonces and no failures.
 - The responsive browser audit passed 228 views at 390, 768 and 1440 pixels, encountered 365 internal links and found no broken images, horizontal overflow, browser errors or automated WCAG A/AA violations. Manual inspection confirmed the new hero crops, headline wraps, credits and practical boundaries.
 - The indexable sitemap contains 250 routes. Every indexed route has a valid response, title, description and canonical URL, with no duplicate title or description groups.
+- Commit `4ed937b` was deployed to `experienceauthority.com`. The live 147-page smoke and complete 250-route SEO audit repeated successfully after deployment.
 
 ## Content expansion batch 25 — 14 September 2026
 
