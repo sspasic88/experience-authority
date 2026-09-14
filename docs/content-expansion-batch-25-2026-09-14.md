@@ -38,4 +38,6 @@ The full responsive browser audit passed 219 views at 390, 768 and 1440 pixels, 
 
 The production-shaped sitemap contains 242 indexable routes. Every route has a title, description and canonical URL, with no missing or duplicate title and description groups. All six current access, context and image-source pages used by the two guides returned HTTP 200 on 14 September.
 
+Commit `a6aa8d5` was pushed to the separate Experience Authority repository and deployed at `experienceauthority.com`. The live 141-page smoke and the complete 242-route SEO pass repeated successfully after deployment, with no missing or duplicate title and description groups.
+
 These checks do not constitute field validation, legal advice, rights clearance, a safety assessment or a guarantee of current availability. Source and access checks remain date-bounded and must be repeated before their review deadlines.
