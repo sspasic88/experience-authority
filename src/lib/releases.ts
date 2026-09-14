@@ -5,6 +5,9 @@ export const guideReleases = [
   {
     date: "2026-09-14",
     slugs: [
+      "learn-hong-kong-one-hand-at-a-time",
+      "draw-with-silver-in-skopjes-old-bazaar",
+      "read-a-ship-before-the-sails-arrive",
       "read-monument-valley-beyond-the-scenic-drive",
       "follow-balis-water-before-the-rice",
       "make-tea-before-taipei-drinks-it",

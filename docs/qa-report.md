@@ -2,12 +2,12 @@
 
 ## Content expansion batch 26 — 14 September 2026
 
-- The current catalogue contains 89 public-source guides in 48 countries and territories, with 44 authored daily discoveries through 26 October. The dated reconciliation now maps 50 of the original 200 candidates without changing the protected register or conferring EA Selected status.
+- The current catalogue contains 92 public-source guides in 50 countries and territories, with 47 authored daily discoveries through 29 October. The dated reconciliation now maps 53 of the original 200 candidates without changing the protected register or conferring EA Selected status.
 - Monument Valley is published only as a protected public programme through a currently listed Navajo Nation Parks operator. Jatiluwih is narrowed to a farmer-led public village trek. Pinglin is narrowed to one named appointment-only tea farm and the seasonal steps it confirms.
 - All three photographs passed manual hero and card review. Each has a direct source credit, rights record and exact depiction boundary. The current Pinglin photograph is explicitly separated from the named farm's access evidence.
 - All 67 automated tests, type checking, formatting and the optimized production build pass. The indexable local production smoke passed 147 pages and 12 expected not-found routes with 147 distinct CSP nonces and no failures.
 - The responsive browser audit passed 228 views at 390, 768 and 1440 pixels, encountered 365 internal links and found no broken images, horizontal overflow, browser errors or automated WCAG A/AA violations. Manual inspection confirmed the new hero crops, headline wraps, credits and practical boundaries.
-- The indexable sitemap contains 250 routes. Every indexed route has a valid response, title, description and canonical URL, with no duplicate title or description groups.
+- The indexable sitemap contains 258 routes. The batch 27 local production check covered all routes, with the complete live SEO repeat recorded after deployment.
 - Commit `4ed937b` was deployed to `experienceauthority.com`. The live 147-page smoke and complete 250-route SEO audit repeated successfully after deployment.
 
 ## Content expansion batch 25 — 14 September 2026

@@ -24,6 +24,53 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "learn-hong-kong-one-hand-at-a-time": {
+    modes: ["hands-on", "watch-listen"],
+    time: "short",
+    keywords: [
+      "Hong Kong",
+      "Central",
+      "PMQ",
+      "mahjong",
+      "Cantonese mahjong",
+      "tiles",
+      "game",
+      "play",
+      "class",
+    ],
+  },
+  "draw-with-silver-in-skopjes-old-bazaar": {
+    modes: ["hands-on"],
+    time: "full-day",
+    keywords: [
+      "Skopje",
+      "North Macedonia",
+      "Old Bazaar",
+      "filigree",
+      "silver",
+      "jewellery",
+      "jewelry",
+      "wire",
+      "craft",
+      "workshop",
+    ],
+  },
+  "read-a-ship-before-the-sails-arrive": {
+    modes: ["watch-listen", "outdoors"],
+    time: "own-pace",
+    keywords: [
+      "Bulukumba",
+      "Bonto Bahari",
+      "South Sulawesi",
+      "Indonesia",
+      "pinisi",
+      "phinisi",
+      "shipbuilding",
+      "boatbuilding",
+      "timber",
+      "shipyard",
+    ],
+  },
   "follow-medellins-flowers-back-to-the-farm": {
     modes: ["watch-listen", "outdoors"],
     time: "half-day",

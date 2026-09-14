@@ -2,7 +2,7 @@
 
 Public-source edition live at https://experienceauthority.com, deployed from the separate EA GitHub repository to its own Vercel project on 12 September 2026.
 
-Current release scope: 89 guides across 48 countries and territories, 12 editorial collections, nine Journal articles, 14 local planning chapters and 44 dated daily discoveries prepared for 13 September to 26 October. Includes an actual-publication log, private journey planning, batch saving, sharing and credited photographs. See [content expansion batch 26](content-expansion-batch-26-2026-09-14.md). Prepared future editions are not already public. Production status requires a verified deployment, not this document alone.
+Current release scope: 92 guides across 50 countries and territories, 12 editorial collections, nine Journal articles, 14 local planning chapters and 47 dated daily discoveries prepared for 13 September to 29 October. Includes an actual-publication log, private journey planning, batch saving, sharing and credited photographs. See [content expansion batch 27](content-expansion-batch-27-2026-09-14.md). Prepared future editions are not already public. Production status requires a verified deployment, not this document alone.
 
 ## Implemented
 

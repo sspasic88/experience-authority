@@ -16,6 +16,7 @@ import { mediaBatch23 } from "./media-batch-23";
 import { mediaBatch24 } from "./media-batch-24";
 import { mediaBatch25 } from "./media-batch-25";
 import { mediaBatch26 } from "./media-batch-26";
+import { mediaBatch27 } from "./media-batch-27";
 export type GuideMedia = {
   guideId: string;
   src: string;
@@ -36,6 +37,7 @@ export type GuideMedia = {
 };
 
 export const publicGuideMedia: readonly GuideMedia[] = [
+  ...mediaBatch27,
   ...mediaBatch26,
   ...mediaBatch25,
   ...mediaBatch24,

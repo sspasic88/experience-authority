@@ -31,9 +31,9 @@ export const editorialPathways = [
     slug: "the-pleasure-of-being-a-beginner",
     kind: "learned-skills",
     title: "The pleasure of being a beginner",
-    promise: "Eight ways to give your hands a new problem.",
+    promise: "Ten ways to give your hands a new problem.",
     intro:
-      "A first attempt makes a familiar place less predictable. In Porto, a brush turns the tile you noticed on a facade into a decision of your own. Fez puts a hammer, a small piece of clay and a geometric pattern in the same frame. Suchitoto begins with a fold that tells indigo where not to go. Cambridge makes shared timing physical through a bell. Biarritz adds a wall and a ball, while Bo-Kaap, Salta and Loíza offer different first steps through food and rhythm. These are public introductions, not shortcuts to mastery. Choose the attempt you would enjoy even if the result were imperfect, then read the current programme before booking.",
+      "A first attempt makes a familiar place less predictable. In Porto, a brush turns the tile you noticed on a facade into a decision of your own. Fez puts a hammer, clay and geometry in the same frame. Suchitoto begins with a fold that tells indigo where not to go. Skopje asks fine silver wire to hold a shape. Hong Kong turns four hands of mahjong into one changing problem. Cambridge makes shared timing physical through a bell, while Biarritz, Bo-Kaap, Salta and Loíza offer different first steps through play, food and rhythm. These are public introductions, not shortcuts to mastery. Choose the attempt you would enjoy even if the result were imperfect, then read the current programme before booking.",
     guideSlugs: [
       "paint-the-pattern-you-noticed",
       "fold-a-pattern-into-the-blue",
@@ -43,6 +43,8 @@ export const editorialPathways = [
       "learn-the-fold-in-salta",
       "let-the-drum-lead-the-first-step",
       "cut-the-first-piece-of-a-pattern",
+      "draw-with-silver-in-skopjes-old-bazaar",
+      "learn-hong-kong-one-hand-at-a-time",
     ],
     visitorUse:
       "Compare what you actually do, how long the session asks for and what the instructor supplies. Keep room to collect a fired tile later or confirm a seasonal class date before fixing your route.",
@@ -107,9 +109,9 @@ export const editorialPathways = [
     kind: "water-and-coast",
     title: "Where land meets water",
     promise:
-      "Follow seven coastlines where water shapes movement, work and attention.",
+      "Follow eight coastlines where water shapes movement, work and attention.",
     intro:
-      "Water is not scenery in these guides. It sets the route, the working day and the limits of access. Learn Venetian rowing, cross exposed tidal ground with a qualified guide, read Lofoten through its fishery, watch Oostduinkerke's shrimp fishers work with horses and enter Reykjavík through a public pool. In Istanbul, an ordinary municipal ferry makes the Bosphorus legible as transport. Beside Ajman Creek, a working boatyard reveals what has to happen before a dhow meets the water. Each asks you to notice the system that makes the encounter possible before treating water as a view.",
+      "Water is not scenery in these guides. It sets the route, the working day and the limits of access. Learn Venetian rowing, cross exposed tidal ground with a qualified guide, read Lofoten through its fishery, watch Oostduinkerke's shrimp fishers work with horses and enter Reykjavík through a public pool. In Istanbul, an ordinary municipal ferry makes the Bosphorus legible as transport. Beside Ajman Creek, a working boatyard reveals what has to happen before a dhow meets the water. In Bulukumba, an unfinished wooden hull turns the same question inside out through ribs, planks and inherited knowledge. Each asks you to notice the system that makes the encounter possible before treating water as a view.",
     guideSlugs: [
       "venice-through-an-oar",
       "walk-where-the-sea-was",
@@ -118,6 +120,7 @@ export const editorialPathways = [
       "a-city-in-the-water",
       "let-the-ferry-redraw-istanbul",
       "watch-a-dhow-take-shape-beside-the-creek",
+      "read-a-ship-before-the-sails-arrive",
     ],
     visitorUse:
       "Use this pathway to compare weather dependence, physical participation and booking needs before building a coastal day.",
@@ -141,6 +144,8 @@ export const editorialPathways = [
       "the-pour-before-the-glass",
       "kimchi-before-the-jar",
       "cut-the-first-piece-of-a-pattern",
+      "draw-with-silver-in-skopjes-old-bazaar",
+      "learn-hong-kong-one-hand-at-a-time",
     ],
     visitorUse:
       "Compare the teaching format, duration and preparation notes, then choose the skill you are willing to practise with patience.",
@@ -199,7 +204,7 @@ export const editorialPathways = [
     promise:
       "Familiar cities, entered through practices and systems that remain alive.",
     intro:
-      "A landmark can tell you where you are. A practice can tell you how a city works. Begin Barcelona with a human tower, Singapore at a hawker table, Seoul through kimchi and Venice through an oar. Cross Istanbul by municipal ferry, then give Mexico City's Sunday avenue back to feet and bicycles. Follow Medellín's famous flowers into the rural work of Santa Elena. Busan adds the etiquette of a jjimjilbang, Fez the precision of zellige and Montevideo a candombe workshop with a clearly defined public. These are not claims to know a whole city. They are practical starting points that move attention from the skyline to the routines and shared infrastructure beneath it.",
+      "A landmark can tell you where you are. A practice can tell you how a city works. Begin Barcelona with a human tower, Singapore at a hawker table, Seoul through kimchi and Venice through an oar. Cross Istanbul by municipal ferry, then give Mexico City's Sunday avenue back to feet and bicycles. Sit at a Cantonese mahjong table in Hong Kong and follow Medellín's famous flowers into the rural work of Santa Elena. Busan adds the etiquette of a jjimjilbang, Fez the precision of zellige and Montevideo a candombe workshop with a clearly defined public. These are not claims to know a whole city. They are practical starting points that move attention from the skyline to the routines and shared infrastructure beneath it.",
     guideSlugs: [
       "the-weight-of-the-tower",
       "a-morning-at-the-hawker-table",
@@ -216,6 +221,7 @@ export const editorialPathways = [
       "cut-the-first-piece-of-a-pattern",
       "find-the-pulse-before-the-parade",
       "follow-medellins-flowers-back-to-the-farm",
+      "learn-hong-kong-one-hand-at-a-time",
     ],
     visitorUse:
       "Pick the city already on your route and use its guide as the anchor for one slower half-day beyond the standard highlights.",

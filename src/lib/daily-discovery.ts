@@ -341,14 +341,14 @@ export const dailyDiscoveries: readonly Discovery[] = [
   },
   {
     date: "2026-10-13",
-    slug: "make-the-bagel-before-new-york-serves-it",
-    title: "New York's familiar ring begins as a set of choices.",
+    slug: "read-a-ship-before-the-sails-arrive",
+    title: "The ship is most revealing before it looks finished.",
     angle:
-      "A bagel arrives at the counter looking complete and obvious. In a hands-on class, the ring has to be made before it can become an icon. Dough, fermentation, shaping, boiling and baking each leave a mark on the final texture. Make the sequence yourself and the useful question stops being who is number one. It becomes how different bakers decide what a New York bagel should be.",
+      "A finished sailing vessel can hide the decisions that hold it together. On Bulukumba's working coast, an unfinished wooden hull makes them immense. Ribs repeat around one worker. Planks meet before the outer curve becomes smooth. Visit only from a safe public edge and let the structure carry the discovery. Three days later, the current public festival offers a separate way to see how the maritime tradition enters Bulukumba's shared calendar.",
     notice:
-      "The point where a rough piece of dough begins to hold its ring. Follow every allergy and hot-water instruction given by the class.",
+      "One joint, support or change of curve that helps many pieces behave like one hull. Never enter a work zone without a clear invitation.",
     question:
-      "Which familiar food would become more interesting if you replaced a ranking with one hour of making?",
+      "Which finished object would become more remarkable if you could first read the structure hidden inside it?",
   },
   {
     date: "2026-10-14",
@@ -492,6 +492,39 @@ export const dailyDiscoveries: readonly Discovery[] = [
       "The exact leaf the host chooses and the reason the neighbouring leaf stays on the plant. Pick nothing until invited.",
     question:
       "Which finished flavour would you understand differently if you first met its raw material in the hands of the person growing it?",
+  },
+  {
+    date: "2026-10-27",
+    slug: "make-the-bagel-before-new-york-serves-it",
+    title: "New York's familiar ring begins as a set of choices.",
+    angle:
+      "A bagel arrives at the counter looking complete and obvious. In a hands-on class, the ring has to be made before it can become an icon. Dough, fermentation, shaping, boiling and baking each leave a mark on the final texture. Make the sequence yourself and the useful question stops being who is number one. It becomes how different bakers decide what a New York bagel should be.",
+    notice:
+      "The point where a rough piece of dough begins to hold its ring. Follow every allergy and hot-water instruction given by the class.",
+    question:
+      "Which familiar food would become more interesting if you replaced a ranking with one hour of making?",
+  },
+  {
+    date: "2026-10-28",
+    slug: "learn-hong-kong-one-hand-at-a-time",
+    title: "Four walls of tiles. One problem that never sits still.",
+    angle:
+      "Hong Kong gives mahjong a familiar visual language, but recognition is not the same as knowing how the table moves. In a beginner class, tile families become possible hands, one discard changes what three other people can do and etiquette keeps competition social. The electronic table handles the shuffle. Use that saved time to notice how often your best next move depends on remembering what everyone else has already let go.",
+    notice:
+      "The discard that changes your plan. Learn the rules used at this table before comparing them with another version of the game.",
+    question:
+      "Which game would reveal more about a place if you learned how people share the table, not only how someone wins?",
+  },
+  {
+    date: "2026-10-29",
+    slug: "draw-with-silver-in-skopjes-old-bazaar",
+    title: "The lightest-looking object can demand the steadiest hand.",
+    angle:
+      "Silver filigree can look almost weightless in a finished pendant. A two-day beginner workshop in Skopje turns that delicacy back into structure. Fine wire bends, a frame sets the boundary and each small element has to fit before heat can hold the whole together. The first project need not be perfect. Its value is showing how much patience and control sit inside an ornament the eye might otherwise cross in a second.",
+    notice:
+      "The frame beneath the decoration. Follow every instruction around wire, sharp tools, heat and soldering.",
+    question:
+      "Which intricate object have you called delicate without noticing the discipline required to make it hold?",
   },
 ];
 

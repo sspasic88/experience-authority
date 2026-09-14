@@ -4,7 +4,7 @@
   "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
   "originalCandidateCount": 200,
   "originalProtectedCount": 46,
-  "catalogueCount": 89,
+  "catalogueCount": 92,
   "mappings": [
     {
       "candidateId": 9,
@@ -305,9 +305,54 @@
       "guideId": "monument-valley-guided-backcountry",
       "relation": "protected_public_programme_only",
       "boundary": "A route booked with an operator currently listed by Navajo Nation Parks and Recreation. Original protected-candidate status remains. No access beyond the guide-led route and no right to record or repeat every place, name or story is inferred."
+    },
+    {
+      "candidateId": 48,
+      "guideId": "bulukumba-pinisi-building",
+      "relation": "narrowed_public_scope",
+      "boundary": "Careful observation from a clearly public approach along Bulukumba's officially listed working boatbuilding coast. Entry to a yard, worker interaction, active construction, a managed tour and access to close technique or ritual knowledge are not promised."
+    },
+    {
+      "candidateId": 109,
+      "guideId": "skopje-mata-filigree",
+      "relation": "narrowed_public_scope",
+      "boundary": "MATA's two-day beginner Silver Weekend when a group and teacher are available. The exact artisan, studio, design and advanced technique remain outside the promise until confirmed for the session."
+    },
+    {
+      "candidateId": 140,
+      "guideId": "hong-kong-glocal-mahjong",
+      "relation": "narrowed_public_scope",
+      "boundary": "A named public Cantonese Mahjong basics class at PMQ, not entry to a neighbourhood association, family table, commercial mahjong school or gambling setting. Rules and scoring apply to the taught format."
     }
   ],
   "newSourceReviews": [
+    {
+      "candidateId": 48,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-14",
+      "finding": "Bulukumba's tourism department currently lists the working boatbuilding coast across four Bonto Bahari villages as a visitor site where ships can be observed under construction. The page publishes no booking method, managed package or reliable staffed hours, so the original yard premise is narrowed to safe public observation.",
+      "sourceUrl": "https://disparpora.bulukumbakab.go.id/en/portofolio/situs-pembuatan-perahu-pinisi/",
+      "nextAction": "Keep the public-edge and active-workplace boundaries prominent. Recheck the local visitor listing, safe approach and separate 2026 festival page by 13 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 109,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-14",
+      "finding": "MATA currently lists Silver Weekend as a beginner filigree workshop over two days at four hours per day for four to six participants, with materials included and a small project. Timing, teacher and venue depend on the formed group.",
+      "sourceUrl": "https://matacraft.org.mk/en/workshops/",
+      "nextAction": "Keep the need for written confirmation of date, teacher, venue, language, price and inclusions explicit. Recheck the workshop listing by 13 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 140,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-14",
+      "finding": "Glocal Mahjong currently publishes a two-hour Cantonese Mahjong basics class for two to four participants at PMQ in Central, with daily advance-booking windows, three delivery languages and a route for solo visitors to join scheduled classes.",
+      "sourceUrl": "https://www.glocalmahjong.com/products/mahjong-101-class-for-beginners",
+      "nextAction": "Keep the named beginner class distinct from private, neighbourhood and gambling settings. Recheck schedule, venue, price and public booking route by 13 December 2026.",
+      "outreachPerformed": false
+    },
     {
       "candidateId": 47,
       "status": "narrowed_public_scope",

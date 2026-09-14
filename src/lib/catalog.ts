@@ -232,6 +232,24 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "hong-kong",
+    name: "Hong Kong",
+    region: "central",
+    regionName: "Central",
+    intro:
+      "Take a seat in Central and learn Hong Kong through the tiles, etiquette and shared decisions of a Cantonese mahjong table.",
+    image: null,
+  },
+  {
+    slug: "north-macedonia",
+    name: "North Macedonia",
+    region: "skopje",
+    regionName: "Skopje",
+    intro:
+      "Enter Skopje's Old Bazaar through two days of fine silver wire, patient fitting and a first filigree project of your own.",
+    image: null,
+  },
+  {
     slug: "taiwan",
     name: "Taiwan",
     region: "pinglin",
@@ -246,7 +264,7 @@ export const territories = [
     region: "jatiluwih",
     regionName: "Jatiluwih",
     intro:
-      "Read Jatiluwih through the water, terraces and shared work of subak, with a local farming guide setting the route and its limits.",
+      "Follow Bali's shared water through Jatiluwih, then meet the ribs and planks of South Sulawesi's boatbuilding coast before the sails arrive.",
     image: null,
   },
   {
