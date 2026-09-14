@@ -42,8 +42,8 @@ test("Arcachon stays a bay-wide chapter regardless of guide order or a more spec
   }
 });
 
-test("guide set contains eighty-one distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 81);
+test("guide set contains eighty-four distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 84);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -52,13 +52,13 @@ test("guide set contains eighty-one distinct, sourced public experiences, not Se
     new Set(publicGuides.map((p) => p.slug)).size,
     publicGuides.length,
   );
-  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 41);
+  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 44);
   assert.equal(
     new Set(territories.map((place) => place.slug)).size,
     territories.length,
   );
   for (const p of publicGuides) {
-    assert.equal(canPublishGuide(p, "2026-09-13"), true, p.slug);
+    assert.equal(canPublishGuide(p, "2026-09-14"), true, p.slug);
     assert.equal(p.status, "public_guide");
     assert.equal(p.demo, false);
     const media = guideMediaFor(p.id);

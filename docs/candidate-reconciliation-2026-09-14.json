@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-13",
+  "date": "2026-09-14",
   "basis": "Catalogue reconciliation against the original 200-candidate register. This is not a fresh source audit of all 200, local validation or EA Selected approval. Original protection decisions remain unchanged.",
   "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
   "originalCandidateCount": 200,
   "originalProtectedCount": 46,
-  "catalogueCount": 81,
+  "catalogueCount": 84,
   "mappings": [
     {
       "candidateId": 9,
@@ -257,9 +257,72 @@
       "guideId": "salta-balderrama-pena",
       "relation": "narrowed_public_scope",
       "boundary": "Public peña hospitality, subject to the venue's programme and booking terms."
+    },
+    {
+      "candidateId": 3,
+      "guideId": "visnja-gora-carniolan-bee-house",
+      "relation": "narrowed_public_scope",
+      "boundary": "Public museum exhibition and observation through a glass hive. Bee handling, apiary access and a hands-on workshop are not promised."
+    },
+    {
+      "candidateId": 24,
+      "guideId": "chios-mastic-museum",
+      "relation": "related_alternative",
+      "boundary": "The public museum, outdoor tree exhibit and processing story make mastiha legible but do not fulfil the original promise of joining a working harvest."
+    },
+    {
+      "candidateId": 85,
+      "guideId": "medellin-santa-elena-silletero-farms",
+      "relation": "narrowed_public_scope",
+      "boundary": "A confirmed visit to one named farm from the current official guide. The exact activity varies by host, and parade participation or unrestricted family and farm access are not promised."
     }
   ],
   "newSourceReviews": [
+    {
+      "candidateId": 3,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-14",
+      "finding": "The House of the Carniolan Bee currently publishes an ordinary visitor route to an exhibition with virtual interpretation and real glass hives containing living bees. This supports a museum encounter in Višnja Gora, not bee handling, an apiary visit or the original broader hands-on premise.",
+      "sourceUrl": "https://www.hisakranjskecebele.si/en/",
+      "nextAction": "Keep the glass-hive and ordinary-admission boundary explicit. Recheck the exhibition, live-hive status and visitor access by 13 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 24,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-14",
+      "finding": "Chios Mastic Museum currently offers a public exhibition, outdoor mastic-tree habitat and processing interpretation. This provides strong public access to the material and its system, but it does not establish visitor participation in a working mastiha harvest.",
+      "sourceUrl": "https://www.piop.gr/en/diktuo-mouseion/chios-mastic-museum/",
+      "nextAction": "Publish only as a museum alternative. Continue looking for a clearly public, current harvest programme before narrowing the original hands-on candidate.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 85,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-14",
+      "finding": "Medellín's official 2026 visitor material lists nearly seventeen Santa Elena farms and describes year-round garden visits, family interpretation and silleta making context. Some, but not all, farms advertise small hands-on or food additions, so the visitor must confirm one specific host and format.",
+      "sourceUrl": "https://www.medellin.travel/silletero-culture-the-tradition-that-made-medellin-bloom/?lang=en",
+      "nextAction": "Keep the farm-by-farm variation visible and recheck the official directory and direct access route by 13 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 36,
+      "status": "evidence_hold",
+      "checkedOn": "2026-09-14",
+      "finding": "Current public sources support a Konigil paper-making visitor route near Samarkand, but the reviewed exact-source photographs did not meet EA's current publication standard at guide and card scale.",
+      "sourceUrl": "https://www.meros.uz/en/object/fabrika-meros-i-samarkandskaya-bumaga",
+      "nextAction": "Keep the candidate off the public catalogue until an exact, high-quality and responsibly creditable photograph and a current direct access route can be verified together.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 74,
+      "status": "evidence_hold",
+      "checkedOn": "2026-09-14",
+      "finding": "The Bayou Vermilion District currently publishes a recurring Sunday Cajun or zydeco dance route in Lafayette. Reviewed official and licensed photographs did not yet meet EA's high-end visual threshold without becoming generic or dated.",
+      "sourceUrl": "https://bayouvermiliondistrict.org/tag/bal-du-dimanche/",
+      "nextAction": "Keep the candidate off the public catalogue while retaining the current programme evidence. Recheck for a stronger exact photograph and live schedule before publication.",
+      "outreachPerformed": false
+    },
     {
       "candidateId": 17,
       "status": "narrowed_public_scope",

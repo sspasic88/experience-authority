@@ -1,16 +1,16 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import ledger from "../docs/candidate-reconciliation-2026-09-13.json";
+import ledger from "../docs/candidate-reconciliation-2026-09-14.json";
 import { publicGuides } from "../src/lib/public-guides";
 
 test("dated candidate reconciliation counts scoped coverage without turning alternatives or protected records into approvals", () => {
   assert.equal(ledger.catalogueCount, publicGuides.length);
   assert.equal(ledger.originalCandidateCount, 200);
   assert.equal(ledger.originalProtectedCount, 46);
-  assert.equal(ledger.mappings.length, 42);
+  assert.equal(ledger.mappings.length, 45);
   assert.equal(
     new Set(ledger.mappings.map((item) => item.candidateId)).size,
-    42,
+    45,
   );
   const counts: Record<string, number> = {};
   for (const mapping of ledger.mappings) {
@@ -20,8 +20,8 @@ test("dated candidate reconciliation counts scoped coverage without turning alte
     counts[mapping.relation] = (counts[mapping.relation] ?? 0) + 1;
   }
   assert.deepEqual(counts, {
-    narrowed_public_scope: 37,
-    related_alternative: 4,
+    narrowed_public_scope: 39,
+    related_alternative: 5,
     protected_public_programme_only: 1,
   });
   assert.equal(ledger.eaSelectedApprovals, 0);
@@ -40,7 +40,7 @@ test("dated candidate reconciliation counts scoped coverage without turning alte
     ledger.newSourceReviews.find((review) => review.candidateId === 9)?.status,
     "narrowed_public_scope",
   );
-  for (const candidateId of [17, 25, 81]) {
+  for (const candidateId of [3, 17, 25, 81, 85]) {
     assert.equal(
       ledger.newSourceReviews.find(
         (review) => review.candidateId === candidateId,
@@ -49,8 +49,14 @@ test("dated candidate reconciliation counts scoped coverage without turning alte
     );
   }
   assert.ok(!ledger.mappings.some((mapping) => mapping.candidateId === 108));
+  assert.ok(!ledger.mappings.some((mapping) => mapping.candidateId === 36));
+  assert.ok(!ledger.mappings.some((mapping) => mapping.candidateId === 74));
   assert.equal(
     ledger.mappings.find((mapping) => mapping.candidateId === 20)?.relation,
+    "related_alternative",
+  );
+  assert.equal(
+    ledger.mappings.find((mapping) => mapping.candidateId === 24)?.relation,
     "related_alternative",
   );
 });

@@ -1,4 +1,16 @@
-# QA report — 12 September 2026
+# QA report — 14 September 2026
+
+## Content expansion batch 24 — 14 September 2026
+
+- The current catalogue contains 84 public-source guides in 44 countries and territories, with 39 authored daily discoveries through 21 October. The dated reconciliation now maps 45 of the original 200 candidates without changing the protected register or conferring EA Selected status.
+- Three bounded public guides were added: year-round silletero farm visits in Santa Elena above Medellín, the House of the Carniolan Bee exhibition in Višnja Gora and Chios Mastic Museum as an honest public alternative to the original harvest premise. Each keeps the provider, museum or host boundary explicit and makes no claim of an EA visit, local validation or partnership.
+- Each new guide has a real, source-specific, locally served and clickable photograph with the standard direct credit. The register now records 57 official-source images with uncleared reuse and 27 images with documented licences. Attribution remains separate from permission.
+- Candidate 36, Konigil paper near Samarkand, and candidate 74, a current Sunday Cajun or zydeco dance in Lafayette, remain on evidence hold. Their public kernels are promising, but the exact photographs reviewed did not meet the current EA visual threshold.
+- All 67 automated tests, type checking, formatting and the optimized production build pass. The indexable local production smoke passed 135 pages and 12 expected not-found routes with 135 distinct CSP nonces and no failures.
+- The responsive browser audit passed 207 views at 390, 768 and 1440 pixels, encountered 342 internal links and found no broken images, horizontal overflow, browser errors or automated WCAG A/AA violations. It also passed hero rotation, varied suggestions, direct credits, local continuations, save persistence, image opening, comparison, search, city filtering and mobile navigation.
+- Manual visual review covered the homepage recent-guides row, Places and all three new guide heroes. The photograph crops, title wraps, credits, access links and transitions toward saving, comparing, correcting and continuing all remained clear at desktop scale.
+- The indexable sitemap contains 236 routes. Every indexed route has a title, description and canonical URL, with no duplicate title or description groups. All eight checked access, evidence and image sources for this batch returned HTTP 200 on 14 September.
+- See [content expansion batch 24](content-expansion-batch-24-2026-09-14.md) for the publication and deferral decisions.
 
 ## Content expansion batch 23 — 13 September 2026
 

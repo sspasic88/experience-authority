@@ -78,9 +78,9 @@ export const editorialPathways = [
     kind: "food-and-drink",
     title: "What a place tastes like",
     promise:
-      "Eleven ways to read landscape, work and memory through the table.",
+      "Twelve ways to read landscape, work and memory through flavour and the table.",
     intro:
-      "Begin with appetite, then look further. These guides connect a Singapore hawker breakfast, halloumi made on a route into the Troodos foothills, Vienna's heuriger, Asturian cider, Grenadian cacao, Kyoto tea, Seoul kimchi, Québec maple season and food grown on Mexico City's chinampas. Oaxaca follows agave through heat and copper, while Doha uses qahwa to read the social language of a majlis. Each is a different kind of public encounter. Together they show why eating and drinking can reveal climate, labour, technique and social rhythm. Use the official links to check what is currently offered, and let the guide sharpen the questions you bring to the table.",
+      "Begin with appetite, then look further. These guides connect a Singapore hawker breakfast, halloumi made on a route into the Troodos foothills, Vienna's heuriger, Asturian cider, Grenadian cacao, Kyoto tea, Seoul kimchi, Québec maple season and food grown on Mexico City's chinampas. Oaxaca follows agave through heat and copper, while Doha uses qahwa to read the social language of a majlis. Chios begins even earlier, with clear mastiha resin on the tree and a museum route through cultivation and processing. Each is a different kind of public encounter. Together they show why flavour can reveal climate, labour, technique and social rhythm. Use the official links to check what is currently offered, and let the guide sharpen the questions you bring to the table.",
     guideSlugs: [
       "a-morning-at-the-hawker-table",
       "make-halloumi-before-it-reaches-the-plate",
@@ -93,6 +93,7 @@ export const editorialPathways = [
       "when-the-sap-starts-to-run",
       "follow-the-agave-into-the-still",
       "read-the-language-of-the-coffee-cup",
+      "follow-mastiha-back-to-the-tree",
     ],
     visitorUse:
       "Choose one guide near a route you already have, then compare access, timing and participation before adding it to your journey.",
@@ -195,7 +196,7 @@ export const editorialPathways = [
     promise:
       "Familiar cities, entered through practices and systems that remain alive.",
     intro:
-      "A landmark can tell you where you are. A practice can tell you how a city works. Begin Barcelona with a human tower, Singapore at a hawker table, Seoul through kimchi and Venice through an oar. Cross Istanbul by municipal ferry, then give Mexico City's Sunday avenue back to feet and bicycles. Busan adds the etiquette of a jjimjilbang, Fez the precision of zellige and Montevideo a candombe workshop with a clearly defined public. These are not claims to know a whole city. They are practical starting points that move attention from the skyline to the routines and shared infrastructure beneath it.",
+      "A landmark can tell you where you are. A practice can tell you how a city works. Begin Barcelona with a human tower, Singapore at a hawker table, Seoul through kimchi and Venice through an oar. Cross Istanbul by municipal ferry, then give Mexico City's Sunday avenue back to feet and bicycles. Follow Medellín's famous flowers into the rural work of Santa Elena. Busan adds the etiquette of a jjimjilbang, Fez the precision of zellige and Montevideo a candombe workshop with a clearly defined public. These are not claims to know a whole city. They are practical starting points that move attention from the skyline to the routines and shared infrastructure beneath it.",
     guideSlugs: [
       "the-weight-of-the-tower",
       "a-morning-at-the-hawker-table",
@@ -211,6 +212,7 @@ export const editorialPathways = [
       "spend-an-hour-between-the-hot-rooms",
       "cut-the-first-piece-of-a-pattern",
       "find-the-pulse-before-the-parade",
+      "follow-medellins-flowers-back-to-the-farm",
     ],
     visitorUse:
       "Pick the city already on your route and use its guide as the anchor for one slower half-day beyond the standard highlights.",

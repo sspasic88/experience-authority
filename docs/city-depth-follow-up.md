@@ -23,7 +23,7 @@ No generated photography, provider outreach, permission request, booking, purcha
 
 ## Reconciliation of the original 200
 
-The [dated reconciliation](candidate-reconciliation-2026-09-13.json) links the current catalogue to the historical private register without overwriting its original findings:
+The [dated reconciliation](candidate-reconciliation-2026-09-14.json) links the current catalogue to the historical private register without overwriting its original findings:
 
 - 33 candidates have a narrower public-source guide.
 - One originally protected candidate, Mossman, is described only through its publicly advertised Indigenous-guided programme. Its original protected status is not removed.

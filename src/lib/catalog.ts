@@ -228,6 +228,33 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "colombia",
+    name: "Colombia",
+    region: "medellin-santa-elena",
+    regionName: "Santa Elena, Medellín",
+    intro:
+      "Follow Medellín's flowers into the highland gardens, frames and family work of Santa Elena before the parade reaches the city.",
+    image: null,
+  },
+  {
+    slug: "slovenia",
+    name: "Slovenia",
+    region: "visnja-gora",
+    regionName: "Višnja Gora",
+    intro:
+      "Look into a living hive in Višnja Gora, where the Carniolan bee becomes a route into biology, beekeeping and local history.",
+    image: null,
+  },
+  {
+    slug: "greece",
+    name: "Greece",
+    region: "chios",
+    regionName: "Chios",
+    intro:
+      "Begin with clear resin on a mastic tree, then follow Chios mastiha through cultivation, cooperative work and use.",
+    image: null,
+  },
+  {
     slug: "cyprus",
     name: "Cyprus",
     region: "troodos-foothills",
@@ -594,15 +621,6 @@ export const territories = [
     regionName: "Rome",
     intro:
       "Make pasta, ride the Appian Way and put ancient gods among modern machines in Rome. Then understand Venice through the movement of an oar and the shaping of glass.",
-    image: null,
-  },
-  {
-    slug: "slovenia",
-    name: "Slovenia",
-    region: "julian-alps",
-    regionName: "Julian Alps",
-    intro:
-      "Landscape as something to notice, care for and move through thoughtfully.",
     image: null,
   },
 ] as const;

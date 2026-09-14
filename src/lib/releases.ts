@@ -3,6 +3,14 @@ import type { PublicExperience } from "./catalog";
 /** Publication dates are distinct from source-check dates. Older undated guides are not backfilled. */
 export const guideReleases = [
   {
+    date: "2026-09-14",
+    slugs: [
+      "follow-medellins-flowers-back-to-the-farm",
+      "read-a-hive-from-the-inside",
+      "follow-mastiha-back-to-the-tree",
+    ],
+  },
+  {
     date: "2026-09-13",
     slugs: [
       "make-halloumi-before-it-reaches-the-plate",

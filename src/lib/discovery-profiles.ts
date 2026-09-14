@@ -24,6 +24,53 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "follow-medellins-flowers-back-to-the-farm": {
+    modes: ["watch-listen", "outdoors"],
+    time: "half-day",
+    keywords: [
+      "Medellín",
+      "Medellin",
+      "Colombia",
+      "Santa Elena",
+      "silletero",
+      "flowers",
+      "farm",
+      "garden",
+      "parade",
+      "craft",
+    ],
+  },
+  "read-a-hive-from-the-inside": {
+    modes: ["watch-listen", "slow-down"],
+    time: "short",
+    keywords: [
+      "Slovenia",
+      "Višnja Gora",
+      "Visnja Gora",
+      "Carniolan bee",
+      "bees",
+      "hive",
+      "honeycomb",
+      "museum",
+      "beekeeping",
+    ],
+  },
+  "follow-mastiha-back-to-the-tree": {
+    modes: ["watch-listen", "outdoors"],
+    time: "short",
+    keywords: [
+      "Greece",
+      "Chios",
+      "mastiha",
+      "mastic",
+      "resin",
+      "tree",
+      "Mastichochoria",
+      "museum",
+      "food",
+      "landscape",
+    ],
+  },
   "make-halloumi-before-it-reaches-the-plate": {
     modes: ["hands-on", "at-table"],
     time: "full-day",

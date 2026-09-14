@@ -405,6 +405,39 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "What if the most interesting part of a colour were the boundary that kept it from spreading?",
   },
+  {
+    date: "2026-10-19",
+    slug: "follow-medellins-flowers-back-to-the-farm",
+    title: "Medellín's flowers begin above the city.",
+    angle:
+      "The silletero parade gives Medellín one of its most recognisable images. Santa Elena lets you begin earlier. A farm visit places the flowers beside the gardens, wooden frames and family decisions that come before the public route. Choose one current host and let that specific farm speak for itself. The surprise is not a hidden version of the parade. It is the amount of year-round work carried into a few visible hours.",
+    notice:
+      "The relationship between one flower, its position on the frame and the person who will carry it. Do not pick or handle anything unless the host invites you.",
+    question:
+      "Which famous city image would become more meaningful if you followed it back to the people and place that prepare it?",
+  },
+  {
+    date: "2026-10-20",
+    slug: "read-a-hive-from-the-inside",
+    title: "A hive is not still, even in a museum.",
+    angle:
+      "In Višnja Gora, illuminated honeycomb displays lead toward something no label can freeze. A glass hive lets you watch the Carniolan bee as a living system. Stay with it long enough to stop following one insect and begin noticing circulation, density and repeated movement. The room turns a familiar word into a more difficult question: what does it take for thousands of small actions to become one colony?",
+    notice:
+      "The point where individual movement becomes a pattern. Keep the glass quiet and follow every instruction from the house.",
+    question:
+      "What living system have you mistaken for a single object because you never watched it long enough?",
+  },
+  {
+    date: "2026-10-21",
+    slug: "follow-mastiha-back-to-the-tree",
+    title: "This clear drop belongs to one island.",
+    angle:
+      "Mastiha can arrive as flavour, scent, gum or a name on a package. At Chios Mastic Museum, begin before all of them. A clear resin drop gathers on rough bark, then enters a chain of cultivation knowledge, cleaning, cooperative processing and use. The close view of the tree is enough to make a familiar product strange again. The museum then gives that surprise a landscape and a system.",
+    notice:
+      "The contrast between clear resin and textured bark. Stay within public areas and do not collect plant material.",
+    question:
+      "Which ingredient would change completely if you first met it at the tree, field or water it came from?",
+  },
 ];
 
 export function availableDiscoveries(
