@@ -1,5 +1,18 @@
 # QA report — 15 September 2026
 
+## Content expansion batch 35 — 15 September 2026
+
+- Added five bounded guides from original candidates 64, 138, 165, 175 and 118: Materuni's Migombani coffee process, a current public mugham route in Baku, a steelpan-making tour in Trinidad, public-street observation of El Alto's neo-Andean architecture and a Perast museum and waterfront route with a strict future-event boundary.
+- The catalogue now contains 119 guides across 74 countries and territories. The reconciliation maps 80 of the original 200 candidates through 56 narrowed public scopes, 22 related alternatives and two protected public programmes.
+- The daily edition contains 74 authored discoveries through 25 November 2026. The sitemap contains 335 indexable routes.
+- All 70 tests, TypeScript and the production build passed. Local and live smoke each checked 224 pages, 12 expected not-found paths and 224 distinct content-security nonces with no failure.
+- The complete local and live SEO passes found no invalid route, missing metadata, invalid canonical or duplicate title or description across all 335 sitemap routes.
+- The complete browser audit checked 408 desktop, tablet and mobile views plus 543 internal links with no failure. Manual review covered all five new desktop heroes and improved the Trinidad crop so the maker remains present beside the instrument and workshop context.
+- The visitor audit completed 21 planning, saving, photograph, sharing, export, cross-tab and storage-failure checks at 320, 390 and 1440 pixels. It exposed and verified a fail-closed Analytics consent fix for browsers that deny local storage, keeping analytics off while Passport planning remains usable for the session.
+- Commit `97da86f` deployed successfully to `experienceauthority.com`. All five new guide URLs returned production HTML successfully.
+- The live Analytics consent audit confirmed zero Google requests before consent, successful tag loading only after consent, exclusion of query and private planning data, clean revocation and zero accessibility violations.
+- Full decision, photography and source details are recorded in [content expansion batch 35](content-expansion-batch-35-2026-09-15.md).
+
 ## Content expansion batch 34 — 15 September 2026
 
 - Added five bounded guides from original candidates 2, 70, 82, 56 and 120: the Sinjska Alka museum and town route, a Semonkong Basotho pony ride, regulated turtle watching in Tortuguero, Aswan's Nubian Museum followed by a separate felucca sail and conditional public crossbow spectatorship in San Marino.
