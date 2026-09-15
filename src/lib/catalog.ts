@@ -232,6 +232,51 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "tanzania",
+    name: "Tanzania",
+    region: "kilimanjaro-region",
+    regionName: "Kilimanjaro Region",
+    intro:
+      "Follow coffee from plant to pan in Materuni, where a hands-on public programme brings Kilimanjaro's cultivated slopes into one freshly brewed cup.",
+    image: null,
+  },
+  {
+    slug: "azerbaijan",
+    name: "Azerbaijan",
+    region: "baku",
+    regionName: "Baku",
+    intro:
+      "Listen past Baku's skyline and into mugham, where voice, tar and kamancha keep a musical path open to improvisation.",
+    image: null,
+  },
+  {
+    slug: "trinidad-and-tobago",
+    name: "Trinidad and Tobago",
+    region: "port-of-spain",
+    regionName: "Port of Spain",
+    intro:
+      "Meet Trinidad through the maker's hammer, the tuner's ear and the first bright notes drawn from a shaped steelpan.",
+    image: null,
+  },
+  {
+    slug: "bolivia",
+    name: "Bolivia",
+    region: "el-alto",
+    regionName: "El Alto",
+    intro:
+      "Look up in El Alto, where commerce, event halls and rooftop homes stack into a neo-Andean architecture found nowhere else.",
+    image: null,
+  },
+  {
+    slug: "montenegro",
+    name: "Montenegro",
+    region: "perast",
+    regionName: "Perast",
+    intro:
+      "Begin with Perast's maritime history, then face the island whose edge is renewed by a local procession of stones each July.",
+    image: null,
+  },
+  {
     slug: "lesotho",
     name: "Lesotho",
     region: "semonkong",
@@ -855,6 +900,11 @@ export const territories = [
 ] as const;
 // Area labels can differ from a guide's specific site. Never let the last guide rename the area.
 const additionalRegionNames: Readonly<Record<string, string>> = {
+  "tanzania/kilimanjaro-region": "Kilimanjaro Region",
+  "azerbaijan/baku": "Baku",
+  "trinidad-and-tobago/port-of-spain": "Port of Spain",
+  "bolivia/el-alto": "El Alto",
+  "montenegro/perast": "Perast",
   "croatia/sinj": "Sinj",
   "lesotho/semonkong": "Semonkong",
   "costa-rica/tortuguero": "Tortuguero",

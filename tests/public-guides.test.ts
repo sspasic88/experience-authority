@@ -42,8 +42,8 @@ test("Arcachon stays a bay-wide chapter regardless of guide order or a more spec
   }
 });
 
-test("guide set contains 114 distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 114);
+test("guide set contains 119 distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 119);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -52,7 +52,7 @@ test("guide set contains 114 distinct, sourced public experiences, not Selected 
     new Set(publicGuides.map((p) => p.slug)).size,
     publicGuides.length,
   );
-  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 69);
+  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 74);
   assert.equal(
     new Set(territories.map((place) => place.slug)).size,
     territories.length,
@@ -81,6 +81,29 @@ test("guide set contains 114 distinct, sourced public experiences, not Selected 
   assert.equal(
     new Set(publicGuideMedia.map((media) => media.src)).size,
     publicGuides.length,
+  );
+});
+test("batch 35 preserves programme, private-interior, event and depiction boundaries", () => {
+  const slugs = [
+    "roast-the-cup-on-kilimanjaros-slopes",
+    "listen-for-the-turn-inside-mugham",
+    "hear-a-drum-become-an-instrument",
+    "read-the-ballroom-above-the-shop",
+    "read-the-island-one-stone-at-a-time",
+  ];
+  const guides = slugs.map((slug) =>
+    publicGuides.find((guide) => guide.slug === slug),
+  );
+  assert.ok(guides.every(Boolean));
+  assert.match(guides[0]!.participation, /No farm work/i);
+  assert.match(guides[1]!.responsibility, /one current option/i);
+  assert.match(guides[2]!.participation, /No visitor metalworking/i);
+  assert.match(guides[3]!.participation, /No event-hall/i);
+  assert.match(guides[4]!.responsibility, /Do not plan the next edition/i);
+  assert.ok(
+    guides.every((guide) =>
+      guide!.access.includes("No EA booking or commission"),
+    ),
   );
 });
 test("batch 34 preserves access, season, animal and depiction boundaries", () => {

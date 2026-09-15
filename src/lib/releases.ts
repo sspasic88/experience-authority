@@ -5,6 +5,11 @@ export const guideReleases = [
   {
     date: "2026-09-15",
     slugs: [
+      "roast-the-cup-on-kilimanjaros-slopes",
+      "listen-for-the-turn-inside-mugham",
+      "hear-a-drum-become-an-instrument",
+      "read-the-ballroom-above-the-shop",
+      "read-the-island-one-stone-at-a-time",
       "read-the-ring-before-the-horse-runs",
       "let-the-pony-read-the-mountain",
       "wait-until-the-turtle-is-ready",

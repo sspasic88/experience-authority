@@ -63,8 +63,13 @@ export function AnalyticsConsent({ measurementId }: { measurementId: string }) {
   const [preferencesOpen, setPreferencesOpen] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem(ANALYTICS_CONSENT_KEY);
-    setChoice(stored === "granted" || stored === "denied" ? stored : null);
+    try {
+      const stored = localStorage.getItem(ANALYTICS_CONSENT_KEY);
+      setChoice(stored === "granted" || stored === "denied" ? stored : null);
+    } catch {
+      // Consent cannot be remembered, so analytics must remain off.
+      setChoice("denied");
+    }
     setReady(true);
     const open = () => setPreferencesOpen(true);
     window.addEventListener(ANALYTICS_PREFERENCES_EVENT, open);
@@ -123,7 +128,14 @@ export function AnalyticsConsent({ measurementId }: { measurementId: string }) {
   }, [choice, pathname]);
 
   function remember(next: AnalyticsConsentChoice) {
-    localStorage.setItem(ANALYTICS_CONSENT_KEY, next);
+    try {
+      localStorage.setItem(ANALYTICS_CONSENT_KEY, next);
+    } catch {
+      // Never start analytics when the visitor's choice cannot be retained.
+      setChoice("denied");
+      setPreferencesOpen(false);
+      return;
+    }
     setChoice(next);
     setPreferencesOpen(false);
     if (next === "denied" && started.current) {

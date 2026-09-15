@@ -768,6 +768,61 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "What recurring public practice would help you understand a place better than another panoramic viewpoint?",
   },
+  {
+    date: "2026-11-21",
+    slug: "roast-the-cup-on-kilimanjaros-slopes",
+    title: "Kilimanjaro begins in a coffee pan.",
+    angle:
+      "The mountain is famous for a summit, but its cultivated slopes offer another way in. In Materuni, a public coffee programme can move one crop from plant to roasting pan and brewed cup. Do not rush to call the encounter authentic or assume that every step is available in every season. Ask what is ripe, follow the host's sequence and notice how smell, heat and repeated movement change the beans. The memorable altitude may be the one at which an everyday drink acquires a place, a process and a human scale.",
+    notice:
+      "The sound and smell at the moment heat changes the beans. Keep the phone away until the people beside the fire have agreed to a photograph.",
+    question:
+      "Which familiar drink would become more valuable if you met the work between the plant and your first sip?",
+  },
+  {
+    date: "2026-11-22",
+    slug: "listen-for-the-turn-inside-mugham",
+    title: "In Baku, the song keeps its path open.",
+    angle:
+      "Mugham does not ask a first-time listener to know every mode before the room goes quiet. Begin with the relationship between the khananda singer, tar and kamancha, then follow one phrase as it is held, varied and answered. The exact concert matters because Baku does not offer one permanent mugham show on demand. Choose a current listing, verify the venue and let the performers decide how the path unfolds. You may leave without a complete theory, but with a better ear for music being negotiated in real time.",
+    notice:
+      "The pause before another performer answers, and the difference between repetition and return. Follow the venue's recording rules.",
+    question:
+      "When did you last listen closely enough to hear performers change one another's next decision?",
+  },
+  {
+    date: "2026-11-23",
+    slug: "hear-a-drum-become-an-instrument",
+    title: "The note is found with a hammer.",
+    angle:
+      "A polished steelpan can make its origin in a metal drum look almost impossible. A Trinidad factory visit puts the transformation back into view. Watch the surface take shape, listen while tuning finds separate notes and wait until the maker's work is clear before taking your own first strikes. This is not a rehearsal-season panyard visit and no visitor metalwork is promised. It is a more precise discovery: one of the world's most recognisable island sounds begins with material knowledge, force controlled by ear and a maker who knows when the metal is ready.",
+    notice:
+      "The maker's movement between striking and listening. Use hearing protection when advised and touch nothing without invitation.",
+    question:
+      "Which instrument would surprise you most if you could see the decisions hidden inside its sound?",
+  },
+  {
+    date: "2026-11-24",
+    slug: "read-the-ballroom-above-the-shop",
+    title: "El Alto asks you to look up.",
+    angle:
+      "From street level, the strongest neo-Andean facades in El Alto can appear to be pure colour and geometry. Read them vertically instead. A shop or commercial space can hold the ground, event halls rise through the middle and a house-like form occupies the roof. The building becomes a compact account of work, gathering, aspiration and private life. The municipal site can identify examples and show selected virtual material. The street view remains the dependable public access. An interesting facade is never permission to enter an active business, ballroom or home.",
+    notice:
+      "Where the public street, commercial ground floor and private upper levels separate. Let the whole stacked programme stay in the frame.",
+    question:
+      "What would change if you judged an unfamiliar building first by the life it holds rather than the taste it confirms?",
+  },
+  {
+    date: "2026-11-25",
+    slug: "read-the-island-one-stone-at-a-time",
+    title: "Perast keeps adding to the island.",
+    angle:
+      "Our Lady of the Rocks sits in the Bay of Kotor like a finished image. Fašinada reveals that its edge is understood through repetition. Each 22 July, locally defined participants carry stones from Perast toward the island. Begin in the town museum, then stand on the waterfront and place island, bell tower, boats and maritime history in one field of view. The 2026 procession is over, and a visitor is not promised a place aboard. The year-round discovery is that one of the bay's most photographed forms is also the result of an obligation renewed over time.",
+    notice:
+      "The short distance between shore and island, and how much history can accumulate inside it. Keep landings and working boat space clear.",
+    question:
+      "Which apparently finished place is still being made by a repeated act you have not learned to see?",
+  },
 ];
 
 export function availableDiscoveries(

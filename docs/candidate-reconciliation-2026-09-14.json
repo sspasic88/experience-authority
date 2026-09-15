@@ -4,8 +4,38 @@
   "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
   "originalCandidateCount": 200,
   "originalProtectedCount": 46,
-  "catalogueCount": 114,
+  "catalogueCount": 119,
   "mappings": [
+    {
+      "candidateId": 64,
+      "guideId": "materuni-migombani-coffee",
+      "relation": "narrowed_public_scope",
+      "boundary": "One named public bean-to-cup programme with host-directed seasonal participation. The guide does not promise every harvest step, a waterfall, village or household access, private farm work, verified community benefit or unrestricted photography."
+    },
+    {
+      "candidateId": 138,
+      "guideId": "baku-public-mugham",
+      "relation": "related_alternative",
+      "boundary": "A specifically listed public mugham performance preceded by official listening context. The current sources do not promise an English explanation of improvisation or poetic sequence, a permanent show, backstage access or the original exact venue."
+    },
+    {
+      "candidateId": 165,
+      "guideId": "trinidad-steelpan-making-tour",
+      "relation": "related_alternative",
+      "boundary": "A named public factory tour with making and tuning observation followed by basic playing. It is not panyard rehearsal access, visitor metalworking, band participation or an invitation into a working community space."
+    },
+    {
+      "candidateId": 175,
+      "guideId": "el-alto-public-architecture-route",
+      "relation": "related_alternative",
+      "boundary": "Daylight public-street observation using the municipal architecture portal for orientation. The original local architect, community host, organised interior route and access to businesses, ballrooms or rooftop homes are not established."
+    },
+    {
+      "candidateId": 118,
+      "guideId": "perast-museum-and-fasinada",
+      "relation": "related_alternative",
+      "boundary": "A year-round museum and waterfront route with future shore observation only after a new official Fašinada programme is published. The completed 2026 event does not establish a future date, boat place, procession participation or photography permission."
+    },
     {
       "candidateId": 2,
       "guideId": "sinj-alka-museum-and-race",
@@ -458,6 +488,51 @@
     }
   ],
   "newSourceReviews": [
+    {
+      "candidateId": 64,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-15",
+      "finding": "Materuni Village Heritage currently publishes the Migombani bean-to-cup programme with harvesting, roasting, brewing, direct contact and payment routes. TATO separately locates a Materuni enterprise in Kilimanjaro Region and names coffee among its services, while repeating the enterprise's own impact claims.",
+      "sourceUrl": "https://www.materuni.org/migombani-coffee-experience",
+      "nextAction": "Keep participation seasonal and host-directed. Recheck the coffee-only duration, price, meeting point, food details and exact hands-on steps by 14 December 2026. Do not promote unaudited benefit claims as EA findings.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 138,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-15",
+      "finding": "Azerbaijan Tourism Board currently describes periodic mugham performances in Baku and publishes one ticketed 23 September 2026 concert with singer, tar and kamancha. It does not promise an English explanation or the original poetic-sequence interpretation.",
+      "sourceUrl": "https://azerbaijan.travel/new-event-calendar/mugam-azerbaijan-music",
+      "nextAction": "Use only a specific current listing and verify its venue, time, language, age guidance and ticket route. Recheck the evergreen venue context and later programme by 14 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 165,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-15",
+      "finding": "Tourism Trinidad currently publishes Island Buddy's two-hour weekday factory tour with making and tuning observation, a basic playing introduction and transport from Port of Spain hotels. This is dependable public access but it is not the original panyard rehearsal.",
+      "sourceUrl": "https://visittrinidad.tt/things-to-do/tours/steelpan-making-tour-in-trinidad/",
+      "nextAction": "Keep factory observation, introductory playing and rehearsal access distinct. Confirm the exact factory, transport boundary, price, protective equipment and operator availability by 14 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 175,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-15",
+      "finding": "El Alto municipality currently features named buildings and states that operators develop architecture routes, but does not publish one complete official itinerary or grant interior access. A licensed image supports exact public-street depiction.",
+      "sourceUrl": "https://cholets.elalto.gob.bo/",
+      "nextAction": "Keep the dependable route on public streets in daylight. Recheck local transport and safety advice and seek a current named public architecture tour before adding guide-led interpretation or any interior.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 118,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-15",
+      "finding": "Kotor Museums publishes current admission and seasonal hours for the Perast museum. Montenegro's tourism authority documents the completed 22 July 2026 Fašinada and locally defined boat roles, supporting museum-first context and future shore observation rather than visitor participation.",
+      "sourceUrl": "https://muzejikotor.me/en/admission-fees-and-renting/",
+      "nextAction": "Keep the museum and completed event clearly separate. Recheck museum details by 14 December 2026 and wait for the next official Fašinada date and visitor guidance before promoting a live visit.",
+      "outreachPerformed": false
+    },
     {
       "candidateId": 2,
       "status": "related_alternative",
