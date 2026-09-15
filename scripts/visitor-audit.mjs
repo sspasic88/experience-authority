@@ -73,7 +73,7 @@ try {
     const page = await context.newPage();
     page.on("pageerror", (e) => errors.push(e.message));
     await visit(page, "/explore");
-    await expect(page.locator(".experience-card")).toHaveCount(119);
+    await expect(page.locator(".experience-card")).toHaveCount(129);
     for (const slug of ["a-bowl-of-attention", "bread-from-the-tonir"]) {
       const card = page
         .locator(".experience-card")

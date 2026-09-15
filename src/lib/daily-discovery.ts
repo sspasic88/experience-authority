@@ -823,6 +823,116 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "Which apparently finished place is still being made by a repeated act you have not learned to see?",
   },
+  {
+    date: "2026-11-26",
+    slug: "draw-the-line-that-keeps-the-colour-out",
+    title: "The pattern begins with what the wax refuses.",
+    angle:
+      "A decorated egg can look like a finished burst of colour. In Vama, begin earlier. Watch how a wax line protects one decision while the next dye changes everything around it, then make a first attempt under Letitia Orsivschi's direction. The museum surrounds that small action with eggs from Bucovina and far beyond it. You are not learning a tradition in an afternoon. You are learning to see the patience and sequence hidden inside an object your hand can almost cover.",
+    notice:
+      "The order in which colour arrives, and the amount of planning held inside one narrow wax line. Ask before copying a motif beyond the workshop.",
+    question:
+      "Which familiar handmade object would become extraordinary if you could see the decisions its surface conceals?",
+  },
+  {
+    date: "2026-11-27",
+    slug: "meet-the-wine-below-the-cellar-floor",
+    title: "Kakheti keeps part of the answer underground.",
+    angle:
+      "The first surprise in a Telavi marani is not the bottle. It is the circular opening in the floor. At Milorauli, a published cellar tour can place four wines beside the buried qvevri that helped make sense of them. Ask which wine met skins, stems and clay before deciding what you taste. The vessel does not turn one winery into all of Georgia, but it gives the glass a structure, a temperature and a longer history than a label can hold.",
+    notice:
+      "The difference between decorative cellar atmosphere and the working vessel beneath your feet. Touch nothing without invitation.",
+    question:
+      "What would change if your next tasting began with the vessel and method instead of the tasting note?",
+  },
+  {
+    date: "2026-11-28",
+    slug: "climb-without-making-the-mountain-yours",
+    title: "Not every summit is yours to conquer.",
+    angle:
+      "Sri Pada offers a demanding public climb inside a pilgrimage whose meaning does not begin with your fitness or finish with your sunrise. Enter during the established season, choose a recognised route and let family groups, greetings, bells and pauses change the pace. There may be crowds, rain, mist or no view at all. None of that makes the journey empty. The deeper discovery is that the same steps can carry devotion, memory and obligation while a visitor remains respectfully outside them.",
+    notice:
+      "Who needs space on the stairs and when a camera would turn another person's devotion into your scenery. Let the route stay clean.",
+    question:
+      "Could a climb become more memorable when reaching the top stops being its only measure of success?",
+  },
+  {
+    date: "2026-11-29",
+    slug: "let-the-jebena-slow-the-cup",
+    title: "Addis asks the coffee to take its time.",
+    angle:
+      "A quick coffee order hides almost everything that made it possible. Hadero Coffee Gallery offers a bounded public route through sorting, roasting and cupping before the jebena arrives over an open fire. Follow the crop and the work first. Then notice how aroma, repeated pours and time beside other people change what a cup is for. This is not private household access or a complete account of Ethiopian coffee culture. It is a better beginning than treating origin as a word on a bag.",
+    notice:
+      "The interval between preparation and serving. Let the ceremony keep its own pace and ask before photographing the people hosting it.",
+    question:
+      "Which daily drink would feel less ordinary if you stopped skipping the work and social time around it?",
+  },
+  {
+    date: "2026-11-30",
+    slug: "let-the-lateen-sail-read-lamus-water",
+    title: "Lamu moves when the sail can read the water.",
+    angle:
+      "A dhow makes an irresistible silhouette, but its intelligence begins after the photograph. On a short Kijani sail, watch the crew work with wind, shallow channels, rigging and mangrove edges. The passenger does not need to take the helm for movement to become participatory. Attention is enough. You begin to see why the lateen sail belongs to a maritime place rather than to a resort mood board, and why a changing route can be more revealing than a guaranteed view.",
+    notice:
+      "The crew's small adjustments before the boat changes direction. Keep hands away from ropes and follow the skipper before reaching for a camera.",
+    question:
+      "What could a place teach you if you watched how local knowledge moves through it instead of only where it arrives?",
+  },
+  {
+    date: "2026-12-01",
+    slug: "hear-the-mallet-open-the-cloth",
+    title: "In Entebbe, cloth begins with a rhythm.",
+    angle:
+      "Barkcloth looks quiet when it hangs. Ewaffe's short public demonstration makes the force inside it audible. A grooved wooden mallet strikes, the inner bark widens and the maker keeps judging when and where the material can move. The segment lasts only part of a broader programme, and it does not promise that a visitor will handle the tool. That boundary is useful. It keeps the revelation with the skilled transformation rather than turning every encounter into something you must personally perform.",
+    notice:
+      "How the sound, force and surface change together. Ask before approaching the work or recording the host's sequence closely.",
+    question:
+      "Which material in your everyday life carries a rhythm of making you have never heard?",
+  },
+  {
+    date: "2026-12-02",
+    slug: "begin-haida-gwaii-with-haida-voices",
+    title: "Let the first orientation belong to Haida Gwaii.",
+    angle:
+      "The temptation on Haida Gwaii is to begin with a beautiful road, beach or forest. Begin instead at the Haida Heritage Centre at Ḵay Llnagaay. Its exhibitions, carving house and public interpretation can give later landscapes names, histories and responsibilities that an outside itinerary cannot invent. The centre does not make a visitor an insider or open every story and place. It does something more valuable. It changes the questions you carry before the islands become scenery.",
+    notice:
+      "The point at which a name, object or story changes how you understand somewhere you planned to visit later. Follow the centre's photography rules.",
+    question:
+      "What destination would you understand differently if its own institution shaped your route before an algorithm did?",
+  },
+  {
+    date: "2026-12-03",
+    slug: "let-the-band-open-the-dance-floor",
+    title: "Lafayette is waiting on the downbeat.",
+    angle:
+      "A Sunday at Vermilionville can turn a museum visit into a living social room. Choose a named Bal du Dimanche, arrive while the band and returning dancers are building the floor, and spend the first song learning how the room works. You may dance or remain a listener. Either choice can reveal that Cajun and Creole music are not interchangeable soundtrack labels. They are played by particular people, received by a particular floor and kept alive through the decision to gather again.",
+    notice:
+      "How experienced dancers make space, invite and decline. Respect the room before trying to prove that you belong in it.",
+    question:
+      "When did live music last change from something you heard into a place you briefly shared?",
+  },
+  {
+    date: "2026-12-04",
+    slug: "watch-rio-build-the-parade-before-carnaval",
+    title: "Rio lets you see the parade before it is ready.",
+    angle:
+      "The free 2027 technical rehearsals at the Sambadrome offer something the finished broadcast cannot. A samba school is still testing how singing, movement, timing and monumental space hold together. Watch where a sequence repeats and where the avenue exposes a gap. Costumes and competition still matter, but the rehearsal redirects attention toward collective labour. The public seat does not grant school access. It gives you a legitimate way to witness how much coordination must exist before spectacle can look inevitable.",
+    notice:
+      "The correction after a passage seems complete. Stay in authorised spectator areas and wait for final official times and entry guidance.",
+    question:
+      "Which famous event would become more impressive if you could see the unfinished work that makes it possible?",
+  },
+  {
+    date: "2026-12-05",
+    slug: "stand-where-the-sound-system-does-the-talking",
+    title: "In Kingston, the speakers are part of the music.",
+    angle:
+      "Dub can travel through headphones, but Kingston Dub Club makes the system itself impossible to ignore. On a confirmed Sunday at Jack's Hill, listen for the relationship between selector, record, bass weight, hillside and returning crowd. Stand at a distance that lets you hear rather than merely withstand the volume. A visitor is not entering the booth or inheriting the culture. The revelation is simpler and stronger: recorded music can become a live public event when a place and its speakers actively shape it.",
+    notice:
+      "How the next selection changes the shared space before anyone explains it. Protect your hearing and arrange the journey home before the night begins.",
+    question:
+      "What music do you think you know only because you have never heard it through the system it was built to move?",
+  },
 ];
 
 export function availableDiscoveries(

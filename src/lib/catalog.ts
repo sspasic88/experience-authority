@@ -232,6 +232,78 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "brazil",
+    name: "Brazil",
+    region: "rio-de-janeiro",
+    regionName: "Rio de Janeiro",
+    intro:
+      "See Rio build Carnaval before competition night, when a free public rehearsal exposes the coordination beneath the spectacle.",
+    image: null,
+  },
+  {
+    slug: "romania",
+    name: "Romania",
+    region: "bucovina",
+    regionName: "Bucovina",
+    intro:
+      "Enter Bucovina through wax, colour and the small decisions held inside Vama's extraordinary collection of decorated eggs.",
+    image: null,
+  },
+  {
+    slug: "georgia",
+    name: "Georgia",
+    region: "kakheti",
+    regionName: "Kakheti",
+    intro:
+      "Begin Kakheti below the cellar floor, where a buried qvevri changes the questions you bring to Georgian wine.",
+    image: null,
+  },
+  {
+    slug: "sri-lanka",
+    name: "Sri Lanka",
+    region: "central-highlands",
+    regionName: "Central Highlands",
+    intro:
+      "Meet Sri Lanka's Central Highlands on a seasonal public pilgrimage where devotion, weather and shared steps outrank a summit photograph.",
+    image: null,
+  },
+  {
+    slug: "ethiopia",
+    name: "Ethiopia",
+    region: "addis-ababa",
+    regionName: "Addis Ababa",
+    intro:
+      "Slow Addis Ababa through green-coffee sorting, roasting, cupping and the social time held by a jebena.",
+    image: null,
+  },
+  {
+    slug: "kenya",
+    name: "Kenya",
+    region: "lamu-archipelago",
+    regionName: "Lamu Archipelago",
+    intro:
+      "Let Lamu's water, mangroves and lateen sail reveal a maritime intelligence that no waterfront photograph can contain.",
+    image: null,
+  },
+  {
+    slug: "uganda",
+    name: "Uganda",
+    region: "entebbe",
+    regionName: "Entebbe",
+    intro:
+      "Hear the repeated mallet behind barkcloth during a bounded host-led introduction in Entebbe.",
+    image: null,
+  },
+  {
+    slug: "jamaica",
+    name: "Jamaica",
+    region: "kingston-jamaica",
+    regionName: "Kingston",
+    intro:
+      "Hear Kingston through a Sunday sound system where records, selectors, speakers and hillside become one public event.",
+    image: null,
+  },
+  {
     slug: "tanzania",
     name: "Tanzania",
     region: "kilimanjaro-region",
@@ -900,6 +972,16 @@ export const territories = [
 ] as const;
 // Area labels can differ from a guide's specific site. Never let the last guide rename the area.
 const additionalRegionNames: Readonly<Record<string, string>> = {
+  "romania/bucovina": "Bucovina",
+  "georgia/kakheti": "Kakheti",
+  "sri-lanka/central-highlands": "Central Highlands",
+  "ethiopia/addis-ababa": "Addis Ababa",
+  "kenya/lamu-archipelago": "Lamu Archipelago",
+  "uganda/entebbe": "Entebbe",
+  "canada/haida-gwaii": "Haida Gwaii",
+  "united-states/lafayette-louisiana": "Lafayette",
+  "brazil/rio-de-janeiro": "Rio de Janeiro",
+  "jamaica/kingston-jamaica": "Kingston",
   "tanzania/kilimanjaro-region": "Kilimanjaro Region",
   "azerbaijan/baku": "Baku",
   "trinidad-and-tobago/port-of-spain": "Port of Spain",

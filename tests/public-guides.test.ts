@@ -42,8 +42,8 @@ test("Arcachon stays a bay-wide chapter regardless of guide order or a more spec
   }
 });
 
-test("guide set contains 119 distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 119);
+test("guide set contains 129 distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 129);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -52,7 +52,7 @@ test("guide set contains 119 distinct, sourced public experiences, not Selected 
     new Set(publicGuides.map((p) => p.slug)).size,
     publicGuides.length,
   );
-  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 74);
+  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 82);
   assert.equal(
     new Set(territories.map((place) => place.slug)).size,
     territories.length,
@@ -81,6 +81,35 @@ test("guide set contains 119 distinct, sourced public experiences, not Selected 
   assert.equal(
     new Set(publicGuideMedia.map((media) => media.src)).size,
     publicGuides.length,
+  );
+});
+test("batch 36 preserves cultural, event, access and depiction boundaries", () => {
+  const slugs = [
+    "draw-the-line-that-keeps-the-colour-out",
+    "meet-the-wine-below-the-cellar-floor",
+    "climb-without-making-the-mountain-yours",
+    "let-the-jebena-slow-the-cup",
+    "let-the-lateen-sail-read-lamus-water",
+    "hear-the-mallet-open-the-cloth",
+    "begin-haida-gwaii-with-haida-voices",
+    "let-the-band-open-the-dance-floor",
+    "watch-rio-build-the-parade-before-carnaval",
+    "stand-where-the-sound-system-does-the-talking",
+  ];
+  const guides = slugs.map((slug) =>
+    publicGuides.find((guide) => guide.slug === slug),
+  );
+  assert.ok(guides.every(Boolean));
+  assert.match(guides[0]!.responsibility, /Do not copy or commercialise/i);
+  assert.match(guides[2]!.participation, /No religious role/i);
+  assert.match(guides[5]!.participation, /Visitor tool use/i);
+  assert.match(guides[6]!.participation, /No private community/i);
+  assert.match(guides[8]!.participation, /No parade-floor/i);
+  assert.match(guides[9]!.responsibility, /return transport/i);
+  assert.ok(
+    guides.every((guide) =>
+      guide!.access.includes("No EA booking or commission"),
+    ),
   );
 });
 test("batch 35 preserves programme, private-interior, event and depiction boundaries", () => {

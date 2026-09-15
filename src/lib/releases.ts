@@ -5,6 +5,16 @@ export const guideReleases = [
   {
     date: "2026-09-15",
     slugs: [
+      "draw-the-line-that-keeps-the-colour-out",
+      "meet-the-wine-below-the-cellar-floor",
+      "climb-without-making-the-mountain-yours",
+      "let-the-jebena-slow-the-cup",
+      "let-the-lateen-sail-read-lamus-water",
+      "hear-the-mallet-open-the-cloth",
+      "begin-haida-gwaii-with-haida-voices",
+      "let-the-band-open-the-dance-floor",
+      "watch-rio-build-the-parade-before-carnaval",
+      "stand-where-the-sound-system-does-the-talking",
       "roast-the-cup-on-kilimanjaros-slopes",
       "listen-for-the-turn-inside-mugham",
       "hear-a-drum-become-an-instrument",
