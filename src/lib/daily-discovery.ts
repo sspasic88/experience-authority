@@ -658,6 +658,61 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "What familiar object would become more impressive if you could see the small repeated unit from which it is built?",
   },
+  {
+    date: "2026-11-11",
+    slug: "meet-the-rose-before-it-becomes-water",
+    title: "A scent with a very short season.",
+    angle:
+      "Rosewater can seem like a finished note in a bottle. On Jabal Akhdar, spring returns it to a brief agricultural sequence. Enter only through a published host-arranged visit, then follow the petals from a permitted morning pick toward heat, vessels and condensation. The useful discovery is not how quickly you can fill a basket. It is how much timing and work sit inside a fragrance designed to outlast the bloom.",
+    notice:
+      "The difference between petals still on the branch and those selected for the still. Pick only where and when the host directs.",
+    question:
+      "Which familiar ingredient would feel less ordinary if you met the short harvest that makes it possible?",
+  },
+  {
+    date: "2026-11-12",
+    slug: "walk-inside-the-earthen-ring",
+    title: "The circle makes more sense from within.",
+    angle:
+      "An aerial photograph can turn a Fujian tulou into perfect geometry. A public visit in Yongding should undo that simplification. Cross the thick threshold, look through the timber galleries and ask what the shared court allowed many households to organise together. The building remains visually astonishing, but its real intelligence appears when you read the ring as lived structure rather than an object waiting beneath a drone.",
+    notice:
+      "The transition between public visitor route and private domestic space. Admission never makes every doorway yours to inspect.",
+    question:
+      "Which famous building would you understand differently if you began with the relationships its plan was made to hold?",
+  },
+  {
+    date: "2026-11-13",
+    slug: "follow-the-pearl-back-underwater",
+    title: "Before the pearl, there is an oyster bed.",
+    angle:
+      "Muharraq gives Bahrain's pearling history a route on land. A licensed boat can continue the question underwater. Choose snorkelling if you are a beginner, follow the instructor and let the search itself carry the story. A pearl is possible, never promised. That uncertainty is not a flaw in the experience. It returns value to the seabed, the oyster and the difficult work that existed long before jewellery entered the frame.",
+    notice:
+      "The method your instructor uses to identify an oyster and the rules governing what can leave the water. Confirm both before departure.",
+    question:
+      "What changes when you follow a precious object back to the environment and labour that made it possible?",
+  },
+  {
+    date: "2026-11-14",
+    slug: "read-a-city-from-the-waterline",
+    title: "The river is not the space between two shores.",
+    angle:
+      "From central Bandar Seri Begawan, a short water-taxi crossing changes the organising line of the city. In Kampong Ayer, use the public landing, marked walkways and gallery to read how homes, schools, mosques and movement meet the river. The route does not grant entry to private life. Its value lies in making water visible as everyday infrastructure, not as a scenic gap crossed on the way to somewhere more important.",
+    notice:
+      "Landings and junctions. Watch how the public route connects with water movement while leaving homes and family jetties alone.",
+    question:
+      "Which city would become clearer if you approached it through the system that carries ordinary journeys?",
+  },
+  {
+    date: "2026-11-15",
+    slug: "let-the-delta-decide-the-route",
+    title: "The quietest boat asks for the most trust.",
+    angle:
+      "A mokoro sits so low in the Okavango that water level, reeds and the poler's smallest decisions become part of the journey. Book a currently licensed guide, take the passenger's place and release the demand for a particular route or sighting. The delta changes with the flood. A good passage does not conquer that uncertainty. It lets trained local reading decide where the boat can move and what the day is willing to reveal.",
+    notice:
+      "How the poler reads depth, vegetation and turns before you understand why the line changes. Never pressure a guide toward wildlife.",
+    question:
+      "Where might a journey improve if expertise and conditions were allowed to choose the route instead of your checklist?",
+  },
 ];
 
 export function availableDiscoveries(

@@ -114,9 +114,9 @@ export const editorialPathways = [
     kind: "water-and-coast",
     title: "Where land meets water",
     promise:
-      "Follow eight coastlines where water shapes movement, work and attention.",
+      "Follow eleven waterscapes where movement, work and attention meet.",
     intro:
-      "Water is not scenery in these guides. It sets the route, the working day and the limits of access. Learn Venetian rowing, cross exposed tidal ground with a qualified guide, read Lofoten through its fishery, watch Oostduinkerke's shrimp fishers work with horses and enter Reykjavík through a public pool. In Istanbul, an ordinary municipal ferry makes the Bosphorus legible as transport. Beside Ajman Creek, a working boatyard reveals what has to happen before a dhow meets the water. In Bulukumba, an unfinished wooden hull turns the same question inside out through ribs, planks and inherited knowledge. Each asks you to notice the system that makes the encounter possible before treating water as a view.",
+      "Water is not scenery in these guides. It sets the route, the working day and the limits of access. Learn Venetian rowing, cross exposed tidal ground with a qualified guide, read Lofoten through its fishery and watch Oostduinkerke's shrimp fishers work with horses. In Istanbul and Kampong Ayer, everyday boats reveal two very different cities from the waterline. Bahrain follows pearling history back to the oyster beds, while an Okavango mokoro asks a trained poler to read a delta that keeps changing shape. Ajman and Bulukumba show what must happen before a working boat reaches the water. Each guide asks you to notice the system that makes the encounter possible before treating water as a view.",
     guideSlugs: [
       "venice-through-an-oar",
       "walk-where-the-sea-was",
@@ -126,6 +126,9 @@ export const editorialPathways = [
       "let-the-ferry-redraw-istanbul",
       "watch-a-dhow-take-shape-beside-the-creek",
       "read-a-ship-before-the-sails-arrive",
+      "follow-the-pearl-back-underwater",
+      "read-a-city-from-the-waterline",
+      "let-the-delta-decide-the-route",
     ],
     visitorUse:
       "Use this pathway to compare weather dependence, physical participation and booking needs before building a coastal day.",
@@ -189,7 +192,7 @@ export const editorialPathways = [
     promise:
       "Let tide, migration, harvest and public custom decide when to arrive.",
     intro:
-      "Some experiences cannot be separated from their timing. A tide opens and closes a walking route. Migrating starlings gather in the marshes. Shrimp fishers work when sea and public demonstrations align. Castellers meet through announced public events. Kuopio's smoke-sauna evening belongs to Tuesday, while Mexico City's car-free avenue belongs to most Sunday mornings. Near Kazanlak, roses bring the public into the fields only through a short announced harvest calendar. In Serpa, the museum is a dependable beginning while live cante belongs to a separately confirmed performance. Echternach adds another distinction: its documentation centre is a current public route, while the live procession waits for an officially published Whit Tuesday. This pathway helps you plan around what the place is doing, rather than forcing every experience into the dates you already chose.",
+      "Some experiences cannot be separated from their timing. A tide opens and closes a walking route. Migrating starlings gather in the marshes. Shrimp fishers work when sea and public demonstrations align. Castellers meet through announced public events. Kuopio's smoke-sauna evening belongs to Tuesday, while Mexico City's car-free avenue belongs to most Sunday mornings. Rose harvests create short public windows in both Kazanlak and Jabal Akhdar, with different landscapes, hosts and methods. In Serpa, the museum is a dependable beginning while live cante belongs to a separately confirmed performance. Echternach adds another distinction: its documentation centre is a current public route, while the live procession waits for an officially published Whit Tuesday. This pathway helps you plan around what the place is doing, rather than forcing every experience into the dates you already chose.",
     guideSlugs: [
       "walk-where-the-sea-was",
       "when-the-sky-moves-as-one",
@@ -201,6 +204,7 @@ export const editorialPathways = [
       "step-from-smoke-sauna-into-the-lake",
       "ride-the-avenue-when-the-cars-step-aside",
       "meet-the-rose-before-the-perfume",
+      "meet-the-rose-before-it-becomes-water",
       "hear-a-landscape-without-instruments",
       "watch-a-town-move-in-prayer",
     ],
@@ -216,7 +220,7 @@ export const editorialPathways = [
     promise:
       "Familiar cities, entered through practices and systems that remain alive.",
     intro:
-      "A landmark can tell you where you are. A practice can tell you how a city works. Begin Barcelona with a human tower, Singapore at a hawker table, Seoul through kimchi and Venice through an oar. Cross Istanbul by municipal ferry, give Mexico City's Sunday avenue back to feet and bicycles, then let Tirana's xhiro turn an evening pavement into social infrastructure. Sit at a Cantonese mahjong table in Hong Kong, stay in Siem Reap for large shadow theatre after Angkor and follow Medellín's famous flowers into the rural work of Santa Elena. Busan adds the etiquette of a jjimjilbang, Fez the precision of zellige and Montevideo a candombe workshop with a clearly defined public. These are not claims to know a whole city. They are practical starting points that move attention from the skyline to the routines and shared infrastructure beneath it.",
+      "A landmark can tell you where you are. A practice can tell you how a city works. Begin Barcelona with a human tower, Singapore at a hawker table, Seoul through kimchi and Venice through an oar. Cross Istanbul by municipal ferry, give Mexico City's Sunday avenue back to feet and bicycles, then let Tirana's xhiro turn an evening pavement into social infrastructure. In Bandar Seri Begawan, a public boat and walkway route makes the river legible as everyday urban structure. Sit at a Cantonese mahjong table in Hong Kong, stay in Siem Reap for large shadow theatre after Angkor and follow Medellín's flowers into the rural work of Santa Elena. These are not claims to know a whole city. They are practical starting points that move attention from the skyline to the routines and shared infrastructure beneath it.",
     guideSlugs: [
       "the-weight-of-the-tower",
       "a-morning-at-the-hawker-table",
@@ -236,6 +240,7 @@ export const editorialPathways = [
       "learn-hong-kong-one-hand-at-a-time",
       "let-the-shadows-move-after-angkor",
       "let-the-city-take-its-evening-walk",
+      "read-a-city-from-the-waterline",
     ],
     visitorUse:
       "Pick the city already on your route and use its guide as the anchor for one slower half-day beyond the standard highlights.",
@@ -246,9 +251,9 @@ export const editorialPathways = [
     slug: "move-at-the-landscapes-pace",
     kind: "slow-nature",
     title: "Move at the landscape's pace",
-    promise: "Nine encounters that reward less distance and more attention.",
+    promise: "Ten encounters that reward less distance and more attention.",
     intro:
-      "Slow travel is useful only when it changes what you notice. Walk the public approach at Kumano Kodo without reducing pilgrimage to a personal challenge. Cross Wadden mudflats at the tide's pace. Wait for starlings above the Danish marshes. Read Lofoten through the fishery behind its mountain views, then read the Namib through the smallest tracks in its dunes. Meet Xochimilco as a living agricultural landscape within Mexico City. In Jatiluwih, follow the water that holds terraces together. In Monument Valley, let a Navajo-managed route replace the assumption that every visible place is open. On Moorea, trade a fast lagoon circuit for the balance and repeated stroke of a va'a introduction. Each guide keeps the encounter bounded and asks you to prepare for conditions, local rules and the limits of a short visit.",
+      "Slow travel is useful only when it changes what you notice. Walk the public approach at Kumano Kodo without reducing pilgrimage to a personal challenge. Cross Wadden mudflats at the tide's pace. Wait for starlings above the Danish marshes. Read Lofoten through the fishery behind its mountain views, then read the Namib through the smallest tracks in its dunes. Meet Xochimilco as a living agricultural landscape and follow Bali's water before the rice. In Monument Valley, let a Navajo-managed route replace the assumption that every visible place is open. On Moorea, trade a fast lagoon circuit for the repeated stroke of a va'a. In the Okavango, sit low while a trained poler reads depth, reeds and safe passage. Each guide asks you to prepare for conditions, local rules and the limits of a short visit.",
     guideSlugs: [
       "leave-room-for-devotion",
       "walk-where-the-sea-was",
@@ -259,6 +264,7 @@ export const editorialPathways = [
       "follow-balis-water-before-the-rice",
       "read-monument-valley-beyond-the-scenic-drive",
       "take-the-lagoon-one-stroke-at-a-time",
+      "let-the-delta-decide-the-route",
     ],
     visitorUse:
       "Choose one landscape, read its responsibility and access sections first, then give it more time than the headline duration suggests.",
@@ -319,7 +325,7 @@ export const editorialPathways = [
     promise:
       "Return to places you recognise through public practices you may not have noticed the first time.",
     intro:
-      "Familiarity can make a city easier to reach and harder to see. Istanbul offers three different corrections to the postcard: ebru turns colour and water into a first attempt, the municipal ferry makes daily geography visible and a historic hammam changes the pace of the day. Mexico City moves from the chinampa landscape to a car-free Sunday avenue and the collective energy of Arena México. Singapore connects a hawker breakfast, batik, a coastal forest and a wetland at the city's wilder edge. Seoul places kimchi beside the beginning of makgeolli. Outside Samarkand, Konigil follows the famous manuscript image back to the mulberry bark and mill work that make a sheet. Use one known landmark as orientation, then choose the practice that gives the rest of the day a sharper point of view.",
+      "Familiarity can make a place easier to reach and harder to see. Istanbul offers three different corrections to the postcard: ebru turns colour and water into a first attempt, the municipal ferry makes daily geography visible and a historic hammam changes the pace of the day. Mexico City moves from the chinampa landscape to a car-free Sunday avenue and the collective energy of Arena México. Singapore connects a hawker breakfast, batik, a coastal forest and a wetland at the city's wilder edge. Seoul places kimchi beside the beginning of makgeolli. In Yongding, a Fujian tulou stops being a perfect aerial circle when you read its threshold, galleries and shared centre from within. Outside Samarkand, Konigil follows the famous manuscript image back to the mulberry bark and mill work that make a sheet. Use one known image as orientation, then choose the practice or structure that gives the rest of the day a sharper point of view.",
     guideSlugs: [
       "lift-a-pattern-from-the-water",
       "let-the-ferry-redraw-istanbul",
@@ -332,6 +338,7 @@ export const editorialPathways = [
       "kimchi-before-the-jar",
       "begin-with-rice-not-the-bottle",
       "follow-a-sheet-back-to-the-mulberry-branch",
+      "walk-inside-the-earthen-ring",
     ],
     visitorUse:
       "Choose the city already on your route, then select one guide from a different part of the day or a different kind of participation than your usual plan.",

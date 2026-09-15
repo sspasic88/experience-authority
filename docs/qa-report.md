@@ -1,5 +1,18 @@
 # QA report — 15 September 2026
 
+## Content expansion batch 33 — 15 September 2026
+
+- Added five bounded guides from original candidates 41, 33, 129, 132 and 67: Jabal Akhdar rose season, Yongding tulou, Bahrain pearl snorkelling, a public Kampong Ayer route and a licensed Okavango mokoro ride.
+- The original private-stay, resident-access, community-control and guaranteed-outcome implications were not carried into the public edition. None of the five receives EA Selected status, local validation or an implied EA visit.
+- The catalogue now contains 109 guides across 65 countries and territories. The reconciliation maps 70 of the original 200 candidates through 53 narrowed public scopes, 15 related alternatives and two protected public programmes.
+- The daily edition contains 64 authored discoveries through 15 November 2026. The sitemap contains 306 indexable routes.
+- All 68 tests, TypeScript and the production build passed. Local smoke checked 195 pages, 12 expected not-found paths and 195 distinct content-security nonces with no failure.
+- The complete local SEO pass found no invalid route, missing metadata, invalid canonical or duplicate title or description across all 306 sitemap routes.
+- The complete browser audit checked 348 desktop, tablet and mobile views plus 483 internal links with no failure. Curated hero rotation, varied home suggestions, direct image credits, connected recommendations, saving, image opening, comparison, search, city filtering, mobile navigation and Escape behaviour passed.
+- Manual source-image review rejected an otherwise strong Tianluokeng photograph because it did not show the Yongding site named by the guide. The final image depicts Zhencheng Lou itself and has an exact author and CC BY-SA 4.0 record.
+- Live deployment results will be added after publication.
+- Full decision, photography and source details are recorded in [content expansion batch 33](content-expansion-batch-33-2026-09-15.md).
+
 ## Content expansion batch 32 — 15 September 2026
 
 - Added two bounded public-source guides from candidates 36 and 58: observation of mulberry-paper production at the Meros mill in Konigil and a visitor-centre-led route into kente weaving in Bonwire.

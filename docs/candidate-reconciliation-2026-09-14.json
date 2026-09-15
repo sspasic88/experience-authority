@@ -4,8 +4,38 @@
   "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
   "originalCandidateCount": 200,
   "originalProtectedCount": 46,
-  "catalogueCount": 104,
+  "catalogueCount": 109,
   "mappings": [
+    {
+      "candidateId": 41,
+      "guideId": "jabal-akhdar-rose-season",
+      "relation": "narrowed_public_scope",
+      "boundary": "A current host-arranged seasonal visit with published rose picking and distillation context. Bloom, unrestricted farm access, a specific family method and participation beyond the host's instructions are not promised."
+    },
+    {
+      "candidateId": 33,
+      "guideId": "fujian-tulou-yongding",
+      "relation": "related_alternative",
+      "boundary": "A ticketed public visit to Yongding's designated heritage route. The original stay, shared family meal, private-room access and resident relationship are not established by the current public evidence."
+    },
+    {
+      "candidateId": 129,
+      "guideId": "bahrain-pearl-snorkelling",
+      "relation": "narrowed_public_scope",
+      "boundary": "A public snorkelling or certified-diving programme through a BTEA-approved licensed operator. A pearl find, oyster retention, access outside the instructed bed and a particular sea condition are not promised."
+    },
+    {
+      "candidateId": 132,
+      "guideId": "kampong-ayer-public-route",
+      "relation": "related_alternative",
+      "boundary": "A public water-taxi crossing, marked walking route and gallery visit. The original resident-led stay, entry to homes, private jetties and household interpretation are not supported."
+    },
+    {
+      "candidateId": 67,
+      "guideId": "okavango-mokoro-public-ride",
+      "relation": "related_alternative",
+      "boundary": "A professionally guided passenger ride with a currently licensed operator. The original community-control premise, self-poling, a fixed route and any wildlife sighting require claims the reviewed public evidence does not establish."
+    },
     {
       "candidateId": 9,
       "guideId": "arcachon-oyster-tide",
@@ -398,6 +428,51 @@
     }
   ],
   "newSourceReviews": [
+    {
+      "candidateId": 41,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-15",
+      "finding": "Experience Oman currently documents Jabal Akhdar's spring rose villages and production context. dusitD2 Naseem Resort publishes a host-arranged experience with nearby farm visits, rose picking and distillation demonstrations, but does not guarantee bloom or future inventory.",
+      "sourceUrl": "https://www.dusit.com/dusitd2-naseemresort/experience/rosewater-making/",
+      "nextAction": "Keep the visit seasonal and host-controlled. Recheck dates, named farm, transport and permitted participation by 14 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 33,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-15",
+      "finding": "The Fujian Provincial People's Government currently publishes Yongding Tulou as a public scenic area with named clusters, while UNESCO documents the communal residential form. Neither source establishes the proposed stay and shared meal with residents.",
+      "sourceUrl": "https://www.fujian.gov.cn/english/cultureandtravel/attractions/202501/t20250107_6619446.htm",
+      "nextAction": "Keep the guide on the designated public route and private rooms outside its promise. Recheck ticketing, opening and residential boundaries by 14 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 129,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-15",
+      "finding": "Bahrain Tourism currently publishes pearl snorkelling for beginners and diving for certified participants through BTEA-approved licensed operators, with boat departures to oyster beds and no guaranteed pearl find.",
+      "sourceUrl": "https://www.bahrain.com/en/the-pearl-snorkelling-and-diving",
+      "nextAction": "Require a current licensed operator and confirm water conditions, equipment, certification and oyster-retention rules before travel. Recheck by 14 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 132,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-15",
+      "finding": "Brunei Tourism currently recommends a Kampong Ayer river ride, wooden public paths and the Cultural and Tourism Gallery. Its mapped trail supports orientation but not a resident-led stay or entry to domestic space.",
+      "sourceUrl": "https://www.bruneitourism.com/places/kampong-ayer/",
+      "nextAction": "Keep the route public and self-directed. Confirm gallery opening, landing, fare and walkway condition before travel and recheck by 14 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 67,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-15",
+      "finding": "Botswana Tourism currently documents guided mokoro travel and the trained poler's role in shallow delta channels. UNESCO supports the hydrological and ecological context. The reviewed sources do not prove the original community-control premise for an unnamed operator.",
+      "sourceUrl": "https://www.botswanatourism.co.bw/experience/mokoro-ride",
+      "nextAction": "Require a currently licensed operator and direct confirmation of guide, launch, safety and community benefit. Keep wildlife optional and recheck by 14 December 2026.",
+      "outreachPerformed": false
+    },
     {
       "candidateId": 36,
       "status": "related_alternative",

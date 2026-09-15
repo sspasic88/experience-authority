@@ -2,7 +2,7 @@
 
 Public-source edition live at https://experienceauthority.com, deployed from the separate EA GitHub repository to its own Vercel project on 12 September 2026.
 
-Current live release scope: 104 guides across 60 countries and territories, 12 editorial collections, nine Journal articles, 14 local planning chapters and 59 dated daily discoveries prepared for 13 September to 10 November. Includes an actual-publication log, private journey planning, batch saving, sharing and credited photographs. See [content expansion batch 32](content-expansion-batch-32-2026-09-15.md). Prepared future daily editions are not already public.
+Current prepared release scope: 109 guides across 65 countries and territories, 12 editorial collections, nine Journal articles, 14 local planning chapters and 64 dated daily discoveries prepared for 13 September to 15 November. Includes an actual-publication log, private journey planning, batch saving, sharing and credited photographs. See [content expansion batch 33](content-expansion-batch-33-2026-09-15.md). Prepared future daily editions are not already public.
 
 ## Implemented
 
@@ -15,7 +15,7 @@ Current live release scope: 104 guides across 60 countries and territories, 12 e
 - Per-route SEO/social metadata, brand share image, JSON-LD, production sitemap with real guide review dates, indexable production robots and noindex preview rules.
 - Nonce-based production script CSP, response security headers and training crawler preferences.
 - Privacy-first GA4 integration with Basic Consent Mode, explicit allow and deny choices, later revocation, query-free page paths and a bounded event set. A separate EA Measurement ID is configured for production.
-- 104 public-source guides, separate from Selected and demo records; dated source notes, official access links, evidence boundaries, credited real photographs and expiry checks. Normal mode serves this content, not the eight fictional examples. See content-edition.md and content-expansion-batch-32-2026-09-15.md.
+- 109 public-source guides, separate from Selected and demo records; dated source notes, official access links, evidence boundaries, credited real photographs and expiry checks. Normal mode serves this content, not the eight fictional examples. See content-edition.md and content-expansion-batch-33-2026-09-15.md.
 - Clickable homepage photographs, full-size guide-photo dialogs and user-initiated sharing; the slash aligns optically with the two name rows, with the tagline separately underneath. Homepage imagery uses nine hand-curated three-guide editions, a stable three-hour starting edition and visitor-controlled previous/next navigation. Each edition contains three different countries and fields.
 - Deterministic guide continuations that prefer local geographic relevance and a contrasting activity. Porto and Gaia and Mexico City and Xochimilco are explicitly connected; wider country and editorial suggestions are clearly labelled and link to their context. This is not route or travel-time advice.
 - Every visible photograph credit uses the same direct-source treatment: `Image: creator / source ↗` in the lower-right corner, opening the original source in a new tab. Detailed rights records remain on Credits rather than competing with the image.

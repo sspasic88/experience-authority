@@ -42,8 +42,8 @@ test("Arcachon stays a bay-wide chapter regardless of guide order or a more spec
   }
 });
 
-test("guide set contains 104 distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 104);
+test("guide set contains 109 distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 109);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -52,7 +52,7 @@ test("guide set contains 104 distinct, sourced public experiences, not Selected 
     new Set(publicGuides.map((p) => p.slug)).size,
     publicGuides.length,
   );
-  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 60);
+  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 65);
   assert.equal(
     new Set(territories.map((place) => place.slug)).size,
     territories.length,
@@ -81,6 +81,29 @@ test("guide set contains 104 distinct, sourced public experiences, not Selected 
   assert.equal(
     new Set(publicGuideMedia.map((media) => media.src)).size,
     publicGuides.length,
+  );
+});
+test("batch 33 preserves exact access, participation and depiction boundaries", () => {
+  const slugs = [
+    "meet-the-rose-before-it-becomes-water",
+    "walk-inside-the-earthen-ring",
+    "follow-the-pearl-back-underwater",
+    "read-a-city-from-the-waterline",
+    "let-the-delta-decide-the-route",
+  ];
+  const guides = slugs.map((slug) =>
+    publicGuides.find((guide) => guide.slug === slug)!,
+  );
+  assert.ok(guides.every(Boolean));
+  assert.match(guides[0].responsibility, /pick only/i);
+  assert.match(guides[1].participation, /private residential space/i);
+  assert.match(guides[2].evidence, /not guaranteed weather, a pearl find/i);
+  assert.match(guides[3].participation, /Private homes/i);
+  assert.match(guides[4].responsibility, /never stand/i);
+  assert.ok(
+    guides.every((guide) =>
+      guide.access.includes("No EA booking or commission"),
+    ),
   );
 });
 test("New York connects a recognisable food with living production and a difficult second history", () => {

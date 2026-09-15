@@ -232,6 +232,51 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "oman",
+    name: "Oman",
+    region: "ad-dakhiliyah",
+    regionName: "Jabal Akhdar",
+    intro:
+      "Meet Jabal Akhdar in its short rose season, when a hosted morning can connect petals on the terrace with the still that carries their scent forward.",
+    image: null,
+  },
+  {
+    slug: "china",
+    name: "China",
+    region: "fujian",
+    regionName: "Yongding",
+    intro:
+      "Enter Fujian through Yongding's earthen rings, where one open centre reveals the thresholds, galleries and shared structure inside a famous silhouette.",
+    image: null,
+  },
+  {
+    slug: "bahrain",
+    name: "Bahrain",
+    region: "muharraq",
+    regionName: "Muharraq",
+    intro:
+      "Begin with Muharraq's pearling history, then follow a licensed public route from the shore back to the oyster beds beneath Bahrain's water.",
+    image: null,
+  },
+  {
+    slug: "brunei",
+    name: "Brunei",
+    region: "kampong-ayer",
+    regionName: "Kampong Ayer",
+    intro:
+      "Approach Bandar Seri Begawan from the river, then read Kampong Ayer through its public landings, walkways and relationship with the waterline.",
+    image: null,
+  },
+  {
+    slug: "botswana",
+    name: "Botswana",
+    region: "okavango-delta",
+    regionName: "Okavango Delta",
+    intro:
+      "Move through the Okavango at the delta's pace, with a trained poler reading the shallow channels while the route remains open to water and season.",
+    image: null,
+  },
+  {
     slug: "uzbekistan",
     name: "Uzbekistan",
     region: "samarkand",
@@ -774,6 +819,11 @@ export const territories = [
 ] as const;
 // Area labels can differ from a guide's specific site. Never let the last guide rename the area.
 const additionalRegionNames: Readonly<Record<string, string>> = {
+  "oman/ad-dakhiliyah": "Jabal Akhdar",
+  "china/fujian": "Yongding",
+  "bahrain/muharraq": "Muharraq",
+  "brunei/kampong-ayer": "Kampong Ayer",
+  "botswana/okavango-delta": "Okavango Delta",
   "uzbekistan/samarkand": "Samarkand",
   "ghana/ashanti-region": "Ashanti Region",
   "samoa/apia": "Apia",

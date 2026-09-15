@@ -5,6 +5,11 @@ export const guideReleases = [
   {
     date: "2026-09-15",
     slugs: [
+      "meet-the-rose-before-it-becomes-water",
+      "walk-inside-the-earthen-ring",
+      "follow-the-pearl-back-underwater",
+      "read-a-city-from-the-waterline",
+      "let-the-delta-decide-the-route",
       "follow-a-sheet-back-to-the-mulberry-branch",
       "follow-kente-one-strip-at-a-time",
       "see-lunch-built-from-fire-stone-and-leaves",
