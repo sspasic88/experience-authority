@@ -9,6 +9,8 @@
 - The complete local SEO pass found no invalid route, missing metadata, invalid canonical or duplicate title or description across all 320 sitemap routes.
 - The complete browser audit checked 378 desktop, tablet and mobile views plus 512 internal links with no failure. Curated hero rotation, varied home suggestions, direct image credits, connected recommendations, saving, image opening, comparison, search, city filtering, mobile navigation and Escape behaviour passed.
 - The visitor audit completed 21 planning, saving, photograph, sharing, export, cross-tab and storage-failure checks at 320, 390 and 1440 pixels with no error and without sending an external message.
+- Commit `6df0006` deployed successfully to `experienceauthority.com`. The full live 209-page smoke and 320-route SEO audit repeated with no failure. All five new guide URLs returned production HTML successfully.
+- The live Analytics consent audit confirmed zero Google requests before consent, successful tag loading only after consent, exclusion of query and private planning data, clean revocation and zero accessibility violations.
 - Full decision, photography and source details are recorded in [content expansion batch 34](content-expansion-batch-34-2026-09-15.md).
 
 ## Content expansion batch 33 — 15 September 2026
