@@ -1,5 +1,19 @@
 # QA report — 15 September 2026
 
+## Content expansion batch 36 — 15 September 2026
+
+- Added ten bounded guides from original candidates 22, 37, 46, 57, 63, 65, 71, 74, 89 and 164: Vama egg decoration, a Kakheti qvevri cellar, the Sri Pada public pilgrimage, an Addis coffee gallery and ceremony, a Lamu dhow sail, an Entebbe barkcloth demonstration, the Haida Heritage Centre, Lafayette's Bal du Dimanche, Rio's 2027 Sambadrome technical rehearsals and Kingston Dub Club.
+- The catalogue now contains 129 guides across 82 countries and territories. The reconciliation maps 90 of the original 200 candidates through 60 narrowed public scopes, 28 related alternatives and two protected public programmes.
+- The daily edition contains 84 authored discoveries through 5 December 2026. The sitemap contains 363 indexable routes.
+- All 71 tests, TypeScript and the production build passed. Local and live smoke each checked 224 pages, 12 expected not-found paths and 224 distinct content-security nonces with no failure.
+- The complete local and live SEO passes found no invalid route, missing metadata, invalid canonical, duplicate title or duplicate description across all 363 sitemap routes.
+- The expanded browser audit checked 468 desktop, tablet and mobile views plus 601 internal links with no failure. It explicitly included all ten new guide routes and all ten destination routes.
+- Manual visual review covered every new desktop hero, its title wrap, crop, first-fold hierarchy and direct image credit. The selected images remain exact to the source or clearly disclose their documentary boundary.
+- The visitor audit completed 21 planning, saving, photograph, sharing, export, cross-tab and storage-failure checks at 320, 390 and 1440 pixels.
+- Commit `9f0ae00` deployed successfully to `experienceauthority.com`. All ten new guide URLs returned production HTML successfully.
+- The live Analytics consent audit confirmed zero Google requests before consent, successful tag loading only after consent, exclusion of query and private planning data, clean revocation and zero accessibility violations.
+- Full decision, photography and source details are recorded in [content expansion batch 36](content-expansion-batch-36-2026-09-15.md).
+
 ## Content expansion batch 35 — 15 September 2026
 
 - Added five bounded guides from original candidates 64, 138, 165, 175 and 118: Materuni's Migombani coffee process, a current public mugham route in Baku, a steelpan-making tour in Trinidad, public-street observation of El Alto's neo-Andean architecture and a Perast museum and waterfront route with a strict future-event boundary.
