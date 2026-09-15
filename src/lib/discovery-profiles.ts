@@ -24,6 +24,42 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "follow-a-sheet-back-to-the-mulberry-branch": {
+    modes: ["watch-listen"],
+    time: "half-day",
+    keywords: [
+      "Konigil",
+      "Samarkand",
+      "Uzbekistan",
+      "Meros",
+      "paper mill",
+      "Samarkand paper",
+      "mulberry",
+      "bark",
+      "papermaking",
+      "manuscript",
+      "craft",
+      "factory visit",
+    ],
+  },
+  "follow-kente-one-strip-at-a-time": {
+    modes: ["hands-on", "watch-listen"],
+    time: "short",
+    keywords: [
+      "Bonwire",
+      "Kumasi",
+      "Ashanti Region",
+      "Ghana",
+      "kente",
+      "weaving",
+      "loom",
+      "textile",
+      "pattern",
+      "thread",
+      "warping",
+      "master weaver",
+    ],
+  },
   "see-lunch-built-from-fire-stone-and-leaves": {
     modes: ["watch-listen", "at-table"],
     time: "half-day",

@@ -232,6 +232,24 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "uzbekistan",
+    name: "Uzbekistan",
+    region: "samarkand",
+    regionName: "Samarkand",
+    intro:
+      "Let Samarkand's finished pages lead out to Konigil, where mulberry bark, water and patient handwork make the material beneath the writing.",
+    image: null,
+  },
+  {
+    slug: "ghana",
+    name: "Ghana",
+    region: "ashanti-region",
+    regionName: "Ashanti Region",
+    intro:
+      "Begin near Kumasi at Bonwire's loom, where one narrow strip reveals the preparation, pattern and skilled coordination inside a finished kente cloth.",
+    image: null,
+  },
+  {
     slug: "samoa",
     name: "Samoa",
     region: "apia",
@@ -756,6 +774,8 @@ export const territories = [
 ] as const;
 // Area labels can differ from a guide's specific site. Never let the last guide rename the area.
 const additionalRegionNames: Readonly<Record<string, string>> = {
+  "uzbekistan/samarkand": "Samarkand",
+  "ghana/ashanti-region": "Ashanti Region",
   "samoa/apia": "Apia",
   "french-polynesia/moorea": "Moorea",
   "albania/tirana": "Tirana",

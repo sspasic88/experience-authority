@@ -1,5 +1,16 @@
 # QA report — 15 September 2026
 
+## Content expansion batch 32 — 15 September 2026
+
+- Added two bounded public-source guides from candidates 36 and 58: observation of mulberry-paper production at the Meros mill in Konigil and a visitor-centre-led route into kente weaving in Bonwire.
+- Konigil is a related public alternative and does not promise hands-on papermaking or unchanged medieval continuity. Bonwire is a narrowed public scope whose current participation format must be confirmed directly.
+- The catalogue now contains 104 guides across 60 countries and territories. The reconciliation maps 65 of the original 200 candidates without changing the protected register or conferring EA Selected status.
+- The daily edition contains 59 authored discoveries through 10 November 2026. The sitemap contains 291 indexable routes.
+- All 67 tests, TypeScript and the production build passed. Local smoke checked 180 pages and 180 distinct content-security nonces with no failures.
+- The complete local SEO pass found no invalid route, missing metadata, invalid canonical or duplicate title or description across all 291 sitemap routes.
+- The complete browser audit checked 318 desktop, tablet and mobile views plus 453 internal links with no failure. Manual review confirmed strong process-specific hero crops, controlled headline wraps and a single direct source credit on both new guides.
+- Full decision, photography and source details are recorded in [content expansion batch 32](content-expansion-batch-32-2026-09-15.md).
+
 ## Content expansion batch 31 — 15 September 2026
 
 - Added two bounded public-source guides from candidates 94 and 99: Samoa Cultural Village's public umu programme and a beginner va'a paddle on Moorea.

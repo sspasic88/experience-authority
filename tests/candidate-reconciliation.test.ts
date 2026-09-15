@@ -7,10 +7,10 @@ test("dated candidate reconciliation counts scoped coverage without turning alte
   assert.equal(ledger.catalogueCount, publicGuides.length);
   assert.equal(ledger.originalCandidateCount, 200);
   assert.equal(ledger.originalProtectedCount, 46);
-  assert.equal(ledger.mappings.length, 63);
+  assert.equal(ledger.mappings.length, 65);
   assert.equal(
     new Set(ledger.mappings.map((item) => item.candidateId)).size,
-    63,
+    65,
   );
   const counts: Record<string, number> = {};
   for (const mapping of ledger.mappings) {
@@ -20,8 +20,8 @@ test("dated candidate reconciliation counts scoped coverage without turning alte
     counts[mapping.relation] = (counts[mapping.relation] ?? 0) + 1;
   }
   assert.deepEqual(counts, {
-    narrowed_public_scope: 50,
-    related_alternative: 11,
+    narrowed_public_scope: 51,
+    related_alternative: 12,
     protected_public_programme_only: 2,
   });
   assert.equal(ledger.eaSelectedApprovals, 0);
@@ -49,7 +49,6 @@ test("dated candidate reconciliation counts scoped coverage without turning alte
     );
   }
   assert.ok(!ledger.mappings.some((mapping) => mapping.candidateId === 108));
-  assert.ok(!ledger.mappings.some((mapping) => mapping.candidateId === 36));
   assert.ok(!ledger.mappings.some((mapping) => mapping.candidateId === 74));
   assert.ok(!ledger.mappings.some((mapping) => mapping.candidateId === 22));
   assert.ok(!ledger.mappings.some((mapping) => mapping.candidateId === 89));
@@ -97,6 +96,24 @@ test("dated candidate reconciliation counts scoped coverage without turning alte
         ?.relation,
       "related_alternative",
     );
+    assert.ok(
+      ledger.newSourceReviews.some(
+        (review) =>
+          review.candidateId === candidateId &&
+          review.checkedOn === "2026-09-15" &&
+          review.outreachPerformed === false,
+      ),
+    );
+  }
+  assert.equal(
+    ledger.mappings.find((mapping) => mapping.candidateId === 36)?.relation,
+    "related_alternative",
+  );
+  assert.equal(
+    ledger.mappings.find((mapping) => mapping.candidateId === 58)?.relation,
+    "narrowed_public_scope",
+  );
+  for (const candidateId of [36, 58]) {
     assert.ok(
       ledger.newSourceReviews.some(
         (review) =>

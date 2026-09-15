@@ -636,6 +636,28 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "Where else have you mistaken a graceful result for something achieved without constant coordination?",
   },
+  {
+    date: "2026-11-09",
+    slug: "follow-a-sheet-back-to-the-mulberry-branch",
+    title: "Before the manuscript, someone had to make its surface.",
+    angle:
+      "Samarkand is easy to approach through finished architecture and written history. Konigil turns attention toward the material beneath the words. At the Meros mill, begin with mulberry branches and watch bark, water, pressure and drying move toward a sheet. The present workshop is a revival, not a medieval scene preserved unchanged. That distinction makes the visit more useful. It lets living work meet a famous history without forcing either one to impersonate the other.",
+    notice:
+      "The texture changing between bark, fibre, wet pulp and a finished sheet. Stay on the visitor route and touch only when invited.",
+    question:
+      "Which story would change if you began with the person who made the surface it was written or printed on?",
+  },
+  {
+    date: "2026-11-10",
+    slug: "follow-kente-one-strip-at-a-time",
+    title: "A field of colour begins as one narrow strip.",
+    angle:
+      "A finished kente can fill the eye so completely that its construction disappears. At Bonwire, let the loom reduce the image to a sequence. Threads are prepared and tensioned. Hands and feet coordinate. A narrow band advances before separate strips can be joined into a larger cloth. If the guide offers a first try, use it to understand difficulty rather than collect a performance of skill. The pattern has a name and context before it becomes your photograph.",
+    notice:
+      "The width of the strip and the movement that changes one small section. Ask before touching the loom or photographing the weaver.",
+    question:
+      "What familiar object would become more impressive if you could see the small repeated unit from which it is built?",
+  },
 ];
 
 export function availableDiscoveries(

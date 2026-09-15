@@ -4,7 +4,7 @@
   "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
   "originalCandidateCount": 200,
   "originalProtectedCount": 46,
-  "catalogueCount": 102,
+  "catalogueCount": 104,
   "mappings": [
     {
       "candidateId": 9,
@@ -383,9 +383,39 @@
       "guideId": "moorea-we-do-vaa",
       "relation": "related_alternative",
       "boundary": "A named public beginner va'a paddling introduction on Moorea. This is not the original traditional-navigation lesson, a racing session, open-ocean travel or proof of mastery."
+    },
+    {
+      "candidateId": 36,
+      "guideId": "konigil-meros-paper-mill",
+      "relation": "related_alternative",
+      "boundary": "A public excursion to observe the manual paper process at the Meros mill in Konigil. This is not the original hands-on papermaking promise, proof of an unchanged medieval process or guaranteed access to every working area."
+    },
+    {
+      "candidateId": 58,
+      "guideId": "bonwire-kente-centre",
+      "relation": "narrowed_public_scope",
+      "boundary": "A visitor-centre-arranged weaving tour in Bonwire with a published introductory try at selected spinning, warping and weaving stages. This is not mastery, unrestricted workshop access or permission to copy a named pattern without context."
     }
   ],
   "newSourceReviews": [
+    {
+      "candidateId": 36,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-15",
+      "finding": "Uzbekistan Travel currently publishes factory excursions at the Meros paper mill that show manual production from natural materials. A government directorate's 2025 gallery independently states that the operating process remains manual and visible to visitors, but neither source promises hands-on papermaking.",
+      "sourceUrl": "https://uzbekistan.travel/en/o/konigil-village-and-meros-paper-mill/",
+      "nextAction": "Keep the guide observation-led. Recheck hours, price, language, visitor route and whether any hands-on format is directly published by 14 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 58,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-15",
+      "finding": "Visit Ghana currently publishes a Bonwire visitor-centre route, daily hours, contact number, community workshop visit and introductory try at thread spinning, warping and weaving. Museum evidence supports the narrow-strip construction and cultural context of Asante kente.",
+      "sourceUrl": "https://visitghana.com/bonwire-kente/",
+      "nextAction": "Require visitors to arrange the tour through the centre and confirm the current fee, group size and practical task. Recheck the offer by 14 December 2026 and keep private workspaces outside the promise.",
+      "outreachPerformed": false
+    },
     {
       "candidateId": 94,
       "status": "related_alternative",

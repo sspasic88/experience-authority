@@ -31,9 +31,9 @@ export const editorialPathways = [
     slug: "the-pleasure-of-being-a-beginner",
     kind: "learned-skills",
     title: "The pleasure of being a beginner",
-    promise: "Eleven ways to give your hands a new problem.",
+    promise: "Twelve ways to give your hands a new problem.",
     intro:
-      "A first attempt makes a familiar place less predictable. In Porto, a brush turns the tile you noticed on a facade into a decision of your own. Fez puts a hammer, clay and geometry in the same frame. Suchitoto begins with a fold that tells indigo where not to go. Skopje asks fine silver wire to hold a shape. Hong Kong turns four hands of mahjong into one changing problem. Cambridge makes shared timing physical through a bell. Moorea asks a small crew to find one stroke across the lagoon, while Biarritz, Bo-Kaap, Salta and Loíza offer different first steps through play, food and rhythm. These are public introductions, not shortcuts to mastery. Choose the attempt you would enjoy even if the result were imperfect, then read the current programme before booking.",
+      "A first attempt makes a familiar place less predictable. In Porto, a brush turns the tile you noticed on a facade into a decision of your own. Fez puts a hammer, clay and geometry in the same frame. Suchitoto begins with a fold that tells indigo where not to go. Skopje asks fine silver wire to hold a shape. Hong Kong turns four hands of mahjong into one changing problem. Bonwire introduces the tension and coordination inside one narrow kente strip. Cambridge makes shared timing physical through a bell. Moorea asks a small crew to find one stroke across the lagoon, while Biarritz, Bo-Kaap, Salta and Loíza offer different first steps through play, food and rhythm. These are public introductions, not shortcuts to mastery. Choose the attempt you would enjoy even if the result were imperfect, then read the current programme before booking.",
     guideSlugs: [
       "paint-the-pattern-you-noticed",
       "fold-a-pattern-into-the-blue",
@@ -46,6 +46,7 @@ export const editorialPathways = [
       "draw-with-silver-in-skopjes-old-bazaar",
       "learn-hong-kong-one-hand-at-a-time",
       "take-the-lagoon-one-stroke-at-a-time",
+      "follow-kente-one-strip-at-a-time",
     ],
     visitorUse:
       "Compare what you actually do, how long the session asks for and what the instructor supplies. Keep room to collect a fired tile later or confirm a seasonal class date before fixing your route.",
@@ -138,7 +139,7 @@ export const editorialPathways = [
     promise:
       "Move from watching a skill to becoming responsible for your first attempt.",
     intro:
-      "A short introduction does not make anyone a master, but it can make knowledge visible. Shape lavash beside a tonir, prepare plant dyes in Luang Prabang, fold an indigo resist in Suchitoto, make kimchi in Seoul, cut a first zellige piece in Fez, find balance through a Venetian oar and learn what happens before cider reaches the glass in Asturias. These guides favour bounded public programmes where the teacher, sequence and limits remain clear. Arrive ready to follow instruction, ask precise questions and leave expertise with the people who hold it.",
+      "A short introduction does not make anyone a master, but it can make knowledge visible. Shape lavash beside a tonir, prepare plant dyes in Luang Prabang, fold an indigo resist in Suchitoto, make kimchi in Seoul, cut a first zellige piece in Fez, meet the narrow loom in Bonwire, find balance through a Venetian oar and learn what happens before cider reaches the glass in Asturias. These guides favour bounded public programmes where the teacher, sequence and limits remain clear. Arrive ready to follow instruction, ask precise questions and leave expertise with the people who hold it.",
     guideSlugs: [
       "bread-from-the-tonir",
       "colour-before-cloth",
@@ -150,6 +151,7 @@ export const editorialPathways = [
       "cut-the-first-piece-of-a-pattern",
       "draw-with-silver-in-skopjes-old-bazaar",
       "learn-hong-kong-one-hand-at-a-time",
+      "follow-kente-one-strip-at-a-time",
     ],
     visitorUse:
       "Compare the teaching format, duration and preparation notes, then choose the skill you are willing to practise with patience.",
@@ -317,7 +319,7 @@ export const editorialPathways = [
     promise:
       "Return to places you recognise through public practices you may not have noticed the first time.",
     intro:
-      "Familiarity can make a city easier to reach and harder to see. Istanbul offers three different corrections to the postcard: ebru turns colour and water into a first attempt, the municipal ferry makes daily geography visible and a historic hammam changes the pace of the day. Mexico City moves from the chinampa landscape to a car-free Sunday avenue and the collective energy of Arena México. Singapore connects a hawker breakfast, batik, a coastal forest and a wetland at the city's wilder edge. Seoul places kimchi beside the beginning of makgeolli. Use one known landmark as orientation, then choose the practice that gives the rest of the day a sharper point of view.",
+      "Familiarity can make a city easier to reach and harder to see. Istanbul offers three different corrections to the postcard: ebru turns colour and water into a first attempt, the municipal ferry makes daily geography visible and a historic hammam changes the pace of the day. Mexico City moves from the chinampa landscape to a car-free Sunday avenue and the collective energy of Arena México. Singapore connects a hawker breakfast, batik, a coastal forest and a wetland at the city's wilder edge. Seoul places kimchi beside the beginning of makgeolli. Outside Samarkand, Konigil follows the famous manuscript image back to the mulberry bark and mill work that make a sheet. Use one known landmark as orientation, then choose the practice that gives the rest of the day a sharper point of view.",
     guideSlugs: [
       "lift-a-pattern-from-the-water",
       "let-the-ferry-redraw-istanbul",
@@ -329,6 +331,7 @@ export const editorialPathways = [
       "find-the-citys-wilder-edge",
       "kimchi-before-the-jar",
       "begin-with-rice-not-the-bottle",
+      "follow-a-sheet-back-to-the-mulberry-branch",
     ],
     visitorUse:
       "Choose the city already on your route, then select one guide from a different part of the day or a different kind of participation than your usual plan.",

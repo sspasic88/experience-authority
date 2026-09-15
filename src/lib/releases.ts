@@ -5,6 +5,8 @@ export const guideReleases = [
   {
     date: "2026-09-15",
     slugs: [
+      "follow-a-sheet-back-to-the-mulberry-branch",
+      "follow-kente-one-strip-at-a-time",
       "see-lunch-built-from-fire-stone-and-leaves",
       "take-the-lagoon-one-stroke-at-a-time",
     ],
