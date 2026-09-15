@@ -31,9 +31,9 @@ export const editorialPathways = [
     slug: "the-pleasure-of-being-a-beginner",
     kind: "learned-skills",
     title: "The pleasure of being a beginner",
-    promise: "Ten ways to give your hands a new problem.",
+    promise: "Eleven ways to give your hands a new problem.",
     intro:
-      "A first attempt makes a familiar place less predictable. In Porto, a brush turns the tile you noticed on a facade into a decision of your own. Fez puts a hammer, clay and geometry in the same frame. Suchitoto begins with a fold that tells indigo where not to go. Skopje asks fine silver wire to hold a shape. Hong Kong turns four hands of mahjong into one changing problem. Cambridge makes shared timing physical through a bell, while Biarritz, Bo-Kaap, Salta and Loíza offer different first steps through play, food and rhythm. These are public introductions, not shortcuts to mastery. Choose the attempt you would enjoy even if the result were imperfect, then read the current programme before booking.",
+      "A first attempt makes a familiar place less predictable. In Porto, a brush turns the tile you noticed on a facade into a decision of your own. Fez puts a hammer, clay and geometry in the same frame. Suchitoto begins with a fold that tells indigo where not to go. Skopje asks fine silver wire to hold a shape. Hong Kong turns four hands of mahjong into one changing problem. Cambridge makes shared timing physical through a bell. Moorea asks a small crew to find one stroke across the lagoon, while Biarritz, Bo-Kaap, Salta and Loíza offer different first steps through play, food and rhythm. These are public introductions, not shortcuts to mastery. Choose the attempt you would enjoy even if the result were imperfect, then read the current programme before booking.",
     guideSlugs: [
       "paint-the-pattern-you-noticed",
       "fold-a-pattern-into-the-blue",
@@ -45,6 +45,7 @@ export const editorialPathways = [
       "cut-the-first-piece-of-a-pattern",
       "draw-with-silver-in-skopjes-old-bazaar",
       "learn-hong-kong-one-hand-at-a-time",
+      "take-the-lagoon-one-stroke-at-a-time",
     ],
     visitorUse:
       "Compare what you actually do, how long the session asks for and what the instructor supplies. Keep room to collect a fired tile later or confirm a seasonal class date before fixing your route.",
@@ -81,9 +82,9 @@ export const editorialPathways = [
     kind: "food-and-drink",
     title: "What a place tastes like",
     promise:
-      "Fifteen ways to read landscape, work and memory through flavour and the table.",
+      "Sixteen ways to read landscape, work and memory through flavour and the table.",
     intro:
-      "Begin with appetite, then look further. These guides connect a Singapore hawker breakfast, halloumi made on a route into the Troodos foothills, Vienna's heuriger, Asturian cider, Grenadian cacao, Kyoto tea, Seoul kimchi, Québec maple season and food grown on Mexico City's chinampas. Oaxaca follows agave through heat and copper, while Doha uses qahwa to read the social language of a majlis. Chios begins with clear mastiha resin on a tree. In Appenzellerland, a gallery above a working dairy connects the tasting to milk, curd and cellar. Pinglin lets a seasonal farm visit begin with the leaf before the cup. Each is a different kind of public encounter. Together they show why flavour can reveal climate, labour, technique and social rhythm. Use the official links to check what is currently offered, and let the guide sharpen the questions you bring to the table.",
+      "Begin with appetite, then look further. These guides connect a Singapore hawker breakfast, halloumi made on a route into the Troodos foothills, Vienna's heuriger, Asturian cider, Grenadian cacao, Kyoto tea, Seoul kimchi, Québec maple season and food grown on Mexico City's chinampas. In Apia, an umu-cooked lunch begins with hot volcanic rocks, wrapped ingredients and preparation the guest can actually see. Oaxaca follows agave through heat and copper, while Doha uses qahwa to read the social language of a majlis. Chios begins with clear mastiha resin on a tree. In Appenzellerland, a gallery above a working dairy connects the tasting to milk, curd and cellar. Pinglin lets a seasonal farm visit begin with the leaf before the cup. Each is a different kind of public encounter. Together they show why flavour can reveal climate, labour, technique and social rhythm. Use the official links to check what is currently offered, and let the guide sharpen the questions you bring to the table.",
     guideSlugs: [
       "a-morning-at-the-hawker-table",
       "make-halloumi-before-it-reaches-the-plate",
@@ -100,6 +101,7 @@ export const editorialPathways = [
       "follow-appenzeller-from-vat-to-cellar",
       "make-tea-before-taipei-drinks-it",
       "taste-the-distance-from-pod-to-bar",
+      "see-lunch-built-from-fire-stone-and-leaves",
     ],
     visitorUse:
       "Choose one guide near a route you already have, then compare access, timing and participation before adding it to your journey.",
@@ -242,9 +244,9 @@ export const editorialPathways = [
     slug: "move-at-the-landscapes-pace",
     kind: "slow-nature",
     title: "Move at the landscape's pace",
-    promise: "Eight encounters that reward less distance and more attention.",
+    promise: "Nine encounters that reward less distance and more attention.",
     intro:
-      "Slow travel is useful only when it changes what you notice. Walk the public approach at Kumano Kodo without reducing pilgrimage to a personal challenge. Cross Wadden mudflats at the tide's pace. Wait for starlings above the Danish marshes. Read Lofoten through the fishery behind its mountain views, then read the Namib through the smallest tracks in its dunes. Meet Xochimilco as a living agricultural landscape within Mexico City. In Jatiluwih, follow the water that holds terraces together. In Monument Valley, let a Navajo-managed route replace the assumption that every visible place is open. Each guide keeps the encounter bounded and asks you to prepare for conditions, local rules and the limits of a short visit.",
+      "Slow travel is useful only when it changes what you notice. Walk the public approach at Kumano Kodo without reducing pilgrimage to a personal challenge. Cross Wadden mudflats at the tide's pace. Wait for starlings above the Danish marshes. Read Lofoten through the fishery behind its mountain views, then read the Namib through the smallest tracks in its dunes. Meet Xochimilco as a living agricultural landscape within Mexico City. In Jatiluwih, follow the water that holds terraces together. In Monument Valley, let a Navajo-managed route replace the assumption that every visible place is open. On Moorea, trade a fast lagoon circuit for the balance and repeated stroke of a va'a introduction. Each guide keeps the encounter bounded and asks you to prepare for conditions, local rules and the limits of a short visit.",
     guideSlugs: [
       "leave-room-for-devotion",
       "walk-where-the-sea-was",
@@ -254,6 +256,7 @@ export const editorialPathways = [
       "read-the-desert-at-ground-level",
       "follow-balis-water-before-the-rice",
       "read-monument-valley-beyond-the-scenic-drive",
+      "take-the-lagoon-one-stroke-at-a-time",
     ],
     visitorUse:
       "Choose one landscape, read its responsibility and access sections first, then give it more time than the headline duration suggests.",

@@ -614,6 +614,28 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "Which public tradition would you understand differently if you learned the participant's purpose before watching its form?",
   },
+  {
+    date: "2026-11-07",
+    slug: "see-lunch-built-from-fire-stone-and-leaves",
+    title: "Lunch begins while the stones are still heating.",
+    angle:
+      "At Apia's Cultural Village, the plate is only the final stage of an umu. Coconut husks and wood heat volcanic rocks. Ingredients meet coconut cream and leaves before the oven is covered and time does the rest. Watch the order of the work and notice how many decisions disappear when food arrives already served. This is a public programme, not access to a family's Sunday meal. Its value lies in letting preparation remain visible before everyone eats.",
+    notice:
+      "The change from open fire to contained heat. Stay outside the working area unless the host clearly invites a step.",
+    question:
+      "Which meal would become more memorable if you could see the fuel, tools and shared preparation behind it?",
+  },
+  {
+    date: "2026-11-08",
+    slug: "take-the-lagoon-one-stroke-at-a-time",
+    title: "The lagoon becomes a problem the crew solves together.",
+    angle:
+      "Moorea's water can make almost any boat journey look effortless. A first va'a paddle reveals the structure inside that image. The outrigger steadies the narrow hull, but the canoe still asks several bodies to enter the water with one rhythm. Let the experienced rowers set the route and cadence. Do not confuse a beginner introduction with traditional navigation training. The useful discovery is simpler and more physical: balance is something the whole crew keeps making.",
+    notice:
+      "The moment separate strokes begin to sound like one. Follow every instruction around launch, landing, weather and flotation equipment.",
+    question:
+      "Where else have you mistaken a graceful result for something achieved without constant coordination?",
+  },
 ];
 
 export function availableDiscoveries(

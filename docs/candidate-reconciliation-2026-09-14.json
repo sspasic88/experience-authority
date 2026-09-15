@@ -4,7 +4,7 @@
   "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
   "originalCandidateCount": 200,
   "originalProtectedCount": 46,
-  "catalogueCount": 100,
+  "catalogueCount": 102,
   "mappings": [
     {
       "candidateId": 9,
@@ -371,9 +371,48 @@
       "guideId": "echternach-hopping-procession",
       "relation": "related_alternative",
       "boundary": "A current visit to the public documentation centre, followed by respectful spectatorship only if a future Whit Tuesday date and visitor arrangements are officially announced. Open tourist participation in the procession is not promised."
+    },
+    {
+      "candidateId": 94,
+      "guideId": "apia-cultural-village-umu",
+      "relation": "related_alternative",
+      "boundary": "A paid public Cultural Village programme in Apia with hosted umu preparation and lunch. This is not preparation inside a private village or household, a Sunday invitation, guaranteed hands-on cooking or access beyond the published programme."
+    },
+    {
+      "candidateId": 99,
+      "guideId": "moorea-we-do-vaa",
+      "relation": "related_alternative",
+      "boundary": "A named public beginner va'a paddling introduction on Moorea. This is not the original traditional-navigation lesson, a racing session, open-ocean travel or proof of mastery."
     }
   ],
   "newSourceReviews": [
+    {
+      "candidateId": 94,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-15",
+      "finding": "Samoa Tourism currently publishes a paid Tuesday to Friday Cultural Village programme in Apia that includes umu preparation. Its food and Apia guides separately state that the programme serves an umu-cooked lunch.",
+      "sourceUrl": "https://www.samoa.travel/plan-book/activities/samoa-cultural-village",
+      "nextAction": "Keep the public Cultural Village distinct from a private Sunday meal. Recheck hours, price, meal inclusion and dietary arrangements by 14 December 2026. Do not promise hands-on preparation.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 99,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-15",
+      "finding": "Tahiti Tourisme currently lists We Do Va'a in Haapiti as a small family operator offering a beginner va'a introduction with experienced rowers. The listing supports paddling but not the original traditional-navigation lesson and contains conflicting opening-day information.",
+      "sourceUrl": "https://www.tahititourisme.com/service/we-do-vaa/",
+      "nextAction": "Require the visitor to confirm day, price, route, equipment and conditions directly. Keep traditional navigation, racing and open-ocean travel outside the promise. Recheck by 14 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 200,
+      "status": "evidence_hold",
+      "checkedOn": "2026-09-15",
+      "finding": "AAT Aorn and Norfolk Island Tourism currently publish a one-hour Norf'k language class on Wednesday and Thursday at Governors Lodge with a direct booking route. The reviewed gallery contains attractive but generic island and heritage photographs rather than the language, classroom or a defensible learning context.",
+      "sourceUrl": "https://aataorntours.com/tour/norfk-laengwij-class/",
+      "nextAction": "Keep the access evidence and candidate priority. Do not publish until an exact, high-quality and responsibly creditable photograph shows the language or learning context without exposing schoolchildren or implying a private lesson.",
+      "outreachPerformed": false
+    },
     {
       "candidateId": 110,
       "status": "narrowed_public_scope",

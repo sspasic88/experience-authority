@@ -24,6 +24,40 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "see-lunch-built-from-fire-stone-and-leaves": {
+    modes: ["watch-listen", "at-table"],
+    time: "half-day",
+    keywords: [
+      "Apia",
+      "Samoa",
+      "Upolu",
+      "umu",
+      "earth oven",
+      "stone oven",
+      "Samoa Cultural Village",
+      "Samoan food",
+      "lunch",
+      "volcanic rocks",
+      "Fa'a Samoa",
+    ],
+  },
+  "take-the-lagoon-one-stroke-at-a-time": {
+    modes: ["hands-on", "outdoors"],
+    time: "half-day",
+    keywords: [
+      "Moorea",
+      "French Polynesia",
+      "Tahiti",
+      "va'a",
+      "vaa",
+      "outrigger canoe",
+      "canoe",
+      "paddling",
+      "lagoon",
+      "We Do Va'a",
+      "beginner",
+    ],
+  },
   "let-the-city-take-its-evening-walk": {
     modes: ["outdoors", "slow-down"],
     time: "own-pace",

@@ -232,6 +232,24 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "samoa",
+    name: "Samoa",
+    region: "apia",
+    regionName: "Apia",
+    intro:
+      "Begin Apia with the fire, stone, leaves and shared preparation behind an umu-cooked lunch in the public Cultural Village programme.",
+    image: null,
+  },
+  {
+    slug: "french-polynesia",
+    name: "French Polynesia",
+    region: "moorea",
+    regionName: "Moorea",
+    intro:
+      "Enter Moorea's lagoon through a first va'a paddle, where the outrigger and a shared stroke matter as much as the water around them.",
+    image: null,
+  },
+  {
     slug: "albania",
     name: "Albania",
     region: "tirana",
@@ -738,6 +756,8 @@ export const territories = [
 ] as const;
 // Area labels can differ from a guide's specific site. Never let the last guide rename the area.
 const additionalRegionNames: Readonly<Record<string, string>> = {
+  "samoa/apia": "Apia",
+  "french-polynesia/moorea": "Moorea",
   "albania/tirana": "Tirana",
   "luxembourg/echternach": "Echternach",
   "sao-tome-and-principe/sao-tome": "São Tomé",

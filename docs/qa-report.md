@@ -1,4 +1,15 @@
-# QA report — 14 September 2026
+# QA report — 15 September 2026
+
+## Content expansion batch 31 — 15 September 2026
+
+- Added two bounded public-source guides from candidates 94 and 99: Samoa Cultural Village's public umu programme and a beginner va'a paddle on Moorea.
+- The original private Samoa meal and traditional-navigation premise were not published as if available. Candidate 200's current Norf'k class remains on evidence hold because the reviewed photography did not yet meet the guide's specific visual threshold.
+- The catalogue now contains 102 guides across 58 countries and territories. The reconciliation maps 63 of the original 200 candidates without changing the protected register or conferring EA Selected status.
+- The daily edition contains 57 authored discoveries through 8 November 2026. The sitemap contains 285 indexable routes.
+- All 67 tests, TypeScript and the production build passed. Local smoke checked 174 pages and 174 distinct content-security nonces with no failures.
+- The complete local SEO pass found no invalid route, missing metadata, invalid canonical or duplicate title or description across all 285 sitemap routes.
+- The complete browser audit checked 306 desktop, tablet and mobile views plus 441 internal links with no failure. Manual review confirmed strong hero crops, controlled headline wraps and direct source credits on both new guides.
+- Full decision, photography and source details are recorded in [content expansion batch 31](content-expansion-batch-31-2026-09-15.md).
 
 ## Content expansion batch 30 — 14 September 2026
 
