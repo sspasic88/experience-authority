@@ -36,4 +36,4 @@ All five guides have Compass participation, time and keyword profiles. They ente
 - The complete local SEO audit found no invalid route, missing title, description or canonical, and no duplicate title or description.
 - The complete browser audit checks 348 desktop, tablet and mobile views plus 483 internal links with no broken image, overflow, browser error or automated WCAG A/AA violation. Hero rotation, home suggestions, image credits, local recommendations, saving, image opening, comparison, search, city filtering, mobile navigation and Escape behaviour pass.
 
-Live deployment and live SEO results are recorded in the top section of `qa-report.md` after publication.
+Commit `74c60c7` deployed successfully to `experienceauthority.com`. The live 195-page route and security smoke and complete 306-route SEO audit repeated with no failure, missing metadata, invalid canonical or duplicate title and description.

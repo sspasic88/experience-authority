@@ -10,7 +10,7 @@
 - The complete local SEO pass found no invalid route, missing metadata, invalid canonical or duplicate title or description across all 306 sitemap routes.
 - The complete browser audit checked 348 desktop, tablet and mobile views plus 483 internal links with no failure. Curated hero rotation, varied home suggestions, direct image credits, connected recommendations, saving, image opening, comparison, search, city filtering, mobile navigation and Escape behaviour passed.
 - Manual source-image review rejected an otherwise strong Tianluokeng photograph because it did not show the Yongding site named by the guide. The final image depicts Zhencheng Lou itself and has an exact author and CC BY-SA 4.0 record.
-- Live deployment results will be added after publication.
+- Commit `74c60c7` deployed successfully to `experienceauthority.com`. The live 195-page route and security smoke and complete 306-route SEO audit repeated with no failure, missing metadata, invalid canonical or duplicate title and description.
 - Full decision, photography and source details are recorded in [content expansion batch 33](content-expansion-batch-33-2026-09-15.md).
 
 ## Content expansion batch 32 — 15 September 2026
