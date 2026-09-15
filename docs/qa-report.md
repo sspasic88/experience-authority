@@ -9,6 +9,7 @@
 - All 67 tests, TypeScript and the production build passed. Local smoke checked 180 pages and 180 distinct content-security nonces with no failures.
 - The complete local SEO pass found no invalid route, missing metadata, invalid canonical or duplicate title or description across all 291 sitemap routes.
 - The complete browser audit checked 318 desktop, tablet and mobile views plus 453 internal links with no failure. Manual review confirmed strong process-specific hero crops, controlled headline wraps and a single direct source credit on both new guides.
+- Commit `ff77cad` deployed successfully to `experienceauthority.com`. The live 180-page smoke and complete 291-route SEO audit repeated with no failure, missing metadata or duplicate title and description.
 - Full decision, photography and source details are recorded in [content expansion batch 32](content-expansion-batch-32-2026-09-15.md).
 
 ## Content expansion batch 31 — 15 September 2026
