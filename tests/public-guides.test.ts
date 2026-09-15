@@ -42,8 +42,8 @@ test("Arcachon stays a bay-wide chapter regardless of guide order or a more spec
   }
 });
 
-test("guide set contains 109 distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 109);
+test("guide set contains 114 distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 114);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -52,7 +52,7 @@ test("guide set contains 109 distinct, sourced public experiences, not Selected 
     new Set(publicGuides.map((p) => p.slug)).size,
     publicGuides.length,
   );
-  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 65);
+  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 69);
   assert.equal(
     new Set(territories.map((place) => place.slug)).size,
     territories.length,
@@ -81,6 +81,29 @@ test("guide set contains 109 distinct, sourced public experiences, not Selected 
   assert.equal(
     new Set(publicGuideMedia.map((media) => media.src)).size,
     publicGuides.length,
+  );
+});
+test("batch 34 preserves access, season, animal and depiction boundaries", () => {
+  const slugs = [
+    "read-the-ring-before-the-horse-runs",
+    "let-the-pony-read-the-mountain",
+    "wait-until-the-turtle-is-ready",
+    "read-nubia-before-the-sail-opens",
+    "watch-one-bolt-cross-the-republic",
+  ];
+  const guides = slugs.map((slug) =>
+    publicGuides.find((guide) => guide.slug === slug),
+  );
+  assert.ok(guides.every(Boolean));
+  assert.match(guides[0]!.responsibility, /2026 Alka has already taken place/i);
+  assert.match(guides[1]!.responsibility, /animal-welfare practice/i);
+  assert.match(guides[2]!.participation, /No research work/i);
+  assert.match(guides[3]!.participation, /No combined programme/i);
+  assert.match(guides[4]!.responsibility, /cited 2026 events have ended/i);
+  assert.ok(
+    guides.every((guide) =>
+      guide!.access.includes("No EA booking or commission"),
+    ),
   );
 });
 test("batch 33 preserves exact access, participation and depiction boundaries", () => {

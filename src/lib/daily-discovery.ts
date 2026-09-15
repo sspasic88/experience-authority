@@ -713,6 +713,61 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "Where might a journey improve if expertise and conditions were allowed to choose the route instead of your checklist?",
   },
+  {
+    date: "2026-11-16",
+    slug: "read-the-ring-before-the-horse-runs",
+    title: "The gallop lasts seconds. The preparation takes a town.",
+    angle:
+      "Sinjska Alka can look like one rider, one lance and one impossibly small ring. Begin in the museum while the course is quiet and let the objects slow the image down. Learn the three attempts, the scoring and the work held across local families before walking the public route through Sinj. A future race day needs its own official programme. The discovery available all year is that a few seconds of precision can depend on months of collective care.",
+    notice:
+      "The three openings in the iron target and the difference between understanding a rule and merely seeing a spectacle.",
+    question:
+      "Which annual event would become more impressive if you met the work that keeps it alive between editions?",
+  },
+  {
+    date: "2026-11-17",
+    slug: "let-the-pony-read-the-mountain",
+    title: "In Lesotho, the route has four legs.",
+    angle:
+      "A map makes the line from Semonkong toward Maletsunyane look settled. A Basotho pony reveals how provisional that line really is. Book the named guided day ride, state your ability honestly and let footing, slope, weather and the animal's attention decide the pace. The waterfall may be the destination, but the memorable intelligence sits underneath you. The journey works because pony and guide keep reading conditions that the visitor has not yet learned to see.",
+    notice:
+      "The small changes in pace before rough ground, water or a turn. Follow the guide and never ask the animal to perform for a photograph.",
+    question:
+      "When did you last travel through a landscape by trusting a form of expertise you could feel but not yet read?",
+  },
+  {
+    date: "2026-11-18",
+    slug: "wait-until-the-turtle-is-ready",
+    title: "The waiting is the wildlife experience.",
+    angle:
+      "Tortuguero's most important night rule happens away from the turtle. Visitors remain at controlled bases while trained spotters alone read the beach. Only when a nesting female reaches an appropriate stage does a guide bring a small group closer. There may be no sighting. That possibility is not poor service. It is evidence that the animal's timing outranks the visitor's expectation, and that darkness can remain habitat rather than a stage lit on demand.",
+    notice:
+      "How little light and movement responsible observation requires. Put the phone away before the guide has to ask.",
+    question:
+      "Could seeing less become the clearest sign that a wildlife encounter has been designed around the animal?",
+  },
+  {
+    date: "2026-11-19",
+    slug: "read-nubia-before-the-sail-opens",
+    title: "Do not let the sail arrive before the story.",
+    angle:
+      "A white felucca on the Nile is one of Aswan's most recognisable images. Give it a different beginning. Enter the Nubian Museum first and follow the objects, reconstructed environments and history of displacement before arranging a separate short sail. Islands, granite and riverbanks will still be beautiful. They will no longer be empty scenery. The museum does not complete the river, and the sail does not explain Nubia, but together they make a more demanding line of attention.",
+    notice:
+      "The moment an object or map from the museum returns in the landscape outside. Keep a question instead of forcing a conclusion.",
+    question:
+      "Which familiar view deserves a museum, archive or local history before you photograph it again?",
+  },
+  {
+    date: "2026-11-20",
+    slug: "watch-one-bolt-cross-the-republic",
+    title: "A small republic concentrates its attention.",
+    angle:
+      "At San Marino's Crossbowmen's Quarry, one bolt can make a compact civic space feel even smaller. The completed 2026 programmes prove the public format, not the next date. Wait for the official calendar, then watch how distance, stance, silence and district identity gather around a target. The crossbow is not interesting because it looks medieval. It is interesting when present-day skill and organised public ritual make an old mechanism precise again.",
+    notice:
+      "The quiet before release and the safety boundary that keeps spectators separate from equipment and competitors.",
+    question:
+      "What recurring public practice would help you understand a place better than another panoramic viewpoint?",
+  },
 ];
 
 export function availableDiscoveries(

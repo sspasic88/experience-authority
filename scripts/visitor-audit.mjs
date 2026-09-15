@@ -73,7 +73,7 @@ try {
     const page = await context.newPage();
     page.on("pageerror", (e) => errors.push(e.message));
     await visit(page, "/explore");
-    await expect(page.locator(".experience-card")).toHaveCount(9);
+    await expect(page.locator(".experience-card")).toHaveCount(114);
     for (const slug of ["a-bowl-of-attention", "bread-from-the-tonir"]) {
       const card = page
         .locator(".experience-card")
@@ -134,11 +134,15 @@ try {
         (await shared.inputValue()).indexOf("Day 2"),
     );
     await page
-      .getByLabel("Include my journey name and private notes when sharing")
+      .getByLabel(
+        "Include my journey name, planning status and private notes when sharing",
+      )
       .check();
     await expect(shared).toHaveValue(/PRIVATE personal note/);
     await page
-      .getByLabel("Include my journey name and private notes when sharing")
+      .getByLabel(
+        "Include my journey name, planning status and private notes when sharing",
+      )
       .uncheck();
     assert(
       !(await shared.inputValue()).includes("PRIVATE"),

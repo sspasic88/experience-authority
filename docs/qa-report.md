@@ -1,5 +1,16 @@
 # QA report — 15 September 2026
 
+## Content expansion batch 34 — 15 September 2026
+
+- Added five bounded guides from original candidates 2, 70, 82, 56 and 120: the Sinjska Alka museum and town route, a Semonkong Basotho pony ride, regulated turtle watching in Tortuguero, Aswan's Nubian Museum followed by a separate felucca sail and conditional public crossbow spectatorship in San Marino.
+- The catalogue now contains 114 guides across 69 countries and territories. The reconciliation maps 75 of the original 200 candidates through 55 narrowed public scopes, 18 related alternatives and two protected public programmes.
+- The daily edition contains 69 authored discoveries through 20 November 2026. The sitemap contains 320 indexable routes.
+- All 69 tests, TypeScript and the production build passed. Local smoke checked 209 pages, 12 expected not-found paths and 209 distinct content-security nonces with no failure.
+- The complete local SEO pass found no invalid route, missing metadata, invalid canonical or duplicate title or description across all 320 sitemap routes.
+- The complete browser audit checked 378 desktop, tablet and mobile views plus 512 internal links with no failure. Curated hero rotation, varied home suggestions, direct image credits, connected recommendations, saving, image opening, comparison, search, city filtering, mobile navigation and Escape behaviour passed.
+- The visitor audit completed 21 planning, saving, photograph, sharing, export, cross-tab and storage-failure checks at 320, 390 and 1440 pixels with no error and without sending an external message.
+- Full decision, photography and source details are recorded in [content expansion batch 34](content-expansion-batch-34-2026-09-15.md).
+
 ## Content expansion batch 33 — 15 September 2026
 
 - Added five bounded guides from original candidates 41, 33, 129, 132 and 67: Jabal Akhdar rose season, Yongding tulou, Bahrain pearl snorkelling, a public Kampong Ayer route and a licensed Okavango mokoro ride.

@@ -24,6 +24,78 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  "read-the-ring-before-the-horse-runs": {
+    modes: ["watch-listen", "outdoors"],
+    time: "half-day",
+    keywords: [
+      "Sinj",
+      "Croatia",
+      "Alka",
+      "horse",
+      "museum",
+      "tournament",
+      "heritage",
+      "ring",
+      "Cetinska Krajina",
+    ],
+  },
+  "let-the-pony-read-the-mountain": {
+    modes: ["hands-on", "outdoors", "slow-down"],
+    time: "half-day",
+    keywords: [
+      "Semonkong",
+      "Lesotho",
+      "Basotho pony",
+      "horse riding",
+      "Maletsunyane",
+      "mountain",
+      "guide",
+      "waterfall",
+    ],
+  },
+  "wait-until-the-turtle-is-ready": {
+    modes: ["watch-listen", "outdoors", "slow-down"],
+    time: "calendar",
+    keywords: [
+      "Tortuguero",
+      "Costa Rica",
+      "turtle",
+      "nesting",
+      "wildlife",
+      "night",
+      "conservation",
+      "beach",
+      "guide",
+    ],
+  },
+  "read-nubia-before-the-sail-opens": {
+    modes: ["watch-listen", "outdoors", "slow-down"],
+    time: "half-day",
+    keywords: [
+      "Aswan",
+      "Egypt",
+      "Nubia",
+      "Nubian Museum",
+      "felucca",
+      "Nile",
+      "sailing",
+      "museum",
+      "river",
+    ],
+  },
+  "watch-one-bolt-cross-the-republic": {
+    modes: ["watch-listen"],
+    time: "calendar",
+    keywords: [
+      "San Marino",
+      "crossbow",
+      "Cava dei Balestrieri",
+      "tournament",
+      "historic centre",
+      "festival",
+      "spectator",
+    ],
+  },
   "meet-the-rose-before-it-becomes-water": {
     modes: ["hands-on", "watch-listen", "outdoors"],
     time: "calendar",

@@ -232,6 +232,42 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "lesotho",
+    name: "Lesotho",
+    region: "semonkong",
+    regionName: "Semonkong",
+    intro:
+      "Let a Basotho pony and a local guide set the pace through Semonkong's mountain terrain, where distance is read through footing, weather and slope.",
+    image: null,
+  },
+  {
+    slug: "costa-rica",
+    name: "Costa Rica",
+    region: "tortuguero",
+    regionName: "Tortuguero",
+    intro:
+      "Enter Tortuguero through a protected night system where trained spotters, local guides and the turtle's timing decide when observation can begin.",
+    image: null,
+  },
+  {
+    slug: "egypt",
+    name: "Egypt",
+    region: "aswan",
+    regionName: "Aswan",
+    intro:
+      "Begin inside the Nubian Museum, then let a felucca reconnect its history, objects and displacement with Aswan's living river geography.",
+    image: null,
+  },
+  {
+    slug: "san-marino",
+    name: "San Marino",
+    region: "historic-centre",
+    regionName: "Historic Centre",
+    intro:
+      "Read the historic centre through the Crossbowmen's Quarry, where one public contest concentrates civic ritual, exact rules and practised skill.",
+    image: null,
+  },
+  {
     slug: "oman",
     name: "Oman",
     region: "ad-dakhiliyah",
@@ -786,7 +822,7 @@ export const territories = [
     region: "istria",
     regionName: "Istria",
     intro:
-      "Follow a truffle dog through inland Istria, then bring a new understanding of the ingredient to the table. Begin near Buzet with a publicly offered guided hunt.",
+      "Follow a truffle dog through inland Istria, then cross to Sinj and read the rules, objects and town-wide work behind one famous annual gallop.",
     image: null,
   },
   {
@@ -819,6 +855,11 @@ export const territories = [
 ] as const;
 // Area labels can differ from a guide's specific site. Never let the last guide rename the area.
 const additionalRegionNames: Readonly<Record<string, string>> = {
+  "croatia/sinj": "Sinj",
+  "lesotho/semonkong": "Semonkong",
+  "costa-rica/tortuguero": "Tortuguero",
+  "egypt/aswan": "Aswan",
+  "san-marino/historic-centre": "Historic Centre",
   "oman/ad-dakhiliyah": "Jabal Akhdar",
   "china/fujian": "Yongding",
   "bahrain/muharraq": "Muharraq",

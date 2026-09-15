@@ -4,8 +4,38 @@
   "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
   "originalCandidateCount": 200,
   "originalProtectedCount": 46,
-  "catalogueCount": 109,
+  "catalogueCount": 114,
   "mappings": [
+    {
+      "candidateId": 2,
+      "guideId": "sinj-alka-museum-and-race",
+      "relation": "related_alternative",
+      "boundary": "A current year-round museum and public town route that explains the Sinjska Alka before any future race. The completed 2026 event does not establish the next date, ticket, viewing position, horse access or visitor participation."
+    },
+    {
+      "candidateId": 70,
+      "guideId": "semonkong-basotho-pony",
+      "relation": "narrowed_public_scope",
+      "boundary": "A named guide-led one to five-hour pony ride from Semonkong Lodge. The original broader route is narrowed before overnight village accommodation, independent riding, guaranteed speed, household access or an unaudited community-benefit claim."
+    },
+    {
+      "candidateId": 82,
+      "guideId": "tortuguero-guided-turtle-watch",
+      "relation": "narrowed_public_scope",
+      "boundary": "A paid public turtle watch through a qualified local guide and the national park's trained-spotter waiting system. This is not a research patrol, independent night-beach walk, turtle handling, guaranteed sighting or unrestricted photography."
+    },
+    {
+      "candidateId": 56,
+      "guideId": "aswan-nubian-museum-felucca",
+      "relation": "related_alternative",
+      "boundary": "Independent museum admission followed by a separately arranged felucca sail. The original hosted Nubian encounter, shared meal, household access, personal stories and a combined cultural programme are not supported by the current public evidence."
+    },
+    {
+      "candidateId": 120,
+      "guideId": "san-marino-crossbow-quarry",
+      "relation": "related_alternative",
+      "boundary": "Public spectatorship only after a future tournament is officially scheduled. A supervised try is included only if the current programme explicitly offers it. Completed 2026 events do not establish future dates, handling or visitor participation."
+    },
     {
       "candidateId": 41,
       "guideId": "jabal-akhdar-rose-season",
@@ -429,6 +459,51 @@
   ],
   "newSourceReviews": [
     {
+      "candidateId": 2,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-15",
+      "finding": "The Alka Society currently publishes a year-round museum route and identifies the 311th Alka as completed on 9 August 2026. UNESCO documents the annual contest, rules and local continuity. This supports a museum-first alternative while the next live edition remains unannounced.",
+      "sourceUrl": "https://alka.hr/en/museum/",
+      "nextAction": "Keep the museum and public town route dependable. Recheck the next official date, ticket route and spectator guidance before presenting live-event access. Review by 14 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 70,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-15",
+      "finding": "Semonkong Lodge currently publishes guided one to five-hour Basotho pony treks toward the Maletsunyane viewpoint, with helmets compulsory and no open shoes. Lesotho Tourism independently places pony trekking at the centre of the region's mountain movement.",
+      "sourceUrl": "https://www.semonkonglodge.com/day-pony-treks/",
+      "nextAction": "Recheck ride inventory, price, rider limits, equipment, weather policy and animal-welfare practice by 14 December 2026. Keep the lodge's local horse and guide claim clearly attributed rather than independently verified.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 82,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-15",
+      "finding": "Costa Rica's conservation authority currently requires visitors to wait at controlled bases while trained spotters detect nesting turtles. Sea Turtle Conservancy publishes a daytime centre and two paid local-guide watch windows, with no guaranteed sighting.",
+      "sourceUrl": "https://www.sinac.go.cr/EN-US/ac/acto/pnt/Pages/default.aspx",
+      "nextAction": "Recheck the active nesting season, qualified-guide route, time windows and current park rules by 14 December 2026. Keep research, beach patrol and animal handling outside the guide.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 56,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-15",
+      "finding": "Egypt's Ministry of Tourism and Antiquities currently publishes public Nubian Museum access and its collection context. Official visitor material identifies felucca movement in Aswan, but does not establish a combined hosted Nubian encounter.",
+      "sourceUrl": "https://egymonuments.gov.eg/en/museums/nubia-museum/",
+      "nextAction": "Keep museum admission and the separately arranged sail distinct. Recheck museum rules and current felucca safety and commercial arrangements by 14 December 2026. Do not imply household hospitality.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 120,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-15",
+      "finding": "Visit San Marino documents the completed 11 July 2026 public championship final and a separate completed July festival that offered supervised public crossbow sessions. These prove a recurring public format, not a future date or automatic visitor participation.",
+      "sourceUrl": "https://www.visitsanmarino.com/pub2/VisitSM/en/evento/20260711-Finale-campionato-sammarinese-Tiro-Balestra.html",
+      "nextAction": "Wait for the next official calendar and verify admission, capacity and visitor role before planning. Participation must remain conditional on an explicit current programme. Review by 14 December 2026.",
+      "outreachPerformed": false
+    },
+    {
       "candidateId": 41,
       "status": "narrowed_public_scope",
       "checkedOn": "2026-09-15",
@@ -696,15 +771,6 @@
       "finding": "The Vama Egg Museum publishes a visitor workshop with Letitia Orsivschi and multilingual interpretation, but the reviewed exact official photographs do not meet EA's current high-end visual threshold at guide and card scale.",
       "sourceUrl": "https://www.muzeuloului-vama.com/workshop.php",
       "nextAction": "Retain the public-workshop evidence and keep the candidate off the catalogue until a current, exact and responsibly creditable photograph meets the publication standard.",
-      "outreachPerformed": false
-    },
-    {
-      "candidateId": 2,
-      "status": "calendar_hold",
-      "checkedOn": "2026-09-14",
-      "finding": "The official 2026 Sinjska Alka programme confirms that this year's public event took place from 7 to 9 August. The year-round museum is a possible related alternative, but it does not resolve the original live-event candidate.",
-      "sourceUrl": "https://alka.hr/alka2026/",
-      "nextAction": "Wait for the next confirmed public event calendar, or separately evaluate the museum only if its access and exact photography justify a related-alternative guide.",
       "outreachPerformed": false
     },
     {
