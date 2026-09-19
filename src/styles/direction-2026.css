@@ -1689,7 +1689,7 @@ h3,
   }
 
   .home-edition .prototype-hero-rotator {
-    min-height: clamp(650px, calc(100svh - 180px), 780px);
+    min-height: clamp(560px, calc(100svh - 270px), 690px);
   }
 
   .home-edition .prototype-hero-mosaic {
