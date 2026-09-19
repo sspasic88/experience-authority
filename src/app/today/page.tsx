@@ -116,7 +116,9 @@ export default async function Today({ searchParams }: Props) {
           label="Send to someone curious"
         />
       </div>
-      {chapter && <CityChapterSection chapter={chapter} />}
+      {chapter && (
+        <CityChapterSection chapter={chapter} excludePhotoSlug={item.slug} />
+      )}
       {related.length > 0 && (
         <section className="section">
           <SectionHeading
@@ -144,13 +146,31 @@ export default async function Today({ searchParams }: Props) {
         </p>
         {previous.length ? (
           <div className="archive-links">
-            {previous.map((edition) => (
-              <Link key={edition.date} href={`/today?date=${edition.date}`}>
-                <time dateTime={edition.date}>{editionDate(edition.date)}</time>
-                <strong>{edition.title}</strong>
-                <span>{edition.item.place} ↗</span>
-              </Link>
-            ))}
+            {previous.map((edition) => {
+              const archiveMedia = guideMediaFor(edition.item.id)!;
+              const href = `/today?date=${edition.date}`;
+              return (
+                <article className="archive-card" key={edition.date}>
+                  <div className="archive-card-image">
+                    <Link href={href} tabIndex={-1} aria-hidden="true">
+                      <Photo
+                        src={archiveMedia.src}
+                        alt=""
+                        sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw"
+                      />
+                    </Link>
+                    <ImageCredit media={archiveMedia} />
+                  </div>
+                  <Link className="archive-card-copy" href={href}>
+                    <time dateTime={edition.date}>
+                      {editionDate(edition.date)}
+                    </time>
+                    <h3>{edition.title}</h3>
+                    <span>{edition.item.place} ↗</span>
+                  </Link>
+                </article>
+              );
+            })}
           </div>
         ) : (
           <p className="section-note">
