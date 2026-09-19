@@ -10,7 +10,7 @@
 - The five guides enter Compass, country and regional routes, publication history, interest and participation filters, connected recommendations and four editorial pathways. Two new three-country and three-field hero editions bring the total to 20.
 - All 74 automated tests, TypeScript and the launch-configured production build pass. The complete SEO audit checked 432 canonical routes with no failed route, missing metadata, invalid canonical, duplicate title or duplicate description.
 - The full browser audit passed 558 responsive views at 390, 768 and 1440 pixels and 694 internal links with no overflow, broken loaded image, browser error or automated WCAG A/AA violation. The visitor audit separately passed 21 save, comparison, journey, photograph, share, storage and cross-tab checks at 320, 390 and 1440 pixels.
-- Production deployment was authorised after this batch; live verification is recorded separately after release.
+- Commit `1e9812f` deployed successfully to `experienceauthority.com`. Live smoke passed 225 pages, 11 expected not-found routes and 225 distinct CSP nonces. Live SEO passed all 432 sitemap routes without failure or duplicate metadata. The live browser audit passed 558 responsive views and 694 internal links, and the repeated live visitor audit passed all 21 scenarios.
 
 ## Content expansion batch 38 — 19 September 2026
 

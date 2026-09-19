@@ -68,4 +68,4 @@ Each local file has a content revision, source URL, rights basis, visual review 
 - Browser audit passed 558 views and 694 internal links across mobile, tablet and desktop.
 - Visitor audit passed 21 journey, storage, photograph and sharing checks.
 
-Production deployment was authorised after this batch. Live verification is recorded separately after release.
+Commit `1e9812f` deployed successfully to `experienceauthority.com` on 19 September 2026. The live smoke audit passed 225 pages, 11 expected not-found routes and 225 distinct CSP nonces. The live SEO audit passed all 432 sitemap routes without metadata, canonical or duplication failure. The live browser audit passed 558 responsive views and 694 internal links, and the repeated live visitor audit passed all 21 planning, storage, photograph and sharing scenarios.

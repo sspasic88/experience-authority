@@ -1,11 +1,12 @@
 # Build status — 19 September 2026
 
-Public-source edition live at https://experienceauthority.com, deployed from the separate EA GitHub repository to its own Vercel project on 12 September 2026.
+Public-source edition live at https://experienceauthority.com, deployed from the separate EA GitHub repository to its own Vercel project. The current 154-guide release was deployed and verified on 19 September 2026 from commit `1e9812f`.
 
 Current authored release scope: 154 guides across 104 countries and territories, 12 editorial collections, nine Journal articles, 14 local planning chapters and 97 dated daily discoveries prepared for 13 September to 18 December. The public runtime exposes only records that still pass the evidence and review-date gate. Includes an actual-publication log, private journey planning, batch saving, sharing and credited photographs. See [content expansion batch 39](content-expansion-batch-39-2026-09-19.md). Prepared future daily editions are not already public.
 
 ## 19 September production-readiness audit
 
+- The current release is live on the canonical domain. Live smoke passed 225 pages and 225 distinct CSP nonces; live SEO passed all 432 sitemap routes; live browser and visitor audits passed 558 responsive views, 694 internal links and all 21 end-to-end visitor scenarios.
 - The launch-configured production build, TypeScript check and all 74 automated tests pass.
 - The generated sitemap exposes 432 canonical public routes. Every route returned HTTP 200 with a title, description and canonical URL. No duplicate title or description groups were found.
 - Public pages are indexable only with the explicit production launch settings. Passport, correction, suggestion and query-bearing URLs remain `noindex`; preview and incomplete launch configurations fail closed.
