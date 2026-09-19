@@ -1,5 +1,14 @@
 # QA report — 19 September 2026
 
+## Homepage hybrid — 19 September 2026
+
+- Joined the desktop text panel and three-photo mosaic into one composition, using the original EA navy, warm white and a single orange accent. Photography occupies 62% of the cover width. The narrower secondary photographs are now wider, with the place named alongside their field.
+- Retained Newsreader while giving the desktop headline three deliberate lines. Short copy, search and interest links sit together inside the navy panel. The four introductory statements form a compact continuous navy band, with no individual tile colours.
+- The tested desktop cover and band fit at 1280 × 800, 1366 × 768, 1440 × 900 and 1920 × 1080. Tablet and mobile retain their single-photo flow.
+- Before release, the production build, TypeScript and all 74 existing tests passed. Seven browser sizes, including 320 and 390 pixels, showed no horizontal page overflow, browser exceptions or automated WCAG A/AA violations. Search suggestions, keyboard navigation and previous/next photo controls passed.
+- All 20 curated editions and their 60 photo positions were checked at 1280 pixels. Loaded images, guide navigation and direct-source credits passed, with no title/credit overlap or clipping. This is a layout and interaction check, not a new assessment of photographic reuse rights.
+- The Analytics audit locators were brought up to date with the current consent copy. The audit confirmed no Google requests before consent, excluded private query data, checked tag startup only after an explicit grant, and verified revocation. Its Google requests were intercepted locally.
+
 ## Content expansion batch 39 — 19 September 2026
 
 - Added five bounded public-source guides from original candidates 44, 87, 188, 142 and 40: Panauti Community Homestay, CTTC's Chinchero weaving demonstration, A5's plantation and uga route on Niue, Le Metalo's changing live programme in Mindelo and a named Wadi Rum camp overnight.

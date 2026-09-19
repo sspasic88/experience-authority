@@ -46,7 +46,7 @@ function HeroStory({
       />
       <figcaption>
         <span className="eyebrow">
-          {primary ? `Place / ${item.place}` : item.field}
+          {primary ? `Place / ${item.place}` : `${item.field} / ${item.place}`}
         </span>
         <Link href={href}>{item.title}</Link>
       </figcaption>

@@ -37,9 +37,9 @@ export function HomeHero({
         <div className="prototype-hero-copy">
           <p className="eyebrow">Places. People. Ways in.</p>
           <h1 id="home-title">
-            Experience the
-            <br />
-            world <em>from within.</em>
+            <span className="home-title-line">Experience</span>{" "}
+            <span className="home-title-line">the world</span>{" "}
+            <em>from within.</em>
           </h1>
           <p className="prototype-hero-lead">
             Remarkable local experiences, independently chosen and made

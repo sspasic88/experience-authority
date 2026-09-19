@@ -13,7 +13,7 @@
   --ea-stone: #596663;
   --ea-line: #d7dad0;
   --ea-field-surface: #e8ebdf;
-  --ea-surface-warm: #eee9df;
+  --ea-cover-night: #081b2a;
   --ea-surface-white: #fffdf8;
   --ea-vermilion: #ff5a30;
   --ea-vermilion-hover: #f04c24;
@@ -234,6 +234,10 @@ h3,
   display: inline;
   color: var(--ea-ink);
   font-weight: 400;
+}
+
+.home-edition .prototype-hero-copy h1 > .home-title-line {
+  color: inherit;
 }
 
 .home-edition .prototype-hero-lead {
@@ -1590,50 +1594,52 @@ h3,
   }
 }
 
-/* A more image-led desktop arrival. Mobile keeps its established flow. */
+/* Desktop cover: the original EA contrast with a larger photographic canvas. */
 @media (min-width: 1101px) {
   .home-edition .prototype-hero {
-    grid-template-columns: minmax(390px, 0.82fr) minmax(0, 1.48fr);
-    gap: clamp(32px, 3.2vw, 52px);
-    padding-block: 24px 28px;
+    grid-template-columns: minmax(390px, 0.38fr) minmax(0, 0.62fr);
+    gap: 0;
+    margin-top: 20px;
+    padding: 0;
+    background: var(--ea-cover-night);
   }
 
   .home-edition .prototype-hero-copy {
-    position: relative;
-    padding: 34px clamp(24px, 2.1vw, 34px) 28px;
-    background:
-      linear-gradient(135deg, rgba(255, 90, 48, 0.08), transparent 42%),
-      var(--ea-surface-warm);
-  }
-
-  .home-edition .prototype-hero-copy::before {
-    content: "";
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: 5px;
-    background: var(--ea-vermilion);
+    padding: 38px clamp(28px, 3vw, 48px);
+    color: var(--ea-paper);
+    background: var(--ea-cover-night);
   }
 
   .home-edition .prototype-hero-copy > .eyebrow {
-    margin-bottom: clamp(24px, 3vh, 38px);
-    color: var(--ea-accent-text);
+    max-width: none;
+    margin-bottom: 30px;
+    color: var(--ea-vermilion);
   }
 
   .home-edition .prototype-hero-copy h1 {
-    max-width: 9ch;
-    margin-bottom: 22px;
-    font-size: clamp(56px, 4.7vw, 76px);
-    line-height: 0.92;
+    max-width: none;
+    margin-bottom: 24px;
+    color: var(--ea-paper);
+    font-size: clamp(58px, 5.1vw, 80px);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    text-wrap: initial;
+  }
+
+  .home-edition .prototype-hero-copy h1 > .home-title-line,
+  .home-edition .prototype-hero-copy h1 em {
+    display: block;
   }
 
   .home-edition .prototype-hero-copy h1 em {
-    color: var(--ea-vermilion-deep);
+    color: var(--ea-vermilion);
   }
 
   .home-edition .prototype-hero-lead {
     max-width: 390px;
+    color: #c5cdd1;
     font-size: clamp(17px, 1.25vw, 19px);
-    line-height: 1.43;
+    line-height: 1.5;
   }
 
   .home-edition .home-discovery {
@@ -1642,12 +1648,26 @@ h3,
 
   .home-edition .home-discovery-prompt {
     margin-bottom: 8px;
-    font-size: 10px;
+    color: var(--ea-paper);
+    font-size: 11px;
   }
 
   .home-edition .home-discovery .prototype-hero-search {
     min-height: 54px;
+    border-color: transparent;
     background: var(--ea-surface-white);
+  }
+
+  .home-edition .home-discovery .prototype-hero-search:focus-within {
+    box-shadow: 0 0 0 3px var(--ea-vermilion);
+  }
+
+  .home-edition .prototype-hero-search input {
+    padding: 10px 8px;
+  }
+
+  .home-edition .home-search-results {
+    top: 90px;
   }
 
   .home-edition .prototype-hero-search button {
@@ -1658,80 +1678,86 @@ h3,
   }
 
   .home-edition .prototype-hero-interests {
-    gap: 7px;
-    margin-top: 13px;
+    gap: 0 15px;
+    margin-top: 12px;
+    color: var(--ea-paper);
   }
 
   .home-edition .prototype-hero-interests > span {
-    width: 100%;
-    padding-block: 0 2px;
-    font-size: 10px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    display: none;
   }
 
   .home-edition .prototype-hero-interests a {
-    padding: 7px 10px;
-    border: 1px solid rgba(25, 44, 46, 0.22);
-    background: color-mix(in srgb, var(--ea-surface-white) 66%, transparent);
-    font-size: 12px;
-    line-height: 1;
+    padding-block: 10px;
+    color: var(--ea-paper);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2;
   }
 
   .home-edition .prototype-hero-interests a:hover,
   .home-edition .prototype-hero-interests a:focus-visible {
-    color: var(--ea-paper);
-    background: var(--ea-ink);
-    text-decoration: none;
+    color: var(--ea-vermilion);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+
+  .home-edition .prototype-hero-interests a:focus-visible {
+    outline: 2px solid var(--ea-vermilion);
+    outline-offset: 3px;
   }
 
   .home-edition .prototype-hero-rotator {
-    min-height: clamp(560px, calc(100svh - 270px), 690px);
+    display: grid;
+    min-height: clamp(530px, calc(100svh - 240px), 680px);
   }
 
   .home-edition .prototype-hero-mosaic {
-    grid-template-columns: minmax(0, 1fr) minmax(210px, 0.38fr);
-    gap: 5px;
-    background: var(--ea-paper);
+    height: auto;
+    grid-template-columns: minmax(0, 0.64fr) minmax(0, 0.36fr);
+    gap: 3px;
+    background: var(--ea-cover-night);
   }
 
   .home-edition .prototype-hero-sides {
-    gap: 5px;
+    min-height: 0;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 3px;
   }
 
   .home-edition .prototype-hero-mosaic figcaption {
-    padding: 110px 24px 50px;
+    padding: 100px 26px 50px;
+  }
+
+  .home-edition .prototype-hero-place figcaption > a {
+    max-width: 24ch;
+    font-size: clamp(25px, 2vw, 32px);
   }
 
   .home-edition .prototype-hero-sides figcaption {
-    padding: 72px 18px 43px;
+    padding: 65px 18px 48px;
   }
 
   .home-edition .prototype-hero-sides figcaption > .eyebrow {
-    width: fit-content;
-    padding: 5px 7px;
-    color: var(--ea-ink);
-    background: var(--ea-vermilion);
-  }
-
-  .home-edition .prototype-hero-sides figure:last-child figcaption > .eyebrow {
-    background: var(--ea-vermilion);
+    color: var(--ea-paper);
+    font-size: 11px;
   }
 
   .home-edition .prototype-hero-sides figcaption > a {
-    font-size: clamp(18px, 1.25vw, 22px);
+    font-size: clamp(20px, 1.55vw, 24px);
+    line-height: 1.1;
   }
 
   .home-edition .prototype-edition-stats {
     gap: 0;
     border: 0;
-    border-top: 4px solid var(--ea-vermilion);
-    background: var(--ea-ink);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background: var(--ea-cover-night);
   }
 
   .home-edition .prototype-edition-stats > div {
-    min-height: 94px;
-    padding: 17px clamp(20px, 2.1vw, 32px);
+    min-height: 78px;
+    padding: 14px clamp(20px, 2.1vw, 32px);
     border: 0;
     border-right: 1px solid rgba(255, 255, 255, 0.18);
     justify-content: center;
@@ -1739,7 +1765,7 @@ h3,
   }
 
   .home-edition .prototype-edition-stats dd {
-    font-size: 27px;
+    font-size: 24px;
   }
 
   .home-edition .prototype-edition-stats dt {

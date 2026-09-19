@@ -28,7 +28,7 @@ try {
   });
 
   await expect(
-    page.getByRole("heading", { name: "Help us see what proves useful." }),
+    page.getByRole("heading", { name: "Private by default." }),
   ).toBeVisible();
   assert.equal(requests.length, 0, "Google was contacted before consent");
   const axe = await new AxeBuilder({ page })
@@ -63,7 +63,7 @@ try {
 
   const requestCount = requests.length;
   await page.getByRole("button", { name: "Analytics choices" }).click();
-  await page.getByRole("button", { name: "Do not use analytics" }).click();
+  await page.getByRole("button", { name: "Keep analytics off" }).click();
   await page.waitForLoadState("networkidle");
   assert.equal(
     await page.evaluate(() => localStorage.getItem("ea:analytics-consent:v1")),

@@ -301,7 +301,7 @@ try {
     }
     await page.goto(base + "/", { waitUntil: "networkidle" });
     const analyticsChoice = page.getByRole("button", {
-      name: "Do not use analytics",
+      name: "Keep analytics off",
     });
     if (await analyticsChoice.isVisible()) await analyticsChoice.click();
     const firstHeroGuide = page
