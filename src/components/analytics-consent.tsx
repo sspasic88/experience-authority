@@ -154,12 +154,12 @@ export function AnalyticsConsent({ measurementId }: { measurementId: string }) {
       aria-labelledby="analytics-consent-title"
       aria-describedby="analytics-consent-copy"
     >
-      <p className="eyebrow">Your choice</p>
-      <h2 id="analytics-consent-title">Help us see what proves useful.</h2>
+      <p className="eyebrow">Analytics choice</p>
+      <h2 id="analytics-consent-title">Private by default.</h2>
       <p id="analytics-consent-copy">
-        Allow Google Analytics to count page visits and a small set of product
-        actions. No advertising. The tag stays off until you choose. Search
-        text, Passport contents and private journey notes are not sent.
+        Count visits and a small set of actions. No advertising. Search,
+        Passport and journey notes stay private. Analytics remains off until
+        you allow it.
       </p>
       <div className="analytics-consent-actions">
         <button
@@ -174,10 +174,10 @@ export function AnalyticsConsent({ measurementId }: { measurementId: string }) {
           type="button"
           onClick={() => remember("denied")}
         >
-          Do not use analytics
+          Keep analytics off
         </button>
       </div>
-      <Link href="/privacy">How analytics and local storage work</Link>
+      <Link href="/privacy">How it works</Link>
     </aside>
   );
 }

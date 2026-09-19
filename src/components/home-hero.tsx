@@ -35,15 +35,15 @@ export function HomeHero({
     <>
       <section className="prototype-hero" aria-labelledby="home-title">
         <div className="prototype-hero-copy">
-          <p className="eyebrow">Places. People. Ways of being there.</p>
+          <p className="eyebrow">Places. People. Ways in.</p>
           <h1 id="home-title">
             Experience the
             <br />
             world <em>from within.</em>
           </h1>
           <p className="prototype-hero-lead">
-            Discover locally rooted experiences worth building a day around.
-            Independently selected, carefully sourced and made practical.
+            Remarkable local experiences, independently chosen and made
+            practical.
           </p>
           <HomeDiscovery
             items={items.map(
@@ -79,20 +79,20 @@ export function HomeHero({
         aria-label="What every Experience Authority guide gives you"
       >
         <div>
-          <dt>Original guides</dt>
-          <dd>Independent</dd>
+          <dt>By place or curiosity</dt>
+          <dd>Discover</dd>
         </div>
         <div>
-          <dt>Sources you can check</dt>
-          <dd>Traceable</dd>
+          <dt>Sources in every guide</dt>
+          <dd>Trust</dd>
         </div>
         <div>
-          <dt>Access made clear</dt>
-          <dd>Practical</dd>
+          <dt>Save and shape a journey</dt>
+          <dd>Plan</dd>
         </div>
         <div>
-          <dt>No paid prominence</dt>
-          <dd>Editorial</dd>
+          <dt>A new daily discovery</dt>
+          <dd>Return</dd>
         </div>
       </dl>
     </>
