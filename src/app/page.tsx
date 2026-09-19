@@ -45,6 +45,13 @@ export default function Home() {
     ...chapters.slice(chapterOffset),
     ...chapters.slice(0, chapterOffset),
   ].slice(0, 4);
+  const featuredChapterCards = featuredChapters.flatMap((chapter) => {
+    const stop = chapter.stops.find(({ item }) => {
+      return Boolean(item.image && guideMediaFor(item.id));
+    });
+    const media = stop && guideMediaFor(stop.item.id);
+    return stop && media ? [{ chapter, media }] : [];
+  });
   const initialHeroIndex = homeHeroRotationIndex();
   const editions = resolveHomeHeroEditions(experiences);
   const availableHeroEditions = editions.length
@@ -101,7 +108,7 @@ export default function Home() {
           </Link>
         </div>
       )}
-      {featuredChapters.length > 0 && (
+      {featuredChapterCards.length > 0 && (
         <section className="section wrap home-destinations">
           <SectionHeading
             eyebrow="Start with a place"
@@ -114,21 +121,38 @@ export default function Home() {
             the experiences that belong in your stay.
           </p>
           <div className="home-destination-grid">
-            {featuredChapters.map((chapter) => (
-              <Link
-                href={chapterHref(chapter).split("#")[0]}
-                key={chapter.slug}
-              >
-                <span className="eyebrow">
-                  {chapter.stops.length} experiences
-                </span>
-                <h3>{chapter.name}</h3>
-                <span>
-                  Explore the place{" "}
-                  <ArrowUpRight size={18} aria-hidden="true" />
-                </span>
-              </Link>
-            ))}
+            {featuredChapterCards.map(({ chapter, media }) => {
+              const href = chapterHref(chapter).split("#")[0];
+              return (
+                <article className="home-destination-card" key={chapter.slug}>
+                  <Link
+                    className="home-destination-photo"
+                    href={href}
+                    tabIndex={-1}
+                    aria-hidden="true"
+                  >
+                    <Photo
+                      src={media.src}
+                      alt=""
+                      sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 25vw"
+                    />
+                  </Link>
+                  <div className="home-destination-copy">
+                    <span className="eyebrow">
+                      {chapter.stops.length} experiences
+                    </span>
+                    <h3>
+                      <Link href={href}>{chapter.name}</Link>
+                    </h3>
+                    <Link className="home-destination-cta" href={href}>
+                      Explore the place
+                      <ArrowUpRight size={18} aria-hidden="true" />
+                    </Link>
+                  </div>
+                  <ImageCredit media={media} />
+                </article>
+              );
+            })}
           </div>
         </section>
       )}

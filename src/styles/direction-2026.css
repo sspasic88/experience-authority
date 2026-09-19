@@ -1834,7 +1834,194 @@ h3,
 @media (prefers-reduced-motion: reduce) {
   .prototype-hero-copy > *,
   .prototype-hero-mosaic figure,
-  .prototype-hero-mosaic figure .editorial-photo {
+  .prototype-hero-mosaic figure .editorial-photo,
+  .home-destination-card .editorial-photo,
+  .home-edition .prototype-edition-stats > a > svg {
     animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Photographic place entries and useful cover navigation. */
+.home-edition .prototype-edition-stats {
+  background: var(--ea-cover-night);
+}
+
+.home-edition .prototype-edition-stats > a {
+  position: relative;
+  min-width: 0;
+  min-height: 78px;
+  padding: 14px clamp(20px, 2.1vw, 32px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--ea-paper);
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.home-edition .prototype-edition-stats > a:last-child {
+  border-right: 0;
+}
+
+.home-edition .prototype-edition-stats > a strong {
+  font-family: var(--ea-font-serif);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.home-edition .prototype-edition-stats > a span {
+  margin-top: 7px;
+  color: #c7d0cd;
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.home-edition .prototype-edition-stats > a > svg {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  color: var(--ea-vermilion);
+  transition: transform 180ms ease;
+}
+
+.home-edition .prototype-edition-stats > a:hover,
+.home-edition .prototype-edition-stats > a:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--ea-vermilion);
+}
+
+.home-edition .prototype-edition-stats > a:hover > svg,
+.home-edition .prototype-edition-stats > a:focus-visible > svg {
+  transform: translate(3px, -3px);
+}
+
+.home-destination-grid {
+  gap: 3px;
+  border: 0;
+  background: var(--ea-cover-night);
+}
+
+.home-destination-card {
+  position: relative;
+  min-width: 0;
+  min-height: clamp(320px, 31vw, 440px);
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--ea-cover-night);
+}
+
+.home-destination-card::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 27, 42, 0.15) 15%, transparent 42%),
+    linear-gradient(0deg, rgba(8, 27, 42, 0.94) 0%, rgba(8, 27, 42, 0.08) 72%);
+  content: "";
+  pointer-events: none;
+}
+
+.home-destination-photo {
+  position: absolute;
+  inset: 0;
+}
+
+.home-destination-card .editorial-photo {
+  transition: transform 650ms var(--ea-ease);
+}
+
+.home-destination-card:hover .editorial-photo {
+  transform: scale(1.035);
+}
+
+.home-destination-copy {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  color: var(--ea-paper);
+  pointer-events: none;
+}
+
+.home-destination-copy .eyebrow {
+  margin-bottom: 10px;
+  color: var(--ea-paper);
+}
+
+.home-destination-copy h3 {
+  margin: 0 0 16px;
+  color: var(--ea-paper);
+  font-size: clamp(28px, 2.35vw, 38px);
+  line-height: 1.02;
+}
+
+.home-destination-copy a {
+  color: inherit;
+  pointer-events: auto;
+}
+
+.home-destination-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.home-destination-card > .image-source-badge {
+  z-index: 3;
+  max-width: calc(100% - 48px);
+}
+
+@media (max-width: 1100px) {
+  .home-destination-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-destination-card {
+    min-height: 390px;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-edition .prototype-edition-stats > a {
+    min-height: 74px;
+    padding: 14px 38px 14px 14px;
+  }
+
+  .home-edition .prototype-edition-stats > a:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .home-edition .prototype-edition-stats > a strong {
+    font-size: 21px;
+  }
+
+  .home-edition .prototype-edition-stats > a > svg {
+    top: 15px;
+    right: 13px;
+  }
+
+  .home-destination-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-destination-card {
+    min-height: 330px;
+  }
+
+  .home-destination-copy {
+    padding: 22px;
   }
 }

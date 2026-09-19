@@ -1,5 +1,7 @@
 import { HomeDiscovery } from "./home-discovery";
 import { HomeHeroMosaic, type HomeHeroStory } from "./home-hero-mosaic";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import type { PublicExperience } from "@/lib/catalog";
 import { guideMediaFor, imageCreditText } from "@/lib/media";
 
@@ -74,27 +76,23 @@ export function HomeHero({
           initialIndex={initialHeroIndex}
         />
       </section>
-      <dl
+      <nav
         className="prototype-edition-stats"
-        aria-label="What every Experience Authority guide gives you"
+        aria-label="Continue from the Experience Authority cover"
       >
-        <div>
-          <dt>By place or curiosity</dt>
-          <dd>Discover</dd>
-        </div>
-        <div>
-          <dt>Sources in every guide</dt>
-          <dd>Trust</dd>
-        </div>
-        <div>
-          <dt>Save and shape a journey</dt>
-          <dd>Plan</dd>
-        </div>
-        <div>
-          <dt>A new daily discovery</dt>
-          <dd>Return</dd>
-        </div>
-      </dl>
+        {[
+          ["Discover", "By place or curiosity", "/explore"],
+          ["Trust", "Sources in every guide", "/method"],
+          ["Plan", "Save and shape a journey", "/plan"],
+          ["Return", "A new daily discovery", "/today"],
+        ].map(([title, label, href]) => (
+          <Link href={href} key={title}>
+            <strong>{title}</strong>
+            <span>{label}</span>
+            <ArrowUpRight aria-hidden="true" size={17} />
+          </Link>
+        ))}
+      </nav>
     </>
   );
 }
