@@ -8,6 +8,28 @@ import { getExperiences } from "@/lib/data";
 import { publishedReleases } from "@/lib/releases";
 import { editionDate } from "@/lib/daily-discovery";
 import { pageMetadata } from "@/lib/seo";
+import { ProgressiveGrid } from "@/components/progressive-grid";
+
+const spotlightOrder = [
+  "watch-rio-build-the-parade-before-carnaval",
+  "let-the-delta-decide-the-route",
+  "begin-haida-gwaii-with-haida-voices",
+  "meet-the-wine-below-the-cellar-floor",
+  "roast-the-cup-on-kilimanjaros-slopes",
+  "stand-where-the-sound-system-does-the-talking",
+  "let-the-lateen-sail-read-lamus-water",
+  "climb-without-making-the-mountain-yours",
+  "read-nubia-before-the-sail-opens",
+];
+
+function orderRelease<T extends { slug: string }>(guides: T[]) {
+  const rank = new Map(spotlightOrder.map((slug, index) => [slug, index]));
+  return [...guides].sort(
+    (a, b) =>
+      (rank.get(a.slug) ?? Number.MAX_SAFE_INTEGER) -
+      (rank.get(b.slug) ?? Number.MAX_SAFE_INTEGER),
+  );
+}
 
 export const metadata = pageMetadata(
   "New guides",
@@ -33,11 +55,14 @@ export default function NewGuides() {
             eyebrow={`${release.guides.length} new guides`}
             title={editionDate(release.date)}
           />
-          <div className="experience-grid">
-            {release.guides.map((item) => (
+          <ProgressiveGrid
+            heading={`Guides published ${editionDate(release.date)}`}
+            surface={`new-guides-${release.date}`}
+          >
+            {orderRelease(release.guides).map((item) => (
               <ExperienceCard item={item} key={item.id} />
             ))}
-          </div>
+          </ProgressiveGrid>
         </section>
       ))}
       <p className="section-note">
@@ -46,7 +71,7 @@ export default function NewGuides() {
         publication.
       </p>
       <Link href="/explore" className="text-link">
-        Browse the complete guide ↗
+        Browse all guides ↗
       </Link>
     </div>
   );

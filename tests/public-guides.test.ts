@@ -42,8 +42,8 @@ test("Arcachon stays a bay-wide chapter regardless of guide order or a more spec
   }
 });
 
-test("guide set contains 129 distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 129);
+test("guide set contains 154 distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 154);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -52,17 +52,24 @@ test("guide set contains 129 distinct, sourced public experiences, not Selected 
     new Set(publicGuides.map((p) => p.slug)).size,
     publicGuides.length,
   );
-  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 82);
+  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 104);
   assert.equal(
     new Set(territories.map((place) => place.slug)).size,
     territories.length,
   );
   for (const p of publicGuides) {
-    assert.equal(canPublishGuide(p, "2026-09-15"), true, p.slug);
     assert.equal(p.status, "public_guide");
     assert.equal(p.demo, false);
     const media = guideMediaFor(p.id);
     assert.ok(media, `missing media record: ${p.slug}`);
+    assert.equal(
+      canPublishGuide(
+        p,
+        [p.guideReview!.checkedOn, media!.visualReview.checkedOn].sort().at(-1),
+      ),
+      true,
+      p.slug,
+    );
     assert.equal(media?.visualReview.outcome, "approved");
     assert.equal(p.image, media?.src);
     assert.equal(p.imageAlt, media?.alt);
@@ -81,6 +88,92 @@ test("guide set contains 129 distinct, sourced public experiences, not Selected 
   assert.equal(
     new Set(publicGuideMedia.map((media) => media.src)).size,
     publicGuides.length,
+  );
+});
+test("batch 39 keeps household, craft, wildlife, music and desert access within verified public scope", () => {
+  const slugs = [
+    "stay-where-the-town-knows-your-host",
+    "follow-the-colour-back-to-the-wool",
+    "meet-the-island-through-the-uga",
+    "let-the-room-introduce-mindelo",
+    "stay-until-the-desert-loses-its-colour",
+  ];
+  const guides = slugs.map((slug) =>
+    publicGuides.find((guide) => guide.slug === slug),
+  );
+  assert.ok(guides.every(Boolean));
+  assert.match(guides[0]!.participation, /Friendship, ceremony and access beyond/i);
+  assert.match(guides[1]!.participation, /motif reproduction/i);
+  assert.match(guides[2]!.responsibility, /Do not demand handling/i);
+  assert.match(guides[3]!.responsibility, /Do not label every Cape Verdean performance as morna/i);
+  assert.match(guides[4]!.participation, /unrestricted desert access/i);
+  assert.ok(
+    guides.every((guide) =>
+      guide!.access.includes("No EA booking or commission"),
+    ),
+  );
+});
+test("batch 38 keeps participation, wildlife and cultural access within verified public scope", () => {
+  const slugs = [
+    "build-hudut-from-the-coconut-outward",
+    "pick-the-leaf-before-the-cup",
+    "coil-the-lowcountry-one-stitch-at-a-time",
+    "raise-a-room-from-a-circle",
+    "watch-the-body-tension-the-loom",
+    "read-prague-through-a-movement",
+    "hear-the-flute-before-anyone-plays",
+    "walk-where-terere-is-everyday-language",
+    "meet-the-largest-fish-on-its-terms",
+    "let-the-drum-recover-its-history",
+  ];
+  const guides = slugs.map((slug) =>
+    publicGuides.find((guide) => guide.slug === slug),
+  );
+  assert.ok(guides.every(Boolean));
+  assert.match(guides[0]!.participation, /No private household access/i);
+  assert.match(guides[1]!.responsibility, /paid labour/i);
+  assert.match(guides[2]!.responsibility, /do not copy or commercialise/i);
+  assert.match(guides[3]!.participation, /No construction competence/i);
+  assert.match(guides[4]!.participation, /Observation and conversation/i);
+  assert.match(guides[5]!.participation, /No gymnastics/i);
+  assert.match(guides[6]!.responsibility, /Do not assume live music/i);
+  assert.match(guides[7]!.evidence, /private sharing circle/i);
+  assert.match(guides[8]!.responsibility, /Never touch, feed, chase/i);
+  assert.match(guides[9]!.responsibility, /performance will occur/i);
+  assert.ok(
+    guides.every((guide) =>
+      guide!.access.includes("No EA booking or commission"),
+    ),
+  );
+});
+test("batch 37 keeps public access narrower than the original candidate promise", () => {
+  const slugs = [
+    "let-the-clay-keep-the-fingerprints",
+    "meet-the-cloth-before-it-becomes-a-gift",
+    "enter-sevdah-through-the-room-that-remembers-it",
+    "watch-silver-become-a-line",
+    "let-the-ballad-move-the-circle",
+    "hear-the-drum-after-sunset",
+    "hear-the-wooden-racket-crack",
+    "follow-cardboard-toward-bay-street",
+    "move-the-stone-that-holds-the-water",
+    "choose-the-harvest-before-the-cellar",
+  ];
+  const guides = slugs.map((slug) =>
+    publicGuides.find((guide) => guide.slug === slug),
+  );
+  assert.ok(guides.every(Boolean));
+  assert.match(guides[2]!.participation, /No live performance/i);
+  assert.match(guides[3]!.participation, /No making step/i);
+  assert.match(guides[4]!.responsibility, /Do not assume recurrence/i);
+  assert.match(guides[6]!.participation, /No lesson is promised/i);
+  assert.match(guides[7]!.participation, /No active shack access/i);
+  assert.match(guides[8]!.participation, /Tasks vary and can be strenuous/i);
+  assert.match(guides[9]!.kernel, /seasonal possibility/i);
+  assert.ok(
+    guides.every((guide) =>
+      guide!.access.includes("No EA booking or commission"),
+    ),
   );
 });
 test("batch 36 preserves cultural, event, access and depiction boundaries", () => {

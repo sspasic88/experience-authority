@@ -110,7 +110,7 @@ export function PassportView({
                     ))}
                   </tr>
                   <tr>
-                    <th scope="row">Editorial status</th>
+                    <th scope="row">Guide status</th>
                     {compared.map((e) => (
                       <td key={e.id}>
                         <StatusBadge status={e.status} demo={e.demo} />
@@ -146,11 +146,11 @@ export function PassportView({
         ) : (
           <EmptyState title="Put your curiosities side by side.">
             <p>
-              Open a story and choose Compare. You can keep up to three stories
-              here.
+              Open a guide and choose Compare. You can keep up to three
+              experiences here.
             </p>
             <Link href="/explore" className="button">
-              Find a story ↗
+              Find an experience ↗
             </Link>
           </EmptyState>
         )
@@ -191,11 +191,11 @@ export function PassportView({
       ) : (
         <EmptyState title="A blank page. A world of possibilities.">
           <p>
-            Use the bookmark on any story to keep it here. Your Passport is
+            Use the bookmark on any experience to keep it here. Your Passport is
             stored only in this browser. Clearing its data will remove it.
           </p>
           <Link href="/explore" className="button">
-            Find your first story ↗
+            Find your first experience ↗
           </Link>
         </EmptyState>
       )}

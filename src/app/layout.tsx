@@ -10,6 +10,7 @@ import "@/styles/expansion.css";
 import "@/styles/journal.css";
 import "@/styles/discovery.css";
 import "@/styles/refinement.css";
+import "@/styles/direction-2026.css";
 import { Header, Footer } from "@/components/chrome";
 import { PassportProvider } from "@/components/passport-provider";
 import { demoMode, getExperiences } from "@/lib/data";
@@ -27,6 +28,24 @@ const sourceSans = localFont({
   variable: "--font-source-sans",
   display: "swap",
   fallback: ["Arial"],
+});
+
+const newsreader = localFont({
+  src: [
+    {
+      path: "../assets/fonts/Newsreader-Variable.ttf",
+      weight: "200 800",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/Newsreader-Italic-Variable.ttf",
+      weight: "200 800",
+      style: "italic",
+    },
+  ],
+  variable: "--font-newsreader",
+  display: "swap",
+  fallback: ["Georgia"],
 });
 
 export const metadata: Metadata = {
@@ -48,7 +67,7 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={sourceSans.variable}
+      className={`${sourceSans.variable} ${newsreader.variable}`}
       data-scroll-behavior="smooth"
     >
       <body>
@@ -63,15 +82,14 @@ export default async function RootLayout({
           Skip to content
         </a>
         <PassportProvider ids={getExperiences().map((e) => e.id)}>
-          <aside className="preview-notice" aria-label="Editorial edition">
-            <span className="preview-dot" />
-            {demoMode ? "DESIGN PREVIEW" : "EA / PUBLIC GUIDE EDITION"}
-            <span className="preview-notice-detail">
-              {demoMode
-                ? "Demo stories. No verified access or bookings."
-                : "Original guides. Sources and access notes in every story."}
-            </span>
-          </aside>
+          {demoMode && (
+            <aside className="preview-notice" aria-label="Design preview">
+              <span>DESIGN PREVIEW</span>
+              <span className="preview-notice-detail">
+                Demo stories. No verified access or bookings.
+              </span>
+            </aside>
+          )}
           <Header />
           <main id="main">{children}</main>
           {measurementId && <AnalyticsConsent measurementId={measurementId} />}

@@ -16,9 +16,10 @@ const read = (path: string) => readFileSync(new URL(path, root), "utf8");
 
 test("the public edition uses EA language, never generic travel editorial", () => {
   const layout = read("src/app/layout.tsx");
-  assert.match(layout, /EA \/ PUBLIC GUIDE EDITION/);
+  assert.match(layout, /Experience Authority/);
   assert.doesNotMatch(layout, /INDEPENDENT EXPERIENCE EDITORIAL/);
   assert.doesNotMatch(layout, /INDEPENDENT TRAVEL EDITORIAL/);
+  assert.doesNotMatch(layout, /EA \/ PUBLIC GUIDE EDITION/);
 });
 
 test("home curation gives every visible photograph one position", () => {

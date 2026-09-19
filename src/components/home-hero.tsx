@@ -35,20 +35,15 @@ export function HomeHero({
     <>
       <section className="prototype-hero" aria-labelledby="home-title">
         <div className="prototype-hero-copy">
-          <p className="eyebrow">A world of locally rooted experiences</p>
+          <p className="eyebrow">Places. People. Ways of being there.</p>
           <h1 id="home-title">
             Experience the
             <br />
-            world{" "}
-            <span>
-              from
-              <br />
-              within.
-            </span>
+            world <em>from within.</em>
           </h1>
           <p className="prototype-hero-lead">
-            Cook, make, move and discover what belongs here. Find an experience
-            worth building a day around.
+            Discover locally rooted experiences worth building a day around.
+            Independently selected, carefully sourced and made practical.
           </p>
           <HomeDiscovery
             items={items.map(

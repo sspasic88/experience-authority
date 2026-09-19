@@ -40,6 +40,8 @@ const starterDirections: { label: string; next: FinderQuery }[] = [
   },
 ];
 
+const resultsPageSize = 18;
+
 export function CompassBrowser({
   items,
   initialQuery,
@@ -51,6 +53,7 @@ export function CompassBrowser({
 }) {
   const [query, setQuery] = useState(initialQuery);
   const [hydrated, setHydrated] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(resultsPageSize);
   const hasMounted = useRef(false);
   useEffect(() => {
     setHydrated(true);
@@ -93,6 +96,18 @@ export function CompassBrowser({
         .filter(({ item }) => matchesFinder(item, query)),
     [items, query],
   );
+  const visibleMatches = matches.slice(0, visibleCount);
+  useEffect(() => {
+    setVisibleCount(resultsPageSize);
+  }, [
+    query.q,
+    query.interest,
+    query.place,
+    query.region,
+    query.field,
+    query.mode,
+    query.time,
+  ]);
   const places = [
     ...new Map(items.map((item) => [item.countrySlug, item.country])).entries(),
   ].sort((a, b) => a[1].localeCompare(b[1]));
@@ -127,6 +142,12 @@ export function CompassBrowser({
     query.mode,
     query.time,
   ].some(Boolean);
+  const advancedFilterCount = [
+    query.place,
+    query.region,
+    query.mode,
+    query.time,
+  ].filter(Boolean).length;
   function change(next: FinderQuery, replace = false) {
     setQuery(next);
     // Keep typed text out of the back stack while preserving deliberate filter changes.
@@ -135,6 +156,151 @@ export function CompassBrowser({
   }
   return (
     <div className="compass-browser">
+      <form
+        action="/explore"
+        method="get"
+        className="finder-form"
+        role="search"
+        onSubmit={(event) => {
+          event.preventDefault();
+          trackEaEvent("compass_search");
+          document.getElementById("compass-results")?.focus();
+        }}
+      >
+        <div className="search-bar">
+          <Search size={21} aria-hidden="true" />
+          <label className="sr-only" htmlFor="selection-search">
+            Search experiences
+          </label>
+          <input
+            id="selection-search"
+            name="q"
+            type="search"
+            value={query.q || ""}
+            maxLength={200}
+            placeholder="Search a place, taste or skill"
+            onChange={(event) =>
+              change({ ...query, q: event.target.value }, true)
+            }
+          />
+          <button type="submit" className="button button-dark">
+            Explore <ArrowRight size={18} aria-hidden="true" />
+          </button>
+        </div>
+        <input type="hidden" name="interest" value={query.interest || ""} />
+        <input type="hidden" name="field" value={query.field || ""} />
+        <details
+          className="finder-more"
+          open={advancedFilterCount > 0 || undefined}
+        >
+          <summary>
+            <span>Refine by place, participation or time</span>
+            {advancedFilterCount > 0 && (
+              <span className="finder-filter-count">
+                {advancedFilterCount} active
+              </span>
+            )}
+          </summary>
+          <div className="finder-filters">
+            <label>
+              Country or territory
+              <select
+                name="place"
+                value={query.place || ""}
+                onChange={(event) =>
+                  change({ ...query, place: event.target.value, region: "" })
+                }
+              >
+                <option value="">Anywhere</option>
+                {places.map(([slug, name]) => (
+                  <option key={slug} value={slug}>
+                    {name}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              City or area
+              <select
+                name="region"
+                value={
+                  query.place && query.region
+                    ? `${query.place}|${query.region}`
+                    : ""
+                }
+                onChange={(event) => {
+                  const [place = "", region = ""] =
+                    event.target.value.split("|");
+                  change({ ...query, place, region });
+                }}
+              >
+                <option value="">
+                  {query.place ? "Every area here" : "Anywhere"}
+                </option>
+                {areas.map(([value, area]) => (
+                  <option key={value} value={value}>
+                    {area.place}
+                    {!query.place && `, ${area.country}`}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              How do you want to be there?
+              <select
+                name="mode"
+                value={query.mode || ""}
+                onChange={(event) =>
+                  change({ ...query, mode: event.target.value })
+                }
+              >
+                <option value="">Open to anything</option>
+                {participationModes.map((mode) => (
+                  <option key={mode.value} value={mode.value}>
+                    {mode.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              Room in your day?
+              <select
+                name="time"
+                value={query.time || ""}
+                onChange={(event) =>
+                  change({ ...query, time: event.target.value })
+                }
+              >
+                <option value="">Any rhythm</option>
+                {timeFits.map((fit) => (
+                  <option key={fit.value} value={fit.value}>
+                    {fit.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            {hasFilters && (
+              <a
+                className="reset-link finder-reset"
+                href="/explore"
+                onClick={(event) => {
+                  event.preventDefault();
+                  change({ view: query.view });
+                }}
+              >
+                <X size={14} /> Clear filters
+              </a>
+            )}
+          </div>
+          <p className="finder-helper">
+            {hydrated
+              ? "Results update as you explore. "
+              : "Search to explore. "}
+            Time is a planning guide. Check the full visit details before
+            booking.
+          </p>
+        </details>
+      </form>
       <nav className="interest-shortcuts" aria-label="Explore by interest">
         <a
           href={finderUrl({ ...query, interest: "", field: "" })}
@@ -161,11 +327,11 @@ export function CompassBrowser({
         ))}
       </nav>
       {!hasFilters && (
-        <section className="compass-starters" aria-labelledby="starter-title">
-          <div>
-            <p className="eyebrow">Not sure what to type?</p>
-            <h2 id="starter-title">Start with the day you want.</h2>
-          </div>
+        <details className="compass-starters">
+          <summary>
+            <span className="eyebrow">Need a nudge?</span>
+            <strong>Start with the day you want.</strong>
+          </summary>
           <nav aria-label="Suggested ways to begin">
             {starterDirections.map((starter) => (
               <a
@@ -180,136 +346,8 @@ export function CompassBrowser({
               </a>
             ))}
           </nav>
-        </section>
+        </details>
       )}
-      <form
-        action="/explore"
-        method="get"
-        className="finder-form"
-        role="search"
-        onSubmit={(event) => {
-          event.preventDefault();
-          trackEaEvent("compass_search");
-          document.getElementById("compass-results")?.focus();
-        }}
-      >
-        <div className="search-bar">
-          <Search size={21} aria-hidden="true" />
-          <label className="sr-only" htmlFor="selection-search">
-            Search experiences
-          </label>
-          <input
-            id="selection-search"
-            name="q"
-            type="search"
-            value={query.q || ""}
-            maxLength={200}
-            placeholder="A place, a taste, a skill. Try Kyoto tea or live music."
-            onChange={(event) =>
-              change({ ...query, q: event.target.value }, true)
-            }
-          />
-          <button type="submit" className="button">
-            Find my way <ArrowRight size={18} aria-hidden="true" />
-          </button>
-        </div>
-        <input type="hidden" name="interest" value={query.interest || ""} />
-        <input type="hidden" name="field" value={query.field || ""} />
-        <div className="finder-filters">
-          <label>
-            Country or territory
-            <select
-              name="place"
-              value={query.place || ""}
-              onChange={(event) =>
-                change({ ...query, place: event.target.value, region: "" })
-              }
-            >
-              <option value="">Anywhere</option>
-              {places.map(([slug, name]) => (
-                <option key={slug} value={slug}>
-                  {name}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            City or area
-            <select
-              name="region"
-              value={
-                query.place && query.region
-                  ? `${query.place}|${query.region}`
-                  : ""
-              }
-              onChange={(event) => {
-                const [place = "", region = ""] = event.target.value.split("|");
-                change({ ...query, place, region });
-              }}
-            >
-              <option value="">
-                {query.place ? "Every area here" : "Anywhere"}
-              </option>
-              {areas.map(([value, area]) => (
-                <option key={value} value={value}>
-                  {area.place}
-                  {!query.place && `, ${area.country}`}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            How do you want to be there?
-            <select
-              name="mode"
-              value={query.mode || ""}
-              onChange={(event) =>
-                change({ ...query, mode: event.target.value })
-              }
-            >
-              <option value="">Open to anything</option>
-              {participationModes.map((mode) => (
-                <option key={mode.value} value={mode.value}>
-                  {mode.label}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            Room in your day?
-            <select
-              name="time"
-              value={query.time || ""}
-              onChange={(event) =>
-                change({ ...query, time: event.target.value })
-              }
-            >
-              <option value="">Any rhythm</option>
-              {timeFits.map((fit) => (
-                <option key={fit.value} value={fit.value}>
-                  {fit.label}
-                </option>
-              ))}
-            </select>
-          </label>
-          {hasFilters && (
-            <a
-              className="reset-link finder-reset"
-              href="/explore"
-              onClick={(event) => {
-                event.preventDefault();
-                change({ view: query.view });
-              }}
-            >
-              <X size={14} /> Clear filters
-            </a>
-          )}
-        </div>
-        <p className="finder-helper">
-          {hydrated ? "Results update as you explore. " : "Search to explore. "}
-          Time is a planning guide. Check the full visit details before booking.
-        </p>
-      </form>
       <div className="results-line" id="compass-results" tabIndex={-1}>
         <span aria-live="polite" aria-atomic="true">
           {matches.length} {matches.length === 1 ? "way" : "ways"} in
@@ -342,7 +380,7 @@ export function CompassBrowser({
           className={`experience-grid ${query.view === "list" ? "list-view" : ""}`}
         >
           <h2 className="sr-only">Experiences in this direction</h2>
-          {matches.map(({ index }) => cards[index])}
+          {visibleMatches.map(({ index }) => cards[index])}
         </div>
       ) : (
         <div className="finder-empty">
@@ -360,6 +398,28 @@ export function CompassBrowser({
             Show all experiences <ArrowRight size={18} />
           </button>
           <Link href="/collections">Or follow an editorial thread ↗</Link>
+        </div>
+      )}
+      {visibleMatches.length < matches.length && (
+        <div className="compass-load-more">
+          <p>
+            Showing {visibleMatches.length} of {matches.length} ways in
+          </p>
+          <button
+            className="button button-outline"
+            type="button"
+            onClick={() => {
+              setVisibleCount((count) => count + resultsPageSize);
+              trackEaEvent("compass_show_more", {
+                visible_count: Math.min(
+                  visibleCount + resultsPageSize,
+                  matches.length,
+                ),
+              });
+            }}
+          >
+            Show more experiences <ArrowRight size={18} aria-hidden="true" />
+          </button>
         </div>
       )}
     </div>

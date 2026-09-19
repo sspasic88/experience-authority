@@ -73,8 +73,13 @@ try {
     const page = await context.newPage();
     page.on("pageerror", (e) => errors.push(e.message));
     await visit(page, "/explore");
-    await expect(page.locator(".experience-card")).toHaveCount(129);
-    for (const slug of ["a-bowl-of-attention", "bread-from-the-tonir"]) {
+    await expect(page.locator(".experience-card")).toHaveCount(18);
+    // One authored date-led guide closed yesterday and correctly fails the live gate.
+    await expect(page.locator(".results-line")).toContainText("153 ways in");
+    for (const slug of [
+      "build-hudut-from-the-coconut-outward",
+      "meet-the-largest-fish-on-its-terms",
+    ]) {
       const card = page
         .locator(".experience-card")
         .filter({ has: page.locator(`a[href="/experiences/${slug}"]`) });
@@ -94,11 +99,13 @@ try {
       .fill("PRIVATE journey");
     await page
       .getByLabel("Add a saved experience")
-      .selectOption("kyoto-camellia-tea");
+      .selectOption("hopkins-palmento-garifuna-cooking");
     await page
       .getByLabel("Add a saved experience")
-      .selectOption("tsaghkunk-lavash");
-    await page.getByLabel("Day for A bowl of attention").fill("2");
+      .selectOption("arta-regulated-whale-shark-tour");
+    await page
+      .getByLabel("Day for Build hudut from the coconut outward")
+      .fill("2");
     await page
       .getByLabel("My note", { exact: true })
       .first()
@@ -111,9 +118,9 @@ try {
     await expect(page.getByLabel("Journey name", { exact: true })).toHaveValue(
       "PRIVATE journey",
     );
-    await expect(page.getByLabel("Day for A bowl of attention")).toHaveValue(
-      "2",
-    );
+    await expect(
+      page.getByLabel("Day for Build hudut from the coconut outward"),
+    ).toHaveValue("2");
     await expect(page.locator(".trip-entry")).toHaveCount(2);
     for (const input of await page.locator(".trip-day input").all())
       assert(
@@ -172,7 +179,9 @@ try {
     ).toHaveValue("Updated across tabs");
     await second.close();
     await page
-      .getByRole("button", { name: "Remove A bowl of attention from plan" })
+      .getByRole("button", {
+        name: "Remove Build hudut from the coconut outward from plan",
+      })
       .click();
     await expect(page.locator(".trip-entry")).toHaveCount(1);
     await expect(page.locator(".trip-caution")).toHaveCount(0);

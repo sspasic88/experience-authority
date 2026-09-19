@@ -232,6 +232,199 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "nepal",
+    name: "Nepal",
+    region: "kavrepalanchok",
+    regionName: "Panauti",
+    intro: "Stay in Panauti through a women-led network that lets a family table, host household and old town set the pace.",
+    image: null,
+  },
+  {
+    slug: "peru",
+    name: "Peru",
+    region: "sacred-valley",
+    regionName: "Sacred Valley",
+    intro: "Follow Chinchero's colour back to fibre, dye, tension and the women who keep the loom moving.",
+    image: null,
+  },
+  {
+    slug: "niue",
+    name: "Niue",
+    region: "north-niue",
+    regionName: "North Niue",
+    intro: "Meet Niue's forest and plantation through the extraordinary uga and the local knowledge that keeps the encounter grounded.",
+    image: null,
+  },
+  {
+    slug: "cabo-verde",
+    name: "Cabo Verde",
+    region: "sao-vicente",
+    regionName: "São Vicente",
+    intro: "Let Mindelo's current musicians, working rooms and changing live programme introduce São Vicente after dark.",
+    image: null,
+  },
+  {
+    slug: "jordan",
+    name: "Jordan",
+    region: "wadi-rum",
+    regionName: "Wadi Rum",
+    intro: "Stay after Wadi Rum loses its colour and let darkness, dinner, temperature and morning redraw the protected landscape.",
+    image: null,
+  },
+  {
+    slug: "belize",
+    name: "Belize",
+    region: "stann-creek",
+    regionName: "Stann Creek",
+    intro:
+      "Begin in Hopkins with coconut, plantain and fish, then let a Garifuna family programme keep the meal connected to its makers.",
+    image: null,
+  },
+  {
+    slug: "rwanda",
+    name: "Rwanda",
+    region: "nyungwe",
+    regionName: "Nyungwe",
+    intro:
+      "Follow tea from the bright leaf at Gisakura toward processing and tasting on a visit arranged through a current authorised route.",
+    image: null,
+  },
+  {
+    slug: "kyrgyzstan",
+    name: "Kyrgyzstan",
+    region: "naryn",
+    regionName: "Naryn Region",
+    intro:
+      "See a yurt become a room through lattice, crown, roof poles, felt and the sequence held by its hosts.",
+    image: null,
+  },
+  {
+    slug: "timor-leste",
+    name: "Timor-Leste",
+    region: "dili",
+    regionName: "Dili",
+    intro:
+      "Meet tais through the posture, tension and judgement of weaving, with makers controlling the loom and its meanings.",
+    image: null,
+  },
+  {
+    slug: "czechia",
+    name: "Czechia",
+    region: "prague",
+    regionName: "Prague",
+    intro:
+      "Read Prague through Tyrš House and the civic movement that joined architecture, physical culture and public life.",
+    image: null,
+  },
+  {
+    slug: "slovakia",
+    name: "Slovakia",
+    region: "podpolanie",
+    regionName: "Podpoľanie",
+    intro:
+      "Begin with the shape, material and regional life of the fujara before expecting the instrument to sound.",
+    image: null,
+  },
+  {
+    slug: "paraguay",
+    name: "Paraguay",
+    region: "asuncion",
+    regionName: "Asunción",
+    intro:
+      "Walk Asunción through public space and everyday tereré context without turning ordinary social life into a performance.",
+    image: null,
+  },
+  {
+    slug: "djibouti",
+    name: "Djibouti",
+    region: "gulf-of-tadjoura",
+    regionName: "Gulf of Tadjoura",
+    intro:
+      "Enter Arta Bay through a regulated seasonal encounter where the whale shark, the decree and the sea set the terms.",
+    image: null,
+  },
+  {
+    slug: "curacao",
+    name: "Curaçao",
+    region: "west-curacao",
+    regionName: "Bandabou",
+    intro:
+      "Let a dedicated museum return tambú to the history, resistance and social memory held inside its drum.",
+    image: null,
+  },
+  {
+    slug: "tunisia",
+    name: "Tunisia",
+    region: "bizerte",
+    regionName: "Bizerte and Sejnane",
+    intro:
+      "Meet northern Tunisia through clay, hand-built form and the knowledge carried by Sejnane's women potters.",
+    image: null,
+  },
+  {
+    slug: "tonga",
+    name: "Tonga",
+    region: "tongatapu",
+    regionName: "Tongatapu",
+    intro:
+      "Begin with ngatu as bark, pattern, work and exchange before its finished surface takes over.",
+    image: null,
+  },
+  {
+    slug: "kosovo",
+    name: "Kosovo",
+    region: "prizren",
+    regionName: "Prizren",
+    intro:
+      "Read Prizren from a working filigree bench, where silver becomes structure one join at a time.",
+    image: null,
+  },
+  {
+    slug: "faroe-islands",
+    name: "Faroe Islands",
+    region: "torshavn",
+    regionName: "Tórshavn",
+    intro:
+      "Let a current public chain dance connect ballad, language, joined hands and the pace of the circle.",
+    image: null,
+  },
+  {
+    slug: "seychelles",
+    name: "Seychelles",
+    region: "mahe",
+    regionName: "Mahé",
+    intro:
+      "Stay after sunset for a public moutya evening that keeps drum, movement and history together.",
+    image: null,
+  },
+  {
+    slug: "barbados",
+    name: "Barbados",
+    region: "island-wide",
+    regionName: "Across Barbados",
+    intro:
+      "Meet a homegrown game through its low net, wooden racket and the community courts that keep it moving.",
+    image: null,
+  },
+  {
+    slug: "the-bahamas",
+    name: "The Bahamas",
+    region: "new-providence",
+    regionName: "New Providence",
+    intro:
+      "Follow Nassau's Junkanoo from parade motion back to cardboard, rhythm and collective construction.",
+    image: null,
+  },
+  {
+    slug: "moldova",
+    name: "Moldova",
+    region: "stefan-voda",
+    regionName: "Ștefan Vodă",
+    intro:
+      "Time a winery visit for harvest and let the season arrive before the tasting note.",
+    image: null,
+  },
+  {
     slug: "brazil",
     name: "Brazil",
     region: "rio-de-janeiro",
@@ -972,6 +1165,21 @@ export const territories = [
 ] as const;
 // Area labels can differ from a guide's specific site. Never let the last guide rename the area.
 const additionalRegionNames: Readonly<Record<string, string>> = {
+  "nepal/kavrepalanchok": "Panauti",
+  "peru/sacred-valley": "Sacred Valley",
+  "niue/north-niue": "North Niue",
+  "cabo-verde/sao-vicente": "São Vicente",
+  "jordan/wadi-rum": "Wadi Rum",
+  "belize/stann-creek": "Stann Creek",
+  "rwanda/nyungwe": "Nyungwe",
+  "united-states/south-carolina-lowcountry": "South Carolina Lowcountry",
+  "kyrgyzstan/naryn": "Naryn Region",
+  "timor-leste/dili": "Dili",
+  "czechia/prague": "Prague",
+  "slovakia/podpolanie": "Podpoľanie",
+  "paraguay/asuncion": "Asunción",
+  "djibouti/gulf-of-tadjoura": "Gulf of Tadjoura",
+  "curacao/west-curacao": "Bandabou",
   "romania/bucovina": "Bucovina",
   "georgia/kakheti": "Kakheti",
   "sri-lanka/central-highlands": "Central Highlands",

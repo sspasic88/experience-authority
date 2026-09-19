@@ -933,6 +933,149 @@ export const dailyDiscoveries: readonly Discovery[] = [
     question:
       "What music do you think you know only because you have never heard it through the system it was built to move?",
   },
+  {
+    date: "2026-12-06",
+    slug: "let-the-clay-keep-the-fingerprints",
+    title: "Sejnane clay does not need to look perfect.",
+    angle:
+      "A wheel can make symmetry look like the definition of skill. Sejnane offers another beginning. In a local women's workshop at Sidi Mechreg, clay is prepared, raised by hand and marked before firing. Make one small form under the potter's direction and let its unevenness expose what your hands have not yet learned. The finished piece is not proof that you know the tradition. It is evidence that material, motif and touch belong in the same story.",
+    notice:
+      "The point where pressure strengthens the wall instead of collapsing it. Use only the motifs the potter offers to visitors.",
+    question:
+      "Which object might become more valuable to you if the first attempt was allowed to keep its fingerprints?",
+  },
+  {
+    date: "2026-12-07",
+    slug: "meet-the-cloth-before-it-becomes-a-gift",
+    title: "A Tongan cloth begins long before the pattern.",
+    angle:
+      "Ngatu can arrest the eye with its finished surface, but Ancient Tonga's published class offers a reason to begin earlier. Ask how bark becomes cloth, how sheets grow and how pattern joins material to occasion. Take only the step the host gives you. A visitor's small action cannot reproduce the collective labour or relationships held by a complete ngatu, but it can stop the cloth from becoming anonymous decor.",
+    notice:
+      "The scale of the finished cloth compared with the small area one person can work at a time. Ask before photographing or copying a pattern.",
+    question:
+      "What gift would you understand differently if you first met the labour and relationships that make it possible?",
+  },
+  {
+    date: "2026-12-08",
+    slug: "enter-sevdah-through-the-room-that-remembers-it",
+    title: "Before the song, meet the lives inside it.",
+    angle:
+      "Sarajevo may tempt you to search immediately for live sevdah. Begin at the Sevdah Art House instead. Recordings, instruments and biographies give the voice a city and a lineage before any current programme decides what can be heard tonight. The museum is not a substitute for a performer. It is a way to stop asking music to arrive as atmosphere without names, history or consequence.",
+    notice:
+      "The recording or biography that changes what you would listen for in a live room. Keep museum admission separate from performance access.",
+    question:
+      "Which music would open more fully if you learned who carried it before asking where to hear it?",
+  },
+  {
+    date: "2026-12-09",
+    slug: "watch-silver-become-a-line",
+    title: "Prizren asks silver to hold a curve.",
+    angle:
+      "Finished filigree can hide its own improbability. At Prizren's Filigree Workshop, begin with wire, tools and an unfinished join. Watch how a maker repeats pressure and heat until open space becomes part of the structure. The public route is observation, not a guaranteed lesson. That boundary leaves attention where it belongs, on the control required to make one delicate line survive.",
+    notice:
+      "The difference between bending wire and building a form that can hold itself. Stay clear of tools and ask before photographing the bench.",
+    question:
+      "What intricate object would become even more beautiful if you could see the moment when it was still fragile?",
+  },
+  {
+    date: "2026-12-10",
+    slug: "let-the-ballad-move-the-circle",
+    title: "In the Faroes, the story moves the feet.",
+    angle:
+      "A Faroese chain dance is not footwork placed beneath a song. The lead voice, ballad, refrain and joined line make one form. Choose only a current public listing and confirm it again before travel. Listen before entering. When a host makes participation clear, let the circle carry the pace rather than trying to perform confidence you do not have.",
+    notice:
+      "The moment the refrain returns and the line answers together. Do not assume that an older beginner schedule is still operating.",
+    question:
+      "How might a dance change if the story, not the spectator, decides how the room moves?",
+  },
+  {
+    date: "2026-12-11",
+    slug: "hear-the-drum-after-sunset",
+    title: "The fire is not the whole story.",
+    angle:
+      "At a confirmed Moutya Night on Mahé, the fire and movement may catch your eye first. Keep listening. The drum, Creole words and history carried by the hosts place the performance inside a longer account of enslavement, resistance and memory. A public commercial evening cannot contain the whole tradition, but it can refuse to make the rhythm decorative background.",
+    notice:
+      "What the host explains before the first movement begins. Ask before recording and let the performers control audience participation.",
+    question:
+      "Which performance would you receive differently if its history remained as present as its rhythm?",
+  },
+  {
+    date: "2026-12-12",
+    slug: "hear-the-wooden-racket-crack",
+    title: "Barbados rebuilt tennis from the road up.",
+    angle:
+      "Road tennis looks familiar just long enough to unsettle your assumptions. The court is compact, the net low and the racket wooden. Find a current public match or a court where casual play is clearly permitted, then watch before entering. The game is not a novelty version of something imported. It is Barbadian invention shaped by available space, material and a community that kept playing.",
+    notice:
+      "The sound of wood meeting ball and the speed created by the low net. Never take court time from regular players or children's programmes.",
+    question:
+      "What other familiar game might become more inventive when a place rebuilds it around its own conditions?",
+  },
+  {
+    date: "2026-12-13",
+    slug: "follow-cardboard-toward-bay-street",
+    title: "Junkanoo begins with cardboard and a plan.",
+    angle:
+      "A parade arrives as colour, sound and speed. Educulture in Nassau lets you reverse that sequence. Begin with cardboard, crepe paper, fringe, rhythm and the months of group work behind a costume. The museum is a responsible public alternative to entering an active shack. It can reveal the system without asking makers to expose unfinished designs or interrupt production.",
+    notice:
+      "How a light material becomes volume that can move. Do not treat a museum visit as permission to enter a group's working space.",
+    question:
+      "Which spectacle would become more astonishing if you could follow it back to the ordinary materials that built it?",
+  },
+  {
+    date: "2026-12-14",
+    slug: "move-the-stone-that-holds-the-water",
+    title: "At Heʻeia, learning may arrive in a bucket line.",
+    angle:
+      "Paepae o Heʻeia's public workday does not promise that every participant will receive the same task or explanation. That is part of its integrity. Register, arrive prepared and do the work assigned. Passing stone, clearing vegetation or supporting the fishpond wall turns stewardship from a word into coordinated effort. The organisation decides what knowledge and access belong with that labour.",
+    notice:
+      "How many bodies it takes to move material safely and steadily. Follow every instruction and photograph only with permission.",
+    question:
+      "What place would you understand differently after contributing to the work its own stewards have chosen?",
+  },
+  {
+    date: "2026-12-15",
+    slug: "choose-the-harvest-before-the-cellar",
+    title: "In Moldova, choose the date before the tasting note.",
+    angle:
+      "A harvest visit depends on weather, fruit and a winery's real work. Moldova Travel points toward seasonal picking and pressing, but the exact programme must be confirmed for the year you travel. If the host opens it, begin between the rows and let the glass come later. Picking one cluster will not make you a vineyard worker. It can make season and labour impossible to remove from the wine.",
+    notice:
+      "The host's decision about what is ready and what must remain on the vine. Enter production areas only when directed.",
+    question:
+      "Which finished taste would become more specific if your trip began with the date and conditions that produced it?",
+  },
+  {
+    date: "2026-12-16",
+    slug: "build-hudut-from-the-coconut-outward",
+    title: "A bowl of hudut begins before the fire.",
+    angle:
+      "In Hopkins, a published Garifuna cooking class can begin with coconut, plantain and fish before any finished plate appears. Let the family hosting the programme set the sequence and the boundaries. The value is not collecting a recipe as a souvenir. It is watching ordinary ingredients become a meal through judgement, rhythm and knowledge held by the people who cook it. Confirm the current class directly and keep every claim no larger than the kitchen you are invited to enter.",
+    notice:
+      "The moment coconut changes from an ingredient into the structure of the broth. Ask before photographing people or a family workspace.",
+    question:
+      "Which familiar ingredient might carry a completely different meaning when a host lets you follow it through one whole meal?",
+  },
+  {
+    date: "2026-12-17",
+    slug: "raise-a-room-from-a-circle",
+    title: "A Kyrgyz yurt is a system you can feel.",
+    angle:
+      "A finished yurt can look inevitable. A host-led installation in Kyrgyzstan reveals the opposite. The lattice must open, the crown must rise, every roof pole must find its place and felt must follow structure. Join only through the published programme and take the task the family assigns. A short visitor session does not reproduce nomadic life or confer construction skill. It can make one architectural truth unforgettable: the room stands because parts, people and sequence agree.",
+    notice:
+      "How the roof changes when the final poles distribute the load. Follow lifting instructions and never step on textiles without guidance.",
+    question:
+      "What building would you understand differently if you first met it as a coordinated act rather than a finished object?",
+  },
+  {
+    date: "2026-12-18",
+    slug: "meet-the-largest-fish-on-its-terms",
+    title: "The largest fish sets the terms in Djibouti.",
+    angle:
+      "Whale sharks visit the Gulf of Tadjoura seasonally, and Djibouti regulates how boats and swimmers may approach them. Choose a currently licensed operator, ask how the official distances and encounter limits shape the day, and accept that wildlife may not appear. The strongest version of this experience is not a guaranteed close image. It is a marine encounter whose success still depends on restraint, a trained crew and the animal's freedom to keep moving.",
+    notice:
+      "How the guide changes speed and position before anyone enters the water. Never touch, chase, feed or block a whale shark.",
+    question:
+      "Could an encounter become more memorable when its rules protect the possibility that nothing performs for you?",
+  },
 ];
 
 export function availableDiscoveries(

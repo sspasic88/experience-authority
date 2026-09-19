@@ -18,6 +18,7 @@ import { destinationCoverage } from "@/lib/destinations";
 import { DestinationBrowser } from "@/components/destination-browser";
 import { resolveCityChapters } from "@/lib/city-chapters";
 import { CityChapterSection } from "@/components/city-chapter";
+import { orderExperienceDirectory } from "@/lib/home-curation";
 type Props = { params: Promise<{ segments: string[] }> };
 export async function generateMetadata({ params }: Props) {
   const segments = (await params).segments;
@@ -47,12 +48,13 @@ export default async function Place({ params }: Props) {
   const place = getTerritories().find((t) => t.slug === country);
   const selectedRegion = place?.regions.find((entry) => entry.slug === region);
   if (!place || segments.length > 2 || (region && !selectedRegion)) notFound();
+  const orderedExperiences = orderExperienceDirectory(getExperiences());
   const {
     local: items,
     categories,
     elsewhere,
-  } = destinationCoverage(getExperiences(), country, region);
-  const chapters = resolveCityChapters(getExperiences()).filter(
+  } = destinationCoverage(orderedExperiences, country, region);
+  const chapters = resolveCityChapters(orderedExperiences).filter(
     (chapter) =>
       chapter.country === country &&
       (!region || chapter.regions.includes(region)),
@@ -147,7 +149,7 @@ export default async function Place({ params }: Props) {
         </DestinationBrowser>
       ) : (
         <EmptyState>
-          <p>No reviewed stories are published here yet.</p>
+          <p>No reviewed guides are published here yet.</p>
         </EmptyState>
       )}
       {items.length > 0 && categories.length < 3 && (

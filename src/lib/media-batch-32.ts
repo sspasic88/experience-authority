@@ -4,23 +4,24 @@ export const mediaBatch32: readonly GuideMedia[] = [
   {
     guideId: "konigil-meros-paper-mill",
     src: "/images/guides/konigil-mulberry-paper.jpg",
-    alt: "Three women strip mulberry bark at wooden worktables inside the Meros paper mill in Konigil.",
-    title: "Preparing mulberry bark at the Meros paper mill",
-    photographer: "Enric",
+    alt: "A paper maker polishes a pale sheet by hand at the Meros paper mill in Konigil.",
+    title: "Finishing a sheet at the Meros paper mill",
+    photographer: "Uzbekistan Travel. Individual photographer not named",
     sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:084_Mol%C3%AD_paperer_Meros_(Konigil,_Samarcanda),_pelant_les_escorces_de_morera.jpg",
-    licenseName: "Creative Commons Attribution-ShareAlike 4.0",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
-    rightsBasis: "documented_license",
-    rightsCheckedOn: "2026-09-15",
+      "https://uzbekistan.travel/en/o/konigil-village-and-meros-paper-mill/",
+    licenseName: "Official destination photograph. Reuse rights not independently cleared",
+    licenseUrl:
+      "https://uzbekistan.travel/en/o/konigil-village-and-meros-paper-mill/",
+    rightsBasis: "official_source",
+    rightsCheckedOn: "2026-09-19",
     visualReview: {
       outcome: "approved",
-      checkedOn: "2026-09-15",
+      checkedOn: "2026-09-19",
       rationale:
-        "The wide frame places three workers, mulberry branches, stripped bark and drying material in one legible sequence. Warm wood and concentrated handwork give the process visual authority without turning the mill into decorative scenery.",
+        "The closer official frame gives one real finishing step, hand pressure and paper surface immediate visual clarity. It is stronger at card scale while remaining exact to the named mill.",
     },
     depiction:
-      "Mulberry bark preparation at the Meros paper mill in Konigil, photographed by Enric in 2018. It does not establish current staffing, visitor participation, today's route or an EA visit. Resized for web delivery from the CC BY-SA 4.0 original.",
+      "A paper maker finishing a sheet at the Meros paper mill in Konigil, published by Uzbekistan Travel. It does not identify the maker or photographer, establish current visitor access, demonstrate every production stage or prove an EA visit. Reuse rights have not been independently cleared.",
   },
   {
     guideId: "bonwire-kente-centre",

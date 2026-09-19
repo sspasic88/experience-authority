@@ -4,6 +4,7 @@ import { ExperienceCard, PageIntro } from "@/components/editorial";
 import { fields } from "@/lib/catalog";
 import { getExperiences } from "@/lib/data";
 import { pageMetadata, isDiscoverable } from "@/lib/seo";
+import { ProgressiveGrid } from "@/components/progressive-grid";
 type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
@@ -40,12 +41,15 @@ export default async function Field({ params }: Props) {
       <PageIntro eyebrow="A field of experience" title={`${selected.name}.`}>
         <p>{selected.line}</p>
       </PageIntro>
-      <div className="experience-grid">
-        <h2 className="sr-only">Experiences in this field</h2>
+      <ProgressiveGrid
+        heading="Experiences in this field"
+        surface={`field-${selected.slug}`}
+        initialCount={12}
+      >
         {items.map((item, index) => (
           <ExperienceCard item={item} index={index} key={item.id} />
         ))}
-      </div>
+      </ProgressiveGrid>
     </div>
   );
 }

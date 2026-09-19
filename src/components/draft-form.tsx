@@ -42,7 +42,7 @@ export function DraftForm({
           defaultValue={initialExperience}
           placeholder={
             correction
-              ? "The story or page you want to correct"
+              ? "The guide or page you want to correct"
               : "A short working title"
           }
         />

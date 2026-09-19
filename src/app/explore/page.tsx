@@ -3,6 +3,7 @@ import { ExperienceCard, PageIntro } from "@/components/editorial";
 import { CompassBrowser } from "@/components/compass-browser";
 import { getExperiences } from "@/lib/data";
 import { pageMetadata } from "@/lib/seo";
+import { orderExperienceDirectory } from "@/lib/home-curation";
 import type { FinderQuery } from "@/lib/experience-finder";
 
 type Props = {
@@ -26,7 +27,7 @@ export default async function Explore({ searchParams }: Props) {
       ],
     ),
   );
-  const items = getExperiences();
+  const items = orderExperienceDirectory(getExperiences());
   return (
     <div className="wrap page-section compass-page">
       <PageIntro eyebrow="Find your way in" title="Compass.">

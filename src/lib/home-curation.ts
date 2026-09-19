@@ -9,6 +9,46 @@ import { recentGuideReleases } from "./releases";
  */
 export const heroGuideRotations = [
   [
+    "meet-the-island-through-the-uga",
+    "stay-where-the-town-knows-your-host",
+    "let-the-room-introduce-mindelo",
+  ],
+  [
+    "stay-until-the-desert-loses-its-colour",
+    "follow-the-colour-back-to-the-wool",
+    "hear-the-wooden-racket-crack",
+  ],
+  [
+    "build-hudut-from-the-coconut-outward",
+    "meet-the-largest-fish-on-its-terms",
+    "read-prague-through-a-movement",
+  ],
+  [
+    "raise-a-room-from-a-circle",
+    "meet-the-largest-fish-on-its-terms",
+    "let-the-drum-recover-its-history",
+  ],
+  [
+    "pick-the-leaf-before-the-cup",
+    "walk-where-terere-is-everyday-language",
+    "hear-the-flute-before-anyone-plays",
+  ],
+  [
+    "walk-where-terere-is-everyday-language",
+    "build-hudut-from-the-coconut-outward",
+    "coil-the-lowcountry-one-stitch-at-a-time",
+  ],
+  [
+    "hear-the-wooden-racket-crack",
+    "let-the-clay-keep-the-fingerprints",
+    "enter-sevdah-through-the-room-that-remembers-it",
+  ],
+  [
+    "choose-the-harvest-before-the-cellar",
+    "let-the-ballad-move-the-circle",
+    "follow-cardboard-toward-bay-street",
+  ],
+  [
     "ask-the-market-where-london-came-from",
     "lift-a-pattern-from-the-water",
     "a-city-in-the-water",
@@ -66,6 +106,44 @@ export const heroGuideRotations = [
   ],
 ] as const;
 
+const compassOpeningGuideSlugs = [
+  "meet-the-island-through-the-uga",
+  "stay-until-the-desert-loses-its-colour",
+  "follow-the-colour-back-to-the-wool",
+  "let-the-room-introduce-mindelo",
+  "stay-where-the-town-knows-your-host",
+  "build-hudut-from-the-coconut-outward",
+  "meet-the-largest-fish-on-its-terms",
+  "raise-a-room-from-a-circle",
+  "coil-the-lowcountry-one-stitch-at-a-time",
+  "walk-where-terere-is-everyday-language",
+  "pick-the-leaf-before-the-cup",
+  "let-the-drum-recover-its-history",
+  "hear-the-wooden-racket-crack",
+  "enter-sevdah-through-the-room-that-remembers-it",
+  "move-the-stone-that-holds-the-water",
+  "let-the-clay-keep-the-fingerprints",
+  "hear-the-drum-after-sunset",
+  "taste-what-time-does-to-port",
+  "ask-the-market-where-london-came-from",
+  "read-monument-valley-beyond-the-scenic-drive",
+  "a-bowl-of-attention",
+  "venice-through-an-oar",
+  "follow-the-agave-into-the-still",
+  "the-fish-behind-the-islands",
+  "kimchi-before-the-jar",
+  "follow-balis-water-before-the-rice",
+  "marble-steam-istanbul",
+  "a-morning-at-the-hawker-table",
+  "read-the-desert-at-ground-level",
+  "stay-for-the-session",
+  "play-the-wall-in-biarritz",
+  "before-the-chocolate-bar",
+  "a-city-in-the-water",
+  "leave-room-for-devotion",
+  "paint-the-pattern-you-noticed",
+] as const;
+
 const heroEditionMilliseconds = 3 * 60 * 60 * 1000;
 
 export function homeHeroRotationIndex(date: Date | string = new Date()) {
@@ -96,6 +174,25 @@ export function selectHomeHero(
     if (item.image && !selected.includes(item)) selected.push(item);
   }
   return selected;
+}
+
+/**
+ * Give the unfiltered Compass a deliberate opening sequence instead of the
+ * implementation order of the guide files. The opening alternates familiar
+ * points of reference with less expected discoveries and strong documentary
+ * frames. Filtered results keep this order while still including every guide.
+ */
+export function orderExperienceDirectory(items: PublicExperience[]) {
+  const bySlug = new Map(items.map((item) => [item.slug, item]));
+  const seen = new Set<string>();
+  const opening = compassOpeningGuideSlugs.flatMap((slug) => {
+    const item = bySlug.get(slug);
+    if (!item || seen.has(item.slug)) return [];
+    seen.add(item.slug);
+    return [item];
+  });
+
+  return [...opening, ...items.filter((item) => !seen.has(item.slug))];
 }
 /** A photograph gets one place on the homepage, even when a guide belongs to several pathways. */
 export function curateHome(

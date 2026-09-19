@@ -1,4 +1,36 @@
-# QA report — 15 September 2026
+# QA report — 19 September 2026
+
+## Content expansion batch 39 — 19 September 2026
+
+- Added five bounded public-source guides from original candidates 44, 87, 188, 142 and 40: Panauti Community Homestay, CTTC's Chinchero weaving demonstration, A5's plantation and uga route on Niue, Le Metalo's changing live programme in Mindelo and a named Wadi Rum camp overnight.
+- The catalogue now contains 154 authored guides across 104 countries and territories. The reconciliation maps 115 of the original 200 candidates through 72 narrowed public scopes, 41 related alternatives and two protected public programmes.
+- One date-led 18 September Viehscheid guide correctly fails the live review gate, so Compass exposes 153 current ways in. The expired guide remains in the authored history rather than being presented as current.
+- The A5 guide is an explicit related alternative to the original Taue night-walk candidate. Mindelo is a live-music-room alternative rather than a guarantee of morna. Chinchero remains an observation-first demonstration. Panauti and Wadi Rum retain household, host, transfer and representation boundaries.
+- Every guide uses a real, locally served photograph from its direct programme, operator or official destination source, with the visible `Image: creator / source ↗` credit and a precise depiction boundary. No AI-generated photograph is used.
+- The five guides enter Compass, country and regional routes, publication history, interest and participation filters, connected recommendations and four editorial pathways. Two new three-country and three-field hero editions bring the total to 20.
+- All 74 automated tests, TypeScript and the launch-configured production build pass. The complete SEO audit checked 432 canonical routes with no failed route, missing metadata, invalid canonical, duplicate title or duplicate description.
+- The full browser audit passed 558 responsive views at 390, 768 and 1440 pixels and 694 internal links with no overflow, broken loaded image, browser error or automated WCAG A/AA violation. The visitor audit separately passed 21 save, comparison, journey, photograph, share, storage and cross-tab checks at 320, 390 and 1440 pixels.
+- Production deployment was authorised after this batch; live verification is recorded separately after release.
+
+## Content expansion batch 38 — 19 September 2026
+
+- The catalogue now contains 149 guides across 99 countries and territories. The reconciliation maps 110 of the original 200 candidates through 70 narrowed public scopes, 38 related alternatives and two protected public programmes.
+- The daily edition contains 97 authored discoveries through 18 December 2026. Every new guide has a locally served real photograph, direct source credit, depiction boundary and a new source review dated 19 September.
+- The new guides enter Compass filters, country and regional pages, editorial pathways, the publication log, Journey planning and four additional hand-composed homepage editions.
+- Automated verification now contains 73 tests, including a dedicated batch 38 boundary test.
+- The launch-configured production build and TypeScript check pass. The complete SEO pass checked 417 canonical routes with no failed route, missing metadata, invalid canonical, duplicate title or duplicate description.
+- The responsive audit exercised 176 routes at 390, 768 and 1440 pixels, including all ten new guides and their destination pages, with no overflow, broken loaded image, browser error or automated WCAG A/AA violation. The visitor flow separately passed 21 Journey, storage, photograph and sharing checks at 320, 390 and 1440 pixels.
+- The authored catalogue contains 149 guides. One date-led 18 September Viehscheid guide now correctly fails the live review gate, leaving 148 currently visible ways in rather than presenting a finished event as current.
+
+## Content expansion batch 37 — 19 September 2026
+
+- Added ten bounded public-source guides from original candidates 55, 95, 108, 111, 116, 156, 166, 167, 196 and 112. The set covers Sejnane pottery, Tongan ngatu, Sarajevo's Sevdah Art House, Prizren filigree, Faroese chain dance, moutya on Mahé, Barbados road tennis, Nassau's Educulture museum, a Heʻeia fishpond workday and a seasonal Moldovan grape harvest.
+- The catalogue now contains 139 guides across 90 countries and territories. The reconciliation maps 100 of the original 200 candidates through 66 narrowed public scopes, 32 related alternatives and two protected public programmes.
+- The daily edition contains 94 authored discoveries through 15 December 2026. Every new guide has a locally served real photograph, direct source credit, depiction boundary and a new source review dated 19 September.
+- Konigil's existing guide received a stronger official-source photograph from the named Meros mill. It is an image upgrade, not a newly counted guide.
+- No guide receives EA Selected status, local validation, provider endorsement or an implied EA visit. Road tennis remains observation or permitted self-directed play rather than an invented lesson. Sarajevo remains museum admission rather than an invented live performance. Prizren remains observation rather than an invented workshop.
+- All 72 automated tests, TypeScript and the launch-configured production build pass. The complete local SEO pass checked 388 canonical routes with no failed route, missing metadata, invalid canonical, duplicate title or duplicate description.
+- A focused browser audit checked all ten new detail pages at 390 and 1440 pixels. Twenty views returned no horizontal overflow, broken loaded image or automated WCAG A/AA violation. Manual desktop and mobile review covered the homepage first fold and the Barbados detail hero.
 
 ## Content expansion batch 36 — 15 September 2026
 

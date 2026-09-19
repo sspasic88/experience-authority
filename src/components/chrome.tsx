@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight, Bookmark, Menu, X } from "lucide-react";
+import { ArrowUpRight, Bookmark, Menu, Search, X } from "lucide-react";
 import { usePassport } from "./passport-provider";
 import { AnalyticsPreferencesButton } from "./analytics-consent";
 export function Wordmark({ light = false }: { light?: boolean }) {
@@ -40,13 +40,10 @@ export function Header() {
   }, [open]);
   const { data } = usePassport();
   const links = [
-    ["/explore", "Compass"],
-    ["/places", "Places"],
-    ["/fields", "Fields"],
+    ["/explore", "Explore"],
+    ["/places", "Destinations"],
     ["/collections", "Collections"],
     ["/journal", "Journal"],
-    ["/plan", "Plan"],
-    ["/today", "Today"],
   ];
   return (
     <header className="site-header">
@@ -67,22 +64,64 @@ export function Header() {
               {label}
             </Link>
           ))}
-        </nav>
-        <Link
-          href="/passport"
-          className="passport-link"
-          aria-label={`EA Passport, ${Object.keys(data.saved).length} saved`}
-          onClick={() => setOpen(false)}
-        >
-          <Bookmark size={17} aria-hidden="true" />
-          <span>EA Passport</span>
-          <span
-            className="passport-count"
-            aria-label={`${Object.keys(data.saved).length} saved`}
+          <Link
+            className="nav-mobile-only"
+            href="/today"
+            aria-current={pathname.startsWith("/today") ? "page" : undefined}
+            onClick={() => setOpen(false)}
           >
-            {Object.keys(data.saved).length}
-          </span>
-        </Link>
+            Daily discovery
+          </Link>
+          <Link
+            className="nav-mobile-only"
+            href="/new"
+            aria-current={pathname.startsWith("/new") ? "page" : undefined}
+            onClick={() => setOpen(false)}
+          >
+            New guides
+          </Link>
+          <Link
+            className="nav-mobile-only"
+            href="/plan"
+            aria-current={pathname.startsWith("/plan") ? "page" : undefined}
+            onClick={() => setOpen(false)}
+          >
+            Plan a journey
+          </Link>
+        </nav>
+        <div className="header-actions">
+          <Link
+            href="/today"
+            className="today-link"
+            aria-current={pathname.startsWith("/today") ? "page" : undefined}
+            onClick={() => setOpen(false)}
+          >
+            Daily discovery
+          </Link>
+          <Link
+            href="/explore"
+            className="header-search-link"
+            aria-label="Search Experience Authority"
+            onClick={() => setOpen(false)}
+          >
+            <Search size={18} aria-hidden="true" />
+          </Link>
+          <Link
+            href="/passport"
+            className="passport-link"
+            aria-label={`EA Passport, ${Object.keys(data.saved).length} saved`}
+            onClick={() => setOpen(false)}
+          >
+            <Bookmark size={17} aria-hidden="true" />
+            <span>EA Passport</span>
+            <span
+              className="passport-count"
+              aria-label={`${Object.keys(data.saved).length} saved`}
+            >
+              {Object.keys(data.saved).length}
+            </span>
+          </Link>
+        </div>
         <button
           ref={menuButton}
           className="icon-button menu-button"

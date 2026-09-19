@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 const base = process.env.EA_TEST_URL || "http://127.0.0.1:3100";
 const liveIndexing = process.env.EA_TEST_INDEXING === "true";
 const utilityPaths = new Set(["/passport", "/suggest", "/corrections"]);
-const emptyFields = new Set(["contribute"]);
+const emptyFields = new Set();
 const paths = [
   "/",
   "/explore",
@@ -22,6 +22,7 @@ const paths = [
     "restore",
     "stay",
     "work",
+    "contribute",
     // Empty editorial fields are intentionally not public category routes.
     "play",
   ].map((f) => `/fields/${f}`),
@@ -353,7 +354,6 @@ const unpublishedPaths = [
   "/experiences/not-published",
   "/places/croatia/unknown",
   "/fields/unknown",
-  "/fields/contribute",
   "/collections/unknown",
   "/constructor",
   "/__proto__",

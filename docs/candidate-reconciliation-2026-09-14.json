@@ -4,8 +4,158 @@
   "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
   "originalCandidateCount": 200,
   "originalProtectedCount": 46,
-  "catalogueCount": 129,
+  "catalogueCount": 154,
   "mappings": [
+    {
+      "candidateId": 44,
+      "guideId": "panauti-community-homestay",
+      "relation": "narrowed_public_scope",
+      "boundary": "A named women-led public homestay network in Panauti with an assigned household, accommodation and meals. It does not guarantee one host, private family intimacy, every optional activity or equal conditions and benefit across all homes."
+    },
+    {
+      "candidateId": 87,
+      "guideId": "chinchero-cttc-weaving-demonstration",
+      "relation": "related_alternative",
+      "boundary": "A current artisan-centred public demonstration of spinning, dyeing and weaving in Chinchero. It does not establish the original hands-on weaving and dyeing promise, motif rights, a named teacher or private workshop access."
+    },
+    {
+      "candidateId": 188,
+      "guideId": "niue-a5-plantation-uga-tour",
+      "relation": "related_alternative",
+      "boundary": "A current A5 plantation and uga habitat tour in Mutalau replaces the original Taue night-walk premise. It does not guarantee night access, animal handling, capture, one guide, conservation outcomes or hunting authority."
+    },
+    {
+      "candidateId": 142,
+      "guideId": "mindelo-le-metalo-live-music",
+      "relation": "related_alternative",
+      "boundary": "A current public live-music room in Mindelo with a changing programme. It does not guarantee the original intimate morna session, a named musician, a particular genre or access beyond ordinary venue hospitality."
+    },
+    {
+      "candidateId": 40,
+      "guideId": "wadi-rum-real-bedouin-camp",
+      "relation": "narrowed_public_scope",
+      "boundary": "A named public overnight at one Bedouin-run Wadi Rum camp with transfers and meals. It does not represent all Bedouin life, guarantee stars or weather, grant unrestricted desert access or establish benefit distribution."
+    },
+    {
+      "candidateId": 79,
+      "guideId": "hopkins-palmento-garifuna-cooking",
+      "relation": "narrowed_public_scope",
+      "boundary": "A named family-run public cooking class centred on Garifuna food in Hopkins. It does not establish a bundled drumming performance, healing instruction, private household access or authority to represent every Garifuna family."
+    },
+    {
+      "candidateId": 66,
+      "guideId": "gisakura-public-tea-tour",
+      "relation": "related_alternative",
+      "boundary": "A pre-arranged public field, processing and tasting route at Gisakura. The original cooperative-host premise, direct plantation access, paid-work equivalence and a guaranteed factory sequence are not established."
+    },
+    {
+      "candidateId": 73,
+      "guideId": "isle-of-palms-sweetgrass-class",
+      "relation": "narrowed_public_scope",
+      "boundary": "A current two-hour introductory sweetgrass class led by a Charleston maker. It does not grant mastery, design ownership, material-harvest access or permission to commercialise a visible family pattern."
+    },
+    {
+      "candidateId": 35,
+      "guideId": "kyrgyzstan-public-yurt-installation",
+      "relation": "narrowed_public_scope",
+      "boundary": "A published host-led yurt installation with assigned visitor tasks. It does not reproduce nomadic life, confer construction competence, guarantee one village or open private family space beyond the programme."
+    },
+    {
+      "candidateId": 133,
+      "guideId": "dili-alola-tais-observation",
+      "relation": "related_alternative",
+      "boundary": "A current Dili orientation-tour stop to observe women weaving at Alola Esperansa. The original hands-on weaving step, named maker, unrestricted motif use and direct benefit pathway are not established."
+    },
+    {
+      "candidateId": 105,
+      "guideId": "prague-tyrs-house-sokol-tour",
+      "relation": "related_alternative",
+      "boundary": "A public guided tour of Tyrš House and Sokol history. It is not the original gymnastics session, public slet, training access or permission to enter active facilities beyond the tour route."
+    },
+    {
+      "candidateId": 106,
+      "guideId": "detva-podpolianske-fujara-museum",
+      "relation": "related_alternative",
+      "boundary": "Ordinary access to Detva's permanent instrument exhibition with fujara context. It does not guarantee a maker, musician, live sound, private workshop or hands-on instrument use."
+    },
+    {
+      "candidateId": 90,
+      "guideId": "asuncion-club-walkers-terere",
+      "relation": "related_alternative",
+      "boundary": "A published public city walk whose official description places tereré in everyday context. It is not the original private sharing circle, medicinal teaching or guarantee that a drink will be served."
+    },
+    {
+      "candidateId": 159,
+      "guideId": "arta-regulated-whale-shark-tour",
+      "relation": "narrowed_public_scope",
+      "boundary": "A seasonal public excursion constrained by Djibouti's whale-shark decree and a required authorised operator. Wildlife, water entry, proximity, visibility and the reviewed operator's current licence remain unguaranteed."
+    },
+    {
+      "candidateId": 180,
+      "guideId": "curacao-tambu-shon-cola-museum",
+      "relation": "related_alternative",
+      "boundary": "Public admission to a dedicated tambú museum with holder-led historical interpretation when available. It is not the original practitioner session, drumming lesson, live dance or guaranteed guide presence."
+    },
+    {
+      "candidateId": 55,
+      "guideId": "sejnane-sidi-mechreg-pottery",
+      "relation": "narrowed_public_scope",
+      "boundary": "A named public pottery workshop led by local women at Sidi Mechreg. It does not establish unrestricted motif use, commercial reproduction rights, a particular teacher or access to private production."
+    },
+    {
+      "candidateId": 95,
+      "guideId": "nukualofa-ancient-tonga-ngatu",
+      "relation": "narrowed_public_scope",
+      "boundary": "A dedicated public ngatu class identified by Tonga Tourism. The host defines the visitor step. A complete cloth, ceremonial role, private circle, unrestricted pattern use and payment distribution are not inferred."
+    },
+    {
+      "candidateId": 108,
+      "guideId": "sarajevo-sevdah-art-house",
+      "relation": "related_alternative",
+      "boundary": "Ordinary admission to the permanent Sevdah Art House exhibition. It does not fulfil the original intimate live-performance premise or promise a musician, current concert or artist access."
+    },
+    {
+      "candidateId": 111,
+      "guideId": "prizren-filigree-workshop",
+      "relation": "related_alternative",
+      "boundary": "Public observation of production at Prizren's Filigree Workshop. The original hands-on motif, tool use, private instruction and access to every work area are not established."
+    },
+    {
+      "candidateId": 116,
+      "guideId": "torshavn-public-chain-dance",
+      "relation": "narrowed_public_scope",
+      "boundary": "A dated public chain-dance listing at the Nordic House, subject to reconfirmation. Recurrence, entry after 9 October 2026, translation, private association access and a performance role are not implied."
+    },
+    {
+      "candidateId": 156,
+      "guideId": "mahe-cap-lazare-moutya",
+      "relation": "narrowed_public_scope",
+      "boundary": "A currently dated public Moutya Night at Cap Lazare with performance and demonstration. This does not confer community-led status, performer authority on every aspect of the tradition or unrestricted recording rights."
+    },
+    {
+      "candidateId": 166,
+      "guideId": "barbados-public-road-tennis",
+      "relation": "related_alternative",
+      "boundary": "Public observation and self-directed play only where a current court or event permits it. The original lesson, named coach, supplied equipment and priority over local players remain outside the promise."
+    },
+    {
+      "candidateId": 167,
+      "guideId": "nassau-educulture-junkanoo",
+      "relation": "related_alternative",
+      "boundary": "A public museum route through Junkanoo history, music and costume construction. It is not entry to an active shack, access to unfinished group designs or permission to interrupt working makers."
+    },
+    {
+      "candidateId": 196,
+      "guideId": "heeia-fishpond-community-workday",
+      "relation": "narrowed_public_scope",
+      "boundary": "A Native Hawaiian organisation's own published community workday with registration, capacity and task boundaries. It does not open restricted knowledge, ceremony, decision-making or any place beyond the assigned work."
+    },
+    {
+      "candidateId": 112,
+      "guideId": "moldova-seasonal-grape-harvest",
+      "relation": "narrowed_public_scope",
+      "boundary": "A seasonal winery harvest possibility that must be directly confirmed for the current year. The original village cellar meal, ordinary farm labour, fixed October inventory and access beyond the host-led task are not promised."
+    },
     {
       "candidateId": 22,
       "guideId": "vama-egg-museum-workshop",
@@ -548,6 +698,231 @@
     }
   ],
   "newSourceReviews": [
+    {
+      "candidateId": 44,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-19",
+      "finding": "Community Homestay Network currently publishes a direct Panauti booking route with assigned family accommodation, meals, optional cooking and local activities inside a women-led network. The household and exact additions vary and must be confirmed before travel.",
+      "sourceUrl": "https://communityhomestay.com/homestays/panauti",
+      "nextAction": "Keep host assignment, household privacy, variable facilities and optional-activity boundaries visible. Recheck the direct programme by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 87,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-19",
+      "finding": "The Center for Traditional Textiles of Cusco currently publishes a daily Chinchero demonstration that follows spinning, natural dyeing and weaving at the Away Riqcharicheq association. The reviewed page supports observation and direct purchase, not a visitor weaving or dyeing lesson.",
+      "sourceUrl": "https://www.textilescusco.org/special-activity-detail/weaving-demostration/3",
+      "nextAction": "Keep this as an observation-first alternative unless CTTC confirms a current public hands-on format. Recheck hours and access by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 188,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-19",
+      "finding": "Niue Tourism currently publishes both Taue Uga Tours and A5 Plantation and Uga Tour. A5 has the clearer current schedule, direct public route and strong exact official imagery, so the guide uses it instead of implying the original Taue night format.",
+      "sourceUrl": "https://www.niueisland.com/all-tours/a5-tours",
+      "nextAction": "Keep the operator substitution and no-guaranteed-handling boundary explicit. Recheck the programme, wildlife practice and departures by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 142,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-19",
+      "finding": "Le Metalo currently operates as a public music restaurant in Mindelo with live programming and direct venue information. The reviewed sources do not establish that morna is performed every night or that each event has the small intimate format in the original candidate.",
+      "sourceUrl": "https://lemetalo.cv/",
+      "nextAction": "Let the live bill determine the genre and never market a generic Cape Verde night as guaranteed morna. Recheck programme and opening pattern by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 40,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-19",
+      "finding": "Real Bedouin Experience currently publishes a named Wadi Rum overnight with camp transfer, dinner, breakfast, tea and accommodation details. The direct route supports one bounded public stay, not a general claim about Bedouin hospitality or unrestricted protected-area access.",
+      "sourceUrl": "https://www.wadirum-jordan.com/overnight-stay.html",
+      "nextAction": "Keep weather, star visibility, transfer, amenity and representation limits visible. Recheck the direct camp offer by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 79,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-19",
+      "finding": "Palmento Grove currently identifies its family team and publishes a hands-on Garifuna cooking class in Hopkins. Travel Belize independently supplies hudut context but does not validate every session.",
+      "sourceUrl": "https://www.palmentogrove.com/",
+      "nextAction": "Confirm the exact class, host, ingredients, transport, group size, price and photography boundary by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 66,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-19",
+      "finding": "Visit Rwanda currently documents Gisakura tea tours and tastings arranged through an operator or the destination organisation. It does not establish direct tourist access or the original cooperative host.",
+      "sourceUrl": "https://visitrwanda.com/interests/tea/",
+      "nextAction": "Confirm the licensed operator, field, factory, tasting, worker-photography rule and exact participation by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 73,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-19",
+      "finding": "Explore Charleston currently lists a two-hour sweetgrass basket class at Sweetgrass Inn from 16 September 2026 to 28 January 2027 with materials and age guidance.",
+      "sourceUrl": "https://www.charlestoncvb.com/events/sweetgrass-basket-making-class~27880/",
+      "nextAction": "Confirm the instructor, live date, capacity, accessibility, materials and pattern boundary before travel and recheck by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 35,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-19",
+      "finding": "The Rural Tourism Alliance Kyrgyzstan currently publishes a participatory yurt installation led by local families and separately identifies rural partners offering demonstrations.",
+      "sourceUrl": "https://visitkyrgyzstan.kg/tour/yurt-installation-nomadic-life/",
+      "nextAction": "Confirm the host family, village, transport, weather, language, physical task and payment route by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 133,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-19",
+      "finding": "Timor Indigenous Tours currently lists observation at the Alola Esperansa women's weaving workshop on a Dili orientation tour. It does not promise visitor weaving.",
+      "sourceUrl": "https://timorindigenoustours.com/6hr-dili-orientation-tours/",
+      "nextAction": "Keep participation observation-only unless the current makers explicitly offer more. Confirm the stop, maker benefit and photography boundary by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 105,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-19",
+      "finding": "Czech Sokol currently publishes monthly guided Tyrš House tours in 2026 with timing, price, meeting point and an accessibility boundary. It does not offer visitor gymnastics.",
+      "sourceUrl": "https://www.sokol.eu/aktualita/komentovane-prohlidky-tyrsova-domu-pokracuji-i-v-roce-2026",
+      "nextAction": "Confirm the next date, language, reservation, route and active-facility boundary before travel and recheck by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 106,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-19",
+      "finding": "Slovakia Travel currently lists Detva's Podpolianske Museum and its permanent folk-instrument exhibition. UNESCO supplies fujara context but no live public encounter.",
+      "sourceUrl": "https://slovakia.travel/en/podpolianske-museum-detva",
+      "nextAction": "Confirm opening, language, accessibility and any separately announced live programme by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 90,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-19",
+      "finding": "SENATUR currently publishes Club de Caminantes as a weekday public route in Asunción and places tereré in its social context. It does not guarantee a served drink or private sharing circle.",
+      "sourceUrl": "https://visitparaguay.travel/routes/club-de-caminantes",
+      "nextAction": "Confirm the meeting point, current departure, weather, route, accessibility and drink arrangement by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 159,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-19",
+      "finding": "Djibouti's official decree regulates whale-shark tourism and requires authorised operators. A current commercial page supplies a seasonal itinerary but its authorisation must still be verified.",
+      "sourceUrl": "https://www.journalofficiel.dj/texte-juridique/decret-n-2023-362-pr-mct-portant-sur-la-protection-et-lattraction-touristique-des-requins-baleines-a-djibouti/",
+      "nextAction": "Verify the operator's current authorisation, vessel, safety, decree compliance, season and cancellation terms before booking and recheck by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 180,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-19",
+      "finding": "Curaçao Tourism currently lists Museo di Tambú Shon Cola as a public museum and separately documents tambú history. It does not establish a live practitioner session.",
+      "sourceUrl": "https://www.curacao.com/en/activity/museo-di-tambu-shon-cola",
+      "nextAction": "Confirm opening, language, guide presence, admission, photography and any separately announced live programme by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 55,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-19",
+      "finding": "Eco-Rand Sidi Mechreg currently publishes a pottery workshop led by local women with clay preparation, hand shaping and traditional decoration. UNESCO supports the cultural context but not visitor access.",
+      "sourceUrl": "https://ecorandsidimechreg.com/activites/atelier-de-poterie/",
+      "nextAction": "Recheck the named host, timing, language, price, firing and motif boundary by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 95,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-19",
+      "finding": "Tonga Tourism currently identifies dedicated ngatu and weaving classes through Ancient Tonga and explains the material process and cultural role of barkcloth.",
+      "sourceUrl": "https://www.tongatourism.travel/discover/people-and-culture/authentic-handicrafts",
+      "nextAction": "Confirm the class, teacher, visitor task, group size, price, transport and pattern boundary by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 108,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-19",
+      "finding": "Sarajevo Navigator currently publishes ordinary access to the permanent Sevdah Art House exhibition. It does not establish a current intimate live performance.",
+      "sourceUrl": "https://www.sarajevonavigator.ba/en/text/119",
+      "nextAction": "Keep the museum and live-performance promises separate. Recheck opening and the current public music calendar by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 111,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-19",
+      "finding": "Autostrada Biennale currently presents Prizren's Filigree Workshop as a place where visitors can observe production and everyday conversation. No public hands-on class is established.",
+      "sourceUrl": "https://autostradabiennale.org/venues/filigree-workshop/",
+      "nextAction": "Keep the guide observation-only and recheck opening, maker availability and photography conditions by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 116,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-19",
+      "finding": "Visit Faroe Islands currently lists a Faroese chain dance at the Nordic House on 9 October 2026. An older beginner page provides context but its former Tuesday schedule is not current access.",
+      "sourceUrl": "https://visitfaroeislands.com/en/whatson/events",
+      "nextAction": "Reconfirm the exact event, admission, newcomer guidance and language shortly before 9 October. Do not imply recurrence.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 156,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-19",
+      "finding": "Tourism Seychelles currently lists Moutya Night at Cap Lazare through 24 December 2026 with performance, demonstration and food elements. UNESCO supplies context rather than event validation.",
+      "sourceUrl": "https://seychelles.com/listingdetails/68babb9cde95197abe60a4e4",
+      "nextAction": "Recheck the date, performers, historical interpretation, recording rules, transport and programme by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 166,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-19",
+      "finding": "Visit Barbados supplies current road-tennis context and a strong exact photograph but still does not establish a public beginner lesson, coach or booking route. Publication is therefore limited to observation and permitted self-directed play.",
+      "sourceUrl": "https://www.visitbarbados.org/the-bajan-game-of-road-tennis",
+      "nextAction": "Keep the no-lesson boundary prominent. Replace the related alternative if a dependable public beginner programme is later published.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 167,
+      "status": "related_alternative",
+      "checkedOn": "2026-09-19",
+      "finding": "The Bahamas currently lists Educulture's public museum, audiovisual history, music interaction and costume displays. This is a responsible alternative to the original active-shack premise.",
+      "sourceUrl": "https://www.bahamas.com/plan-your-trip/things-to-do/educulture-bahamas-ltd",
+      "nextAction": "Confirm hours, weekend appointment, demonstration content and photography rules by 18 December 2026. Never imply active shack access.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 196,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-19",
+      "finding": "Paepae o Heʻeia now provides its own explicit public workday route, schedule pattern, advance registration, capacity control, age boundary, task examples and preparation guidance.",
+      "sourceUrl": "https://paepaeoheeia.org/volunteer/",
+      "nextAction": "Follow the organisation's live capacity and task boundaries. Recheck the schedule, safety guidance and visibility conditions by 18 December 2026.",
+      "outreachPerformed": false
+    },
+    {
+      "candidateId": 112,
+      "status": "narrowed_public_scope",
+      "checkedOn": "2026-09-19",
+      "finding": "Moldova Travel currently says October visitors at Et Cetera can pick grapes and crush them by foot, while warning that winery visits require advance reservation. The original village meal is not established.",
+      "sourceUrl": "https://moldova.travel/en/wine-of-moldova/",
+      "nextAction": "Confirm the current year's harvest date, visitor task, transport, food and alcohol-free option directly. Recheck by 18 December 2026.",
+      "outreachPerformed": false
+    },
     {
       "candidateId": 22,
       "status": "narrowed_public_scope",

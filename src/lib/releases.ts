@@ -3,6 +3,36 @@ import type { PublicExperience } from "./catalog";
 /** Publication dates are distinct from source-check dates. Older undated guides are not backfilled. */
 export const guideReleases = [
   {
+    date: "2026-09-19",
+    slugs: [
+      "stay-where-the-town-knows-your-host",
+      "follow-the-colour-back-to-the-wool",
+      "meet-the-island-through-the-uga",
+      "let-the-room-introduce-mindelo",
+      "stay-until-the-desert-loses-its-colour",
+      "build-hudut-from-the-coconut-outward",
+      "pick-the-leaf-before-the-cup",
+      "coil-the-lowcountry-one-stitch-at-a-time",
+      "raise-a-room-from-a-circle",
+      "watch-the-body-tension-the-loom",
+      "read-prague-through-a-movement",
+      "hear-the-flute-before-anyone-plays",
+      "walk-where-terere-is-everyday-language",
+      "meet-the-largest-fish-on-its-terms",
+      "let-the-drum-recover-its-history",
+      "let-the-clay-keep-the-fingerprints",
+      "meet-the-cloth-before-it-becomes-a-gift",
+      "enter-sevdah-through-the-room-that-remembers-it",
+      "watch-silver-become-a-line",
+      "let-the-ballad-move-the-circle",
+      "hear-the-drum-after-sunset",
+      "hear-the-wooden-racket-crack",
+      "follow-cardboard-toward-bay-street",
+      "move-the-stone-that-holds-the-water",
+      "choose-the-harvest-before-the-cellar",
+    ],
+  },
+  {
     date: "2026-09-15",
     slugs: [
       "draw-the-line-that-keeps-the-colour-out",

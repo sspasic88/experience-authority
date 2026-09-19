@@ -238,7 +238,7 @@ export default function Home() {
         <PassportReturn />
         <p className="home-method-note">
           Independent public-source guides. Practical access notes and linked
-          sources in every story. <Link href="/method">Our method ↗</Link>
+          sources in every guide. <Link href="/method">Our method ↗</Link>
         </p>
       </section>
     </div>

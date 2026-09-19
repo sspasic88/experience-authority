@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props) {
   if (!item) notFound();
   const protectedStory = item.status === "protected_visibility";
   const metadata = pageMetadata(
-    protectedStory ? "A protected story" : `${item.title} | ${item.place}`,
+    protectedStory ? "A protected story" : item.title,
     protectedStory
       ? "Some stories require limited visibility. No location, holder or access details are shared here."
       : item.summary,
@@ -133,24 +133,22 @@ export default async function Experience({ params }: Props) {
           </dl>
           {item.guideReview && (
             <div className="detail-start-actions">
+              <ExperienceActions item={item} />
               <a
-                className="button button-dark"
+                className="button button-outline"
                 href={item.guideReview.accessUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Plan your visit <span aria-hidden="true">↗</span>
+                Official access <span aria-hidden="true">↗</span>
                 <span className="sr-only">
                   {" "}
                   . Official website (opens a new tab)
                 </span>
               </a>
-              <a className="text-link" href="#before-you-go">
-                Good to know ↓
-              </a>
               <span className="small-note">
-                Check current details with the host. Booking is not handled by
-                EA.
+                Save it first, then place it into a day in your EA Passport.
+                Check current details directly with the host before travelling.
               </span>
             </div>
           )}

@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { EmptyState, ExperienceCard, PageIntro } from "@/components/editorial";
+import {
+  EmptyState,
+  ExperienceCard,
+  ImageCredit,
+  PageIntro,
+  Photo,
+} from "@/components/editorial";
 import { getExperiences } from "@/lib/data";
 import { getEditorialPathway } from "@/lib/editorial-pathways";
 import {
@@ -10,6 +16,8 @@ import {
 } from "@/lib/seo";
 import { StructuredData } from "@/components/structured-data";
 import { ShareButton } from "@/components/share-button";
+import { guideMediaFor } from "@/lib/media";
+import { ProgressiveGrid } from "@/components/progressive-grid";
 type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
@@ -35,6 +43,10 @@ export default async function Collection({ params }: Props) {
     const item = allItems.find((experience) => experience.slug === guideSlug);
     return item ? [item] : [];
   });
+  const lead = items.find(
+    (item) => item.image && Boolean(guideMediaFor(item.id)),
+  );
+  const leadMedia = lead ? guideMediaFor(lead.id) : undefined;
   return (
     <div className="wrap page-section">
       <StructuredData
@@ -49,16 +61,39 @@ export default async function Collection({ params }: Props) {
         <span>/</span>
         <span>{collection.title}</span>
       </nav>
-      <PageIntro eyebrow="An editorial thread" title={`${collection.title}.`}>
-        <p>{collection.promise}</p>
+      <div className="collection-detail-hero">
+        <PageIntro eyebrow="An editorial thread" title={`${collection.title}.`}>
+          <p>{collection.promise}</p>
+        </PageIntro>
+        {lead && leadMedia && (
+          <figure className="collection-detail-cover">
+            <Link
+              href={`/experiences/${lead.slug}`}
+              aria-label={`Open ${lead.title}`}
+            >
+              <Photo
+                src={leadMedia.src}
+                alt={leadMedia.alt}
+                priority
+                sizes="(max-width: 850px) 100vw, 44vw"
+              />
+            </Link>
+            <ImageCredit media={leadMedia} />
+          </figure>
+        )}
+      </div>
+      <details className="collection-editorial-intro">
+        <summary>Why these experiences belong together</summary>
         <p>{collection.intro}</p>
-      </PageIntro>
-      <ShareButton
-        title={collection.title}
-        text={collection.promise}
-        url={`https://experienceauthority.com/collections/${collection.slug}`}
-        label="Share this collection"
-      />
+      </details>
+      <div className="collection-share-row">
+        <ShareButton
+          title={collection.title}
+          text={collection.promise}
+          url={`https://experienceauthority.com/collections/${collection.slug}`}
+          label="Share this collection"
+        />
+      </div>
       <aside className="pathway-use" aria-label="How to use this pathway">
         <div>
           <p className="eyebrow">How to use this pathway</p>
@@ -70,12 +105,14 @@ export default async function Collection({ params }: Props) {
         </div>
       </aside>
       {items.length ? (
-        <div className="experience-grid">
-          <h2 className="sr-only">Experiences in this collection</h2>
+        <ProgressiveGrid
+          heading="Experiences in this collection"
+          surface={`collection-${collection.slug}`}
+        >
           {items.map((item, index) => (
             <ExperienceCard key={item.id} item={item} index={index} />
           ))}
-        </div>
+        </ProgressiveGrid>
       ) : (
         <EmptyState>
           <p>

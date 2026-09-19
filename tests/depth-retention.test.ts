@@ -86,9 +86,9 @@ test("local planning preserves the named venue and visitor role, including Singa
 });
 
 test("daily editions are authored, distinct, date-gated and do not silently loop", () => {
-  assert.equal(dailyDiscoveries.length, 84);
-  assert.equal(new Set(dailyDiscoveries.map((item) => item.slug)).size, 84);
-  assert.equal(new Set(dailyDiscoveries.map((item) => item.date)).size, 84);
+  assert.equal(dailyDiscoveries.length, 97);
+  assert.equal(new Set(dailyDiscoveries.map((item) => item.slug)).size, 97);
+  assert.equal(new Set(dailyDiscoveries.map((item) => item.date)).size, 97);
   assert.equal(availableDiscoveries(publicGuides, "2026-09-12").length, 0);
   assert.equal(availableDiscoveries(publicGuides, "2026-09-13").length, 1);
   assert.equal(availableDiscoveries(publicGuides, "2026-09-20").length, 8);
@@ -98,7 +98,7 @@ test("daily editions are authored, distinct, date-gated and do not silently loop
   );
   assert.equal(
     currentDiscovery(publicGuides, "2027-01-01")?.date,
-    "2026-12-05",
+    "2026-12-18",
   );
   for (const edition of dailyDiscoveries) {
     assert.ok(edition.angle.length > 180);
@@ -131,6 +131,10 @@ test("release dates are independent from source checks and expire out of the new
     publishedReleases(publicGuides, "2026-09-15")[0].guides.length,
     29,
   );
+  assert.equal(
+    publishedReleases(publicGuides, "2026-09-19")[0].guides.length,
+    25,
+  );
   assert.equal(recentGuideReleases(publicGuides, "2026-09-15").length, 81);
   assert.equal(recentGuideReleases(publicGuides, "2026-10-20").length, 0);
   assert.equal(publishedReleases([], "2026-09-13").length, 0);
@@ -143,7 +147,7 @@ test("release dates are independent from source checks and expire out of the new
   }));
   assert.deepEqual(
     publishedReleases(changedChecks, "2026-10-01").map((item) => item.date),
-    ["2026-09-15", "2026-09-14", "2026-09-13", "2026-09-12"],
+    ["2026-09-19", "2026-09-15", "2026-09-14", "2026-09-13", "2026-09-12"],
   );
 });
 

@@ -40,7 +40,7 @@ export function PlaceDirectory({
           maxLength={100}
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Where are you going? Try Kyoto, Singapore or Japan."
+          placeholder="Search a city, area or country"
         />
       </div>
       <p className="section-note" aria-live="polite">
@@ -48,8 +48,10 @@ export function PlaceDirectory({
         {matches.length === 1
           ? "country or territory"
           : "countries & territories"}
-        {query && ` matching “${query}”`}. Choose a city or area below to narrow
-        your view.
+        {query && ` matching “${query}”`}.{" "}
+        {query
+          ? "Choose a city or area below to narrow your view."
+          : "Begin with a familiar point of reference, then keep going for the less expected."}
       </p>
       {matches.length ? (
         <div className="place-card-grid">

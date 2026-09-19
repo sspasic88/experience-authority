@@ -61,7 +61,9 @@ export default async function Page({ params, searchParams }: Props) {
       <div className="wrap page-section">
         <PageIntro
           eyebrow={
-            correction ? "Help keep EA accurate" : "Help a story find its place"
+            correction
+              ? "Help keep EA accurate"
+              : "Help an experience find its place"
           }
           title={
             correction ? "Help us get it right." : "What should we know about?"

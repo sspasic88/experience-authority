@@ -128,7 +128,7 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
           setOpen(false);
       }}
     >
-      <p className="home-discovery-prompt">Where do you want to begin?</p>
+      <p className="home-discovery-prompt">Where do you want to go?</p>
       <form
         action="/explore"
         method="get"
@@ -186,7 +186,7 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
           aria-autocomplete="list"
           autoComplete="off"
           maxLength={200}
-          placeholder="City or experience"
+          placeholder="Search a place or experience"
         />
         <button type="submit" aria-label="Search all experiences">
           <ArrowRight size={22} aria-hidden="true" />
@@ -251,12 +251,12 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
         className="prototype-hero-interests"
         aria-label="Explore by what you feel like doing"
       >
-        <span>I feel like</span>
-        <Link href="/explore?interest=eat-drink">eating well</Link>
-        <Link href="/explore?interest=make-learn">making something</Link>
-        <Link href="/explore?interest=move-water">moving</Link>
-        <Link href="/explore?interest=swim-reset">slowing down</Link>
-        <Link href="/explore">seeing everything</Link>
+        <span>Start with</span>
+        <Link href="/explore?interest=eat-drink">Eat &amp; drink</Link>
+        <Link href="/explore?interest=make-learn">Make</Link>
+        <Link href="/explore?interest=move-water">Move</Link>
+        <Link href="/explore?interest=swim-reset">Reset</Link>
+        <Link href="/explore">All experiences</Link>
       </nav>
     </div>
   );

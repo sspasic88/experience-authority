@@ -19,6 +19,16 @@ const routes = [
   "/",
   "/explore",
   "/explore?view=list",
+  "/places/nepal/kavrepalanchok",
+  "/experiences/stay-where-the-town-knows-your-host",
+  "/places/peru/sacred-valley",
+  "/experiences/follow-the-colour-back-to-the-wool",
+  "/places/niue/north-niue",
+  "/experiences/meet-the-island-through-the-uga",
+  "/places/cabo-verde/sao-vicente",
+  "/experiences/let-the-room-introduce-mindelo",
+  "/places/jordan/wadi-rum",
+  "/experiences/stay-until-the-desert-loses-its-colour",
   "/experiences/venice-through-an-oar",
   "/experiences/colour-before-cloth",
   "/experiences/a-bowl-of-attention",
@@ -146,6 +156,26 @@ const routes = [
   "/places/greece/chios",
   "/places/switzerland/appenzellerland",
   "/places/united-arab-emirates/ajman",
+  "/experiences/build-hudut-from-the-coconut-outward",
+  "/places/belize/stann-creek",
+  "/experiences/pick-the-leaf-before-the-cup",
+  "/places/rwanda/nyungwe",
+  "/experiences/coil-the-lowcountry-one-stitch-at-a-time",
+  "/places/united-states/south-carolina-lowcountry",
+  "/experiences/raise-a-room-from-a-circle",
+  "/places/kyrgyzstan/naryn",
+  "/experiences/watch-the-body-tension-the-loom",
+  "/places/timor-leste/dili",
+  "/experiences/read-prague-through-a-movement",
+  "/places/czechia/prague",
+  "/experiences/hear-the-flute-before-anyone-plays",
+  "/places/slovakia/podpolanie",
+  "/experiences/walk-where-terere-is-everyday-language",
+  "/places/paraguay/asuncion",
+  "/experiences/meet-the-largest-fish-on-its-terms",
+  "/places/djibouti/gulf-of-tadjoura",
+  "/experiences/let-the-drum-recover-its-history",
+  "/places/curacao/west-curacao",
   "/places",
   "/places/japan/kyoto",
   "/places/armenia/gegharkunik",
@@ -179,7 +209,9 @@ try {
       viewport: { width, height: 1000 },
     });
     const page = await context.newPage();
-    for (const route of routes) {
+    const routesToAudit =
+      process.env.EA_AUDIT_INTERACTIONS_ONLY === "true" ? [] : routes;
+    for (const route of routesToAudit) {
       const errors = [];
       const onError = (error) => errors.push(error.message);
       page.on("pageerror", onError);
@@ -331,7 +363,10 @@ try {
     const firstHref = await firstPhoto.getAttribute("href");
     await firstPhoto.click();
     await page.waitForURL(`**${firstHref}`);
-    await page.getByRole("button", { name: "Compare", exact: true }).click();
+    await page
+      .locator(".detail-start-actions")
+      .getByRole("button", { name: "Compare", exact: true })
+      .click();
     await page.locator(".compare-tray a").click();
     await page.waitForURL("**/passport?view=compare");
     await expect(
@@ -339,9 +374,7 @@ try {
     ).toBeVisible();
     await page.goto(base + "/explore");
     await page.getByRole("searchbox").fill("cacao");
-    await page
-      .getByRole("button", { name: "Find my way", exact: true })
-      .click();
+    await page.getByRole("button", { name: "Explore", exact: true }).click();
     await page.waitForURL(/q=cacao/);
     await expect(page.locator(".experience-card")).toHaveCount(2);
     assert.ok(
@@ -350,6 +383,7 @@ try {
         .count(),
     );
     await page.goto(base + "/explore", { waitUntil: "networkidle" });
+    await page.locator("details.finder-more > summary").click();
     await page.getByLabel("City or area").selectOption("south-korea|busan");
     await page.waitForURL(/place=south-korea.*region=busan/);
     await expect(page.locator(".experience-card")).toHaveCount(1);
@@ -370,7 +404,7 @@ try {
       await page.getByRole("button", { name: "Open navigation" }).click();
       await page
         .getByRole("navigation", { name: "Main navigation" })
-        .getByRole("link", { name: "Places", exact: true })
+        .getByRole("link", { name: "Destinations", exact: true })
         .click();
       await page.waitForURL("**/places");
       assert.equal(

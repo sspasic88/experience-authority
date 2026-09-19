@@ -1,6 +1,31 @@
 /** Content hashes keep replaced photographs consistent across responsive image caches.
  * The media test requires an update when an original file changes. */
 export const imageRevisions: Record<string, string> = {
+  "/images/guides/panauti-community-table.jpg": "dd1710e3e41f",
+  "/images/guides/chinchero-weaving-demonstration.jpg": "a127fb4d931e",
+  "/images/guides/niue-uga-forest.jpg": "556852e30b17",
+  "/images/guides/mindelo-le-metalo-live.webp": "ec83948222cb",
+  "/images/guides/wadi-rum-camp-night.jpg": "fae483e97cd1",
+  "/images/guides/hopkins-garifuna-hudut.jpg": "ee4bd23d277d",
+  "/images/guides/gisakura-tea.jpg": "10c8f01615a6",
+  "/images/guides/charleston-sweetgrass.png": "fd5e8f07bc6e",
+  "/images/guides/kyrgyz-yurt-installation.jpg": "32703b737aa3",
+  "/images/guides/dili-tais-workshop.jpg": "1daa52fdb0cf",
+  "/images/guides/prague-sokol-house.jpg": "7418b926aa9b",
+  "/images/guides/detva-fujara-museum.jpg": "8b4b7931fd7e",
+  "/images/guides/asuncion-walkers.webp": "7b137a1ca187",
+  "/images/guides/djibouti-whale-shark.jpg": "91d58e8095a9",
+  "/images/guides/curacao-tambu-museum.webp": "084d0c1afcb1",
+  "/images/guides/sejnane-pottery.jpg": "5e2b00edb96f",
+  "/images/guides/tonga-ngatu.jpg": "0250578e03ea",
+  "/images/guides/sarajevo-sevdah-house.jpg": "ed2ef1ff3a20",
+  "/images/guides/prizren-filigree-workbench.jpg": "5c16dce48d38",
+  "/images/guides/faroe-chain-dance.jpg": "edfac11c20d5",
+  "/images/guides/seychelles-moutya-night.png": "35e71db8b8a9",
+  "/images/guides/barbados-road-tennis.jpg": "b20629359074",
+  "/images/guides/nassau-educulture-junkanoo.jpg": "7308b3dd137b",
+  "/images/guides/heeia-fishpond-workday.jpg": "5e65d51bf12c",
+  "/images/guides/moldova-grape-harvest.jpg": "02e25aee4aeb",
   "/images/guides/vama-painted-eggs.jpg": "baa085012abb",
   "/images/guides/kakheti-qvevri-cellar.jpg": "27f4a8152afa",
   "/images/guides/sri-pada-pilgrimage.jpg": "436f2c1af78a",
@@ -26,7 +51,7 @@ export const imageRevisions: Record<string, string> = {
   "/images/guides/bahrain-pearl-snorkelling.webp": "1e8d4bd53d4d",
   "/images/guides/kampong-ayer-water-lanes.jpg": "e210007c867a",
   "/images/guides/okavango-mokoro-elephant.jpg": "4029af03d2df",
-  "/images/guides/konigil-mulberry-paper.jpg": "74b2d33d2924",
+  "/images/guides/konigil-mulberry-paper.jpg": "86fe4dbb76d5",
   "/images/guides/bonwire-kente-loom.jpg": "051227497145",
   "/images/guides/apia-cultural-village-umu.jpg": "3c5ecb924fa4",
   "/images/guides/moorea-vaa-introduction.jpg": "a1f4c7454435",
@@ -136,7 +161,7 @@ export const imageRevisions: Record<string, string> = {
 
 // A single manifest fingerprint fits Next's bounded localPatterns allowlist.
 // Tests require it to change when any original is added or replaced.
-export const imageEdition = "83ecc6893655";
+export const imageEdition = "459d07256caf";
 
 export function imageSource(src: string) {
   return imageRevisions[src] ? `${src}?v=${imageEdition}` : src;

@@ -34,7 +34,7 @@ export async function generateMetadata({ searchParams }: Props) {
   if (!edition?.item.image) return metadata;
   return {
     ...metadata,
-    title: `${edition.title} | Daily discovery`,
+    title: "Daily discovery",
     description: `Today's discovery in ${edition.item.place}: ${edition.item.summary}`,
     openGraph: {
       ...metadata.openGraph,

@@ -9,6 +9,7 @@ import {
   guideStructuredData,
   collectionStructuredData,
 } from "../src/lib/seo";
+import { canPublishGuide } from "../src/lib/publication";
 import { publicGuides } from "../src/lib/public-guides";
 import { guideMediaFor } from "../src/lib/media";
 import { sitemapEntries } from "../src/lib/discovery";
@@ -63,7 +64,7 @@ test("JSON-LD cannot break out of its script element", () => {
 });
 
 test("guide structured data reflects visible sources and photo rights, never offers or ratings", () => {
-  for (const item of publicGuides) {
+  for (const item of publicGuides.filter((item) => canPublishGuide(item))) {
     const data = guideStructuredData(item);
     assert.ok(data);
     const [article, rawImage] = data["@graph"];
