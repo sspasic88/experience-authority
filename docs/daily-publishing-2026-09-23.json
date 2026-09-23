@@ -1,7 +1,23 @@
 {
   "date": "2026-09-23",
   "baseCommit": "2f4fc568e635b13797cd82a50a462146cf9d1ad6",
-  "status": "verified-locally-awaiting-production-deploy",
+  "status": "published-and-verified",
+  "productionVerification": {
+    "contentCommit": "ae4ad11afab6ae9a35b5aa95b422c5e45ad1cb0f",
+    "deployment": "https://vercel.com/sspasic/experience-authority/7ifnENQ6aV4sAro7i54W7TqGtYAJ",
+    "vercelStatus": "success",
+    "canonicalOrigin": "https://experienceauthority.com",
+    "verifiedOn": "2026-09-23",
+    "publishedNewGuides": 18,
+    "publicEligibleTotal": 171,
+    "smokeRoutes": 266,
+    "sitemapRoutes": 465,
+    "responsiveEditionViews": 96,
+    "internalLinks": 495,
+    "browserFailures": 0,
+    "analytics": "No Google requests before consent, loaded only after explicit grant, query/private data excluded, revocation passed",
+    "visualReview": "Live home and Today reviewed on mobile and desktop. Desktop hero companions also verified visible with normal and reduced motion"
+  },
   "localVerification": {
     "tests": { "passed": 76, "failed": 0 },
     "typecheck": "passed",

@@ -1,15 +1,17 @@
 # Build status — 23 September 2026
 
-Public-source edition at https://experienceauthority.com, deployed from the separate EA GitHub repository to its own Vercel project. The 23 September expansion has passed local verification and awaits production deployment verification. The previously verified 154-guide release was deployed on 19 September 2026 from commit `1e9812f`.
+Public-source edition live at https://experienceauthority.com, deployed from the separate EA GitHub repository to its own Vercel project. The 23 September expansion was published from content commit `ae4ad11` and verified on the canonical domain. [Vercel deployment](https://vercel.com/sspasic/experience-authority/7ifnENQ6aV4sAro7i54W7TqGtYAJ) reports success.
 
 Current authored release scope: 172 guides across 105 countries and territories, 12 editorial collections, nine Journal articles, 16 local planning chapters and 97 dated daily discoveries prepared for 13 September to 18 December. On 23 September, 171 guides pass the public gate. An older expired Allgäu event remains excluded. Includes an actual-publication log, private journey planning, batch saving, sharing and credited photographs. See [content expansion batch 40](content-expansion-batch-40-2026-09-23.md). Prepared future daily editions are not already public.
 
 ## 23 September daily publishing audit
 
-- Prepared 18 net-new guides, exactly three per visitor-interest quota. Full source and image provenance, review deadlines and rejected candidates are recorded in [the daily ledger](daily-publishing-2026-09-23.json).
+- Published 18 net-new guides, exactly three per visitor-interest quota. Full source and image provenance, review deadlines and rejected candidates are recorded in [the daily ledger](daily-publishing-2026-09-23.json).
 - All 43 unique cited source URLs returned HTTP 200 with the intended page context during the final source check.
 - Local launch-configured build, TypeScript and 76 automated tests passed. Local smoke passed 266 pages, 11 expected unknown-route responses and 266 distinct CSP nonces. Local complete SEO passed 465 nonempty sitemap routes without duplicate metadata.
-- All 21 visitor scenarios passed. The complete browser audit passed 681 responsive views and 793 internal links. An additional focused edition audit passed 144 views, including Today and the publication log, and 495 internal links. No automated accessibility, image-loading, overflow or JavaScript failures were found. Production deployment verification remains pending.
+- All 21 visitor scenarios passed. The complete local browser audit passed 681 responsive views and 793 internal links. An additional focused local edition audit passed 144 views, including Today and the publication log, and 495 internal links. No automated accessibility, image-loading, overflow or JavaScript failures were found.
+- After deployment, live smoke passed 266 pages and 266 distinct nonces. Live SEO passed all 465 sitemap routes with no duplicate metadata. Live mobile/desktop edition audits passed 96 views and 495 internal links. All 18 new guide pages and images loaded successfully.
+- Live GA4 verification passed: no Google request before consent, explicit grant required, search/private text excluded, and revocation prevented reloading. The consent interface had no automated accessibility violations. Live home and Today were also visually checked after declining analytics, including the three desktop cover photographs under normal and reduced motion.
 - Added local planning chapters for Lisbon and Budapest, expanded complementary collections and reserved 24 and 25 September discoveries for new guides. Existing daily history and original 200-candidate protection decisions remain unchanged.
 - The complete SEO checker now fails on an empty sitemap. Local production QA requires `EA_SITE_URL=https://experienceauthority.com` at build time because Next.js compiles response-header configuration during the build. No indexing or consent protection was relaxed.
 

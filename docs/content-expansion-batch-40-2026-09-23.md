@@ -1,6 +1,6 @@
 # Daily expansion, 23 September 2026
 
-Status: locally verified, awaiting production deployment and verification.
+Status: published and verified on https://experienceauthority.com on 23 September 2026. Content commit `ae4ad11afab6ae9a35b5aa95b422c5e45ad1cb0f`. [Vercel deployment](https://vercel.com/sspasic/experience-authority/7ifnENQ6aV4sAro7i54W7TqGtYAJ) succeeded. All 18 public guide URLs below returned successfully.
 
 18 net-new public-source guides, counted once each in six visitor interests. The authored catalogue increases from 154 to 172 across 105 countries and territories. On today's evidence gate, 171 are public-eligible because an older Allgäu event has expired. No draft, replacement photograph, alternate title or secondary interest counts as a new guide.
 
@@ -64,7 +64,11 @@ These are official-source records under EA's existing moderate-risk editorial-re
 - Local complete SEO: 465 sitemap routes, all successful, no duplicate title or description groups.
 - Existing visitor audit: all 21 scenarios passed, including local planning, sharing, storage and photo interactions.
 - Full responsive audit: 681 views across 390, 768 and 1440 pixels, 793 internal links, no failures. An additional focused edition audit passed 144 views and 495 links, explicitly including Today, new publications and new planning chapters.
-- All 18 new detail-page crops were visually reviewed on mobile and desktop, together with home, Compass, categories, Today and local destinations. A transient hero screenshot captured after the accessibility tool reset animations was checked against a fresh page load. The actual desktop cover displays all three photographs. Future audit captures disable animation to avoid that misleading intermediate frame.
-- Production deployment remains pending. This document does not yet claim a live release.
+- All 18 new detail-page crops were visually reviewed on mobile and desktop, together with home, Compass, categories, Today and local destinations. A transient hero screenshot captured after the accessibility tool reset animations was checked against a fresh page load. The actual desktop cover displays all three photographs. Audit captures now explicitly use reduced motion to avoid that misleading intermediate frame. Both normal and reduced-motion hero visibility were separately asserted on production.
+- Live smoke: 266 pages, 11 expected 404s and 266 distinct CSP nonces, no failures.
+- Live SEO: all 465 sitemap routes returned successfully, with no duplicate title or description groups.
+- Live edition browser checks: 96 views at 390 and 1440 pixels, 495 internal links, all guide photos loaded, no JavaScript, overflow or automated WCAG A/AA failures. Guide credits and core search, save, compare, image and navigation interactions passed.
+- Live analytics: no Google request before consent, explicit grant starts the tag, query/private data excluded, revocation respected and consent interface accessibility passed. Test requests to Google were intercepted rather than sent.
+- Clean live home and Today screenshots were also inspected after declining analytics. There is no quota shortfall: 3 + 3 + 3 + 3 + 3 + 3 = 18 net-new published guides.
 
 The SEO auditor now rejects an empty sitemap. During QA an initial local build without the canonical site URL correctly remained nonindexable. It was replaced by a fresh build with the full production flags. No security or privacy gate was weakened to make the audit pass.

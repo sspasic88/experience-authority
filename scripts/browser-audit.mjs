@@ -324,12 +324,16 @@ try {
         "/places/south-africa/west-coast": "west-coast",
       };
       if (screenshotNames[route]) {
+        // Axe can restart delayed entrance animations. Capture their accessible
+        // resting state rather than a transparent intermediate animation frame.
+        await page.emulateMedia({ reducedMotion: "reduce" });
         await page.screenshot({
           path: `${output}/${screenshotNames[route]}-${width}.png`,
           fullPage: true,
           animations: "disabled",
           timeout: 60000,
         });
+        await page.emulateMedia({ reducedMotion: "no-preference" });
       }
       page.off("pageerror", onError);
     }
