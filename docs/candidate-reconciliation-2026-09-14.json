@@ -4,7 +4,9 @@
   "historicalRegister": "EA_selekcija_200_operativni_registar_2026-09-12.json",
   "originalCandidateCount": 200,
   "originalProtectedCount": 46,
-  "catalogueCount": 154,
+  "catalogueCount": 172,
+  "catalogueUpdatedOn": "2026-09-23",
+  "dailyExpansionNote": "Batch 40 adds 18 separately researched public guides. No original-candidate mappings or protection decisions are changed by this daily expansion.",
   "mappings": [
     {
       "candidateId": 44,

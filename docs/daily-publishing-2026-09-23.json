@@ -1,0 +1,447 @@
+{
+  "date": "2026-09-23",
+  "baseCommit": "2f4fc568e635b13797cd82a50a462146cf9d1ad6",
+  "status": "verified-locally-awaiting-production-deploy",
+  "localVerification": {
+    "tests": { "passed": 76, "failed": 0 },
+    "typecheck": "passed",
+    "productionBuild": "passed-with-explicit-launch-and-canonical-site-flags",
+    "smokeRoutes": 266,
+    "expectedNotFoundRoutes": 11,
+    "sitemapRoutes": 465,
+    "responsiveViews": 681,
+    "additionalEditionViews": 144,
+    "visitorScenarios": 21,
+    "browserFailures": 0,
+    "visualReview": "All 18 guide hero crops, home, Compass, Today, new releases and local planning reviewed on mobile and desktop"
+  },
+  "authoredCountBefore": 154,
+  "authoredCountAfter": 172,
+  "countriesAfter": 105,
+  "quota": {
+    "eat-drink": [
+      "taste-balsamico-before-it-meets-the-plate",
+      "meet-tokyo-in-a-cup-of-dashi",
+      "follow-lambic-from-the-brewery-to-the-glass"
+    ],
+    "make-learn": [
+      "draw-a-sheet-on-floating-colour",
+      "repair-a-bowl-without-hiding-the-join",
+      "stitch-the-pair-you-take-home"
+    ],
+    "move-water": [
+      "try-the-games-before-you-watch-the-match",
+      "paddle-between-stockholms-island-edges",
+      "stand-at-river-level-in-ljubljana"
+    ],
+    "explore-reflect": [
+      "cross-lisbon-on-the-route-of-its-water",
+      "read-the-veld-with-a-san-guide",
+      "read-naples-below-the-street"
+    ],
+    "swim-reset": [
+      "give-helsinki-time-between-the-heat",
+      "let-budapest-slow-to-the-pool",
+      "meet-la-concha-through-warm-seawater"
+    ],
+    "shared-rituals": [
+      "let-the-fado-room-fall-quiet",
+      "learn-the-step-before-joining-the-floor",
+      "listen-for-the-conversation-inside-flamenco"
+    ]
+  },
+  "guides": [
+    {
+      "id": "modena-giusti-acetaia",
+      "slug": "taste-balsamico-before-it-meets-the-plate",
+      "url": "https://experienceauthority.com/experiences/taste-balsamico-before-it-meets-the-plate",
+      "primaryInterest": "eat-drink",
+      "place": "Modena",
+      "country": "Italy",
+      "region": "modena",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-12-22",
+      "sources": [
+        "https://giusti.com/pages/casa-giusti",
+        "https://www.visitmodena.it/it/scopri-modena/eccellenze-gastronomiche/le-acetaie/gran-deposito-aceto-balsamico-giusti"
+      ],
+      "image": "/images/guides/modena-giusti-barrels.jpg",
+      "imageAsset": "https://giusti.com/cdn/shop/files/museo-acetaia-01.jpg?v=1685805570",
+      "imageSource": "https://giusti.com/pages/casa-giusti",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "tokyo-ninben-dashi-bar",
+      "slug": "meet-tokyo-in-a-cup-of-dashi",
+      "url": "https://experienceauthority.com/experiences/meet-tokyo-in-a-cup-of-dashi",
+      "primaryInterest": "eat-drink",
+      "place": "Tokyo",
+      "country": "Japan",
+      "region": "tokyo",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-12-22",
+      "sources": [
+        "https://www.ninben.co.jp/store/dashiba/",
+        "https://www.ninben.jp/store/"
+      ],
+      "image": "/images/guides/tokyo-ninben-dashi.jpg",
+      "imageAsset": "https://www.ninben.co.jp/img/store/store_cover_img_02.jpg",
+      "imageSource": "https://www.ninben.co.jp/store/dashiba/",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "brussels-cantillon-brewery",
+      "slug": "follow-lambic-from-the-brewery-to-the-glass",
+      "url": "https://experienceauthority.com/experiences/follow-lambic-from-the-brewery-to-the-glass",
+      "primaryInterest": "eat-drink",
+      "place": "Brussels",
+      "country": "Belgium",
+      "region": "brussels",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-12-22",
+      "sources": [
+        "https://www.cantillon.be/visites?lang=en",
+        "https://www.cantillon.be/evenements?lang=en",
+        "https://www.cantillon.be/?lang=en"
+      ],
+      "image": "/images/guides/brussels-cantillon-coolship.jpg",
+      "imageAsset": "https://www.cantillon.be/squelettes/img/canti_home_head.jpg",
+      "imageSource": "https://www.cantillon.be/?lang=en",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "florence-il-papiro-marbling",
+      "slug": "draw-a-sheet-on-floating-colour",
+      "url": "https://experienceauthority.com/experiences/draw-a-sheet-on-floating-colour",
+      "primaryInterest": "make-learn",
+      "place": "Florence",
+      "country": "Italy",
+      "region": "florence",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-12-22",
+      "sources": [
+        "https://ilpapirofirenze.it/en/pages/workshop",
+        "https://ilpapirofirenze.it/pages/workshop"
+      ],
+      "image": "/images/guides/florence-il-papiro-colour.jpg",
+      "imageAsset": "https://ilpapirofirenze.it/cdn/shop/files/workshop_papiro.jpg?v=1690360062&width=2400",
+      "imageSource": "https://ilpapirofirenze.it/en/pages/workshop",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "kyoto-shikata-kintsugi",
+      "slug": "repair-a-bowl-without-hiding-the-join",
+      "url": "https://experienceauthority.com/experiences/repair-a-bowl-without-hiding-the-join",
+      "primaryInterest": "make-learn",
+      "place": "Kyoto",
+      "country": "Japan",
+      "region": "kyoto",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-12-22",
+      "sources": [
+        "https://kintsugi.shikataurushi.com/trial/",
+        "https://kintsugi.shikataurushi.com/"
+      ],
+      "image": "/images/guides/kyoto-shikata-repair.jpg",
+      "imageAsset": "https://kintsugi.shikataurushi.com/wp-content/themes/urushi/asset/img/trial/point_06.jpg",
+      "imageSource": "https://kintsugi.shikataurushi.com/trial/",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "barcelona-handmade-espadrilles",
+      "slug": "stitch-the-pair-you-take-home",
+      "url": "https://experienceauthority.com/experiences/stitch-the-pair-you-take-home",
+      "primaryInterest": "make-learn",
+      "place": "Barcelona",
+      "country": "Spain",
+      "region": "barcelona",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-12-22",
+      "sources": [
+        "https://handmadethebrand.com/products/workshop-experience-ticket",
+        "https://espadrillesexperience.com/in-person-events/",
+        "https://espadrillesexperience.com/gallery/"
+      ],
+      "image": "/images/guides/barcelona-espadrille-pair.jpg",
+      "imageAsset": "https://espadrillesexperience.com/wp-content/uploads/2021/05/IMG_9647-1.jpg",
+      "imageSource": "https://espadrillesexperience.com/gallery/",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "dublin-na-fianna-gaelic-games",
+      "slug": "try-the-games-before-you-watch-the-match",
+      "url": "https://experienceauthority.com/experiences/try-the-games-before-you-watch-the-match",
+      "primaryInterest": "move-water",
+      "place": "Dublin",
+      "country": "Ireland",
+      "region": "dublin",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-12-22",
+      "sources": [
+        "https://experiencegaelicgames.com/",
+        "https://experiencegaelicgames.com/faqs/"
+      ],
+      "image": "/images/guides/dublin-gaelic-games-hurling.jpg",
+      "imageAsset": "https://experiencegaelicgames.com/wp-content/uploads/2025/07/EGG_310816_0162-X4.jpg",
+      "imageSource": "https://experiencegaelicgames.com/",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "stockholm-tanto-guided-kayak",
+      "slug": "paddle-between-stockholms-island-edges",
+      "url": "https://experienceauthority.com/experiences/paddle-between-stockholms-island-edges",
+      "primaryInterest": "move-water",
+      "place": "Stockholm",
+      "country": "Sweden",
+      "region": "stockholm",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-09-30",
+      "sources": [
+        "https://langholmenkajak.se/en/pages/guidad-kajaktur-i-stockholm",
+        "https://www.visitstockholm.com/o/langholmen-kajak/"
+      ],
+      "image": "/images/guides/stockholm-langholmen-kayaks.jpg",
+      "imageAsset": "https://langholmenkajak.se/cdn/shop/files/2P8A8047.jpg",
+      "imageSource": "https://langholmenkajak.se/en/pages/guidad-kajaktur-i-stockholm",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "ljubljana-bananaway-sup",
+      "slug": "stand-at-river-level-in-ljubljana",
+      "url": "https://experienceauthority.com/experiences/stand-at-river-level-in-ljubljana",
+      "primaryInterest": "move-water",
+      "place": "Ljubljana",
+      "country": "Slovenia",
+      "region": "ljubljana",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-10-15",
+      "sources": [
+        "https://bananaway.eu/pages/sup-tour-ljubljana",
+        "https://bananaway.si/pages/kontakt"
+      ],
+      "image": "/images/guides/ljubljana-guided-paddleboards.jpg",
+      "imageAsset": "https://bananaway.eu/cdn/shop/files/SUP_TOUR_LJUBLJANA_3200_x_1600_px_cf484c77-46f6-42cf-b927-4c646f41957e.jpg?v=1770902805&width=2000",
+      "imageSource": "https://bananaway.eu/pages/sup-tour-ljubljana",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "lisbon-aguas-livres-crossing",
+      "slug": "cross-lisbon-on-the-route-of-its-water",
+      "url": "https://experienceauthority.com/experiences/cross-lisbon-on-the-route-of-its-water",
+      "primaryInterest": "explore-reflect",
+      "place": "Lisbon",
+      "country": "Portugal",
+      "region": "lisbon",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-12-22",
+      "sources": [
+        "https://www.epal.pt/EPAL/en/menu/water-museum/useful-information/contacts-and-opening-hours",
+        "https://www.epal.pt/EPAL/en/menu/water-museum/permanent-collection-and-associated-heritage/%C3%A1guas-livres-aqueduct",
+        "https://www.visitlisboa.com/en/places/water-museum-aguas-livres-aqueduct"
+      ],
+      "image": "/images/guides/lisbon-aguas-livres-valley.jpg",
+      "imageAsset": "https://www.visitlisboa.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAyODYsInB1ciI6ImJsb2JfaWQifX0=--324d10a4aaf6889e47227ba1c948acd41e4954a6/water-museum-aguas-livres-aqueduct-1.jpg",
+      "imageSource": "https://www.visitlisboa.com/en/places/water-museum-aguas-livres-aqueduct",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "khwattu-san-tracking-tour",
+      "slug": "read-the-veld-with-a-san-guide",
+      "url": "https://experienceauthority.com/experiences/read-the-veld-with-a-san-guide",
+      "primaryInterest": "explore-reflect",
+      "place": "!Khwa ttu, West Coast",
+      "country": "South Africa",
+      "region": "west-coast",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-12-22",
+      "sources": [
+        "https://www.khwattu.org/visit-and-explore/tours-and-trails/",
+        "https://www.khwattu.org/heritage-centre-museum/"
+      ],
+      "image": "/images/guides/khwattu-veld-vehicle.jpg",
+      "imageAsset": "https://khwattu.org/wp-content/uploads/2026/07/DSC_9751.jpg",
+      "imageSource": "https://www.khwattu.org/visit-and-explore/tours-and-trails/",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "naples-galleria-borbonica-standard",
+      "slug": "read-naples-below-the-street",
+      "url": "https://experienceauthority.com/experiences/read-naples-below-the-street",
+      "primaryInterest": "explore-reflect",
+      "place": "Naples",
+      "country": "Italy",
+      "region": "naples",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-12-22",
+      "sources": [
+        "https://www.galleriaborbonica.com/it/percorsi/standard",
+        "https://www.galleriaborbonica.com/"
+      ],
+      "image": "/images/guides/naples-borbonica-wall.jpg",
+      "imageAsset": "https://www.galleriaborbonica.com/img/parallax/automobili.jpg",
+      "imageSource": "https://www.galleriaborbonica.com/it/percorsi/standard",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "helsinki-loyly-public-sauna",
+      "slug": "give-helsinki-time-between-the-heat",
+      "url": "https://experienceauthority.com/experiences/give-helsinki-time-between-the-heat",
+      "primaryInterest": "swim-reset",
+      "place": "Helsinki",
+      "country": "Finland",
+      "region": "helsinki",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-10-03",
+      "sources": [
+        "https://www.loylyhelsinki.fi/en/public-sauna",
+        "https://www.loylyhelsinki.fi/en/info",
+        "https://www.myhelsinki.fi/fi/places/loyly-2/"
+      ],
+      "image": "/images/guides/helsinki-loyly-shore.jpg",
+      "imageAsset": "https://cdn.prod.website-files.com/64635bd73c547e7eabe3cd83/651babebb7a633cd6b6f09ff_loyly-video2-poster-00001.jpg",
+      "imageSource": "https://www.loylyhelsinki.fi/en",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "budapest-szechenyi-daytime-bathing",
+      "slug": "let-budapest-slow-to-the-pool",
+      "url": "https://experienceauthority.com/experiences/let-budapest-slow-to-the-pool",
+      "primaryInterest": "swim-reset",
+      "place": "Budapest",
+      "country": "Hungary",
+      "region": "budapest",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-12-22",
+      "sources": [
+        "https://www.szechenyibath.hu/faq",
+        "https://www.szechenyibath.hu/available-services",
+        "https://www.szechenyibath.hu/"
+      ],
+      "image": "/images/guides/budapest-szechenyi-pools.jpg",
+      "imageAsset": "https://budapestgyogyfurdoi.synergyfox.app/public/16/services/pools/medence_kultermal.webp",
+      "imageSource": "https://www.szechenyibath.hu/",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "san-sebastian-la-perla-circuit",
+      "slug": "meet-la-concha-through-warm-seawater",
+      "url": "https://experienceauthority.com/experiences/meet-la-concha-through-warm-seawater",
+      "primaryInterest": "swim-reset",
+      "place": "San Sebastián",
+      "country": "Spain",
+      "region": "san-sebastian",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-12-22",
+      "sources": [
+        "https://la-perla.net/en/thalassotherapy/",
+        "https://la-perla.net/en/thalassotherapy/frequently-asked-questions-thalassotherapy/",
+        "https://la-perla.net/en/thalassotherapy-gallery/"
+      ],
+      "image": "/images/guides/san-sebastian-la-perla-pool.jpg",
+      "imageAsset": "https://la-perla.net/wp-content/uploads/2022/04/LA-PERLA_PISCINA_03-copia.jpg",
+      "imageSource": "https://la-perla.net/en/thalassotherapy-gallery/",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "lisbon-mesa-de-frades-fado",
+      "slug": "let-the-fado-room-fall-quiet",
+      "url": "https://experienceauthority.com/experiences/let-the-fado-room-fall-quiet",
+      "primaryInterest": "shared-rituals",
+      "place": "Lisbon",
+      "country": "Portugal",
+      "region": "lisbon",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-12-22",
+      "sources": [
+        "https://mesadefrades.pt/",
+        "https://www.visitlisboa.com/pt-pt/locais/mesa-de-frades"
+      ],
+      "image": "/images/guides/lisbon-mesa-de-frades-room.jpg",
+      "imageAsset": "https://cdn.prod.website-files.com/67b73714965836c0149b0837/698a1f7677986e3a23ac5964_mesa_fotografias_carol%20(12%20de%2092).avif",
+      "imageSource": "https://mesadefrades.pt/",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "buenos-aires-la-viruta-tango",
+      "slug": "learn-the-step-before-joining-the-floor",
+      "url": "https://experienceauthority.com/experiences/learn-the-step-before-joining-the-floor",
+      "primaryInterest": "shared-rituals",
+      "place": "Buenos Aires",
+      "country": "Argentina",
+      "region": "buenos-aires",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-12-22",
+      "sources": [
+        "https://lavirutatangoar.com/en/clases-de-tango-en-buenos-aires/",
+        "https://lavirutatangoar.com/"
+      ],
+      "image": "/images/guides/buenos-aires-la-viruta-floor.jpg",
+      "imageAsset": "https://lavirutatangoar.com/wp-content/uploads/2026/04/DSC_4317_.jpg",
+      "imageSource": "https://lavirutatangoar.com/",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    },
+    {
+      "id": "madrid-cardamomo-flamenco",
+      "slug": "listen-for-the-conversation-inside-flamenco",
+      "url": "https://experienceauthority.com/experiences/listen-for-the-conversation-inside-flamenco",
+      "primaryInterest": "shared-rituals",
+      "place": "Madrid",
+      "country": "Spain",
+      "region": "madrid",
+      "checkedOn": "2026-09-23",
+      "reviewBy": "2026-12-22",
+      "sources": [
+        "https://cardamomo.com/en/flamenco-show-in-madrid/",
+        "https://www.esmadrid.com/en/nightlife/cardamomo",
+        "https://cardamomo.com/en/"
+      ],
+      "image": "/images/guides/madrid-cardamomo-stage.jpg",
+      "imageAsset": "https://cardamomo.ams3.digitaloceanspaces.com/wp-content/uploads/2025/02/01132522/el-tablao-flamenco-mas-exclusivo-1920x1080.jpg",
+      "imageSource": "https://cardamomo.com/en/",
+      "rightsBasis": "official_source",
+      "rightsCleared": false
+    }
+  ],
+  "rejectedOrDeferred": [
+    {
+      "candidate": "FICA Lisbon hardcover bookbinding",
+      "reason": "The checked 10 October public workshop is sold out. No alternative public session verified.",
+      "source": "https://fica-oc.pt/en/events/hardcover-bookbinding-workshop-october-2026/"
+    },
+    {
+      "candidate": "Copenhagen Kayak Republic city tour",
+      "reason": "The direct tours URL returned unrelated retail content in the fresh fetch. Destination listing alone is insufficient for safe public booking guidance.",
+      "source": "https://kayakrepublic.dk/ture-i-kajak/"
+    },
+    {
+      "candidate": "Berlin THF60min",
+      "reason": "No current September public departure validated. Deferred rather than substituting another programme under the same name.",
+      "source": "https://www.thf-berlin.de/"
+    },
+    {
+      "candidate": "Paris private petanque session",
+      "reason": "A dependable public individual booking and complete photographic package were not established. Deferred.",
+      "source": null
+    }
+  ],
+  "originalCandidateMappingsChanged": false,
+  "thirdPartyOutreach": false,
+  "aiImages": false
+}

@@ -15,9 +15,9 @@ import {
 import { publishedReleases, recentGuideReleases } from "../src/lib/releases";
 import { addPassportGuides, type PassportData } from "../src/lib/passport";
 
-test("fourteen complete local chapters offer real contrasting experiences and planning constraints", () => {
+test("sixteen complete local chapters offer real contrasting experiences and planning constraints", () => {
   const resolved = resolveCityChapters(publicGuides);
-  assert.equal(resolved.length, 14);
+  assert.equal(resolved.length, 16);
   for (const chapter of resolved) {
     assert.ok(chapter.stops.length >= 2);
     assert.equal(
@@ -136,7 +136,8 @@ test("release dates are independent from source checks and expire out of the new
     25,
   );
   assert.equal(recentGuideReleases(publicGuides, "2026-09-15").length, 81);
-  assert.equal(recentGuideReleases(publicGuides, "2026-10-20").length, 0);
+  assert.equal(recentGuideReleases(publicGuides, "2026-10-20").length, 18);
+  assert.equal(recentGuideReleases(publicGuides, "2026-10-24").length, 0);
   assert.equal(publishedReleases([], "2026-09-13").length, 0);
   const changedChecks = publicGuides.map((item) => ({
     ...item,
@@ -147,7 +148,14 @@ test("release dates are independent from source checks and expire out of the new
   }));
   assert.deepEqual(
     publishedReleases(changedChecks, "2026-10-01").map((item) => item.date),
-    ["2026-09-19", "2026-09-15", "2026-09-14", "2026-09-13", "2026-09-12"],
+    [
+      "2026-09-23",
+      "2026-09-19",
+      "2026-09-15",
+      "2026-09-14",
+      "2026-09-13",
+      "2026-09-12",
+    ],
   );
 });
 

@@ -16,6 +16,54 @@ export type CityChapter = {
 /** Authored local combinations. These are ideas to adapt, not timed or bookable packages. */
 export const cityChapters: readonly CityChapter[] = [
   {
+    slug: "lisbon",
+    name: "Lisbon",
+    country: "portugal",
+    regions: ["lisbon"],
+    title: "Follow the water. Listen to the room.",
+    intro:
+      "Begin with an aqueduct most visitors only see from below. On a separately planned evening, enter a former chapel in Alfama and let fado change how you listen. One experience reveals what carries a city, the other asks you to stop moving through it.",
+    pace: "An unhurried daytime crossing and a reserved evening, with travel and rest between them.",
+    planning:
+      "The aqueduct entrance is in Campolide, not Alfama. Check the Water Museum's current last entry, weather and elevated-walk suitability. Mesa de Frades is a separate dinner booking with a set menu, deposit and performance rhythm. Confirm dietary needs and the finishing time before choosing return transport. These are independent admissions in different neighbourhoods, not a continuous walking route, combined ticket, transfer or package.",
+    stops: [
+      {
+        slug: "cross-lisbon-on-the-route-of-its-water",
+        moment: "Begin with a different line across the city",
+        why: "The public crossing turns monumental arches into a readable piece of water infrastructure. Keep the walk within the museum's admitted route.",
+      },
+      {
+        slug: "let-the-fado-room-fall-quiet",
+        moment: "Give the evening to listening",
+        why: "A tiled former chapel changes from dining room to attentive audience between sets. Choose the current dinner programme, not a promised singer.",
+      },
+    ],
+  },
+  {
+    slug: "budapest",
+    name: "Budapest",
+    country: "hungary",
+    regions: ["budapest"],
+    title: "Take the slower hour. Find the shared step.",
+    intro:
+      "Use a familiar Budapest bath as the unhurried beginning, then choose a public dance-house evening where watching and joining have different places. Shared space connects the two, but each has its own rules and timetable.",
+    pace: "A daytime bath and a separately selected evening, on the same trip rather than a forced single-day route.",
+    planning:
+      "Széchenyi and Fonó are in different parts of Budapest and require separate admissions and travel planning. Read the bath's current maintenance closures and under-fourteen restriction. At Fonó, choose a published táncház that actually includes beginner teaching or an invitation to join. A general concert ticket is not the same thing. Confirm language, accessibility, finish time and transport. No shared ticket, transfer or package is implied.",
+    stops: [
+      {
+        slug: "let-budapest-slow-to-the-pool",
+        moment: "Leave time without an assignment",
+        why: "An ordinary daytime bath can be more rewarding when you stop trying to complete every pool. Current closures decide the usable route.",
+      },
+      {
+        slug: "step-into-the-dance",
+        moment: "On a programmed evening, observe the first steps",
+        why: "Live music and a public dance-house format offer another shared rhythm. Join only where the teacher or room makes the invitation clear.",
+      },
+    ],
+  },
+  {
     slug: "new-york-city",
     name: "New York City",
     country: "united-states",
@@ -194,7 +242,7 @@ export const cityChapters: readonly CityChapter[] = [
       "A human tower and a mosaic ask very different things of their parts. Witness castells from the public audience, then try arranging a small ceramic surface yourself. Barcelona becomes both something people build together and something you can learn to look at more closely.",
     pace: "A workshop on a booked day. Castells only when the public calendar allows.",
     planning:
-      "The castells guide follows the publicly announced La Mercè programme, not a daily attraction or an invitation to join a tower. Confirm the event's date, square and crowd arrangements first. Mosaiccos is a separate studio booking and may require later collection. Neither activity includes Park Güell admission.",
+      "The castells guide follows the publicly announced La Mercè programme, not a daily attraction or an invitation to join a tower. Confirm the event's date, square and crowd arrangements first. Mosaiccos is a separate studio booking and may require later collection. The espadrille workshop is another independent reservation, with its Barcelona address and sizes confirmed directly. None includes Park Güell admission. Choose one workshop rather than filling every interval.",
     stops: [
       {
         slug: "the-weight-of-the-tower",
@@ -205,6 +253,11 @@ export const cityChapters: readonly CityChapter[] = [
         slug: "make-something-from-the-broken-pieces",
         moment: "Change from watching to making",
         why: "Try a smaller exercise in how parts meet. Leave time for grouting and collection, then look differently at the mosaic details around the city.",
+      },
+      {
+        slug: "stitch-the-pair-you-take-home",
+        moment: "Or make something you can wear",
+        why: "A pair of espadrilles offers a different scale of joining and finishing. Choose it as an alternative hands-on anchor, not an obligatory extra after the mosaic class.",
       },
     ],
   },
@@ -276,7 +329,7 @@ export const cityChapters: readonly CityChapter[] = [
       "Tea is a recognisable beginning. A scent gallery, a textile pattern and a ride through smaller streets make the city less dependent on a list of sights. Choose the contrast that interests you, not the maximum number of appointments.",
     pace: "One booked anchor and one lighter stop per day.",
     planning:
-      "Camellia Flower is in Higashiyama and is not the same venue as Garden Teahouse. Kunjyukan, the textile studio and the cycle meeting point are separate locations. Confirm travel between them, opening days, workshop collection and the cycling route. None is an automatic add-on to another booking.",
+      "Camellia Flower is in Higashiyama and is not the same venue as Garden Teahouse. Kunjyukan, the textile and kintsugi studios and the cycle meeting point are separate locations. Confirm travel, languages, opening days and collection. Shikata's urushi trial has age and handling requirements, and the work needs further curing at home. Choose one substantial workshop per day. None is an automatic add-on to another booking.",
     stops: [
       {
         slug: "a-bowl-of-attention",
@@ -297,6 +350,11 @@ export const cityChapters: readonly CityChapter[] = [
         slug: "ride-from-alley-to-river",
         moment: "Let movement connect the city",
         why: "Give the streets their own guided session. This is a cycling experience, not a claim that the other three stops lie on its route.",
+      },
+      {
+        slug: "repair-a-bowl-without-hiding-the-join",
+        moment: "On another day, work with what already exists",
+        why: "A repair introduction offers a contrast to making a new pattern. The aftercare and curing period carry the experience beyond the studio and need to fit your journey home.",
       },
     ],
   },

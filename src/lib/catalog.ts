@@ -232,11 +232,21 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
 }
 export const territories = [
   {
+    slug: "sweden",
+    name: "Sweden",
+    region: "stockholm",
+    regionName: "Stockholm",
+    intro:
+      "Read Stockholm from its island edges on a seasonal guided kayak outing, with the water itself connecting the view.",
+    image: null,
+  },
+  {
     slug: "nepal",
     name: "Nepal",
     region: "kavrepalanchok",
     regionName: "Panauti",
-    intro: "Stay in Panauti through a women-led network that lets a family table, host household and old town set the pace.",
+    intro:
+      "Stay in Panauti through a women-led network that lets a family table, host household and old town set the pace.",
     image: null,
   },
   {
@@ -244,7 +254,8 @@ export const territories = [
     name: "Peru",
     region: "sacred-valley",
     regionName: "Sacred Valley",
-    intro: "Follow Chinchero's colour back to fibre, dye, tension and the women who keep the loom moving.",
+    intro:
+      "Follow Chinchero's colour back to fibre, dye, tension and the women who keep the loom moving.",
     image: null,
   },
   {
@@ -252,7 +263,8 @@ export const territories = [
     name: "Niue",
     region: "north-niue",
     regionName: "North Niue",
-    intro: "Meet Niue's forest and plantation through the extraordinary uga and the local knowledge that keeps the encounter grounded.",
+    intro:
+      "Meet Niue's forest and plantation through the extraordinary uga and the local knowledge that keeps the encounter grounded.",
     image: null,
   },
   {
@@ -260,7 +272,8 @@ export const territories = [
     name: "Cabo Verde",
     region: "sao-vicente",
     regionName: "São Vicente",
-    intro: "Let Mindelo's current musicians, working rooms and changing live programme introduce São Vicente after dark.",
+    intro:
+      "Let Mindelo's current musicians, working rooms and changing live programme introduce São Vicente after dark.",
     image: null,
   },
   {
@@ -268,7 +281,8 @@ export const territories = [
     name: "Jordan",
     region: "wadi-rum",
     regionName: "Wadi Rum",
-    intro: "Stay after Wadi Rum loses its colour and let darkness, dinner, temperature and morning redraw the protected landscape.",
+    intro:
+      "Stay after Wadi Rum loses its colour and let darkness, dinner, temperature and morning redraw the protected landscape.",
     image: null,
   },
   {
@@ -1165,6 +1179,7 @@ export const territories = [
 ] as const;
 // Area labels can differ from a guide's specific site. Never let the last guide rename the area.
 const additionalRegionNames: Readonly<Record<string, string>> = {
+  "south-africa/west-coast": "West Coast",
   "nepal/kavrepalanchok": "Panauti",
   "peru/sacred-valley": "Sacred Valley",
   "niue/north-niue": "North Niue",

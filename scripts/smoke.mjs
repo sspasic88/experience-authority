@@ -1,10 +1,12 @@
 import assert from "node:assert/strict";
+import { dailyEditionRoutes } from "./daily-edition-routes.mjs";
 
 const base = process.env.EA_TEST_URL || "http://127.0.0.1:3100";
 const liveIndexing = process.env.EA_TEST_INDEXING === "true";
 const utilityPaths = new Set(["/passport", "/suggest", "/corrections"]);
 const emptyFields = new Set();
 const paths = [
+  ...(process.env.EA_TEST_DEMO === "true" ? [] : dailyEditionRoutes),
   "/",
   "/explore",
   "/explore?q=clay&field=make&view=list",

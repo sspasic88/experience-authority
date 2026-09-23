@@ -1,8 +1,17 @@
-# Build status — 19 September 2026
+# Build status — 23 September 2026
 
-Public-source edition live at https://experienceauthority.com, deployed from the separate EA GitHub repository to its own Vercel project. The current 154-guide release was deployed and verified on 19 September 2026 from commit `1e9812f`.
+Public-source edition at https://experienceauthority.com, deployed from the separate EA GitHub repository to its own Vercel project. The 23 September expansion has passed local verification and awaits production deployment verification. The previously verified 154-guide release was deployed on 19 September 2026 from commit `1e9812f`.
 
-Current authored release scope: 154 guides across 104 countries and territories, 12 editorial collections, nine Journal articles, 14 local planning chapters and 97 dated daily discoveries prepared for 13 September to 18 December. The public runtime exposes only records that still pass the evidence and review-date gate. Includes an actual-publication log, private journey planning, batch saving, sharing and credited photographs. See [content expansion batch 39](content-expansion-batch-39-2026-09-19.md). Prepared future daily editions are not already public.
+Current authored release scope: 172 guides across 105 countries and territories, 12 editorial collections, nine Journal articles, 16 local planning chapters and 97 dated daily discoveries prepared for 13 September to 18 December. On 23 September, 171 guides pass the public gate. An older expired Allgäu event remains excluded. Includes an actual-publication log, private journey planning, batch saving, sharing and credited photographs. See [content expansion batch 40](content-expansion-batch-40-2026-09-23.md). Prepared future daily editions are not already public.
+
+## 23 September daily publishing audit
+
+- Prepared 18 net-new guides, exactly three per visitor-interest quota. Full source and image provenance, review deadlines and rejected candidates are recorded in [the daily ledger](daily-publishing-2026-09-23.json).
+- All 43 unique cited source URLs returned HTTP 200 with the intended page context during the final source check.
+- Local launch-configured build, TypeScript and 76 automated tests passed. Local smoke passed 266 pages, 11 expected unknown-route responses and 266 distinct CSP nonces. Local complete SEO passed 465 nonempty sitemap routes without duplicate metadata.
+- All 21 visitor scenarios passed. The complete browser audit passed 681 responsive views and 793 internal links. An additional focused edition audit passed 144 views, including Today and the publication log, and 495 internal links. No automated accessibility, image-loading, overflow or JavaScript failures were found. Production deployment verification remains pending.
+- Added local planning chapters for Lisbon and Budapest, expanded complementary collections and reserved 24 and 25 September discoveries for new guides. Existing daily history and original 200-candidate protection decisions remain unchanged.
+- The complete SEO checker now fails on an empty sitemap. Local production QA requires `EA_SITE_URL=https://experienceauthority.com` at build time because Next.js compiles response-header configuration during the build. No indexing or consent protection was relaxed.
 
 ## 19 September production-readiness audit
 
@@ -25,7 +34,7 @@ Current authored release scope: 154 guides across 104 countries and territories,
 - Per-route SEO/social metadata, brand share image, JSON-LD, production sitemap with real guide review dates, indexable production robots and noindex preview rules.
 - Nonce-based production script CSP, response security headers and training crawler preferences.
 - Privacy-first GA4 integration with Basic Consent Mode, explicit allow and deny choices, later revocation, query-free page paths and a bounded event set. A separate EA Measurement ID is configured for production.
-- 154 public-source guides, separate from Selected and demo records. Each has dated source notes, official access links, evidence boundaries, credited real photographs and expiry checks. Normal mode serves this content, not the eight fictional examples. See content-edition.md and content-expansion-batch-39-2026-09-19.md.
+- 172 authored public-source guides, separate from Selected and demo records. Each has dated source notes, official access links, evidence boundaries, credited real photographs and expiry checks. Normal mode serves only current publishable content, not the eight fictional examples. See content-edition.md and content-expansion-batch-40-2026-09-23.md.
 - Clickable homepage photographs, full-size guide-photo dialogs and user-initiated sharing; the slash aligns optically with the two name rows, with the tagline separately underneath. Homepage imagery uses 20 hand-curated three-guide editions, a stable three-hour starting edition and visitor-controlled previous/next navigation. Each edition contains three different countries and fields.
 - Deterministic guide continuations that prefer local geographic relevance and a contrasting activity. Porto and Gaia and Mexico City and Xochimilco are explicitly connected; wider country and editorial suggestions are clearly labelled and link to their context. This is not route or travel-time advice.
 - Every visible photograph credit uses the same direct-source treatment: `Image: creator / source ↗` in the lower-right corner, opening the original source in a new tab. Detailed rights records remain on Credits rather than competing with the image.

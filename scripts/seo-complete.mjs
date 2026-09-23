@@ -13,6 +13,11 @@ const sitemap = await (await fetch(`${origin}/sitemap.xml`)).text();
 const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) =>
   match[1].replace("https://experienceauthority.com", origin),
 );
+if (!urls.length) {
+  throw new Error(
+    "The sitemap is empty. This audit requires an indexable production configuration and must not pass without checking any routes.",
+  );
+}
 const titles = new Map();
 const descriptions = new Map();
 const failures = [];

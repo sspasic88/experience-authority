@@ -1,3 +1,5 @@
+import { discoveryBatch40 } from "./discovery-batch-40";
+
 export const participationModes = [
   { value: "hands-on", label: "Make or take part" },
   { value: "watch-listen", label: "Watch & listen" },
@@ -24,30 +26,75 @@ export type DiscoveryProfile = {
 /** Editorial planning lenses, based on the scope and duration stated in each guide.
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
+  ...discoveryBatch40,
   "stay-where-the-town-knows-your-host": {
     modes: ["at-table", "slow-down", "watch-listen"],
     time: "overnight",
-    keywords: ["Panauti", "Nepal", "Newari", "homestay", "women led", "family", "cooking", "overnight"],
+    keywords: [
+      "Panauti",
+      "Nepal",
+      "Newari",
+      "homestay",
+      "women led",
+      "family",
+      "cooking",
+      "overnight",
+    ],
   },
   "follow-the-colour-back-to-the-wool": {
     modes: ["watch-listen"],
     time: "short",
-    keywords: ["Chinchero", "Peru", "Sacred Valley", "weaving", "natural dye", "backstrap loom", "textile", "CTTC"],
+    keywords: [
+      "Chinchero",
+      "Peru",
+      "Sacred Valley",
+      "weaving",
+      "natural dye",
+      "backstrap loom",
+      "textile",
+      "CTTC",
+    ],
   },
   "meet-the-island-through-the-uga": {
     modes: ["outdoors", "watch-listen"],
     time: "short",
-    keywords: ["Niue", "Mutalau", "uga", "coconut crab", "forest", "plantation", "wildlife", "A5"],
+    keywords: [
+      "Niue",
+      "Mutalau",
+      "uga",
+      "coconut crab",
+      "forest",
+      "plantation",
+      "wildlife",
+      "A5",
+    ],
   },
   "let-the-room-introduce-mindelo": {
     modes: ["watch-listen", "at-table", "slow-down"],
     time: "calendar",
-    keywords: ["Mindelo", "Cabo Verde", "São Vicente", "live music", "cavaquinho", "night", "Le Metalo"],
+    keywords: [
+      "Mindelo",
+      "Cabo Verde",
+      "São Vicente",
+      "live music",
+      "cavaquinho",
+      "night",
+      "Le Metalo",
+    ],
   },
   "stay-until-the-desert-loses-its-colour": {
     modes: ["outdoors", "slow-down", "at-table"],
     time: "overnight",
-    keywords: ["Wadi Rum", "Jordan", "desert", "Bedouin camp", "stars", "overnight", "sunset", "night sky"],
+    keywords: [
+      "Wadi Rum",
+      "Jordan",
+      "desert",
+      "Bedouin camp",
+      "stars",
+      "overnight",
+      "sunset",
+      "night sky",
+    ],
   },
   "build-hudut-from-the-coconut-outward": {
     modes: ["hands-on", "at-table", "watch-listen"],

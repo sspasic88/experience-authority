@@ -132,25 +132,24 @@ export const dailyDiscoveries: readonly Discovery[] = [
   },
   {
     date: "2026-09-24",
-    slug: "mexico-city-grown-on-water",
-    title: "Look beyond the boat.",
+    slug: "meet-tokyo-in-a-cup-of-dashi",
+    title: "The part of a meal you rarely see.",
     angle:
-      "Xochimilco is a name many visitors recognise through images of colourful boats. A bounded agricultural encounter asks a different question: how is this landscape worked, and what is growing within it? Choose the guide's specific public access route rather than assuming any boat trip offers the same thing.",
+      "A clear cup at a Nihonbashi counter can change the question you bring to dinner. Before deciding which dish deserves a photograph, notice what provides its depth. Ninben's public dashi bar offers a small, direct way to taste a foundation that usually remains behind the finished plate.",
     notice:
-      "The distinction between a landscape as a setting and a landscape as someone's ongoing work.",
+      "The difference between a colourless-looking liquid and an absence of flavour. The broth contains fish, so check ingredients before ordering.",
     question:
-      "What lies behind the most repeated photograph of your next destination?",
+      "Which familiar meal would become more interesting if you could taste one of its hidden foundations alone?",
   },
   {
     date: "2026-09-25",
-    slug: "a-morning-at-the-hawker-table",
-    title: "The table matters as much as the dish.",
+    slug: "cross-lisbon-on-the-route-of-its-water",
+    title: "A city begins before the tap.",
     angle:
-      "Singapore's hawker food is a recognisable starting point. Stay attentive to what happens around the plate: ordering, waiting, finding a place and returning your tray. An ordinary meal can teach you something without becoming a performance arranged for visitors.",
+      "Lisbon's Águas Livres aqueduct is not only a line of arches to pass beneath. The admitted valley crossing lets you walk along part of the infrastructure that carried water into the city. Later, a separate fado evening in Alfama gives the same visit a different rhythm: one place asks you to look along a line, the other to listen through a pause.",
     notice:
-      "The shared rules that make a busy meal possible. Follow the guide's practical etiquette.",
-    question:
-      "What makes a public place feel welcoming without it having been designed just for you?",
+      "The difference between the whole water network and the small section open to visitors. Confirm opening and last entry before travelling to Campolide.",
+    question: "What has to arrive in a city before everyday life can begin?",
   },
   {
     date: "2026-09-26",

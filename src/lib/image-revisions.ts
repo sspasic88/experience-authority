@@ -1,6 +1,24 @@
 /** Content hashes keep replaced photographs consistent across responsive image caches.
  * The media test requires an update when an original file changes. */
 export const imageRevisions: Record<string, string> = {
+  "/images/guides/modena-giusti-barrels.jpg": "0e959a9ec650",
+  "/images/guides/tokyo-ninben-dashi.jpg": "cd8239763a49",
+  "/images/guides/brussels-cantillon-coolship.jpg": "704ba05a4903",
+  "/images/guides/florence-il-papiro-colour.jpg": "3ddbead71012",
+  "/images/guides/kyoto-shikata-repair.jpg": "8cf4021d58cb",
+  "/images/guides/barcelona-espadrille-pair.jpg": "a83cdfacd35f",
+  "/images/guides/dublin-gaelic-games-hurling.jpg": "7abd992067ac",
+  "/images/guides/stockholm-langholmen-kayaks.jpg": "9ead7e1d22fe",
+  "/images/guides/ljubljana-guided-paddleboards.jpg": "8860b8644ae0",
+  "/images/guides/lisbon-aguas-livres-valley.jpg": "582f4a939b5a",
+  "/images/guides/khwattu-veld-vehicle.jpg": "0b4d11c8deca",
+  "/images/guides/naples-borbonica-wall.jpg": "d765ff5a2b6f",
+  "/images/guides/helsinki-loyly-shore.jpg": "a49d4d5e3073",
+  "/images/guides/budapest-szechenyi-pools.jpg": "69f0eb09cd13",
+  "/images/guides/san-sebastian-la-perla-pool.jpg": "01123482ca0d",
+  "/images/guides/lisbon-mesa-de-frades-room.jpg": "5cae3c57b336",
+  "/images/guides/buenos-aires-la-viruta-floor.jpg": "563ce02388e7",
+  "/images/guides/madrid-cardamomo-stage.jpg": "787d8a212f96",
   "/images/guides/panauti-community-table.jpg": "dd1710e3e41f",
   "/images/guides/chinchero-weaving-demonstration.jpg": "a127fb4d931e",
   "/images/guides/niue-uga-forest.jpg": "556852e30b17",
@@ -161,7 +179,7 @@ export const imageRevisions: Record<string, string> = {
 
 // A single manifest fingerprint fits Next's bounded localPatterns allowlist.
 // Tests require it to change when any original is added or replaced.
-export const imageEdition = "459d07256caf";
+export const imageEdition = "924559b4aa81";
 
 export function imageSource(src: string) {
   return imageRevisions[src] ? `${src}?v=${imageEdition}` : src;

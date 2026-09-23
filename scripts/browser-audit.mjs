@@ -2,9 +2,20 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import { chromium, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
+import {
+  dailyEditionRoutes,
+  dailyGuidePaths,
+} from "./daily-edition-routes.mjs";
 
 const base = process.env.EA_TEST_URL || "http://127.0.0.1:3103";
 const output = process.env.EA_AUDIT_OUTPUT || "../../work/ea-ui-audit";
+const widths = process.env.EA_AUDIT_WIDTH
+  ? [Number(process.env.EA_AUDIT_WIDTH)]
+  : [390, 768, 1440];
+assert.ok(
+  widths.every((width) => [390, 768, 1440].includes(width)),
+  "Unsupported audit viewport",
+);
 fs.mkdirSync(output, { recursive: true });
 const browser = await chromium.launch({
   headless: true,
@@ -16,6 +27,7 @@ const results = [];
 const failures = [];
 const links = new Set();
 const routes = [
+  ...dailyEditionRoutes,
   "/",
   "/explore",
   "/explore?view=list",
@@ -204,13 +216,26 @@ const routes = [
   "/corrections?experience=begin-with-rice-not-the-bottle",
 ];
 try {
-  for (const width of [390, 768, 1440]) {
+  for (const width of widths) {
     const context = await browser.newContext({
       viewport: { width, height: 1000 },
     });
     const page = await context.newPage();
     const routesToAudit =
-      process.env.EA_AUDIT_INTERACTIONS_ONLY === "true" ? [] : routes;
+      process.env.EA_AUDIT_INTERACTIONS_ONLY === "true"
+        ? []
+        : process.env.EA_AUDIT_EDITION_ONLY === "true"
+          ? [
+              ...dailyEditionRoutes,
+              "/",
+              "/explore",
+              "/today",
+              "/new",
+              "/fields",
+              "/places",
+              "/plan",
+            ]
+          : [...routes, "/today", "/new"];
     for (const route of routesToAudit) {
       const errors = [];
       const onError = (error) => errors.push(error.message);
@@ -282,6 +307,9 @@ try {
       )
         failures.push(result);
       const screenshotNames = {
+        ...Object.fromEntries(
+          dailyGuidePaths.map((path) => [path, path.split("/").at(-1)]),
+        ),
         "/": "home",
         "/explore": "compass",
         "/experiences/venice-through-an-oar": "detail",
@@ -289,11 +317,17 @@ try {
         "/fields": "fields",
         "/journal": "journal",
         "/plan": "plan",
+        "/today": "today",
+        "/new": "new",
+        "/places/portugal/lisbon": "lisbon",
+        "/places/hungary/budapest": "budapest",
+        "/places/south-africa/west-coast": "west-coast",
       };
       if (screenshotNames[route]) {
         await page.screenshot({
           path: `${output}/${screenshotNames[route]}-${width}.png`,
           fullPage: true,
+          animations: "disabled",
           timeout: 60000,
         });
       }
