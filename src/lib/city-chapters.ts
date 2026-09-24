@@ -16,6 +16,88 @@ export type CityChapter = {
 /** Authored local combinations. These are ideas to adapt, not timed or bookable packages. */
 export const cityChapters: readonly CityChapter[] = [
   {
+    slug: "tokyo",
+    name: "Tokyo",
+    country: "japan",
+    regions: ["tokyo"],
+    title: "Taste the foundation. Cut the surface. Slow the evening.",
+    intro:
+      "Let a small cup of dashi introduce a flavour that usually works out of sight. On a booked workshop day, make a glass surface catch light. Keep a public bathhouse as a separate, quieter possibility. Three ordinary materials open three different kinds of attention.",
+    pace: "A short Nihonbashi stop, a reserved ninety-minute workshop and an independently chosen bathhouse visit.",
+    planning:
+      "Ninben's broth contains fish. Sokichi is in Kaminarimon and requires its own reservation, with cash and glass-upgrade details to check. Hagino-yu is in Negishi and has split opening blocks, a regular closing day and bathing rules to understand beforehand. These are different neighbourhoods, not a continuous walking route. Plan transport and rest separately. No shared ticket, transfer or package is implied.",
+    stops: [
+      {
+        slug: "meet-tokyo-in-a-cup-of-dashi",
+        moment: "Begin with a flavour beneath the meal",
+        why: "A plain cup makes the foundation visible before dinner supplies all its other distractions.",
+      },
+      {
+        slug: "cut-a-line-that-catches-the-light",
+        moment: "Give your hands one precise problem",
+        why: "The kiriko introduction turns a purchased object into a sequence of cuts you can recognise.",
+      },
+      {
+        slug: "give-tokyo-an-hour-at-the-bathhouse",
+        moment: "Leave a quieter hour unfilled",
+        why: "A public sento offers a different pace without adding another performance or lesson.",
+      },
+    ],
+  },
+  {
+    slug: "taipei",
+    name: "Taipei",
+    country: "taiwan",
+    regions: ["taipei"],
+    title: "Read the type. Rethink the tea.",
+    intro:
+      "In Datong, words can become rows of metal and tea can arrive from a tap. Pair a respectful look inside Ri Xing with an independent stop at Wangtea Lab. The connection is not nostalgia. It is the way a familiar thing changes when you notice its method.",
+    pace: "Two short visits, with the foundry's limited public days deciding whether they fit the same day.",
+    planning:
+      "Ri Xing currently opens to visitors on Wednesdays, Fridays and Saturdays, with calendar exceptions. Do not remove type or expect a hands-on class. Wangtea Lab has a broader opening pattern, but drinks and seats depend on the day. Check alcohol, milk and caffeine individually. Confirm both addresses, access needs and travel between them. This is an editorial pairing, not a guided walking route, shared booking or included tasting.",
+    stops: [
+      {
+        slug: "read-a-wall-of-words-before-they-print",
+        moment: "Meet language as an inventory",
+        why: "The physical type makes storage, labour and a printed line part of the same question.",
+      },
+      {
+        slug: "taste-tea-from-the-tap-and-the-pour",
+        moment: "Compare methods over a drink",
+        why: "A hot pour-over and a non-alcoholic draft tea offer a contemporary contrast to another familiar everyday material.",
+      },
+    ],
+  },
+  {
+    slug: "bangkok",
+    name: "Bangkok",
+    country: "thailand",
+    regions: ["bangkok"],
+    title: "Follow the ingredient. Ride the smaller street. Watch the gesture.",
+    intro:
+      "Give Bangkok three different scales. A curry paste begins with small ingredients, a bicycle links streets beyond the main roads and a theatre gesture carries a story. Choose the parts that interest you without squeezing all three into one crowded day.",
+    pace: "A cooking morning, a separate suitable cycling session and a short weekday performance.",
+    planning:
+      "Sompong's morning class and Co Classical each occupy a substantial part of a day and require separate bookings. Confirm dietary needs for the kitchen and cycling ability, heat and traffic exposure for the ride. Sala Chalermkrung has weekday show times and a ticket entitlement to verify with the Grand Palace. Allow transport and recovery between neighbourhoods. There is no combined admission, meal outside the cooking programme, transfer or EA package.",
+    stops: [
+      {
+        slug: "build-the-curry-before-the-wok",
+        moment: "Begin before the finished dish",
+        why: "A market introduction and curry-paste preparation give familiar menu words a material sequence.",
+      },
+      {
+        slug: "follow-bangkok-at-the-width-of-a-bicycle",
+        moment: "On another session, change your scale",
+        why: "A guided ride asks you to notice street width, working rhythms and the river rather than rush between icons.",
+      },
+      {
+        slug: "watch-a-story-travel-through-a-gesture",
+        moment: "Sit still for the smallest movement",
+        why: "A public stage programme makes gesture and music another way to pay attention to the city.",
+      },
+    ],
+  },
+  {
     slug: "lisbon",
     name: "Lisbon",
     country: "portugal",

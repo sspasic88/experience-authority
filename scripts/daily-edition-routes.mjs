@@ -1,5 +1,5 @@
 // Explicit regression coverage for the 23 September public edition.
-export const dailyGuidePaths = [
+const previousGuidePaths = [
   "taste-balsamico-before-it-meets-the-plate",
   "meet-tokyo-in-a-cup-of-dashi",
   "follow-lambic-from-the-brewery-to-the-glass",
@@ -20,8 +20,8 @@ export const dailyGuidePaths = [
   "listen-for-the-conversation-inside-flamenco",
 ].map((slug) => `/experiences/${slug}`);
 
-export const dailyEditionRoutes = [
-  ...dailyGuidePaths,
+export const previousEditionRoutes = [
+  ...previousGuidePaths,
   ...[
     "italy/modena",
     "japan/tokyo",
@@ -40,6 +40,58 @@ export const dailyEditionRoutes = [
     "spain/san-sebastian",
     "argentina/buenos-aires",
     "spain/madrid",
+  ].map((place) => `/places/${place}`),
+  ...[
+    "eat-drink",
+    "make-learn",
+    "move-water",
+    "explore-reflect",
+    "swim-reset",
+    "shared-rituals",
+  ].map((interest) => `/explore?interest=${interest}`),
+];
+
+// Explicit coverage for every guide and place added on 24 September.
+export const dailyGuidePaths = [
+  "taste-melbourne-across-the-market-counter",
+  "taste-tea-from-the-tap-and-the-pour",
+  "follow-cacao-from-the-museum-to-the-cup",
+  "shape-a-cup-without-a-wheel",
+  "cut-a-line-that-catches-the-light",
+  "build-the-curry-before-the-wok",
+  "learn-to-read-the-water-before-standing",
+  "follow-bangkok-at-the-width-of-a-bicycle",
+  "ride-between-buenos-aires-city-stories",
+  "see-singapore-at-the-scale-of-a-model",
+  "let-a-garden-guide-change-what-you-notice",
+  "read-a-wall-of-words-before-they-print",
+  "give-tokyo-an-hour-at-the-bathhouse",
+  "swim-a-london-length-under-open-sky",
+  "leave-room-between-rotoruas-warm-pools",
+  "watch-a-story-travel-through-a-gesture",
+  "hear-the-band-without-a-screen-between-you",
+  "hear-seoul-change-tempo-on-a-saturday",
+].map((slug) => `/experiences/${slug}`);
+
+export const dailyEditionRoutes = [
+  ...dailyGuidePaths,
+  ...[
+    "australia/melbourne",
+    "taiwan/taipei",
+    "mexico/mexico-city",
+    "portugal/lisbon",
+    "japan/tokyo",
+    "thailand",
+    "thailand/bangkok",
+    "australia/sydney",
+    "argentina/buenos-aires",
+    "singapore/singapore",
+    "south-africa/cape-town",
+    "united-kingdom/london",
+    "new-zealand",
+    "new-zealand/rotorua",
+    "united-states/new-orleans",
+    "south-korea/seoul",
   ].map((place) => `/places/${place}`),
   ...[
     "eat-drink",

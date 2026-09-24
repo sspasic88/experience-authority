@@ -5,6 +5,7 @@ import AxeBuilder from "@axe-core/playwright";
 import {
   dailyEditionRoutes,
   dailyGuidePaths,
+  previousEditionRoutes,
 } from "./daily-edition-routes.mjs";
 
 const base = process.env.EA_TEST_URL || "http://127.0.0.1:3103";
@@ -27,6 +28,7 @@ const results = [];
 const failures = [];
 const links = new Set();
 const routes = [
+  ...previousEditionRoutes,
   ...dailyEditionRoutes,
   "/",
   "/explore",
@@ -221,6 +223,9 @@ try {
       viewport: { width, height: 1000 },
     });
     const page = await context.newPage();
+    // First-load image optimisation across the whole catalogue can exceed the
+    // default navigation budget. Image decoding and all assertions still run.
+    page.setDefaultNavigationTimeout(60000);
     const routesToAudit =
       process.env.EA_AUDIT_INTERACTIONS_ONLY === "true"
         ? []
@@ -241,8 +246,15 @@ try {
       const onError = (error) => errors.push(error.message);
       page.on("pageerror", onError);
       const response = await page.goto(base + route, {
-        waitUntil: "networkidle",
+        // Link prefetch and discarded lazy-image requests are not readiness
+        // signals. Await real fonts and every rendered image explicitly below.
+        waitUntil: "domcontentloaded",
       });
+      const passportControl = page
+        .locator(".experience-actions button")
+        .first();
+      if (await passportControl.count())
+        await expect(passportControl).toBeEnabled();
       await page.evaluate(async () => {
         await document.fonts.ready;
         // Load off-screen images too, so full-page captures cannot hide broken assets.
@@ -251,6 +263,22 @@ try {
             img.loading = "eager";
             return img.decode().catch(() => {});
           }),
+        );
+        // Hydration enables private Passport controls. Let their real finite
+        // colour transitions finish before measuring contrast, without
+        // disabling motion or skipping any WCAG assertion.
+        await new Promise(requestAnimationFrame);
+        await Promise.all(
+          document
+            .getAnimations()
+            .filter(
+              (animation) =>
+                animation.timeline instanceof DocumentTimeline &&
+                Number.isFinite(
+                  Number(animation.effect?.getComputedTiming().endTime),
+                ),
+            )
+            .map((animation) => animation.finished.catch(() => {})),
         );
       });
       const state = await page.evaluate(() => ({
@@ -320,6 +348,9 @@ try {
         "/today": "today",
         "/new": "new",
         "/places/portugal/lisbon": "lisbon",
+        "/places/japan/tokyo": "tokyo",
+        "/places/taiwan/taipei": "taipei",
+        "/places/thailand/bangkok": "bangkok",
         "/places/hungary/budapest": "budapest",
         "/places/south-africa/west-coast": "west-coast",
       };
@@ -364,7 +395,7 @@ try {
       .getByRole("button", { name: "Search all experiences", exact: true })
       .click();
     await page.waitForURL(/q=cacao/);
-    await expect(page.locator(".experience-card")).toHaveCount(2);
+    await expect(page.locator(".experience-card")).toHaveCount(3);
     await page.goto(base + "/explore", { waitUntil: "networkidle" });
     const firstCard = page.locator(".experience-card").first();
     const firstCredit = firstCard.locator(".image-source-badge");
@@ -414,7 +445,7 @@ try {
     await page.getByRole("searchbox").fill("cacao");
     await page.getByRole("button", { name: "Explore", exact: true }).click();
     await page.waitForURL(/q=cacao/);
-    await expect(page.locator(".experience-card")).toHaveCount(2);
+    await expect(page.locator(".experience-card")).toHaveCount(3);
     assert.ok(
       await page
         .getByRole("heading", { name: "Before the chocolate bar" })

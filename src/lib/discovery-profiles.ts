@@ -1,4 +1,5 @@
 import { discoveryBatch40 } from "./discovery-batch-40";
+import { discoveryBatch41 } from "./discovery-batch-41";
 
 export const participationModes = [
   { value: "hands-on", label: "Make or take part" },
@@ -27,6 +28,7 @@ export type DiscoveryProfile = {
  * These are not live session lengths, availability or suitability guarantees. */
 export const discoveryProfiles: Record<string, DiscoveryProfile> = {
   ...discoveryBatch40,
+  ...discoveryBatch41,
   "stay-where-the-town-knows-your-host": {
     modes: ["at-table", "slow-down", "watch-listen"],
     time: "overnight",

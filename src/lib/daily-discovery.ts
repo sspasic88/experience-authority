@@ -164,14 +164,14 @@ export const dailyDiscoveries: readonly Discovery[] = [
   },
   {
     date: "2026-09-27",
-    slug: "make-something-from-the-broken-pieces",
-    title: "Look at the joins.",
+    slug: "taste-tea-from-the-tap-and-the-pour",
+    title: "Tea can arrive from a tap.",
     angle:
-      "Barcelona's mosaic surfaces are easy to recognise and easy to photograph. A small trencadís workshop changes the question. Instead of admiring only the finished colour, you begin to see how one irregular fragment meets another. Take that attention back to the city without expecting a two-hour introduction to make you a master craftsperson.",
+      "In Taipei, Wangtea Lab makes brewing part of the choice. Compare a hot pour-over with a non-alcoholic draft tea and ask which leaves sit behind each. It is an ordinary bar order, not a formal tasting flight. That small comparison can make an everyday drink feel open to experiment again.",
     notice:
-      "The gap between two pieces, and the decision that makes it part of the pattern.",
+      "Texture before tasting vocabulary. Check each drink for alcohol, milk and caffeine rather than assuming the menu is uniform.",
     question:
-      "Which familiar detail might become more interesting after you have tried making it?",
+      "What familiar ingredient would you taste differently if only the method changed?",
   },
   {
     date: "2026-09-28",
@@ -186,14 +186,14 @@ export const dailyDiscoveries: readonly Discovery[] = [
   },
   {
     date: "2026-09-29",
-    slug: "meet-the-bay-on-its-working-hours",
-    title: "The tide has the first word.",
+    slug: "cut-a-line-that-catches-the-light",
+    title: "One cut changes the light.",
     angle:
-      "A plate of oysters is the familiar beginning. In Arcachon Bay, a public outing with an oyster farmer takes the story back to the beds and the water that sets the working hours. Leave the rest of the day loose enough to follow the confirmed departure, rather than asking the tide to fit around lunch.",
+      "A patterned glass can seem to arrive fully formed. Sokichi's Tokyo introduction gives you the sequence before the sparkle: choose, practise, mark and cut. The wheel is not a shortcut to mastery. It is a way to recognise one decision inside an object you might otherwise simply admire.",
     notice:
-      "The task that becomes possible as the water changes, and who decides when it can happen.",
+      "How a groove changes when you turn the glass. Follow the instructor's equipment rules and check the cost of coloured glass separately.",
     question:
-      "What would you understand differently about a favourite food after seeing one part of the work behind it?",
+      "Which object on your table would become more interesting if you understood one step in making it?",
   },
   {
     date: "2026-09-30",
@@ -241,14 +241,14 @@ export const dailyDiscoveries: readonly Discovery[] = [
   },
   {
     date: "2026-10-04",
-    slug: "make-the-morning-before-it-reaches-the-cafe",
-    title: "A croissant is a morning made in layers.",
+    slug: "follow-bangkok-at-the-width-of-a-bicycle",
+    title: "A different width of Bangkok.",
     angle:
-      "Paris makes the finished croissant easy to find and the work behind it easy to overlook. Give that familiar breakfast five and a half hours. Folding, cooling, shaping and waiting turn an icon back into a sequence of choices. The point is not to replace tomorrow's bakery visit. It is to arrive there with better eyes and a much better question.",
+      "Major roads tell one story about Bangkok. A guided bicycle route can reveal another scale, where a market passage, a stop and a river crossing matter as much as distance. Co Classical is a bounded public ride, not a licence to treat inhabited streets as an obstacle course. Let the guide and the people using the street set the pace.",
     notice:
-      "The layers inside the cut pastry and the control behind their regularity. Follow the kitchen's safety and allergen guidance.",
+      "Where riding stops and walking becomes the right decision. Check ability, traffic, heat and helmet arrangements before booking.",
     question:
-      "Which food would you value differently if you gave its making as much time as its eating?",
+      "How would a city change if you read it at the width of a smaller vehicle?",
   },
   {
     date: "2026-10-05",
@@ -263,14 +263,14 @@ export const dailyDiscoveries: readonly Discovery[] = [
   },
   {
     date: "2026-10-06",
-    slug: "see-what-keeps-paris-moving-underground",
-    title: "Paris has another address below the street.",
+    slug: "read-a-wall-of-words-before-they-print",
+    title: "A printed line once needed a shelf.",
     angle:
-      "The city above is rich in objects designed to hold your gaze. Beneath Pont de l'Alma, the Sewer Museum redirects it towards water, maintenance and the people who keep an immense system working. The setting is unusual, but novelty is not the most valuable part. For an hour, infrastructure becomes something you can actually see and think about.",
+      "At Ri Xing in Taipei, written language occupies physical space before it reaches a page. Rows of metal type make finding, storing and returning a character part of the work. Visit on a published public day and begin by looking. The shelves are a working system, not a tray of loose souvenirs.",
     notice:
-      "The equipment and job descriptions, not only the tunnel. This is an active industrial environment inside a bounded museum route.",
+      "The labels that make the rows usable. Do not remove type without staff assistance or assume a workshop is included.",
     question:
-      "Which invisible system deserves a place in how you understand the next city you visit?",
+      "What everyday digital action would surprise you if you met its physical predecessor?",
   },
   {
     date: "2026-10-07",
@@ -285,14 +285,14 @@ export const dailyDiscoveries: readonly Discovery[] = [
   },
   {
     date: "2026-10-08",
-    slug: "meet-the-work-before-the-curtain-rises",
-    title: "The performance begins before anyone takes the stage.",
+    slug: "leave-room-between-rotoruas-warm-pools",
+    title: "You do not have to complete the pools.",
     angle:
-      "At the Royal Opera House, the public image naturally settles on the performer and auditorium. A backstage route widens the frame. Rehearsal, costume, scenery, machinery and timing must meet before the curtain can rise. The exact spaces change with the working day, which makes the visit less predictable and more truthful.",
+      "A list of facilities can turn rest into another assignment. At Rotorua's Pavilion Pools, choose an appropriate pool, follow the bathing instructions and leave room outside the water. The lake view is not a task. This is managed shared bathing, not a health treatment or a cultural ceremony, and it is enough to let the visit stay that simple.",
     notice:
-      "One task that would disappear inside the finished performance. Respect every working boundary and photography instruction.",
+      "The pause between warmer moments. Observe age and temperature guidance and keep your head above water.",
     question:
-      "Whose work would you notice if you watched the next performance as a system rather than a single event?",
+      "When did you last leave somewhere without completing everything it offered, and feel better for it?",
   },
   {
     date: "2026-10-09",
@@ -307,14 +307,14 @@ export const dailyDiscoveries: readonly Discovery[] = [
   },
   {
     date: "2026-10-10",
-    slug: "make-pasta-until-the-sauce-makes-sense",
-    title: "The pasta shape is already part of the answer.",
+    slug: "hear-the-band-without-a-screen-between-you",
+    title: "Listen for who answers.",
     angle:
-      "Rome makes it easy to order a famous plate and harder to see the decisions that hold it together. A long pasta class slows the meal back down to dough, thickness, edge, filling and sauce. Make more than one shape and the difference stops being decorative. Each one changes what it can carry, hold or release at the table.",
+      "You do not need to recognise every tune to find a way into a Preservation Hall set. Move your attention from one instrument to another and notice the reply. In a New Orleans room where recording is prohibited, the exchange can have all your attention for once. Choose the current ensemble and ticket category, then let the performance stay in the room.",
     notice:
-      "The pressure of the rolling pin and the seal around a filling. Follow the kitchen's allergy and safety instructions closely.",
+      "The relationship between the phrase and its answer, not the phone you might normally reach for.",
     question:
-      "Which dish would become more interesting if you understood why its parts were designed to meet?",
+      "Which live moment do you remember most clearly even though you have no recording of it?",
   },
   {
     date: "2026-10-11",

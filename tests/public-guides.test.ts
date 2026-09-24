@@ -42,8 +42,8 @@ test("Arcachon stays a bay-wide chapter regardless of guide order or a more spec
   }
 });
 
-test("guide set contains 172 distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 172);
+test("guide set contains 190 distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 190);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -52,7 +52,7 @@ test("guide set contains 172 distinct, sourced public experiences, not Selected 
     new Set(publicGuides.map((p) => p.slug)).size,
     publicGuides.length,
   );
-  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 105);
+  assert.equal(new Set(publicGuides.map((p) => p.countrySlug)).size, 107);
   assert.equal(
     new Set(territories.map((place) => place.slug)).size,
     territories.length,
@@ -102,10 +102,16 @@ test("batch 39 keeps household, craft, wildlife, music and desert access within 
     publicGuides.find((guide) => guide.slug === slug),
   );
   assert.ok(guides.every(Boolean));
-  assert.match(guides[0]!.participation, /Friendship, ceremony and access beyond/i);
+  assert.match(
+    guides[0]!.participation,
+    /Friendship, ceremony and access beyond/i,
+  );
   assert.match(guides[1]!.participation, /motif reproduction/i);
   assert.match(guides[2]!.responsibility, /Do not demand handling/i);
-  assert.match(guides[3]!.responsibility, /Do not label every Cape Verdean performance as morna/i);
+  assert.match(
+    guides[3]!.responsibility,
+    /Do not label every Cape Verdean performance as morna/i,
+  );
   assert.match(guides[4]!.participation, /unrestricted desert access/i);
   assert.ok(
     guides.every((guide) =>
@@ -324,13 +330,16 @@ test("London connects a recognisable market with production work and hidden infr
     (guide) =>
       guide.countrySlug === "united-kingdom" && guide.regionSlug === "london",
   );
-  assert.equal(london.length, 3);
+  assert.equal(london.length, 4);
   assert.deepEqual([...new Set(london.map((guide) => guide.field))].sort(), [
+    "restore",
     "taste",
     "witness",
     "work",
   ]);
-  assert.ok(london.every((guide) => guide.access.includes("No EA booking")));
+  assert.ok(
+    london.every((guide) => /No EA (booking|reservation)/.test(guide.access)),
+  );
   assert.match(
     london.find(
       (guide) => guide.slug === "open-a-door-the-underground-left-behind",

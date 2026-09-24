@@ -1,6 +1,24 @@
 /** Content hashes keep replaced photographs consistent across responsive image caches.
  * The media test requires an update when an original file changes. */
 export const imageRevisions: Record<string, string> = {
+  "/images/guides/melbourne-qvm-counter.jpg": "88a35618b5f7",
+  "/images/guides/taipei-wangtea-draft.jpg": "8d28294ebbb0",
+  "/images/guides/mexico-city-mucho-room.jpg": "58d6b3bee1bd",
+  "/images/guides/lisbon-handbuilt-clay.jpg": "5825da70d6c8",
+  "/images/guides/tokyo-sokichi-cut-glass.jpg": "875a8ea88feb",
+  "/images/guides/bangkok-sompong-kitchen.jpg": "e4cbe7828442",
+  "/images/guides/sydney-manly-first-surf.jpg": "66b6845dcb5a",
+  "/images/guides/bangkok-chinatown-bicycle.jpg": "f9da68771dd9",
+  "/images/guides/buenos-aires-plaza-cycle.jpg": "83c1d0c0a578",
+  "/images/guides/singapore-city-model.jpg": "1ff982d38a15",
+  "/images/guides/kirstenbosch-canopy-path.jpg": "921c099b2cc8",
+  "/images/guides/taipei-ri-xing-type.jpg": "963434b4a22e",
+  "/images/guides/tokyo-haginoyu-washing.jpg": "bc46597deb1e",
+  "/images/guides/london-parliament-hill-pool.jpg": "5e719fe52760",
+  "/images/guides/rotorua-pavilion-steam.jpg": "42d38140929c",
+  "/images/guides/bangkok-khon-gesture.jpg": "268e1565aa6e",
+  "/images/guides/new-orleans-preservation-ensemble.jpg": "d22b010b5f37",
+  "/images/guides/seoul-gugak-dance.jpg": "e533573c0ab0",
   "/images/guides/modena-giusti-barrels.jpg": "0e959a9ec650",
   "/images/guides/tokyo-ninben-dashi.jpg": "cd8239763a49",
   "/images/guides/brussels-cantillon-coolship.jpg": "704ba05a4903",
@@ -179,7 +197,7 @@ export const imageRevisions: Record<string, string> = {
 
 // A single manifest fingerprint fits Next's bounded localPatterns allowlist.
 // Tests require it to change when any original is added or replaced.
-export const imageEdition = "924559b4aa81";
+export const imageEdition = "4f1f9e718d22";
 
 export function imageSource(src: string) {
   return imageRevisions[src] ? `${src}?v=${imageEdition}` : src;

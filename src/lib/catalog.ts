@@ -84,6 +84,7 @@ export const interests: readonly Interest[] = [
     guideSlugs: [
       "begin-with-rice-not-the-bottle",
       "cook-beyond-the-postcard",
+      "build-the-curry-before-the-wok",
       "let-the-coffee-take-its-time",
       "bread-from-the-tonir",
       "kimchi-before-the-jar",
@@ -231,6 +232,24 @@ export function filterExperiences(items: PublicExperience[], query: Query) {
   );
 }
 export const territories = [
+  {
+    slug: "thailand",
+    name: "Thailand",
+    region: "bangkok",
+    regionName: "Bangkok",
+    intro:
+      "Begin with ingredients in a Silom kitchen, ride a smaller route through the city and give a theatre gesture time to tell its story.",
+    image: null,
+  },
+  {
+    slug: "new-zealand",
+    name: "New Zealand",
+    region: "rotorua",
+    regionName: "Rotorua",
+    intro:
+      "Give Rotorua's geothermal setting a slower place in the day through managed public bathing, with clear boundaries between pools, landscape and cultural claims.",
+    image: null,
+  },
   {
     slug: "sweden",
     name: "Sweden",
