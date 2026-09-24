@@ -257,6 +257,7 @@ export function HomeDiscovery({ items }: { items: DiscoveryItem[] }) {
         <Link href="/explore?interest=move-water">Move</Link>
         <Link href="/explore?interest=swim-reset">Reset</Link>
         <Link href="/explore">All experiences</Link>
+        <Link href="/explore?surprise=1#compass-results">Surprise me ↗</Link>
       </nav>
     </div>
   );

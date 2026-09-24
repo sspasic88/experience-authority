@@ -32,6 +32,7 @@ export type FinderQuery = {
   mode?: string;
   time?: string;
   view?: string;
+  surprise?: string;
 };
 export function matchesFinder(item: FinderItem, query: FinderQuery) {
   const profile = discoveryProfiles[item.slug];
@@ -72,6 +73,7 @@ export function finderUrl(query: FinderQuery) {
     "mode",
     "time",
     "view",
+    "surprise",
   ] as const) {
     const value = query[key]?.trim();
     if (value && !(key === "view" && value === "grid")) params.set(key, value);

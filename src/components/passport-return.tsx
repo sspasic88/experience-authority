@@ -22,9 +22,16 @@ export function PassportReturn() {
             : "Save your favourites, arrange them by day and share your plan. Private in this browser, with no account needed."}
         </p>
       </div>
-      <Link className="button button-dark" href="/plan">
-        {ready && count ? "Continue my journey" : "Start a journey"} ↗
-      </Link>
+      <div className="passport-return-links">
+        <Link className="button button-dark" href="/plan">
+          {ready && count ? "Continue my journey" : "Start a journey"} ↗
+        </Link>
+        {ready && count > 0 && (
+          <Link className="text-link" href="/new">
+            See what's new in your saved places ↗
+          </Link>
+        )}
+      </div>
     </aside>
   );
 }

@@ -1,14 +1,10 @@
 import Link from "next/link";
-import {
-  ExperienceCard,
-  PageIntro,
-  SectionHeading,
-} from "@/components/editorial";
+import { ExperienceCard, PageIntro } from "@/components/editorial";
 import { getExperiences } from "@/lib/data";
 import { publishedReleases } from "@/lib/releases";
 import { editionDate } from "@/lib/daily-discovery";
 import { pageMetadata } from "@/lib/seo";
-import { ProgressiveGrid } from "@/components/progressive-grid";
+import { NewGuideBrowser } from "@/components/new-guide-browser";
 
 const spotlightOrder = [
   "watch-rio-build-the-parade-before-carnaval",
@@ -37,7 +33,12 @@ export const metadata = pageMetadata(
   "/new",
 );
 export default function NewGuides() {
-  const releases = publishedReleases(getExperiences());
+  const experiences = getExperiences();
+  const today = new Date().toISOString().slice(0, 10);
+  const releases = publishedReleases(experiences, today);
+  const entries = releases.flatMap((release) =>
+    orderRelease(release.guides).map((item) => ({ item, date: release.date })),
+  );
   return (
     <div className="wrap page-section">
       <PageIntro eyebrow="Newly published" title="More to come back for.">
@@ -49,22 +50,39 @@ export default function NewGuides() {
           </Link>
         </p>
       </PageIntro>
-      {releases.map((release) => (
-        <section className="release-section" key={release.date}>
-          <SectionHeading
-            eyebrow={`${release.guides.length} new guides`}
-            title={editionDate(release.date)}
-          />
-          <ProgressiveGrid
-            heading={`Guides published ${editionDate(release.date)}`}
-            surface={`new-guides-${release.date}`}
-          >
-            {orderRelease(release.guides).map((item) => (
-              <ExperienceCard item={item} key={item.id} />
-            ))}
-          </ProgressiveGrid>
-        </section>
-      ))}
+      <NewGuideBrowser
+        today={today}
+        allPlaces={experiences.map(
+          ({ id, slug, title, field, countrySlug, regionSlug }) => ({
+            id,
+            slug,
+            title,
+            field,
+            countrySlug,
+            regionSlug,
+          }),
+        )}
+        items={entries.map(
+          ({
+            item: { id, slug, title, field, countrySlug, regionSlug, country },
+            date,
+          }) => ({
+            id,
+            slug,
+            title,
+            field,
+            countrySlug,
+            regionSlug,
+            country,
+            date,
+            dateLabel: editionDate(date),
+          }),
+        )}
+      >
+        {entries.map(({ item }) => (
+          <ExperienceCard item={item} key={item.id} />
+        ))}
+      </NewGuideBrowser>
       <p className="section-note">
         This release log starts with the 12 September 2026 edition. Earlier
         guides remain in Compass. A source check is not counted as a new

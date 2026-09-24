@@ -200,8 +200,9 @@ export function curateHome(
   pathways: readonly EditorialPathway[],
   hero: PublicExperience[] = selectHomeHero(items),
   today = new Date().toISOString().slice(0, 10),
+  reservedImages: string[] = [],
 ) {
-  const usedImages = new Set<string>();
+  const usedImages = new Set<string>(reservedImages);
   const claim = (item: PublicExperience) => {
     const key = item.image || item.id;
     if (usedImages.has(key)) return false;

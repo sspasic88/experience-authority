@@ -47,6 +47,24 @@ test("home curation gives every visible photograph one position", () => {
   );
 });
 
+test("destination photographs are reserved from new guides, collections and later journal choices", () => {
+  const reserved = publicGuides.slice(-12).flatMap((item) => item.image ?? []);
+  const home = curateHome(
+    publicGuides,
+    editorialPathways,
+    selectHomeHero(publicGuides),
+    "2026-09-24",
+    reserved,
+  );
+  for (const item of [
+    ...home.newGuides,
+    ...home.homePathways.map((entry) => entry.item),
+  ]) {
+    assert.ok(!reserved.includes(item.image!));
+  }
+  assert.ok(reserved.every((image) => home.usedImages.has(image)));
+});
+
 test("the homepage hero follows a stable, hand-curated three-hour rotation", () => {
   const date = "2026-09-12";
   const index = homeHeroRotationIndex(date);

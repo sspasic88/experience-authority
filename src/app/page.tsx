@@ -23,6 +23,8 @@ import { HomeHero } from "@/components/home-hero";
 import { PassportReturn } from "@/components/passport-return";
 import { currentDiscovery, editionDate } from "@/lib/daily-discovery";
 import { chapterHref, resolveCityChapters } from "@/lib/city-chapters";
+import { publishedReleases } from "@/lib/releases";
+import { withinPublicationWeek } from "@/lib/discovery-choices";
 import {
   pageMetadata,
   SITE_DESCRIPTION,
@@ -40,18 +42,15 @@ export default function Home() {
   const discovery = currentDiscovery(experiences);
   const chapters = resolveCityChapters(experiences);
   const day = Math.floor(Date.now() / 86400000);
+  const today = new Date().toISOString().slice(0, 10);
+  const weekCount = publishedReleases(experiences, today)
+    .filter((release) => withinPublicationWeek(release.date, today))
+    .reduce((sum, release) => sum + release.guides.length, 0);
   const chapterOffset = (day * 4) % Math.max(chapters.length, 1);
   const featuredChapters = [
     ...chapters.slice(chapterOffset),
     ...chapters.slice(0, chapterOffset),
-  ].slice(0, 4);
-  const featuredChapterCards = featuredChapters.flatMap((chapter) => {
-    const stop = chapter.stops.find(({ item }) => {
-      return Boolean(item.image && guideMediaFor(item.id));
-    });
-    const media = stop && guideMediaFor(stop.item.id);
-    return stop && media ? [{ chapter, media }] : [];
-  });
+  ];
   const initialHeroIndex = homeHeroRotationIndex();
   const editions = resolveHomeHeroEditions(experiences);
   const availableHeroEditions = editions.length
@@ -59,10 +58,27 @@ export default function Home() {
     : [selectHomeHero(experiences)];
   const hero =
     availableHeroEditions[initialHeroIndex % availableHeroEditions.length];
+  const coverImages = new Set(
+    availableHeroEditions.flat().map((item) => item.image),
+  );
+  const featuredChapterCards = featuredChapters
+    .flatMap((chapter) => {
+      const stop = chapter.stops.find(({ item }) =>
+        Boolean(
+          item.image && !coverImages.has(item.image) && guideMediaFor(item.id),
+        ),
+      );
+      const media = stop && guideMediaFor(stop.item.id);
+      if (media) coverImages.add(media.src);
+      return stop && media ? [{ chapter, media }] : [];
+    })
+    .slice(0, 4);
   const { newGuides, homePathways, usedImages } = curateHome(
     experiences,
     editorialPathways,
     hero,
+    today,
+    featuredChapterCards.map(({ media }) => media.src),
   );
   const journal = getJournalArticles(experiences).flatMap((article) => {
     const guide = article.guides.find(
@@ -190,7 +206,11 @@ export default function Home() {
       {newGuides.length > 0 && (
         <section className="section wrap">
           <SectionHeading
-            eyebrow="Recently published"
+            eyebrow={
+              weekCount
+                ? `${weekCount} new guides in the past 7 days`
+                : "Recently published"
+            }
             title="Something you hadn't thought of."
             href="/new"
             link="All new guides"

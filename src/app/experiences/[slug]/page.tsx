@@ -14,6 +14,7 @@ import { getExperience, getExperiences } from "@/lib/data";
 import { guideMediaFor } from "@/lib/media";
 import { PhotoViewer } from "@/components/photo-viewer";
 import { ShareButton } from "@/components/share-button";
+import { SaveJourney } from "@/components/save-journey";
 import { StructuredData } from "@/components/structured-data";
 import { connectedExperiences } from "@/lib/catalog";
 import { resolveCityChapters, chapterHref } from "@/lib/city-chapters";
@@ -60,6 +61,10 @@ export default async function Experience({ params }: Props) {
     chapter.stops.some((stop) => stop.slug === item.slug),
   );
   const structuredData = guideStructuredData(item);
+  const localPair = connections.find(
+    (connection) =>
+      connection.scope === "same_area" || connection.scope === "connected_area",
+  );
   return (
     <div className="experience-page">
       {structuredData && <StructuredData data={structuredData} />}
@@ -385,9 +390,38 @@ export default async function Experience({ params }: Props) {
                   {label} <span aria-hidden="true">↗</span>
                 </Link>
                 <ExperienceCard item={entry} index={index} />
+                {chapter?.stops.find((stop) => stop.slug === entry.slug)
+                  ?.why && (
+                  <p className="connection-reason">
+                    {
+                      chapter.stops.find((stop) => stop.slug === entry.slug)!
+                        .why
+                    }
+                  </p>
+                )}
               </div>
             ))}
           </div>
+          {localPair && (
+            <div className="local-pair-save">
+              <div>
+                <p className="eyebrow">Start with a pair</p>
+                <h3>Give your visit another dimension.</h3>
+                <p>
+                  Keep this guide together with{" "}
+                  <Link
+                    className="text-link"
+                    href={`/experiences/${localPair.item.slug}`}
+                  >
+                    {localPair.item.title}
+                  </Link>
+                  . Arrange your days in Passport, with separate bookings and
+                  travel to check.
+                </p>
+              </div>
+              <SaveJourney ids={[item.id, localPair.item.id]} />
+            </div>
+          )}
           {chapter && (
             <p className="chapter-jumps">
               <Link className="text-link" href={chapterHref(chapter)}>

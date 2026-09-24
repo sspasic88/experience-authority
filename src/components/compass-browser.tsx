@@ -20,6 +20,7 @@ import {
   type FinderQuery,
 } from "@/lib/experience-finder";
 import { trackEaEvent } from "@/lib/analytics";
+import { SurpriseDiscovery, type SurpriseItem } from "./surprise-discovery";
 
 const starterDirections: { label: string; next: FinderQuery }[] = [
   {
@@ -46,10 +47,12 @@ export function CompassBrowser({
   items,
   initialQuery,
   children,
+  surpriseItems = [],
 }: {
   items: FinderItem[];
   initialQuery: FinderQuery;
   children: ReactNode;
+  surpriseItems?: SurpriseItem[];
 }) {
   const [query, setQuery] = useState(initialQuery);
   const [hydrated, setHydrated] = useState(false);
@@ -81,6 +84,7 @@ export function CompassBrowser({
             "mode",
             "time",
             "view",
+            "surprise",
           ].map((key) => [key, params.get(key) || ""]),
         ),
       );
@@ -97,6 +101,11 @@ export function CompassBrowser({
     [items, query],
   );
   const visibleMatches = matches.slice(0, visibleCount);
+  const surprise = query.surprise === "1";
+  const surpriseMatches = matches.flatMap(({ item, index }) => {
+    const choice = surpriseItems.find((entry) => entry.slug === item.slug);
+    return choice ? [{ choice, index }] : [];
+  });
   useEffect(() => {
     setVisibleCount(resultsPageSize);
   }, [
@@ -353,29 +362,51 @@ export function CompassBrowser({
           {matches.length} {matches.length === 1 ? "way" : "ways"} in
           {query.q && ` for “${query.q}”`}
         </span>
-        <nav className="view-switch" aria-label="Results view">
-          {(["grid", "list"] as const).map((view) => (
-            <a
-              key={view}
-              href={finderUrl({ ...query, view })}
-              aria-label={`${view === "grid" ? "Grid" : "List"} view`}
-              aria-current={
-                (query.view === "list" ? "list" : "grid") === view
-                  ? "page"
-                  : undefined
-              }
-              onClick={(event) => {
-                event.preventDefault();
-                change({ ...query, view });
-              }}
-            >
-              {view === "grid" ? <LayoutGrid size={15} /> : <List size={15} />}
-              {view === "grid" ? "Grid" : "List"}
-            </a>
-          ))}
-        </nav>
+        <button
+          className="discovery-toggle"
+          type="button"
+          aria-pressed={surprise}
+          onClick={() => change({ ...query, surprise: surprise ? "" : "1" })}
+        >
+          {surprise ? "Back to all matches" : "Surprise me"}{" "}
+          <ArrowRight size={16} aria-hidden="true" />
+        </button>
+        {!surprise && (
+          <nav className="view-switch" aria-label="Results view">
+            {(["grid", "list"] as const).map((view) => (
+              <a
+                key={view}
+                href={finderUrl({ ...query, view })}
+                aria-label={`${view === "grid" ? "Grid" : "List"} view`}
+                aria-current={
+                  (query.view === "list" ? "list" : "grid") === view
+                    ? "page"
+                    : undefined
+                }
+                onClick={(event) => {
+                  event.preventDefault();
+                  change({ ...query, view });
+                }}
+              >
+                {view === "grid" ? (
+                  <LayoutGrid size={15} />
+                ) : (
+                  <List size={15} />
+                )}
+                {view === "grid" ? "Grid" : "List"}
+              </a>
+            ))}
+          </nav>
+        )}
       </div>
-      {matches.length ? (
+      {surprise ? (
+        <SurpriseDiscovery
+          key={JSON.stringify({ ...query, view: "" })}
+          items={surpriseMatches.map(({ choice }) => choice)}
+        >
+          {surpriseMatches.map(({ index }) => cards[index])}
+        </SurpriseDiscovery>
+      ) : matches.length ? (
         <div
           className={`experience-grid ${query.view === "list" ? "list-view" : ""}`}
         >
@@ -400,7 +431,7 @@ export function CompassBrowser({
           <Link href="/collections">Or follow an editorial thread ↗</Link>
         </div>
       )}
-      {visibleMatches.length < matches.length && (
+      {!surprise && visibleMatches.length < matches.length && (
         <div className="compass-load-more">
           <p>
             Showing {visibleMatches.length} of {matches.length} ways in

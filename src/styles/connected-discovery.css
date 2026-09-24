@@ -1,0 +1,216 @@
+/* Discovery tools extend the existing paper, ink and vermilion palette. */
+.discovery-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 9px 14px;
+  border: 1px solid var(--ea-night);
+  background: transparent;
+  color: var(--ea-night);
+  font-weight: 650;
+}
+.discovery-toggle:hover,
+.discovery-toggle[aria-pressed="true"] {
+  color: var(--ea-paper);
+  background: var(--ea-night);
+}
+.surprise-discovery {
+  margin-block: 24px 64px;
+  padding: clamp(24px, 4vw, 56px);
+  background: var(--ea-white);
+  border: 1px solid var(--ea-line);
+}
+.surprise-discovery.has-discovery {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "invitation photo" "practical photo";
+  align-items: start;
+  gap: clamp(24px, 5vw, 72px);
+}
+.surprise-invitation {
+  max-width: 620px;
+  grid-area: invitation;
+}
+.surprise-invitation h2 {
+  margin: 16px 0;
+  font-size: clamp(2rem, 3.4vw, 3.25rem);
+  text-wrap: balance;
+}
+.surprise-invitation > p:not(.eyebrow) {
+  color: var(--ea-stone);
+}
+.surprise-invitation > button {
+  margin-top: 24px;
+}
+.surprise-discovery button:disabled {
+  cursor: default;
+}
+.surprise-practical {
+  grid-area: practical;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--ea-line);
+  display: grid;
+  gap: 16px;
+}
+.surprise-practical dl {
+  margin: 0;
+  display: grid;
+  gap: 16px;
+}
+.surprise-practical dt {
+  font-weight: 650;
+}
+.surprise-practical dd {
+  margin: 4px 0 0;
+  color: var(--ea-stone);
+}
+.surprise-card {
+  min-width: 0;
+  grid-area: photo;
+}
+.surprise-card .experience-card {
+  border: 0;
+}
+.surprise-card .card-image {
+  aspect-ratio: 4 / 3;
+}
+.surprise-card .card-number {
+  display: none;
+}
+.local-planning-filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+  padding-block: 20px;
+}
+.local-planning-filters label {
+  display: grid;
+  gap: 8px;
+  color: var(--ea-night);
+  font-size: var(--ea-type-body-small);
+  font-weight: 650;
+}
+.local-planning-filters select {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 10px 32px 10px 12px;
+  border: 1px solid var(--ea-stone);
+  border-radius: 0;
+  background: var(--ea-paper);
+  color: var(--ea-night);
+  font-size: 16px;
+  font-weight: 400;
+}
+.local-planning-filters > p {
+  grid-column: 1 / -1;
+  color: var(--ea-stone);
+  font-size: var(--ea-type-body-small);
+}
+.new-guide-tools {
+  padding: clamp(20px, 3vw, 36px);
+  border: 1px solid var(--ea-line);
+  background: var(--ea-white);
+}
+.new-guide-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.new-guide-summary strong {
+  font-size: 1.5rem;
+}
+.new-guide-filters {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.new-filter-disclosure {
+  margin-block: 12px;
+}
+.new-filter-disclosure summary {
+  min-height: 44px;
+  padding-block: 12px;
+  cursor: pointer;
+  font-weight: 650;
+  color: var(--ea-night);
+}
+.new-personal {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ea-line);
+}
+.new-personal p {
+  flex: 1 1 260px;
+  max-width: 650px;
+  color: var(--ea-stone);
+  font-size: var(--ea-type-body-small);
+}
+.new-personal button[aria-pressed="true"] {
+  background: var(--ea-night);
+  color: var(--ea-paper);
+}
+.passport-return-links {
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+}
+.connection-reason {
+  margin: 18px 0 0;
+  color: var(--ea-stone);
+  font-size: var(--ea-type-body-small);
+}
+.local-pair-save {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 28px;
+  padding: 28px;
+  margin-top: 32px;
+  background: var(--ea-white);
+  border: 1px solid var(--ea-line);
+}
+.local-pair-save h3 {
+  margin: 12px 0;
+  font-size: clamp(1.65rem, 2.5vw, 2.2rem);
+}
+.local-pair-save p:not(.eyebrow) {
+  color: var(--ea-stone);
+}
+.local-pair-save .journey-actions {
+  align-content: center;
+}
+@media (max-width: 700px) {
+  .surprise-discovery.has-discovery,
+  .local-pair-save {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .surprise-discovery.has-discovery {
+    grid-template-areas: "invitation" "photo" "practical";
+  }
+  .surprise-discovery {
+    padding: 20px;
+  }
+  .surprise-invitation h2 {
+    font-size: 2rem;
+  }
+  .new-guide-filters {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .local-pair-save {
+    padding: 20px;
+  }
+  .compass-browser .results-line {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+@media (max-width: 420px) {
+  .local-planning-filters {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
