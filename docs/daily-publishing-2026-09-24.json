@@ -1,7 +1,7 @@
 {
   "date": "2026-09-24",
   "baseCommit": "83f1632d007f851bbff9c916582ef25b70c752b3",
-  "status": "local-verification-complete-awaiting-deployment",
+  "status": "published-and-verified",
   "authoredCountBefore": 172,
   "authoredCountAfter": 190,
   "publicEligibleCountBefore": 171,
@@ -1118,6 +1118,33 @@
     ]
   },
   "productionVerification": {
-    "status": "not-deployed"
+    "status": "published-and-verified",
+    "verifiedOn": "2026-09-24",
+    "contentCommit": "440a6f0452bb90e80323c6128d0dc3da46ae4177",
+    "deploymentStatus": "success",
+    "deploymentUrl": "https://vercel.com/sspasic/experience-authority/B9aQ8kEMSzBQgLkjpvpELQo7rThA",
+    "siteUrl": "https://experienceauthority.com",
+    "newPublicGuides": 18,
+    "publicEligibleGuides": 189,
+    "newGuideChecks": {
+      "httpStatus": "all-200",
+      "canonical": "passed",
+      "structuredData": "passed-including-ImageObject",
+      "sitemapInclusion": "passed",
+      "photographs": "all-200-and-browser-decoded",
+      "imageEdition": "4f1f9e718d22"
+    },
+    "responsiveAudit": { "views": 94, "widths": [390, 1440], "internalLinksPerRun": 522, "failures": 0 },
+    "interactions": "Hero rotation, varied suggestions, image credits, local complementary guides, save persistence, image navigation, compare, search, city filtering, mobile navigation and Escape passed.",
+    "seoAudit": { "sitemapRoutes": 491, "duplicateTitles": 0, "duplicateDescriptions": 0, "failures": 0 },
+    "smokeAudit": { "routes": 265, "expectedNotFoundRoutes": 11, "uniqueCspNonces": 265, "failures": 0 },
+    "analyticsAudit": {
+      "beforeConsentRequests": 0,
+      "grantLoadedGoogleTag": true,
+      "queryAndPrivateDataExcluded": true,
+      "revocationReloadedWithoutGoogle": true,
+      "accessibilityViolations": 0
+    },
+    "visualReview": "Live home and Today screenshots reviewed at 390 and 1440 pixels. All eighteen new guide crops were individually reviewed before deployment, and live responsive checks confirmed image decoding, credits, accessibility and overflow. No AI-generated photographs were used."
   }
 }
