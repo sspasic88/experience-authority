@@ -1,7 +1,7 @@
 {
   "date": "2026-09-25",
   "baseCommit": "e2879126ff669f23d786a2b716d047a21cd7dbe5",
-  "status": "local-qa-passed-pending-deploy",
+  "status": "published-and-verified",
   "authoredCountBefore": 190,
   "authoredCountAfter": 208,
   "publicEligibleCountBefore": 189,
@@ -573,6 +573,46 @@
     "visualReview": "All eighteen new guide hero crops reviewed side by side at mobile and desktop widths. Home, Today, Compass, New and local planning inspected. Corrected two duplicate Wikimedia source labels before release."
   },
   "productionVerification": {
-    "status": "pending"
+    "status": "passed",
+    "checkedOn": "2026-09-25",
+    "contentCommit": "82a2c9a2fbdb2a5472c6b1ba614981152295d000",
+    "deployment": "https://vercel.com/sspasic/experience-authority/J1RgRxJrEAZYChor7p355tqi5fTU",
+    "vercelStatus": "success",
+    "domain": "https://experienceauthority.com",
+    "netNewPublicGuides": 18,
+    "primaryGuidesPerInterest": 3,
+    "imageEdition": "9fbdf3847d7d",
+    "newGuideChecks": {
+      "passed": 18,
+      "httpStatus": 200,
+      "canonical": "passed",
+      "indexability": "passed",
+      "sitemapInclusion": "passed",
+      "articleAndImageSchema": "passed",
+      "sourceCitations": "passed",
+      "imageResponses": "18 successful nonempty image responses",
+      "duplicateCreditLabels": 0
+    },
+    "responsiveAudit": {
+      "views": 94,
+      "widths": [390, 1440],
+      "internalLinksPerWidth": 532,
+      "failures": 0,
+      "interactions": "Hero rotation, home suggestions, direct image credits, complementary local guides, save persistence, image links, comparison, search, city filters, mobile menu and Escape passed."
+    },
+    "seoAudit": {
+      "sitemapRoutes": 520,
+      "duplicateTitles": 0,
+      "duplicateDescriptions": 0,
+      "failures": 0
+    },
+    "analyticsConsentAudit": {
+      "requestsBeforeConsent": 0,
+      "tagLoadedAfterConsent": true,
+      "queryAndPrivateDataExcluded": true,
+      "revocationReloadedWithoutGoogle": true,
+      "accessibilityViolations": 0,
+      "testTraffic": "Google requests intercepted and aborted in the test browser."
+    }
   }
 }
