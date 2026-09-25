@@ -75,7 +75,7 @@ try {
     await visit(page, "/explore");
     await expect(page.locator(".experience-card")).toHaveCount(18);
     // One older event-led guide is past its review window and fails the live gate.
-    await expect(page.locator(".results-line")).toContainText("189 ways in");
+    await expect(page.locator(".results-line")).toContainText("207 ways in");
     for (const slug of [
       "build-hudut-from-the-coconut-outward",
       "meet-the-largest-fish-on-its-terms",

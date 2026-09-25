@@ -1,0 +1,578 @@
+{
+  "date": "2026-09-25",
+  "baseCommit": "e2879126ff669f23d786a2b716d047a21cd7dbe5",
+  "status": "local-qa-passed-pending-deploy",
+  "authoredCountBefore": 190,
+  "authoredCountAfter": 208,
+  "publicEligibleCountBefore": 189,
+  "publicEligibleCountAfter": 207,
+  "countriesAfter": 107,
+  "quota": {
+    "eat-drink": [
+      "follow-the-mung-bean-to-the-hot-pan",
+      "taste-lyon-one-market-counter-at-a-time",
+      "taste-what-changes-inside-a-spoonful"
+    ],
+    "make-learn": [
+      "give-delft-blue-a-line-of-your-own",
+      "build-a-scent-one-decision-at-a-time",
+      "make-a-lunch-you-cannot-eat"
+    ],
+    "move-water": [
+      "paddle-below-waterlands-low-bridges",
+      "join-vancouvers-edges-by-bicycle",
+      "see-table-mountain-from-a-kayak"
+    ],
+    "explore-reflect": [
+      "look-for-the-life-too-small-to-see",
+      "read-the-stream-beneath-seouls-streets",
+      "let-the-garden-be-introduced-through-country"
+    ],
+    "swim-reset": [
+      "meet-baths-warm-water-under-open-sky",
+      "give-baden-three-hours-of-warm-water",
+      "let-oslos-waterline-set-a-slower-pace"
+    ],
+    "shared-rituals": [
+      "let-the-caller-bring-you-into-the-dance",
+      "give-lunch-half-an-hour-of-listening",
+      "begin-kabuki-with-a-single-act"
+    ]
+  },
+  "method": "Existing catalogue, rejected candidates, original 200-candidate reconciliation, previous daily runs and git history reviewed before research. Each guide counts in exactly one primary interest. These are public-source desk guides, not EA Selected, on-site reviews, local validation, partnerships or EA bookings.",
+  "integration": {
+    "newCountries": [],
+    "newCityChapters": [
+      "amsterdam-waterland",
+      "seoul"
+    ],
+    "cityChaptersAfter": 21,
+    "futureDiscoveryDates": [
+      "2026-09-26",
+      "2026-09-28"
+    ],
+    "originalCandidateMappingsChanged": false,
+    "improvements": [
+      "Within each geographic tier, a contrasting activity now outranks a same-field match sharing a collection and an interest.",
+      "Surprise browser regression derives the available pool size instead of assuming Tokyo always contains three guides.",
+      "New guides enter Compass, interest and destination pages, collections, dated releases, sitemap, Article/ImageObject data and Passport through existing publication contracts."
+    ]
+  },
+  "sourceVerification": {
+    "checkedOn": "2026-09-25",
+    "notes": [
+      "Primary sources read in English, French, Dutch, Japanese and Korean-language context. Same-operator sources are not described as independent verification.",
+      "Every public source URL was re-requested. Royal Delft returns 403 to the plain research fetch but its official workshop page was readable through web browsing with a fresh same-day crawl. Its age, schedule, shipping and no-collection terms were checked there. No access control was bypassed.",
+      "Royal Delft's older tourism calendar is not used for current departures. Galimard's current French booking terms override older English prices. The Gardens' current ninety-minute walk overrides older City of Melbourne duration and prices.",
+      "Concertgebouw's next September performance is sold out, but future public lunchtime dates and ticket-release times are published. The guide describes the recurring system, not an available ticket for that date.",
+      "Kabukiza's September dates are not recycled as October availability. The evergreen single-act system has a short recheck window and requires the reader to use the current monthly notice."
+    ]
+  },
+  "guides": [
+    {
+      "id": "seoul-gwangjang-bindaetteok",
+      "slug": "follow-the-mung-bean-to-the-hot-pan",
+      "url": "https://experienceauthority.com/experiences/follow-the-mung-bean-to-the-hot-pan",
+      "place": "Seoul",
+      "country": "South Korea",
+      "field": "taste",
+      "readerValue": "At Seoul's Gwangjang Market, let a freshly fried bindaetteok connect the grinding stone, the batter and the first crisp mouthful.",
+      "reviewBy": "2026-12-24",
+      "sources": [
+        {
+          "title": "VISITKOREA: Soonheenae Bindaetteok",
+          "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=194106",
+          "note": "National tourism listing for the counter, mung-bean preparation, ingredients, address and hours."
+        },
+        {
+          "title": "Visit Seoul: Gwangjang Market",
+          "url": "https://english.visitseoul.net/PalaceArea/Gwangjang-Market/ENP000286",
+          "note": "Market context, public food-alley access and transport. General market hours are not every stall's hours."
+        }
+      ]
+    },
+    {
+      "id": "lyon-halles-tasting",
+      "slug": "taste-lyon-one-market-counter-at-a-time",
+      "url": "https://experienceauthority.com/experiences/taste-lyon-one-market-counter-at-a-time",
+      "place": "Lyon",
+      "country": "France",
+      "field": "taste",
+      "readerValue": "Turn a walk through Les Halles into a sequence of tastes, from savoury counters to the pink sweetness of praline tart.",
+      "reviewBy": "2026-12-24",
+      "sources": [
+        {
+          "title": "ONLYLYON: Food Tour Les Halles",
+          "url": "https://boutique.visiterlyon.com/food-tour-les-halles-2h30.html",
+          "note": "Public booking, duration, five stops, departure threshold, dietary exclusions and meeting instructions."
+        },
+        {
+          "title": "Halles de Lyon Paul Bocuse",
+          "url": "https://www.halles-de-lyon-paulbocuse.com/",
+          "note": "The market's own venue and trader context, distinct from the booked tour."
+        }
+      ]
+    },
+    {
+      "id": "bologna-gelatology",
+      "slug": "taste-what-changes-inside-a-spoonful",
+      "url": "https://experienceauthority.com/experiences/taste-what-changes-inside-a-spoonful",
+      "place": "Anzola dell'Emilia, near Bologna",
+      "country": "Italy",
+      "field": "taste",
+      "readerValue": "Near Bologna, compare gelato with a little history behind the spoon at the Carpigiani Gelato Museum.",
+      "reviewBy": "2026-12-24",
+      "sources": [
+        {
+          "title": "Gelato Museum: Gelatology",
+          "url": "https://www.gelatomuseum.com/en/book-your-gelato-experience/gelatology-300",
+          "note": "Specific ninety-minute programme, comparative tasting and confirmation-based booking."
+        },
+        {
+          "title": "Carpigiani Gelato Museum",
+          "url": "https://www.gelatomuseum.com/en",
+          "note": "Museum location and separate visit formats. Making is not inferred from a tasting booking."
+        }
+      ]
+    },
+    {
+      "id": "delft-tile-painting",
+      "slug": "give-delft-blue-a-line-of-your-own",
+      "url": "https://experienceauthority.com/experiences/give-delft-blue-a-line-of-your-own",
+      "place": "Delft",
+      "country": "Netherlands",
+      "field": "make",
+      "readerValue": "At Royal Delft, use a brush on a ceramic tile and discover how much attention a small decorative line can ask for.",
+      "reviewBy": "2026-12-24",
+      "sources": [
+        {
+          "title": "Royal Delft Museum: painting workshop",
+          "url": "https://museum.royaldelft.com/en/activities/painting-workshop/",
+          "note": "Current individual tile workshop, age, booking and shipping conditions."
+        },
+        {
+          "title": "InDelft: painting Delft blue",
+          "url": "https://www.indelft.nl/nl/uitagenda/uitagenda-delft/3701544212/schilderworkshop-delfts-blauw",
+          "note": "Destination context and documentary workshop photographs. Dated listing is not evidence of current availability."
+        }
+      ]
+    },
+    {
+      "id": "grasse-galimard-perfume",
+      "slug": "build-a-scent-one-decision-at-a-time",
+      "url": "https://experienceauthority.com/experiences/build-a-scent-one-decision-at-a-time",
+      "place": "Grasse",
+      "country": "France",
+      "field": "make",
+      "readerValue": "At a Grasse perfume studio, compare scent materials and assemble a personal eau de parfum with guidance.",
+      "reviewBy": "2026-12-24",
+      "sources": [
+        {
+          "title": "Galimard: individual creation in Grasse",
+          "url": "https://www.galimard.com/produit/atelier-de-creation-de-parfum-a-grasse-particuliers-2",
+          "note": "Current French booking details, studio address, age, duration, language choices and included bottle."
+        },
+        {
+          "title": "Galimard: Studio des Fragrances",
+          "url": "https://www.galimard.com/en/studio-des-fragrances",
+          "note": "Studio context and actual creation-workshop photograph. Current French booking terms control."
+        }
+      ]
+    },
+    {
+      "id": "tokyo-ganso-wax-food",
+      "slug": "make-a-lunch-you-cannot-eat",
+      "url": "https://experienceauthority.com/experiences/make-a-lunch-you-cannot-eat",
+      "place": "Tokyo",
+      "country": "Japan",
+      "field": "make",
+      "readerValue": "In Tokyo's kitchenware district, turn wax into tempura and lettuce at a food-replica workshop.",
+      "reviewBy": "2026-12-24",
+      "sources": [
+        {
+          "title": "Ganso Sample-ya: Kappabashi experience",
+          "url": "https://www.ganso-sample.com/en/shop/kappabashi/experience/",
+          "note": "Format, duration, age, safety, language limits and recording rules."
+        },
+        {
+          "title": "Ganso Sample-ya: current experience menu",
+          "url": "https://www.ganso-sample.com/experience/",
+          "note": "Japanese programme and booking options. Special menus are not silently substituted for the standard session."
+        }
+      ]
+    },
+    {
+      "id": "watergang-wetlands-canoe",
+      "slug": "paddle-below-waterlands-low-bridges",
+      "url": "https://experienceauthority.com/experiences/paddle-below-waterlands-low-bridges",
+      "place": "Watergang, Waterland",
+      "country": "Netherlands",
+      "field": "move",
+      "readerValue": "North of Amsterdam, follow a guide through narrow reed-lined channels where the next bridge sets the pace.",
+      "reviewBy": "2026-10-25",
+      "sources": [
+        {
+          "title": "Wetlands Safari: Fresh Air canoe tour",
+          "url": "https://www.wetlandssafari.nl/nl/english/2025-2/",
+          "note": "Current two-hour programme, Watergang meeting address, age and departure pattern."
+        },
+        {
+          "title": "Wetlands Safari: questions and requirements",
+          "url": "https://www.wetlandssafari.nl/nl/english/tourinformatie/faq/",
+          "note": "Fitness, low bridges, weather and the distinction between guided tours and independent hire."
+        }
+      ]
+    },
+    {
+      "id": "vancouver-grand-cycle",
+      "slug": "join-vancouvers-edges-by-bicycle",
+      "url": "https://experienceauthority.com/experiences/join-vancouvers-edges-by-bicycle",
+      "place": "Vancouver",
+      "country": "Canada",
+      "field": "move",
+      "readerValue": "Link forest, seawall, market and city streets on a guided ride that gives Vancouver's separate views a continuous shape.",
+      "reviewBy": "2026-10-25",
+      "sources": [
+        {
+          "title": "Cycle City: Vancouver Grand Tour",
+          "url": "https://cyclevancouver.com/bike-tours/the-grand-tour/",
+          "note": "Specific public tour, route, duration, distance, equipment and meeting instructions."
+        },
+        {
+          "title": "Cycle City: visitor questions",
+          "url": "https://cyclevancouver.com/about/faqs/",
+          "note": "Advance booking, weather, bike fit and distinction between tour and rental addresses."
+        }
+      ]
+    },
+    {
+      "id": "cape-town-granger-kayak",
+      "slug": "see-table-mountain-from-a-kayak",
+      "url": "https://experienceauthority.com/experiences/see-table-mountain-from-a-kayak",
+      "place": "Cape Town",
+      "country": "South Africa",
+      "field": "move",
+      "readerValue": "Paddle with a guide from Granger Bay and let Cape Town's familiar mountain become the backdrop to a much smaller movement.",
+      "reviewBy": "2026-10-25",
+      "sources": [
+        {
+          "title": "Kayak Adventures: Cape Town kayaking",
+          "url": "https://kayakadventures.capetown/cape-town-kayaking",
+          "note": "Cape Town programme, duration, launch and exact meeting instructions."
+        },
+        {
+          "title": "Kayak Adventures: participation questions",
+          "url": "https://kayakadventures.capetown/faqs",
+          "note": "Age, weight, equipment and weather boundaries. Promotional safety language is not adopted as an EA assessment."
+        }
+      ]
+    },
+    {
+      "id": "amsterdam-micropia",
+      "slug": "look-for-the-life-too-small-to-see",
+      "url": "https://experienceauthority.com/experiences/look-for-the-life-too-small-to-see",
+      "place": "Amsterdam",
+      "country": "Netherlands",
+      "field": "learn",
+      "readerValue": "At Amsterdam's Micropia, use microscopes and living displays to make an ordinarily invisible world worth a longer look.",
+      "reviewBy": "2026-12-24",
+      "sources": [
+        {
+          "title": "ARTIS: Micropia",
+          "url": "https://www.artis.nl/en/artis-micropia",
+          "note": "Microbe museum, visitor experience, recommended age, opening hours and laboratory talks."
+        },
+        {
+          "title": "ARTIS: Micropia tickets",
+          "url": "https://dagtickets.artis.nl/kaartjes-kopen/micropia",
+          "note": "Separate Micropia ticket route. No zoo admission or talk language is assumed."
+        }
+      ]
+    },
+    {
+      "id": "seoul-cheonggyecheon-museum",
+      "slug": "read-the-stream-beneath-seouls-streets",
+      "url": "https://experienceauthority.com/experiences/read-the-stream-beneath-seouls-streets",
+      "place": "Seoul",
+      "country": "South Korea",
+      "field": "learn",
+      "readerValue": "Begin at Cheonggyecheon Museum, then look at the waterway with its covered-over years and later reconstruction in mind.",
+      "reviewBy": "2026-12-24",
+      "sources": [
+        {
+          "title": "Seoul Museum of History: Cheonggyecheon Museum",
+          "url": "https://museum.seoul.go.kr/eng/about/annex/cheongGyeMuse.jsp",
+          "note": "Official annex history, exhibition scope, location and documentary building image."
+        },
+        {
+          "title": "Visit Seoul: Cheonggyecheon Museum",
+          "url": "https://english.visitseoul.net/attractions/Cheonggyecheon%20Museum/ENP004693",
+          "note": "Official destination visitor listing and admission hours. Outdoor access remains separate."
+        }
+      ]
+    },
+    {
+      "id": "melbourne-aboriginal-garden-walk",
+      "slug": "let-the-garden-be-introduced-through-country",
+      "url": "https://experienceauthority.com/experiences/let-the-garden-be-introduced-through-country",
+      "place": "Melbourne",
+      "country": "Australia",
+      "field": "learn",
+      "readerValue": "Join a First Peoples guide at Melbourne's Royal Botanic Gardens and listen for relationships that a plant label cannot provide.",
+      "reviewBy": "2026-11-25",
+      "sources": [
+        {
+          "title": "Royal Botanic Gardens Victoria: Aboriginal Heritage Walk",
+          "url": "https://www.rbg.vic.gov.au/melbourne-gardens/whats-on-melbourne/aboriginal-heritage-walk/",
+          "note": "Current First Peoples-led programme, duration, schedule and meeting point."
+        },
+        {
+          "title": "City of Melbourne: Aboriginal Heritage Walk",
+          "url": "https://whatson.melbourne.vic.gov.au/things-to-do/aboriginal-heritage-walk",
+          "note": "Destination context and programme photograph. Primary operator details take precedence over older prices and duration."
+        }
+      ]
+    },
+    {
+      "id": "bath-thermae-welcome",
+      "slug": "meet-baths-warm-water-under-open-sky",
+      "url": "https://experienceauthority.com/experiences/meet-baths-warm-water-under-open-sky",
+      "place": "Bath",
+      "country": "United Kingdom",
+      "field": "restore",
+      "readerValue": "Leave time between the indoor pool and the rooftop at Thermae Bath Spa, where the city stays in view while the pace changes.",
+      "reviewBy": "2026-12-24",
+      "sources": [
+        {
+          "title": "Thermae Bath Spa: visitor questions",
+          "url": "https://www.thermaebathspa.com/news-info/FAQs",
+          "note": "Main-spa age, booking, bathing rules and practical restrictions."
+        },
+        {
+          "title": "Thermae Bath Spa: current spa experience",
+          "url": "https://www.thermaebathspa.com/",
+          "note": "Thermae Welcome, modern pools and separate treatment offering."
+        }
+      ]
+    },
+    {
+      "id": "baden-fortyseven-pools",
+      "slug": "give-baden-three-hours-of-warm-water",
+      "url": "https://experienceauthority.com/experiences/give-baden-three-hours-of-warm-water",
+      "place": "Baden",
+      "country": "Switzerland",
+      "field": "restore",
+      "readerValue": "In Swiss Baden, move between FORTYSEVEN's thermal pools without turning rest into another schedule to keep.",
+      "reviewBy": "2026-12-24",
+      "sources": [
+        {
+          "title": "FORTYSEVEN: admission and pricing",
+          "url": "https://www.fortyseven.ch/en/pricing",
+          "note": "Time-based entry, inclusions and age conditions. Prices vary by ticket."
+        },
+        {
+          "title": "FORTYSEVEN: house rules",
+          "url": "https://www.fortyseven.ch/en/hausordnung",
+          "note": "Bathing, supervision, clothing, sauna and conduct boundaries."
+        },
+        {
+          "title": "FORTYSEVEN: visit and contact",
+          "url": "https://www.fortyseven.ch/en/contact",
+          "note": "Location, accessibility information and current arrival details."
+        }
+      ]
+    },
+    {
+      "id": "oslo-kok-shared-sauna",
+      "slug": "let-oslos-waterline-set-a-slower-pace",
+      "url": "https://experienceauthority.com/experiences/let-oslos-waterline-set-a-slower-pace",
+      "place": "Oslo",
+      "country": "Norway",
+      "field": "restore",
+      "readerValue": "Share a dockside sauna session at KOK, with the fjord outside and no need to make a cold plunge the point.",
+      "reviewBy": "2026-10-25",
+      "sources": [
+        {
+          "title": "KOK: shared sauna",
+          "url": "https://koknorge.no/en/sauna-experiences/shared-sauna/",
+          "note": "Individual shared-session access, duration, locations and distinction from a cruise."
+        },
+        {
+          "title": "KOK: questions and answers",
+          "url": "https://koknorge.no/en/questions-and-answers-2/",
+          "note": "Supervision, equipment, changing, weather and conduct conditions. Health claims are not adopted."
+        }
+      ]
+    },
+    {
+      "id": "glasgow-sloans-ceilidh",
+      "slug": "let-the-caller-bring-you-into-the-dance",
+      "url": "https://experienceauthority.com/experiences/let-the-caller-bring-you-into-the-dance",
+      "place": "Glasgow",
+      "country": "United Kingdom",
+      "field": "gather",
+      "readerValue": "On a Friday at Sloans in Glasgow, a live band and called steps turn a ballroom into something you can join.",
+      "reviewBy": "2026-10-25",
+      "sources": [
+        {
+          "title": "Sloans: Friday Night Ceilidh",
+          "url": "https://www.sloansglasgow.co.uk/ceilidh",
+          "note": "Public Friday format, live band, instruction, minimum age and ticket options."
+        },
+        {
+          "title": "Sloans: ceilidh tickets",
+          "url": "https://www.sloansglasgow.co.uk/book-ceilidh-tickets",
+          "note": "Current booking route, 8.30pm start, venue address and card-only policy."
+        }
+      ]
+    },
+    {
+      "id": "amsterdam-lunchtime-concert",
+      "slug": "give-lunch-half-an-hour-of-listening",
+      "url": "https://experienceauthority.com/experiences/give-lunch-half-an-hour-of-listening",
+      "place": "Amsterdam",
+      "country": "Netherlands",
+      "field": "gather",
+      "readerValue": "At Amsterdam's Concertgebouw, a lunchtime ticket can open a short concert or rehearsal without asking you to surrender the whole day.",
+      "reviewBy": "2026-10-09",
+      "sources": [
+        {
+          "title": "Concertgebouw: lunchtime concerts",
+          "url": "https://www.concertgebouw.nl/lunchconcerten",
+          "note": "Primary dated programme, performance versus rehearsal, ticket-release dates and duration."
+        },
+        {
+          "title": "Concertgebouw: visitor questions",
+          "url": "https://www.concertgebouw.nl/veelgestelde-vragen",
+          "note": "Official route to current audience, accessibility, age, recording and ticket-charge policies. Individual event conditions still apply."
+        }
+      ]
+    },
+    {
+      "id": "tokyo-kabukiza-single-act",
+      "slug": "begin-kabuki-with-a-single-act",
+      "url": "https://experienceauthority.com/experiences/begin-kabuki-with-a-single-act",
+      "place": "Tokyo",
+      "country": "Japan",
+      "field": "gather",
+      "readerValue": "At Tokyo's Kabukiza, a limited single-act ticket lets you begin with one part of the programme rather than a full theatre day.",
+      "reviewBy": "2026-10-09",
+      "sources": [
+        {
+          "title": "Kabukiweb: single-act tickets",
+          "url": "https://www.kabukiweb.net/about/ticket/single-act-tickets/",
+          "note": "Primary explanation of the single-act system and links to current monthly notices."
+        },
+        {
+          "title": "Shochiku: single-act ticket service",
+          "url": "https://www.e-tix.jp/shochiku_makumi/en/",
+          "note": "Ticket-release timing, dedicated seating, monthly conditions and caption-device limits."
+        },
+        {
+          "title": "Kabukiweb: Kabukiza",
+          "url": "https://www.kabukiweb.net/theatres/kabukiza/",
+          "note": "Theatre location and programme context, not a guarantee of any particular act."
+        }
+      ]
+    }
+  ],
+  "rejectedOrDeferred": [
+    {
+      "candidate": "Reypenaer Amsterdam tasting room",
+      "reason": "Current direct tasting-room page did not establish a currently operating public on-site session. Older tourism listings are insufficient."
+    },
+    {
+      "candidate": "Mokuhankan Print Parties, Tokyo",
+      "reason": "Former programme page redirects and no current public class calendar was verified. Old workshop articles are not current access evidence."
+    },
+    {
+      "candidate": "Kayak Republic, Copenhagen",
+      "reason": "Direct current page served unrelated gambling content. Repeated previous rejection confirmed, not repackaged under a different title."
+    },
+    {
+      "candidate": "GreenKayak, Copenhagen",
+      "reason": "Current programme was entering its final seasonal week. A future season-specific guide needs fresh dates, swimming and participation-condition checks."
+    },
+    {
+      "candidate": "Fragonard perfume workshop, Paris",
+      "reason": "Current programme exists, but the booking widget did not provide sufficiently clear session detail in this review. Did not borrow duration from Grasse or Eze. Replaced with verified Galimard Grasse scope."
+    },
+    {
+      "candidate": "Te Puia Te Ra Haka, Rotorua",
+      "reason": "Public programme description found, but direct booking returned no available event series during inspection. Deferred without claiming permanent closure."
+    },
+    {
+      "candidate": "Henri Willig Warmoesstraat cheese tasting",
+      "reason": "Public tasting access was supported, but the retrieved brand photograph was low resolution and did not clearly establish this branch or tasting role. Replaced with Gwangjang."
+    }
+  ],
+  "photoReview": {
+    "generatedImages": 0,
+    "newLocalImages": 18,
+    "documentedLicenseImages": 2,
+    "officialSourceImages": 16,
+    "provenanceFile": "daily-edition-2026-09-25-photo-provenance.json",
+    "rightsBoundary": "Official-source reuse rights remain explicitly not independently cleared under the existing EA editorial image policy. Attribution is not represented as a license. CC images retain their license links and change notices.",
+    "rejectedAlternatives": [
+      "Lyon's extremely narrow macaron banner and tiny tour thumbnail. Selected a sharp real Jocteur counter from the market's own page, explicitly not a guaranteed tour stop.",
+      "Galimard's small Eze cologne thumbnail. Selected the actual creation studio image.",
+      "Melbourne's unrelated navigation image for another garden tour. Selected the city's programme-specific Heritage Walk image.",
+      "Oslo's uninformative close-up of splashing and a 12-pixel placeholder. Selected the full-sized shared-sauna deck photograph.",
+      "Delft's close-up of a plate was replaced with the wider participant workshop image, while the included item remains explicitly a tile.",
+      "Gelato ingredient photograph is described as ingredients, not an invented included tasting flight."
+    ]
+  },
+  "localVerification": {
+    "tests": {
+      "passed": 89,
+      "failed": 0
+    },
+    "typecheck": "passed",
+    "productionBuild": "passed-with-explicit-indexing-and-canonical-flags",
+    "responsiveAudit": {
+      "views": 141,
+      "widths": [
+        390,
+        768,
+        1440
+      ],
+      "internalLinks": 532,
+      "failures": 0
+    },
+    "visitorAudit": {
+      "checks": 21,
+      "widths": [
+        320,
+        390,
+        1440
+      ],
+      "failures": 0
+    },
+    "connectedDiscoveryAudit": {
+      "views": 32,
+      "widths": [
+        320,
+        390,
+        768,
+        1440
+      ],
+      "failures": 0
+    },
+    "seoAudit": {
+      "sitemapRoutes": 520,
+      "duplicateTitles": 0,
+      "duplicateDescriptions": 0,
+      "failures": 0
+    },
+    "smokeAudit": {
+      "routes": 265,
+      "expectedNotFoundRoutes": 11,
+      "uniqueCspNonces": 265,
+      "failures": 0
+    },
+    "visualReview": "All eighteen new guide hero crops reviewed side by side at mobile and desktop widths. Home, Today, Compass, New and local planning inspected. Corrected two duplicate Wikimedia source labels before release."
+  },
+  "productionVerification": {
+    "status": "pending"
+  }
+}

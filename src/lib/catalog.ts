@@ -1249,6 +1249,17 @@ const additionalRegionNames: Readonly<Record<string, string>> = {
   "madagascar/ambalavao": "Ambalavao",
   "vietnam/hanoi": "Hanoi",
   "france/paris": "Paris",
+  "france/lyon": "Lyon",
+  "france/grasse": "Grasse",
+  "italy/anzola-dellemilia": "Anzola dell'Emilia, near Bologna",
+  "netherlands/amsterdam": "Amsterdam",
+  "netherlands/watergang": "Watergang, Waterland",
+  "netherlands/delft": "Delft",
+  "canada/vancouver": "Vancouver",
+  "united-kingdom/bath": "Bath",
+  "united-kingdom/glasgow": "Glasgow",
+  "switzerland/baden": "Baden",
+  "norway/oslo": "Oslo",
   "france/arcachon-bay": "Arcachon Bay",
   "poland/krakow": "Kraków",
   "italy/rome": "Rome",
@@ -1390,7 +1401,9 @@ export function connectedExperiences(
         same_country: 200,
         editorial: 0,
       }[connection.scope];
-      const contrastWeight = other.field === item.field ? 0 : 30;
+      // Contrast must outrank a same-field match sharing both a pathway (24)
+      // and an interest (12), without crossing the 100-point geography tiers.
+      const contrastWeight = other.field === item.field ? 0 : 40;
       const pathwayWeight = sharedPathway ? 24 : 0;
       const interestWeight = sharedVisitorInterest ? 12 : 0;
       return {

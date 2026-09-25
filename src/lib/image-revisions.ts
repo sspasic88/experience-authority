@@ -1,6 +1,24 @@
 /** Content hashes keep replaced photographs consistent across responsive image caches.
  * The media test requires an update when an original file changes. */
 export const imageRevisions: Record<string, string> = {
+  "/images/guides/seoul-gwangjang-bindaetteok.jpg": "4d0a4ac0228d",
+  "/images/guides/lyon-halles-tasting.jpg": "3182e0964437",
+  "/images/guides/bologna-gelatology.jpg": "19efc19d14c2",
+  "/images/guides/delft-tile-painting.jpg": "6f02b7ca462d",
+  "/images/guides/grasse-galimard-perfume.jpg": "f7365b58865e",
+  "/images/guides/tokyo-ganso-wax-food.jpg": "124d8c62b103",
+  "/images/guides/watergang-wetlands-canoe.jpg": "8121ec918dda",
+  "/images/guides/vancouver-grand-cycle.jpg": "27bc511768d5",
+  "/images/guides/cape-town-granger-kayak.jpg": "d1c03757a57a",
+  "/images/guides/amsterdam-micropia.jpg": "ac64395afc27",
+  "/images/guides/seoul-cheonggyecheon-museum.jpg": "3bcd2308098c",
+  "/images/guides/melbourne-aboriginal-garden-walk.jpg": "7edbae403217",
+  "/images/guides/bath-thermae-welcome.jpg": "fb5bfec0fa34",
+  "/images/guides/baden-fortyseven-pools.jpg": "8d817e6949de",
+  "/images/guides/oslo-kok-shared-sauna.jpg": "b91e2e17e22c",
+  "/images/guides/glasgow-sloans-ceilidh.jpg": "bab8eb897978",
+  "/images/guides/amsterdam-lunchtime-concert.jpg": "d8b15f33021d",
+  "/images/guides/tokyo-kabukiza-single-act.jpg": "56c1a8a88bb2",
   "/images/guides/melbourne-qvm-counter.jpg": "88a35618b5f7",
   "/images/guides/taipei-wangtea-draft.jpg": "8d28294ebbb0",
   "/images/guides/mexico-city-mucho-room.jpg": "58d6b3bee1bd",
@@ -197,7 +215,7 @@ export const imageRevisions: Record<string, string> = {
 
 // A single manifest fingerprint fits Next's bounded localPatterns allowlist.
 // Tests require it to change when any original is added or replaced.
-export const imageEdition = "4f1f9e718d22";
+export const imageEdition = "9fbdf3847d7d";
 
 export function imageSource(src: string) {
   return imageRevisions[src] ? `${src}?v=${imageEdition}` : src;

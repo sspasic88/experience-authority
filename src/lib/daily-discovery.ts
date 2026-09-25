@@ -153,14 +153,14 @@ export const dailyDiscoveries: readonly Discovery[] = [
   },
   {
     date: "2026-09-26",
-    slug: "lift-a-pattern-from-the-water",
-    title: "The moment a surface becomes a souvenir.",
+    slug: "make-a-lunch-you-cannot-eat",
+    title: "The tempura is made of wax.",
     angle:
-      "In ebru, the colour is still floating until the paper meets it. An Istanbul introduction gives that change a scale you can watch closely. Pair it with a ferry crossing and you have two very different reasons to pay attention to water.",
+      "Tokyo's restaurant-window food models invite a second look when you have tried making one. At a short Kappabashi workshop, a change of movement gives wax the uneven edge of tempura or the folds of lettuce. Nothing is edible. That is precisely what makes the familiar shape worth looking at again.",
     notice:
-      "The transfer, and what it preserves or changes about the floating arrangement.",
+      "How texture becomes convincing. The session uses hot water and Japanese instruction, so read the language and safety requirements before booking.",
     question:
-      "Would you rather bring back a perfect object or remember the moment you made one?",
+      "What familiar object would surprise you if you had to recreate only its surface?",
   },
   {
     date: "2026-09-27",
@@ -175,14 +175,14 @@ export const dailyDiscoveries: readonly Discovery[] = [
   },
   {
     date: "2026-09-28",
-    slug: "watch-the-work-before-the-performance",
-    title: "Let the unfinished part hold your attention.",
+    slug: "look-for-the-life-too-small-to-see",
+    title: "An apparently empty world is not empty.",
     angle:
-      "A finished performance encourages us to wait for its most impressive moment. Vienna's publicly ticketed riding-school training asks for a different kind of looking. The repeated movement and the small adjustment are the reason to be there. Read the guide's welfare boundary before deciding whether this animal-based experience is for you.",
+      "At Amsterdam's Micropia, the most useful change is one of scale. A microscope and a living culture make something ordinarily invisible available to attention. Begin with one display and stay long enough to notice a difference. You do not need to see everything for the street outside to feel less empty afterwards.",
     notice:
-      "What changes between attempts, without assuming you can assess a training method from the audience.",
+      "The equipment that makes looking possible. This is a museum visit, not a medical test or a hands-on laboratory class.",
     question:
-      "When did you last choose to see the practice instead of the finished show?",
+      "What might change in a familiar place if you could look at it at another scale?",
   },
   {
     date: "2026-09-29",

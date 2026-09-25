@@ -16,6 +16,64 @@ export type CityChapter = {
 /** Authored local combinations. These are ideas to adapt, not timed or bookable packages. */
 export const cityChapters: readonly CityChapter[] = [
   {
+    slug: "amsterdam-waterland",
+    name: "Amsterdam and Waterland",
+    country: "netherlands",
+    regions: ["amsterdam", "watergang"],
+    title: "Look closer. Listen together. Leave the city at water level.",
+    intro:
+      "Let Amsterdam change scale. Micropia reveals life too small for an unaided glance, while a lunchtime concert gives a grand institution a short, shared hour. On a separate suitable day, travel north to Watergang and paddle through reed-lined channels. These are three ways of paying attention, not three stops to rush through.",
+    pace: "A self-paced museum visit, a calendar-led concert and a separately booked two-hour canoe trip outside Amsterdam.",
+    planning:
+      "Micropia and the Concertgebouw are in different parts of Amsterdam and require their own admission arrangements. Lunchtime tickets are limited and releases are date-specific. The Fresh Air canoe tour meets in Watergang, not at Amsterdam Noord, so allow independent transport and check the return journey. Paddling requires fitness and flexibility, and weather may cancel it. Choose different days if that makes the visit calmer. No combined ticket, transfer or package is implied.",
+    stops: [
+      {
+        slug: "look-for-the-life-too-small-to-see",
+        moment: "Begin with a change of scale",
+        why: "A microscope makes familiar surroundings feel less empty without requiring a long scientific tour.",
+      },
+      {
+        slug: "give-lunch-half-an-hour-of-listening",
+        moment: "Let one date choose the music",
+        why: "The changing lunchtime programme offers a short shared pause, with the hall and performers stated in advance.",
+      },
+      {
+        slug: "paddle-below-waterlands-low-bridges",
+        moment: "On another session, follow the reeds",
+        why: "A guided route outside the city replaces the scale of a landmark with the clearance beneath a small bridge.",
+      },
+    ],
+  },
+  {
+    slug: "seoul",
+    name: "Seoul",
+    country: "south-korea",
+    regions: ["seoul"],
+    title: "Read the waterway. Follow the pan. Leave an evening for listening.",
+    intro:
+      "A stream museum, a mung-bean pancake and a Saturday music programme give Seoul three different points of entry. Begin with how the city changed, notice how a market food is made, then let a live performance ask for another kind of attention. Each can stand alone when the calendar or your appetite says otherwise.",
+    pace: "A self-paced museum and food stop, with a separately reserved Saturday performance if its programme fits.",
+    planning:
+      "Cheonggyecheon Museum is east of the downtown stream entrance and closes on Mondays. Gwangjang food counters have individual hours and dietary limitations, including pork in many bindaetteok recipes. The National Gugak Center is in another part of Seoul, so plan transport rather than treating these stops as a continuous walk. Its Saturday programme, age rules and seats require a separate check. Outdoor stream paths can close in rain. No shared booking, meal package or transfer is implied.",
+    stops: [
+      {
+        slug: "read-the-stream-beneath-seouls-streets",
+        moment: "Begin before the present-day view",
+        why: "Historical images give the waterway a sequence of decisions rather than the appearance of untouched nature.",
+      },
+      {
+        slug: "follow-the-mung-bean-to-the-hot-pan",
+        moment: "Find one clear sequence in the market",
+        why: "Grinding, batter and a crisp edge make a famous food alley legible through something you can order.",
+      },
+      {
+        slug: "hear-seoul-change-tempo-on-a-saturday",
+        moment: "Keep a separate date for music",
+        why: "A changing gugak programme makes space for sustained listening beyond the noise of a city day.",
+      },
+    ],
+  },
+  {
     slug: "tokyo",
     name: "Tokyo",
     country: "japan",

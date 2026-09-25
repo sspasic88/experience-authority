@@ -110,15 +110,19 @@ try {
     );
 
     await visit(page, "/explore?place=japan&region=tokyo&surprise=1");
+    const poolSize = Number(
+      (await page.locator(".results-line").innerText()).match(/^(\d+)/)?.[1],
+    );
+    assert.ok(Number.isInteger(poolSize) && poolSize >= 3 && poolSize <= 20);
     await page.getByRole("button", { name: "Find my first discovery" }).click();
     const seen = [];
     let previousHref = "";
-    for (let turn = 0; turn < 6; turn++) {
+    for (let turn = 0; turn < poolSize * 2; turn++) {
       const card = page.locator(".surprise-card .experience-card");
       await expect(card).toHaveCount(1);
       await expect(card.locator(".card-meta")).toContainText("Tokyo");
       const href = await card.locator("h3 a").getAttribute("href");
-      if (turn === 3) seen.length = 0;
+      if (turn === poolSize) seen.length = 0;
       assert.notEqual(
         href,
         previousHref,
@@ -144,7 +148,7 @@ try {
       }
       if (turn === 1)
         await expect(page.getByLabel("Text to share")).toHaveCount(0);
-      if (turn < 5)
+      if (turn < poolSize * 2 - 1)
         await page.getByRole("button", { name: "Show me another" }).click();
     }
     await page.getByRole("button", { name: "Back to all matches" }).click();

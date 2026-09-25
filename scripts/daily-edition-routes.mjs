@@ -20,7 +20,7 @@ const previousGuidePaths = [
   "listen-for-the-conversation-inside-flamenco",
 ].map((slug) => `/experiences/${slug}`);
 
-export const previousEditionRoutes = [
+const edition20260923Routes = [
   ...previousGuidePaths,
   ...[
     "italy/modena",
@@ -52,7 +52,7 @@ export const previousEditionRoutes = [
 ];
 
 // Explicit coverage for every guide and place added on 24 September.
-export const dailyGuidePaths = [
+const edition20260924GuidePaths = [
   "taste-melbourne-across-the-market-counter",
   "taste-tea-from-the-tap-and-the-pour",
   "follow-cacao-from-the-museum-to-the-cup",
@@ -73,8 +73,8 @@ export const dailyGuidePaths = [
   "hear-seoul-change-tempo-on-a-saturday",
 ].map((slug) => `/experiences/${slug}`);
 
-export const dailyEditionRoutes = [
-  ...dailyGuidePaths,
+const edition20260924Routes = [
+  ...edition20260924GuidePaths,
   ...[
     "australia/melbourne",
     "taiwan/taipei",
@@ -92,6 +92,59 @@ export const dailyEditionRoutes = [
     "new-zealand/rotorua",
     "united-states/new-orleans",
     "south-korea/seoul",
+  ].map((place) => `/places/${place}`),
+  ...[
+    "eat-drink",
+    "make-learn",
+    "move-water",
+    "explore-reflect",
+    "swim-reset",
+    "shared-rituals",
+  ].map((interest) => `/explore?interest=${interest}`),
+];
+
+export const previousEditionRoutes = [
+  ...new Set([...edition20260923Routes, ...edition20260924Routes]),
+];
+export const dailyGuidePaths = [
+  "follow-the-mung-bean-to-the-hot-pan",
+  "taste-lyon-one-market-counter-at-a-time",
+  "taste-what-changes-inside-a-spoonful",
+  "give-delft-blue-a-line-of-your-own",
+  "build-a-scent-one-decision-at-a-time",
+  "make-a-lunch-you-cannot-eat",
+  "paddle-below-waterlands-low-bridges",
+  "join-vancouvers-edges-by-bicycle",
+  "see-table-mountain-from-a-kayak",
+  "look-for-the-life-too-small-to-see",
+  "read-the-stream-beneath-seouls-streets",
+  "let-the-garden-be-introduced-through-country",
+  "meet-baths-warm-water-under-open-sky",
+  "give-baden-three-hours-of-warm-water",
+  "let-oslos-waterline-set-a-slower-pace",
+  "let-the-caller-bring-you-into-the-dance",
+  "give-lunch-half-an-hour-of-listening",
+  "begin-kabuki-with-a-single-act",
+].map((slug) => `/experiences/${slug}`);
+export const dailyEditionRoutes = [
+  ...dailyGuidePaths,
+  ...[
+    "south-korea/seoul",
+    "france/lyon",
+    "italy/anzola-dellemilia",
+    "netherlands",
+    "netherlands/delft",
+    "netherlands/amsterdam",
+    "netherlands/watergang",
+    "france/grasse",
+    "japan/tokyo",
+    "canada/vancouver",
+    "south-africa/cape-town",
+    "australia/melbourne",
+    "united-kingdom/bath",
+    "united-kingdom/glasgow",
+    "switzerland/baden",
+    "norway/oslo",
   ].map((place) => `/places/${place}`),
   ...[
     "eat-drink",
