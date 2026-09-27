@@ -271,7 +271,7 @@ export const cityChapters: readonly CityChapter[] = [
       "Use a market everyone recognises as the way in, then let London reveal two working interiors. One tour follows ingredients and traders. Another makes the labour behind performance visible. A third opens the layers hidden beside an ordinary Underground journey.",
     pace: "Give the market its own morning. Put the two fixed tours on separate days.",
     planning:
-      "The Borough Market public tour is currently listed for selected Friday mornings and lasts about three hours. The Royal Opera House and Hidden London visits are separate timed bookings with routes that can change. Hidden London has the strictest footwear, mobility and confined-space requirements. The three meeting points are not a continuous walking itinerary, and ordinary admission to each public venue does not include its guided access. Confirm every date, language, age rule and access need before paying. No transport, meal beyond stated tastings, combined ticket or package is included.",
+      "The Borough Market public tour is currently listed for selected Friday mornings and lasts about three hours. The Royal Opera House and Hidden London visits are separate timed bookings with routes that can change. Hidden London has the strictest footwear, mobility and confined-space requirements. Sir John Soane's Museum is a separate free visit with limited capacity, not access to its restricted Drawing Office. These meeting points are not a continuous walking itinerary. Confirm every date, language, age rule and access need before paying. No transport, meal beyond stated tastings, combined ticket or package is included.",
     stops: [
       {
         slug: "ask-the-market-where-london-came-from",
@@ -288,6 +288,11 @@ export const cityChapters: readonly CityChapter[] = [
         moment: "Choose the closed door that fits your route",
         why: "See how a system Londoners use every day still contains earlier stations and decisions. Select one current tour and read its physical demands carefully.",
       },
+      {
+        slug: "watch-a-small-house-change-shape",
+        moment: "Keep one unhurried house visit",
+        why: "Soane's rooms change scale around a dense collection. It is a gentler architectural counterpoint to the working interiors, not another backstage tour.",
+      },
     ],
   },
   {
@@ -300,7 +305,7 @@ export const cityChapters: readonly CityChapter[] = [
       "Start with a Paris reference almost everyone knows, then change the scale twice. Give pastry enough time to become technique. Watch a contemporary image take form on a historic loom. Finally, descend into the infrastructure that makes the city above possible.",
     pace: "One substantial booked anchor per day, with the sewer museum kept flexible.",
     planning:
-      "The pastry workshop takes about five and a half hours and is not a casual breakfast stop. The Gobelins workshop visit is a separate reservation with a fixed start, French delivery and significant mobility constraints. The Sewer Museum is a self-guided public visit that can close because of flooding or operational conditions. These addresses are in different parts of Paris. Do not attempt all three in one day. No transport, combined ticket, meal, translation or package is included.",
+      "The pastry workshop takes about five and a half hours and is not a casual breakfast stop. The Gobelins workshop visit is a separate reservation with a fixed start, French delivery and significant mobility constraints. The Sewer Museum is a self-guided public visit that can close because of flooding or operational conditions. Le Bal Blomet needs a specific concert date and its own ticket. These addresses are in different parts of Paris. Do not attempt all of them in one day. No transport, combined ticket, meal, translation or package is included.",
     stops: [
       {
         slug: "make-the-morning-before-it-reaches-the-cafe",
@@ -316,6 +321,11 @@ export const cityChapters: readonly CityChapter[] = [
         slug: "see-what-keeps-paris-moving-underground",
         moment: "Use the flexible hour below street level",
         why: "Follow the city from landmark to system. The public museum route reveals the water, equipment and people behind a Paris most visitors never think to look for.",
+      },
+      {
+        slug: "hear-a-new-trio-in-an-old-paris-room",
+        moment: "Let a current programme choose the evening",
+        why: "A small live-music room gives a shared end to a day of watching how Paris makes and maintains things. Choose the musician and date before planning around it.",
       },
     ],
   },
@@ -382,7 +392,7 @@ export const cityChapters: readonly CityChapter[] = [
       "A human tower and a mosaic ask very different things of their parts. Witness castells from the public audience, then try arranging a small ceramic surface yourself. Barcelona becomes both something people build together and something you can learn to look at more closely.",
     pace: "A workshop on a booked day. Castells only when the public calendar allows.",
     planning:
-      "The castells guide follows the publicly announced La Mercè programme, not a daily attraction or an invitation to join a tower. Confirm the event's date, square and crowd arrangements first. Mosaiccos is a separate studio booking and may require later collection. The espadrille workshop is another independent reservation, with its Barcelona address and sizes confirmed directly. None includes Park Güell admission. Choose one workshop rather than filling every interval.",
+      "The castells guide follows the publicly announced La Mercè programme, not a daily attraction or an invitation to join a tower. Confirm the event's date, square and crowd arrangements first. Mosaiccos is a separate studio booking and may require later collection. The espadrille workshop is another independent reservation, with its Barcelona address and sizes confirmed directly. Sant Pau is a separately ticketed self-guided visit. None includes Park Güell admission. Choose one workshop rather than filling every interval.",
     stops: [
       {
         slug: "the-weight-of-the-tower",
@@ -398,6 +408,11 @@ export const cityChapters: readonly CityChapter[] = [
         slug: "stitch-the-pair-you-take-home",
         moment: "Or make something you can wear",
         why: "A pair of espadrilles offers a different scale of joining and finishing. Choose it as an alternative hands-on anchor, not an obligatory extra after the mosaic class.",
+      },
+      {
+        slug: "read-care-in-sant-paus-courtyards",
+        moment: "See a larger kind of construction",
+        why: "Pavilions, gardens and passages show how a building can organise care. Keep this as its own visit, not a quick add-on to a workshop.",
       },
     ],
   },
@@ -433,9 +448,9 @@ export const cityChapters: readonly CityChapter[] = [
     title: "A city through appetite, sound and making.",
     intro:
       "Port belongs here, but it need not explain the whole visit. Put a working market, a church heard from a seat and the making of a tile around the familiar glass. Cross the Douro deliberately, not just for another photograph.",
-    pace: "Choose two for a day, or keep all four for a longer stay.",
+    pace: "Choose two for a day, or keep the full sequence for a longer stay.",
     planning:
-      "Bolhão is closed on Sundays and public holidays. Clérigos advertises a noon concert, so confirm that fixed point first. Tile firing normally means next-day collection. Gaia is across the river and needs its own travel allowance. Do not schedule every stop back to back.",
+      "Bolhão is closed on Sundays and public holidays. Clérigos advertises a noon concert, so confirm that fixed point first. A Casa da Música tour has its own language and times, away from the central historic area. Tile firing normally means next-day collection. Gaia is across the river and needs its own travel allowance. Do not schedule every stop back to back. No combined ticket or transfer is implied.",
     stops: [
       {
         slug: "let-the-market-write-your-menu",
@@ -456,6 +471,11 @@ export const cityChapters: readonly CityChapter[] = [
         slug: "taste-what-time-does-to-port",
         moment: "Across the river",
         why: "Carry your new attention to process into the cellars. Ask what ageing changes rather than treating the tasting as a list of glasses to finish.",
+      },
+      {
+        slug: "follow-the-building-around-the-music",
+        moment: "Let another building explain its sound",
+        why: "A separate Casa da Música tour makes circulation and performance space part of how you hear the city. Confirm the tour language and current rooms.",
       },
     ],
   },
@@ -566,7 +586,7 @@ export const cityChapters: readonly CityChapter[] = [
       "Begin with the Singapore people recognise, then follow food into making and the city into its greener margins. The small island is not a reason to compress every experience into one day.",
     pace: "Food and making for one day. Choose a separate nature outing.",
     planning:
-      "Confirm hawker stall hours and the batik session first. Coney Island and Sungei Buloh Wetland Reserve are different outings with their own transport, weather and access considerations. Neither is a casual extension of the other. Check NParks' current entrance and closure notices, carry water and let heat or rain change the plan.",
+      "Confirm hawker stall hours and the batik session first. Coney Island and Sungei Buloh Wetland Reserve are different outings with their own transport, weather and access considerations. Neither is a casual extension of the other. Check NParks' current entrance and closure notices, carry water and let heat or rain change the plan. Esplanade's free Concourse programme is date-specific and separately located, not a guaranteed nightly show or an automatic add-on.",
     stops: [
       {
         slug: "a-morning-at-the-hawker-table",
@@ -587,6 +607,40 @@ export const cityChapters: readonly CityChapter[] = [
         slug: "find-the-citys-wilder-edge",
         moment: "Or follow the tidal habitat",
         why: "Sungei Buloh offers an independent wetland walk, with mangroves, hides and changing water levels. Choose it for patient observation rather than adding it automatically to Coney Island. No guided tour or wildlife sighting is included.",
+      },
+      {
+        slug: "leave-space-for-a-free-concourse-set",
+        moment: "If the calendar fits, listen together",
+        why: "A free public performance can close a city day without turning it into a fixed package. Look up the exact artist, date and duration first.",
+      },
+    ],
+  },
+  {
+    slug: "sydney",
+    name: "Sydney",
+    country: "australia",
+    regions: ["sydney"],
+    title: "Taste knowledge. Meet the harbour. Try a wave on its terms.",
+    intro:
+      "Sydney's water can be an image before it becomes a place. A First Nations-led garden walk begins with living plant knowledge beside the harbour. Maccallum Pool offers a public saltwater swim at another scale. A separate beginner lesson at Manly lets the ocean, instruction and safety conditions determine how much you do. The three experiences are not interchangeable and no single day has to contain them all.",
+    pace: "One booked garden tour and one easy harbour stop. Leave the surf lesson for a separately planned half-day.",
+    planning:
+      "Reserve the tour-only Bush Tucker format and follow the First Nations guide's rules about tasting and photographs. Maccallum Pool is at Cremorne Point, has no lifeguard and closes for cleaning at posted times. Check Council notices, weather and harbour conditions before swimming. Manly is a separate ferry or land journey, and its lesson requires an individual booking, suitability check and suitable sea conditions. None of these access routes is a combined ticket, transfer or EA reservation.",
+    stops: [
+      {
+        slug: "taste-native-plants-with-a-first-nations-guide",
+        moment: "Let a guide introduce the plants",
+        why: "Food knowledge gains context when a First Nations guide chooses what to share in a living garden, instead of a menu claiming to tell the whole story.",
+      },
+      {
+        slug: "swim-a-sydney-harbour-length",
+        moment: "At another point on the harbour",
+        why: "The public pool lets the waterline be experienced at body scale, with conditions and safety checked on the day.",
+      },
+      {
+        slug: "learn-to-read-the-water-before-standing",
+        moment: "Keep a different day for the sea",
+        why: "A supervised first surf lesson turns a familiar beach view into an exercise in reading waves and accepting their limits.",
       },
     ],
   },

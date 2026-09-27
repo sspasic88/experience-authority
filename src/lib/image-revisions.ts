@@ -1,6 +1,24 @@
 /** Content hashes keep replaced photographs consistent across responsive image caches.
  * The media test requires an update when an original file changes. */
 export const imageRevisions: Record<string, string> = {
+  "/images/guides/parma-san-pier-damiani.jpg": "29911a59a4a4",
+  "/images/guides/bogota-catacion-plus.jpg": "e22e9ba4b056",
+  "/images/guides/sydney-bush-tucker.jpg": "1211d33ac117",
+  "/images/guides/prague-pragl-hot-shop.jpg": "c78fcd0f7f6c",
+  "/images/guides/kanazawa-hakuichi-gold-leaf.jpg": "74b26c3b64ea",
+  "/images/guides/hanoi-zo-calligraphy.jpg": "27b981feebb6",
+  "/images/guides/copenhagen-copenhill-ski.jpg": "f0ba1e43e244",
+  "/images/guides/madeira-balcoes-levada.jpg": "3741a4ed3ddf",
+  "/images/guides/seville-guided-river-kayak.jpg": "4e72838717b9",
+  "/images/guides/barcelona-sant-pau.jpg": "ba768be13c74",
+  "/images/guides/porto-casa-da-musica-tour.jpg": "ec1cf4054414",
+  "/images/guides/london-soane-house.jpg": "4ef44325b3ba",
+  "/images/guides/hoi-an-quiet-teahouse.jpg": "d35a808cc555",
+  "/images/guides/sydney-maccallum-pool.jpg": "00712a5426ae",
+  "/images/guides/marrakech-jardin-secret.jpg": "9c34a4a6bdc4",
+  "/images/guides/valencia-water-tribunal.jpg": "a7d238bb4b3e",
+  "/images/guides/paris-bal-blomet-jazz.jpg": "0f085d558a33",
+  "/images/guides/singapore-esplanade-concourse.jpg": "5a96253cd5f5",
   "/images/guides/seoul-gwangjang-bindaetteok.jpg": "4d0a4ac0228d",
   "/images/guides/lyon-halles-tasting.jpg": "3182e0964437",
   "/images/guides/bologna-gelatology.jpg": "19efc19d14c2",
@@ -215,7 +233,7 @@ export const imageRevisions: Record<string, string> = {
 
 // A single manifest fingerprint fits Next's bounded localPatterns allowlist.
 // Tests require it to change when any original is added or replaced.
-export const imageEdition = "9fbdf3847d7d";
+export const imageEdition = "94239e392fb9";
 
 export function imageSource(src: string) {
   return imageRevisions[src] ? `${src}?v=${imageEdition}` : src;

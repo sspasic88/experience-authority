@@ -15,9 +15,9 @@ import {
 import { publishedReleases, recentGuideReleases } from "../src/lib/releases";
 import { addPassportGuides, type PassportData } from "../src/lib/passport";
 
-test("twenty-one complete local chapters offer real contrasting experiences and planning constraints", () => {
+test("twenty-two complete local chapters offer real contrasting experiences and planning constraints", () => {
   const resolved = resolveCityChapters(publicGuides);
-  assert.equal(resolved.length, 21);
+  assert.equal(resolved.length, 22);
   for (const chapter of resolved) {
     assert.ok(chapter.stops.length >= 2);
     assert.equal(
@@ -68,11 +68,11 @@ test("local planning preserves the named venue and visitor role, including Singa
   assert.match(krakow.planning, /separate bookings/);
   assert.match(krakow.planning, /public spectatorship/);
   const paris = chapters.find((chapter) => chapter.slug === "paris")!;
-  assert.equal(paris.stops.length, 3);
-  assert.match(paris.planning, /Do not attempt all three in one day/);
+  assert.equal(paris.stops.length, 4);
+  assert.match(paris.planning, /Do not attempt all of them in one day/);
   assert.match(paris.planning, /French delivery/);
   const london = chapters.find((chapter) => chapter.slug === "london")!;
-  assert.equal(london.stops.length, 3);
+  assert.equal(london.stops.length, 4);
   assert.match(london.planning, /separate timed bookings/);
   assert.match(london.planning, /not a continuous walking itinerary/);
   const rome = chapters.find((chapter) => chapter.slug === "rome")!;
@@ -136,10 +136,12 @@ test("release dates are independent from source checks and expire out of the new
     25,
   );
   assert.equal(recentGuideReleases(publicGuides, "2026-09-15").length, 81);
-  assert.equal(recentGuideReleases(publicGuides, "2026-10-20").length, 54);
-  assert.equal(recentGuideReleases(publicGuides, "2026-10-24").length, 36);
-  assert.equal(recentGuideReleases(publicGuides, "2026-10-25").length, 18);
-  assert.equal(recentGuideReleases(publicGuides, "2026-10-26").length, 0);
+  assert.equal(recentGuideReleases(publicGuides, "2026-10-20").length, 72);
+  assert.equal(recentGuideReleases(publicGuides, "2026-10-24").length, 54);
+  assert.equal(recentGuideReleases(publicGuides, "2026-10-25").length, 36);
+  assert.equal(recentGuideReleases(publicGuides, "2026-10-26").length, 18);
+  assert.equal(recentGuideReleases(publicGuides, "2026-10-27").length, 18);
+  assert.equal(recentGuideReleases(publicGuides, "2026-10-28").length, 0);
   assert.equal(publishedReleases([], "2026-09-13").length, 0);
   const changedChecks = publicGuides.map((item) => ({
     ...item,
@@ -151,6 +153,7 @@ test("release dates are independent from source checks and expire out of the new
   assert.deepEqual(
     publishedReleases(changedChecks, "2026-10-01").map((item) => item.date),
     [
+      "2026-09-27",
       "2026-09-25",
       "2026-09-24",
       "2026-09-23",

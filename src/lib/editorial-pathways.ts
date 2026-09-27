@@ -35,6 +35,10 @@ export const editorialPathways = [
     intro:
       "A first attempt makes a familiar place less predictable. In Porto, a brush turns the tile you noticed on a facade into a decision of your own. Fez puts a hammer, clay and geometry in the same frame. Suchitoto begins with a fold that tells indigo where not to go. Skopje asks fine silver wire to hold a shape. Hong Kong turns four hands of mahjong into one changing problem. Bonwire introduces the tension inside one narrow kente strip. Materuni moves a coffee cherry through roasting and brewing, while Port of Spain lets a maker's tuned metal answer your first careful strikes. Cambridge, Moorea, Biarritz, Bo-Kaap, Salta and Loíza offer different first steps through movement, food and rhythm. These are public introductions, not shortcuts to mastery. Choose the attempt you would enjoy even if the result were imperfect, then read the current programme before booking.",
     guideSlugs: [
+      "give-molten-glass-your-first-breath",
+      "place-gold-leaf-by-hand-in-kanazawa",
+      "let-a-brush-meet-do-paper",
+      "learn-a-ski-turn-above-copenhagen",
       "paint-the-pattern-you-noticed",
       "give-delft-blue-a-line-of-your-own",
       "build-a-scent-one-decision-at-a-time",
@@ -83,6 +87,9 @@ export const editorialPathways = [
     intro:
       "Not every memorable experience needs acceleration. A Koyasan temple stay asks you to fit an overnight visit around one lodging's actual arrangements. Istanbul, Tampere, Busan, Kuopio and Reykjavík each open a different public bathing context. A Mooska farm walk stays outside the bathing promise and makes the preparation behind a Võrumaa smoke sauna visible. In Hanoi, a current urban Red Dao herbal-bath service brings attention to the leaves and long brewing behind a short treatment without pretending to be a village encounter. Sarajevo brings a seated coffee pause into a longer city walk, while Doha makes qahwa and majlis etiquette the subject of a hosted session. These are not interchangeable wellness products and none carries a promise of transformation. What they share is room to notice a threshold, a gesture or a pattern of ordinary life that a hurried itinerary would pass over.",
     guideSlugs: [
+      "give-one-cup-the-room-it-deserves",
+      "swim-a-sydney-harbour-length",
+      "follow-the-water-through-a-medina-garden",
       "spend-the-night-in-a-temple-town",
       "meet-baths-warm-water-under-open-sky",
       "give-baden-three-hours-of-warm-water",
@@ -119,6 +126,9 @@ export const editorialPathways = [
     intro:
       "Begin with appetite, then look further. These guides connect a Singapore hawker breakfast, halloumi made on a route into the Troodos foothills, Vienna's heuriger, Asturian cider, Grenadian cacao, Kyoto tea, Seoul kimchi, Québec maple season and food grown on Mexico City's chinampas. Materuni takes Arabica from plant to pan and brewed cup on Kilimanjaro's slopes. In Apia, an umu-cooked lunch begins with hot volcanic rocks, wrapped ingredients and preparation the guest can actually see. Oaxaca follows agave through heat and copper, while Doha uses qahwa to read the social language of a majlis. Chios begins with clear mastiha resin on a tree. In Appenzellerland, a gallery above a working dairy connects tasting to milk, curd and cellar. Each is a different kind of public encounter. Together they show why flavour can reveal climate, labour, technique and social rhythm. Use the official links to check what is currently offered, and let the guide sharpen the questions you bring to the table.",
     guideSlugs: [
+      "taste-the-age-of-a-parmigiano-wheel",
+      "find-what-the-brewing-method-changes",
+      "taste-native-plants-with-a-first-nations-guide",
       "taste-balsamico-before-it-meets-the-plate",
       "follow-the-mung-bean-to-the-hot-pan",
       "taste-lyon-one-market-counter-at-a-time",
@@ -164,6 +174,7 @@ export const editorialPathways = [
     intro:
       "Water is not scenery in these guides. It sets the route, the working day and the limits of access. Learn Venetian rowing, cross exposed tidal ground with a qualified guide, read Lofoten through its fishery and watch Oostduinkerke's shrimp fishers work with horses. In Istanbul and Kampong Ayer, everyday boats reveal two different cities from the waterline. Bahrain follows pearling history back to the oyster beds, while an Okavango mokoro asks a trained poler to read a changing delta. Aswan joins a museum to a felucca so the Nile can reconnect history with geography. Perast asks how an island's edge can be renewed by a procession of stones. Tortuguero makes waiting away from a nesting beach part of responsible observation. Ajman and Bulukumba show what must happen before a working boat reaches the water. Each guide asks you to notice the system before treating water as a view.",
     guideSlugs: [
+      "read-seville-from-paddle-height",
       "paddle-between-stockholms-island-edges",
       "stand-at-river-level-in-ljubljana",
       "venice-through-an-oar",
@@ -232,6 +243,8 @@ export const editorialPathways = [
     intro:
       "Evening can change the social temperature of a place. Stay for a traditional music session in Doolin, enter a Budapest dance house, let a caller bring an Edinburgh ceilidh into motion or give a Salta peña time to unfold across music, dance and the table. In Baku, a public mugham performance asks you to follow how voice, tar and kamancha reshape a musical path. In Siem Reap, carved leather, dancers and a pin peat orchestra move the Reamker across a field of light after Angkor closes. Tirana offers an ordinary public xhiro with no performance or ticket at all. A vast starling flock gathers over the Danish marshes, while Istanbul and Hanoi offer two different ways to slow the day. None should be treated as guaranteed nightly entertainment. Check the current programme, season, admission and house rules first. The reward is not simply staying out later, but paying closer attention to how people share time and space.",
     guideSlugs: [
+      "hear-a-new-trio-in-an-old-paris-room",
+      "leave-space-for-a-free-concourse-set",
       "let-the-fado-room-fall-quiet",
       "let-the-caller-bring-you-into-the-dance",
       "hear-the-band-without-a-screen-between-you",
@@ -271,6 +284,7 @@ export const editorialPathways = [
     intro:
       "Some experiences cannot be separated from their timing. A tide opens and closes a walking route. Migrating starlings gather in the marshes. Shrimp fishers work when sea and public demonstrations align. Castellers meet through announced public events. Kuopio's smoke-sauna evening belongs to Tuesday, while Mexico City's car-free avenue belongs to most Sunday mornings. Rose harvests create short public windows in Kazanlak and Jabal Akhdar. Tortuguero's nesting beach belongs to the animal and a controlled night system. Baku needs the exact concert listing, while Perast's museum remains available after the boats have completed their July procession. Sinj and San Marino each offer a dependable place to understand a tradition before the next official contest is announced. In Serpa and Echternach, year-round interpretation is separate from the live public calendar. Plan around what the place is doing instead of forcing every experience into dates you already chose.",
     guideSlugs: [
+      "watch-valencia-settle-water-in-public",
       "walk-where-the-sea-was",
       "when-the-sky-moves-as-one",
       "the-tide-brings-the-horses",
@@ -309,6 +323,9 @@ export const editorialPathways = [
     intro:
       "A landmark can tell you where you are. A practice can tell you how a city works. Begin Barcelona with a human tower, Singapore at a hawker table, Seoul through kimchi and Venice through an oar. Cross Istanbul by municipal ferry, give Mexico City's Sunday avenue back to feet and bicycles, then let Tirana's xhiro turn an evening pavement into social infrastructure. In El Alto, a public-street route reads commerce, celebration and a rooftop home stacked into one neo-Andean facade. Baku opens through mugham's relationship between voice and instruments. Bandar Seri Begawan becomes legible from a public boat and walkway route, while Aswan begins inside the Nubian Museum before a felucca reconnects the collection with the Nile. These are practical starting points, not claims to know a whole city.",
     guideSlugs: [
+      "read-care-in-sant-paus-courtyards",
+      "follow-the-building-around-the-music",
+      "watch-a-small-house-change-shape",
       "cross-lisbon-on-the-route-of-its-water",
       "join-vancouvers-edges-by-bicycle",
       "look-for-the-life-too-small-to-see",
@@ -363,6 +380,7 @@ export const editorialPathways = [
     intro:
       "Slow travel is useful only when it changes what you notice. Walk the public approach at Kumano Kodo without reducing pilgrimage to a personal challenge. Cross Wadden mudflats at the tide's pace. Wait for starlings above the Danish marshes and for Tortuguero's trained spotter to release a small group toward the beach. Read Lofoten through the fishery behind its mountain views, then read the Namib through the smallest tracks in its dunes. Meet Xochimilco as a living agricultural landscape and follow Bali's water before the rice. In Monument Valley, let a Navajo-managed route replace the assumption that every visible place is open. On Moorea, trade a fast lagoon circuit for the repeated stroke of a va'a. In the Okavango, a trained poler reads safe passage. In Semonkong, pony and guide read the mountain together. Each guide asks you to prepare for conditions, local rules and the limits of a short visit.",
     guideSlugs: [
+      "follow-the-forest-water-to-balcoes",
       "read-the-veld-with-a-san-guide",
       "let-a-garden-guide-change-what-you-notice",
       "leave-room-for-devotion",

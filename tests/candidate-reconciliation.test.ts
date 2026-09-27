@@ -4,7 +4,8 @@ import ledger from "../docs/candidate-reconciliation-2026-09-14.json";
 import { publicGuides } from "../src/lib/public-guides";
 
 test("dated candidate reconciliation counts scoped coverage without turning alternatives or protected records into approvals", () => {
-  assert.equal(ledger.catalogueCount, publicGuides.length);
+  assert.equal(ledger.catalogueCount, 208);
+  assert.ok(publicGuides.length >= ledger.catalogueCount);
   assert.equal(ledger.originalCandidateCount, 200);
   assert.equal(ledger.originalProtectedCount, 46);
   assert.equal(ledger.mappings.length, 115);

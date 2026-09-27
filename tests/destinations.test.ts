@@ -7,11 +7,11 @@ import { publicGuides } from "../src/lib/public-guides";
 
 test("destination browsing keeps country and city scopes exact, with honest wider-country options", () => {
   const japan = destinationCoverage(publicGuides, "japan");
-  assert.equal(japan.local.length, 12);
+  assert.equal(japan.local.length, 13);
   assert.equal(japan.categories.length, 6);
   const kyoto = destinationCoverage(publicGuides, "japan", "kyoto");
   assert.equal(kyoto.local.length, 5);
-  assert.equal(kyoto.elsewhere.length, 7);
+  assert.equal(kyoto.elsewhere.length, 8);
   assert.ok(
     kyoto.elsewhere.every(
       (item) => item.countrySlug === "japan" && item.regionSlug !== "kyoto",
@@ -65,10 +65,10 @@ test("visitor interests can overlap without duplicating the source record", () =
     assert.ok(discoveryProfiles[guide.slug], guide.slug);
 });
 
-test("Singapore offers five guides across three distinct interests without inflating its guide count", () => {
+test("Singapore offers six guides across visitor interests without inflating its guide count", () => {
   const singapore = destinationCoverage(publicGuides, "singapore", "singapore");
-  assert.equal(singapore.local.length, 5);
-  assert.equal(singapore.categories.length, 3);
+  assert.equal(singapore.local.length, 6);
+  assert.equal(singapore.categories.length, 4);
   assert.equal(singapore.elsewhere.length, 0);
   for (const guide of publicGuides) {
     assert.ok(
@@ -82,7 +82,7 @@ test("the new edition deepens familiar routes and opens new countries without ge
   assert.equal(destinationCoverage(publicGuides, "mexico").local.length, 5);
   assert.equal(
     destinationCoverage(publicGuides, "united-kingdom").local.length,
-    8,
+    9,
   );
   assert.equal(
     destinationCoverage(publicGuides, "argentina", "salta").local.length,

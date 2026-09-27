@@ -1,0 +1,251 @@
+import type { DiscoveryProfile } from "./discovery-profiles";
+
+/** One primary daily area per guide, even when other visitor interests overlap. */
+export const edition20260927 = {
+  "eat-drink": [
+    "taste-the-age-of-a-parmigiano-wheel",
+    "find-what-the-brewing-method-changes",
+    "taste-native-plants-with-a-first-nations-guide",
+  ],
+  "make-learn": [
+    "give-molten-glass-your-first-breath",
+    "place-gold-leaf-by-hand-in-kanazawa",
+    "let-a-brush-meet-do-paper",
+  ],
+  "move-water": [
+    "learn-a-ski-turn-above-copenhagen",
+    "follow-the-forest-water-to-balcoes",
+    "read-seville-from-paddle-height",
+  ],
+  "explore-reflect": [
+    "read-care-in-sant-paus-courtyards",
+    "follow-the-building-around-the-music",
+    "watch-a-small-house-change-shape",
+  ],
+  "swim-reset": [
+    "give-one-cup-the-room-it-deserves",
+    "swim-a-sydney-harbour-length",
+    "follow-the-water-through-a-medina-garden",
+  ],
+  "shared-rituals": [
+    "watch-valencia-settle-water-in-public",
+    "hear-a-new-trio-in-an-old-paris-room",
+    "leave-space-for-a-free-concourse-set",
+  ],
+} as const;
+
+export const discoveryBatch43: Record<string, DiscoveryProfile> = {
+  "taste-the-age-of-a-parmigiano-wheel": {
+    modes: ["at-table", "watch-listen"],
+    time: "half-day",
+    keywords: [
+      "Parma",
+      "San Prospero",
+      "Parmigiano Reggiano",
+      "San Pier Damiani",
+      "cheese",
+      "dairy",
+      "age",
+      "tasting",
+    ],
+  },
+  "find-what-the-brewing-method-changes": {
+    modes: ["at-table", "watch-listen"],
+    time: "short",
+    keywords: [
+      "Bogotá",
+      "Colombia",
+      "Catación Pública",
+      "coffee",
+      "brewing",
+      "extraction",
+      "cupping",
+    ],
+  },
+  "taste-native-plants-with-a-first-nations-guide": {
+    modes: ["at-table", "outdoors", "watch-listen"],
+    time: "short",
+    keywords: [
+      "Sydney",
+      "Cadi Jam Ora",
+      "Royal Botanic Garden",
+      "First Nations",
+      "bush tucker",
+      "native plants",
+    ],
+  },
+  "give-molten-glass-your-first-breath": {
+    modes: ["hands-on"],
+    time: "short",
+    keywords: [
+      "Prague",
+      "PRAGL",
+      "Bohemian glass",
+      "glassblowing",
+      "hot shop",
+      "craft",
+    ],
+  },
+  "place-gold-leaf-by-hand-in-kanazawa": {
+    modes: ["hands-on"],
+    time: "short",
+    keywords: [
+      "Kanazawa",
+      "Higashi Chaya",
+      "Hakuichi",
+      "Bikazari Asano",
+      "gold leaf",
+      "craft",
+    ],
+  },
+  "let-a-brush-meet-do-paper": {
+    modes: ["hands-on"],
+    time: "short",
+    keywords: [
+      "Hanoi",
+      "Zó Project",
+      "dó paper",
+      "calligraphy",
+      "brush",
+      "workshop",
+    ],
+  },
+  "learn-a-ski-turn-above-copenhagen": {
+    modes: ["outdoors", "hands-on"],
+    time: "short",
+    keywords: [
+      "Copenhagen",
+      "CopenHill",
+      "Amager Bakke",
+      "ski",
+      "Neveplast",
+      "rooftop",
+    ],
+  },
+  "follow-the-forest-water-to-balcoes": {
+    modes: ["outdoors", "slow-down"],
+    time: "half-day",
+    keywords: [
+      "Madeira",
+      "PR11",
+      "Balcões",
+      "Ribeiro Frio",
+      "laurel forest",
+      "levada",
+      "walking",
+    ],
+  },
+  "read-seville-from-paddle-height": {
+    modes: ["outdoors", "hands-on"],
+    time: "half-day",
+    keywords: [
+      "Seville",
+      "Sevilla",
+      "Guadalquivir",
+      "Kayak Sevilla",
+      "kayak",
+      "paddling",
+    ],
+  },
+  "read-care-in-sant-paus-courtyards": {
+    modes: ["watch-listen", "slow-down"],
+    time: "half-day",
+    keywords: [
+      "Barcelona",
+      "Sant Pau",
+      "modernisme",
+      "hospital",
+      "pavilions",
+      "architecture",
+    ],
+  },
+  "follow-the-building-around-the-music": {
+    modes: ["watch-listen"],
+    time: "short",
+    keywords: [
+      "Porto",
+      "Casa da Música",
+      "Sala Suggia",
+      "architecture",
+      "music",
+      "guided tour",
+    ],
+  },
+  "watch-a-small-house-change-shape": {
+    modes: ["watch-listen", "slow-down"],
+    time: "short",
+    keywords: [
+      "London",
+      "Sir John Soane",
+      "museum",
+      "architecture",
+      "house",
+      "collection",
+    ],
+  },
+  "give-one-cup-the-room-it-deserves": {
+    modes: ["at-table", "slow-down"],
+    time: "short",
+    keywords: ["Hoi An", "Reaching Out", "teahouse", "tea", "quiet", "Vietnam"],
+  },
+  "swim-a-sydney-harbour-length": {
+    modes: ["outdoors", "slow-down"],
+    time: "short",
+    keywords: [
+      "Sydney",
+      "Cremorne Point",
+      "Maccallum Pool",
+      "harbour",
+      "swimming",
+      "saltwater",
+    ],
+  },
+  "follow-the-water-through-a-medina-garden": {
+    modes: ["slow-down", "outdoors"],
+    time: "short",
+    keywords: [
+      "Marrakech",
+      "Le Jardin Secret",
+      "medina",
+      "garden",
+      "water",
+      "Morocco",
+    ],
+  },
+  "watch-valencia-settle-water-in-public": {
+    modes: ["watch-listen"],
+    time: "calendar",
+    keywords: [
+      "Valencia",
+      "Tribunal de les Aigües",
+      "water court",
+      "Thursday",
+      "cathedral",
+      "irrigation",
+    ],
+  },
+  "hear-a-new-trio-in-an-old-paris-room": {
+    modes: ["watch-listen"],
+    time: "calendar",
+    keywords: [
+      "Paris",
+      "Le Bal Blomet",
+      "jazz",
+      "live music",
+      "concert",
+      "trio",
+    ],
+  },
+  "leave-space-for-a-free-concourse-set": {
+    modes: ["watch-listen"],
+    time: "calendar",
+    keywords: [
+      "Singapore",
+      "Esplanade",
+      "Concourse",
+      "free performance",
+      "live music",
+      "concert",
+    ],
+  },
+};

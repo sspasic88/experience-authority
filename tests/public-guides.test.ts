@@ -42,8 +42,8 @@ test("Arcachon stays a bay-wide chapter regardless of guide order or a more spec
   }
 });
 
-test("guide set contains 208 distinct, sourced public experiences, not Selected or demo records", () => {
-  assert.equal(publicGuides.length, 208);
+test("guide set contains 226 distinct, sourced public experiences, not Selected or demo records", () => {
+  assert.equal(publicGuides.length, 226);
   assert.equal(
     new Set(publicGuides.map((p) => p.id)).size,
     publicGuides.length,
@@ -330,7 +330,7 @@ test("London connects a recognisable market with production work and hidden infr
     (guide) =>
       guide.countrySlug === "united-kingdom" && guide.regionSlug === "london",
   );
-  assert.equal(london.length, 4);
+  assert.equal(london.length, 5);
   assert.deepEqual([...new Set(london.map((guide) => guide.field))].sort(), [
     "restore",
     "taste",
@@ -355,8 +355,9 @@ test("Paris offers a recognisable entry, a living craft and hidden city work", (
   const paris = publicGuides.filter(
     (guide) => guide.countrySlug === "france" && guide.regionSlug === "paris",
   );
-  assert.equal(paris.length, 3);
+  assert.equal(paris.length, 4);
   assert.deepEqual([...new Set(paris.map((guide) => guide.field))].sort(), [
+    "gather",
     "taste",
     "witness",
     "work",
@@ -411,13 +412,13 @@ test("new regions are derived from real coverage and recommendations favour a re
     regionsForCountry("japan", publicGuides)
       .map((r) => r.slug)
       .sort(),
-    ["koyasan", "kumano-kodo", "kyoto", "tokyo"],
+    ["kanazawa", "koyasan", "kumano-kodo", "kyoto", "tokyo"],
   );
   assert.deepEqual(
     regionsForCountry("spain", publicGuides)
       .map((r) => r.slug)
       .sort(),
-    ["asturias", "barcelona", "madrid", "san-sebastian"],
+    ["asturias", "barcelona", "madrid", "san-sebastian", "seville", "valencia"],
   );
   const kyoto = publicGuides.find((p) => p.id === "kyoto-camellia-tea")!;
   assert.equal(relatedExperiences(kyoto, publicGuides)[0].countrySlug, "japan");
@@ -434,6 +435,7 @@ test("connected guides prefer local contrast and label wider geography honestly"
     [
       "paint-the-pattern-you-noticed",
       "hear-the-church-before-you-climb",
+      "follow-the-building-around-the-music",
     ].includes(gaiaConnections[0].item.slug),
   );
   assert.equal(gaiaConnections[0].scope, "connected_area");
@@ -447,7 +449,8 @@ test("connected guides prefer local contrast and label wider geography honestly"
   );
   assert.ok(
     gaiaConnections.some(
-      (connection) => connection.item.slug === "let-the-market-write-your-menu",
+      (connection) =>
+        connection.item.slug === "follow-the-building-around-the-music",
     ),
   );
 
